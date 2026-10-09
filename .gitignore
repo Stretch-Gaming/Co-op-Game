@@ -1,0 +1,50 @@
+# Unreal Engine generated folders
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/*
+!Build/*.ico
+!Build/**/*.plist
+
+# Plugin build output
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+
+# Packaged builds
+Packaged/
+Builds/
+*.pak
+
+# IDE and project files (regenerated per machine)
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.xcodeproj/
+*.xcworkspace/
+.ignore
+
+# Compiled artifacts
+*.dll
+*.exe
+*.pdb
+*.dylib
+*.app/
+*.o
+*.lib
+*.a
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local secrets and per-user settings
+.env*
+*.local.ini
