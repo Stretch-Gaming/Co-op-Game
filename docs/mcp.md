@@ -43,17 +43,23 @@ Ask your agent to do each of these, and record the results below. VG owns this t
 
 | Task | Works? | Notes |
 | --- | --- | --- |
-| List toolsets | | |
-| Spawn, move and label actors | | |
-| Set actor and component properties | | |
-| Create a Blueprint asset | | |
-| Add components and variables | | |
-| Add and connect graph nodes | | |
-| Compile a Blueprint | | |
-| Create or edit a widget | | |
-| Edit data table rows | | |
-| Start and stop Play In Editor | | |
-| Run a console command | | |
+| List toolsets | Not tested | VG-0: no editor MCP server available. |
+| Spawn, move and label actors | Not tested | Awaiting the editor and HC-0's project/sublevels. |
+| Set actor and component properties | Not tested | Awaiting the editor and HC-0's project/sublevels. |
+| Create a Blueprint asset | Not tested | Awaiting the editor and HC-0's project. |
+| Add components and variables | Not tested | Awaiting the editor and HC-0's project. |
+| Add and connect graph nodes | Not tested | Awaiting the editor and HC-0's project. |
+| Compile a Blueprint | Not tested | Awaiting the editor and HC-0's project. |
+| Create or edit a widget | Not tested | Awaiting the editor and HC-0's project. |
+| Edit data table rows | Not tested | Awaiting the editor and HC-0's project. |
+| Start and stop Play In Editor | Not tested | Awaiting the editor and HC-0's project. |
+| Run a console command | Not tested | Awaiting the editor and HC-0's project. |
+
+### VG-0 attempt — 2026-10-09, PK's Mac
+
+Pulled `main` through `e664177` and checked upstream again. HC-0 has published Windows preparation, but no `.uproject`, `Content/` assets or `.mcp.json` yet. No local Unreal Editor installation was found in the default engine folder or Spotlight, and the endpoint at `http://127.0.0.1:8000/mcp` refused the connection. These are setup blockers; they do not establish whether any tool supports an operation.
+
+PK requested skipping the Mac preflight gate. Continue VG-0 when the editor is available and HC publishes the bare project: pull it, open it, start MCP using the per-user setup above, and run the smoke test with `L_Site01_VG` current and test assets under `Content/Vehicle/Test/`. Compile touched Blueprints, save only owned assets, then join the Windows host at the same commit. Playable 1 and the tool capabilities remain unverified.
 
 ## Working with the agent
 
