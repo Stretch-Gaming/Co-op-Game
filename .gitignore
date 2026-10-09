@@ -48,3 +48,4 @@ desktop.ini
 # Local secrets and per-user settings
 .env*
 *.local.ini
+.claude/settings.local.json

@@ -1,23 +1,26 @@
 # Sprint Log
 
-Copy the template for each sprint. Newest sprint at the top.
+Copy the template for each sprint. Newest sprint at the top. The plan is in [docs/sprints.md](docs/sprints.md).
 
 ## Template
 
-### Sprint N — YYYY-MM-DD HH:MM
+### Sprint N: Name — YYYY-MM-DD HH:MM, 45 or 60 min
 
-**Goal:**
+**Checkpoint:** none, or Playable 1–4, or Demo 1
 
-| Person | Feature | Shared assets locked |
-| --- | --- | --- |
-| Stretch | | |
-| PK | | |
-| AK | | |
+| Person | Phase | Doing | Locks |
+| --- | --- | --- | --- |
+| Stretch (HC) | HC-N | | |
+| PK (VG) | VG-N | | |
+| Ak47 (HZ) | HZ-N | | |
 
-**Playtest notes:**
+**Merged commit:**
 
-- Keep:
-- Cut:
-- Change:
+**Playtest:** with 2 players: yes/no · with 4 players: yes/no
+
+- Worked:
+- Broke:
+
+**Keep, cut or change:**
 
 **Next sprint:**
