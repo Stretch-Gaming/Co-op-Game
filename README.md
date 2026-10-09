@@ -41,6 +41,7 @@ Do this before the first session. Most of it is downloading, so allow 1–2 hour
 
 6. No Visual Studio is needed while the project is Blueprint-only.
 7. The first time you host, Windows asks whether Unreal Editor may use the network. Allow it on **private** networks, and make sure your network is set to private.
+8. Run `powershell -NoProfile -ExecutionPolicy Bypass -File Tools\check-windows.ps1` before HC-0. The execution-policy option applies only to this process; it does not change your machine's policy. The script checks the exact engine version, editor, templates, required plugin files, Git LFS and free disk space. Set `UE_ROOT` if the engine is installed elsewhere. It does not install anything or verify multiplayer.
 
 ## Rules for working in parallel
 
