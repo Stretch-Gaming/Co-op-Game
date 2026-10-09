@@ -36,7 +36,7 @@ Copy the template for each sprint. Newest sprint at the top. The plan is in [doc
 | Person | Phase | Doing | Locks |
 | --- | --- | --- | --- |
 | Stretch (HC) | HC-N | | |
-| PK (VG) | VG-N | | |
+| PK (PG) | PG-N | | |
 | Ak47 (HZ) | HZ-N | | |
 
 **Merged commit:**

@@ -25,14 +25,14 @@ The server has no authentication and only listens on your own machine. Never exp
 Paste this at kickoff, with your lane and phase filled in:
 
 ```
-We're in Sprint N. I'm lane VG, and my phase is VG-N in docs/epics/epic-vehicle-getaway.md.
-Read AGENTS.md first. The current level is L_Site01_VG. Only work in Content/Vehicle/.
+We're in Sprint N. I'm lane PG, and my phase is PG-N in docs/epics/epic-player-ghosts.md.
+Read AGENTS.md first. The current level is L_Site01_PG. Only work in Content/Player/.
 Start by listing the Unreal MCP toolsets you have.
 ```
 
 ## Smoke test (Sprint 0, every machine)
 
-Ask your agent to do each of these, and record the results below. VG owns this table; the others report anything different on their machine.
+Ask your agent to do each of these, and record the results below. PG owns this table; the others report anything different on their machine.
 
 1. List the toolsets.
 2. Spawn a cube in your lane's sublevel and move it.
@@ -59,7 +59,7 @@ Ask your agent to do each of these, and record the results below. VG owns this t
 
 Pulled `main` through `e664177` and checked upstream again. HC-0 has published Windows preparation, but no `.uproject`, `Content/` assets or `.mcp.json` yet. No local Unreal Editor installation was found in the default engine folder or Spotlight, and the endpoint at `http://127.0.0.1:8000/mcp` refused the connection. These are setup blockers; they do not establish whether any tool supports an operation.
 
-PK requested skipping the Mac preflight gate. Continue VG-0 when the editor is available and HC publishes the bare project: pull it, open it, start MCP using the per-user setup above, and run the smoke test with `L_Site01_VG` current and test assets under `Content/Vehicle/Test/`. Compile touched Blueprints, save only owned assets, then join the Windows host at the same commit. Playable 1 and the tool capabilities remain unverified.
+PK requested skipping the Mac preflight gate. Continue in PG-0 (formerly VG-0) when the editor is available and HC publishes the bare project: pull it, open it, start MCP using the per-user setup above, and run the smoke test with `L_Site01_PG` current and test assets under `Content/Player/Test/` (PK's lane is now PG). Compile touched Blueprints, save only owned assets, then join the Windows host at the same commit. Playable 1 and the tool capabilities remain unverified.
 
 ## Working with the agent
 
@@ -68,3 +68,4 @@ PK requested skipping the Mac preflight gate. Continue VG-0 when the editor is a
 - Name the folder and sublevel in every request. Agents put things in the wrong place when you don't.
 - The server runs one tool call at a time on the editor's main thread. Don't ask for parallel calls.
 - After each batch of changes: compile, Save All, and run `git status`. Commit only your lane's files and any you've locked.
+- To bring in generated assets, follow [assets.md](assets.md): raw output in `SourceArt/<lane>/`, imports in your lane's `Art/` folder.

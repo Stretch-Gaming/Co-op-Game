@@ -1,5 +1,7 @@
 # Co-op Game: 2 to 4 Players, Local and Online
 
+> Updated by [direction-2026-10-09.md](direction-2026-10-09.md): no car, a cave start, first person with a switch to third person, split-screen on the host for Demo 1, and a focus on relics, traps and ghosts across puzzle maps. The scaling, stand-in and split-screen-safe rules below still apply.
+
 Oct 9, 2026 · Peter Kim
 
 ## Design: making it work for 2 to 4 players
