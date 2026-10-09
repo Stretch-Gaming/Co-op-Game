@@ -2,6 +2,16 @@
 
 **Machine:** Windows · **Owner:** Stretch · **Role:** integrator and host · **Sublevel:** `L_Site01_HC`
 
+> **Sprint 0 update (2026-10-09, 19:35).** The plan is being revised for the new direction: a cave start, first person with a switch to third person, split-screen on the host, relic collection, traps and ghosts, and puzzle rounds across maps. There's no car. The full revision follows shortly. If you haven't done these HC-0 steps yet, use the new names; if you have, rename in HC-1.
+>
+> - Skip the Vehicle content pack and the Chaos Vehicles plugin, and leave out the Nav Mesh Bounds Volume.
+> - Sublevels: `/Game/Puzzles/L_Site01_HC`, `/Game/Player/L_Site01_PG` and `/Game/Hazards/L_Site01_HZ`. PK's lane is now PG (player view and ghosts).
+> - Project Settings → Maps & Modes → Local Multiplayer: turn on Use Splitscreen and Skip Assigning Gamepad to Player 1. Engine → Local Player: set Aspect Ratio Axis Constraint to Maintain Y-FOV.
+> - `E_RoundPhase`: `Lobby`, `Playing`, `Cleared`, `Failed`, `MapComplete`.
+> - `BP_CoopGameState`: `GetPlayerCount()`, `GetScalingRow()`, `RoundIndex`, `RoundPhase` (RepNotify firing `OnRoundPhaseChanged`), `PhaseEndsAt` and `RelicsCollected`.
+> - `BP_CoopGameMode`: `SetRoundPhase` works now. `StartRound(Index)`, `ClearRound()`, `FailRound()`, `CompleteMap()` and `AddRelics(Count)` are stubs.
+> - `S_RoundScaling` and `DT_RoundScaling` (rows `2`, `3`, `4`: `PlateCount`, `StatueCount`, `RelicsPerRound`) replace the heist scaling table.
+
 ## Relationship to other epics (read first)
 
 This lane owns the shared core: the GameMode, GameState, player character and controller, project settings, and the persistent map. The other two lanes, [VG](epic-vehicle-getaway.md) and [HZ](epic-site-hazards.md), build against the contracts HC-0 creates. The sprint table, playable checkpoints and full contract list, with when each contract works, are in [docs/sprints.md](../sprints.md). Room positions are in [docs/map/site01-layout.md](../map/site01-layout.md).

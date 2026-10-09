@@ -4,6 +4,16 @@ Ten sprints take the team from an empty repo to **Demo 1**: one map, Site 1, pla
 
 Each machine has its own lane and epic, and each epic phase is one sprint. For example, VG-4 is Mac 1's work in Sprint 4.
 
+> **Sprint 0 update (2026-10-09, 19:35).** The plan is being revised for the new direction: a cave start, first person with a switch to third person, split-screen on the host, relic collection, traps and ghosts, and puzzle rounds across maps. There's no car. The full revision follows shortly. If you haven't done these HC-0 steps yet, use the new names; if you have, rename in HC-1.
+>
+> - Skip the Vehicle content pack and the Chaos Vehicles plugin, and leave out the Nav Mesh Bounds Volume.
+> - Sublevels: `/Game/Puzzles/L_Site01_HC`, `/Game/Player/L_Site01_PG` and `/Game/Hazards/L_Site01_HZ`. PK's lane is now PG (player view and ghosts).
+> - Project Settings → Maps & Modes → Local Multiplayer: turn on Use Splitscreen and Skip Assigning Gamepad to Player 1. Engine → Local Player: set Aspect Ratio Axis Constraint to Maintain Y-FOV.
+> - `E_RoundPhase`: `Lobby`, `Playing`, `Cleared`, `Failed`, `MapComplete`.
+> - `BP_CoopGameState`: `GetPlayerCount()`, `GetScalingRow()`, `RoundIndex`, `RoundPhase` (RepNotify firing `OnRoundPhaseChanged`), `PhaseEndsAt` and `RelicsCollected`.
+> - `BP_CoopGameMode`: `SetRoundPhase` works now. `StartRound(Index)`, `ClearRound()`, `FailRound()`, `CompleteMap()` and `AddRelics(Count)` are stubs.
+> - `S_RoundScaling` and `DT_RoundScaling` (rows `2`, `3`, `4`: `PlateCount`, `StatueCount`, `RelicsPerRound`) replace the heist scaling table.
+
 | Machine | Person | Lane | Epic |
 | --- | --- | --- | --- |
 | Windows (integrator + host) | Stretch | HC | [Heist core and round flow](epics/epic-heist-core.md) |
