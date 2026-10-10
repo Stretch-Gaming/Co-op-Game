@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "players": 2,
+  "checks": [
+    {
+      "name": "start with split player in frozen scaling",
+      "worlds": [
+        {
+          "count": 2,
+          "state": {
+            "index": 1,
+            "phase": "Playing",
+            "attempt": 1,
+            "phaseEndsAt": 0,
+            "scalingRow": "2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "native local-player departure fails once",
+      "worlds": [
+        {
+          "count": 1,
+          "state": {
+            "index": 1,
+            "phase": "Failed",
+            "attempt": 1,
+            "phaseEndsAt": 0,
+            "scalingRow": "2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "retry samples fresh roster scaling",
+      "worlds": [
+        {
+          "count": 1,
+          "state": {
+            "index": 1,
+            "phase": "Playing",
+            "attempt": 2,
+            "phaseEndsAt": 0,
+            "scalingRow": "2"
+          }
+        }
+      ]
+    },
+    {
+      "remaining_spawn_spots": 1,
+      "one_reset": true
+    },
+    {
+      "name": "departure retry cannot repeat",
+      "worlds": [
+        {
+          "count": 1,
+          "state": {
+            "index": 1,
+            "phase": "Playing",
+            "attempt": 2,
+            "phaseEndsAt": 0,
+            "scalingRow": "2"
+          }
+        }
+      ]
+    }
+  ],
+  "roster_setup": "native GameplayStatics.create_player/remove_player",
+  "input_path": "owning IA_Interact -> production character RPC -> fixture entrance",
+  "death_or_health_tested": false,
+  "final": [
+    {
+      "count": 1,
+      "state": {
+        "index": 1,
+        "phase": "Playing",
+        "attempt": 2,
+        "phaseEndsAt": 0,
+        "scalingRow": "2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "baseline": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "branch": "codex/round-progression-next",
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\round-progression\\Co op Game",
+  "port": 8041,
+  "editor_pid": 26672,
+  "checks": [
+    {
+      "gate": "clients-2",
+      "passed": true,
+      "checks": 17
+    },
+    {
+      "gate": "roster-2",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "gate": "clients-3",
+      "passed": true,
+      "checks": 17
+    },
+    {
+      "gate": "roster-3",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "gate": "clients-4",
+      "passed": true,
+      "checks": 17
+    },
+    {
+      "gate": "roster-4",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "gate": "entrance-overlap",
+      "passed": true
+    },
+    {
+      "gate": "audit",
+      "passed": true
+    },
+    {
+      "gate": "settings-restored",
+      "passed": true
+    }
+  ],
+  "tracked_files_changed": [],
+  "health_death_revive_tested": false,
+  "rendering_tested": false,
+  "full_issue11_acceptance": false
+}

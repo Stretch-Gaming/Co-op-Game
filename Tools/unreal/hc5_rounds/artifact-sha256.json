@@ -1,0 +1,285 @@
+{
+  "baseline": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "files": [
+    {
+      "path": "Content/Puzzles/BP_Checkpoint.uasset",
+      "bytes": 65219,
+      "sha256": "7c3bfcc751ab6f3ed44de6eb04db3b94b2b5ac8065e1687475856fd15dd89e73"
+    },
+    {
+      "path": "Content/Puzzles/BP_RoundStart.uasset",
+      "bytes": 59557,
+      "sha256": "8923faf61ba69f94171ae90f2d20ded9f1054a403f43d13d8ffe99a791f34ba4"
+    },
+    {
+      "path": "Content/Puzzles/Rounds/BP_RoundDirector.uasset",
+      "bytes": 607952,
+      "sha256": "618d3d2fd6338016d0f96f60eacb5d4323c9aa331a39525a4e6d9d80e6d869ec"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC5/BP_HC5Command.uasset",
+      "bytes": 495793,
+      "sha256": "5c04711560ccb0b0126549cea06c4fb57a3eabd74305428367d939ed1c4bdb7f"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC5/BP_HC5GameMode.uasset",
+      "bytes": 28064,
+      "sha256": "501cd93e65b88ee9112271e84905f23e98bc5b3121cb4782243a693b0c4f26cf"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC5/BP_HC5InputProbe.uasset",
+      "bytes": 31365,
+      "sha256": "a7007ae20e44b0862eb87337d91d7adc08551597dec122a89b9aa9daa8117bcb"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC5/L_HC5_Rounds.umap",
+      "bytes": 50241,
+      "sha256": "8de27b794095f7c37fd1f0f0e79397dc71a8d7fb56a5f872877aad86e7694dd0"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/.gitignore",
+      "bytes": 81,
+      "sha256": "f9d686c3dd7351864667ed5f1544f6a1d3c19a7cf6a0bd005476b05f3de93de2"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/README.md",
+      "bytes": 1761,
+      "sha256": "790bbf9a2a98373f7fc9aafba63e566010e8ad3f3541635f7d6700a2078e8ba8"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/acceptance-summary.json",
+      "bytes": 1128,
+      "sha256": "8371c8c696db01fd8c353267effc31f75d2a8987b8b76ef7e6111b4a2f7b44a3"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/audit.json",
+      "bytes": 23563,
+      "sha256": "f5e26951a52ba7512973d21b4e3f07fbdeaad74102cdf997bfb879b52a1f3453"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/audit.py",
+      "bytes": 1605,
+      "sha256": "9f11ef8525a3f33f219e2a84e42f4913df2eb95fed1c35caf6cf721d66faaa65"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/authoring.py",
+      "bytes": 4335,
+      "sha256": "b2cdd1a4d66211a54271bc7905e6fa0b3b282b89329fea7aca3798a12a11f4e8"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/authority-patch.json",
+      "bytes": 54,
+      "sha256": "e3c10188a12ccd406d3b279c0de5aa09ae30ed49861a1f430f1758a949ee5bea"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/build.json",
+      "bytes": 176,
+      "sha256": "2a55a448a764be6f9f75327ce3fe010ccbac6b907df5168c1cccf73d8dca94f8"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/build.py",
+      "bytes": 10321,
+      "sha256": "4e9a1b340a00b7b4ee35b6d5b33b435f6cf9c769cd5aa7f9dd84cbfefb90a0bd"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-2-log.json",
+      "bytes": 87,
+      "sha256": "090027962061dc6deda0be84e0b03c3b12a3b4735ba4c6031f76974f47558dd3"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-2.json",
+      "bytes": 10078,
+      "sha256": "5d19ca3bc4d628c23fbdbc4a2eab1b925cd0c4cac2b5e6390aa474f079b8278c"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-3-log.json",
+      "bytes": 87,
+      "sha256": "af37e24079ea8f585fd87098abb6895f6636fb5d081f64324148e06469ca2f3c"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-3.json",
+      "bytes": 12840,
+      "sha256": "764c2260158a904f63b35c24b1cba05cdcf50dccd90b6dbcf1185a52076bb7d0"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-4-log.json",
+      "bytes": 87,
+      "sha256": "293cd74c8b09a3fde36722cdc602159541ef5c0bf50929e1e3e64f28e8d29fde"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/clients-4.json",
+      "bytes": 15602,
+      "sha256": "7319a71cc854d1a7b0fd20310bcd96b3b5bd2ef0e02ed2cd76f62134cf84b3d5"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/configure.py",
+      "bytes": 1011,
+      "sha256": "4fc8be21d441caadece5af15e707881df2951fda5d4352d0c4c9a03c16449578"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/editor_loop.py",
+      "bytes": 1248,
+      "sha256": "d75078a2f267953d0f0a5a4eaf86116e5ff065e14fad3df4dd8934c96c89ec97"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/endpoint-schema.json",
+      "bytes": 22933,
+      "sha256": "6089f9877f7970a7ee1eb569ccd91e53634358c7a02115fc8a848eea7ac5e898"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/entrance-overlap-log.json",
+      "bytes": 87,
+      "sha256": "d02872275000d5ea316dcb0a5e3eb8c4065ca5d960d529a930f26a35889835b8"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/entrance-overlap.json",
+      "bytes": 863,
+      "sha256": "cd243ab108587ef80b212feb28cce70bca69e57009ef2b8b44fff7fcc8793dfe"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/exit.py",
+      "bytes": 50,
+      "sha256": "cbe1e31fbea0154ecb12e0e85eff11e67c110edc2a0a881f7498e402e4817f34"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/finalize_evidence.py",
+      "bytes": 2117,
+      "sha256": "ac3cc7d4fcdb2ea1935f25ce78e6027e86f063a08948af12134b6b88b913a860"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/fixtures.json",
+      "bytes": 96,
+      "sha256": "cf8407a818f11d83434efe5e57583de6ddb54c5f5a792701641ade01db956d01"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/fixtures.py",
+      "bytes": 5475,
+      "sha256": "c8b17dd12c25dc6c0552e677ae86b9f921a4c206d2df4867a58784dfdf2004ed"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/inspect.py",
+      "bytes": 838,
+      "sha256": "eca9a47e90c3708cbbfa863b09c22467be919bdc08a1763aed1cb7889a422048"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/inspection.json",
+      "bytes": 2541,
+      "sha256": "dcf1953fc83649c0ed04e720ac1ce6922ccde4d7518361456f8fe3bd86699c11"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/launch_editor.ps1",
+      "bytes": 1076,
+      "sha256": "49929548c71ddad08a45ed40465c9fef498bc69bfbbd427e62cafdb6485963b4"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/owned-save.json",
+      "bytes": 327,
+      "sha256": "a78b43e27006cfe38ba1b5274361a080fa5f4b11e8753b2b55e175a9eff93eff"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/request.py",
+      "bytes": 498,
+      "sha256": "ce9fe9736871ee4cc4c9b2c6c50706eff6680ffc65baaf08862557b7fb0754f9"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/restore.py",
+      "bytes": 546,
+      "sha256": "a18a82de2fe9d3747a997f3894b6a038aacf23a33ca0580a350e50a2f23ad713"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/retry-checkpoint-guard.json",
+      "bytes": 60,
+      "sha256": "7decbc18bceec709fed8a25af7f44405b9a7597fdfc4eb0e98f94fcf0614f0ac"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-2-log.json",
+      "bytes": 87,
+      "sha256": "f7709a578d0a0f338d4a422eeb0f64731aff7953b2b1e9e670893faef436dedd"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-2.json",
+      "bytes": 1836,
+      "sha256": "8945b7779991877919d8070c3b0269731d4195167feeb4e9d7d46f9771d55b39"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-3-log.json",
+      "bytes": 87,
+      "sha256": "d8955e26a41bf5b2b69616af129a7659db1c3b966b909e72856ecba2c9e47430"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-3.json",
+      "bytes": 2935,
+      "sha256": "188934b24a2634ac87b946b5f3207628253aa08bd21750badaae9858420978ac"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-4-log.json",
+      "bytes": 87,
+      "sha256": "fcf34f71d5cd46fd1fc3aca42bbc532bbec3c9754d695d675b51f3b4c5cf4c2a"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/roster-4.json",
+      "bytes": 4034,
+      "sha256": "075f2afaabfa2532bf0e99a25680a91c7900b81d30d71757b9a3c6201cac2b6d"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/rpc.py",
+      "bytes": 1372,
+      "sha256": "0b4d5bf10a8d049f6c5c9ac657e4792b54da18db73e8db4c80d226f2fc1e03ce"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/run_clients.py",
+      "bytes": 1620,
+      "sha256": "8558565a1a4532b697c00f09543c4ba3a0cb24e07f6df62daf8fbb1b804479ad"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/run_overlap.py",
+      "bytes": 1265,
+      "sha256": "5583b480c5310503dec14681efca59ad7660233dc1392cf5e4cda0f62f0ef710"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/run_roster.py",
+      "bytes": 1429,
+      "sha256": "7fd69101c6af7cb2521bf38259dc12a657f4aaccc5cc7678e5c0a2fb2a07acc8"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/save_owned.py",
+      "bytes": 734,
+      "sha256": "f9dd4c04db9ebef4e8d33b3ff993c063470b84d06874888c57950eea36351b12"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/scaffold.json",
+      "bytes": 9171,
+      "sha256": "ff5dc1103def7e9e484bedeeffca21a984d1cd48bde5c9aaf1eb2c1e7a25aea5"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/scaffold.py",
+      "bytes": 2048,
+      "sha256": "8617f2c86da6cd864498613ca73aa4b69676ada4c56fbf1cbe5dbec77efd484f"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/settings-restored.json",
+      "bytes": 247,
+      "sha256": "71fb39f2e3db56f3bc434abe7f8f93116e26951ed22adea94b4ab792564c441e"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/test_clients.py",
+      "bytes": 6156,
+      "sha256": "80ada2fdbba1849d0e2179a04c9cc9e7b25b996b9bc542c0e5944d2924189560"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/test_overlap.py",
+      "bytes": 2828,
+      "sha256": "c5e82dcea9ed6b3effd2de9e74dbcf4b56f5fd3d91844ae388297e19d1f635a5"
+    },
+    {
+      "path": "Tools/unreal/hc5_rounds/test_roster.py",
+      "bytes": 4084,
+      "sha256": "e0808eb59314bd4d2a2934caa464a9bf2111cf6f474c41a9972a6be8e23074e0"
+    },
+    {
+      "path": "docs/hc5-rounds-verification.md",
+      "bytes": 7937,
+      "sha256": "03e459516f07c36dc7303124b789a8aff772cbce9b34b5e4937969a21ff861b0"
+    }
+  ]
+}

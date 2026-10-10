@@ -1,0 +1,47 @@
+{
+  "BP_Checkpoint": {
+    "Spot": "[\"Utilities|Casting|CastToSpotLight\", \"Utilities|Casting|CastToSpotLightClass\", \"Utilities|Casting|CastToSpotLightComponent\", \"Utilities|Casting|CastToSpotLightComponentClass\", \"Utilities|Casting|CastToInterchangeSpotLightNode\", \"Utilities|Casting|CastToInterchangeSpotLightNodeClass\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNode\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNodeClass\", \"Class|SpotLight|GetSpotLightComponent\", \"Class|SpotLightComponent|GetInnerConeAngle\", \"Class|SpotLightComponent|GetOuterConeAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightOuterAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightOuterAngle\", \"Interchange|Node|SpotLight|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLight|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|GetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomInnerConeAngle\", \"AddComponent|Lights|AddSpotLightComponent\", \"Variables|Default|GetSpot3\", \"Variables|Default|SetSpot3\", \"Variables|Default|GetSpot2\", \"Variables|Default|SetSpot2\", \"Variables|Default|GetSpot1\", \"Variables|Default|SetSpot1\", \"Variables|Default|GetSpot0\", \"Variables|Default|SetSpot0\"]",
+    "GetWorldTransform": "[\"Transformation|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform(Message)\"]",
+    "RequestStart": "[\"Class|BPRoundDirector|RequestStart\"]",
+    "SelectCheckpoint": "[\"Class|BPRoundDirector|SelectCheckpoint\"]",
+    "SetActorTransform": "[\"Transformation|SetActorTransform\"]",
+    "ResetforRound": "[\"Class|BPGauntletGate|ResetforRound\", \"Class|BPLever|ResetforRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPCarryable|ResetforRound\"]",
+    "GetPlayerState": "[\"Game|GetPlayerStatefromUniqueNetId\", \"Game|GetPlayerState\", \"Class|Controller|GetPlayerState\", \"Class|Pawn|GetPlayerState\", \"Class|GameModeBase|GetPlayerStateClass\"]",
+    "IsPlayerControlled": "[\"Pawn|IsPlayerControlled\"]",
+    "Array_Contains": "[]",
+    "GetPawn": "[\"Animation|TryGetPawnOwner\", \"Pawn|Components|PawnMovement|GetPawnOwner\", \"PlayerState|GetPawn\", \"Class|PlayerState|GetPawnPrivate\"]",
+    "GetRoundState": "[\"Class|BPCoopGameState|GetRoundState\"]",
+    "ReceiveActorBeginOverlap": "[]",
+    "RoundIndex": "[\"Class|BPCoopCharacter|GetActiveRoundIndex\", \"Class|BPCoopCharacter|SetActiveRoundIndex\", \"Variables|Default|GetRoundIndex\", \"Variables|Default|SetRoundIndex\", \"Class|BPRoundStart|GetRoundIndex\", \"Class|BPRoundStart|SetRoundIndex\"]"
+  },
+  "BP_RoundDirector": {
+    "Spot": "[\"Utilities|Casting|CastToSpotLight\", \"Utilities|Casting|CastToSpotLightClass\", \"Utilities|Casting|CastToSpotLightComponent\", \"Utilities|Casting|CastToSpotLightComponentClass\", \"Utilities|Casting|CastToInterchangeSpotLightNode\", \"Utilities|Casting|CastToInterchangeSpotLightNodeClass\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNode\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNodeClass\", \"Class|SpotLight|GetSpotLightComponent\", \"Class|SpotLightComponent|GetInnerConeAngle\", \"Class|SpotLightComponent|GetOuterConeAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightOuterAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightOuterAngle\", \"Interchange|Node|SpotLight|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLight|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|GetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomInnerConeAngle\", \"AddComponent|Lights|AddSpotLightComponent\", \"Class|BPCheckpoint|GetSpot3\", \"Class|BPCheckpoint|SetSpot3\", \"Class|BPCheckpoint|GetSpot2\", \"Class|BPCheckpoint|SetSpot2\", \"Class|BPCheckpoint|GetSpot1\", \"Class|BPCheckpoint|SetSpot1\", \"Class|BPCheckpoint|GetSpot0\", \"Class|BPCheckpoint|SetSpot0\"]",
+    "GetWorldTransform": "[\"Transformation|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform(Message)\"]",
+    "RequestStart": "[\"CallFunction|RequestStart\"]",
+    "SelectCheckpoint": "[\"CallFunction|SelectCheckpoint\"]",
+    "SetActorTransform": "[\"Transformation|SetActorTransform\"]",
+    "ResetforRound": "[\"Class|BPGauntletGate|ResetforRound\", \"Class|BPLever|ResetforRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPCarryable|ResetforRound\"]",
+    "GetPlayerState": "[\"Game|GetPlayerStatefromUniqueNetId\", \"Game|GetPlayerState\", \"Class|Controller|GetPlayerState\", \"Class|Pawn|GetPlayerState\", \"Class|GameModeBase|GetPlayerStateClass\"]",
+    "IsPlayerControlled": "[\"Pawn|IsPlayerControlled\"]",
+    "Array_Contains": "[]",
+    "GetPawn": "[\"Animation|TryGetPawnOwner\", \"Pawn|Components|PawnMovement|GetPawnOwner\", \"PlayerState|GetPawn\", \"Class|PlayerState|GetPawnPrivate\"]",
+    "GetRoundState": "[\"Class|BPCoopGameState|GetRoundState\"]",
+    "ReceiveActorBeginOverlap": "[]",
+    "RoundIndex": "[\"Class|BPCoopCharacter|GetActiveRoundIndex\", \"Class|BPCoopCharacter|SetActiveRoundIndex\", \"Class|BPCheckpoint|GetRoundIndex\", \"Class|BPCheckpoint|SetRoundIndex\", \"Class|BPRoundStart|GetRoundIndex\", \"Class|BPRoundStart|SetRoundIndex\"]"
+  },
+  "BP_RoundStart": {
+    "Spot": "[\"Utilities|Casting|CastToSpotLight\", \"Utilities|Casting|CastToSpotLightClass\", \"Utilities|Casting|CastToSpotLightComponent\", \"Utilities|Casting|CastToSpotLightComponentClass\", \"Utilities|Casting|CastToInterchangeSpotLightNode\", \"Utilities|Casting|CastToInterchangeSpotLightNodeClass\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNode\", \"Utilities|Casting|CastToInterchangeSpotLightFactoryNodeClass\", \"Class|SpotLight|GetSpotLightComponent\", \"Class|SpotLightComponent|GetInnerConeAngle\", \"Class|SpotLightComponent|GetOuterConeAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightInnerAngle\", \"Class|DatasmithAreaLightActor|GetSpotlightOuterAngle\", \"Class|DatasmithAreaLightActor|SetSpotlightOuterAngle\", \"Interchange|Node|SpotLight|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLight|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLight|GetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|SetCustomInnerConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomOuterConeAngle\", \"Interchange|Node|SpotLightFactory|GetCustomInnerConeAngle\", \"AddComponent|Lights|AddSpotLightComponent\", \"Class|BPCheckpoint|GetSpot3\", \"Class|BPCheckpoint|SetSpot3\", \"Class|BPCheckpoint|GetSpot2\", \"Class|BPCheckpoint|SetSpot2\", \"Class|BPCheckpoint|GetSpot1\", \"Class|BPCheckpoint|SetSpot1\", \"Class|BPCheckpoint|GetSpot0\", \"Class|BPCheckpoint|SetSpot0\"]",
+    "GetWorldTransform": "[\"Transformation|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform\", \"TypedElementInterfaces|World|GetWorldTransform(Message)\"]",
+    "RequestStart": "[\"Class|BPRoundDirector|RequestStart\"]",
+    "SelectCheckpoint": "[\"Class|BPRoundDirector|SelectCheckpoint\"]",
+    "SetActorTransform": "[\"Transformation|SetActorTransform\"]",
+    "ResetforRound": "[\"Class|BPGauntletGate|ResetforRound\", \"Class|BPLever|ResetforRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPCarryable|ResetforRound\"]",
+    "GetPlayerState": "[\"Game|GetPlayerStatefromUniqueNetId\", \"Game|GetPlayerState\", \"Class|Controller|GetPlayerState\", \"Class|Pawn|GetPlayerState\", \"Class|GameModeBase|GetPlayerStateClass\"]",
+    "IsPlayerControlled": "[\"Pawn|IsPlayerControlled\"]",
+    "Array_Contains": "[]",
+    "GetPawn": "[\"Animation|TryGetPawnOwner\", \"Pawn|Components|PawnMovement|GetPawnOwner\", \"PlayerState|GetPawn\", \"Class|PlayerState|GetPawnPrivate\"]",
+    "GetRoundState": "[\"Class|BPCoopGameState|GetRoundState\"]",
+    "ReceiveActorBeginOverlap": "[]",
+    "RoundIndex": "[\"Class|BPCoopCharacter|GetActiveRoundIndex\", \"Class|BPCoopCharacter|SetActiveRoundIndex\", \"Class|BPCheckpoint|GetRoundIndex\", \"Class|BPCheckpoint|SetRoundIndex\", \"Variables|Default|GetRoundIndex\", \"Variables|Default|SetRoundIndex\"]"
+  }
+}

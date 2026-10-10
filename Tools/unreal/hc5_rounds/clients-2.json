@@ -1,0 +1,463 @@
+{
+  "passed": true,
+  "clients": 2,
+  "checks": [
+    {
+      "name": "lobby roster scaling",
+      "states": [
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "client-local entrance invocation cannot mutate server",
+      "states": [
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "skip from lobby rejected",
+      "states": [
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "two competing client entrances start round once",
+      "states": [
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "duplicate entrance keeps Attempt",
+      "states": [
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "native client fixture clears through GameMode",
+      "states": [
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "skipped next round rejected",
+      "states": [
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 1,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "next round selects matching checkpoint",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "competing failure requests preserve Attempt until timer",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Failed",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Failed",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Failed",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "one timed retry increments Attempt once",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "distinct_checkpoint_spots": 2,
+      "server_reset_and_replication": true,
+      "positions": [
+        [
+          6000.0,
+          -300.0,
+          100.0
+        ],
+        [
+          6000.0,
+          -100.0,
+          100.0
+        ]
+      ]
+    },
+    {
+      "name": "timer cannot repeat",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "advance while playing rejected",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Playing",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "round two clear",
+      "states": [
+        {
+          "index": 2,
+          "phase": "Cleared",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Cleared",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 2,
+          "phase": "Cleared",
+          "attempt": 2,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "round three progression",
+      "states": [
+        {
+          "index": 3,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Playing",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "round three clear",
+      "states": [
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    },
+    {
+      "name": "return to earlier round rejected",
+      "states": [
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        },
+        {
+          "index": 3,
+          "phase": "Cleared",
+          "attempt": 1,
+          "phaseEndsAt": 0,
+          "scalingRow": "2"
+        }
+      ]
+    }
+  ],
+  "input_path": "native IA_Interact -> existing reliable character RPC -> HC5 fixture -> production round actors",
+  "health_or_death_recovery_tested": false,
+  "final_states": [
+    {
+      "index": 3,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 3,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 3,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    }
+  ]
+}
