@@ -6,10 +6,14 @@ send press/release to the server. The server validates the target, permission,
 line of sight and a 400 cm range before use. Timed uses run on the server clock.
 Continuous use calls `InteractBegin` and `InteractEnd` once per lifecycle.
 
-Active use ends on release, range/permission loss, a blocked/downed state,
-round-state change, or pawn end play. There is no revive implementation in this
-slice. `SetInteractionBlocked` provides a server-only hook for later systems;
-the `Downed` actor tag also blocks use.
+Active use ends on release, range/permission loss, a blocked state,
+round-state change, or pawn end play. `SetInteractionBlocked` provides a
+server-only hook for later systems; the legacy `Downed` actor tag also blocks use.
+
+**Current design:** lethal damage kills players; there are no revives.
+Death integration must bind `AC_Health.OnDied` to cancel active use and reject
+interaction while `IsDead()` is true. The legacy guard checks recorded here
+do not verify death gameplay; that integration and its tests remain pending.
 
 `IMC_Coop` and the mouse-look context are added per pawn on controller changes
 and removed when that pawn loses control. Cleanup removes only these contexts.
@@ -52,7 +56,7 @@ Windows, Unreal 5.8.3:
   replicated to every world; successful intervals had no errors or Accessed None.
 - Both local split-screen players had separate input contexts, focused targets
   and owning-player widgets, and interacted independently in the main cave.
-- The downed-state flag ended continuous use without adding revive gameplay.
+- The legacy blocked-state flag ended continuous use. This historical check does not verify lethal damage or death integration.
 - All four host debug handlers changed the replicated round phase; the second
   local player could not trigger host-only debug behavior.
 - The prompt was visually checked in both split views.

@@ -4,13 +4,13 @@
 
 ## Relationship to other epics (read first)
 
-This lane owns the shared core: the GameMode, GameState, GameInstance, player character, controller and state, project settings, and the maps' persistent levels. It also owns interaction, relics, carrying, revive and recovery, the round framework, Rounds 1 and 2, and travel between maps. [PG](epic-player-ghosts.md) adds the player's view, split-screen, ghosts and Round 3. [HZ](epic-cave-traps.md) builds the cave, its traps and its atmosphere. The sprint table, checkpoints and full contract list are in [docs/sprints.md](../sprints.md), room positions in [docs/map/site01-layout.md](../map/site01-layout.md), the asset pipeline in [docs/assets.md](../assets.md), and the design direction in [docs/design/direction-2026-10-09.md](../design/direction-2026-10-09.md).
+This lane owns the shared core: the GameMode, GameState, GameInstance, player character, controller and state, project settings, and the maps' persistent levels. It also owns interaction, relics, carrying, death integration and checkpoint restarts, the round framework, Rounds 1 and 2, and travel between maps. [PG](epic-player-ghosts.md) adds the player's view, split-screen, ghosts and Round 3. [HZ](epic-cave-traps.md) builds the cave, its traps and its atmosphere. The sprint table, checkpoints and full contract list are in [docs/sprints.md](../sprints.md), room positions in [docs/map/site01-layout.md](../map/site01-layout.md), the asset pipeline in [docs/assets.md](../assets.md), and the design direction in [docs/design/direction-2026-10-09.md](../design/direction-2026-10-09.md).
 
 ## Context
 
 The Windows machine merges everyone's work and hosts every playtest, including the split-screen pair. It also makes the final call on visuals and performance. So this lane stops building a few minutes before the others each sprint, and each phase is sized for about 25 minutes.
 
-HC covers what players do with their hands: interact, collect relics, carry things, revive each other, recover when everyone is down, solve the puzzles in Rounds 1 and 2, and move through the rounds and into the next map.
+HC covers what players do with their hands: interact, collect relics, carry things, restart at a checkpoint when the whole team dies, solve the puzzles in Rounds 1 and 2, and move through the rounds and into the next map.
 
 ## Locked decisions
 
@@ -20,8 +20,8 @@ HC covers what players do with their hands: interact, collect relics, carry thin
 - Max players is 4, counting split-screen players. Scaling goes through `RoundState.ScalingRow`, which the server keeps in step with the player count in the lobby and locks when a round starts.
 - The round state replicates as one struct, so clients never see a round number from one round and a phase from another.
 - Interaction has three modes: instant, timed and continuous. The server times holds itself and ends them on release.
-- Each chamber is one round. A round starts when the first player enters its chamber, clears when its puzzle is solved, and restarts from its entrance when everyone is down at once.
-- When everyone is down at once, in any phase, everyone gets back up at the latest checkpoint. Nobody can get stuck.
+- Each chamber is one round. A round starts when the first player enters its chamber, clears when its puzzle is solved, and restarts from its entrance when the whole team is dead.
+- Lethal damage kills players immediately; there is no downed state or teammate revive. Dead players cannot move, interact, carry items or hold mechanisms, and stay dead until a server-controlled restart. When the whole team is dead, in any phase, everyone restarts at the latest checkpoint.
 - Small relics go straight into the team's count. The key relic is heavy and has to be carried. Collected relics stay collected through restarts.
 - Puzzles use stand-ins: a statue holds a pressure plate as well as a player does.
 - Only the GameMode changes the round state. The run's progress lives on the server, in the GameInstance, across travel.
@@ -79,7 +79,7 @@ If the contracts run over, finish them first thing in Sprint 1. Push, then host 
   - On the owning client, a short sphere trace from the camera about every 0.1 seconds shows `WBP_InteractPrompt` on the owning player's screen when it finds a target whose `CanInteract` is true.
   - `IA_Interact`'s Started event sends `Server_InteractBegin(Target)`. Completed and Canceled send `Server_InteractEnd`.
   - The server keeps the active use. Instant: call `Interact` now. Timed: after the hold time, if the use is still active, call `Interact`. Continuous: call `InteractBegin` now and `InteractEnd` when it stops.
-  - The server ends or cancels the use when the button is released, the target goes out of range (4 m, checked 5 times a second) or stops passing `CanInteract`, the player goes down, the round resets, or the player leaves.
+  - The server ends or cancels the use when the button is released, the target goes out of range (4 m, checked 5 times a second) or stops passing `CanInteract`, the player dies, the round resets, or the player leaves.
   - The client shows a simple progress bar during a timed hold.
 - `StartRound(Index)`, `ClearRound()` and `SetRoundPhase` work. They only change `RoundState`, so F1 to F3 are useful to the other lanes straight away.
 - `IMC_Debug`, which `BP_CoopPlayerController` adds once on the host: F1 starts Round 1, F2 clears the round, F3 fails it and F4 completes the map.
@@ -95,11 +95,11 @@ If the contracts run over, finish them first thing in Sprint 1. Push, then host 
 - Travel test: `CompleteMap()` runs the console command `ServerTravel /Game/Maps/L_Site02?listen` (non-seamless), and F4 triggers it. A second press of F4 in Map 2 travels back to `L_Site01`. Check that both Macs and a split-screen player follow.
 - Place the spawn cavern's tutorial relics.
 
-### HC-3: Revive and recovery (Sprint 3, 60 min) → Playable 2
+### HC-3: Death and checkpoint restarts (Sprint 3, 60 min) → Playable 2
 
-- Add `AC_Health` to `BP_CoopCharacter`, and tell HZ to remove it from their test character. The character implements `BPI_Interactable` for revive: a timed interaction with `ReviveSeconds` from `DT_HazardScaling`, which `CanInteract` allows only when this character is downed and the instigator isn't. Completing it calls `AC_Health.Revive`.
+- Add `AC_Health` to `BP_CoopCharacter`, and tell HZ to remove it from their test character. Bind server-side `OnDied` to cancel the character's active interaction and release any held mechanisms; from HC-4, also call `DropCarried()`. Deny interaction when `IsDead()` is true. Player characters have no revive interaction.
 - `BP_Checkpoint` with four spawn spots, so players don't land on each other. Put one in the spawn cavern, and make it the latest checkpoint.
-- Everyone-down recovery, in any phase: when every player is down at once, the GameMode waits 3 seconds, then calls `AC_Health.ResetHealth()` on everyone and moves each player to their own spot at the latest checkpoint. In Sprint 5 this grows into the round restart.
+- Team-wipe restart, in any phase: when every connected player is dead, including both local split-screen players, the GameMode waits 3 seconds, moves each player to their own spot at the latest checkpoint and calls `AC_Health.ResetHealth()` on everyone. Dead players never respawn individually. In Sprint 5 this grows into the round restart.
 - Host Playable 2, including a split-screen player on the Windows machine.
 
 ### HC-4: Carrying (Sprint 4, 45 min)
@@ -108,20 +108,20 @@ If the contracts run over, finish them first thing in Sprint 1. Push, then host 
 - Its replicated carry state holds the carrier and whether it's free, carried or placed. Its RepNotify applies the matching collision on every machine, so a carried item never blocks its carrier or anyone else.
 - `IA_Drop` drops what you're carrying: detach, restore collision, turn physics back on, and give it a small push forward. Interact never drops, so using an altar while carrying works. `GetCarried()` returns the item, and `ReleaseCarried()` hands it to whatever takes it without turning physics on.
 - A `bHeavy` carryable halves the carrier's speed. Set the speed through a RepNotify so the server and the owning client agree; otherwise the client stutters from movement corrections.
-- `BP_KeyRelic` (heavy) in the key relic nook, at the position in the layout doc, and `BP_Statue` (heavy). A player who goes down drops what they're carrying.
+- `BP_KeyRelic` (heavy) in the key relic nook, at the position in the layout doc, and `BP_Statue` (heavy). A player who dies drops what they're carrying through the server-side `AC_Health.OnDied` binding.
 - Test pick up, drop and pick up again, and pick up after a client joins late.
 
 ### HC-5: Rounds and restarts (Sprint 5, 45 min)
 
 - `BP_RoundStart` at each chamber entrance: the first player in calls `StartRound(N)`, if N is the next round. Starting a round makes that round's `BP_Checkpoint` the latest.
 - `BP_ChamberGate` opens when its round clears. `BP_StartPad` in the spawn cavern: when every connected player, including split-screen players, has stood on it for 3 seconds, the gate to Round 1 opens.
-- `FailRound()` works. When everyone is down at once during `Playing`, the phase becomes `Failed`. After 3 seconds, the recovery from HC-3 runs at the round's checkpoint, the GameMode calls `BPI_RoundReset.ResetForRound(Index, Attempt + 1)` on every actor that implements it, and the round starts again with the next `Attempt`.
+- `FailRound()` works. When the whole team is dead during `Playing`, the phase becomes `Failed`. After 3 seconds, the checkpoint restart from HC-3 runs at the round's checkpoint, the GameMode calls `BPI_RoundReset.ResetForRound(Index, Attempt + 1)` on every actor that implements it, and the round starts again with the next `Attempt`.
 - If a player leaves during a round, restart it the same way, so the puzzles match the new player count.
 - Every HC puzzle actor implements `BPI_RoundReset`. Carryables go back to where they started; the key relic goes back to its nook.
 
 ### HC-6: Rounds 1 and 2 (Sprint 6, 60 min) → Playable 3
 
-- Round 1, the plate hall: `BP_PressurePlate` counts players and heavy carryables on the server; `bPressed` replicates through a RepNotify that sinks the plate and changes its color. When every enabled plate is pressed, the round clears.
+- Round 1, the plate hall: `BP_PressurePlate` counts living players and heavy carryables on the server; `bPressed` replicates through a RepNotify that sinks the plate and changes its color. When every enabled plate is pressed, the round clears.
 - `BP_PuzzleSetup` reads `PlateCount` and `StatueCount` when Round 1 starts, enables that many plates, and spawns statues in the alcoves. Starting values: 2 players get 3 plates and 2 statues; 3 players get 3 and 1; 4 players get 4 and 1. A restart removes and respawns the statues.
 - Round 2, the altar: `BP_Altar` in chamber 2. Using it while carrying the key relic is one server step: release the relic from the carrier, set it to placed on the altar, and clear the round.
 - Host Playable 3.
@@ -141,7 +141,7 @@ If the contracts run over, finish them first thing in Sprint 1. Push, then host 
 
 ### HC-9: Full run (Sprint 9, 60 min) → Playable 4
 
-- In the build window, play every path as a client and fix what breaks: each round's restart, recovery outside a round, the zipline and the walkway, travel to Map 2, the results and the restart. Check that the split-screen pair survives travel both ways. Log each result in the sprint log.
+- In the build window, play every path as a client and fix what breaks: each round's restart, team-wipe restarts outside a round, the zipline and the walkway, travel to Map 2, the results and the restart. Check that the split-screen pair survives travel both ways. Log each result in the sprint log.
 - Tune `DT_RoundScaling` and the relic placement from the 2-player and 4-player runs.
 - Host Playable 4.
 
@@ -183,9 +183,9 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 - HC-0: Playable 1 holds 4 players, and both Macs open the project with no missing-plugin errors.
 - HC-1: a client uses each test interactable. A timed hold completes only if the button is held for the whole time, on the server's clock, and a continuous use ends the moment the button is released. F1 to F3 change `RoundState` on every screen.
 - HC-2: a client picks up a relic and every screen's count goes up by its value. Each player, including a split-screen player, gets a different `ColorSlot`. F4 takes everyone, including the split-screen player, to Map 2 and back.
-- HC-3: one client revives another. When everyone goes down in the spawn cavern, they all get back up there, on separate spots.
-- HC-4: a client picks up a crate, drops it and picks it up again, and the other clients see the same thing with no collision snags. A client carrying the key relic walks at half speed without stuttering.
-- HC-5: the start pad opens the gate only when every player, including a split-screen player, stands on it. When everyone goes down during a round, it restarts from its entrance with its puzzle reset and the next `Attempt`.
+- HC-3: lethal damage kills a client on every screen, cancels their interactions and releases held mechanisms. The dead player cannot move, interact or be revived while teammates continue. When the whole team dies in the spawn cavern, everyone restarts there after 3 seconds, on separate spots. Verify both local split-screen players independently.
+- HC-4: a client picks up a crate, drops it and picks it up again, and the other clients see the same thing with no collision snags. A client carrying the key relic walks at half speed without stuttering. Killing the carrier drops the item on every screen and prevents further pickups until a restart.
+- HC-5: the start pad opens the gate only when every player, including a split-screen player, stands on it. When the whole team dies during a round, it restarts from its entrance with its puzzle reset and the next `Attempt`.
 - HC-6: Round 1 clears with 2 players using statues and with 4 players, and the plate count matches the player count. Placing the key relic clears Round 2.
 - HC-7: completing the map brings every client, and the split-screen pair, into Map 2 with the relic counts intact, each with one HUD.
 - HC-8: the HUD shows the round and relics on every screen, including both split views. R starts a new run and everyone reconnects.

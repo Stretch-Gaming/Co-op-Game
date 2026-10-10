@@ -24,7 +24,7 @@ All three lanes build against one map layout: [map/site01-layout.md](map/site01-
 4. **Round 1, the plate hall:** pressure plates open the gate. Statues stand in for missing players, so the puzzle works with 2, 3 or 4.
 5. **Round 2, the altar:** carry the heavy key relic out of a trapped side passage, down the trap corridor, and onto the altar.
 6. **Round 3, the haunted gauntlet:** one or two players hold levers to keep a gate open while the others cross a dark hall of traps and ghosts, then open it from the far side.
-7. Traps and ghosts knock players down, and a teammate holds Interact to revive them. If everyone is down at once, they all get back up at the last checkpoint, and a round in progress restarts.
+7. Traps and ghosts damage players; lethal damage kills them immediately. There are no revives. Dead players stay out until a server-controlled restart. When the whole team is dead, everyone restarts at the latest checkpoint after 3 seconds, and a round in progress resets.
 8. Players zipline (or take the walkway) out of the cave into Map 2, a small Egyptian antechamber, where the results show the relics collected.
 
 ## Sprints
@@ -34,7 +34,7 @@ All three lanes build against one map layout: [map/site01-layout.md](map/site01-
 | 0. Setup | 60 | Create the project, plugins, settings and maps; push by minute 15. Stub the core contracts. | Open the project while shaders compile. Connect MCP and run the smoke test. | Open the project while shaders compile. Connect MCP. | **Playable 1** |
 | 1. Foundations | 45 | Interaction with holds. Input contexts. Round state and debug keys. | First person with the switch to third person. | Cave blockout and the light it needs. `AC_Health` stub. | Smoke join |
 | 2. Relics | 45 | Relics and the team count. Player colors and split-screen keys. Put PG's view on the real character. Travel test. | Split-screen on the host. Headlamp. | `AC_Health` working. Spike trap. | Smoke join |
-| 3. Cave demo | 60 | Revive. Everyone-down recovery at the spawn checkpoint. | First ghost. | Dart trap. The first cave textures. | **Playable 2** |
+| 3. Cave demo | 60 | Death integration. Team-wipe restart at the spawn checkpoint. | First ghost. | Dart trap. The first cave textures. | **Playable 2** |
 | 4. Carrying | 45 | Carrying, the key relic and statues. | Ghosts each round. Player colors applied. | Swinging trap. Round 2's corridor. | Smoke join |
 | 5. Rounds | 45 | Round triggers, gates, checkpoints and the start pad. Round restarts. | Ghosts back off from light. | Round 3's hall. Fall volume. | Smoke join |
 | 6. Three rounds | 60 | Round 1: plates and statues. Round 2: the altar. | Round 3: the haunted gauntlet. | Second light pass with props. Fog, dust, drips. | **Playable 3** |
@@ -102,8 +102,8 @@ Each checkpoint is a build anyone on the team can join and play. The times are s
 - Switch to third person and back. Turn your headlamp on and off; everyone sees it pointing where you look.
 - A second player joins split-screen on the Windows machine with a gamepad while both Macs are online.
 - Pick up relics and watch the team count go up.
-- The spike and dart traps warn before they hit and knock you down, and a teammate holds Interact to revive you.
-- If everyone goes down, you all get back up in the spawn cavern.
+- The spike and dart traps warn before they hit. Lethal damage kills you on every screen; you cannot move, interact or be revived, and ghosts ignore you.
+- When the whole team dies, everyone restarts in the spawn cavern after 3 seconds, on separate spots. Test death independently for both local split-screen players.
 - A ghost drifts through the walls after you.
 
 ### Playable 3: Three rounds (end of Sprint 6, about 6:00)
@@ -113,7 +113,7 @@ Each checkpoint is a build anyone on the team can join and play. The times are s
 - Round 2: carry the key relic past the traps to the altar.
 - Round 3: hold the levers while the others cross the haunted gauntlet, then open the gate from the far side.
 - More ghosts come with 4 players, and a headlamp drives one back.
-- When everyone is down at once, the round restarts from its entrance with its puzzle reset.
+- When the whole team is dead, the round restarts from its entrance with everyone alive and its puzzle reset. Dead players drop carried items and stop holding plates and levers.
 
 ### Playable 4: Full run (end of Sprint 9, about 8:30)
 
@@ -161,10 +161,10 @@ Two rules hold for every contract that changes state: the server decides, and an
 | Contract | Owner | Stub by | Works by | What it is |
 | --- | --- | --- | --- | --- |
 | `Content/Core/BPI_Interactable` and `E_InteractMode` | HC | 0 | 1 | `GetInteractInfo(Instigator)` returns a prompt, a mode and a hold time. Modes: `Instant`, `Timed` (hold for the hold time) and `Continuous` (active while held). `CanInteract(Instigator)` returns a bool. On the server, the character calls `Interact(Instigator)` for an instant use or a completed hold, and `InteractBegin(Instigator)` and `InteractEnd(Instigator)` around a continuous one. |
-| Interaction handling in `BP_CoopCharacter` | HC | 0 | 1 | The character sends the press and the release to the server. The server tracks the active use: it times holds itself, and ends or cancels a use when the button is released, the player moves out of range (4 m) or goes down, the round resets, or the player leaves. |
+| Interaction handling in `BP_CoopCharacter` | HC | 0 | 1 | The character sends the press and the release to the server. The server tracks the active use: it times holds itself, and ends or cancels a use when the button is released, the player moves out of range (4 m) or dies, the round resets, or the player leaves. |
 | `Content/Core/BPI_RoundReset` | HC | 0 | 5 | `ResetForRound(Index, Attempt)`. When a round restarts, the server calls it on every actor that implements it, and each lane resets its own: puzzles, carryables, levers, ghosts. Collected relics stay collected. |
-| `Content/Core/BP_CoopCharacter` | HC | 0 | 1–4 | The player character, a child of the template character. Interaction works in Sprint 1, PG's `AC_PlayerView` in Sprint 2, `AC_Health` and revive in Sprint 3, and carrying with its own Drop key in Sprint 4. |
-| `Content/Core/BP_CoopGameMode` | HC | 0 | See each function | The only place the round state changes. All server-only. `SetRoundPhase(Phase)` from Sprint 0. `StartRound(Index)` and `ClearRound()` from Sprint 1. `AddRelics(Count)` from Sprint 2. `CompleteMap()` from Sprint 2 as a plain travel to Map 2, and with the run's state from Sprint 7. Everyone-down recovery from Sprint 3. `FailRound()` from Sprint 5. |
+| `Content/Core/BP_CoopCharacter` | HC | 0 | 1–4 | The player character, a child of the template character. Interaction works in Sprint 1, PG's `AC_PlayerView` in Sprint 2, `AC_Health` and death handling in Sprint 3, and carrying with its own Drop key in Sprint 4. |
+| `Content/Core/BP_CoopGameMode` | HC | 0 | See each function | The only place the round state changes. All server-only. `SetRoundPhase(Phase)` from Sprint 0. `StartRound(Index)` and `ClearRound()` from Sprint 1. `AddRelics(Count)` from Sprint 2. `CompleteMap()` from Sprint 2 as a plain travel to Map 2, and with the run's state from Sprint 7. Team-wipe checkpoint restart from Sprint 3. `FailRound()` from Sprint 5. |
 | `Content/Core/BP_CoopGameState` and `S_RoundState` | HC | 0 | 1 | `GetPlayerCount()` counts PlayerStates, including split-screen players. `RoundState` is one replicated struct: `Index`, `Phase`, `Attempt`, `PhaseEndsAt` (server time, 0 means no countdown) and `ScalingRow` (`2`, `3` or `4`). Its RepNotify fires `OnRoundStateChanged(State)` on the server and every client. Apply the current `RoundState` when you bind as well as when it changes, since a client can miss a short-lived phase. `RelicsCollected` and `RelicsAvailable`. |
 | `Content/Core/BP_CoopGameInstance` | HC | 0 | 7 | Holds the run's state on the server across travel: relics collected and available. |
 | `Content/Core/BP_CoopPlayerState` | HC | 0 | 2 | `ColorSlot` (0 to 3), replicated. The GameMode gives each player, including a split-screen player, the first free slot when they join. |
@@ -176,8 +176,8 @@ Two rules hold for every contract that changes state: the server decides, and an
 | `Content/Puzzles/BP_Carryable` | HC | 4 | 4 | Picked up with Interact, put down with Drop. A replicated carry state (carrier, and free, carried or placed) applies the same collision on every machine. `bHeavy` halves the carrier's speed and holds a pressure plate. `ReleaseCarried()` hands the item to whatever takes it, such as the altar. |
 | `Content/Player/AC_PlayerView` | PG | 1 | 1 on PG's test character, 2 on the real one | `ApplyViewState()` sets the view from scratch, and runs at BeginPlay, on possession and on every change. `ToggleView()` switches between first and third person. `ToggleHeadlamp()`. `ApplyColorSlot()` from Sprint 4. |
 | `Content/Player/BPFL_SplitScreen` | PG | 1 | 2 | `AddLocalPlayer()` and `RemoveLocalPlayer()`, for the host machine only, in the `Lobby` and `Cleared` phases, up to 2 local players and 4 in total. |
-| `Content/Player/Ghosts/BP_Ghost` | PG | 3 | 3 | Damages players through `Apply Damage`. From Sprint 4, ghosts spawn when a round starts, scaled, and leave when it ends. |
-| `Content/Hazards/AC_Health` | HZ | 1 | 2 | Player health only, with Component Replicates on. `Health`, `MaxHealth`, `bDowned` (RepNotify). `IsDowned()`, and server-only `Revive(Reviver)` and `ResetHealth()`. `ResetHealth()` restores full health and gets the player up, for checkpoints and restarts. `OnDowned` and `OnRevived` fire on the server. Damage arrives through `Apply Damage` on the owner. |
+| `Content/Player/Ghosts/BP_Ghost` | PG | 3 | 3 | Targets living players only (`IsDead()` is false) and damages them through `Apply Damage`. From Sprint 4, ghosts spawn when a round starts, scaled, and leave when it ends. |
+| `Content/Hazards/AC_Health` | HZ | 1 | 2 | Player health and death only, with Component Replicates on. `Health`, `MaxHealth`, `bDead` (RepNotify). `IsDead()` and server-only `ResetHealth()`. Lethal damage sets `bDead`; `OnDied` fires once on the server, cancels interactions and releases carried items and mechanisms. Dead players cannot move or interact, and damage cannot kill them again. No downed state or revive API. `ResetHealth()` restores full health and clears `bDead` only for a GameMode-controlled checkpoint or round restart. Its RepNotify restores movement on every machine. Damage arrives through `Apply Damage` on the owner. |
 | Trap schedules | HZ | 2 | 2–4 | Each trap replicates its schedule (a start time in server time plus its interval or speed) or the moment it was triggered, so every machine shows the warning before the server applies damage. |
 | Scaling tables | Each lane, in its own folder | HC 0, PG and HZ 1 | When first used | `DT_RoundScaling` (HC), `DT_GhostScaling` (PG) and `DT_HazardScaling` (HZ), each with rows `2`, `3` and `4`. Look them up with `RoundState.ScalingRow`. In the `Lobby` phase, the server keeps the row in step with the player count; from Round 1, it changes only when a round starts. If a player leaves mid-round, the round restarts with the new count. |
 | Maps and sublevels | HC for persistent levels, each lane for its sublevel | 0 | 0 | `/Game/Maps/L_Site01`, the cave, with always-loaded `L_Site01_HC`, `L_Site01_PG` and `L_Site01_HZ`. `/Game/Maps/L_Site02`, Map 2: a bare level from Sprint 0 for travel tests, with `L_Site02_HZ` from Sprint 7. Persistent levels hold only player starts, the map exit and world settings, placed by HC under a lock. |
@@ -192,7 +192,7 @@ If a lane falls behind, cut in this order rather than move a checkpoint. Each cu
 4. The second lever at 4 players. Round 3 uses one lever at every player count.
 5. Sound beyond ambience and trap sounds.
 
-Never cut joining at 2–4 players with a split-screen pair on the host, first person with the switch to third person, interact and carry, relics, knockdown, revive and recovery, the three rounds and their restarts, at least one ghost, travel to Map 2, or the minimum presentation kit.
+Never cut joining at 2–4 players with a split-screen pair on the host, first person with the switch to third person, interact and carry, relics, death with no revives and team-wipe checkpoint restarts, the three rounds and their restarts, at least one ghost, travel to Map 2, or the minimum presentation kit.
 
 ## Risks
 

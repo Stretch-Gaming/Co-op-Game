@@ -150,8 +150,11 @@ debug inputs; do not bypass their input path with scripting.
    collision snags. Two clients contest one item: exactly one carrier. Heavy
    key/statue movement is half speed for server and owning client without
    correction stutter. Join late while the item is carried and confirm its
-   carrier/collision state. If downed integration is available, verify native
-   downing releases it; otherwise record that check blocked with its dependency.
+   carrier/collision state. If death integration is available, verify native
+   lethal damage kills the carrier, releases the item on every peer and denies
+   pickup while dead. There are no revives. Verify both local players
+   independently and that a team wipe restarts everyone at the checkpoint;
+   otherwise record those checks blocked with their dependency.
 6. **First puzzle (HC-6 present):** start Round 1 through the implemented entrance
    (or agreed native F1 fixture), use players/statues to satisfy the plates and
    observe gate/phase on every peer. The candidate's DT_RoundScaling is authority:

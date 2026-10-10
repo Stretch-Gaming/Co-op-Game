@@ -69,7 +69,7 @@ Before the sprint, run `Tools/check-mac.command` until it passes. It checks for 
 ### PG-3: First ghost (Sprint 3, 60 min) → Playable 2
 
 - `BP_Ghost`: a Pawn with Replicates and Replicate Movement on. Its collision overlaps everything, so it passes through walls.
-- On the server, about 5 times a second, it picks the nearest player within 20 m who isn't downed. Every tick it moves its root toward them by `GhostSpeed` times the frame time, slower than a walking player. Touching a player calls `Apply Damage` with `GhostDamage`, then the ghost backs off for 3 seconds.
+- On the server, about 5 times a second, it picks the nearest player within 20 m who is alive (`AC_Health.IsDead()` is false). Every tick it moves its root toward them by `GhostSpeed` times the frame time, slower than a walking player. Touching a player calls `Apply Damage` with `GhostDamage`, then the ghost backs off for 3 seconds.
 - A gentle bob and a glow run on the visual mesh only, locally on every machine.
 - Place one ghost in the spawn cavern's north passage. Also spawn one from a debug key in `L_PG_Test`, to check spawned ghosts behave like placed ones. Use a translucent greybox sphere until PG-A2's ghost arrives.
 - Join Playable 2.
