@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A5/SM_EgyptPillar.glb",
+  "output": "SourceArt/HZ/HZ-A5/SM_EgyptPillar.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1392,
+  "triangles_after": 1392,
+  "dimensions_cm": [
+    180.3153,
+    180.8007,
+    605.9522
+  ],
+  "bounds_min_cm": [
+    -90.15766,
+    -90.40037,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
