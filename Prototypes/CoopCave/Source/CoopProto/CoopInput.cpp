@@ -86,9 +86,11 @@ void UCoopInput::Build()
 	Bind(PlayerContext, CameraToggle, EKeys::V);
 	Bind(PlayerContext, CameraToggle, EKeys::Gamepad_DPad_Up);
 
-	// Playground travel: D-pad right/left = next/previous station, D-pad down = reset to this station
+	// Playground travel: D-pad right/left (or = / -) = next/previous station, D-pad down = reset to this station
 	Bind(PlayerContext, StationNext, EKeys::Gamepad_DPad_Right);
 	Bind(PlayerContext, StationPrev, EKeys::Gamepad_DPad_Left);
+	Bind(PlayerContext, StationNext, EKeys::Equals);
+	Bind(PlayerContext, StationPrev, EKeys::Hyphen);
 	Bind(PlayerContext, StationReset, EKeys::Gamepad_DPad_Down);
 
 	// Number keys 1-9 jump straight to a station. The Scalar modifier turns each key's

@@ -55,6 +55,7 @@ The game and editor target definitions under `Source/` are included for Unreal 5
 | Reel (only with the rope on) | R | Right trigger | Enter |
 | Switch camera | V | D-pad up | C |
 | Jump to a spot (cave 1-5, maze 6-9) | 1-9 | D-pad right / left | |
+| Next / previous spot (10-13: the maze's co-op moments) | = / - | D-pad right / left | |
 | Back to the start of this spot | press its number again | D-pad down | |
 
 Player 1 is coral and Player 2 is teal. A braced player squashes down and goes darker. Jump right next to a braced partner to boost jump.
@@ -74,6 +75,10 @@ A 25 m x 25 m mine cave lit by torches. The spots you can jump to:
 | 7 | Meeting point A | The sunken hall (-3 m) where all four paths meet. |
 | 8 | Meeting point B | The raised hall (+4 m), the second meeting point. |
 | 9 | Relic chamber | The end of the maze (+6 m), with the gold idol. |
+| 10 | Boost wall | Path 1's co-op moment, in the trench (see below). |
+| 11 | Winch lift | Path 2's co-op moment, on the climb to the +10 m bridge. |
+| 12 | Split tunnels | Path 3's co-op moment, just past the fork. |
+| 13 | Dip gate | Path 4's co-op moment, at the bottom of the dip before the end. |
 
 ### The maze
 
@@ -93,6 +98,15 @@ Through the door in the cave's north wall (between the timber posts). [maze_over
 | 4 Long haul (purple) | 495 m | -3 to +6 m |
 
 The layout is the table at the top of `CoopPlayground.cpp` (`CoopMaze`): rooms as tile rectangles, paths as waypoints with heights.
+
+**Co-op moments.** Each path has one spot that needs both players: one braces, the other boost jumps, and then the partner follows. They're graybox (engine shapes, flat colors in the path's color, gold plates). Spots 10-13 take you to them.
+
+- **1 Trench: Boost wall** (spot 10). A 2.5 m wall across the trench. Boost your partner over. They drop onto the 1.2 m ledge behind it, where you can see their head, and brace there. Jump against the wall and you boost off them, through the wall.
+- **2 Switchback: Winch lift** (spot 11). A 2.5 m cliff in the climb to the +10 m bridge. Boost your partner up. Stand on the lift in front of the cliff; they brace on the gold plate up top and the lift carries you up. Let go of brace and it sinks again.
+- **3 Crystal run: Split tunnels** (spot 12). A divider splits the tunnel in two, with a 2.5 m block in each, 4 m apart. Take one tunnel each. Brace by the divider so your partner can boost over the first block, then they brace by the divider at the second block for you. A block is too deep to boost off someone behind it, so you have to take turns.
+- **4 Long haul: Dip gate** (spot 13). A gate at the bottom of the dip. Boost your partner onto the 2.5 m ledge on the left; its gold plate opens the gate. Walk through and stand on the gold plate past it, and your partner can jump down and follow. The gate never shuts on anyone.
+
+The heights come from the default tuning, and the table `CoopMaze::Moments` explains the math. A jump lifts your feet 1.84 m (`coop.JumpVelocity` 760, `coop.Gravity` 1.6). A boost jump (`coop.Boost.Up` 1300) would lift them 5.4 m, but a corridor ceiling stops them at 3.58 m. So 2.5 m is out of reach alone and 1.1 m under a boost; the 1.2 m ledge is a plain jump. A boost needs your braced partner within 2 m across (`coop.Boost.Range`) and 1.5 m up or down. The lift and gate speeds are `coop.Maze.LiftSpeed` and `coop.Maze.GateSpeed`.
 
 **Repo art (optional):** the maze uses the shared style kit from the main project when it's in this project: `SM_StyleTest_Rock` and `MI_Stylized_Rock` for the walls and ceiling, `MI_Stylized_Gold` for the idol. To add them, open `CoopGame.uproject`, select those three assets in `Content/Shared/Style`, right-click, **Asset Actions > Migrate**, and pick this project's `Content` folder. Without them the maze uses code-built rocks. The Output Log line `CoopPlayground: repo rock mesh ...` says which it found.
 
@@ -122,6 +136,7 @@ Typing a name on its own shows its current value.
 
 - **Movement:** `coop.WalkSpeed`, `coop.JumpVelocity`, `coop.Gravity`, `coop.AirControl`, `coop.StepHeight` (tallest bump you walk over, cm)
 - **Boost jump:** `coop.Boost.Up/Forward/Range`
+- **Maze co-op moments:** `coop.Maze.LiftSpeed` (the winch lift), `coop.Maze.GateSpeed` (the dip gate)
 - **Cave lighting:** `coop.Cave.Torch` (brightness), `coop.Cave.TorchRadius`, `coop.Cave.TorchShadows` (0 none, 1 the four torches out in the room, 2 all), `coop.Cave.Flicker`, `coop.Cave.Bounce`, `coop.Cave.Crystal`, `coop.Cave.Ambient` (cool fill in the shadows), `coop.Cave.Exposure` (stops), `coop.Cave.Fog`
 - **Camera:** `coop.Cam.Distance/Shoulder/Height/FOV/FPFOV/StartFirstPerson`, `coop.Look.StickYaw/StickPitch/Mouse`
 - **The rope:** `coop.Tether 1` ties the players together again the next time you press Play. `coop.Rope.MaxLength/MinLength/ReelSpeed/DragSpeed/AirWeight` tune it.

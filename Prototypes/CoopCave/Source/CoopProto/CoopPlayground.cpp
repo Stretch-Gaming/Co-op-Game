@@ -1,7 +1,9 @@
 #include "CoopPlayground.h"
 
+#include "CoopCharacter.h"
 #include "CoopTuning.h"
 #include "Components/BoxComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Components/ExponentialHeightFogComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
@@ -15,6 +17,7 @@
 #include "Engine/PostProcessVolume.h"
 #include "Engine/StaticMesh.h"
 #include "Engine/World.h"
+#include "EngineUtils.h"
 #include "Materials/Material.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "Materials/MaterialInterface.h"
@@ -154,6 +157,52 @@ namespace CoopMaze
 			  { { {4,31}, {1,31} }, { {8,17}, {13,17} } } },
 		};
 	}
+
+	/**
+	 * One co-op moment per path, in engine shapes and flat colors (graybox). Each needs a boost jump off a braced
+	 * partner, then a way for the partner to follow. Positions are cm from the tile centre: Along the path (+ = onward)
+	 * and across it (+ = right).
+	 *
+	 * The heights come from the default tuning. coop.Gravity 1.6 makes g = 1568 cm/s^2, and a player is 192 cm tall.
+	 *  - A jump (coop.JumpVelocity 760) lifts your feet 760^2 / (2 * 1568) = 184 cm.
+	 *  - A boost jump (coop.Boost.Up 1300) would lift them 539 cm, but a corridor's 550 cm ceiling stops your feet
+	 *    at 550 - 192 = 358 cm.
+	 *  - So the climb one player can't make is 250 cm: a jump falls 66 cm short (and your shoulders, 42 cm above your
+	 *    feet, stay under the edge), a boost clears it by 108 cm. A step you can jump onto alone is 120 cm.
+	 *  - coop.StepHeight 45 cm: the plates and the lift at rest stand 4 cm proud, so you walk straight onto them.
+	 *  - A boost needs your braced partner within coop.Boost.Range (200 cm) across and 150 cm up or down. Through a
+	 *    30 cm wall you're 42 + 30 + 42 = 114 cm apart, so you can boost off someone braced on the other side. A 150 cm
+	 *    block puts you 234 cm apart, too far.
+	 */
+	enum class EMoment : uint8 { Wall, Lift, Split, Gate };
+	struct FMomentSpec
+	{
+		const TCHAR* Name;
+		const TCHAR* Status;   // shown when you travel to its station
+		EMoment Kind;
+		int32 Path;            // 0-3
+		int32 Col, Row;        // the path tile it's built on (a straight run, no bridge)
+		float Station;         // where its station is, cm along the path
+		float Along;           // where its main piece is, cm along the path
+		float Height;          // the climb one player can't make alone, cm above the floor
+		float Depth;           // the main piece's depth along the path, cm
+		float Helper;          // how the partner follows (see below), cm
+		float Span;            // (see below), cm
+	};
+	// Wall:  a wall across the path. Behind it a Helper-high, Span-deep drop-down ledge: brace there to boost your partner over.
+	// Lift:  a cliff in the climb; its top runs on until the ramp meets it. In front, a Span-long lift rises to the top
+	//        while a player braces on the winch plate up there.
+	// Split: a Span-long divider makes two tunnels. Each has a block, Helper apart along the path: you can't boost off
+	//        someone behind your own block, so you take turns across the divider.
+	// Gate:  a gate across the dip. A Height-high switch ledge before it (Helper along) and a floor plate Span past it
+	//        each hold it open.
+	const FMomentSpec Moments[] = {
+		// Name                Status                                                                                          Kind            Path Col Row  Station  Along  Height Depth  Helper  Span
+		{ TEXT("Boost wall"),    TEXT("Boost your partner over the wall. Then brace on the ledge behind it and boost them over."),      EMoment::Wall,  0, 24, 19, -350.f,    0.f, 250.f,  30.f,  120.f,  150.f },
+		{ TEXT("Winch lift"),    TEXT("Boost your partner up the cliff. Then they brace on the plate up there to lift you."),          EMoment::Lift,  1, 21,  7, -400.f,    0.f, 250.f,   0.f,    0.f,  200.f },
+		{ TEXT("Split tunnels"), TEXT("One of you in each tunnel. Boost each other over the blocks through the divider, in turn."),    EMoment::Split, 2, 33, 34, -800.f,    0.f, 250.f, 150.f,  400.f, 1000.f },
+		{ TEXT("Dip gate"),      TEXT("Boost your partner onto the ledge to open the gate. Go through and stand on the plate."),       EMoment::Gate,  3, 10,  0, -600.f,  150.f, 250.f,  40.f, -300.f,  200.f },
+	};
 
 	FVector2D TileCenter(const FIntPoint& T)
 	{
@@ -388,6 +437,7 @@ void ACoopPlayground::BeginPlay()
 void ACoopPlayground::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	UpdateMovers(DeltaSeconds);
 	if (UWorld* World = GetWorld())
 	{
 		ApplyLiveLighting(World->GetTimeSeconds());
@@ -1732,6 +1782,49 @@ void ACoopPlayground::BuildMaze()
 		}
 	}
 
+	// 6b. The co-op moments, one per path, and a station in front of each
+	TArray<FCoopPathSpot> MomentSpots;
+	for (const FMomentSpec& Moment : Moments)
+	{
+		FCoopPathSpot& Spot = MomentSpots.AddDefaulted_GetRef();
+		const FIntPoint At(Moment.Col, Moment.Row);
+		for (const FSegment& Seg : Segments[Moment.Path])
+		{
+			const int32 i = Seg.Tiles.Find(At);
+			if (i == INDEX_NONE)
+			{
+				continue;
+			}
+			const FIntPoint Run = (i + 1 < Seg.Tiles.Num()) ? Seg.Tiles[i + 1] - Seg.Tiles[i] : Seg.Tiles[i] - Seg.Tiles[i - 1];
+			Spot.Forward = WorldDir(Run);
+			Spot.Right = FVector(-Spot.Forward.Y, Spot.Forward.X, 0.f);
+			Spot.Origin = FVector(TileCenter(At), Seg.Z[i]);
+			for (int32 k = i - 2; k <= i + 2; ++k)
+			{
+				const int32 j = FMath::Clamp(k, 0, Seg.Tiles.Num() - 1);
+				const FLevel* Level = FindLevel(Seg.Tiles[j], Moment.Path);
+				Spot.FloorZ.Add(Seg.Z[j]);
+				Spot.CeilingZ.Add(Level ? Level->FloorMax + Level->Headroom : Seg.Z[j] + CorridorHeadroom);
+			}
+			break;
+		}
+		if (Spot.FloorZ.IsEmpty())
+		{
+			UE_LOG(LogTemp, Error, TEXT("Maze: %s's tile (%d,%d) isn't on path %d"), Moment.Name, Moment.Col, Moment.Row, Moment.Path + 1);
+			MomentSpots.Pop();
+			continue;
+		}
+		FCoopStation& Station = Stations.AddDefaulted_GetRef();
+		Station.Name = Moment.Name;
+		Station.Status = Moment.Status;
+		Station.Location = Spot.At(Moment.Station, 0.f, Spot.FloorAt(Moment.Station));
+		Station.Yaw = Spot.Forward.Rotation().Yaw;
+	}
+	if (MomentSpots.Num() == UE_ARRAY_COUNT(Moments))
+	{
+		BuildMoments(MomentSpots);
+	}
+
 	// 7. The relic: a gold idol on a stone pedestal in the middle of the chamber
 	{
 		const FVector Spot = RoomCenter(Goal);
@@ -1812,6 +1905,215 @@ void ACoopPlayground::BuildMaze()
 	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze built, %d tiles, %d bridges, %.0f x %.0f m, %d torches, %d repo rocks"),
 		Cells.Num(), CrossingCount, (Extent.X - 2.f * Tile) / 100.f, (Extent.Y - 2.f * Tile) / 100.f, TorchLights.Num(),
 		MazeWallRockTransforms.Num() + MazeCeilingRockTransforms.Num());
+}
+
+// ---------------------------------------------------------------------------
+// The maze's co-op moments
+// ---------------------------------------------------------------------------
+
+float FCoopPathSpot::FloorAt(float Along) const
+{
+	const float Index = FMath::Clamp(Along / CoopMaze::Tile + 2.f, 0.f, float(FloorZ.Num() - 1));
+	const int32 Low = FMath::Min(FMath::FloorToInt(Index), FloorZ.Num() - 2);
+	return FMath::Lerp(FloorZ[Low], FloorZ[Low + 1], Index - Low);
+}
+
+float FCoopPathSpot::CeilingAt(float Along) const
+{
+	return CeilingZ[FMath::Clamp(FMath::RoundToInt(Along / CoopMaze::Tile) + 2, 0, CeilingZ.Num() - 1)];
+}
+
+FVector FCoopPathSpot::At(float Along, float Side, float Z) const
+{
+	return FVector(Origin.X, Origin.Y, 0.f) + Forward * Along + Right * Side + FVector(0.f, 0.f, Z);
+}
+
+void ACoopPlayground::BuildMoments(const TArray<FCoopPathSpot>& Spots)
+{
+	using namespace CoopMaze;
+	const TArray<FPathSpec> Paths = MakePaths();
+	constexpr float HalfWidth = Tile * 0.5f + 5.f;   // pieces reach 5 cm into the corridor's walls
+	constexpr float Thin = 30.f;                     // the split tunnels' divider
+	constexpr float PlateProud = 4.f;                // plates and the lift at rest, above the floor
+	const FLinearColor PlateColor(0.85f, 0.62f, 0.12f);
+
+	// A box between two distances along the path and two across it, from Bottom to Top
+	auto Block = [this](const FCoopPathSpot& Spot, float Along0, float Along1, float Side0, float Side1, float Bottom, float Top, const FLinearColor& Color)
+	{
+		return AddShape(CubeMesh, Spot.At((Along0 + Along1) * 0.5f, (Side0 + Side1) * 0.5f, (Bottom + Top) * 0.5f),
+			FVector(Along1 - Along0, Side1 - Side0, Top - Bottom), Spot.Forward.Rotation(), Color);
+	};
+	// The same, but movable: Active is where its centre goes when its plates are pressed
+	auto MoverBlock = [this](const FCoopPathSpot& Spot, float Along0, float Along1, float Side0, float Side1, float Bottom, float Top,
+		const FLinearColor& Color, const FVector& ActiveOffset) -> FCoopMover&
+	{
+		UStaticMeshComponent* Piece = NewObject<UStaticMeshComponent>(this);
+		Piece->SetMobility(EComponentMobility::Movable);
+		Piece->SetupAttachment(Root);
+		Piece->SetStaticMesh(CubeMesh);
+		Piece->SetRelativeLocationAndRotation(Spot.At((Along0 + Along1) * 0.5f, (Side0 + Side1) * 0.5f, (Bottom + Top) * 0.5f), Spot.Forward.Rotation());
+		Piece->SetRelativeScale3D(FVector(Along1 - Along0, Side1 - Side0, Top - Bottom) / 100.f);
+		Piece->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		Piece->SetCastShadow(false);
+		Piece->RegisterComponent();
+		Piece->SetMaterial(0, MaterialFor(Color));
+
+		FCoopMover& Mover = Movers.AddDefaulted_GetRef();
+		Mover.Piece = MoverPieces.Add(Piece);
+		Mover.RestLocation = Piece->GetRelativeLocation();
+		Mover.ActiveLocation = Mover.RestLocation + ActiveOffset;
+		return Mover;
+	};
+	// A plate on the floor (tilted to match a ramp), and the box a player's feet must be in to press it
+	auto Plate = [this](const FCoopPathSpot& Spot, float Along0, float Along1, float Side0, float Side1, float Z0, float Z1, const FLinearColor& Color)
+	{
+		const float Length = FVector2D(Along1 - Along0, Z1 - Z0).Size();
+		const float Pitch = FMath::RadiansToDegrees(FMath::Atan2(Z1 - Z0, Along1 - Along0));
+		AddShape(CubeMesh, Spot.At((Along0 + Along1) * 0.5f, (Side0 + Side1) * 0.5f, (Z0 + Z1) * 0.5f),
+			FVector(Length, Side1 - Side0, PlateProud * 2.f), FRotator(Pitch, Spot.Forward.Rotation().Yaw, 0.f), Color);
+		FBox Feet(ForceInit);
+		Feet += Spot.At(Along0, Side0, FMath::Min(Z0, Z1) - 20.f);
+		Feet += Spot.At(Along1, Side1, FMath::Max(Z0, Z1) + 40.f);
+		return Feet;
+	};
+
+	for (int32 M = 0; M < Spots.Num(); ++M)
+	{
+		const FMomentSpec& Moment = Moments[M];
+		const FCoopPathSpot& Spot = Spots[M];
+		const FLinearColor PathColor = FLinearColor::FromSRGBColor(Paths[Moment.Path].Color);
+		const FLinearColor Barrier = PathColor * 0.5f;
+		const FLinearColor Helper = PathColor * 0.9f;
+		const float A = Moment.Along;
+		const float D = Moment.Depth;
+
+		switch (Moment.Kind)
+		{
+		case EMoment::Wall:
+		{
+			// The wall, and the drop-down ledge behind it
+			const float Floor = Spot.FloorAt(A);
+			Block(Spot, A - D * 0.5f, A + D * 0.5f, -HalfWidth, HalfWidth, Floor - Slab, Floor + Moment.Height, Barrier);
+			Block(Spot, A + D * 0.5f, A + D * 0.5f + Moment.Span, -HalfWidth, HalfWidth, Floor - Slab, Floor + Moment.Helper, Helper);
+			break;
+		}
+		case EMoment::Lift:
+		{
+			// The cliff runs on until the ramp reaches its top
+			const float Floor = Spot.FloorAt(A);
+			const float Top = Floor + Moment.Height;
+			float End = A + 50.f;
+			while (End < A + 2.f * Tile && Spot.FloorAt(End) < Top)
+			{
+				End += 5.f;
+			}
+			Block(Spot, A, End, -HalfWidth, HalfWidth, Floor - Slab, Top, Barrier);
+
+			// The lift, on the right in front of the cliff, and the winch plate on the left up top
+			const float RestTop = Spot.FloorAt(A - Moment.Span * 0.5f) + PlateProud;
+			FCoopMover& Lift = MoverBlock(Spot, A - Moment.Span - 5.f, A - 5.f, 5.f, HalfWidth - 15.f, RestTop - Moment.Height - Slab - 20.f, RestTop,
+				Helper, FVector(0.f, 0.f, Top - RestTop));
+			Lift.bNeedsBrace = true;
+			Lift.Plates.Add(Plate(Spot, A + 30.f, A + 230.f, 15.f - HalfWidth, -30.f, Top, Top, PlateColor));
+			break;
+		}
+		case EMoment::Split:
+		{
+			// The divider, from just under the floor into the ceiling
+			const float Ends[] = { A - Moment.Span * 0.5f, A, A + Moment.Span * 0.5f };
+			float Low = TNumericLimits<float>::Max();
+			float High = TNumericLimits<float>::Lowest();
+			for (const float At : Ends)
+			{
+				Low = FMath::Min(Low, Spot.FloorAt(At));
+				High = FMath::Max(High, Spot.CeilingAt(At));
+			}
+			Block(Spot, Ends[0], Ends[2], -Thin * 0.5f, Thin * 0.5f, Low - Slab, High + 50.f, Barrier);
+
+			// A block in each tunnel: the left one first
+			for (const float Sign : { -1.f, 1.f })
+			{
+				const float Center = A + Sign * Moment.Helper * 0.5f;
+				const float Floor = FMath::Min(Spot.FloorAt(Center - D * 0.5f), Spot.FloorAt(Center + D * 0.5f));
+				Block(Spot, Center - D * 0.5f, Center + D * 0.5f, Sign < 0.f ? -HalfWidth : Thin * 0.5f, Sign < 0.f ? -Thin * 0.5f : HalfWidth,
+					Floor - Slab, Spot.FloorAt(Center) + Moment.Height, Helper);
+			}
+			break;
+		}
+		case EMoment::Gate:
+		{
+			// The gate sinks into the floor to open
+			const float Floor = FMath::Min(Spot.FloorAt(A - D * 0.5f), Spot.FloorAt(A + D * 0.5f));
+			const float Bottom = Floor - Slab - 20.f;
+			const float Top = Spot.CeilingAt(A) + 100.f;
+			FCoopMover& Gate = MoverBlock(Spot, A - D * 0.5f, A + D * 0.5f, -HalfWidth, HalfWidth, Bottom, Top, Barrier,
+				FVector(0.f, 0.f, Floor - 10.f - Top));
+			Gate.bGate = true;
+			Gate.KeepOpen += Spot.At(A - D * 0.5f - 45.f, -HalfWidth, Floor - 50.f);
+			Gate.KeepOpen += Spot.At(A + D * 0.5f + 45.f, HalfWidth, Floor + 300.f);
+
+			// The switch ledge against the left wall before it, and the plate past it
+			const float LedgeAt = A + Moment.Helper;
+			const float LedgeTop = Spot.FloorAt(LedgeAt) + Moment.Height;
+			Block(Spot, LedgeAt - 100.f, LedgeAt + 100.f, -HalfWidth, 140.f - HalfWidth, Spot.FloorAt(LedgeAt - 100.f) - Slab, LedgeTop, Helper);
+			Gate.Plates.Add(Plate(Spot, LedgeAt - 90.f, LedgeAt + 90.f, 15.f - HalfWidth, 125.f - HalfWidth, LedgeTop, LedgeTop, PlateColor));
+			const float PlateAt = A + Moment.Span;
+			Gate.Plates.Add(Plate(Spot, PlateAt - 80.f, PlateAt + 80.f, -100.f, 100.f, Spot.FloorAt(PlateAt - 80.f), Spot.FloorAt(PlateAt + 80.f), PlateColor));
+			break;
+		}
+		}
+	}
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: %d co-op moments, %d moving pieces"), Spots.Num(), Movers.Num());
+}
+
+void ACoopPlayground::UpdateMovers(float DeltaSeconds)
+{
+	if (Movers.IsEmpty())
+	{
+		return;
+	}
+	TArray<ACoopCharacter*, TInlineAllocator<2>> Players;
+	for (TActorIterator<ACoopCharacter> It(GetWorld()); It; ++It)
+	{
+		Players.Add(*It);
+	}
+
+	for (FCoopMover& Mover : Movers)
+	{
+		UStaticMeshComponent* Piece = MoverPieces.IsValidIndex(Mover.Piece) ? MoverPieces[Mover.Piece].Get() : nullptr;
+		if (!Piece)
+		{
+			continue;
+		}
+		bool bPressed = false;
+		bool bBlocked = false;
+		for (const ACoopCharacter* Player : Players)
+		{
+			const FVector Center = Player->GetActorLocation();
+			const FVector Feet = Center - FVector(0.f, 0.f, Player->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+			if (Player->IsGrounded() && (!Mover.bNeedsBrace || Player->IsBraced()))
+			{
+				for (const FBox& Plate : Mover.Plates)
+				{
+					bPressed |= Plate.IsInsideOrOn(Feet);
+				}
+			}
+			bBlocked |= Mover.KeepOpen.IsValid && Mover.KeepOpen.IsInsideOrOn(Center);
+		}
+		const float Target = bPressed ? 1.f : 0.f;
+		if (bBlocked && Target < Mover.Alpha)
+		{
+			continue;   // never shut a gate on someone
+		}
+		const float Travel = FMath::Max(FVector::Dist(Mover.RestLocation, Mover.ActiveLocation), 1.f);
+		const float Speed = Mover.bGate ? CoopTuning::MazeGateSpeed() : CoopTuning::MazeLiftSpeed();
+		const float Alpha = FMath::FInterpConstantTo(Mover.Alpha, Target, DeltaSeconds, Speed / Travel);
+		if (Alpha != Mover.Alpha)
+		{
+			Mover.Alpha = Alpha;
+			Piece->SetRelativeLocation(FMath::Lerp(Mover.RestLocation, Mover.ActiveLocation, Alpha));
+		}
+	}
 }
 
 void ACoopPlayground::FinishRockGroups()
