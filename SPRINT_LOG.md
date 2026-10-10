@@ -2,6 +2,20 @@
 
 Copy the template for each sprint. Newest sprint at the top. The plan is in [docs/sprints.md](docs/sprints.md).
 
+### HC-1: Interaction and round state — Windows implementation checkpoint
+
+**Owner:** Stretch / HC · **Issue:** #7 · **Scope:** interaction and round state; no revive implementation.
+
+- Built: per-pawn Enhanced Input mapping lifecycle, camera focus checks, owning-player prompts, server-authoritative instant/timed/continuous use, cancellation and host round debug controls.
+- Fixtures: `BP_TestInteractable`, `L_HC_Test`, and three markers in `L_Site01_HC`. The cave/HZ and player/PG sublevels were preserved.
+- Verified: 2/3/4 client acceptance passed with replicated results, short-hold rejection, range/permission cancellation, round-reset cancellation and pawn-end-play cleanup. Two local players interacted independently with separate prompts. Blocked/downed-state cancellation and host-only debug handlers passed.
+- Build: Win64 Development package succeeded and started the main cave without runtime errors. See [HC-1 verification](docs/hc1-verification.md).
+- Controls: E/A interacts; Space/X jumps. The gamepad jump button changed to avoid sharing A with interaction. V/F/G mappings are ready for their later gameplay integrations. F1–F4 change round state; F4 travel remains HC-2.
+- Timing: editor graph/RPC authoring and verification exceeded one sprint cycle. Strict execution-path checks now reject failed writes that leave empty functions.
+- Remaining team checkpoint: cross-machine Mac joins and physical gamepad routing. This work does not close Playable 1 (#58).
+
+**Next:** PG publishes the player-view component for HC-2; HC-2 adds relic pickups, colors, split-screen keys and travel.
+
 ### Sprint 0: Setup — 2026-10-09 18:43, planned 60 min (HC project ready; team checkpoint pending)
 
 **Checkpoint:** Playable 1 — local Windows client tests passed; cross-machine join pending
