@@ -61,7 +61,7 @@ cluster = kit.join([base] + parts, "SM_CrystalCluster")
 kit.sit_on_floor(cluster)
 hz.apply_transforms(cluster)
 
-kit.preview_sheet([cluster], os.path.join(HERE, "SM_CrystalCluster_preview.png"), title="SM_CrystalCluster",
+kit.preview_sheet([cluster], os.path.join(HERE, "SM_CrystalCluster_preview.png"), title="SM_CrystalCluster")
+kit.preview_sheet([cluster], os.path.join(HERE, "SM_CrystalCluster_preview_closeup.png"), title="SM_CrystalCluster",
                   with_figure=False)
-kit.preview_sheet([cluster], os.path.join(HERE, "SM_CrystalCluster_scale_preview.png"), title="SM_CrystalCluster")
 hz.export(cluster, OUT)

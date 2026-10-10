@@ -118,9 +118,9 @@ lo, hi = kit._bounds([torch])
 print(f"FLAME_OFFSET from the torch pivot: {fb.z * 100:.1f} cm up, {-fb.y * 100:.1f} cm along -Y, "
       f"{fb.x * 100:.1f} cm along X; wall plate back at {(hi.y) * 100:.1f} cm along +Y")
 
-# A close-up sheet for detail, and one with the 1.8 m figure for scale.
-kit.preview_sheet([torch, fire], os.path.join(HERE, "SM_WallTorch_preview.png"), title="SM_WallTorch + Flame",
-                  with_figure=False)
-kit.preview_sheet([torch, fire], os.path.join(HERE, "SM_WallTorch_scale_preview.png"), title="SM_WallTorch + Flame")
+# One sheet with the 1.8 m figure for scale, and a close-up for detail.
+kit.preview_sheet([torch, fire], os.path.join(HERE, "SM_WallTorch_preview.png"), title="SM_WallTorch + Flame")
+kit.preview_sheet([torch, fire], os.path.join(HERE, "SM_WallTorch_preview_closeup.png"),
+                  title="SM_WallTorch + Flame", with_figure=False)
 for o in (torch, fire):
     hz.export(o, OUT)

@@ -45,8 +45,7 @@ def activate(obj):
 
 
 def bevel(obj, width, segments=2, angle_deg=35, smooth_deg=35):
-    """kit.chunky_bevel on just this object (it smooths everything that's selected)."""
-    activate(obj)
+    """kit.chunky_bevel, with the arguments these scripts use."""
     kit.chunky_bevel(obj, width=width, segments=segments, angle_deg=angle_deg, smooth_deg=smooth_deg)
 
 
