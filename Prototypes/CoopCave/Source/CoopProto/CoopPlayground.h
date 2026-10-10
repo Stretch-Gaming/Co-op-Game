@@ -17,6 +17,8 @@ class UMaterialInterface;
 class UMaterialInstanceDynamic;
 class APostProcessVolume;
 
+namespace CoopMaze { struct FLevel; }
+
 /** A spot in the play area you can jump straight to (D-pad left/right, or number keys 1-9). */
 struct FCoopStation
 {
@@ -110,6 +112,12 @@ private:
 	void BuildFloorRocks();
 	void BuildCrystals();
 	void BuildLighting();
+	/**
+	 * The maze's dressing (coop.Maze.Detail): rocks that narrow and round off the tunnels, lowered ceilings and
+	 * stalactites, rubble, timber and crystals, and pillars, terraces and boulders in the rooms. It draws from its own
+	 * random stream, so the rest of the maze comes out the same with it on or off. Glow takes its crystals.
+	 */
+	void BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLevel>>& Cells, FCoopMeshData& Glow);
 	void BuildMaze();
 	/** The co-op moments on the maze paths (CoopMaze::Moments), one spot per moment. */
 	void BuildMoments(const TArray<FCoopPathSpot>& Spots);
@@ -240,6 +248,9 @@ private:
 	FCoopRockGroup MazeCeilingRocks;
 
 	FRandomStream Random;
+	FRandomStream DetailRandom;            // the maze's detail pass only
+	bool bMazeDetail = true;               // coop.Maze.Detail, read when play starts
+	TArray<FVector> MazeWallMarkers;       // where the maze's crystal markers stand, so the detail pass keeps clear of them
 	TArray<FCoopStation> Stations;
 	TArray<FBox2D> KeepClearBoxes;
 	int32 LastShadowMode = -1;

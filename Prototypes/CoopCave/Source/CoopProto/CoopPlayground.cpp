@@ -397,6 +397,7 @@ void ACoopPlayground::BeginPlay()
 	MazeCeilingRocks.bCastShadow = false;
 
 	LoadRepoAssets();
+	bMazeDetail = CoopTuning::MazeDetail();
 
 	// Places random rocks must stay out of (cm, with some margin)
 	auto Clear = [this](float X0, float Y0, float X1, float Y1) { KeepClearBoxes.Add(FBox2D(FVector2D(X0, Y0), FVector2D(X1, Y1))); };
@@ -1312,6 +1313,1005 @@ void ACoopPlayground::AddMazeRock(bool bCeiling, const FVector& Center, const FV
 	}
 }
 
+// ---------------------------------------------------------------------------
+// The maze's detail pass (coop.Maze.Detail): dressing that breaks up the uniform tunnels and rooms
+// ---------------------------------------------------------------------------
+
+namespace CoopMazeDetail
+{
+	using namespace CoopMaze;
+
+	// Across a path tile, from its middle (cm). The walls' rocks face the tunnel at about WallFace.
+	constexpr float Lane = 125.f;           // the clear walking lane: nothing in it but the floor
+	constexpr float BandIn = 145.f;         // anything you can bump into stays at least this far from the middle
+	constexpr float WallFace = 218.f;
+	constexpr float Clearance = 260.f;      // nothing you can see hangs lower than this over the walking lane
+	constexpr float RouteClear = 175.f;     // half the clear route from each of a room's ways in to its middle
+	constexpr float AltarClear = 650.f;     // the relic chamber's altar and relics
+	constexpr float StationClear = 130.f;   // round each player's spot at a station
+
+	/**
+	 * The co-op moments' tiles (CoopMaze::Moments in the mechanics pass). Their pieces use the whole 5 m width and their
+	 * boosts need the air up to MomentHeadroom, so these tiles get no dressing at all, and nothing hangs lower than
+	 * MomentHeadroom on the tiles next to them. Path is 0-3.
+	 */
+	struct FPathTile { int32 Path, Col, Row; };
+	const FPathTile MomentTiles[] = {
+		{ 0, 24, 19 },                                                                   // path 1: boost wall
+		{ 1, 21, 7 }, { 1, 21, 6 },                                                      // path 2: winch lift
+		{ 2, 31, 34 }, { 2, 32, 34 }, { 2, 33, 34 }, { 2, 34, 34 }, { 2, 35, 34 },       // path 3: split tunnels
+		{ 3, 10, 0 }, { 3, 10, -1 },                                                     // path 4: dip gate
+	};
+	constexpr float MomentHeadroom = 360.f;
+
+	/** 0 = a moment's tile, 1 = next to one (sides or corners), 2 = neither. */
+	int32 MomentDistance(int32 Path, const FIntPoint& At)
+	{
+		int32 Best = 2;
+		for (const FPathTile& M : MomentTiles)
+		{
+			if (M.Path == Path)
+			{
+				Best = FMath::Min(Best, FMath::Max(FMath::Abs(M.Col - At.X), FMath::Abs(M.Row - At.Y)));
+			}
+		}
+		return Best;
+	}
+
+	/** A smooth wave, -1..1, so a tunnel narrows and widens over a few tiles rather than tile by tile. */
+	float Wave(float S, float Seed)
+	{
+		return 0.6f * FMath::Sin(S * 0.83f + Seed) + 0.4f * FMath::Sin(S * 2.17f + Seed * 1.7f);
+	}
+
+	float DistToSegment(const FVector2D& P, const FVector2D& A, const FVector2D& B)
+	{
+		const FVector2D AB = B - A;
+		const float T = FMath::Clamp(FVector2D::DotProduct(P - A, AB) / FMath::Max(AB.SizeSquared(), 1.f), 0.f, 1.f);
+		return FVector2D::Distance(P, A + AB * T);
+	}
+
+	FLinearColor Shade(const FLinearColor& C, float S)
+	{
+		return FLinearColor(C.R * S, C.G * S, C.B * S, 1.f);
+	}
+
+	FQuat Upright(float Yaw)
+	{
+		return FQuat(FRotator(0.f, Yaw, 0.f));
+	}
+
+	/** Upside down: the rock's base is its top, and it hangs from there. */
+	FQuat Hanging(float Yaw)
+	{
+		return FQuat(FRotator(0.f, 0.f, 180.f)) * FQuat(FRotator(0.f, Yaw, 0.f));
+	}
+}
+
+void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLevel>>& Cells, FCoopMeshData& Glow)
+{
+	using namespace CoopMazeDetail;
+	if (!bMazeDetail)
+	{
+		return;
+	}
+	DetailRandom.Initialize(4417);
+	FRandomStream& Rand = DetailRandom;
+	const FIntPoint Dirs[4] = { FIntPoint(1, 0), FIntPoint(-1, 0), FIntPoint(0, 1), FIntPoint(0, -1) };
+	const FVector Up(0.f, 0.f, 1.f);
+
+	// Everything you see goes into a few shared meshes per 40 m square of the maze (one draw each, and off-screen squares
+	// aren't drawn), with no shadows. Everything you can bump into also gets a convex shape in one hidden collision mesh.
+	struct FKind
+	{
+		FLinearColor Color;
+		TMap<FIntPoint, FCoopMeshData> Chunks;
+		FCoopMeshData& At(const FVector& Where)
+		{
+			constexpr float ChunkSize = 4000.f;
+			return Chunks.FindOrAdd(FIntPoint(FMath::FloorToInt(Where.X / ChunkSize), FMath::FloorToInt(Where.Y / ChunkSize)));
+		}
+	};
+	FKind DWall, DCeiling, DBoulders, DSmall, DPebbles, DStones, DPuddles;
+	DWall.Color = MazeWallRocks.Color;
+	DCeiling.Color = MazeCeilingRocks.Color;
+	DBoulders.Color = Shade(MazeWallRocks.Color, 1.15f);
+	DSmall.Color = Shade(MazeWallRocks.Color, 0.9f);
+	DPebbles.Color = Shade(MazeWallRocks.Color, 0.55f);
+	DStones.Color = Shade(MazeWallRocks.Color, 0.75f);
+	DPuddles.Color = FLinearColor(0.006f, 0.008f, 0.011f);
+	FKind Wood, WoodDark;
+	Wood.Color = CoopCave::Wood;
+	WoodDark.Color = CoopCave::WoodDark;
+	FCoopMeshData BlockerMesh;
+	TArray<TArray<FVector>> BlockerHulls;
+	TArray<FTransform> RepoRocks;
+	int32 Colliders = 0;
+
+	auto Collide = [&](TArray<FVector>&& Hull)
+	{
+		const FBox Box(Hull);
+		TArray<TArray<FVector>> Unused;
+		AddBlock(BlockerMesh, Unused, FTransform(Box.GetCenter()), Box.GetExtent());
+		BlockerHulls.Add(MoveTemp(Hull));
+		++Colliders;
+	};
+	// A rock standing on (or, Hanging, hanging from) Base. Large rocks use the repo rock mesh when it's in the project.
+	auto Rock = [&](FKind& Kind, const FVector& Base, const FVector& Size, const FQuat& Rotation, bool bCollides,
+		bool bLarge = false, float TopFlat = 0.3f, int32 Detail = 0)
+	{
+		const bool bRepo = bLarge && RepoRockMesh;
+		FCoopMeshData Unseen;
+		TArray<FVector> Hull = CoopMeshKit::AddRock(bRepo ? Unseen : Kind.At(Base), Rand, FTransform(Rotation, Base), Size, Detail, 0.22f, TopFlat);
+		if (bRepo)
+		{
+			// As AddMazeRock: scale the mesh to the size and put its middle where the code-built rock's would be
+			const FBox Bounds = RepoRockMesh->GetBoundingBox();
+			const FVector Scale = Size / Bounds.GetSize().ComponentMax(FVector(1.f));
+			const FVector Middle = FTransform(Rotation, Base).TransformPosition(FVector(0.f, 0.f, Size.Z * 0.5f));
+			RepoRocks.Add(FTransform(Rotation, Middle - Rotation.RotateVector(Bounds.GetCenter() * Scale), Scale));
+		}
+		if (bCollides)
+		{
+			Collide(MoveTemp(Hull));
+		}
+	};
+	// A stalactite or stalagmite: a six-sided spike from Base along Dir
+	auto Spike = [&](FKind& Kind, const FVector& Base, const FVector& Dir, float Radius, float Length, bool bCollides)
+	{
+		TArray<FVector> Hull = CoopMeshKit::AddCrystal(Kind.At(Base), FTransform(FRotationMatrix::MakeFromZ(Dir).Rotator(), Base),
+			Radius, Length, FColor::White, FColor::White);
+		if (bCollides)
+		{
+			Collide(MoveTemp(Hull));
+		}
+	};
+	// A pebble: a low four-sided pyramid (4 faces; there are thousands, so they stay cheaper than a rock)
+	auto Pebble = [&](const FVector& Base, float Width)
+	{
+		FCoopMeshData& Mesh = DPebbles.At(Base);
+		const float Turn = Rand.FRandRange(0.f, 0.5f * PI);
+		FVector Corners[4];
+		for (int32 c = 0; c < 4; ++c)
+		{
+			const float Angle = Turn + c * 0.5f * PI + Rand.FRandRange(-0.3f, 0.3f);
+			Corners[c] = Base + FVector(FMath::Cos(Angle), FMath::Sin(Angle), 0.f) * Width * 0.5f * Rand.FRandRange(0.6f, 1.f);
+		}
+		const FVector Top = Base + FVector(Rand.FRandRange(-0.15f, 0.15f) * Width, Rand.FRandRange(-0.15f, 0.15f) * Width, Width * Rand.FRandRange(0.35f, 0.6f));
+		for (int32 c = 0; c < 4; ++c)
+		{
+			const FVector& A = Corners[c];
+			const FVector& B = Corners[(c + 1) % 4];
+			Mesh.AddTriangle(A, B, Top, (A + B) * 0.5f - Base + FVector(0.f, 0.f, Width * 0.2f));
+		}
+	};
+	// Glowing teal crystals growing from Base, leaning along Axis
+	auto Crystals = [&](const FVector& Base, const FVector& Axis, const FVector& Spread, int32 Count, float Scale, bool bCollides)
+	{
+		for (int32 k = 0; k < Count; ++k)
+		{
+			const FVector At = Base + Spread * Rand.FRandRange(-1.f, 1.f);
+			const FVector Dir = (Axis + Spread.GetSafeNormal() * Rand.FRandRange(-0.35f, 0.35f) + Up * Rand.FRandRange(-0.15f, 0.25f)).GetSafeNormal();
+			TArray<FVector> Hull = CoopMeshKit::AddCrystal(Glow, FTransform(FRotationMatrix::MakeFromZ(Dir).Rotator(), At),
+				Rand.FRandRange(8.f, 16.f) * Scale, Rand.FRandRange(45.f, 100.f) * Scale, CoopCave::CrystalRoot, CoopCave::CrystalTip);
+			if (bCollides)
+			{
+				Collide(MoveTemp(Hull));
+			}
+		}
+	};
+	// Old mine timber: a square beam from A to B
+	auto Timber = [&](FKind& Kind, const FVector& A, const FVector& B, float Width, bool bCollides)
+	{
+		const FVector Span = B - A;
+		TArray<TArray<FVector>> Hull;
+		AddBlock(Kind.At(A), Hull, FTransform(Span.Rotation(), (A + B) * 0.5f), FVector(Span.Size() * 0.5f, Width * 0.5f, Width * 0.5f));
+		if (bCollides)
+		{
+			Collide(MoveTemp(Hull[0]));
+		}
+	};
+
+	// What must stay clear: torches and crystal markers on the walls, and the players' spots at every station
+	TArray<FVector> WallFixtures(MazeWallMarkers);
+	for (const UPointLightComponent* Light : TorchLights)
+	{
+		if (Light)
+		{
+			WallFixtures.Add(Light->GetRelativeLocation());
+		}
+	}
+	auto NearFixture = [&WallFixtures](const FVector& At, float Radius)
+	{
+		for (const FVector& F : WallFixtures)
+		{
+			if (FVector::Dist2D(F, At) < Radius && FMath::Abs(F.Z - At.Z) < 450.f)
+			{
+				return true;
+			}
+		}
+		return false;
+	};
+	TArray<FVector> StationSpots;
+	for (const FCoopStation& Station : Stations)
+	{
+		const FVector Side = FRotationMatrix(FRotator(0.f, Station.Yaw, 0.f)).GetUnitAxis(EAxis::Y);
+		StationSpots.Add(Station.Location - Side * 150.f);
+		StationSpots.Add(Station.Location + Side * 150.f);
+	}
+	auto NearStation = [&StationSpots](const FVector2D& At, float Z, float Radius)
+	{
+		for (const FVector& S : StationSpots)
+		{
+			if (FVector2D::Distance(FVector2D(S), At) < StationClear + Radius && FMath::Abs(S.Z - Z) < 300.f)
+			{
+				return true;
+			}
+		}
+		return false;
+	};
+
+	auto Neighbour = [&Cells](const FIntPoint& At, const FLevel& Level, const FIntPoint& Dir) -> const FLevel*
+	{
+		if (const TArray<FLevel>* Next = Cells.Find(At + Dir))
+		{
+			for (const FLevel& Other : *Next)
+			{
+				if (Connected(Level, Other))
+				{
+					return &Other;
+				}
+			}
+		}
+		return nullptr;
+	};
+	// The floor under a point of a tile. On ramps, the lower of the two slabs that can be under it, so nothing floats.
+	auto FloorAt = [&](const FIntPoint& At, const FLevel& Level, const FVector2D& Point)
+	{
+		if (Level.Owner >= RoomOwner)
+		{
+			return Level.Z;
+		}
+		const FVector2D Local = Point - TileCenter(At);
+		float Slope = TNumericLimits<float>::Lowest();
+		for (const FIntPoint& Dir : Dirs)
+		{
+			if (const FLevel* Next = Neighbour(At, Level, Dir))
+			{
+				const FVector W = WorldDir(Dir);
+				const float T = FVector2D::DotProduct(Local, FVector2D(W.X, W.Y)) / Tile;
+				if (T >= 0.f)
+				{
+					Slope = FMath::Max(Slope, Level.Z + (Next->Z - Level.Z) * T);
+				}
+			}
+		}
+		return (Slope == TNumericLimits<float>::Lowest()) ? Level.Z : FMath::Min(Slope, Level.Z);
+	};
+
+	// Dressing along one wall edge of a tile, in its own frame: N across from the tile's middle toward the wall, A along it.
+	struct FEdge
+	{
+		FVector2D Center;
+		FVector2D Out;
+		FVector2D Along;
+		FVector2D At(float N, float A) const { return Center + Out * N + Along * A; }
+	};
+	auto ScatterPebbles = [&](const FEdge& E, const FIntPoint& At, const FLevel& Level, int32 Count, float NearN, float FarN)
+	{
+		for (int32 i = 0; i < Count; ++i)
+		{
+			const FVector2D P = E.At(Rand.FRandRange(NearN, FarN), Rand.FRandRange(-235.f, 235.f));
+			Pebble(FVector(P, FloorAt(At, Level, P) - 1.f), Rand.FRandRange(5.f, 15.f));
+		}
+	};
+	auto SmallRock = [&](const FVector2D& P, const FIntPoint& At, const FLevel& Level)
+	{
+		// 12-40 cm: you walk straight over these, so they need no collision
+		const FVector Size(Rand.FRandRange(25.f, 60.f), Rand.FRandRange(22.f, 50.f), Rand.FRandRange(12.f, 40.f));
+		Rock(DSmall, FVector(P, FloorAt(At, Level, P) - 3.f), Size, Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.6f);
+	};
+	auto MediumRock = [&](const FVector2D& P, float Height, const FIntPoint& At, const FLevel& Level)
+	{
+		const FVector Size(Height * Rand.FRandRange(1.4f, 1.9f), Height * Rand.FRandRange(1.2f, 1.6f), Height);
+		Rock(DBoulders, FVector(P, FloorAt(At, Level, P) - 5.f), Size, Upright(Rand.FRandRange(0.f, 360.f)), true, false, 0.65f);
+	};
+	auto FloorStone = [&](const FVector2D& P, const FIntPoint& At, const FLevel& Level, float Width)
+	{
+		Rock(DStones, FVector(P, FloorAt(At, Level, P) - 2.f), FVector(Width, Width * Rand.FRandRange(0.55f, 0.9f), Rand.FRandRange(3.f, 6.f)),
+			Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.9f);
+	};
+	auto Puddle = [&](const FVector2D& P, float Z)
+	{
+		Rock(DPuddles, FVector(P, Z - 0.5f), FVector(Rand.FRandRange(110.f, 220.f), Rand.FRandRange(60.f, 110.f), 2.f),
+			Upright(Rand.FRandRange(0.f, 360.f)), false, false, 1.f);
+	};
+	auto Stalagmites = [&](const FVector2D& P, float Z, int32 Count, float MaxLength, float Spread)
+	{
+		for (int32 k = 0; k < Count; ++k)
+		{
+			const FVector2D At = P + FVector2D(Rand.FRandRange(-Spread, Spread), Rand.FRandRange(-Spread, Spread));
+			const FVector Dir = (Up + FVector(Rand.FRandRange(-0.08f, 0.08f), Rand.FRandRange(-0.08f, 0.08f), 0.f)).GetSafeNormal();
+			Spike(DBoulders, FVector(At, Z - 10.f), Dir, Rand.FRandRange(14.f, 30.f), Rand.FRandRange(60.f, MaxLength), true);
+		}
+	};
+	// Rock standing out from a wall: its face Depth in from WallFace, Width along the wall, from the floor up Height
+	auto Bulge = [&](const FEdge& E, const FIntPoint& At, const FLevel& Level, float A, float Width, float Depth, float Height)
+	{
+		constexpr float Thick = 200.f;
+		// The rock's middle sits back so its face, turned up to 8 degrees off the wall, stays Depth in
+		const float N = WallFace - Depth + Thick * 0.5f + Width * 0.5f * FMath::Sin(FMath::DegreesToRadians(8.f)) + 8.f;
+		float Ground = TNumericLimits<float>::Max();
+		for (const float Side : { -0.5f, 0.f, 0.5f })
+		{
+			Ground = FMath::Min(Ground, FloorAt(At, Level, E.At(N - Thick * 0.5f, A + Side * Width)));
+		}
+		const float Yaw = FVector(E.Along, 0.f).Rotation().Yaw + Rand.FRandRange(-8.f, 8.f);
+		Rock(DWall, FVector(E.At(N, A), Ground - 40.f), FVector(Width, Thick, Height + 40.f), Upright(Yaw), true, true);
+	};
+
+	// -----------------------------------------------------------------------
+	// The paths
+	// -----------------------------------------------------------------------
+	const float Seeds[4] = { 0.4f, 1.9f, 3.1f, 4.6f };
+	for (const TPair<FIntPoint, TArray<FLevel>>& Cell : Cells)
+	{
+		const FIntPoint At = Cell.Key;
+		const FVector2D Center = TileCenter(At);
+		for (const FLevel& Level : Cell.Value)
+		{
+			const int32 Path = Level.Owner;
+			if (Path >= RoomOwner)
+			{
+				continue;   // the rooms come below
+			}
+			const FLevel* Next[4];
+			int32 OpenCount = 0;
+			for (int32 d = 0; d < 4; ++d)
+			{
+				Next[d] = Neighbour(At, Level, Dirs[d]);
+				OpenCount += Next[d] ? 1 : 0;
+			}
+			const bool bStraight = OpenCount == 2 && ((Next[0] && Next[1]) || (Next[2] && Next[3]));
+			const bool bCorner = OpenCount == 2 && !bStraight;
+			const bool bTip = OpenCount == 1;
+			const bool bMouth = Level.LinkOwner != INDEX_NONE;
+			if (MomentDistance(Path, At) == 0)
+			{
+				continue;   // a co-op moment: no dressing at all
+			}
+			const bool bNearMoment = MomentDistance(Path, At) == 1;
+			// A station's spots on a path (the co-op moments have them) take nothing you could land on
+			const bool bMoment = bNearMoment || NearStation(Center, Level.Z, 250.f);
+			const bool bFlat = Level.FloorMax - Level.FloorMin < 1.f;
+			const float Ceiling = Level.FloorMax + Level.Headroom;   // the invisible lid; under a bridge, the deck's underside
+			const bool bOpenUp = bCorner || OpenCount >= 3 || bMouth;   // corners and junctions keep the full height
+			const bool bCollapsed = (Path == 3 && At.X <= 9 && At.Y >= 13 && At.Y <= 21);   // the Long haul's caved-in stretch
+			const bool bTimber = (Path == 0 && bStraight && !Level.bBridge && !Level.bUnderBridge && Level.Z < 150.f && (At.X + At.Y) % 3 == 0);
+			const bool bSolid = !Level.bBridge && !bMouth && !bMoment;   // may take dressing you bump into
+			const float RunS = (Center.X + Center.Y) / Tile;
+
+			// Walls: each edge with no neighbour
+			for (int32 d = 0; d < 4; ++d)
+			{
+				if (Next[d])
+				{
+					continue;
+				}
+				const FVector Out3 = WorldDir(Dirs[d]);
+				const FEdge E{ Center, FVector2D(Out3.X, Out3.Y), FVector2D(-Out3.Y, Out3.X) };
+				if (Level.bBridge)
+				{
+					// A rocky lip along the bridge's edge, low enough to walk over
+					for (float A = -230.f; A <= 230.f; A += Rand.FRandRange(45.f, 70.f))
+					{
+						const FVector2D P = E.At(Rand.FRandRange(195.f, 225.f), A);
+						Rock(DSmall, FVector(P, Level.Z - 4.f), FVector(Rand.FRandRange(40.f, 75.f), Rand.FRandRange(35.f, 60.f), Rand.FRandRange(20.f, 40.f)),
+							Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.5f);
+					}
+					ScatterPebbles(E, At, Level, 4, 170.f, 225.f);
+					continue;
+				}
+
+				const float S = ((Dirs[d].Y != 0) ? Center.X : Center.Y) / Tile;
+				const float W = Wave(S, Seeds[Path] + d * 0.7f);
+				const bool bClearWall = !NearFixture(FVector(E.At(WallFace, 0.f), Level.Z + 150.f), 330.f);
+				float Depth = 0.f;   // how far the wall stands in here
+				if (bSolid && bClearWall && !bTimber)
+				{
+					if (W > 0.2f)
+					{
+						// The tunnel narrows: rock stands out from the wall
+						Depth = FMath::Lerp(25.f, WallFace - BandIn, FMath::Min(1.f, (W - 0.2f) / 0.6f));
+						Bulge(E, At, Level, Rand.FRandRange(-40.f, 40.f), Rand.FRandRange(330.f, 430.f), Depth, Rand.FRandRange(230.f, 380.f));
+						if (!bNearMoment && Rand.FRand() < 0.5f)
+						{
+							// and leans out over you higher up
+							const float Height = Rand.FRandRange(160.f, 230.f);
+							const float N = WallFace - Depth - 30.f + 90.f;
+							Rock(DWall, FVector(E.At(N, Rand.FRandRange(-80.f, 80.f)), Ceiling + 40.f), FVector(Rand.FRandRange(260.f, 340.f), 180.f, Height),
+								Hanging(FVector(E.Along, 0.f).Rotation().Yaw + Rand.FRandRange(-8.f, 8.f)), true, true);
+						}
+					}
+					else if (W < -0.45f && Rand.FRand() < 0.6f)
+					{
+						// A shallow niche: rock stands out either side of the middle of the edge
+						for (const float Sign : { -1.f, 1.f })
+						{
+							Bulge(E, At, Level, Sign * Rand.FRandRange(175.f, 200.f), Rand.FRandRange(150.f, 190.f), WallFace - BandIn - Rand.FRandRange(0.f, 10.f),
+								Rand.FRandRange(300.f, 420.f));
+						}
+						if (Path == 2)
+						{
+							Crystals(FVector(E.At(WallFace - 15.f, 0.f), FloorAt(At, Level, E.At(WallFace - 15.f, 0.f))), -FVector(E.Out, 0.f) + Up * 1.4f,
+								FVector(E.Along, 0.f) * 60.f, 4, 1.1f, true);
+						}
+						else
+						{
+							SmallRock(E.At(Rand.FRandRange(175.f, 205.f), Rand.FRandRange(-60.f, 60.f)), At, Level);
+						}
+					}
+					else if (!bNearMoment && Rand.FRand() < 0.25f)
+					{
+						// An overhang high up the wall
+						const float Height = Rand.FRandRange(170.f, 240.f);
+						Rock(DWall, FVector(E.At(WallFace - 20.f, Rand.FRandRange(-100.f, 100.f)), Ceiling + 40.f), FVector(Rand.FRandRange(280.f, 380.f), 200.f, Height),
+							Hanging(FVector(E.Along, 0.f).Rotation().Yaw + Rand.FRandRange(-8.f, 8.f)), true, true);
+					}
+				}
+				const float Face = WallFace - Depth;
+
+				// The floor along the wall
+				ScatterPebbles(E, At, Level, Rand.RandRange(4, 9), BandIn, Face + 10.f);
+				for (int32 k = Rand.RandRange(0, 2); k > 0; --k)
+				{
+					SmallRock(E.At(Rand.FRandRange(BandIn + 20.f, Face + 10.f), Rand.FRandRange(-220.f, 220.f)), At, Level);
+				}
+				if (Rand.FRand() < 0.35f)
+				{
+					FloorStone(E.At(Rand.FRandRange(BandIn + 40.f, Face - 20.f), Rand.FRandRange(-180.f, 180.f)), At, Level, Rand.FRandRange(60.f, 110.f));
+				}
+				if (Level.Z <= -150.f && bFlat && Rand.FRand() < 0.3f)
+				{
+					Puddle(E.At(Rand.FRandRange(BandIn + 40.f, 185.f), Rand.FRandRange(-150.f, 150.f)), Level.Z);
+				}
+				if (bSolid && bClearWall && !bTimber && Depth < 30.f)
+				{
+					const float Roll = Rand.FRand();
+					if (bCollapsed || Roll < 0.16f)
+					{
+						const float Height = Rand.FRandRange(50.f, 95.f);
+						MediumRock(E.At(FMath::Max(BandIn + Height * 0.95f + 12.f, Face - 20.f), Rand.FRandRange(-170.f, 170.f)), Height, At, Level);
+					}
+					else if (Roll < 0.3f && Path != 2)
+					{
+						const FVector2D P = E.At(Rand.FRandRange(195.f, 215.f), Rand.FRandRange(-170.f, 170.f));
+						Stalagmites(P, FloorAt(At, Level, P), Rand.RandRange(1, 3), 210.f, 25.f);
+					}
+				}
+
+				// Per path: more crystals on the Crystal run, rubble where the Long haul caved in
+				if (Path == 2 && bClearWall && Rand.FRand() < 0.6f)
+				{
+					const float A = Rand.FRandRange(-170.f, 170.f);
+					if (Rand.FRand() < 0.5f && bSolid && Depth < 30.f)
+					{
+						const FVector2D P = E.At(Face - 12.f, A);
+						Crystals(FVector(P, FloorAt(At, Level, P) - 5.f), -FVector(E.Out, 0.f) * 0.45f + Up, FVector(E.Along, 0.f) * 55.f, Rand.RandRange(3, 5), 0.9f, true);
+					}
+					else
+					{
+						const FVector2D P = E.At(Face + 5.f, A);
+						Crystals(FVector(P, FloorAt(At, Level, P) + Rand.FRandRange(230.f, 380.f)), -FVector(E.Out, 0.f) + Up * 0.2f, FVector(E.Along, 0.f) * 50.f,
+							Rand.RandRange(2, 4), 0.7f, false);
+					}
+				}
+				if (bCollapsed && bSolid)
+				{
+					for (int32 k = Rand.RandRange(3, 6); k > 0; --k)
+					{
+						SmallRock(E.At(Rand.FRandRange(BandIn + 15.f, Face), Rand.FRandRange(-230.f, 230.f)), At, Level);
+					}
+					ScatterPebbles(E, At, Level, 8, BandIn, Face);
+					if (bClearWall && Rand.FRand() < 0.5f)
+					{
+						// A slab fallen from the roof, leaning on the wall
+						const FVector2D P = E.At(BandIn + 40.f, Rand.FRandRange(-120.f, 120.f));
+						const FQuat Lean = FQuat(FVector(E.Along, 0.f), FMath::DegreesToRadians(Rand.FRandRange(18.f, 30.f))) * Upright(FVector(E.Out, 0.f).Rotation().Yaw);
+						Rock(DBoulders, FVector(P, FloorAt(At, Level, P) - 10.f), FVector(55.f, Rand.FRandRange(220.f, 300.f), Rand.FRandRange(230.f, 300.f)), Lean, true, false, 0.2f);
+					}
+					if (Rand.FRand() < 0.4f)
+					{
+						// An old beam that came down with it, lying along the wall
+						const float A = Rand.FRandRange(-60.f, 60.f);
+						const FVector2D P0 = E.At(Rand.FRandRange(175.f, 200.f), A - 170.f);
+						const FVector2D P1 = E.At(Rand.FRandRange(175.f, 200.f), A + 170.f);
+						Timber(WoodDark, FVector(P0, FloorAt(At, Level, P0) + 11.f), FVector(P1, FloorAt(At, Level, P1) + Rand.FRandRange(11.f, 30.f)), 22.f, false);
+					}
+				}
+			}
+
+			// Corners: round off the square turn. The far corner gets a rock from floor to ceiling; the near one a column.
+			if (bCorner && bSolid)
+			{
+				FIntPoint WallA = FIntPoint::ZeroValue, WallB = FIntPoint::ZeroValue;
+				for (int32 d = 0; d < 4; ++d)
+				{
+					if (!Next[d])
+					{
+						(WallA == FIntPoint::ZeroValue ? WallA : WallB) = Dirs[d];
+					}
+				}
+				const FVector2D OutA(WorldDir(WallA).X, WorldDir(WallA).Y);
+				const FVector2D OutB(WorldDir(WallB).X, WorldDir(WallB).Y);
+				const FVector2D Far = Center + (OutA + OutB) * (Tile * 0.5f + 15.f);
+				if (!NearFixture(FVector(Far, Level.Z + 150.f), 260.f))
+				{
+					const float Height = Ceiling - Level.Z;
+					const float Size = Rand.FRandRange(300.f, 340.f);
+					Rock(DWall, FVector(Far, Level.Z - 30.f), FVector(Size, Size * Rand.FRandRange(0.9f, 1.f), Height * Rand.FRandRange(0.5f, 0.65f)),
+						Upright(Rand.FRandRange(0.f, 360.f)), true, true);
+					Rock(DWall, FVector(Far, Ceiling + 60.f), FVector(Size * 1.05f, Size, Height * 0.6f), Hanging(Rand.FRandRange(0.f, 360.f)), true, true);
+				}
+				const FIntPoint Diagonal = At - WallA - WallB;
+				bool bDiagonalFree = true;
+				if (const TArray<FLevel>* Levels = Cells.Find(Diagonal))
+				{
+					for (const FLevel& Other : *Levels)
+					{
+						bDiagonalFree &= FMath::Abs(Other.Z - Level.Z) > 900.f;
+					}
+				}
+				const FLevel* SideA = Neighbour(At, Level, FIntPoint::ZeroValue - WallA);
+				const FLevel* SideB = Neighbour(At, Level, FIntPoint::ZeroValue - WallB);
+				const FVector2D Near = Center - (OutA + OutB) * (Tile * 0.5f);
+				if (bDiagonalFree && SideA && SideB && !SideA->bBridge && !SideA->bUnderBridge && !SideB->bBridge && !SideB->bUnderBridge
+					&& SideA->Owner < RoomOwner && SideB->Owner < RoomOwner && MomentDistance(Path, At - WallA) > 0 && MomentDistance(Path, At - WallB) > 0
+					&& !NearFixture(FVector(Near, Level.Z + 150.f), 200.f))
+				{
+					const float Floor = FMath::Min(SideA->Z, SideB->Z);
+					Rock(DWall, FVector(Near, FMath::Min(Floor, Level.Z) - 30.f), FVector(150.f, 145.f, Rand.FRandRange(250.f, 380.f)),
+						Upright(Rand.FRandRange(0.f, 360.f)), true, true);
+					Rock(DCeiling, FVector(Near, Ceiling + 60.f), FVector(220.f, 210.f, Rand.FRandRange(120.f, 170.f)), Hanging(Rand.FRandRange(0.f, 360.f)), true, true);
+				}
+			}
+
+			// Dead ends: a rubble pile and a boulder at the far end, clear of the tile's middle
+			if (bTip && !bMoment)
+			{
+				int32 Open = 0;
+				for (int32 d = 0; d < 4; ++d)
+				{
+					Open = Next[d] ? d : Open;
+				}
+				const FVector Far3 = -WorldDir(Dirs[Open]);
+				const FEdge E{ Center, FVector2D(Far3.X, Far3.Y), FVector2D(-Far3.Y, Far3.X) };
+				Rock(DBoulders, FVector(E.At(240.f, Rand.FRandRange(-70.f, 70.f)), Level.Z - 20.f),
+					FVector(Rand.FRandRange(220.f, 280.f), 170.f, Rand.FRandRange(150.f, 200.f)), Upright(FVector(E.Along, 0.f).Rotation().Yaw), true, true);
+				for (const float Sign : { -1.f, 1.f })
+				{
+					MediumRock(E.At(Rand.FRandRange(165.f, 190.f), Sign * Rand.FRandRange(130.f, 180.f)), Rand.FRandRange(50.f, 85.f), At, Level);
+				}
+				for (int32 k = 0; k < 6; ++k)
+				{
+					SmallRock(E.At(Rand.FRandRange(110.f, 200.f), Rand.FRandRange(-200.f, 200.f)), At, Level);
+				}
+				ScatterPebbles(E, At, Level, 12, 80.f, 220.f);
+			}
+
+			// Old mine timber in the Trench: a frame across the tunnel, posts against the walls
+			if (bTimber && !bMoment)
+			{
+				const FVector Run = WorldDir(Next[0] ? Dirs[0] : Dirs[2]);
+				const FVector Side(-Run.Y, Run.X, 0.f);
+				const FVector Middle = FVector(Center, 0.f) + Run * -170.f;
+				const float Top = Ceiling - 70.f;
+				if (!NearFixture(Middle + FVector(0.f, 0.f, Level.Z + 150.f), 260.f))
+				{
+					for (const float Sign : { -1.f, 1.f })
+					{
+						const FVector Foot = Middle + Side * (Sign * 200.f);
+						const float Floor = FloorAt(At, Level, FVector2D(Foot));
+						Timber(Wood, FVector(Foot.X, Foot.Y, Floor - 15.f), FVector(Foot.X, Foot.Y, Top), 30.f, true);
+						Timber(WoodDark, FVector(Foot.X, Foot.Y, Top - 150.f), Middle + Side * (Sign * 110.f) + FVector(0.f, 0.f, Top - 8.f), 16.f, false);
+					}
+					Timber(Wood, Middle + Side * -255.f + FVector(0.f, 0.f, Top + 18.f), Middle + Side * 255.f + FVector(0.f, 0.f, Top + 18.f), 34.f, false);
+				}
+			}
+
+			// Ceilings
+			if (Level.bUnderBridge)
+			{
+				// The bridge deck overhead gets a rough rock underside
+				for (int32 k = Rand.RandRange(3, 5); k > 0; --k)
+				{
+					const FVector2D P = Center + FVector2D(Rand.FRandRange(-190.f, 190.f), Rand.FRandRange(-190.f, 190.f));
+					Rock(DCeiling, FVector(P, Ceiling + 25.f), FVector(Rand.FRandRange(150.f, 240.f), Rand.FRandRange(130.f, 200.f), Rand.FRandRange(45.f, 85.f)),
+						Hanging(Rand.FRandRange(0.f, 360.f)), false);
+				}
+				continue;
+			}
+			float Drop = 0.f;
+			if (!bOpenUp && !bMoment && !Level.bBridge)
+			{
+				// Stretches of lower roof between the corners and junctions, which keep the full height
+				Drop = bCollapsed ? Rand.FRandRange(80.f, 130.f) : FMath::Max(0.f, Wave(RunS * 0.6f, Seeds[Path] + 5.f)) * 115.f;
+			}
+			if (Drop > 25.f)
+			{
+				for (int32 k = Rand.RandRange(1, 2); k > 0; --k)
+				{
+					const FVector2D P = Center + FVector2D(Rand.FRandRange(-90.f, 90.f), Rand.FRandRange(-90.f, 90.f));
+					Rock(DCeiling, FVector(P, Ceiling + 60.f), FVector(Rand.FRandRange(330.f, 470.f), Rand.FRandRange(300.f, 440.f), 80.f + Drop),
+						Hanging(Rand.FRandRange(0.f, 360.f)), true, true);
+				}
+			}
+			else if (bOpenUp && !bMouth)
+			{
+				// Where the tunnel opens up, a lip of rock hangs over each way in, like an arch
+				for (int32 d = 0; d < 4; ++d)
+				{
+					if (Next[d] && Next[d]->Owner < RoomOwner && !Next[d]->bUnderBridge && !Next[d]->bBridge)
+					{
+						const FVector W3 = WorldDir(Dirs[d]);
+						Rock(DCeiling, FVector(Center + FVector2D(W3.X, W3.Y) * (Tile * 0.5f), Ceiling + 60.f),
+							FVector(Rand.FRandRange(120.f, 170.f), Rand.FRandRange(420.f, 500.f), Rand.FRandRange(120.f, 150.f)),
+							Hanging(FVector(W3.X, W3.Y, 0.f).Rotation().Yaw + Rand.FRandRange(-6.f, 6.f)), true, true);
+					}
+				}
+			}
+			// Stalactites hang from the tunnel's own roof (through any lower rock, so none float where it doesn't reach)
+			const float Roof = Ceiling - 20.f;
+			const float Shortest = 40.f + Drop * 0.7f;
+			for (int32 k = Rand.RandRange(0, 3) + (bOpenUp ? 2 : 0); k > 0; --k)
+			{
+				const FVector2D Offset(Rand.FRandRange(-210.f, 210.f), Rand.FRandRange(-210.f, 210.f));
+				const float Lowest = Level.FloorMax + FMath::Max(bNearMoment ? MomentHeadroom : 0.f, Offset.Size() < Lane + 60.f ? Clearance + 80.f : Clearance);
+				const float Longest = FMath::Min(Roof - Lowest, 180.f + Drop);
+				if (Longest < Shortest)
+				{
+					continue;
+				}
+				if (Path == 2 && Rand.FRand() < 0.4f && Drop < 25.f)
+				{
+					Crystals(FVector(Center + Offset, Roof + 10.f), -Up, FVector(40.f, 40.f, 0.f), 3, FMath::Min(1.f, Longest / 110.f), false);
+				}
+				else
+				{
+					Spike(DCeiling, FVector(Center + Offset, Roof + 15.f), -Up, Rand.FRandRange(10.f, 26.f), Rand.FRandRange(Shortest, Longest), false);
+				}
+			}
+		}
+	}
+
+	// -----------------------------------------------------------------------
+	// The rooms: the fork, both halls and the relic chamber
+	// -----------------------------------------------------------------------
+	const TArray<FPathSpec> Paths = MakePaths();
+	for (int32 RoomIndex = Fork; RoomIndex < RoomCount; ++RoomIndex)
+	{
+		const FRoomSpec& Room = Rooms[RoomIndex];
+		const ERoom Id = ERoom(RoomIndex);
+		const FVector Middle = RoomCenter(Id);
+		const FVector2D Middle2D(Middle);
+		const float Z = Room.Z * 100.f;
+		const float Ceiling = Z + RoomHeadroom;
+		const bool bHall = (Id == HallA || Id == HallB);
+		const int32 MidCol = (Room.C0 + Room.C1) / 2;
+		auto InRoom = [&Room](const FIntPoint& T) { return T.X >= Room.C0 && T.X <= Room.C1 && T.Y >= Room.R0 && T.Y <= Room.R1; };
+		auto RoomLevel = [&Cells, RoomIndex](const FIntPoint& T) -> const FLevel*
+		{
+			if (const TArray<FLevel>* Levels = Cells.Find(T))
+			{
+				for (const FLevel& L : *Levels)
+				{
+					if (L.Owner == RoomOwner + RoomIndex) { return &L; }
+				}
+			}
+			return nullptr;
+		};
+
+		// The ways in, and a clear route from each to the middle
+		TArray<FVector2D> Mouths;
+		for (int32 Row = Room.R0; Row <= Room.R1; ++Row)
+		{
+			for (int32 Col = Room.C0; Col <= Room.C1; ++Col)
+			{
+				const FIntPoint T(Col, Row);
+				const FLevel* L = RoomLevel(T);
+				for (const FIntPoint& Dir : Dirs)
+				{
+					if (L && !InRoom(T + Dir) && Neighbour(T, *L, Dir))
+					{
+						const FVector W3 = WorldDir(Dir);
+						Mouths.Add(TileCenter(T) + FVector2D(W3.X, W3.Y) * (Tile * 0.5f));
+					}
+				}
+			}
+		}
+		// Clear routes: each way in to the middle, and the straight line from where each path comes in to where it goes on
+		// (from the door, in the fork)
+		TArray<TPair<FVector2D, FVector2D>> Routes;
+		for (const FVector2D& M : Mouths)
+		{
+			Routes.Add({ M, Middle2D });
+		}
+		auto Inside = [&Room](int32 Col, int32 Row)
+		{
+			return TileCenter(FIntPoint(FMath::Clamp(Col, Room.C0, Room.C1), FMath::Clamp(Row, Room.R0, Room.R1)));
+		};
+		for (const FPathSpec& Spec : Paths)
+		{
+			for (int32 Seg = 0; Seg < Spec.Segments.Num(); ++Seg)
+			{
+				const FWaypoint& First = Spec.Segments[Seg][0];
+				if (SegmentRooms[Seg] == Id)
+				{
+					const FVector2D From = (Seg > 0) ? Inside(Spec.Segments[Seg - 1].Last().Col, Spec.Segments[Seg - 1].Last().Row)
+						: Inside(Rooms[Door].C0, Rooms[Door].R1);
+					Routes.Add({ From, Inside(First.Col, First.Row) });
+				}
+			}
+		}
+		// Statues stand in the halls' corners and against the middle of their north and south walls (the style pass)
+		auto StatueTile = [&](const FIntPoint& T)
+		{
+			return bHall && (T.Y == Room.R0 || T.Y == Room.R1) && (T.X == Room.C0 || T.X == Room.C1 || T.X == MidCol);
+		};
+		auto Blocked = [&](const FVector2D& P, float Radius)
+		{
+			for (const FVector2D& M : Mouths)
+			{
+				if (FVector2D::Distance(P, M) < 300.f + Radius)
+				{
+					return true;
+				}
+			}
+			for (const TPair<FVector2D, FVector2D>& Route : Routes)
+			{
+				if (DistToSegment(P, Route.Key, Route.Value) < RouteClear + Radius)
+				{
+					return true;
+				}
+			}
+			const FIntPoint T(FMath::RoundToInt(P.X / Tile) + OriginCol, OriginRow - FMath::RoundToInt(P.Y / Tile));
+			return NearStation(P, Z, Radius) || StatueTile(T) || (Id == Goal && FVector2D::Distance(P, Middle2D) < AltarClear + Radius)
+				|| NearFixture(FVector(P, Z + 150.f), 150.f + Radius);
+		};
+
+		// Along the walls: rock standing out, terraces you can step up onto, boulders, stalagmites, rubble
+		for (int32 Row = Room.R0; Row <= Room.R1; ++Row)
+		{
+			for (int32 Col = Room.C0; Col <= Room.C1; ++Col)
+			{
+				const FIntPoint T(Col, Row);
+				const FLevel* L = RoomLevel(T);
+				if (!L)
+				{
+					continue;
+				}
+				for (const FIntPoint& Dir : Dirs)
+				{
+					if (InRoom(T + Dir) || Neighbour(T, *L, Dir))
+					{
+						continue;
+					}
+					const FVector Out3 = WorldDir(Dir);
+					const FEdge E{ TileCenter(T), FVector2D(Out3.X, Out3.Y), FVector2D(-Out3.Y, Out3.X) };
+					ScatterPebbles(E, T, *L, Rand.RandRange(5, 10), 120.f, WallFace);
+					if (Rand.FRand() < 0.4f)
+					{
+						FloorStone(E.At(Rand.FRandRange(120.f, 180.f), Rand.FRandRange(-180.f, 180.f)), T, *L, Rand.FRandRange(70.f, 140.f));
+					}
+					if (StatueTile(T) || NearFixture(FVector(E.At(WallFace, 0.f), Z + 150.f), 330.f))
+					{
+						continue;   // kept low: only pebbles and stones
+					}
+					const float W = Wave(((Dir.Y != 0) ? E.Center.X : E.Center.Y) / Tile, 2.3f + RoomIndex + Dir.X * 0.5f);
+					float Depth = 0.f;
+					if (W > 0.3f && !Blocked(E.At(WallFace - 110.f, 0.f), 100.f))
+					{
+						Depth = FMath::Lerp(30.f, 110.f, FMath::Min(1.f, (W - 0.3f) / 0.5f));
+						Bulge(E, T, *L, Rand.FRandRange(-40.f, 40.f), Rand.FRandRange(360.f, 460.f), Depth, Rand.FRandRange(300.f, 520.f));
+					}
+					const float Face = WallFace - Depth;
+					const float Roll = Rand.FRand();
+					if (Roll < 0.28f)
+					{
+						// A terrace: a flat-topped ledge low enough to step onto, sometimes with a second, higher one behind it
+						const float Deep = Rand.FRandRange(150.f, 200.f);
+						const FVector2D P = E.At(Face - Deep * 0.5f + 30.f, Rand.FRandRange(-30.f, 30.f));
+						if (!Blocked(P, Deep * 0.5f))
+						{
+							Rock(DBoulders, FVector(P, Z - 8.f), FVector(Rand.FRandRange(380.f, 470.f), Deep, Rand.FRandRange(40.f, 48.f)),
+								Upright(FVector(E.Along, 0.f).Rotation().Yaw + Rand.FRandRange(-5.f, 5.f)), true, false, 0.95f, 1);
+							if (Rand.FRand() < 0.5f)
+							{
+								Rock(DBoulders, FVector(E.At(Face - 20.f, Rand.FRandRange(-60.f, 60.f)), Z - 8.f), FVector(Rand.FRandRange(240.f, 320.f), 120.f, Rand.FRandRange(85.f, 100.f)),
+									Upright(FVector(E.Along, 0.f).Rotation().Yaw + Rand.FRandRange(-5.f, 5.f)), true, false, 0.95f, 1);
+							}
+						}
+					}
+					else if (Roll < 0.5f)
+					{
+						// A boulder against the wall
+						const FVector Size(Rand.FRandRange(180.f, 260.f), Rand.FRandRange(160.f, 220.f), Rand.FRandRange(140.f, 220.f));
+						const FVector2D P = E.At(Face - Size.Y * 0.3f, Rand.FRandRange(-120.f, 120.f));
+						if (!Blocked(P, Size.X * 0.5f))
+						{
+							Rock(DBoulders, FVector(P, Z - 15.f), Size, Upright(Rand.FRandRange(0.f, 360.f)), true, true);
+						}
+					}
+					else if (Roll < 0.72f)
+					{
+						// A cluster of stalagmites
+						const FVector2D P = E.At(Face - 80.f, Rand.FRandRange(-120.f, 120.f));
+						if (!Blocked(P, 110.f))
+						{
+							Stalagmites(P, Z, Rand.RandRange(3, 5), 280.f, 70.f);
+							MediumRock(P, Rand.FRandRange(50.f, 70.f), T, *L);
+						}
+					}
+					else
+					{
+						// Rubble
+						for (int32 k = 0; k < 2; ++k)
+						{
+							const float Height = Rand.FRandRange(50.f, 95.f);
+							const FVector2D P = E.At(Face - Height, Rand.FRandRange(-180.f, 180.f));
+							if (!Blocked(P, Height))
+							{
+								MediumRock(P, Height, T, *L);
+							}
+						}
+						for (int32 k = 0; k < 4; ++k)
+						{
+							SmallRock(E.At(Rand.FRandRange(Face - 160.f, Face), Rand.FRandRange(-220.f, 220.f)), T, *L);
+						}
+					}
+				}
+			}
+		}
+
+		// Out in the room: rock pillars from floor to ceiling, and a heap of collapsed boulders
+		const FVector2D Low = TileCenter(FIntPoint(Room.C0, Room.R1)) + FVector2D(150.f, 150.f);
+		const FVector2D High = TileCenter(FIntPoint(Room.C1, Room.R0)) - FVector2D(150.f, 150.f);
+		TArray<FVector2D> Placed;
+		const int32 Pillars = (Id == Fork) ? 2 : 3;
+		for (int32 Attempt = 0, Count = 0; Attempt < 80 && Count < Pillars + 1; ++Attempt)
+		{
+			const FVector2D P(Rand.FRandRange(Low.X, High.X), Rand.FRandRange(Low.Y, High.Y));
+			const bool bPillar = Count < Pillars;
+			const float Radius = bPillar ? 150.f : 230.f;
+			bool bFree = !Blocked(P, Radius);
+			for (const FVector2D& Other : Placed)
+			{
+				bFree &= FVector2D::Distance(P, Other) > 700.f;
+			}
+			if (!bFree)
+			{
+				continue;
+			}
+			Placed.Add(P);
+			++Count;
+			UE_LOG(LogTemp, Verbose, TEXT("CoopPlayground: %s gets a %s at (%.0f, %.0f)"), Room.Name, bPillar ? TEXT("pillar") : TEXT("boulder heap"), P.X, P.Y);
+			if (bPillar)
+			{
+				const float Base = Rand.FRandRange(320.f, 420.f);
+				Rock(DWall, FVector(P, Z - 20.f), FVector(Rand.FRandRange(230.f, 270.f), Rand.FRandRange(210.f, 250.f), Base),
+					Upright(Rand.FRandRange(0.f, 360.f)), true, true, 0.3f, 1);
+				Rock(DWall, FVector(P + FVector2D(Rand.FRandRange(-20.f, 20.f), Rand.FRandRange(-20.f, 20.f)), Ceiling + 60.f),
+					FVector(Rand.FRandRange(240.f, 300.f), Rand.FRandRange(230.f, 290.f), Ceiling + 60.f - (Z - 20.f + Base) + 120.f),
+					Hanging(Rand.FRandRange(0.f, 360.f)), true, true, 0.3f, 1);
+				for (int32 k = 0; k < 5; ++k)
+				{
+					const float Angle = Rand.FRandRange(0.f, 2.f * PI);
+					const FVector2D Q = P + FVector2D(FMath::Cos(Angle), FMath::Sin(Angle)) * Rand.FRandRange(150.f, 210.f);
+					Rock(DSmall, FVector(Q, Z - 3.f), FVector(Rand.FRandRange(25.f, 55.f), Rand.FRandRange(22.f, 45.f), Rand.FRandRange(12.f, 35.f)),
+						Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.6f);
+				}
+			}
+			else
+			{
+				for (int32 k = 0; k < 3; ++k)
+				{
+					const FVector2D Q = P + FVector2D(Rand.FRandRange(-90.f, 90.f), Rand.FRandRange(-90.f, 90.f));
+					Rock(DBoulders, FVector(Q, Z - 15.f), FVector(Rand.FRandRange(160.f, 230.f), Rand.FRandRange(150.f, 210.f), Rand.FRandRange(140.f, 200.f)),
+						Upright(Rand.FRandRange(0.f, 360.f)), true, true);
+				}
+				for (int32 k = 0; k < 6; ++k)
+				{
+					const float Angle = Rand.FRandRange(0.f, 2.f * PI);
+					const FVector2D Q = P + FVector2D(FMath::Cos(Angle), FMath::Sin(Angle)) * Rand.FRandRange(170.f, 240.f);
+					Rock(DSmall, FVector(Q, Z - 3.f), FVector(Rand.FRandRange(25.f, 60.f), Rand.FRandRange(22.f, 50.f), Rand.FRandRange(12.f, 38.f)),
+						Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.6f);
+				}
+			}
+		}
+
+		// The floor and the roof
+		const int32 Tiles = (Room.C1 - Room.C0 + 1) * (Room.R1 - Room.R0 + 1);
+		const FVector2D Min = TileCenter(FIntPoint(Room.C0, Room.R1)) - FVector2D(220.f, 220.f);
+		const FVector2D Max = TileCenter(FIntPoint(Room.C1, Room.R0)) + FVector2D(220.f, 220.f);
+		for (int32 k = Tiles * 5; k > 0; --k)
+		{
+			const FVector2D P(Rand.FRandRange(Min.X, Max.X), Rand.FRandRange(Min.Y, Max.Y));
+			const float Width = Rand.FRandRange(5.f, 15.f);
+			if (Id != Goal || FVector2D::Distance(P, Middle2D) > 250.f)
+			{
+				Pebble(FVector(P, Z - 1.f), Width);
+			}
+		}
+		for (int32 k = Tiles / 2; k > 0; --k)
+		{
+			const FVector2D P(Rand.FRandRange(Min.X, Max.X), Rand.FRandRange(Min.Y, Max.Y));
+			if (!Blocked(P, 30.f))
+			{
+				Rock(DSmall, FVector(P, Z - 3.f), FVector(Rand.FRandRange(25.f, 60.f), Rand.FRandRange(22.f, 50.f), Rand.FRandRange(12.f, 38.f)),
+					Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.6f);
+			}
+			const FVector2D S(Rand.FRandRange(Min.X, Max.X), Rand.FRandRange(Min.Y, Max.Y));
+			if (Id != Goal || FVector2D::Distance(S, Middle2D) > 300.f)
+			{
+				Rock(DStones, FVector(S, Z - 2.f), FVector(Rand.FRandRange(70.f, 150.f), Rand.FRandRange(50.f, 110.f), Rand.FRandRange(3.f, 6.f)),
+					Upright(Rand.FRandRange(0.f, 360.f)), false, false, 0.9f);
+			}
+		}
+		if (Id == HallA)
+		{
+			// The sunken hall holds water
+			for (int32 k = Rand.RandRange(4, 6); k > 0; --k)
+			{
+				Puddle(FVector2D(Rand.FRandRange(Min.X + 100.f, Max.X - 100.f), Rand.FRandRange(Min.Y + 100.f, Max.Y - 100.f)), Z);
+			}
+		}
+		for (int32 k = Tiles; k > 0; --k)
+		{
+			const FVector2D P(Rand.FRandRange(Min.X, Max.X), Rand.FRandRange(Min.Y, Max.Y));
+			Spike(DCeiling, FVector(P, Ceiling - 5.f), -Up, Rand.FRandRange(14.f, 34.f), Rand.FRandRange(60.f, 260.f), false);
+		}
+		for (int32 k = Rand.RandRange(2, 4); k > 0; --k)
+		{
+			// Patches of lower roof
+			const FVector2D P(Rand.FRandRange(Min.X + 200.f, Max.X - 200.f), Rand.FRandRange(Min.Y + 200.f, Max.Y - 200.f));
+			Rock(DCeiling, FVector(P, Ceiling + 60.f), FVector(Rand.FRandRange(400.f, 600.f), Rand.FRandRange(350.f, 550.f), Rand.FRandRange(150.f, 240.f)),
+				Hanging(Rand.FRandRange(0.f, 360.f)), true, true);
+		}
+	}
+
+	// Into meshes: one per kind per square, no shadows
+	int32 Triangles = 0;
+	int32 Meshes = 0;
+	for (FKind* Kind : { &DWall, &DCeiling, &DBoulders, &DSmall, &DPebbles, &DStones, &DPuddles, &Wood, &WoodDark })
+	{
+		for (const TPair<FIntPoint, FCoopMeshData>& Chunk : Kind->Chunks)
+		{
+			Triangles += Chunk.Value.Triangles.Num() / 3;
+			Meshes += AddProcMesh(Chunk.Value, MaterialFor(Kind->Color), {}, false) ? 1 : 0;
+		}
+	}
+	if (UProceduralMeshComponent* Collision = AddProcMesh(BlockerMesh, nullptr, BlockerHulls, false))
+	{
+		Collision->SetHiddenInGame(true);
+	}
+	if (RepoRockMesh && RepoRocks.Num() > 0)
+	{
+		UInstancedStaticMeshComponent* Rocks = NewObject<UInstancedStaticMeshComponent>(this);
+		Rocks->SetupAttachment(Root);
+		Rocks->SetMobility(EComponentMobility::Static);
+		Rocks->SetStaticMesh(RepoRockMesh);
+		if (RepoRockMaterial)
+		{
+			Rocks->SetMaterial(0, RepoRockMaterial);
+		}
+		Rocks->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		Rocks->SetCastShadow(false);
+		Rocks->RegisterComponent();
+		Rocks->AddInstances(RepoRocks, false);
+	}
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze detail built, %d triangles in %d meshes, %d colliders, %d repo rocks"), Triangles, Meshes, Colliders, RepoRocks.Num());
+}
+
 void ACoopPlayground::BuildMaze()
 {
 	using namespace CoopCave;
@@ -1718,6 +2718,7 @@ void ACoopPlayground::BuildMaze()
 	auto AddCluster = [this, &Glow](const FVector& Base, const FVector& Inward, const FColor& RootColor, const FColor& TipColor, float Scale)
 	{
 		const FVector Side(-Inward.Y, Inward.X, 0.f);
+		MazeWallMarkers.Add(Base);
 		for (int32 k = 0; k < 4; ++k)
 		{
 			const FVector Spot = Base + Side * Random.FRandRange(-70.f, 70.f) + Inward * Random.FRandRange(0.f, 30.f);
@@ -1882,6 +2883,9 @@ void ACoopPlayground::BuildMaze()
 		RelicLight->SetCastShadows(false);
 		RelicLight->RegisterComponent();
 	}
+
+	// 7b. The detail pass: rocks, rubble, timber and crystals that break up the tunnels and rooms (coop.Maze.Detail)
+	BuildMazeDetail(Cells, Glow);
 
 	AddProcMesh(Glow, GlowMaterial(), {}, false);
 
