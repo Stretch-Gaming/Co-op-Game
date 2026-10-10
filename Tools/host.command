@@ -24,4 +24,4 @@ IP="$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)"
 echo "Hosting $(basename "$PROJECT") at commit $(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo unknown)"
 echo "Players join with:  Tools/join.command $IP  or  Tools\\join.bat $IP"
 echo "If macOS asks whether Unreal Editor may accept incoming connections, choose Allow."
-exec "$UE_EDITOR" "$PROJECT" "/Game/Maps/L_Site01?listen" -game -windowed -ResX=1280 -ResY=720 -log
+exec "$UE_EDITOR" "$PROJECT" "/Game/Maps/L_Site01?listen" -game -DisablePython -windowed -ResX=1280 -ResY=720 -log

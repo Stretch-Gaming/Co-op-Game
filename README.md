@@ -73,6 +73,8 @@ The full timing and what each checkpoint should play like are in [docs/sprints.m
 
 Playtests run the game straight from each machine's engine install (`-game`), not from a packaged build. That way Macs and Windows can play together.
 
+The launch scripts use `-DisablePython` during game runs because editor toolset startup scripts require editor-only classes. Python and MCP remain enabled when opening the project in Unreal Editor.
+
 1. **Everyone pulls the same commit.** The scripts print the commit hash, so compare them.
 2. **Windows hosts:** `Tools\host.bat`. It prints the PC's IP addresses.
 3. **Macs join:** `Tools/join.command <IP>`, or double-click it and type the IP.

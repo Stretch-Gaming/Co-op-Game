@@ -8,7 +8,7 @@ Copy the template for each sprint. Newest sprint at the top. The plan is in [doc
 
 | Person | Phase | Doing | Locks |
 | --- | --- | --- | --- |
-| Stretch (HC) | HC-0 | Aligned the Blueprint foundation with the cave plan through `f1011f9`: two maps, round-state and interaction contracts, round scaling, GameInstance and split-screen settings. Local tests passed. | Core assets, maps and lane bootstrap/rename assets locked for integration; release after push. |
+| Stretch (HC) | HC-0 (#6) | Published the cave foundation as `1be227b`, including current team documents. Local tests passed; preparing the cross-machine host. | All bootstrap/integration locks released after the verified push. |
 | PK (VG) | VG-0 | Pulled HC's preparation through `e664177`; checked project and MCP availability; recorded the blocked smoke test in `docs/mcp.md`. Preflight gate skipped at PK's request. | None; no Unreal assets edited. |
 | Ak47 (HZ) | HZ-0 | Not confirmed in this chat. | Not confirmed. |
 
@@ -24,6 +24,8 @@ Copy the template for each sprint. Newest sprint at the top. The plan is in [doc
 - Remaining: both Macs and a second Windows client must join the Windows host at the same commit to complete Playable 1. Stretch confirmed both Macs are on 5.8.3 and ready to join. Physical gamepad routing has not been tested; the required offset setting is enabled.
 - Legacy content: the earlier Vehicle feature pack remains unused reference content in `Content/VehicleTemplate/`, with its Chaos Vehicles plugin enabled. Neither cave map references its vehicle gameplay. Sources and distribution basis are recorded in `CREDITS.md`.
 - Timing: engine installation, initial shaders and editor automation exceeded the planned setup cycle. HC-1 has not started.
+- Standalone fix: the first `-game` host logged editor-toolset Python import errors. Host/join scripts now use Unreal's `-DisablePython` flag for game runs; editor Python and MCP remain enabled.
+- Standalone verification: the Windows listen host and a separate Windows client connected successfully on UDP 7777 and loaded Site 1; both logs are free of Error and Accessed None. The Mac join checkpoint remains open.
 - VG-0 status (2026-10-09 18:58 EDT): upstream still has no `.uproject`, `Content/` or `.mcp.json`; no Unreal Editor installation was found on PK's Mac, and localhost port 8000 refused the MCP connection. The smoke test and joining Playable 1 could not run. No Blueprint or map changes were made.
 - VG preparation: Xcode 26.2 and Git LFS 3.8.0 are available. The Metal toolchain download started before PK requested skipping preflight and completed successfully; `xcrun -sdk macosx metal --version` now succeeds. Engine installation and disk-space remediation were not performed.
 

@@ -20,7 +20,7 @@ set "COMMIT=unknown"
 for /f %%H in ('git -C "%~dp0.." rev-parse --short HEAD 2^>nul') do set "COMMIT=%%H"
 
 echo Joining %HOST_IP% from commit %COMMIT%. The host's commit must match.
-start "CoopGame client" "%UE_EDITOR%" "%PROJECT%" %HOST_IP% -game -windowed -ResX=1280 -ResY=720 -log
+start "CoopGame client" "%UE_EDITOR%" "%PROJECT%" %HOST_IP% -game -DisablePython -windowed -ResX=1280 -ResY=720 -log
 exit /b 0
 
 :no_host

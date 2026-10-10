@@ -29,4 +29,4 @@ if [ -z "$PROJECT" ]; then
 fi
 
 echo "Joining $HOST_IP from commit $(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo unknown). The host's commit must match."
-exec "$UE_EDITOR" "$PROJECT" "$HOST_IP" -game -windowed -ResX=1280 -ResY=720 -log
+exec "$UE_EDITOR" "$PROJECT" "$HOST_IP" -game -DisablePython -windowed -ResX=1280 -ResY=720 -log

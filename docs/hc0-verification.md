@@ -53,3 +53,7 @@ Template input remains per owning local player and its HUD logic uses AddToPlaye
 The built-in Unreal MCP server handled discovery, editor UI operations, asset editors, and PIE controls. Editor Python also used Unreal's Blueprint, asset and data-table toolset APIs. Enum/struct edits used the editor UI. Binary assets were never edited directly on disk. Final audit found no dirty packages or temporary test actors in the saved maps.
 
 Playable 1 requires both Macs and a second Windows client to join the Windows host at the same engine patch and commit, then run and jump while seeing each other move. Stretch confirmed both Macs are ready; cross-machine verification is pending. Local PIE and split-screen checks do not establish Mac joining or packaging. Map travel behavior begins in HC-2.
+
+Standalone host/join scripts include `-DisablePython`, a supported flag confirmed in the installed engine's Python plugin source. Without it, editor toolset startup scripts in a `-game` run log missing editor-only Python classes. The corrected listen host starts on UDP 7777 with Python disabled and no startup errors; editor MCP/Python remain enabled for asset work.
+
+A separate Windows `-game` client connected through the actual listen-server socket and loaded Site 1. The server recorded a successful join and the client recorded its welcome; both logs contained zero Error or Accessed None messages. This is the two-player Windows host/client smoke test, not the Mac checkpoint.

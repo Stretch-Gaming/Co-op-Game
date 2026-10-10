@@ -25,7 +25,7 @@ ipconfig | findstr /c:"IPv4"
 echo.
 echo If the Macs can't connect, allow Unreal Editor through Windows Firewall on private networks.
 
-start "CoopGame host" "%UE_EDITOR%" "%PROJECT%" "/Game/Maps/L_Site01?listen" -game -windowed -ResX=1280 -ResY=720 -log
+start "CoopGame host" "%UE_EDITOR%" "%PROJECT%" "/Game/Maps/L_Site01?listen" -game -DisablePython -windowed -ResX=1280 -ResY=720 -log
 exit /b 0
 
 :no_engine
