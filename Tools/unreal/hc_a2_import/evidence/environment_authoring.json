@@ -2,7 +2,7 @@
   "status": "authored; independent validation pending",
   "authority": "Stretch explicitly approved HZ floor/lighting/gate-enclosure extension on 2026-10-10; #19 kickoff comment 6097208734",
   "asset": "/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport",
-  "triangle_count": 2244,
+  "triangle_count": 2208,
   "nanite": true,
   "material": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone",
   "collision": "compound simple boxes; no complex-as-simple",
@@ -82,12 +82,12 @@
       "min": [
         2500,
         -1750,
-        0
+        -40
       ],
       "max": [
         5500,
         -1500,
-        1000
+        1050
       ],
       "bevel_cm": 35
     },
@@ -96,12 +96,12 @@
       "min": [
         2500,
         1500,
-        0
+        -40
       ],
       "max": [
         3380,
         1750,
-        1000
+        1050
       ],
       "bevel_cm": 30
     },
@@ -110,12 +110,12 @@
       "min": [
         3620,
         1500,
-        0
+        -40
       ],
       "max": [
         3880,
         1750,
-        1000
+        1050
       ],
       "bevel_cm": 30
     },
@@ -124,12 +124,12 @@
       "min": [
         4120,
         1500,
-        0
+        -40
       ],
       "max": [
         4380,
         1750,
-        1000
+        1050
       ],
       "bevel_cm": 30
     },
@@ -138,12 +138,12 @@
       "min": [
         4620,
         1500,
-        0
+        -40
       ],
       "max": [
         5500,
         1750,
-        1000
+        1050
       ],
       "bevel_cm": 30
     },
@@ -292,12 +292,12 @@
       "min": [
         8500,
         1200,
-        0
+        -40
       ],
       "max": [
         11500,
         1450,
-        1200
+        1250
       ],
       "bevel_cm": 40
     },
@@ -306,12 +306,12 @@
       "min": [
         8500,
         -1450,
-        0
+        -40
       ],
       "max": [
         11500,
         -1200,
-        1200
+        1250
       ],
       "bevel_cm": 40
     },
@@ -460,7 +460,7 @@
       "min": [
         2320,
         -350,
-        400
+        512
       ],
       "max": [
         2483,
@@ -470,16 +470,44 @@
       "bevel_cm": 0
     },
     {
+      "name": "G1PocketInnerWest",
+      "min": [
+        2467,
+        -350,
+        400
+      ],
+      "max": [
+        2483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
       "name": "G1PocketEast",
+      "min": [
+        2517,
+        -350,
+        512
+      ],
+      "max": [
+        2680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1PocketInnerEast",
       "min": [
         2517,
         -350,
         400
       ],
       "max": [
-        2680,
+        2533,
         350,
-        900
+        512
       ],
       "bevel_cm": 0
     },
@@ -501,36 +529,36 @@
       "name": "G1NorthCheek",
       "min": [
         2320,
-        350,
-        0
+        300,
+        -40
       ],
       "max": [
         2680,
         1750,
         1250
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
     },
     {
       "name": "G1SouthCheek",
       "min": [
         2320,
         -1750,
-        0
+        -40
       ],
       "max": [
         2680,
-        -350,
+        -300,
         1250
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
     },
     {
       "name": "G2PocketWest",
       "min": [
         5320,
         -350,
-        400
+        512
       ],
       "max": [
         5483,
@@ -540,16 +568,44 @@
       "bevel_cm": 0
     },
     {
+      "name": "G2PocketInnerWest",
+      "min": [
+        5467,
+        -350,
+        400
+      ],
+      "max": [
+        5483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
       "name": "G2PocketEast",
+      "min": [
+        5517,
+        -350,
+        512
+      ],
+      "max": [
+        5680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketInnerEast",
       "min": [
         5517,
         -350,
         400
       ],
       "max": [
-        5680,
+        5533,
         350,
-        900
+        512
       ],
       "bevel_cm": 0
     },
@@ -571,36 +627,36 @@
       "name": "G2NorthCheek",
       "min": [
         5320,
-        350,
-        0
+        300,
+        -40
       ],
       "max": [
         5680,
         1750,
         1250
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
     },
     {
       "name": "G2SouthCheek",
       "min": [
         5320,
         -1750,
-        0
+        -40
       ],
       "max": [
         5680,
-        -350,
+        -300,
         1250
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
     },
     {
       "name": "G3PocketWest",
       "min": [
         11320,
         -350,
-        400
+        512
       ],
       "max": [
         11483,
@@ -610,16 +666,44 @@
       "bevel_cm": 0
     },
     {
+      "name": "G3PocketInnerWest",
+      "min": [
+        11467,
+        -350,
+        400
+      ],
+      "max": [
+        11483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
       "name": "G3PocketEast",
+      "min": [
+        11517,
+        -350,
+        512
+      ],
+      "max": [
+        11680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketInnerEast",
       "min": [
         11517,
         -350,
         400
       ],
       "max": [
-        11680,
+        11533,
         350,
-        900
+        512
       ],
       "bevel_cm": 0
     },
@@ -641,29 +725,71 @@
       "name": "G3NorthCheek",
       "min": [
         11320,
-        350,
-        0
+        300,
+        -40
       ],
       "max": [
         11680,
         1450,
         1500
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
     },
     {
       "name": "G3SouthCheek",
       "min": [
         11320,
         -1450,
-        0
+        -40
       ],
       "max": [
         11680,
-        -350,
+        -300,
         1500
       ],
-      "bevel_cm": 35
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3LandingNorth",
+      "min": [
+        11680,
+        200,
+        -40
+      ],
+      "max": [
+        11850,
+        450,
+        450
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G3LandingSouth",
+      "min": [
+        11680,
+        -450,
+        -40
+      ],
+      "max": [
+        11850,
+        -200,
+        450
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G3LandingRoof",
+      "min": [
+        11680,
+        -450,
+        400
+      ],
+      "max": [
+        11850,
+        450,
+        650
+      ],
+      "bevel_cm": 20
     }
   ],
   "lights": [
@@ -680,7 +806,7 @@
         0.063,
         1
       ],
-      "candela": 80,
+      "candela": 35,
       "radius_cm": 1300
     },
     {
@@ -696,7 +822,7 @@
         0.063,
         1
       ],
-      "candela": 80,
+      "candela": 35,
       "radius_cm": 1300
     },
     {
@@ -712,7 +838,7 @@
         0.063,
         1
       ],
-      "candela": 80,
+      "candela": 35,
       "radius_cm": 1300
     },
     {
@@ -728,7 +854,7 @@
         0.063,
         1
       ],
-      "candela": 80,
+      "candela": 35,
       "radius_cm": 1300
     },
     {
@@ -760,7 +886,7 @@
         0.063,
         1
       ],
-      "candela": 90,
+      "candela": 35,
       "radius_cm": 1400
     },
     {
@@ -792,7 +918,7 @@
         0.063,
         1
       ],
-      "candela": 65,
+      "candela": 30,
       "radius_cm": 1000
     },
     {
@@ -808,7 +934,7 @@
         0.063,
         1
       ],
-      "candela": 65,
+      "candela": 30,
       "radius_cm": 1000
     },
     {
@@ -824,7 +950,7 @@
         0.063,
         1
       ],
-      "candela": 65,
+      "candela": 30,
       "radius_cm": 1000
     },
     {
@@ -862,7 +988,7 @@
     {
       "label": "G3_East",
       "location": [
-        11950,
+        11750,
         100,
         300
       ],
@@ -873,6 +999,102 @@
         1
       ],
       "candela": 110,
+      "radius_cm": 1000
+    },
+    {
+      "label": "HallShadow_W",
+      "location": [
+        3500,
+        0,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 160,
+      "radius_cm": 1200
+    },
+    {
+      "label": "HallShadow_E",
+      "location": [
+        4700,
+        0,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 160,
+      "radius_cm": 1200
+    },
+    {
+      "label": "AltarShadow",
+      "location": [
+        10700,
+        0,
+        400
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 200,
+      "radius_cm": 1300
+    },
+    {
+      "label": "G1_Shadow",
+      "location": [
+        2140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G2_Shadow",
+      "location": [
+        5140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G3_Shadow",
+      "location": [
+        11140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
       "radius_cm": 1000
     },
     {

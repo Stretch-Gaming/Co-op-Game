@@ -1,7 +1,26 @@
 {
   "status": "captured; visual review required",
-  "run_id": "environment-visual-clean",
+  "run_id": "continuation-final-render",
   "shots": [
+    {
+      "name": "prototype_doorway",
+      "camera_cm": [
+        800,
+        -80,
+        180
+      ],
+      "target_cm": [
+        1500,
+        0,
+        210
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 952500
+    },
     {
       "name": "cave_plate_hall",
       "camera_cm": [
@@ -19,7 +38,7 @@
         1600,
         900
       ],
-      "bytes": 754972
+      "bytes": 975372
     },
     {
       "name": "cave_altar",
@@ -38,7 +57,7 @@
         1600,
         900
       ],
-      "bytes": 685696
+      "bytes": 892181
     },
     {
       "name": "cave_gate_G1_closed",
@@ -57,7 +76,7 @@
         1600,
         900
       ],
-      "bytes": 736903
+      "bytes": 1099365
     },
     {
       "name": "cave_gate_G1_half",
@@ -76,7 +95,7 @@
         1600,
         900
       ],
-      "bytes": 731426
+      "bytes": 1136359
     },
     {
       "name": "cave_gate_G1_open",
@@ -95,7 +114,7 @@
         1600,
         900
       ],
-      "bytes": 828290
+      "bytes": 1184920
     },
     {
       "name": "cave_gate_G2_closed",
@@ -114,7 +133,7 @@
         1600,
         900
       ],
-      "bytes": 828115
+      "bytes": 1074316
     },
     {
       "name": "cave_gate_G2_half",
@@ -133,7 +152,7 @@
         1600,
         900
       ],
-      "bytes": 811175
+      "bytes": 1116091
     },
     {
       "name": "cave_gate_G2_open",
@@ -152,7 +171,7 @@
         1600,
         900
       ],
-      "bytes": 877906
+      "bytes": 1192935
     },
     {
       "name": "cave_gate_G3_closed",
@@ -171,7 +190,7 @@
         1600,
         900
       ],
-      "bytes": 865615
+      "bytes": 1081385
     },
     {
       "name": "cave_gate_G3_half",
@@ -190,7 +209,7 @@
         1600,
         900
       ],
-      "bytes": 884011
+      "bytes": 1106125
     },
     {
       "name": "cave_gate_G3_open",
@@ -209,7 +228,7 @@
         1600,
         900
       ],
-      "bytes": 942121
+      "bytes": 1179606
     },
     {
       "name": "cave_half_diamond",
@@ -228,7 +247,7 @@
         800,
         450
       ],
-      "bytes": 193688
+      "bytes": 265286
     },
     {
       "name": "cave_half_circle",
@@ -247,7 +266,7 @@
         800,
         450
       ],
-      "bytes": 198171
+      "bytes": 267428
     },
     {
       "name": "cave_half_triangle",
@@ -266,7 +285,7 @@
         800,
         450
       ],
-      "bytes": 200058
+      "bytes": 292532
     },
     {
       "name": "cave_half_cross",
@@ -285,7 +304,7 @@
         800,
         450
       ],
-      "bytes": 222625
+      "bytes": 304891
     }
   ],
   "temporary_poses_restored": true,

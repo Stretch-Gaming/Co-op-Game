@@ -1,8 +1,9 @@
 {
   "status": "passed",
   "engine": "Unreal 5.8.3",
-  "log": "Saved/HCA2/editor_acceptance.log (local ignored log)",
-  "log_sha256": "7be7ebb7e953f4895ec9b570549b533fd72f5ebd106e223550ed62157f74bd56",
+  "log": "Saved/HCA2/editor_windows_gate.log (local ignored log)",
+  "log_sha256": "0177c9aecef137c17d44ac5a0e0c1f5f97a31b88ab632cdd3beffd10d3b30c0a",
+  "matches": 0,
   "error_patterns": [
     "LogBlueprint: Error",
     "LogScript: Error",
@@ -10,9 +11,8 @@
     "LogPython: Error",
     "Accessed None"
   ],
-  "matches": 0,
-  "capture_run": "environment-visual-clean",
-  "client_run": "environment-client-clean",
-  "scope": "Clean isolated editor session after authoring fixes; historical authoring failures excluded and documented in environment_recovery.json",
-  "editor_closed": true
+  "final_capture_run": "continuation-final-render",
+  "final_client_run": "continuation-final-client",
+  "editor_closed": true,
+  "scope": "Fresh dedicated editor: affected final render/client checks after clockwise winding, frame-visibility and doorway repairs. Earlier authoring failures are historical, separately documented."
 }

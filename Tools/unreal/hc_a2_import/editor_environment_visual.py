@@ -7,7 +7,7 @@ assert Path(unreal.Paths.convert_relative_path_to_full(unreal.Paths.get_project_
 levels=unreal.get_editor_subsystem(unreal.LevelEditorSubsystem);actors=unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
 assert levels.load_level('/Game/Maps/L_Site01');assert levels.set_current_level_by_name('L_Site01_HC')
 gates={a.get_actor_label():a for a in actors.get_all_level_actors() if a.actor_has_tag('HC_A2_Prop') and '_Gate_' in a.get_actor_label()}
-shots=[{'name':'cave_plate_hall','camera':(4100,-1200,310),'target':(4000,1100,100)}, {'name':'cave_altar','camera':(11300,-150,170),'target':(10800,0,65)}]
+shots=[{'name':'prototype_doorway','camera':(800,-80,180),'target':(1500,0,210)}, {'name':'cave_plate_hall','camera':(4100,-1200,310),'target':(4000,1100,100)}, {'name':'cave_altar','camera':(11300,-150,170),'target':(10800,0,65)}]
 for label,x in [('G1',2500),('G2',5500),('G3',11500)]:
  for pose,z in [('closed',0),('half',200),('open',400)]:
   shots.append({'name':'cave_gate_'+label+'_'+pose,'camera':(x-500,-60,210),'target':(x,0,260),'gate':'HC_A2_Gate_'+label,'z':z})

@@ -22,6 +22,6 @@ test_wrong_open_project_refused_before_creation (test_safety.SafetyTests.test_wr
 test_wrong_tint_readback_is_rejected (test_safety.SafetyTests.test_wrong_tint_readback_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 22 tests in 0.456s
+Ran 22 tests in 0.820s
 
 OK

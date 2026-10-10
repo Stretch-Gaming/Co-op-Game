@@ -2,13 +2,23 @@
   "staged_binary_lfs_hashes_verified": [
     {
       "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport.uasset",
-      "sha256": "e3ef8374f9080511c638236bfa3b305721cdffd08f5d5135202ba7823cecf3aa",
-      "bytes": 71056
+      "sha256": "1952a88a5959a2aa4e745295cb059bd871a8a6f0bec920424808741fd4163509",
+      "bytes": 85354
+    },
+    {
+      "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastBlocker.uasset",
+      "sha256": "f9400469b84631cbf7e489004c0f482030fc638f5fa4f37e86ff14b20bd6e257",
+      "bytes": 19226
+    },
+    {
+      "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastWall.uasset",
+      "sha256": "a62a1bb65cd7749612f0320b3a4fd6ec6a2385a10b94298b5e8f5027e6311b10",
+      "bytes": 156227
     },
     {
       "path": "Content/Hazards/L_Site01_HZ.umap",
-      "sha256": "2dc8fc420fcd0c7b65007d3b2dbb9e8a4cb5b25c6505adbcf6b1190333bf1554",
-      "bytes": 688451
+      "sha256": "6e4161c74e704bbb0e5828a8e76643c69671b97cb6608d5eeae5dffcd6ab122f",
+      "bytes": 699898
     },
     {
       "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.uasset",
@@ -112,78 +122,78 @@
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_altar.png",
-      "sha256": "7e21b0899e141f476ac80b279988a8d47c70e18f82b2e95b4fb0dd05868e01b9",
-      "bytes": 685696
+      "sha256": "f8d14abaaf64537e2374ea608ff32adb2721d342d65b7719c1c9abbbb5e2719b",
+      "bytes": 892181
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_closed.png",
-      "sha256": "981f58c56f6ccfdef96e6f2532734679e4e93b1f87b0d80345bc59ffcc92a304",
-      "bytes": 736903
+      "sha256": "70d6b6add152216cf10389cb0af55684a8cb2ff5160ce990691b5dd08b7c6904",
+      "bytes": 1099365
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_half.png",
-      "sha256": "36ead72be7bce532e4a5e7f864e162ce4598599a3ce615bf35f067927d1c2ea6",
-      "bytes": 731426
+      "sha256": "ab483e1ec53d10f11a68fd0bd079615d765cbb5e57370ff7ba1f271525661b1b",
+      "bytes": 1136359
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_open.png",
-      "sha256": "1c63ce97743b3415c2662aeee19f5dea5e07ff61ff92e75e08ea018ab7f06223",
-      "bytes": 828290
+      "sha256": "400f0253be073d1ec9d802794f9c47d50b33aa7ad20dc47f316379b71c64f872",
+      "bytes": 1184920
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_closed.png",
-      "sha256": "b12cc5b9556fad528083cf710a2a20c57294bdbd8f2997a8283176decdb95c91",
-      "bytes": 828115
+      "sha256": "facb0d69559df39f0d4a890ccf451c640649468dc483f2c73f508587e0679b61",
+      "bytes": 1074316
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_half.png",
-      "sha256": "8946ce524352a1b7009e39586d2b916d625688b1630ac90bdbfbcfd484d96740",
-      "bytes": 811175
+      "sha256": "3611ceeb0477e184510e9107a9ccbfc202ed0b92ce7c21432d3cbf1a1e3e7618",
+      "bytes": 1116091
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_open.png",
-      "sha256": "e914d84b81f336d48fd83bba6f6b263246a2d2b8fe986197942369c7cd495675",
-      "bytes": 877906
+      "sha256": "7c1688c2c193887d9a49d11dfda30e4a50d5127e7111a63886540835343b09ed",
+      "bytes": 1192935
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_closed.png",
-      "sha256": "9957237e0505b93f0e22a38baaba67922796125974a275f764e8b704623f7faa",
-      "bytes": 865615
+      "sha256": "28dde9deb30310c40cab78f291937a39a7dfed41500704e20b80c9f56e06f2c7",
+      "bytes": 1081385
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_half.png",
-      "sha256": "f408664567fae3f6cef6f9acda3ee2b7af354afbaff9b3f09d5aec91cd8bd479",
-      "bytes": 884011
+      "sha256": "5f9a35f99687978095dcb52b364037d8ee0acf64d0add360729ffedd32205263",
+      "bytes": 1106125
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_open.png",
-      "sha256": "98c31676e06a6aab00141293271146dd7234a6bb0122c77b7181a657c5ee7764",
-      "bytes": 942121
+      "sha256": "827d4be10d48e7e3e7a8f7911bf2d05829649850b6fbc09b2ae7aeb5ce78d89d",
+      "bytes": 1179606
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_half_circle.png",
-      "sha256": "81f8fe645986fe3783dbb80776821e706e43f8deaf390816df91bdbcd546d8dd",
-      "bytes": 198171
+      "sha256": "81c3df83cec2d8717e7dd635f7aa1d8396764afa256d05fdcfdf5130dd92fb62",
+      "bytes": 267428
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_half_cross.png",
-      "sha256": "810ed93a428dfd4d2f8ef32c00bb7bcd6d4eced7f12b4b5047f74573070fe935",
-      "bytes": 222625
+      "sha256": "f2079b6a030a97fe569b52220985e2f3cc21062113fe5905cd0a94083ebd5d6e",
+      "bytes": 304891
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_half_diamond.png",
-      "sha256": "194b06a887cb78b0a2ff73b8ff0894045523fe319d76060915d3400a77597190",
-      "bytes": 193688
+      "sha256": "8919822cec3f53ff60899d9e1074a5f815839e5c574214ef83f382283cd3c995",
+      "bytes": 265286
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_half_triangle.png",
-      "sha256": "a33055d40a832f60e952c9a0fefdf538ab5893c532dcd54c63300e5ec4556173",
-      "bytes": 200058
+      "sha256": "f642a980ba83fc0ecd469c10b010adacfe1857267ef74f9bf06b6842b2fb4bf6",
+      "bytes": 292532
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_plate_hall.png",
-      "sha256": "762ef7797bd1a6712ad152bb4b1eb1520342cbf37e27dad20d753c066ed7b5c8",
-      "bytes": 754972
+      "sha256": "d1cd09e61a2f508c70589471861c12e31ccb893e3e308f4b7a10fc0629796e99",
+      "bytes": 975372
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/cave_split_screen00000.png",
@@ -196,6 +206,11 @@
       "bytes": 396442
     },
     {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_split_screen00003.png",
+      "sha256": "1d7f26d253dfa1784aa0a9423db31a98ebace606eb34b1cb728424038626f286",
+      "bytes": 598414
+    },
+    {
       "path": "Tools/unreal/hc_a2_import/evidence/gate_closed.png",
       "sha256": "79a0d6406798ad085d38d606d176c1d70c53692ae45d27fbfe2591f3cf4b5a48",
       "bytes": 965061
@@ -204,6 +219,11 @@
       "path": "Tools/unreal/hc_a2_import/evidence/gate_open.png",
       "sha256": "8c9ebd892340f134fa540437beca193823d49a7d9220fb08c0d02b979e94fc22",
       "bytes": 1111180
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/prototype_doorway.png",
+      "sha256": "fc64d785f85adc086e6ec4c63c8162a66bbe3aac3185819d8bf2d6512dda6a5a",
+      "bytes": 952500
     },
     {
       "path": "Tools/unreal/hc_a2_import/evidence/site_altar.png",
@@ -240,7 +260,7 @@
   "ownership_isolation": "HC-A2 tooling/props/HC maps plus explicitly approved locked HZ sublevel and unique HCA2_Integration support mesh",
   "shared_master_unchanged": true,
   "root_source_art_git_diff": "",
-  "main_cave_visual_acceptance": "Windows HC-A2 prop floor/lighting/upper-leaf concealment passed; downstream gauntlet not completed",
+  "main_cave_visual_acceptance": "Approved Windows environment/placement gate passed: connected four starts, visible floor/enclosure, retained frame artwork, leaf clearance/concealment and readable stone/symbols",
   "issue_19_complete": false,
   "baseline_commit": "dcecbab75999f1cc976d847a24912f4246ddbc8e",
   "upstream_hc1_actors_preserved": 3,
@@ -248,18 +268,24 @@
   "approved_hz_extension": {
     "map": "Content/Hazards/L_Site01_HZ.umap",
     "asset": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport.uasset",
-    "lock_id": "56105022",
-    "authority": "Stretch approval and #19 kickoff comment 6097208734"
+    "lock_id": "56105157",
+    "authority": "Stretch explicitly approved continuation and selected doorway copies; actor identities/transforms/source assets preserved",
+    "doorway_copies": [
+      "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastBlocker.uasset",
+      "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastWall.uasset"
+    ]
   },
   "shared_master_sha256": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9",
   "code_sha256_lf": {
     "editor_assembly.py": "2e659b68b7b122ed8a6e1e5370064a7f9c315aa16b5481a5ee7e4a197fb23558",
     "editor_client.py": "ac3d13c3afa7e3b9a8c2640b1eb1ff44b1435b6be40449155ae3d887cafee676",
     "editor_collision.py": "d910de6f86556a1394ec569f15380e6039af6371087d4d83b4e4b2f98ec956b3",
-    "editor_environment.py": "2a19c7aa81cffb336830c5ee586846be7c897141b56602d0186f4064cbb5eae7",
+    "editor_environment.py": "9606cc8e4aec4d86a47c631d84ec51e41c1a60c0e14bb0d7cb1855046255dabe",
     "editor_environment_inventory.py": "e83b700213577723bf0dde3e417af74a1b0e7d4a7b7455d8f834d69a58a7a47b",
-    "editor_environment_verify.py": "c011ade8b80c01753126a0dc742584a5a93f2034cc0c0b86b047c5c0c55563a3",
-    "editor_environment_visual.py": "5702296da1a36cef66b1342d95651395819c77e8d26514356ebe62ea3bca7154",
+    "editor_environment_portal.py": "39d1dadc93551a8c0fe6a347a58bd467bf25f76480692751db284a771424fa62",
+    "editor_environment_verify.py": "fb9d00183c574db41c8fa0560cfa97bea04408da0b71328ed121dc54b60794fd",
+    "editor_environment_visual.py": "7254a12d267a321bde848446ed5d4aea610066b1f59ad64e1c47d2924093f9ea",
+    "editor_environment_walk.py": "cf46aa69563d10a80e321fdf7283f53c4483eb4844bdacf988d1570e1f312b2f",
     "editor_import.py": "a06d5969b02a6afaef283d4946092f86c3d913caf7a10aa018ecbcb716d3da96",
     "editor_integrate.py": "50c1f2a4c4bef91698f4b9c47c9b2afef43e7f63887146cae870cc9cc5a1473f",
     "editor_inventory.py": "bf7c4002d5de3998162a890366bfdc3c0b5d9b9e13d1cddb09850b0b58607480",
@@ -269,9 +295,13 @@
     "import_hc_a2.py": "5953e5aba8a059db90988f59e17240bba13c4baa5faf339d95cf3e1c8eac844c",
     "source_audit.py": "2e09f6e08a5cab72ce56afbe7ca85aae6ef1a74dfd8c7958458aa12fa1d4a6ea",
     "test_safety.py": "9e7672b901d02d5da5fde690ee718f68eef2fc3bd559493dd2c32780ee790790",
-    "validate_offline.py": "ffecfb1b2d5e2440e09fb2163bf4bf247cfe16625de9b25ab37ccf038427c5a7"
+    "validate_offline.py": "8dadbdba9b9714451cd231dc27f01ab8bbeacfa057cbc1dd228a9c77c381b8f3"
   },
   "protected_scope_diff_empty": true,
-  "binary_count": 47,
-  "remaining_issue_19_gate": "Teammate Mac appearance/fallback check (MAC_CHECK.md)"
+  "binary_count": 51,
+  "remaining_issue_19_gate": "Mac appearance/fallback result",
+  "verified_walk_connections": 24,
+  "verified_spawn_routes": 4,
+  "complex_gate_side_seal_probes": 48,
+  "original_actor_mesh_references_changed_by_explicit_approval": 2
 }

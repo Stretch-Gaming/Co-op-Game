@@ -17,15 +17,15 @@ See `evidence/editor_import.json`, `compound_collision.json`, `pose_graphs.json`
 
 ## Visual review
 
-The renderer captured six actual images; this is not a mockup. In `symbols_and_statues.png` and the actual 800Ã—450 `symbols_half_screen.png`, the four symbols read distinctly and both owl sizes/altar retain the supplied shapes. The test lighting is deliberately strong amber with teal fill; `gate_closed.png` is overlit, so it establishes geometry rather than proving the final cave-light balance.
+The renderer captured six actual images; this is not a mockup. In `symbols_and_statues.png` and the actual 800×450 `symbols_half_screen.png`, the four symbols read distinctly and both owl sizes/altar retain the supplied shapes. The test lighting is deliberately strong amber with teal fill; `gate_closed.png` is overlit, so it establishes geometry rather than proving the final cave-light balance.
 
 The original `site_gate_g1.png`, `site_altar.png` and `split_screen0000*.png` record the earlier missing HZ support. They are historical failure evidence. Stretch subsequently approved HZ floor, local lighting and gate-enclosure changes; the HZ map was locked and the kickoff posted on #19 before authoring.
 
 The current `cave_*` images and `environment_capture.json` cover the supported plate hall, altar, all three gates at Z0/Z200/Z400 and each symbol at an actual 800×450. The daylight gaps found in initial enclosure renders were sealed with alcove returns, an altar entrance bulkhead and caps meeting the ceilings. Amber lighting was reduced and teal fill strengthened. The upper leaf is enclosed through its full travel; it is never shortened or hidden. Existing prototype actors and all HC prop origins remain intact.
 
-See `environment_authoring.json` for the exact 47 boxes and lights, `environment_verification.json` for saved-map readback, 17 floor contacts, closed/open pawn sweeps, leaf-volume clearance and both-face occlusion probes, and `environment_review.json` for the image review. The leaf-volume sweep uses a 0.5 cm offset above the resting floor to exclude floor contact while retaining full leaf dimensions and 400 cm travel.
+See `environment_authoring.json` for the exact 56 boxes and lights, `environment_verification.json` for saved-map readback, 17 floor contacts, closed/open pawn sweeps, leaf-volume clearance and both-face occlusion probes, and `environment_review.json` for the image review. The leaf-volume sweep uses a 0.5 cm offset above the resting floor to exclude floor contact while retaining full leaf dimensions and 400 cm travel.
 
-The HZ support asset has 2,244 opaque triangles, Nanite enabled with 100% fallback triangles/zero error, simple compound boxes and MI_HCA2_Stone. It is analytic team-authored geometry created through editor GeometryScripting APIs. Source art and shared materials are unchanged. This supports #19's props and a short G3 landing; it does not finish the downstream gauntlet/chasm environment visible through G3.
+The HZ support asset has 2,208 opaque triangles, Nanite enabled with 100% fallback triangles/zero error, 56 simple compound boxes and MI_HCA2_Stone. It is analytic team-authored geometry created through editor GeometryScripting APIs. Source art and shared materials are unchanged. This supports #19's props and a short G3 landing; it does not finish the downstream gauntlet/chasm environment visible through G3.
 
 ## Client scope
 
@@ -44,3 +44,7 @@ Physical gamepad routing, the regular PG camera/view behavior and a final team p
 The original dirty checkout, source art, Core, Player, shared materials/maps and project settings are preserved. HZ changes are limited to the explicitly approved, locked sublevel and its unique supporting mesh; original HZ actors are preserved. No hosted subagents were used. #19 must remain open until the remaining art acceptance criteria pass.
 
 Upstream HC-1 integration: the final rebase retained its three test interactables in L_Site01_HC, then added the eleven HC-A2 actors through the editor. See evidence/upstream_integration.json. No older binary map replaced the upstream map.
+
+Fresh continuation correction: earlier presentation evidence did not establish prototype-to-passage connectivity or correct visible-face winding. Current support has clockwise faces, 1/16 cm Nanite position precision, flat frame-side seals, overlapping room joints and balanced local lighting. Gate-side complex rays, 24 connection sweeps and four floor-following spawn routes pass. Approved doorway copies change only two original actor mesh references; their identities/transforms and source mesh assets remain intact. The legacy copied rock shell retains its original triangle-collision policy; generated support, blocker and all HC-A2 props have simple collision.
+
+Only fresh capture/client reports and committed hashes establish the current Windows gate. Older cave_split_screen00000.png records a test-view orientation error; historical site/gallery images do not establish the repaired environment. Mac, physical controller traversal, downstream gauntlet/chasm, navmesh and consuming gameplay remain outside this automated Windows art/placement gate.

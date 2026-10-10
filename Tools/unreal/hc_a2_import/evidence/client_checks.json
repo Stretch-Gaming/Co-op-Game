@@ -117,12 +117,12 @@
   "settings_restored": true,
   "split_screenshot_saved": true,
   "scope": "Asset loading, static poses and local views only; gameplay RPC/carry/round logic is not implemented or claimed.",
-  "split_screenshot": "cave_split_screen00001.png",
-  "split_visual_result": "Two horizontal third-person local views; both local pawns remain supported at Z92.15 cm. Pawn and control yaw aligned only in PIE; no Player assets edited.",
+  "split_screenshot": "cave_split_screen00003.png",
   "split_actual_pixels": [
-    1036,
-    575
+    1039,
+    579
   ],
-  "baseline": "Upstream HC-1 plus HC-A2 art and approved HZ environment support",
-  "capture_sequence": "environment-visual-clean finished and restored poses before environment-client-clean"
+  "baseline": "Final clockwise support, retained frame beams, approved doorway copies and unchanged HC-1/HC-A2 placements",
+  "capture_sequence": "continuation-final-render completed/restored poses before continuation-final-client",
+  "split_visual_result": "Two horizontal local third-person views with visible supported floor/props; both pawns stay at Z92.15 cm."
 }

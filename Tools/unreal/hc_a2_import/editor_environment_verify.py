@@ -50,6 +50,19 @@ for gate in [a for a in props if '_Gate_' in a.get_actor_label()]:
     assert line((p.x+250,y,z),(p.x+16,y,z),props),'Missing east enclosure'
   gates.append({'label':gate.get_actor_label(),'closed_blocks_pawn':True,'open_clears_pawn':True,'full_leaf_travel_clear':True,'opaque_faces_cover_samples':18,'slot_x_cm':34,'full_open_leaf_top_z_cm':850})
  finally:leaf.set_relative_location(original,False,False)
-result={'status':'passed','floors':floors,'gates':gates,'simple_boxes':len(author['boxes']),'nanite':author['nanite'],'preserved_existing_actors':len(author['baseline']),'saved_map_reload':True,'transient_poses_restored':True,'visual_review':'separate renderer captures required'}
+seals=[]
+for gate in [a for a in props if '_Gate_' in a.get_actor_label()]:
+ p=gate.get_actor_location()
+ for y in (-310,310):
+  for z in (5,100,380,950):
+   for side in (-1,1):
+    hit=unreal.SystemLibrary.line_trace_single(world,unreal.Vector(p.x+side*250,y,z),unreal.Vector(p.x+side*16,y,z),unreal.TraceTypeQuery.TRACE_TYPE_QUERY1,True,props,unreal.DrawDebugTrace.NONE,True)
+    assert hit,('Visible gate-side seam',gate.get_actor_label(),side,y,z)
+    seals.append({'gate':gate.get_actor_label(),'side':side,'y_cm':y,'z_cm':z,'complex_geometry_occludes':True})
+portal=json.loads((root/'Tools/unreal/hc_a2_import/evidence/prototype_portal.json').read_text())
+for row in portal['components_changed']:
+ a=next(a for a in all_ if a.get_path_name()==row['actor']);assert snapshot(a)==row['original_actor_identity_transform']
+ assert a.static_mesh_component.static_mesh.get_path_name()==row['doorway_copy']
+result={'gate_side_visual_seals':seals,'prototype_portal_references_reloaded':True,'status':'passed','floors':floors,'gates':gates,'simple_boxes':len(author['boxes']),'nanite':author['nanite'],'preserved_existing_actors':len(author['baseline']),'saved_map_reload':True,'transient_poses_restored':True,'visual_review':'separate renderer captures required'}
 (root/'Tools/unreal/hc_a2_import/evidence/environment_verification.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('HCA2_ENVIRONMENT_VERIFY passed')

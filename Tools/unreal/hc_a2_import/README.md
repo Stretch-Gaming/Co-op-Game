@@ -8,7 +8,7 @@ Stretch's HC lane delivery for [#19](https://github.com/Stretch-Gaming/Co-op-Gam
 - Five Blueprint art assemblies in `HCA2_Props/Assemblies/`: diamond/circle/triangle/cross plates and the chamber gate.
 - `/Game/Puzzles/Test/L_HCA2_Props`, created through the editor's level-template API from L_StyleTest. Its copied lighting/reference assets and HC-owned test fixtures support comparison without modifying the shared map.
 - Eleven art-only placements in `L_Site01_HC`: four symbol plates, three 1.8 m statues in the documented alcoves, the altar, and G1/G2/G3. The starting main branch had no HC puzzle greyboxes or gameplay actors to replace.
-- Approved HZ support in `L_Site01_HZ`: a unique 2,244-triangle cave shell with 47 simple boxes, local warm/teal lighting, and enclosed gate pockets. Existing HZ actors are preserved.
+- Approved HZ support in `L_Site01_HZ`: a unique 2,208-triangle cave shell with 56 simple boxes, local warm/teal lighting, and enclosed gate pockets. Existing HZ actors are preserved.
 - Both statue variants remain available. Alcove placement uses #19's 1.8 m specification; the 1.1 m version appears beside it in the test map. No carry variant is silently selected.
 
 These are art assemblies, with cosmetic `SetPressedVisual` and `SetOpenVisual` functions. Gameplay authority, carrying, puzzle counts and round completion belong to HC-4/5/6. The future gameplay owner must drive the cosmetic functions from server-owned replicated state. There are no new input, HUD, GameMode or round-state changes in this delivery.
@@ -75,7 +75,7 @@ Use actor/component scale (1,1,1), base-centered pivots and component-relative t
 | Altar | Front +X; relic base **(0,0,97 cm)** in the 40 cm diameter, 3 cm deep socket. |
 | Statues | 1.8 m and 1.1 m variants retained, fronts +X. |
 
-The gate's **400 cm Y opening Ãƒâ€” 400 cm height** is its passage. Full frame bounds are **156 Ãƒâ€” 708.8224 Ãƒâ€” 511.2001 cm**, including rubble; the leaf is **30.4 Ãƒâ€” 430 Ãƒâ€” 450 cm**. Passage is along X; the centered X slot is 34 cm wide. Open leaf top is **Z 850 cm**. Never resize/recenter the art or shorten travel to force a fit.
+The gate's **400 cm Y opening × 400 cm height** is its passage. Full frame bounds are **156 × 708.8224 × 511.2001 cm**, including rubble; the leaf is **30.4 × 430 × 450 cm**. Passage is along X; the centered X slot is 34 cm wide. Open leaf top is **Z 850 cm**. Never resize/recenter the art or shorten travel to force a fit.
 
 Symbol placement is explicit: diamond (32,-8 m), circle (32,+8 m), triangle (48,-8 m), cross (48,+8 m). Gates remain at the documented 25/55/115 m X positions and the altar at X108 m. All new main-map actors belong to L_Site01_HC, with no cross-sublevel actor references.
 
@@ -86,7 +86,7 @@ All ten meshes now have simple collision, with simple-and-complex query behavior
 - Plate base, each top and leaf: one fitted box.
 - Each statue: separately scaled plinth and owl boxes.
 - Altar: pedestal and capstone boxes; capstone collision stops at Z97 so the socket base remains accessible.
-- Frame: eight split post/core/lintel boxes. The 4Ãƒâ€”4 m passage and 34 cm X slot stay clear; the cores start at Y Ã‚Â±218 cm, beyond the leaf ends at Ã‚Â±215 cm.
+- Frame: eight split post/core/lintel boxes. The 4×4 m passage and 34 cm X slot stay clear; the cores start at Y Ã‚Â±218 cm, beyond the leaf ends at Ã‚Â±215 cm.
 
 Live checks verified all four 7 cm surface-height changes, closed-gate blocking/open-gate clearance with a pawn-size sweep, and the altar contact surface at Z97. The precise box ranges are in `evidence/compound_collision.json`.
 
@@ -106,12 +106,26 @@ Upstream HC-1 integration: the final rebase retained its three test interactable
 
 Stretch approved the HZ floor, local lighting and gate-enclosure extension. The kickoff is recorded on #19, comment 6097208734. `Content/Hazards/L_Site01_HZ.umap` was locked before authoring. Positions in the shared layout stay fixed; the existing prototype spans only X -20 to +20 m, so this change adds support around the documented puzzle positions rather than moving the props into that prototype.
 
-`/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport` is team-authored analytic geometry made through Unreal GeometryScripting editor APIs. It uses the existing read-only MI_HCA2_Stone, itself an instance of M_Stylized. No additional source art, texture, shared material or credit is needed. Opaque geometry above 2,000 triangles uses Nanite with full-fidelity fallback. All 47 collision primitives are simple boxes. The decorative bevels sit within the collision bounds.
+`/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport` is team-authored analytic geometry made through Unreal GeometryScripting editor APIs. It uses the existing read-only MI_HCA2_Stone, itself an instance of M_Stylized. No additional source art, texture, shared material or credit is needed. Opaque geometry above 2,000 triangles uses Nanite with full-fidelity fallback. All 56 support collision primitives are simple boxes. The decorative bevels sit within the collision bounds.
 
-Gate pockets have opaque faces on X [-180,-17] and [17,180] relative to each gate, beginning at Z400; the centered 34 cm slot remains clear. The leaf ends at Z850 and the cap begins at Z900. Corridor walls/roofs stop 180 cm short of the gate origins so the full 430 cm leaf width clears them. Support floors finish at Z0. Never add collision across the center slot or shorten the leaf travel.
+Gate pockets have upper opaque faces on X [-180,-17] and [17,180] beginning at Z512, with lower padding on X [-33,-17] and [17,33] at Z400-512 behind the frame lintels; the centered 34 cm slot remains clear. The leaf ends at Z850 and the cap begins at Z900. Corridor walls/roofs stop 180 cm short of the gate origins so the full 430 cm leaf width clears them. Support floors finish at Z0. Never add collision across the center slot or shorten the leaf travel.
 
 `editor_environment.py` requires an explicit `execute_environment: true` in the local editor-session request and verifies the exact project and Stretch's HZ map lock. A normal repeat refuses the existing support asset and placements. The bounded `repair_owned_support` path additionally requires the exact current asset SHA-256 and prior authoring evidence; it removes only the tagged HZ integration actors and its unique support mesh through editor APIs, then rebuilds them. It never deletes an existing prototype actor. This environment authoring path is separate from the default read-only prop importer.
 
 Independent `editor_environment_verify.py` reloads the saved map, checks all preserved actor transforms/classes, floor contacts and three gates. The full leaf-volume sweep starts 0.5 cm above the resting floor to avoid a contact-only hit; it preserves the full width/thickness/height and 400 cm travel. Renderer review covers closed, halfway and fully open states. `editor_environment_visual.py` restores all temporary poses and removes cameras without saving them.
 
 For a future authorized fresh environment bake, acquire the HZ map lock and invoke the script explicitly from that checkout's full 5.8.3 editor. Write a local `Saved/HCA2/request.json` containing `{"id":"unique-authoring-run","execute_environment":true}`, then execute the saved `editor_environment.py` through the editor Python API with its real `__file__`. The delivered asset already exists, so the normal invocation intentionally refuses it. Verification scripts may be executed through the same editor Python route; run renderer capture to completion before PIE. The client script refuses a capture report still marked running.
+
+## Connected prototype entrance and fresh Windows gate
+
+Stretch explicitly approved doorway copies after inspection found the original prototype's hidden east blocker and rock shell closed the route. Only the mesh references of `Cave_blocker_001` and `Cave_procedural_318` changed. Their actor identities, labels, transforms, tags and original mesh assets are preserved. The unique copies are `SM_HCA2_PrototypeEastBlocker` and `SM_HCA2_PrototypeEastWall`, both under HCA2_Integration. The cut is 500 cm wide and 450 cm high at floor Z0, through world X900 to 1900. It is distinct from the three unchanged 400 cm gate openings.
+
+The hidden blocker has three simple boxes. The copied legacy rock shell retains its original complex-as-simple triangle collision policy so other parts of that existing shell keep their previous collision behavior. This is a scoped legacy environment exception: all ten HC-A2 props, generated support and the portal blocker use simple collision. The original CavePrototype assets are read-only. The 5,786-triangle opaque rock copy uses Nanite with full fallback; the 78-triangle hidden blocker does not.
+
+The support faces now use Unreal clockwise winding. Earlier box collision tests could not detect reversed visible faces; the fresh gate checks include 48 complex-geometry rays at frame-side seams. Nanite position precision is fixed at 1/16 cm to preserve the narrow slot within this long support mesh. Support walls overlap floor/ceiling joints and gate cheeks meet the frame without bevel gaps. The G3 roof/walls stop at the existing X118.5 m landing boundary.
+
+`walkable_connections.json` covers 24 supported approaches/bypasses/connections. `prototype_connection_scan.json` adds paths from all four existing player starts. It reads the existing character's 35 cm capsule radius, 90 cm half-height and 45 cm step budget, samples each floor footprint at nine points, and sweeps the floor-following capsule along each 1 m grid edge. The shallow preserved prototype stone under start 4 is handled within that existing step budget. This is automated geometric clearance evidence, not a human controller traversal or a navmesh/gameplay test.
+
+`editor_environment_portal.py` is dispatched only by an explicit environment request with `author_prototype_portal: true`, under the HZ map lock. It verifies both original component references, prepares Boolean cuts with editor GeometryScripting, refuses occupied copy destinations, then saves only the two new assets and HZ sublevel. A normal repeat refuses; it never silently recuts or overwrites either copy.
+
+The lower pocket padding spans X [-33,-17] and [17,33] at Z400-512 behind the frame lintels. The wider enclosing faces begin at Z512, preserving the visible top beam and its symbol while hiding the full upper leaf.

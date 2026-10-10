@@ -72,7 +72,7 @@ def main():
     untracked = git("ls-files", "--others", "--exclude-standard").splitlines()
     paths = sorted(set(diff_paths + changed_paths + untracked))
     def owned(path):
-        return path.startswith(("Tools/unreal/hc_a2_import/", "Content/Puzzles/Art/HCA2_Props/")) or path in ("Content/Puzzles/L_Site01_HC.umap", "Content/Puzzles/Test/L_HCA2_Props.umap", "Content/Hazards/L_Site01_HZ.umap", "Content/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport.uasset")
+        return path.startswith(("Tools/unreal/hc_a2_import/", "Content/Puzzles/Art/HCA2_Props/")) or path in ("Content/Puzzles/L_Site01_HC.umap", "Content/Puzzles/Test/L_HCA2_Props.umap", "Content/Hazards/L_Site01_HZ.umap", "Content/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport.uasset", "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastBlocker.uasset", "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastWall.uasset")
     if any(not owned(p) for p in paths):
         raise SystemExit("Changes outside ownership: " + repr(paths))
     evidence = {
