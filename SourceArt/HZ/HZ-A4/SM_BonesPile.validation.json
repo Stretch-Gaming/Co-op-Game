@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A4/SM_BonesPile.glb",
+  "output": "SourceArt/HZ/HZ-A4/SM_BonesPile.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 4050,
+  "triangles_after": 4050,
+  "dimensions_cm": [
+    57.1569,
+    52.1364,
+    27.5111
+  ],
+  "bounds_min_cm": [
+    -28.57846,
+    -26.06822,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

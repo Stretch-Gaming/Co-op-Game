@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A4/SM_RopeCoil.glb",
+  "output": "SourceArt/HZ/HZ-A4/SM_RopeCoil.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 3396,
+  "triangles_after": 3396,
+  "dimensions_cm": [
+    65.648,
+    44.5502,
+    17.4217
+  ],
+  "bounds_min_cm": [
+    -32.82399,
+    -22.2751,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
