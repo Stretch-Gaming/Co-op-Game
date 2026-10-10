@@ -1,6 +1,7 @@
 #include "CoopPlayground.h"
 
 #include "Components/BoxComponent.h"
+#include "Components/InstancedStaticMeshComponent.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Components/ExponentialHeightFogComponent.h"
 #include "Components/PointLightComponent.h"
@@ -68,7 +69,8 @@ namespace CoopCaveTransfer
 				TSharedPtr<FJsonObject> Record = ComponentRecord(Component);
 				if (UStaticMeshComponent* Static = Cast<UStaticMeshComponent>(Component))
 				{
-					if (!Static->GetStaticMesh()) { continue; }
+					// Instanced meshes (the maze's repo rocks) would export as a single rock, so they're left out.
+					if (!Static->GetStaticMesh() || Static->IsA<UInstancedStaticMeshComponent>()) { continue; }
 					Record->SetStringField(TEXT("kind"), TEXT("static"));
 					Record->SetStringField(TEXT("mesh"), Static->GetStaticMesh()->GetPathName());
 					AddMaterial(Static, Record);

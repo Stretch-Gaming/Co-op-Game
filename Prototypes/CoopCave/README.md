@@ -7,6 +7,7 @@ A playable starting point for an It Takes Two / Unravel-style co-op game:
 - **Two players on one machine, side-by-side split screen**
 - **Separate controls per player:** keyboard + mouse or gamepad for Player 1, second gamepad for Player 2
 - **A 25 m x 25 m torch-lit mine cave** that builds itself when you press Play: faceted rock walls, timber supports, flickering torches with shadows, a workbench, crates, a mine cart on rails, a raised scaffold and a corner of glowing crystals
+- **A maze through the north wall:** four paths that cross each other on rock bridges, climb and drop, meet in two halls, and end in a relic chamber (about 205 m x 260 m)
 - **Rocks in three sizes:** small ones you walk straight over, medium ones you jump onto, boulders that block the way
 - **Co-op moves:** brace (plant your feet) and boost jump (jump next to your braced partner to launch high). The rope between the players is **off**; `coop.Tether 1` brings it back with reel
 - **Two camera modes per player:** over-the-shoulder and first person, switched with D-pad up
@@ -53,7 +54,7 @@ The game and editor target definitions under `Source/` are included for Unreal 5
 | Brace (hold) | Left Shift | Left trigger | Right Shift |
 | Reel (only with the rope on) | R | Right trigger | Enter |
 | Switch camera | V | D-pad up | C |
-| Jump to a spot in the cave | 1-5 | D-pad right / left | |
+| Jump to a spot (cave 1-5, maze 6-9) | 1-9 | D-pad right / left | |
 | Back to the start of this spot | press its number again | D-pad down | |
 
 Player 1 is coral and Player 2 is teal. A braced player squashes down and goes darker. Jump right next to a braced partner to boost jump.
@@ -69,6 +70,31 @@ A 25 m x 25 m mine cave lit by torches. The spots you can jump to:
 | 3 | Mine cart | The cart on its rails. Jump into it. |
 | 4 | Scaffold | Jump onto the crate, then up onto the platform. |
 | 5 | Crystals | The glowing teal corner. |
+| 6 | Maze fork | Four tunnel mouths, one per path. |
+| 7 | Meeting point A | The sunken hall (-3 m) where all four paths meet. |
+| 8 | Meeting point B | The raised hall (+4 m), the second meeting point. |
+| 9 | Relic chamber | The end of the maze (+6 m), with the gold idol. |
+
+### The maze
+
+Through the door in the cave's north wall (between the timber posts). [maze_overview.png](maze_overview.png) is a top-down map with each path's height profile.
+
+- **Four paths** leave the fork. Each floor is tinted its path's color, and crystals in that color mark where a path leaves and enters a room.
+- **They wind around each other:** six rock bridges carry one path over another without joining them.
+- **They meet twice**, in a sunken hall (-3 m) and a raised hall (+4 m), where you can switch paths.
+- **Climbs and drops:** ramps of up to 2 m per 5 m (about 22 degrees). Corners and bridges are flat.
+- Paths 1, 2 and 4 are torch-lit; path 3 is lit by teal crystals. There are 7 dead ends.
+
+| Path | Length | Height |
+|---|---|---|
+| 1 Trench (orange) | 295 m | -3 to +6 m |
+| 2 Switchback (yellow) | 310 m | -3 to +10 m |
+| 3 Crystal run (teal) | 475 m | -3 to +10 m |
+| 4 Long haul (purple) | 495 m | -3 to +6 m |
+
+The layout is the table at the top of `CoopPlayground.cpp` (`CoopMaze`): rooms as tile rectangles, paths as waypoints with heights.
+
+**Repo art (optional):** the maze uses the shared style kit from the main project when it's in this project: `SM_StyleTest_Rock` and `MI_Stylized_Rock` for the walls and ceiling, `MI_Stylized_Gold` for the idol. To add them, open `CoopGame.uproject`, select those three assets in `Content/Shared/Style`, right-click, **Asset Actions > Migrate**, and pick this project's `Content` folder. Without them the maze uses code-built rocks. The Output Log line `CoopPlayground: repo rock mesh ...` says which it found.
 
 ## 5. What to test in the cave
 
@@ -104,7 +130,7 @@ Typing a name on its own shows its current value.
 
 ## 7. Changing code
 
-- `CoopPlayground.cpp`: the cave: layout, rocks, timber, torches, furniture, lighting and the spots
+- `CoopPlayground.cpp`: the cave and the maze: layout, rocks, timber, torches, furniture, lighting and the spots
 - `CoopMeshKit.cpp`: the faceted rock, crystal and flame shapes
 - `CoopTuning.cpp`: default values for every live setting
 - `CoopInput.cpp`: every key and button binding

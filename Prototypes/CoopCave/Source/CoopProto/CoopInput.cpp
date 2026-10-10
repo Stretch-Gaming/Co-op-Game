@@ -91,9 +91,9 @@ void UCoopInput::Build()
 	Bind(PlayerContext, StationPrev, EKeys::Gamepad_DPad_Left);
 	Bind(PlayerContext, StationReset, EKeys::Gamepad_DPad_Down);
 
-	// Number keys 1-6 jump straight to a station. The Scalar modifier turns each key's
-	// value into its number, so one action covers all six keys.
-	const FKey NumberKeys[] = { EKeys::One, EKeys::Two, EKeys::Three, EKeys::Four, EKeys::Five, EKeys::Six };
+	// Number keys 1-9 jump straight to a station. The Scalar modifier turns each key's
+	// value into its number, so one action covers all nine keys.
+	const FKey NumberKeys[] = { EKeys::One, EKeys::Two, EKeys::Three, EKeys::Four, EKeys::Five, EKeys::Six, EKeys::Seven, EKeys::Eight, EKeys::Nine };
 	int32 StationNumber = 1;
 	for (const FKey& NumberKey : NumberKeys)
 	{
