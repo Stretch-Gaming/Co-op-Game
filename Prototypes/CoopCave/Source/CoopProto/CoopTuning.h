@@ -62,4 +62,7 @@ namespace CoopTuning
 	float StickYawRate();     // coop.Look.StickYaw    degrees/s at full stick
 	float StickPitchRate();   // coop.Look.StickPitch  degrees/s at full stick
 	float MouseSensitivity(); // coop.Look.Mouse       degrees per mouse unit
+
+	// Maze dressing
+	bool  MazeDetail();       // coop.Maze.Detail     1 = the maze's detail pass (rocks, rubble, timber, crystals), 0 = plain tunnels. Read at Play.
 }
