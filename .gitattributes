@@ -17,6 +17,7 @@ Content/Maps/**   lockable
 Content/Shared/** lockable
 
 # Source art and media
+SourceArt/HZ/CaveIntegration/cave.json filter=lfs diff=lfs merge=lfs -text
 *.fbx  filter=lfs diff=lfs merge=lfs -text
 *.glb  filter=lfs diff=lfs merge=lfs -text
 *.obj  filter=lfs diff=lfs merge=lfs -text

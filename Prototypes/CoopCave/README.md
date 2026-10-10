@@ -39,6 +39,12 @@ The cave and its lights build themselves from code. The level stays empty in the
 
 ## 3. Controls
 
+### Windows quick start
+
+Run `build_windows.bat`, then `run_windows.bat`. The launcher uses Unreal's built-in empty Entry map with `CoopGameMode`; the cave builds from C++ at runtime, so this path needs no project map asset. It runs in a separate game window with two local players. `UE_ROOT` can override the default engine installation path.
+
+The game and editor target definitions under `Source/` are included for Unreal 5.8 builds. Editor builds use the installed engine's V7 build settings and 5.8 include order.
+
 | | Player 1 keyboard | Gamepad (P1 = pad 1, P2 = pad 2) | P2 from P1's keyboard (solo testing) |
 |---|---|---|---|
 | Move | WASD | Left stick | Arrow keys |

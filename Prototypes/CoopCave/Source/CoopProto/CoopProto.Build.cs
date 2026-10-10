@@ -15,5 +15,6 @@ public class CoopProto : ModuleRules
 			"EnhancedInput",
 			"ProceduralMeshComponent"
 		});
+		PrivateDependencyModuleNames.Add("Json");
 	}
 }
