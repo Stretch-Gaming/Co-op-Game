@@ -92,6 +92,14 @@ Material building (PG-A0 style kit): `M_Stylized` has 92 expressions and was bui
 - To set the play options for a client test, write `PlayNetMode` and `PlayNumberOfClients` with `ObjectTools.set_properties`. Turn off `bThrottleCPUWhenNotForeground` on `/Script/UnrealEd.Default__EditorPerformanceSettings` while testing, or the editor drops to 3 frames a second, and turn it back on afterwards. Read every world during PIE with `EditorLevelLibrary.get_pie_worlds(True)`.
 - Editor Python runs actor functions locally, even RPCs, so calling `Server_…` from Python doesn't test replication. Inject the input instead: `EnhancedInputLocalPlayerSubsystem.inject_input_vector_for_action` on a client's subsystem (find it with `unreal.ObjectIterator`) goes down the real input-to-RPC path.
 
+### PG-7: 4-player PIE and reimports, 2026-10-10
+
+- Save a level through its own package: use `actor.get_outermost()` or `world.get_outermost()`, then `EditorLoadingAndSavingUtils.save_packages`. Calling `unreal.load_package()` on a sublevel that's already loaded, then saving the result, wrote `L_Site01_PG` with its greybox cubes stripped of their mesh and transform. It had to be restored from Git.
+- Play As Client with 4 players in one process runs at about 12 fps on PK's M4 Pro, with 5 worlds. Gameplay that's driven by server time still works, but the editor crashed once in `FSceneViewport::Destroy` when `StopPIE` closed the 4 client windows. Save everything before a 4-player PIE.
+- After an editor crash, `CrashReportClient` can keep port 8000 open, so the relaunched editor's MCP server can't bind. Close the crash reporter first. If Auto Start Server is off, relaunch with `-ExecCmds="ModelContextProtocol.StartServer 8000"`.
+- The `EnhancedInputLocalPlayerSubsystem` objects in PIE live under `/Engine/Transient`, not under a `PIE` path. Find them with `ObjectIterator` and skip `Default__`. An injected `IA_Move` follows each client's control rotation, so the same input can send different players in different directions.
+- A `BoxComponent` with `OverlapOnlyPawn` still blocks `Visibility` line traces. Trace for `WorldStatic` objects when you want floors only.
+
 ## Working with the agent
 
 - **Good agent work:** blocking out rooms from the layout doc, placing and labeling actors, setting properties and defaults, material instances, data table rows, and scaffolding Blueprints (assets, components, variables, empty functions).
