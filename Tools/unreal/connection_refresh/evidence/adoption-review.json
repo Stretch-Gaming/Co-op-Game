@@ -1,0 +1,35 @@
+{
+  "affected_shared_meshes": 210,
+  "changed_at_same_index": 631,
+  "source_head": "107cf1e9466a0ab7780eb282220fcf83a4d15086",
+  "draft_sha256": "2008b7a684ba0f82d34b97fe259c20ec7abc46e09d00ead5f9c1dd8c6fcbf0ed",
+  "applied": {
+    "dry_run": false,
+    "new_records": 563,
+    "old_records": 561,
+    "preserved_actors": 452,
+    "private_root": "/Game/Puzzles/EnvironmentConnection/Refresh_fd40cdeb",
+    "save_only": "/Game/Puzzles/EnvironmentConnection/L_ConnectedMaze",
+    "protected_hashes_unchanged": true,
+    "protected_dirty_map_packages_before": [
+      "/Game/Maps/L_ConnectedRoomMaze"
+    ],
+    "protected_packages_saved": false,
+    "applied": true,
+    "created_assets": [],
+    "scenery_actors": 563,
+    "source_promoted": false,
+    "runtime_verified": false,
+    "protected_dirty_map_packages_after": [
+      "/Game/Maps/L_ConnectedRoomMaze"
+    ]
+  },
+  "protected_sha256": {
+    "SourceArt/HC/MazeIntegration/scene.json.gz": "7c738a4c7dddfd9723073f32bedea197927dbe7999c3c62f4a456e5868535fce",
+    "SourceArt/HC/EnvironmentConnection/connection.json.gz": "353e1c2ae3d6a7b820c12b6a5bf95e378d1a072478d68f0da5b5f6a0ce6170ab",
+    "SourceArt/HC/EnvironmentConnection/provenance.json": "fde0025e328e686b70d77d0330081e63ba1cc542650be6ba3123e63dacd659fe",
+    "Content/Maps/L_ConnectedRoomMaze.umap": "c080863c451c0c71880e6f372d72c47352dff231b66885abe3d6b3d8223eacfe",
+    "Content/Puzzles/EnvironmentConnection/BP_EnvironmentDoor.uasset": "80d0f90e6c962bef4f09f6e80fe234d9666ac112cd1cbd7f152051c710e8c0b0",
+    "Content/Hazards/L_Site01_HZ.umap": "ddcb5759bad4337e829cc548dd7367bbfa52b6b0b4df9713461528a983b7cdb5"
+  }
+}

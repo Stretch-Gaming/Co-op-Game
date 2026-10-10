@@ -1,4 +1,5 @@
 import gzip,json,unreal as ue
+assert not (ROOT/'SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb/connection.json.gz').exists(), 'This map uses refreshed scenery; see Tools/unreal/connection_refresh instead of the historical builder.'
 scene=json.loads(gzip.decompress((ROOT/'SourceArt/HC/EnvironmentConnection/connection.json.gz').read_bytes()))
 base='/Game/Puzzles/EnvironmentConnection/Art'
 saved=[]

@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "mode": "read_only",
+  "rows": {
+    "SFX_Taking_HandDrag": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_HandDrag.SFX_Taking_HandDrag",
+      "duration": 3.6,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taking",
+      "sha256": "bcd1d074e804c423ae0457316a68c821a9dc4558b4cbb2b5ab20916df1ef8efc"
+    },
+    "SFX_Taking_FloorCrack": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_FloorCrack.SFX_Taking_FloorCrack",
+      "duration": 3.0,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taking",
+      "sha256": "ef576087df0807cc65f2cc094818a84832bc2c234f64308e057f2b794b561fdd"
+    },
+    "SFX_Taking_FloorShut": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_FloorShut.SFX_Taking_FloorShut",
+      "duration": 2.9,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taking",
+      "sha256": "a4918e0943f567fc5718a82c0c205f79fc044f8f6c2e098dce8b42f5dc48917f"
+    },
+    "SFX_Taking_LightsOut": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_LightsOut.SFX_Taking_LightsOut",
+      "duration": 2.4,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taking",
+      "sha256": "665344de1354994e55fc5d5fa1c884eaff1c05b37c81cacbe1563f4840fe8e09"
+    },
+    "SFX_Taking_HeadlampRoll": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_HeadlampRoll.SFX_Taking_HeadlampRoll",
+      "duration": 4.6,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taking",
+      "sha256": "803cef12ce22bda72540cd1111d557b1a564bb58c68dfa529e0fe4a5407e3cee"
+    },
+    "SFX_Taking_Sting_2D": {
+      "path": "/Game/Player/Art/Audio/SFX_Taking_Sting_2D.SFX_Taking_Sting_2D",
+      "duration": 2.6,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": false,
+      "volume": 1.0,
+      "attenuation": null,
+      "sha256": "8438b0093243172ec778ff73c402cf49b88d578e19e1af76f3eff9c1df642c0a"
+    },
+    "SFX_Taker_Breath_Loop": {
+      "path": "/Game/Player/Art/Audio/SFX_Taker_Breath_Loop.SFX_Taker_Breath_Loop",
+      "duration": 17.620541666666668,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": true,
+      "volume": 1.0,
+      "attenuation": "ATT_PG_Taker",
+      "sha256": "8fe5e035f7659e4d04172550ec9eea7037447b115842ad528d6db65970b04724"
+    },
+    "SFX_Chase_Loop_2D": {
+      "path": "/Game/Player/Art/Audio/SFX_Chase_Loop_2D.SFX_Chase_Loop_2D",
+      "duration": 26.16,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": true,
+      "volume": 1.0,
+      "attenuation": null,
+      "sha256": "39c003c1321962670085783dfc8c91da16c949a2c56b736757137fae1bd7eabf"
+    },
+    "SFX_Chase_Build_Loop_2D": {
+      "path": "/Game/Player/Art/Audio/SFX_Chase_Build_Loop_2D.SFX_Chase_Build_Loop_2D",
+      "duration": 26.16,
+      "channels": 1,
+      "source_sample_rate": 48000,
+      "source_bit_depth": 24,
+      "looping": true,
+      "volume": 0.5,
+      "attenuation": null,
+      "sha256": "5de75948570ce7d389723bb24bd866f99ad97a2dafca04b755c7e23cb1d04487"
+    },
+    "ATT_PG_Taking": {
+      "radius": 300.0,
+      "falloff": 3000.0,
+      "distance": "Natural Sound",
+      "shape": "Sphere"
+    },
+    "ATT_PG_Taker": {
+      "radius": 150.0,
+      "falloff": 1500.0,
+      "distance": "Natural Sound",
+      "shape": "Sphere"
+    }
+  },
+  "native_sample_rate": "Source WAV48k validated; native SoundWave compressed platform rate not exposed/checked",
+  "pending": [
+    "Listen for levels/seams",
+    "Coordinator repoints future hooks to canonical Art/Audio himself",
+    "Both local split-screen 2D chase layers start together; sting owner-only"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "error": null,
+  "phase": "second",
+  "checks": [
+    "closed door physically blocks walking from the room",
+    "normal E opens the moving door on server and both clients",
+    "client walks from room through open doorway and joined passage into maze fork",
+    "same client walks back into original room",
+    "second joining client walks into maze; both players keep same world/roster; no puzzle actors active"
+  ],
+  "players": [
+    {
+      "id": 256,
+      "position": "<Struct 'Vector' (0x000001443AF23E40) {x: 275.000000, y: 891.406609, z: 92.149999}>"
+    },
+    {
+      "id": 257,
+      "position": "<Struct 'Vector' (0x000001443AF23E40) {x: 375.000000, y: 3611.167516, z: 92.150002}>"
+    }
+  ],
+  "door_position": "<Struct 'Vector' (0x000001443AF23E40) {x: 325.000000, y: 1400.000000, z: 650.000000}>",
+  "worlds": [
+    "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+    "/Game/Maps/UEDPIE_1_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+    "/Game/Maps/UEDPIE_2_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+  ],
+  "method": "Two joining clients use native movement and E interaction; only initial approach positions are fixtures. No map travel and no puzzle calls."
+}
