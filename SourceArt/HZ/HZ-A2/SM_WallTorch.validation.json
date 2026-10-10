@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A2/SM_WallTorch.glb",
+  "output": "SourceArt/HZ/HZ-A2/SM_WallTorch.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 2332,
+  "triangles_after": 2332,
+  "dimensions_cm": [
+    17.9016,
+    30.4106,
+    60.3649
+  ],
+  "bounds_min_cm": [
+    -8.95079,
+    -15.2053,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A5/SM_Brazier_Flame.glb",
+  "output": "SourceArt/HZ/HZ-A5/SM_Brazier_Flame.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 700,
+  "triangles_after": 700,
+  "dimensions_cm": [
+    42.1271,
+    40.3145,
+    62.06
+  ],
+  "bounds_min_cm": [
+    -21.06355,
+    -20.15725,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
