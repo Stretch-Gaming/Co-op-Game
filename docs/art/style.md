@@ -55,8 +55,23 @@ Everything lives in `Content/Shared/Style/`, which is lockable. Lock before you 
 | `L_StyleTest` | PG (PG-A0) | A test map with the template character, the cave lighting and one example asset from each lane. Lock it to add yours. |
 | Example rock and gold prop | PG (PG-A0) | The first two assets through the pipeline. They set the bar for everything after. |
 | Atmosphere preset | HZ (HZ-A1) | A post-process volume with a color grading LUT, and exponential height fog in the shadow color. Placed in `L_Site01_HZ` and copied into `L_StyleTest`. |
+| UI kit | PG (PG-A6) | Fonts, panels, icons and `WBP_UIStyleTest`, in `Content/Shared/UI/`, which is lockable too. Every widget is built from it; see [HUD and UI](#hud-and-ui). |
 
 Lane materials are instances of `M_Stylized`. Translucent or glowing materials, such as the ghost and the crystal glow, can be their own lane master materials, but they use the palette above.
+
+## HUD and UI
+
+The HUD sits on top of a dark, scary cave, often in a split-screen half. The first HUD used hollow frames, so the cave showed through them, and thin default text floated over the scene. It looked flat and out of place. These rules replace that look.
+
+1. **Solid, never see-through.** Every panel has an opaque backing plate painted in the shadow family, `#2A3042` at the top to `#161B27` at the bottom. Text and icons never sit directly on the scene.
+2. **Depth in four layers.** From back to front: a soft drop shadow in blue-violet, never black, about 4 px down at 1080p; a chunky carved frame of stone or dark wood, lit from above, with a lighter bevel on its top edges and darker lower edges; a recessed plate, with an inner shadow under its top edge; then the content, with its own small shadow. Let pieces overlap: the relic icon breaks out of its plate, and rope wraps sit over the frame's corners.
+3. **Two typefaces, never the engine default.** [Cinzel](https://github.com/google/fonts/tree/main/ofl/cinzel), Bold to Black, is for round names, banners, counters and big moments: carved Roman capitals that look cut into the stone. [Alegreya Sans SC](https://github.com/google/fonts/tree/main/ofl/alegreyasanssc), Bold or ExtraBold, is for prompts, labels and names: sturdy and readable at small sizes. Both use the SIL Open Font License, so they can live in this public repo; credit them in [CREDITS.md](../../CREDITS.md).
+4. **Warm text with a dark edge.** Text is parchment cream, `#F3E6C8`, with a 2 px outline in `#1E2433` and a soft shadow 3 px below. Headings get a slight carved look from a cream-to-sand gradient. The palette's meanings still hold: relic gold for relic numbers, torch amber for the objective and the way forward, trap red only for danger, ghost white only for ghosts.
+5. **The HUD steps back.** A big banner appears when a round starts or clears, holds for about 3 seconds, then shrinks to one small objective line. Counters show at full strength when they change, then dim. In a quiet moment the screen is mostly cave.
+6. **Motion with weight.** Banners drop in with one short overshoot, like a stone slab settling, in about 0.35 seconds, and fade out in about 0.5 seconds.
+7. **Readable in split-screen first.** Scale each player's HUD to their own view: `S = clamp(min(W/1280, H/720), 0.85, 1.25)`, with a safe margin of `24 × S` px, and no text smaller than 16 px in a 1280 × 720 half. Check every piece in `WBP_UIStyleTest` at 1080p and in both split layouts before it goes into the HUD.
+
+PG builds the UI kit in PG-A6, and HC builds the HUD, the interact prompt and the results from it in HC-8.
 
 ## Reference board
 

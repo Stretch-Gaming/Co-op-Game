@@ -46,7 +46,7 @@ namespace CoopTuningVars
 	static TAutoConsoleVariable<float> CVarAmbient(TEXT("coop.Cave.Ambient"), 0.55f, TEXT("Cool fill light in the shadows (sky light intensity)."));
 	static TAutoConsoleVariable<float> CVarExposure(TEXT("coop.Cave.Exposure"), 0.f, TEXT("Camera exposure in stops: +1 = twice as bright, -1 = half."));
 	static TAutoConsoleVariable<float> CVarFog(TEXT("coop.Cave.Fog"), 0.08f, TEXT("Haze density near the floor."));
-	static TAutoConsoleVariable<float> CVarLightDistance(TEXT("coop.Cave.LightDistance"), 5000.f, TEXT("Torch and crystal lights farther than this from the camera (cm) stop drawing, fading out over the last quarter. 0 = always draw."));
+	static TAutoConsoleVariable<float> CVarLightDistance(TEXT("coop.Cave.LightDistance"), 5000.f, TEXT("Torches and the maze's crystal lights farther than this from the camera (cm) stop drawing, fading out over the last quarter. 0 = always draw."));
 
 	// Maze look (fades in through the door tunnel; the cave keeps its own)
 	static TAutoConsoleVariable<float> CVarMazeShadowTint(TEXT("coop.Maze.ShadowTint"), 0.7f, TEXT("How far the maze's shadows and haze turn from the cave's teal to blue-violet #1E2433: 0 = like the cave, 1 = full."));

@@ -1,6 +1,8 @@
 # Co-op Game
 
-A 2–4 player online co-op puzzle game by Stretch, PK and Ak47, built in Unreal Engine 5.8 with MCP-driven editors. Players work through rounds of puzzles across a series of maps, collecting relics and getting past traps and ghosts, starting in an underground cave.
+A 2–4 player online co-op puzzle game by Stretch, PK and Ak47, built in Unreal Engine 5.8 with MCP-driven editors. Players work through rounds of puzzles across a series of maps, collecting relics and getting past traps and ghosts, starting in an underground cave. There, the team solves the first room, gets split up in a maze, regroups twice, and carries a relic home while ghosts chase them.
+
+Lethal damage kills players; there are no revives. Dead players watch a teammate and come back when the team regroups. When the whole team dies, everyone restarts at the latest checkpoint and any round in progress resets.
 
 We work in 45–60 minute sprints with three people in parallel. The Windows machine merges and hosts, and every few sprints we stop at a playable checkpoint and play it together.
 
@@ -11,7 +13,7 @@ We work in 45–60 minute sprints with three people in parallel. The Windows mac
 - **Asset generation:** [docs/assets.md](docs/assets.md), with credits in [CREDITS.md](CREDITS.md)
 - **Rules for agents (and people):** [AGENTS.md](AGENTS.md)
 - **Editor agent setup:** [docs/mcp.md](docs/mcp.md)
-- **Design:** [docs/design/direction-2026-10-09.md](docs/design/direction-2026-10-09.md), which updates [docs/design/two-to-four-players.md](docs/design/two-to-four-players.md)
+- **Design:** [docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md), the maze run, which updates [direction-2026-10-09.md](docs/design/direction-2026-10-09.md) and [two-to-four-players.md](docs/design/two-to-four-players.md)
 
 ## Lanes
 

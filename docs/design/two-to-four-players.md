@@ -1,6 +1,6 @@
 # Co-op Game: 2 to 4 Players, Local and Online
 
-> Updated by [direction-2026-10-09.md](direction-2026-10-09.md): no car, a cave start, first person with a switch to third person, split-screen on the host for Demo 1, and a focus on relics, traps and ghosts across puzzle maps. The scaling, stand-in and split-screen-safe rules below still apply.
+> Updated by [direction-2026-10-09.md](direction-2026-10-09.md): no car, a cave start, first person with a switch to third person, split-screen on the host for Demo 1, a focus on relics, traps and ghosts across puzzle maps, and lethal damage that kills players with no revives. Then by [direction-2026-10-10.md](direction-2026-10-10.md): the maze run, with every player carrying a headlamp and flares in Demo 1, ahead of the tool slots below. The scaling, stand-in and split-screen-safe rules below still apply.
 
 Oct 9, 2026 · Peter Kim
 

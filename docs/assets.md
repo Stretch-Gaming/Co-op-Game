@@ -34,6 +34,7 @@ Chosen tools (PG-A0, revised Oct 9, 2026 to avoid paid services):
 | Style frames and concept images | OpenAI image generation (ChatGPT's built-in tool, also in Codex), with [`style-reference.png`](../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the reference image. Ask for a transparent background when the image will go to TRELLIS.2. | OpenAI's terms give you the output, so it can be published here with no credit. Record the prompt on the issue. |
 | Tileable textures | `M_Stylized`'s world-aligned mode with painted tileables from the image model | As above. |
 | Sound | Made yourself (recorded or synthesized), CC0 libraries, or a sound generator whose plan grants the rights | Check each source. |
+| UI fonts | Families under the SIL Open Font License from the [google/fonts](https://github.com/google/fonts) repo: Cinzel and Alegreya Sans SC for the HUD (PG-A6). | Free. The OFL allows bundling the font files with the game and publishing them here, as long as each keeps its `OFL.txt` next to it and isn't sold on its own. Credit each family in `CREDITS.md`. |
 
 Optional: [Meshy](https://www.meshy.ai)'s Free plan (100 credits a month, enough for a few models) for a hero asset neither Blender nor TRELLIS.2 gets right. Its free outputs are CC BY 4.0 and shown publicly, so each one needs a line in `CREDITS.md`. Don't buy a paid plan for this project.
 
