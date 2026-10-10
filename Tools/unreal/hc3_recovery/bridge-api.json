@@ -1,0 +1,10 @@
+{
+  "IsDowned": "[\"CallFunction|IsDowned\", \"CallFunction|IsDowned(Message)\"]",
+  "GetReviveSeconds": "[\"CallFunction|GetReviveSeconds\", \"CallFunction|GetReviveSeconds(Message)\"]",
+  "Revive": "[\"CallFunction|GetReviveSeconds\", \"CallFunction|GetReviveSeconds(Message)\", \"CallFunction|Revive\", \"CallFunction|Revive(Message)\"]",
+  "DoesObjectImplement": "[\"Utilities|DoesObjectImplementInterface\"]",
+  "asset_subsystem": [
+    "close_all_editors_for_asset",
+    "open_editor_for_assets"
+  ]
+}
