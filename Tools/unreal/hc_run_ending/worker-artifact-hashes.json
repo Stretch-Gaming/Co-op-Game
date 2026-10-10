@@ -1,0 +1,412 @@
+{
+  "baseline": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "files": [
+    {
+      "path": "Content/Puzzles/BP_MapExit.uasset",
+      "sha256": "B0EA362CEA576A471BC259BFA1AA96FFE411FFA143A9173E9DBB7E1397BF5F31",
+      "bytes": 248705
+    },
+    {
+      "path": "Content/Puzzles/Run/BP_RunCoordinator.uasset",
+      "sha256": "DA03E06B0EE68E83A1F8C45D111F0F537D36BF05C3FA4D5B48BFAC2D924CD0B1",
+      "bytes": 303394
+    },
+    {
+      "path": "Content/Puzzles/UI/Results/AC_RunResults.uasset",
+      "sha256": "D35FA083666AF40C4345BD69681091A26B9190961542778F65809FF4B927CA29",
+      "bytes": 216909
+    },
+    {
+      "path": "Content/Puzzles/UI/Results/WBP_RunResults.uasset",
+      "sha256": "F3EA4DDA2B7A21D5E41CE8D128377D22CF8DC5A2A4A485F940A67F5916872AF4",
+      "bytes": 137409
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM.uasset",
+      "sha256": "2492AE1DC60802AAFA7DC0405869631F0AA2088570C7CBC8EE400FCC93F5C1B5",
+      "bytes": 88437
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC.uasset",
+      "sha256": "FE0EB86849E6BA7CBEFAC9FBABA51CD5EEAE792A1D7A99A8159ACDC73CE02FDF",
+      "bytes": 94457
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/IA_FixtureRestart.uasset",
+      "sha256": "1AB88925DC9C89DF8DC80FD11622918BD06B33BCA0B2B8677944C58F5F7E070C",
+      "bytes": 1248
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/IMC_FixtureRestart.uasset",
+      "sha256": "A6DA271EC93DF586A6EEB5FBC17C5F4FC2F1BF298CCB37C2271865D78E30C0B3",
+      "bytes": 2424
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/L_Site02.umap",
+      "sha256": "52440FFE99C142F7DAF8CDF909ED2C6398E8411BEE7E792EB804686EAE8A7F94",
+      "bytes": 29062
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/.gitignore",
+      "sha256": "7DD3277CD9B324EC1F85FB04389233A19D2F1E1AF57D5E42E47826FCE9751321",
+      "bytes": 96
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/audit.py",
+      "sha256": "640BFD16A6C067D43080B3BFB8C3E0813FC8579B544F420CDFA538B70DB69AAB",
+      "bytes": 1879
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/baseline.json",
+      "sha256": "ED0E84EB09E027C40997E425EBA4DA74AEEED3C310C4C9FB1FFF4D23AC722FF3",
+      "bytes": 3159
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/build_fixture.py",
+      "sha256": "BCCB2D5053AFAC315333816BCAB5DB624DFEB7ED286A96A7701CD90F2AD0B3A4",
+      "bytes": 4708
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/build_results.py",
+      "sha256": "51D1D7B629D1EC93C7A8665F0C96627A41F984A2A26C50F4DA8BA5A1112652A8",
+      "bytes": 6576
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/build-exit.json",
+      "sha256": "652D57CC3CD82CC1AA24D4A89DA668CE5E23636ABCB81B7C56C9194986EE07B9",
+      "bytes": 9939
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/build-results.json",
+      "sha256": "205855EB0A9D8759CECEDB66FEEAFD25D4E132F05F0E51EB13C6621DC4A33FF3",
+      "bytes": 6311
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/build.py",
+      "sha256": "1844972D661770E3C4A20CEFFE0F90FF7C0A0CBF122E65482381B5DE9A2E372E",
+      "bytes": 11540
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/capture_schema.py",
+      "sha256": "2DE9F55413BBDF20B1D713B535EDE73FD4E408FDF9595892655CF3F38A6D00BD",
+      "bytes": 292
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt1.json",
+      "sha256": "A801A74615F52D4397E81BB7E4D1B99F8AC0AD5B9A37CFF26A65DA600EEDFA02",
+      "bytes": 2311
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt2-log.json",
+      "sha256": "F84B1970DAEB3249BBF2D89F1E520798331C1F39C3D4A385443B19F6AEF277EE",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt2.json",
+      "sha256": "41431DCB41710DA38A8C1110EE03CA8A85F53DB263950438190F0AD0F2297EF8",
+      "bytes": 2402
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt3-log.json",
+      "sha256": "8597E3D1B29E95A69F207786393A397E736ABDA6340EFADB360384F2464F13C3",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt3.json",
+      "sha256": "76508F5A2C84B6E320D0CB96B10E9CA525DDA5A6D0647EA89C3C96CFBBC8B284",
+      "bytes": 2425
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt4-log.json",
+      "sha256": "20A15CD7C33FE749C39D580A23F57AE20C7F66BD98D0202604C487BA21C88AA6",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt4.json",
+      "sha256": "CF73A3E3A00F1400E1688E977801FE34E3F1FC3C2B2F1EF5325BB119A8887DB0",
+      "bytes": 2869
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt5-log.json",
+      "sha256": "FB317B664E496E9E323577C266934FC414A61A9FF0B983E88E9F2E234D18AB7F",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-attempt5.json",
+      "sha256": "DFD1A3B7CF550ABB846E456DB73D6B540FFF2DFC093433E4188B015072144DAE",
+      "bytes": 2712
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-before-lifecycle-fix-log.json",
+      "sha256": "3C82FBD267F67D1B178C4D6B5AC8A8CC6275AC8BD902E4BFA766078ECC45591B",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-before-lifecycle-fix.json",
+      "sha256": "911608C6F069764C0615598B08E55AAB192730A298550A0486807A1C9A9298C7",
+      "bytes": 2007
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2-log.json",
+      "sha256": "D1E2916432D9BBC884BF3E99DED885F06C879BC6678F909CD5F4C9D2DCF0D780",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-2.json",
+      "sha256": "991730207AAA060C4BA82CB95B560E17E9BEBF991BAD42A6DC5407F2649DE27E",
+      "bytes": 2007
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-3-before-lifecycle-fix-log.json",
+      "sha256": "0B39D9A46A7812112E9537156EAD8C0FC53ADF21231429ED8C55CB34C4D62E82",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-3-before-lifecycle-fix.json",
+      "sha256": "FC4D600189A9BB679B2BECB875C448D13F14F0D5ABE731DF96804ACA336B8226",
+      "bytes": 2351
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-3-log.json",
+      "sha256": "55CD57ABE884232FF396F162275E1F89DFB279818E3988645E8F192CF30B6E8C",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-3.json",
+      "sha256": "5074D79AA61C240E6AE0493437BA866CDFC62D4F2424A4923FE83975B921269A",
+      "bytes": 2351
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-4-before-lifecycle-fix-log.json",
+      "sha256": "86D24CE1975BA6EAB9D0EE93EC42F18A69757F552562157CCEDBF32469AD67C6",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-4-before-lifecycle-fix.json",
+      "sha256": "825BF8C30C9391E9A74840BD3E4A9FEFD14B0CEF65E5053F4C729F9C57939B1E",
+      "bytes": 2695
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-4-log.json",
+      "sha256": "1C53E1576559A39E031C15A0631D5C05708F2BC6AD7D2C1C50A14D64150D458D",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/clients-4.json",
+      "sha256": "564996EA325FB4D35C4FDDFAF780D18ECF99E4102C95B3D0BFDD128440D04E2B",
+      "bytes": 2695
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/configure.py",
+      "sha256": "5BD53CAECAC18BD8F6BDD4B1FAEC299099A95C988A540022187950A7D7E091EC",
+      "bytes": 1016
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/discover.py",
+      "sha256": "05C085F4406214B22834FFC2CC97356B43151D55715A51ADD39FA9EFA088A214",
+      "bytes": 735
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/editor_loop.py",
+      "sha256": "AA02539F3DF56509687FA3E6D8FB3E7654F5262130C4305197399135A0D48438",
+      "bytes": 1753
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/editor-identity.json",
+      "sha256": "BBF5FBD8432304E3110BF475D7340801C41FE12E648E32EF7830B871A5BEAAE4",
+      "bytes": 284
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/final-audit.json",
+      "sha256": "38F048D4BB853CE8995A5EF2022E0414219307DDD5095217E1DF692C1557675C",
+      "bytes": 25283
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture_clear.py",
+      "sha256": "E50408008ECBDC2760109A272E75F2EB0C22A1D8CE7BAD9723D4E1FB8F8FC8DE",
+      "bytes": 789
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture_spawn.py",
+      "sha256": "FE484E5C0BA68E85ACF1634A69BB6E53BC18FC73EDE417A8E21834CB668C348B",
+      "bytes": 831
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture-build.json",
+      "sha256": "7B0333324737258B57456BC877C095BF673C2BFD983681778A035FF59F593382",
+      "bytes": 2101
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture-clear.json",
+      "sha256": "231A584E5FF6D79EC72978E6378D7BF5FD0DECA1613AC7D3D40D93DB4B2B691F",
+      "bytes": 366
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture-gm.json",
+      "sha256": "76E6B206E4BA1FBCB82051C49FE5137F041BAD2B34F84AA53E6FD27968DA882A",
+      "bytes": 214
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture-relic.json",
+      "sha256": "66EFEAF64E3F3C44F645DE7A37588CB82141057C2B79C70F4BF6074EF4EBEF19",
+      "bytes": 101
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixture-spawn.json",
+      "sha256": "9ED6F8B907641ABE17B8E7CF5CBCE0CC255C6F97C4B52B52BD5E767275C69BF0",
+      "bytes": 328
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/fixtures.py",
+      "sha256": "72EE78DE3E7B938E46472141EB262562D730ACAE9B5B5139A3567CDCC9653034",
+      "bytes": 988
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/gm-inspection.json",
+      "sha256": "D3872FCA9DCBE84343CDEA2568D021C4460DEADB0566D043E646AFB1B0BBD4C6",
+      "bytes": 14202
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-attempt1-log.json",
+      "sha256": "911EA74F6A92F6B6BBC6BF06958D19BFF8444F81882ADEC3A1B52740C482E87F",
+      "bytes": 1819
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-attempt1.json",
+      "sha256": "99AAC51239442BB87FF4D69C93A360C7B6D77F731A1575412FFA49ADE11F8F0C",
+      "bytes": 2399
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-attempt1.png",
+      "sha256": "A487BB704AB320D31C30E0657E3F2BBF99691063CEF3B9D9EA4194C492DAFDEE",
+      "bytes": 1642869
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-attempt2-log.json",
+      "sha256": "674D428AF6BA09D0C9757166E1381D380036A672B5F04995F7CA2A5D8E55D7D0",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-attempt2.json",
+      "sha256": "68FDC2513D66986D9E983F7160F72B53FA5A88C5D33B815640B1AB60AF4C82A5",
+      "bytes": 3261
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-log.json",
+      "sha256": "A7868D15588FC94CAB7D7B0FE7BEE371B7A5663AE0C3D6D26BBBC3F7FB0680C6",
+      "bytes": 124
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split-results00000.png",
+      "sha256": "CC6E3F7EE430B3F24D60125A705FA97462FF44C70A1F1F30F6870C831E255A37",
+      "bytes": 2119881
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/host-split.json",
+      "sha256": "8EE526A58B9F3CCF6C1E35237925AC42699B23DC648BA744BEF06662787A7246",
+      "bytes": 2399
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/inspect_gm.py",
+      "sha256": "D457A833DF78698849D53E45A52301F85FDA829135BE876E54C7209CDAA40051",
+      "bytes": 380
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/inspect.py",
+      "sha256": "C5883375FFCE7DF1BAC4DF219F8CB5FEC286002ECA235F02CCCBA6B4474DDCE5",
+      "bytes": 619
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/needed-types.json",
+      "sha256": "6DBE2F584FF1C8DE8FAAB0AE793A6E3DF634222AE1CA4A92F1A6A7B7A2027019",
+      "bytes": 8277
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/node-types.json",
+      "sha256": "1A7B8A64B9157145EED79A31AF11EF0CCCB33530B19128FC3E8A2A07C7592770",
+      "bytes": 115969
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/record_identity.py",
+      "sha256": "116713DDCD69C79CBD1A3447BDAAEF94070D93F5F66948304EE3466FA6C5D5D5",
+      "bytes": 517
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/request.py",
+      "sha256": "D073E2B96F9127146167FA876629455CF4304622CB1DBF0DD9CBE7F7519CA883",
+      "bytes": 935
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/restore-cleared-state-log.json",
+      "sha256": "03A1B7C66172DF4C16ABE343D7791AA19DF6650473057786B68D7CD7CA347474",
+      "bytes": 125
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/restore-cleared-state.json",
+      "sha256": "E3BDECF9C1AE50E80D66DB31632FA829AFEE3AF1AD60FF37BC71AF5A7C84B9A8",
+      "bytes": 1293
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/results-view-attempt1.json",
+      "sha256": "45F726418088F27188A8C2E618920BB6E807B9D1C9AD1B8FD63DA5CB6C5CB2A8",
+      "bytes": 675
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/results-view-ready.json",
+      "sha256": "19B594625B2FECAB2A5AFC29EED5D3794196AE5A40C87933BC968F15DF4BB5D1",
+      "bytes": 675
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/rpc.py",
+      "sha256": "25290EF80B090948E74D49107BCE4496082237C58D0074859B6BCBB052CF31E0",
+      "bytes": 1808
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/run_restore.py",
+      "sha256": "D5950EBBDA89FDBCDE4095E1CBF2D262FEAB017698D92B66B1591839BE6B8CEC",
+      "bytes": 1423
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/run_test.py",
+      "sha256": "DDFA5C090DB51D28525E445CA7D24651B12273DD9E58F3230CD0F8B869EF3059",
+      "bytes": 1775
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/scaffold.py",
+      "sha256": "C51743093597028722DE2B21FDE46ECD5C3B7D08E136BBABC50D5F0F6CE3B7B1",
+      "bytes": 2243
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/seed_fixture.py",
+      "sha256": "1298C777A3A31C979FC7A481F54EBCFA29CD89E09F0E0D15A13FC7F2D0FA4512",
+      "bytes": 774
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/string_types.py",
+      "sha256": "C8354A18D7204E6D1F99EBFF24189B7DBB59D7869D7226BC38DC0B88333AC263",
+      "bytes": 295
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/string-types.json",
+      "sha256": "C335C141B4E548A0582C0472DB0E355F2FADD9B19296DA821A2FF80C9C63E569",
+      "bytes": 273
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/test_restore.py",
+      "sha256": "F72EC140135805690BBB64A74C731A34E09C432B4DF50E4D3E668ED7C1BF75C2",
+      "bytes": 3007
+    },
+    {
+      "path": "Tools/unreal/hc_run_ending/test_run.py",
+      "sha256": "584A9D56A30BBE883E85955C61F4BFC4EF0DDAA855D7DEA27CB021BBD1234FCC",
+      "bytes": 10410
+    },
+    {
+      "path": "docs/hc-run-ending-verification.md",
+      "sha256": "C87BA58204F06EAF9268ABC8784DBC201537F9E2B0E422A9752D48B17CA5D3D6",
+      "bytes": 11007
+    }
+  ]
+}

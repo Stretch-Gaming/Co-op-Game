@@ -1,0 +1,6 @@
+exec(compile((HERE/'build.py').read_text().split('co=ue.load_asset')[0],str(HERE/'build.py'),'exec'),globals())
+gm=ue.load_asset('/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM');co=ue.load_asset('/Game/Puzzles/Run/BP_RunCoordinator')
+fn(gm,'FixtureSpawnCoordinator',outputs=[('Coordinator',co.generated_class())])
+write(gm,'FixtureSpawnCoordinator','''(fn FixtureSpawnCoordinator () (bind actor (Game|SpawnActorfromClass :Class "/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C" :SpawnTransform (Math|Transform|MakeTransform :Location "(X=0,Y=0,Z=300)"))) (return actor))''')
+compile_bp(gm);assert ue.EditorAssetLibrary.save_loaded_asset(gm,False)
+(HERE/'fixture-spawn.json').write_text(json.dumps({'passed':True,'fixture_only':True,'graph':BP.read_graph_dsl(BP.get_graph(gm,'FixtureSpawnCoordinator'))},indent=2))

@@ -1,0 +1,33 @@
+{
+  "identity": {
+    "project": "../../../../../../Users/Stretch/.codex/worktrees/extraction-results-restart/Co op Game/",
+    "engine": "5.8.3-58210709+++UE5+Release-5.8"
+  },
+  "assets": {
+    "/Game/Puzzles/BP_MapExit": null,
+    "/Game/Core/BP_CoopGameInstance": {
+      "variables": [
+        "RelicsCollected",
+        "RelicsAvailable"
+      ],
+      "graphs": {
+        "EventGraph": ""
+      }
+    },
+    "/Game/Core/BP_CoopPlayerController": {
+      "variables": [
+        "DebugInputAdded"
+      ],
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "HostStartRound": "(fn HostStartRound ()\n  (if (and (and (Networking|HasAuthority) (Pawn|IsLocalPlayerController)) (Game|Player|IsPrimaryPlayer))\n    (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n    (Class|BPCoopGameMode|StartRound _asbp_coop_game_mode 1)))\n",
+        "HostClearRound": "(fn HostClearRound ()\n  (if (and (and (Networking|HasAuthority) (Pawn|IsLocalPlayerController)) (Game|Player|IsPrimaryPlayer))\n    (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n    (Class|BPCoopGameMode|ClearRound _asbp_coop_game_mode)))\n",
+        "HostFailRound": "(fn HostFailRound ()\n  (if (and (and (Networking|HasAuthority) (Pawn|IsLocalPlayerController)) (Game|Player|IsPrimaryPlayer))\n    (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n    (Class|BPCoopGameMode|FailRound _asbp_coop_game_mode)))\n",
+        "HostCompleteMap": "(fn HostCompleteMap ()\n  (if (and (and (Networking|HasAuthority) (Pawn|IsLocalPlayerController)) (Game|Player|IsPrimaryPlayer))\n    (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n    (Class|BPCoopGameMode|CompleteMap _asbp_coop_game_mode)))\n",
+        "HC1SetupDebugInput": "(fn HC1SetupDebugInput ()\n  (bind _self self)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem _self))\n  (if (and (and (Networking|HasAuthority) (Pawn|IsLocalPlayerController)) (and (Game|Player|IsPrimaryPlayer) (not (Variables|Default|GetDebugInputAdded))))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (Input|AddMappingContext _returnvalue \"/Game/Core/Input/IMC_Debug.IMC_Debug\" 100 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n        (Variables|Default|SetDebugInputAdded true)))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|HC1SetupDebugInput))\n\n(event EventTick (DeltaSeconds))\n\n(event EnhancedInputActionIA_DebugStart (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event EnhancedInputActionIA_DebugClear (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event EnhancedInputActionIA_DebugFail (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event EnhancedInputActionIA_DebugComplete (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n"
+      }
+    },
+    "/Game/Hazards/AC_Health": null
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "graph": "(fn FixtureClearTotals ()\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (Class|BPCoopGameState|SetRelicsCollected 0 _asbp_coop_game_state)\n    (Class|BPCoopGameState|SetRelicsAvailable 0 _asbp_coop_game_state)))\n"
+}

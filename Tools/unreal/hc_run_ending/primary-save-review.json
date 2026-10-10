@@ -1,0 +1,22 @@
+{
+  "protected_core_controller_graphs_unchanged": true,
+  "owned_graphs_match_worker_audit": {
+    "/Game/Puzzles/BP_MapExit": true,
+    "/Game/Puzzles/Run/BP_RunCoordinator": true,
+    "/Game/Puzzles/UI/Results/AC_RunResults": true,
+    "/Game/Puzzles/UI/Results/WBP_RunResults": true,
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM": true,
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC": true
+  },
+  "saved_owned": [
+    "/Game/Puzzles/BP_MapExit",
+    "/Game/Puzzles/Run/BP_RunCoordinator",
+    "/Game/Puzzles/UI/Results/AC_RunResults",
+    "/Game/Puzzles/UI/Results/WBP_RunResults",
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM",
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC"
+  ],
+  "remaining_dirty_content": [
+    "/Game/Core/BP_CoopPlayerController"
+  ]
+}

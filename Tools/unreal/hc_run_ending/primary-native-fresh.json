@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "independent_primary": true,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "checks": [
+    {
+      "four_player_roster_includes_second_host_local": true,
+      "missing_local_blocks": true
+    },
+    {
+      "disconnect_of_only_missing_player_commits_once": true,
+      "gi_captured": [
+        7,
+        19
+      ]
+    },
+    {
+      "restore_changes_gs_from_zero_to_snapshot": true
+    },
+    {
+      "late_host_local_results": {
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_0",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_4": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_1",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_1.WBP_RunResults_C_0",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_2.WBP_RunResults_C_0"
+      }
+    },
+    {
+      "direct_server_guards_reject_null_remote_foreign_world_and_secondary": true,
+      "guard_calls_are_not_rpc_proof": true
+    },
+    {
+      "ambiguous_coordinators_hide_results_and_reject_capture_restore_restart": true
+    },
+    {
+      "singleton_recovery_one_live_widget_per_owner": {
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_2",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_4": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_3",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_1.WBP_RunResults_C_1",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_2.WBP_RunResults_C_1"
+      }
+    },
+    {
+      "actual_owning_input_after_lifecycle_recovery_restarts_once": true,
+      "gi_reset": [
+        0,
+        0
+      ]
+    },
+    {
+      "repeat_input_cannot_restart_twice": true,
+      "final_active_widgets": {
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_2",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_4": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_0.WBP_RunResults_C_3",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_1.WBP_RunResults_C_1",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_2.WBP_RunResults_C_1"
+      }
+    }
+  ],
+  "ended_at": "2026-10-10 10:54:22.088185"
+}

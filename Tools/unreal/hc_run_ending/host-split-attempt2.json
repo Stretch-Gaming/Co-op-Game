@@ -1,0 +1,86 @@
+{
+  "passed": false,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [
+    {
+      "one_missing_blocks": true,
+      "required": 2,
+      "ready": 1
+    },
+    {
+      "departure_cancels_readiness": true
+    },
+    {
+      "late_host_local_must_enter": true,
+      "distinct_split_state": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_CoopPlayerState_C_2"
+    },
+    {
+      "disconnect_removes_required_state": true
+    },
+    {
+      "pawnless_connected_player_blocks": true
+    },
+    {
+      "all_distinct_possessed_pawns_commit_once": true,
+      "two_exit_volumes": true,
+      "captured": {
+        "collected": 7,
+        "available": 19
+      },
+      "duplicate_commit_rejected": true,
+      "outbound_results_hidden": true
+    },
+    {
+      "restart_rejected_until_restored_results": true
+    },
+    {
+      "restored_results_owning_widgets": {
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_29.WBP_RunResults_C_0",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_30.WBP_RunResults_C_0"
+      },
+      "late_snapshot_replicates": true,
+      "restore_idempotent": true
+    },
+    {
+      "remote_actual_input_event_rejected": true
+    }
+  ],
+  "started_at": "2026-10-10 10:37:54.774321",
+  "ended_at": "2026-10-10 10:38:21.370377",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_1",
+            "committed": true,
+            "results_active": true,
+            "restart": false,
+            "collected": 7,
+            "available": 19
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_1",
+            "committed": true,
+            "results_active": true,
+            "restart": false,
+            "collected": 7,
+            "available": 19
+          }
+        ]
+      }
+    ],
+    "complete_calls": 1
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 119, in tick\n    host=next(pc for pc in owners() if pc.get_world()==server() and pc.is_primary_player());host.console_command('Shot SHOWUI FILENAME='+str(HERE/'host-split-results.png').replace(chr(92),'/'))\n                                                                                            ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'PlayerController' object has no attribute 'console_command'\n"
+}
