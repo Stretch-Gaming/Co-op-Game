@@ -83,8 +83,8 @@ Through the door in the cave's north wall (between the timber posts). [maze_over
 - **They wind around each other:** six rock bridges carry one path over another without joining them.
 - **They meet twice**, in a sunken hall (-3 m) and a raised hall (+4 m), where you can switch paths.
 - **Climbs and drops:** ramps of up to 2 m per 5 m (about 22 degrees). Corners and bridges are flat.
-- Paths 1, 2 and 4 are torch-lit; path 3 is lit by teal crystals. There are 7 dead ends.
 - **Dressing:** rock narrows and rounds off the tunnels, the roof drops between corners, and rubble, stalagmites, puddles, old timber (path 1), crystal walls (path 3) and a caved-in stretch (path 4) line the walls, with pillars, terraces and boulders in the rooms. A 2.5 m lane down the middle of every path stays clear. `coop.Maze.Detail 0` turns it off the next time you press Play.
+- Paths 1, 2 and 4 are torch-lit; path 3 is lit by teal crystals. There are 7 dead ends.
 
 | Path | Length | Height |
 |---|---|---|

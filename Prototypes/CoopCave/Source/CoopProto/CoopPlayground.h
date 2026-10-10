@@ -81,13 +81,13 @@ private:
 	void BuildFloorRocks();
 	void BuildCrystals();
 	void BuildLighting();
-	void BuildMaze();
 	/**
 	 * The maze's dressing (coop.Maze.Detail): rocks that narrow and round off the tunnels, lowered ceilings and
 	 * stalactites, rubble, timber and crystals, and pillars, terraces and boulders in the rooms. It draws from its own
 	 * random stream, so the rest of the maze comes out the same with it on or off. Glow takes its crystals.
 	 */
 	void BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLevel>>& Cells, FCoopMeshData& Glow);
+	void BuildMaze();
 	void FinishRockGroups();
 
 	/** Loads the shared style kit (rock mesh, rock and gold materials) if it has been migrated into this project. */
