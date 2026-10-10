@@ -13,6 +13,9 @@ In a generator script:
     kit.preview_sheet([rock], "<output folder>/SM_Rock_A_preview.png", title="SM_Rock_A")
     kit.export_glb([rock], "<output folder>/SM_Rock_A.glb")
 
+Next to the 1.8 m figure, a prop under about 50 cm is only a few pixels tall, so also render
+`<name>_preview_closeup.png` with `with_figure=False`.
+
 Then clean up the GLB into the FBX you commit:
 
     blender -b --factory-startup --python Tools/blender/cleanup_export.py -- SM_Rock_A.glb SM_Rock_A.fbx --name SM_Rock_A
@@ -37,6 +40,10 @@ PALETTE = {
     "rock_light": "#7A6E68",
     "sandstone": "#D9A86C",
 }
+
+# The preview sheet's fill light: crystal teal mixed with 70% white. At full strength, teal
+# turns metallic gold green.
+FILL_TEAL = "#C5F1EF"
 
 
 def srgb_to_linear(c):
@@ -71,27 +78,60 @@ def palette_material(name, hex_color, roughness=0.75, metallic=0.0, emission=Non
     return mat
 
 
-def _apply_modifiers(obj):
+def _select_only(obj):
+    """Select just this object and make it active, so operators don't touch anything else."""
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
     bpy.context.view_layer.objects.active = obj
+
+
+def _apply_modifiers(obj):
+    _select_only(obj)
     for m in list(obj.modifiers):
         bpy.ops.object.modifier_apply(modifier=m.name)
 
 
+def _smooth_shading(obj, smooth_deg, bevel_deg=None):
+    """Shade every face smooth and mark edges sharper than `smooth_deg` as sharp, except edges
+    sharper than `bevel_deg`: the bevel rounds those off, so they stay smooth."""
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    for f in bm.faces:
+        f.smooth = True
+    sharp = math.radians(smooth_deg)
+    beveled = math.radians(bevel_deg) if bevel_deg is not None else math.inf
+    for e in bm.edges:
+        if len(e.link_faces) != 2:
+            continue
+        angle = e.calc_face_angle(0.0)
+        if angle > beveled:
+            e.smooth = True
+        elif angle > sharp:
+            e.smooth = False
+    bm.to_mesh(obj.data)
+    bm.free()
+
+
 def chunky_bevel(obj, width=0.03, segments=2, angle_deg=35, smooth=True, smooth_deg=35):
-    """Wide, soft bevels that catch light, then smooth shading by angle. `angle_deg` is the
-    sharpest edge that still gets beveled: 35 suits blocks, about 12 suits faceted rock."""
-    bev = obj.modifiers.new("ChunkyBevel", "BEVEL")
-    bev.width = width
-    bev.segments = segments
-    bev.limit_method = "ANGLE"
-    bev.angle_limit = math.radians(angle_deg)
-    bev.harden_normals = False
-    bev.use_clamp_overlap = True
-    _apply_modifiers(obj)
+    """Wide, soft bevels that catch light. `angle_deg` is the sharpest edge that still gets
+    beveled: 35 suits blocks, about 12 suits faceted rock. With `smooth`, the bevels shade soft
+    and hardened normals keep the big flat faces flat, so large faces and boolean n-gons don't
+    shade in streaks; edges the bevel skips stay sharp if they're sharper than `smooth_deg`.
+    Only `obj` changes, whatever else is selected. A width of 0 skips the bevel."""
+    _select_only(obj)
     if smooth:
-        bpy.context.view_layer.objects.active = obj
-        obj.select_set(True)
-        bpy.ops.object.shade_smooth_by_angle(angle=math.radians(smooth_deg))
+        # Shading goes on before the bevel: hardened normals are worked out from it, and
+        # changing sharp edges afterwards would scramble them.
+        _smooth_shading(obj, smooth_deg, angle_deg if width > 0 else None)
+    if width > 0:
+        bev = obj.modifiers.new("ChunkyBevel", "BEVEL")
+        bev.width = width
+        bev.segments = segments
+        bev.limit_method = "ANGLE"
+        bev.angle_limit = math.radians(angle_deg)
+        bev.harden_normals = smooth
+        bev.use_clamp_overlap = True
+        _apply_modifiers(obj)
 
 
 def faceted_rock(name, size=(1.0, 1.0, 0.8), seed=0, facets=44, flat_base=True, bevel=0.03, material=None):
@@ -133,7 +173,8 @@ def faceted_rock(name, size=(1.0, 1.0, 0.8), seed=0, facets=44, flat_base=True, 
 def chunky_block(name, size=(1.0, 1.0, 0.3), bevel=0.04, wobble=0.015, seed=0, material=None):
     """A cut-stone block with soft, slightly uneven bevels: plates, altars, pedestals, lintels.
     `wobble` nudges the corners so no edge is perfectly straight (style rule 1). Keep it at 0 for
-    parts whose footprint must match a Blueprint exactly."""
+    parts whose footprint must match a Blueprint exactly. A bevel of 0 leaves the block sharp, for
+    blocks you cut or reshape first and then pass to chunky_bevel."""
     rng = random.Random(seed)
     bpy.ops.mesh.primitive_cube_add(size=1)
     obj = bpy.context.active_object
@@ -147,7 +188,8 @@ def chunky_block(name, size=(1.0, 1.0, 0.3), bevel=0.04, wobble=0.015, seed=0, m
             v.co.y += rng.uniform(-wobble, wobble)
             if v.co.z > 0:
                 v.co.z += rng.uniform(-wobble, wobble)
-    chunky_bevel(obj, width=bevel)
+    if bevel:
+        chunky_bevel(obj, width=bevel)
     sit_on_floor(obj)
     if material:
         obj.data.materials.append(material)
@@ -178,6 +220,45 @@ def join(objects, name):
     return obj
 
 
+def boolean(obj, cutter, operation="DIFFERENCE", keep_cutter=False):
+    """An exact boolean, applied: cut grooves and glyphs before chunky_bevel, so the cut edges
+    get soft bevels too. The cut faces take the object's own material. Removes the cutter
+    unless `keep_cutter`."""
+    mod = obj.modifiers.new("Boolean", "BOOLEAN")
+    mod.operation = operation
+    mod.solver = "EXACT"
+    mod.object = cutter
+    _select_only(obj)
+    bpy.ops.object.modifier_apply(modifier=mod.name)
+    if not obj.data.polygons:
+        raise RuntimeError(f"Boolean with {cutter.name} left {obj.name} empty")
+    clean_material_slots(obj)
+    if not keep_cutter:
+        bpy.data.objects.remove(cutter, do_unlink=True)
+    return obj
+
+
+def clean_material_slots(obj):
+    """Drop empty material slots and give their faces the object's first material. An exact
+    boolean adds the cutter's empty slot, and faces on it would export with no material.
+    Returns how many faces moved."""
+    me = obj.data
+    mats = list(me.materials)
+    keep = [i for i, m in enumerate(mats) if m is not None]
+    if not keep or len(keep) == len(mats):
+        return 0
+    new_index = {old: new for new, old in enumerate(keep)}
+    old = [0] * len(me.polygons)
+    me.polygons.foreach_get("material_index", old)
+    # Removing a slot shifts the faces above it down by one, so set every face afterwards.
+    for i in reversed(range(len(mats))):
+        if mats[i] is None:
+            me.materials.pop(index=i)
+    me.polygons.foreach_set("material_index", [new_index.get(i, 0) for i in old])
+    me.update()
+    return sum(1 for i in old if i not in new_index)
+
+
 def triangles(objects):
     return sum(len(p.vertices) - 2 for o in objects if o.type == "MESH" for p in o.data.polygons)
 
@@ -201,7 +282,7 @@ def _setup_lighting():
     # a neutral top light and a white rim, so the asset's own colors still read.
     lights = [
         ("Key_Warm", "AREA", "#FFD7A3", 260, (2.5, -2.0, 3.0), 3.0),
-        ("Fill_CrystalTeal", "AREA", PALETTE["crystal_teal"], 90, (-2.5, -1.5, 1.5), 3.0),
+        ("Fill_CrystalTeal", "AREA", FILL_TEAL, 90, (-2.5, -1.5, 1.5), 3.0),
         ("Top_Neutral", "AREA", "#E6E9F2", 150, (0.0, 0.0, 4.0), 4.0),
         ("Rim_White", "AREA", "#FFFFFF", 200, (-1.0, 3.0, 2.5), 2.0),
     ]
@@ -219,6 +300,22 @@ def _setup_lighting():
     return made
 
 
+def _fit_lights(lights, lo, hi):
+    """The rig suits props up to about 2.5 m. For bigger assets, move the lights out and grow
+    them with the asset, and raise their energy with the square of the distance, so a 6 m pillar
+    gets the same light as a 1 m prop. They aim at the asset's middle, or 0.5 m up if that's
+    higher."""
+    size = hi - lo
+    scale = max(1.0, max(size) / 2.5)
+    base = Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, lo.z))
+    aim = base + Vector((0, 0, max(0.5 * scale, size.z / 2)))
+    for light in lights:
+        light.location = base + light.location * scale
+        light.data.size *= scale
+        light.data.energy *= scale * scale
+        light.rotation_euler = (aim - light.location).to_track_quat("-Z", "Y").to_euler()
+
+
 def _scale_figure(height=1.8):
     """A 1.8 m capsule standing in for the player, so scale is easy to judge."""
     bpy.ops.mesh.primitive_cylinder_add(radius=0.22, depth=height - 0.44, location=(0, 0, height / 2))
@@ -233,17 +330,19 @@ def _scale_figure(height=1.8):
 def preview_sheet(objects, path, title="", resolution=512, with_figure=True):
     """Render four angles (front three-quarter, back three-quarter, side, top-down three-quarter)
     under amber key, teal fill and blue-violet ambient light, and save them as one 2x2 PNG.
-    A 1.8 m scale figure stands to the left when the asset is under 3 m tall."""
+    A 1.8 m scale figure stands to the left unless `with_figure` is False. The lights grow with
+    the asset, so tall and wide assets are lit like small props."""
     s = bpy.context.scene
     lo, hi = _bounds(objects)
     size = hi - lo
-    center = (lo + hi) / 2
     extra = []
-    if with_figure and size.z < 3.0:
+    if with_figure:
         fig = _scale_figure()
         fig.location.x = lo.x - 0.6
         extra.append(fig)
-    extra += _setup_lighting()
+    lights = _setup_lighting()
+    _fit_lights(lights, lo, hi)
+    extra += lights
     all_lo, all_hi = _bounds([o for o in objects + extra if o.type == "MESH"])
     radius = max((all_hi - all_lo).length / 2, 0.2)
     look = (all_lo + all_hi) / 2
@@ -297,7 +396,17 @@ def _combine(tile_paths, out_path, res):
 
 
 def export_glb(objects, path):
-    """Export only these objects as a GLB, ready for cleanup_export.py."""
+    """Export only these objects as a GLB, ready for cleanup_export.py. Empty material slots are
+    dropped first, and an object with no material at all stops the export."""
+    for o in objects:
+        if o.type != "MESH":
+            continue
+        moved = clean_material_slots(o)
+        if moved:
+            print(f"WARNING {o.name}: {moved} faces were on an empty material slot; "
+                  f"gave them {o.data.materials[0].name}")
+        if not any(o.data.materials):
+            raise RuntimeError(f"{o.name} has no material; give it a palette_material")
     bpy.ops.object.select_all(action="DESELECT")
     for o in objects:
         o.select_set(True)
