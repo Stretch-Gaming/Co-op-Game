@@ -1,297 +1,342 @@
-# PG-A0 — generated visual style review
+# Shared style anchor — v3
 
-Created 2026-10-09 for PK’s review. All deliverables are outside the repository in `/Users/peterkim/CoopGameArt/style-frames/`. No Unreal assets were changed. These images were made with the built-in `image_gen.imagegen` tool; its underlying model identifier and model revision are not exposed by the tool, so no model name is inferred. Every generated prompt below is recorded verbatim, including the required art suffix. `transparent_background` was `false` on every generation.
+Seven style frames and five isolated object concepts. All new images use the same built-in image generation tool as the selected v1 set. `transparent_background` was `false` on every new call. The tool does not expose its underlying model name or revision. Our own generated artwork; no third-party assets or credits required.
 
-## Reference choice and consistency
+The shared reference removes the glowing animal and red sun glyph. Frame 01 changes the decorative jade cat and its plinth to matte stone. The other five selected v1 frames are copied without pixel changes, including the corrected underground torch chamber and ghost-free sandstone chamber.
 
-Selected `reference-candidate-02.png` as `style-reference.png`: its open floor and broad stepping stones read at small size, the amber exit is unmistakable, teal is restrained, and the shadows remain blue-violet. Every style frame and every object concept—including revised concepts—used the absolute `style-reference.png` path as its sole input image via `referenced_image_paths`. The reference was supplied for style, not as a scene edit target. The selected file is an identical copy of Candidate 2.
+## File names and scene subjects
 
-The set is visually consistent in broad stone forms, softened bevels, painted gradients, amber/teal cave lighting and blue-violet shadows. The sandstone room carries over this shape and lighting language. The reserved gold/jade, ghost-white and trap-red colors appear on their intended subjects. Hex colors in generative output are visual targets rather than calibrated flat swatches; lighting changes their apparent values.
+The frame filenames intentionally match the previously committed set. The selected v1 scenes have different subjects from some legacy filename labels; the titles below identify what each image actually shows. `ghost-sheet.png` is the requested rounded sheet variant.
 
-## Review flags
+| File | Actual subject |
+| --- | --- |
+| `style-reference.png` | 00 / Shared style reference |
+| `frame-01-spawn-cavern.png` | 01 / Cave spawn cavern |
+| `frame-02-torch-chamber.png` | 02 / Torch-lit chamber |
+| `frame-03-relic-altar.png` | 03 / Relic on an altar |
+| `frame-04-ghost-corridor.png` | 04 / Ghost in a corridor |
+| `frame-05-pressure-plates.png` | 05 / Pressure-plate puzzle |
+| `frame-06-egyptian-antechamber.png` | 06 / Map 2 sandstone antechamber |
+| `concepts/cave-rock-1m.png` | Cave rock / approximately 1 m |
+| `concepts/gold-idol-25cm.png` | Gold lion idol / approximately 25 cm |
+| `concepts/ghost-sheet.png` | Rounded sheet ghost |
+| `concepts/ghost-hunched.png` | Hunched reaching ghost |
+| `concepts/zipline-trolley.png` | Two-wheel zipline trolley with T-bar |
 
-- `reference-candidate-01.png`: added green foliage/moss makes reserved jade-like colors decorative. Exclude this candidate or regenerate without vegetation if it is chosen later. Its composition also contains more surface detail than Candidate 2.
-- `concepts/gold-idol-25cm-first-pass.png`: superseded; excess polygonal paint patches and harder facets. Revised `gold-idol-25cm.png` is smoother and preferred, though some medium-scale painted variation remains.
-- `concepts/ghost-hunched-first-pass.png`: superseded; skull-like nose and open mouth. Revised `ghost-hunched.png` has a rounded human face, closed mouth and softer surfaces.
-- `frame-05-zipline-exit.png`: coherent style, but pulley/cable arrangement is approximate and should be regenerated if used as a functional assembly reference. Use `concepts/zipline-trolley.png` for the tandem-wheel design. This is a visual concept, not an engineering drawing.
-- Ghost object concepts prioritize a connected, readable volume for image-to-3D and appear more solid than the translucent wall ghost. If their literal transparency will define the final rendered ghost material, regenerate for stronger translucency; use the scene frame for material intent.
-- No final frame has photographic textures or fine grain. Cave surfaces retain some broad painted chips; simplify further during mesh/material production if required. Half-screen readability was assessed visually, not in-engine. PK makes the final selection.
-
-## Export and contact sheet
-
-The tool produced landscape images at 1672 × 941 px. The six frame deliverables are centered, losslessly cropped to 1664 × 936 px (exactly 16:9), removing 4 px from each horizontal edge, 2 px from the top and 3 px from the bottom. There is no resampling or color change. The references remain unmodified at native resolution. Square object concepts remain unmodified at 1254 × 1254 px.
-
-`contact-sheet.png` is a deterministic Pillow composition of all 17 source deliverables (three candidates, selected reference, six frames, five final concepts, two superseded first passes). Each tile contains its filename and status, with proportional thumbnail scaling. It does not have an image-generation prompt or a reference image of its own. This file and the written `prompts.md` use Python/Pillow and text composition, rather than a generative image model. `prompts.md` is the provenance record, not generated art. No rights or licensing terms are inferred here; the tool name, exact prompts, inputs and original source paths are provided for a later license record.
-
-## Exact generation prompts
-
-### reference-candidate-01.png
-
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: none
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-0f52c9fe-2f3d-454e-830e-43d0425e3da8.png`
-
-```text
-Use case: stylized-concept
-Asset type: finished visual-style reference for a cooperative first-person puzzle game.
-Primary request: a dark underground spawn cavern with exactly one shaft of soft daylight from a small roof opening, a few warm torches marking the safe path, and sparse large glowing teal crystals providing cold fill light. View from a standing player's eye height about 1.65 m, without hands, characters or HUD. A polished stylized 3D game-render look, broad hand-painted gradients and clean simple surfaces. Big readable shapes first, medium shapes second, very little small detail. Chunky slightly lumpy rock masses, deliberately uneven silhouettes and wide soft bevels. Sparse rope wraps and broad stone chips, no grit. Mostly matte rock with simple edge highlights. Light beam is subdued daylight, not luminous ghost-white material.
-Composition/framing: wide 16:9 landscape, no borders, text, logos or watermarks. Readable even at half-screen thumbnail size. Dark atmospheric but every foreground shape remains readable; tinted fog rather than crushed black. No photographic realism, microtexture, grain, noisy scratches, intricate ornament or extreme lens effects.
-Color palette: torch amber #FFB347 means safe path; crystal teal #3FD0C9 means ambient crystal light; shadows and fog deep blue-violet #1E2433, never black. Cave stone mid #4A4652 and light #7A6E68. Reserve #E8B33A gold and #3FA672 jade exclusively for relics, #D6F0FF pale ghost white exclusively for ghosts, and #FF4A2A red exclusively for trap warnings. In this spawn scene there are no relics, ghosts or traps, so omit their reserved colors.
-Composition choice A: inviting broad cavern with a low curved path leading around a central uneven rock mound toward an amber-lit tunnel. The daylight shaft falls slightly left of center; crystal clusters frame the right side. Strong clear separation of foreground, midground and background.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
-```
-
-### reference-candidate-02.png
-
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: none
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-aef22c52-fe00-4ab0-97bb-5e17392c02a7.png`
-
-```text
-Use case: stylized-concept
-Asset type: finished visual-style reference for a cooperative first-person puzzle game.
-Primary request: a dark underground spawn cavern with exactly one shaft of soft daylight from a small roof opening, a few warm torches marking the safe path, and sparse large glowing teal crystals providing cold fill light. View from a standing player's eye height about 1.65 m, without hands, characters or HUD. A polished stylized 3D game-render look, broad hand-painted gradients and clean simple surfaces. Big readable shapes first, medium shapes second, very little small detail. Chunky slightly lumpy rock masses, deliberately uneven silhouettes and wide soft bevels. Sparse rope wraps and broad stone chips, no grit. Mostly matte rock with simple edge highlights. Light beam is subdued daylight, not luminous ghost-white material.
-Composition/framing: wide 16:9 landscape, no borders, text, logos or watermarks. Readable even at half-screen thumbnail size. Dark atmospheric but every foreground shape remains readable; tinted fog rather than crushed black. No photographic realism, microtexture, grain, noisy scratches, intricate ornament or extreme lens effects.
-Color palette: torch amber #FFB347 means safe path; crystal teal #3FD0C9 means ambient crystal light; shadows and fog deep blue-violet #1E2433, never black. Cave stone mid #4A4652 and light #7A6E68. Reserve #E8B33A gold and #3FA672 jade exclusively for relics, #D6F0FF pale ghost white exclusively for ghosts, and #FF4A2A red exclusively for trap warnings. In this spawn scene there are no relics, ghosts or traps, so omit their reserved colors.
-Composition choice B: a compact bowl-shaped spawn chamber, a gently raised central stepping-stone path leading to an offset arched exit. The single daylight shaft marks the center of the chamber, two torches identify the exit, sparse teal crystals balance the foreground. Calm, spatially legible composition.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
-```
-
-### reference-candidate-03.png
-
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: none
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-f0bb21d5-da85-4233-b165-d7e9c2684b3b.png`
-
-```text
-Use case: stylized-concept
-Asset type: finished visual-style reference for a cooperative first-person puzzle game.
-Primary request: a dark underground spawn cavern with exactly one shaft of soft daylight from a small roof opening, a few warm torches marking the safe path, and sparse large glowing teal crystals providing cold fill light. View from a standing player's eye height about 1.65 m, without hands, characters or HUD. A polished stylized 3D game-render look, broad hand-painted gradients and clean simple surfaces. Big readable shapes first, medium shapes second, very little small detail. Chunky slightly lumpy rock masses, deliberately uneven silhouettes and wide soft bevels. Sparse rope wraps and broad stone chips, no grit. Mostly matte rock with simple edge highlights. Light beam is subdued daylight, not luminous ghost-white material.
-Composition/framing: wide 16:9 landscape, no borders, text, logos or watermarks. Readable even at half-screen thumbnail size. Dark atmospheric but every foreground shape remains readable; tinted fog rather than crushed black. No photographic realism, microtexture, grain, noisy scratches, intricate ornament or extreme lens effects.
-Color palette: torch amber #FFB347 means safe path; crystal teal #3FD0C9 means ambient crystal light; shadows and fog deep blue-violet #1E2433, never black. Cave stone mid #4A4652 and light #7A6E68. Reserve #E8B33A gold and #3FA672 jade exclusively for relics, #D6F0FF pale ghost white exclusively for ghosts, and #FF4A2A red exclusively for trap warnings. In this spawn scene there are no relics, ghosts or traps, so omit their reserved colors.
-Composition choice C: taller cavern with large broad overhead arching rock masses, a shallow curving safe path along one wall toward a torch-lit passage, the daylight shaft glances across a wide stone platform. Prioritize sculptural shapes and a clean navigable floor over decorative detail.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
-```
+## Exact prompts and image inputs
 
 ### style-reference.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: none
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-aef22c52-fe00-4ab0-97bb-5e17392c02a7.png`
-- Note: Byte-for-byte copy of reference-candidate-02.png. Selected for readable open floor, calm silhouette hierarchy, clear amber route and restrained teal fill.
+00 / Shared style reference.
+
+v3 localized removal edit; the input reference ancestry is recorded below.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished visual-style reference for a cooperative first-person puzzle game.
-Primary request: a dark underground spawn cavern with exactly one shaft of soft daylight from a small roof opening, a few warm torches marking the safe path, and sparse large glowing teal crystals providing cold fill light. View from a standing player's eye height about 1.65 m, without hands, characters or HUD. A polished stylized 3D game-render look, broad hand-painted gradients and clean simple surfaces. Big readable shapes first, medium shapes second, very little small detail. Chunky slightly lumpy rock masses, deliberately uneven silhouettes and wide soft bevels. Sparse rope wraps and broad stone chips, no grit. Mostly matte rock with simple edge highlights. Light beam is subdued daylight, not luminous ghost-white material.
-Composition/framing: wide 16:9 landscape, no borders, text, logos or watermarks. Readable even at half-screen thumbnail size. Dark atmospheric but every foreground shape remains readable; tinted fog rather than crushed black. No photographic realism, microtexture, grain, noisy scratches, intricate ornament or extreme lens effects.
-Color palette: torch amber #FFB347 means safe path; crystal teal #3FD0C9 means ambient crystal light; shadows and fog deep blue-violet #1E2433, never black. Cave stone mid #4A4652 and light #7A6E68. Reserve #E8B33A gold and #3FA672 jade exclusively for relics, #D6F0FF pale ghost white exclusively for ghosts, and #FF4A2A red exclusively for trap warnings. In this spawn scene there are no relics, ghosts or traps, so omit their reserved colors.
-Composition choice B: a compact bowl-shaped spawn chamber, a gently raised central stepping-stone path leading to an offset arched exit. The single daylight shaft marks the center of the chamber, two torches identify the exit, sparse teal crystals balance the foreground. Calm, spatially legible composition.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Edit the supplied shared game style reference, preserving its exact wide 16:9 composition, camera, large foreground cave boulder on the left, gold lion relic with its single jade chest inset on the altar at the right, rope-bound timber torch support, teal crystal clusters, floor path and blue-violet cave shadows. Make two localized removals only: completely remove the pale blue-white glowing animal statue/creature in the high far-right alcove, replacing it with an empty dim blue-violet stone recess and its ordinary stone shelf; completely remove the red sun glyph on the far central wall, replacing the entire glyph with uninterrupted plain blue-violet stone. No replacement character, statue, symbol, light or decorative prop in those two areas. Remove the local glow cast by the removed creature. Keep the existing warm amber key light, teal ambient fill, brightness, smooth painted gradients, big-medium-small lumpy masses and wide soft bevels. Relic gold and jade occur only on the foreground collectible lion idol. No ghost-white object or trap-red mark anywhere. No text, border or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### frame-01-puzzle-chamber.png
+### frame-01-spawn-cavern.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-1f7ea892-2cbc-45a4-b716-07a39c298aaf.png`
+01 / Cave spawn cavern.
+
+Original v1 scene generation:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: an underground torch-lit puzzle chamber. A large square inset mechanical pressure plate is clearly visible in the immediate foreground, with exact straight functional perimeter but wide uneven beveled stone edges; a heavy chunky stone statue stands just beside it, visibly ready to be moved onto it. Statue is plain blue-violet cave stone, a simple squat abstract humanoid silhouette, not a gold relic. A shut broad stone door beyond shows the goal. A few amber torches mark the route and a sparse large teal crystal cluster softly fills shadows. Plate and statue are both unmistakable and visually distinct, not merged. No glowing red or ghost-white indicators.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference for shapes, materials and lighting, create an eye-level 16:9 frame of the first underground spawn cavern, about 30 meters wide with a 12-meter ceiling. The room feels welcoming but mysterious. In the left-midground, one crack in the ceiling admits a broad shaft of shaded daylight onto four separated safe standing spots; a chunky start pad and the eastbound passage form the main readable route to the right. A smaller north passage recedes into cool shadow without competing with the route. Use lumpy rocks with broad shoulders and a few soft chipped edges, #4A4652 mid stone rising to #7A6E68 on upper planes. Keep #1E2433 blue-violet shadows and gentle fog. Amber #FFB347 torches lead toward the start pad and exit; sparse #3FD0C9 crystals provide cold fill away from the main light pool. Two small optional tutorial relics sit in side nooks, using gold #E8B33A and jade #3FA672 only on those relics. Props have thick rope wraps and bent timber, with broad painted gradients, no fine cracks or surface grain. The route remains the brightest environmental feature and the layout remains readable at half-screen size. No ghost, trap-red decoration, words or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### frame-02-relic-altar.png
+v3 stone-statue edit:
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-75b0ca9b-6082-4429-b3c9-4918324cc07a.png`
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/01_spawn_cavern.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: a small collectible gold idol about 25 cm tall resting prominently on a chunky carved stone altar in a dark cave. Camera close enough that the idol reads immediately at thumbnail size. Idol has a simple squat humanoid silhouette, broad facial features, wide soft bevels, #E8B33A relic gold, one large restrained #3FA672 jade inset, slightly imperfect hand-carved shape and clean stylized metallic shine. Altar is neutral cave stone with just a few large shallow carvings; it is not gold. Amber torch behind and teal crystal fill. No piles of treasure or tiny ornaments. Keep the idol design suitable for the later isolated image-to-3D concept.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Edit only the small green cat statue and its green plinth in the far-right wall alcove of the supplied cave spawn cavern. Make the statue and plinth ordinary matte gray-violet cave stone, using stone mid #4A4652 and stone light #7A6E68 with blue-violet #1E2433 in the shaded surfaces. Preserve the cat shape, pose, size and position; it is plain carved stone decoration, without jade, teal, gold, emission or jewel details. Keep every other part of the image unchanged: exact wide 16:9 composition and camera, daylight shaft, four player arrival stones, central spawn platform, amber torches and warm route on the right, teal crystal clusters, blue-violet shadow corridor, left gold collectible lion idol with its jade inset, timber and rope, lumpy cave walls, broad bevels and smooth painted gradients. No new props, characters, symbols, text or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### frame-03-ghost-wall.png
+### frame-02-torch-chamber.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-9317e13c-c97e-47bf-9f63-cca1f44fed98.png`
+02 / Torch-lit chamber.
+
+Copied unchanged from `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/02_torch_chamber_v2.png`.
+
+Generation stage 1:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: one pale translucent ghost drifting out through a solid cave wall toward the viewer. Its upper torso and reaching arms emerge through the rock face; tapering wispy lower body visibly intersects and dissolves into the wall with no hole or doorway. Hunched chunky spectral humanoid shape, two broad reaching hands, smooth simplified face with recessed blue-violet eyes, a sorrowful threatening expression without gore. Ghost material uses #D6F0FF with translucent blue-violet shaded volume, clean broad spectral ribbons rather than small particles or frayed fabric. A nearby amber torch is offset away from the ghost; faint teal crystal fill. Ghost large and clearly readable; avoid skeleton anatomy or photorealistic horror.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference, create a finished 16:9 eye-level frame looking through a cave chamber toward its open east gate. The chamber is built from heavy uneven cave stone, with large wall masses, medium shelves and only a few broad old chips. Worn timber supports are slightly bent, with thick rope wraps and patched broad planks. A close foreground torch and two distant torches create separate pools of #FFB347 amber light, with the brightest environmental pool at the gate; #3FD0C9 crystal light gently outlines the opposite wall. Stone uses #4A4652 and #7A6E68, darker at the base and brighter on upper planes, with #1E2433 blue-violet shadows and tinted haze between depth layers. Wide bevels catch soft highlights; nearly everything is matte. Keep the central path uncluttered and silhouettes legible at half-screen size. Do not introduce gold or jade ornament, ghost-white trim, trap-red paint, noisy rock texture, characters, text or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### frame-04-trap-corridor.png
+Generation stage 2:
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-3a81a7f0-0ec8-4be1-886d-1f4c0048511b.png`
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/02_torch_chamber.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: a cave trap corridor with one clearly visible set of broad stylized steel spikes protruding from a chunky mechanical floor plate. Wide blunt bases and pointed tips, sparse orderly spikes instead of tiny dense teeth. A clear #FF4A2A red warning glow runs around the trap plate and casts localized red light only at the danger zone. A safe ledge bypass and warm #FFB347 torches indicate where a player can move. Sparse teal crystal ambient light in the distance, blue-violet shadows throughout. Strong readable silhouettes, clean painted iron, no blood or ghost or relic colors.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Edit only the area beyond the open timber-framed gate in this torch-lit underground cave chamber. Replace the outdoor sky, mountains and daylight landscape seen through that gate with another fully enclosed underground cave chamber: broad lumpy matte blue-violet stone walls and ceiling, a clear continuation of the walking path, amber torchlight illuminating that safe route, restrained teal cold fill and soft colored haze in the distance. There must be no sky, outdoor landscape, sun or exterior opening behind this gate. Keep that gate's destination as the brightest environmental light pool by using warm underground torchlight rather than daylight. Preserve everything in the foreground and current chamber: camera, 16:9 frame, torches, crystals, timber/rope supports, barrels, rock shapes, palette, smooth painted material finish, and broad bevels. No new characters, relics, signs, text or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### frame-05-zipline-exit.png
+### frame-03-relic-altar.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-84d2861d-91d2-478d-8e5f-fd308ddf6ed7.png`
+03 / Relic on an altar.
+
+Copied unchanged from `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/03_relic_altar.png`.
+
+Generation stage 1:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: the cave's exit ledge with a taut zipline spanning a large misty chasm to an amber torch-lit landing ledge and exit tunnel. The functional zipline starts from a stout rope-wrapped weathered wooden anchor frame in the near foreground. A readable trolley with pulley wheels and oversized T-bar grip hangs from the cable within reach of the viewer, neutral painted iron, muted brown grip. A single continuous cable visibly crosses the chasm to the opposite anchor. Broad teal crystals and deep blue-violet fog reveal depth; chunky uneven ledges, minimal detail. Emphasize the readable route and plausible mechanical assembly. No ghost, gold decoration or red light.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference, create a 16:9 three-quarter close scene of a small 25-centimeter gold guardian idol on a substantial waist-height cave altar. The idol has a squat body, oversized angular head, slightly unequal crown lobes, a broad carved nose, simple recessed eyes and mouth, wide rounded edges and one large worn chip. Its silhouette must read immediately when the frame is reduced. Use relic gold #E8B33A with a darker shaded gold-violet base and a light warm top; one broad jade #3FA672 inset may appear, but only on the relic. Give the metal broad soft shiny highlights, not microscopic scratches. The altar's level contact surface is precise and broad while its sides are uneven chipped stone, matte #4A4652 rising to #7A6E68, with #1E2433 shadow tint. Amber #FFB347 torchlight leads the eye to the relic; cold #3FD0C9 ambient fill separates it from the wall. Show a quiet section of the eastern gate in the distance to establish gameplay context. No decorative gold outside the relic, ghost-white paint, trap-red accents, fine glyphs, words or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+```
+
+### frame-04-ghost-corridor.png
+
+04 / Ghost in a corridor.
+
+Copied unchanged from `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/04_ghost_corridor.png`.
+
+Generation stage 1:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
+
+```text
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference, create a 16:9 first-person-height frame of a pale humanoid ghost in the north passage off the spawn cavern, a narrow three-meter-wide cave corridor. The ghost floats above the floor with an oversized simple head and a broad tapering body, a few substantial flowing silhouette folds and minimal facial detail. It is translucent #D6F0FF ghost white, faintly luminous, with soft fading edges; its inner mass remains readable against colored darkness. Suggest a gentle drifting motion through posture, not blur. Keep ghost white entirely on the ghost. Surround it with lumpy broad-beveled #4A4652 / #7A6E68 rock, #1E2433 blue-violet shadow and restrained tinted fog. A nearby #FFB347 torch makes the safe side of the passage clear, while sparse #3FD0C9 crystals provide a quiet cool edge light. Do not let bloom flatten the ghost into an unreadable white blob; show depth and separation at half-screen size. No photoreal horror, tiny tendrils, gold decoration, trap-red decoration, player arms, words or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+```
+
+### frame-05-pressure-plates.png
+
+05 / Pressure-plate puzzle.
+
+Copied unchanged from `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/05_pressure_plate_puzzle.png`.
+
+Generation stage 1:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
+
+```text
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference, create a 16:9 raised eye-level gameplay composition of a 30-meter cave plate hall with four separated pressure plates arranged as two near and two far positions. The east gate is the clearest destination; three big carved statue alcoves occupy the north wall. Plates are thick substantial mechanical slabs with exact flat contact surfaces and square footprints, readable large symbols, uneven wide bevels and a few painted worn edges on top of their precise proportions. Use only cave stone #4A4652 and #7A6E68 on the mechanisms, with bent timber and thick rope where appropriate. Amber #FFB347 torches mark the gate and safe route; #3FD0C9 crystals give soft opposite-side fill. Keep blue-violet #1E2433 in shadows and haze, smooth dark-bottom-to-light-top gradients, big wall masses and sparse medium detail. Allow enough empty floor around each plate that four players could stand separately; show the puzzle clearly even when the image is half-screen size. No relic-gold ornament, jade plate coding, ghost-white puzzle trim, trap-red activation lights, tiny symbols, readable text or HUD. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
 ### frame-06-egyptian-antechamber.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-1b2bbf11-1676-4b86-a93a-a06839aee71b.png`
+06 / Map 2 sandstone antechamber.
+
+Copied unchanged from `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/06_sandstone_antechamber_v2.png`.
+
+Generation stage 1:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: finished 16:9 visual style frame for a cooperative first-person puzzle game.
-Input images: Image 1 is style-reference.png, the visual style reference only. Match its chunky stone silhouette language, wide softened bevels, broad painted gradients, matte surfaces, restrained edge highlights, and warm/cool lighting balance. Create a new scene rather than copying the spawn composition. Keep surfaces even smoother than the reference: simple broad color planes, no little chips or scattered rubble, no fine surface detail. Polished stylized 3D game-render look.
-Composition/framing: exactly 16:9 landscape, standing first-person-height camera about 1.65 m, no hands, people, HUD, text, border, logos or watermark. Main gameplay feature is large and readable at half-screen size.
-Color palette and meanings: amber #FFB347 only for torches, braziers and safe path light; teal #3FD0C9 only for crystal ambient light; gold #E8B33A and jade #3FA672 only for relics; pale ghost white #D6F0FF only for ghosts; trap red #FF4A2A only for trap warnings. Deep blue-violet #1E2433 shadows and tinted fog, never black. Cave rock #4A4652 mids and #7A6E68 lights; Egyptian sandstone #D9A86C. Do not use reserved colors decoratively. Mostly matte except metal and relics. Minimal broad readable wear, bent wood and rope wraps only where functional. No photographic textures, grit, micro scratches, grain, realistic horror or fine noise.
-Primary request: Map 2, a small underground Egyptian sandstone antechamber warmly lit by two substantial braziers. Broad slightly uneven #D9A86C sandstone blocks, wide rounded bevels, chunky columns and a simple doorway framing the route forward. A few large shallow Egyptian-inspired carved relief shapes, not dense hieroglyph texture. Braziers are muted dark iron with #FFB347 amber flames, no decorative gold. Cool deep blue-violet shadows and softly tinted fog keep continuity with the cave. No daylight aperture, ghosts, relics or traps. Restrained intimate room, finished stylized hand-painted surfaces, spatially readable floor and large forms.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept.
+Asset type: visual target for a finished stylized 3D co-op puzzle game.
+Output: one landscape 16:9 frame. Clean smooth hand-painted surfaces, broad bevels, substantial slightly uneven forms, clear silhouettes at half-screen size. No fine grain, speckles, photographic texture, labels or UI.
+Input image 1 is the shared style reference: carry over its palette, shape language, smooth material finish and warm/cool lighting balance, while creating the scene and composition specified below.
+
+Using the attached style reference to preserve the same finish, create a 16:9 eye-level scene of a compact Egyptian-inspired sandstone antechamber, 20 meters square with an eight-meter ceiling. Two squat chunky braziers stand near the far wall and frame a broad sealed door with a few large original carved pictograms. Four clear arrival spots occupy the near floor. Sandstone #D9A86C replaces the cave rock as the main material, shaded darker and cooler at the base with smoothly painted warmer upper planes; use #1E2433 blue-violet for deep shadows and restrained fog rather than black. All blocks and pillars are slightly uneven with broad worn bevels, large chipped corners and readable big-medium-small form hierarchy. Braziers glow #FFB347 amber and make the sealed door the brightest environmental target. Use only a restrained #3FD0C9 cool fill in deeper recesses. Stone and wood remain matte, with no fine grain or dirt. No gold or jade architectural ornament, white glowing glyphs, trap-red decoration, camels, ornate filigree, real historical text, labels or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+```
+
+Generation stage 2:
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/06_sandstone_antechamber.png`
+
+Exact prompt:
+
+```text
+Edit only the far-right recessed alcove behind the sandstone pillar in this antechamber. Remove the pale blue translucent animal/ghost standing in that alcove and replace its occupied area with an empty dim blue-violet stone recess continuous with the surrounding masonry. There must be no ghost, animal or character in this room. Preserve everything else: 16:9 composition, sandstone blocks and pillars, their broad painted gradients, four near-floor arrival markers, the centered sealed door and its large carved pictograms, both amber braziers, restrained teal cold fill on the opposite side, soft bevels, lighting and camera. No additional decorative objects, words, labels or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
 ### concepts/cave-rock-1m.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-ec2a787c-a0b6-42b9-ab90-11a564dc7903.png`
+Cave rock / approximately 1 m.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v3/style-reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: one chunky slightly lumpy cave boulder, about 1 m across, a single connected mass rather than a pile of rocks. A few big rounded uneven rock faces and wide soft bevels, asymmetrical squat silhouette, modest broad chips. Base stone #4A4652, lighter top planes #7A6E68, simple blue-violet lower shading. No crystals, plants, gold, teal emissive color, tiny cracks or debris.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Create one isolated object concept for Meshy image-to-3D. Use the supplied shared reference for its finished stylized 3D shape language, broad soft bevels, smooth painted gradients and simple palette. Transfer the object style into a square studio product view; do not reproduce the cave scene or its dramatic colored lighting. One object only, centered, clear three-quarter view, full object visible with generous margin on every side. Solid uniform light-gray #D9D9D9 background, no floor plane or horizon, no cast shadow or contact shadow beneath or beside the object. Even diffuse neutral studio illumination, restrained surface highlights, crisp silhouette and readable geometry. No text, labels, dimensions, ruler, reference capsule, UI, border, other object or scenery. Subject: a single roughly one-meter cave boulder, broad squat mass with a stable nearly flat base. Strong big-medium-small hierarchy: one large asymmetrical domed body, two or three medium lumpy shoulders, very few small broad chips. Rounded chunky planar surfaces, wide bevels and slightly uneven silhouette; neither a perfect sphere nor many tiny polygons. Matte stone mid #4A4652 and stone light #7A6E68, painted dark blue-violet #1E2433 at the base smoothly rising to lighter gray-violet on the upper surfaces. Keep the stone finish smooth and spacious, without cracks, speckles, fine facets, moss, crystals, markings or precious materials. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
 ### concepts/gold-idol-25cm.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-e6219a27-dfd7-4337-957e-efc0c25ae849.png`
+Gold lion idol / approximately 25 cm.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v3/style-reference.png`
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/03_relic_altar.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: one small gold idol about 25 cm tall. Simple squat humanoid figure with oversized squared head, big circular inset eyes, broad rectangular nose, a single simple mouth, stubby arms bent around one big circular jade medallion centered on its belly, two wide squat feet. Match the relic frame design description. Chunky hand-carved proportions and broad soft slightly irregular bevels, clean stylized metal shine in #E8B33A relic gold, the single jade insert #3FA672. Minimal large readable grooves, no fine etching, no gemstones beyond that single jade disk, no altar.
-Refinement: surfaces must be very smooth, with ONE broad gradient per large shape; rounded bevels, no mosaic-like polygon paint patches, mottled highlights, hammered-metal dents or granular gold. The jade disk is smooth polished jade, not a faceted gemstone. Use simple broad gleaming edge highlights and muted blue-violet shaded gold. Keep this an expertly finished stylized painted object, not visibly low-poly triangulated surfaces.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Create one isolated object concept for Meshy image-to-3D. Use the supplied shared reference for its finished stylized 3D shape language, broad soft bevels, smooth painted gradients and simple palette. Transfer the object style into a square studio product view; do not reproduce the cave scene or its dramatic colored lighting. One object only, centered, clear three-quarter view, full object visible with generous margin on every side. Solid uniform light-gray #D9D9D9 background, no floor plane or horizon, no cast shadow or contact shadow beneath or beside the object. Even diffuse neutral studio illumination, restrained surface highlights, crisp silhouette and readable geometry. No text, labels, dimensions, ruler, reference capsule, UI, border, other object or scenery. Subject: one small collectible gold lion guardian idol, approximately 25 cm tall, closely following the gold lion in both references. Sitting compactly on its own flat-bottomed haunches with oversized front paws, broad square-rounded head, short thick muzzle, rounded small ears, large simple brow, broad recessed mouth and a short chunky mane formed from a few medium lobes. Slightly uneven hand-carved volumes and broad soft bevels. Metal color relic gold #E8B33A, rich darker golden brown at the base and soft pale gold on top; one large circular jade #3FA672 jewel inset in the chest, clearly part of this collectible relic. Simple broad facial carving and limb divisions; no fine filigree, etched spirals, fur strands or granular wear. One connected idol only, no altar or separate display stand. Soft metallic highlights show the forms without hard bright white glare. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+```
+
+### concepts/ghost-sheet.png
+
+Rounded sheet ghost.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v3/style-reference.png`
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/04_ghost_corridor.png`
+
+Exact prompt:
+
+```text
+Create one isolated object concept for Meshy image-to-3D. Use the supplied shared reference for its finished stylized 3D shape language, broad soft bevels, smooth painted gradients and simple palette. Transfer the object style into a square studio product view; do not reproduce the cave scene or its dramatic colored lighting. One object only, centered, clear three-quarter view, full object visible with generous margin on every side. Solid uniform light-gray #D9D9D9 background, no floor plane or horizon, no cast shadow or contact shadow beneath or beside the object. Even diffuse neutral studio illumination, restrained surface highlights, crisp silhouette and readable geometry. No text, labels, dimensions, ruler, reference capsule, UI, border, other object or scenery. Subject: a friendly eerie simple rounded sheet ghost based on the ghost silhouette in the corridor reference. One large rounded head flowing into a broad draped sheet body, two simple small pale blue luminous eyes, no mouth, two short rounded raised side flaps suggesting arms. Only three or four large soft vertical folds. The lower half narrows smoothly into one broad curved tapering wispy tail with a clearly visible pointed end; no legs or feet, no separate smoke wisps. Reserved ghost-white #D6F0FF with blue-violet tinted lower folds and a smooth pale blue-to-white upward gradient. Suggest softly spectral material with a slightly translucent rim, while keeping the main volume sufficiently opaque, continuous and clearly bounded for image-to-3D. No bloom, surrounding glow cloud or particles; retain a clean readable silhouette against the gray. No hood accessories, cloth weave or fine wrinkles. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
 ### concepts/ghost-hunched.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-c4d5b623-7657-4600-bbfb-668afbc73dfb.png`
+Hunched reaching ghost.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v3/style-reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: ONE stylized pale ghost, hunched forward, broad shoulders and two chunky reaching arms with simplified separated fingers, large hands 15-20 percent oversized. A smooth simplified mournful angular face with blue-violet recessed eyes, no skull or bones. Both arms visible in three-quarter view. Torso narrows continuously into ONE tapering wispy lower body curling into a single broad pointed tail, no feet and no detached vapor. Translucent #D6F0FF ghost-white material with broad pale blue-violet shading and a few large spectral folds, cohesive readable connected volume, no fine wisps, frayed threads, particles, smoke cloud, grain or aura outside the silhouette. Even lighting must preserve strong contour against the gray background.
-Refinement: use a fleshy smooth simplified human face with a broad nose, closed downturned mouth, rounded full cheeks and soft blue-violet eyes. Absolutely no skull-shaped face, skeletal eye sockets, hollow triangular nasal cavity, open scream mouth or exposed teeth. The hunched body has one cohesive rounded volume and a few broad spectral curves. Surfaces use continuous smooth gradients, not polygonal mosaic paint patches. Leave at least 10 percent blank margin around the whole ghost.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
-```
-
-### concepts/ghost-hooded.png
-
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-e9c4aadc-3dea-44d7-b445-c038709cba5e.png`
-
-```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: ONE stylized hooded ghost figure in three-quarter view. Oversized soft hood with thick broad rounded rim around a recessed simple blue-violet face, two subtle pale eyes, chunky shoulders, two simple draped arms held slightly apart from the body. One connected flowing ghost robe volume that narrows into ONE tapering wispy lower body with a gently curled pointed tail, no feet. Translucent #D6F0FF ghost-white spectral material, broad pale blue-violet shaded folds, no black face cavity. A small number of smooth large readable folds, no woven cloth texture, frayed hems, tiny wisps, detached particles, smoky cloud, fine noise or aura outside silhouette. Preserve strong contour on the gray background.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Create one isolated object concept for Meshy image-to-3D. Use the supplied shared reference for its finished stylized 3D shape language, broad soft bevels, smooth painted gradients and simple palette. Transfer the object style into a square studio product view; do not reproduce the cave scene or its dramatic colored lighting. One object only, centered, clear three-quarter view, full object visible with generous margin on every side. Solid uniform light-gray #D9D9D9 background, no floor plane or horizon, no cast shadow or contact shadow beneath or beside the object. Even diffuse neutral studio illumination, restrained surface highlights, crisp silhouette and readable geometry. No text, labels, dimensions, ruler, reference capsule, UI, border, other object or scenery. Subject: a single hunched spectral ghost with a large rounded head bowed forward, broad sloping shoulders and a curved leaning torso. Two thick arms reach forward and slightly apart, both visible in three-quarter view and separated from the torso in silhouette; simple chunky hands each with three broad finger-like lobes, no spindly fingers. Two small pale blue luminous eyes under a simple heavy brow, no open mouth or sharp teeth. The lower torso narrows into one continuous broad curved tapering wispy tail with a visible pointed tip; no legs, feet, separate smoke wisps, torn strips or disconnected pieces. Reserved ghost-white #D6F0FF on the upper volume, cool blue-violet in the lower shaded folds, with broad smooth painted gradients. A slightly translucent rim suggests a ghost, but the core and reaching arms remain opaque enough and clearly bounded for image-to-3D. Large smooth forms with very few folds, wide soft bevels, no cloth weave, fine wrinkles, particles, bloom or surrounding halo. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
 ### concepts/zipline-trolley.png
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-5351671c-ff27-494a-b2dc-d616644a348d.png`
+Two-wheel zipline trolley with T-bar.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v3/style-reference.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: ONE functional stylized zipline trolley assembly with two chunky grooved pulley wheels in tandem, both rolling on the SAME straight cable axis, supported by one broad simple metal side plate and an open opposite bracket. A vertical sturdy stem drops from the plate to an oversized horizontal T-bar grip, brown wrapped handle 15-20 percent larger than real life for first-person visibility. Three-quarter angle clearly reveals both wheel grooves, two wheel axles, bracket and grip without overlap hiding key parts. No cable or anchor structure, just the detachable trolley. Exact functional wheel alignment and axle geometry, slightly uneven wide outer bevels. Neutral muted blue-violet painted iron and muted brown handle wrap, clean medium bevels and very few large bolts, subdued metallic highlights. No gold, jade, ghost-white, red glow, crystals, branding, fine rust, tiny scratches, dangling rope or decorative gears.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Create one isolated object concept for Meshy image-to-3D. Use the supplied shared reference for its finished stylized 3D shape language, broad soft bevels, smooth painted gradients and simple palette. Transfer the object style into a square studio product view; do not reproduce the cave scene or its dramatic colored lighting. One object only, centered, clear three-quarter view, full object visible with generous margin on every side. Solid uniform light-gray #D9D9D9 background, no floor plane or horizon, no cast shadow or contact shadow beneath or beside the object. Even diffuse neutral studio illumination, restrained surface highlights, crisp silhouette and readable geometry. No text, labels, dimensions, ruler, reference capsule, UI, border, other object or scenery. Subject: a single hand-held zipline trolley built as one connected chunky mechanical assembly. Exactly TWO large grooved pulley wheels mounted at the very top, in a front-to-back tandem line on a compact open metal frame. Use a three-quarter side view that clearly reveals both circular wheel faces, their thick rims and simple visible axle hubs; the second wheel is offset in perspective, not hidden. A thick central hanger stem descends below the wheel frame to an oversized horizontal T-bar grip, with two broad rounded hand-grip ends extending left and right from the stem. Make the T-bar easy to hold with two hands and unmistakable in silhouette. The entire two-wheel frame, stem and T-bar belong to one connected object. Charcoal blue-violet painted steel #1E2433 and muted slate metal with warm brown wooden grip ends and broad tan rope wraps; simple restrained steel highlights. Wide softened edges, a little hand-built unevenness in the finish, mechanically coherent wheel axles and sturdy thick components. No gold, jade, ghost-white or red warning paint. No cable, suspended track, rider, extra wheel, trigger, motor, backpack, attachment scenery or separate parts. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### concepts/gold-idol-25cm-first-pass.png
+## Prior shared-reference ancestry
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-48c550bd-c9c9-44a8-893f-5cb0a0e36cc4.png`
-- Note: Superseded: excess faceted paint patches, smooth revision preferred.
+This records the earlier text generation and simplification used by all copied v1 scenes. The prior reference contains reserved-color objects that the v3 removal edit above replaces.
+
+Original output: `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference_v1.png`.
+
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- None; original image generated from text.
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: one small gold idol about 25 cm tall. Simple squat humanoid figure with oversized squared head, big circular inset eyes, broad rectangular nose, a single simple mouth, stubby arms bent around one big circular jade medallion centered on its belly, two wide squat feet. Match the relic frame design description. Chunky hand-carved proportions and broad soft slightly irregular bevels, clean stylized metal shine in #E8B33A relic gold, the single jade insert #3FA672. Minimal large readable grooves, no fine etching, no gemstones beyond that single jade disk, no altar.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept.
+Asset type: shared style reference for a finished stylized 3D co-op puzzle game. Render a single landscape 16:9 frame, no collage or text. Smooth hand-painted 3D surfaces, broad readable geometry and colored shadows. This is a visual target for in-game assets, with restrained detail and clear forms when reduced to half-screen size.
+
+Create one finished 16:9 visual reference image for an underground cooperative puzzle adventure, an eye-level three-quarter view of a small cave chamber with a clear quiet composition. A one-meter lumpy stone boulder fills the left foreground, an old broad-beveled stone altar holds a 25-centimeter chunky carved gold guardian idol on the right, and a worn rope-bound timber torch lights a simple open passage in the rear center. Establish the same visual language everywhere: asymmetrical silhouettes, exaggerated substantial shapes, big planes interrupted by medium shoulders and a few broad chips, softened wide edges, slightly bent timber, thick rope wraps, smooth painted color shifts from dark bottoms to lighter tops, broad restrained edge highlights. Stone uses mid #4A4652 and light #7A6E68, with blue-violet #1E2433 in shadow and gentle tinted fog. The torch is amber #FFB347 and lights the way forward; sparse crystals supply teal #3FD0C9 fill. Only the idol uses gold #E8B33A; a single broad inset on the idol may use relic jade #3FA672. Stone and wood are matte, gold has soft shiny glints. Keep shadow color visible and shapes readable even in darkness. A small alcove in the distant right contains a faint translucent ghost silhouette in #D6F0FF; a distant inactive spike warning has one restrained #FF4A2A mark. These semantic accents stay isolated to those objects. Prioritize the rock, idol, lighting and material finish as the reusable reference for all later art, with no human characters, labels, layout grid or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
-### concepts/ghost-hunched-first-pass.png
+Simplified v1 output: `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference.png`.
 
-- Tool: image_gen.imagegen (built-in; model identifier not exposed)
-- Reference image: `/Users/peterkim/CoopGameArt/style-frames/style-reference.png` (sole image input)
-- Original tool output: `/Users/peterkim/.codex/generated_images/01a12359-a3f1-7913-96d0-9c010df9b15a/exec-62169977-a9a7-4e88-b37b-389e9838f126.png`
-- Note: Superseded: skull-like facial silhouette, non-skeletal revision preferred.
+Tool: `image_gen.imagegen (ChatGPT built-in image generation)`.
+
+Reference image inputs (in order):
+- `/Users/peterkim/CoopGameArt/candidates/PG-A0/style-frames-v1/00_style_reference_v1.png`
+
+Exact prompt:
 
 ```text
-Use case: stylized-concept
-Asset type: single-object concept image for image-to-3D.
-Input images: Image 1 is style-reference.png, used ONLY to match the art style: chunky exaggerated shapes, slightly uneven silhouettes, broad soft bevels, smooth hand-painted gradients, simple clean surfaces and restrained edge highlights. Do not copy its cavern, torches or crystals into this image.
-Composition/framing: just ONE isolated object, centered, three-quarter view showing front and one side, whole object fully in frame with generous 12 percent margin on all sides, square canvas. Plain uniform light-gray #E2E2E2 background. Even diffuse neutral studio lighting, no dramatic cave lighting, no cast shadow, no ground shadow, no floor plane, no pedestal, no scenic props, no text, dimensions, labels, watermark or border. Broad painted shading on the object itself is allowed. Clean silhouette for image-to-3D reconstruction. No photographic textures, grit, grain, microdetail or fine noise. Mostly matte with simple large color transitions, dark base to lighter top. Colored blue-violet shading #1E2433 rather than pure black.
-Primary request: ONE stylized pale ghost, hunched forward, broad shoulders and two chunky reaching arms with simplified separated fingers, large hands 15-20 percent oversized. A smooth simplified mournful angular face with blue-violet recessed eyes, no skull or bones. Both arms visible in three-quarter view. Torso narrows continuously into ONE tapering wispy lower body curling into a single broad pointed tail, no feet and no detached vapor. Translucent #D6F0FF ghost-white material with broad pale blue-violet shading and a few large spectral folds, cohesive readable connected volume, no fine wisps, frayed threads, particles, smoke cloud, grain or aura outside the silhouette. Even lighting must preserve strong contour against the gray background.
-stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
+Use case: stylized-concept, surface-detail simplification of the supplied shared game style reference. Preserve the wide 16:9 composition, viewpoint, boulder/altar/idol sizes and positions, cave route, amber torch and teal fill, blue-violet shadows, crystals, and the placement of the distant ghost and trap warning. Change only the amount and scale of surface detail: simplify the boulder and cave walls into a few large lumpy planar masses with medium shoulders and very few broad chips; remove clusters of tiny rubble and fine facets, leaving clean spacious floor planes. Simplify the gold idol's decorative carving into large chunky head/body/limb volumes with simple recessed facial features and at most one broad jade inset. Keep its gold metal finish, and keep the stone matte. All surfaces should have smooth hand-painted color gradients with wide soft bevels. No etched filigree, granular texture, speckles, tiny cracks, brush grain or photographic wear. Preserve the lit route and visible colored shadow floor. No text, labels, border or UI. stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 ```
 
+## Contact sheet
+
+`contact-sheet.png` is a review composite, not a generated concept. Tool: Python 3 and Pillow. Inputs: the twelve PNGs in the table above, in that order. No image-generation prompt. Rebuild with `../.venv/bin/python scripts/build_review.py` from this folder.
+
+## Review and next step
+
+The five concepts are centered isolated whole-object views on a plain light-gray background, with even studio lighting and no floor cast shadows. The trolley has two top wheels and a large T-bar. Rock and idol sizes are design targets, not measured mesh dimensions. These are concept PNGs for Meshy; geometry, exact scale, materials, topology and Unreal imports remain later steps.

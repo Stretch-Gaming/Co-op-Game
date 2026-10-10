@@ -3,11 +3,11 @@
 The team's visual anchor, described in [docs/art/style.md](../../../docs/art/style.md).
 
 - `style-frames/style-reference.png`: the style reference. Use it as the reference image for every concept image you generate, then run image-to-3D on the concept.
-- `style-frames/frame-01` to `frame-06`: style frames for the puzzle chamber, relic altar, ghost, trap corridor, zipline exit and Map 2 antechamber. Aim for these when you judge an asset in `L_StyleTest`.
-- `style-frames/concepts/`: single-object concepts, ready for Meshy image-to-3D: a cave rock, the gold idol, two ghosts and the zipline trolley.
+- `style-frames/frame-01` to `frame-06`: style frames for the spawn cavern, a torch-lit chamber, a relic on its altar, a ghost in a corridor, a pressure-plate puzzle and the Map 2 antechamber. Aim for these when you judge an asset in `L_StyleTest`.
+- `style-frames/concepts/`: single-object concepts, ready for Meshy image-to-3D: a cave rock, the gold lion idol, two ghosts (a rounded sheet and a hunched one) and the zipline trolley.
 - `style-frames/prompts.md`: the exact prompt and reference behind every image.
 
-Made with OpenAI image generation (built into Codex) on Oct 9, 2026. OpenAI's terms assign the output to the user, so these can be published here and need no credit. Known gaps: the zipline frame's pulley is only approximate (use the trolley concept), and the ghost concepts look more solid than the final translucent material will.
+Made with OpenAI image generation (ChatGPT's built-in tool) on Oct 9, 2026. This set replaced a darker first set because it's closer to the chunky, saturated look we want; the in-game lighting will make it darker. OpenAI's terms assign the output to the user, so these can be published here and need no credit. Known gaps: the frames are brighter than the cave will be in game, there are no trap or zipline frames yet, and the ghost concepts look more solid than the final translucent material will.
 
 To clean up a generated mesh before import, use [Tools/blender/cleanup_export.py](../../../Tools/blender/cleanup_export.py):
 

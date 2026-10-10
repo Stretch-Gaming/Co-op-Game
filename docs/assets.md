@@ -35,7 +35,7 @@ Chosen tools (PG-A0, Oct 9, 2026):
 | --- | --- | --- |
 | Irregular meshes: relics, ghost, rocks, crystals, bones, statues, torches, braziers | [Meshy](https://www.meshy.ai), image-to-3D from a style frame | Start on the Free plan. Its outputs are CC BY 4.0, which allows publishing here, but each one needs a line in `CREDITS.md`, and Meshy shows free outputs publicly. Whoever runs out of credits first moves to Pro ($20 a month), which makes outputs private and needs no credit. One account per person; don't share logins. |
 | Exact or moving parts: plates, gates, the altar's contact surface, trap parts, the zipline handle and anchors | [Blender](https://www.blender.org), modeled by hand or by script from the greybox's dimensions. Clean up every generated mesh with [Tools/blender/cleanup_export.py](../Tools/blender/cleanup_export.py). | Your own work. No credit needed. |
-| Style frames and concept images | OpenAI image generation (ChatGPT or Codex), with [`style-reference.png`](../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the reference image | OpenAI's terms give you the output, so it can be published here with no credit. Record the prompt on the issue. |
+| Style frames and concept images | OpenAI image generation (ChatGPT's built-in tool, also in Codex), with [`style-reference.png`](../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the reference image | OpenAI's terms give you the output, so it can be published here with no credit. Record the prompt on the issue. |
 | Tileable textures | `M_Stylized`'s world-aligned mode with painted tileables from the image model | As above. |
 | Sound | Made yourself (recorded or synthesized), CC0 libraries, or a sound generator whose plan grants the rights | Check each source. |
 
