@@ -8,6 +8,7 @@
 #include "Components/ExponentialHeightFogComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Components/PointLightComponent.h"
+#include "Components/PostProcessComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkyAtmosphereComponent.h"
 #include "Components/SkyLightComponent.h"
@@ -99,6 +100,17 @@ namespace CoopMaze
 	constexpr float CeilingThickness = 300.f;
 	constexpr float MaxRampStep = 205.f;       // most a floor rises from one tile to the next: about 22 degrees
 	constexpr int32 TorchEvery = 6;            // tiles between torches along a path (30 m)
+
+	// The maze's look, from docs/art/style.md (linear colors). The cave keeps its own warmer palette.
+	const FLinearColor RockLight(0.195f, 0.156f, 0.138f);   // #7A6E68: walls (MI_Stylized_Rock's own tint)
+	const FLinearColor RockMid(0.069f, 0.061f, 0.084f);     // #4A4652: ceilings
+	const FLinearColor MazeFloor(0.11f, 0.10f, 0.12f);      // between the two, so the walls stay lighter than the floor
+	const FLinearColor Shadow(0.013f, 0.018f, 0.033f);      // #1E2433: blue-violet shadows and haze
+	const FLinearColor RelicGold(0.807f, 0.451f, 0.042f);   // #E8B33A, as MI_Stylized_Gold
+	constexpr float PathTintWeight = 0.45f;   // how much of its path's color a path floor takes
+	constexpr int32 DoorSteps = 3;            // the door tunnel's rock goes from the cave's colors to the maze's, one step per tile
+	constexpr float GradeFade = 1000.f;       // the maze's grade fades in over the door tunnel's first 10 m
+	const FVector RepoWallRockOverlap(1.15f, 1.f, 1.35f);   // along the wall, depth, height: see AddMazeRock
 
 	enum ERoom : int32 { Hub, Door, Fork, HallA, HallB, Goal, RoomCount };
 	struct FRoomSpec { const TCHAR* Name; int32 C0, R0, C1, R1; float Z; };
@@ -389,10 +401,10 @@ void ACoopPlayground::BeginPlay()
 	FloorStones.Color = FloorStone;
 	FloorStones.bCollides = false;
 	FloorStones.bCastShadow = false;
-	MazeWallRocks.Color = WallRock;
+	MazeWallRocks.Color = CoopMaze::RockLight;
 	MazeWallRocks.bCollides = false;      // the maze has its own invisible walls
 	MazeWallRocks.bCastShadow = false;
-	MazeCeilingRocks.Color = CeilingRock;
+	MazeCeilingRocks.Color = CoopMaze::RockMid;
 	MazeCeilingRocks.bCollides = false;
 	MazeCeilingRocks.bCastShadow = false;
 
@@ -565,6 +577,16 @@ void ACoopPlayground::ApplyLiveLighting(float TimeSeconds)
 	if (PostVolume)
 	{
 		PostVolume->Settings.AutoExposureBias = CoopTuning::CaveExposure();
+	}
+	if (MazeGrade)
+	{
+		// The cave's teal fill turned to blue-violet at the same brightness, and the blacks lifted towards it
+		FLinearColor Gain = CoopMaze::Shadow / CoopCave::AmbientTint;
+		Gain /= FMath::Max(Gain.GetLuminance(), KINDA_SMALL_NUMBER);
+		Gain = FMath::Lerp(FLinearColor::White, Gain, CoopTuning::MazeShadowTint());
+		const FLinearColor Lift = CoopMaze::Shadow * CoopTuning::MazeShadowLift();
+		MazeGrade->Settings.ColorGainShadows = FVector4(Gain.R, Gain.G, Gain.B, 1.f);
+		MazeGrade->Settings.ColorOffsetShadows = FVector4(Lift.R, Lift.G, Lift.B, 0.f);
 	}
 }
 
@@ -1288,19 +1310,43 @@ void ACoopPlayground::LoadRepoAssets()
 		RepoRockMesh ? TEXT("found") : TEXT("missing (using code-built rocks)"),
 		RepoRockMaterial ? TEXT("found") : TEXT("missing"),
 		RepoGoldMaterial ? TEXT("found") : TEXT("missing"));
+
+	// HC's relics (HC-A1) and puzzle props (HC-A2), migrated from Content/Puzzles/Art with their materials.
+	// Each one is optional: whatever is missing keeps its code-built shape, or is left out if it's only dressing.
+	auto LoadArt = [](const TCHAR* Folder, const TCHAR* Name) -> UStaticMesh*
+	{
+		const FString Package = FString::Printf(TEXT("/Game/Puzzles/Art/%s/%s"), Folder, Name);
+		UStaticMesh* Mesh = LoadIfPresent<UStaticMesh>(*Package, *FString::Printf(TEXT("%s.%s"), *Package, Name));
+		UE_LOG(LogTemp, Display, TEXT("CoopPlayground: %s %s"), Name, Mesh ? TEXT("found") : TEXT("missing"));
+		return Mesh;
+	};
+	RepoIdolMesh = LoadArt(TEXT("HCA1_Relics"), TEXT("SM_Relic_GoldIdol"));
+	for (const TCHAR* Relic : { TEXT("SM_Relic_JadeMask"), TEXT("SM_Relic_GemScarab"), TEXT("SM_KeyRelic_StoneHeart") })
+	{
+		if (UStaticMesh* Mesh = LoadArt(TEXT("HCA1_Relics"), Relic))
+		{
+			RepoDressingRelics.Add(Mesh);
+		}
+	}
+	RepoAltarMesh = LoadArt(TEXT("HCA2_Props"), TEXT("SM_Altar"));
+	RepoStatueMesh = LoadArt(TEXT("HCA2_Props"), TEXT("SM_Statue"));
+	RepoStatueSmallMesh = LoadArt(TEXT("HCA2_Props"), TEXT("SM_Statue_Small"));
+	RepoGateFrameMesh = LoadArt(TEXT("HCA2_Props"), TEXT("SM_ChamberGate_Frame"));
 }
 
-void ACoopPlayground::AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw)
+void ACoopPlayground::AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw, int32 DoorStep)
 {
 	if (RepoRockMesh)
 	{
 		// Scale the mesh to the wanted size and put its middle on Center. Ceiling rocks hang upside down.
+		// The repo rock is rounded top and bottom, so wall rocks are stretched to overlap the tiers above and below
+		// and the rocks either side; at the wanted size the seams between them show through.
 		const FBox Bounds = RepoRockMesh->GetBoundingBox();
 		const FVector MeshSize = Bounds.GetSize().ComponentMax(FVector(1.f));
-		const FVector Scale = Size / MeshSize;
+		const FVector Scale = (bCeiling ? Size : Size * CoopMaze::RepoWallRockOverlap) / MeshSize;
 		const FQuat Rotation(FRotator(0.f, Yaw, bCeiling ? 180.f : 0.f));
 		const FVector Location = Center - Rotation.RotateVector(Bounds.GetCenter() * Scale);
-		(bCeiling ? MazeCeilingRockTransforms : MazeWallRockTransforms).Add(FTransform(Rotation, Location, Scale));
+		MazeRockTransforms.FindOrAdd(DoorStep * 2 + (bCeiling ? 1 : 0)).Add(FTransform(Rotation, Location, Scale));
 		return;
 	}
 	if (bCeiling)
@@ -2575,6 +2621,8 @@ void ACoopPlayground::BuildMaze()
 	PathFloorHulls.SetNum(Paths.Num());
 	FCoopMeshData RoomFloors;
 	TArray<TArray<FVector>> RoomFloorHulls;
+	FCoopMeshData DoorFloor;
+	TArray<TArray<FVector>> DoorFloorHulls;
 
 	auto AddSlab = [](FCoopMeshData& Mesh, TArray<TArray<FVector>>& Hulls, const FVector& From, const FVector& To)
 	{
@@ -2616,15 +2664,17 @@ void ACoopPlayground::BuildMaze()
 		}
 		const FRoomSpec& Room = Rooms[R];
 		const FVector Center = RoomCenter(ERoom(R));
-		AddBlock(RoomFloors, RoomFloorHulls, FTransform(Center - FVector(0.f, 0.f, Slab * 0.5f)),
+		AddBlock(R == Door ? DoorFloor : RoomFloors, R == Door ? DoorFloorHulls : RoomFloorHulls, FTransform(Center - FVector(0.f, 0.f, Slab * 0.5f)),
 			FVector((Room.C1 - Room.C0 + 1) * Tile * 0.5f, (Room.R1 - Room.R0 + 1) * Tile * 0.5f, Slab * 0.5f));
 	}
 	for (int32 P = 0; P < Paths.Num(); ++P)
 	{
-		const FLinearColor Tint = FLinearColor::LerpUsingHSV(CoopCave::Sand, FLinearColor::FromSRGBColor(Paths[P].Color) * 0.3f, 0.35f);
+		// A straight mix, not HSV: from the cool floor, an HSV blend swings orange and yellow round through pink.
+		const FLinearColor Tint = FMath::Lerp(MazeFloor, FLinearColor::FromSRGBColor(Paths[P].Color) * 0.3f, PathTintWeight);
 		AddProcMesh(PathFloors[P], MaterialFor(Tint), PathFloorHulls[P], false);
 	}
-	AddProcMesh(RoomFloors, MaterialFor(CoopCave::Sand), RoomFloorHulls, false);
+	AddProcMesh(RoomFloors, MaterialFor(MazeFloor), RoomFloorHulls, false);
+	AddProcMesh(DoorFloor, MaterialFor(FMath::Lerp(MazeFloor, CoopCave::Sand, 0.5f)), DoorFloorHulls, false);
 
 	// 5. Walls and ceilings: invisible boxes that stop you, and rocks you see.
 	//    A wall goes wherever a floor has no connected floor next to it, from just under the floor to the ceiling.
@@ -2640,6 +2690,7 @@ void ACoopPlayground::BuildMaze()
 				continue;   // the cave has its own walls
 			}
 			const float LevelCeilingZ = Level.FloorMax + Level.Headroom;
+			const int32 DoorStep = (Level.Owner == RoomOwner + Door) ? Cell.Key.Y - Rooms[Door].R0 + 1 : 0;   // higher = nearer the cave
 			const float Bottom = Level.bBridge ? Level.Z - Slab : Level.FloorMin - Slab - 40.f;
 			const float Top = Level.bUnderBridge ? LevelCeilingZ : LevelCeilingZ + CeilingThickness;
 
@@ -2686,7 +2737,7 @@ void ACoopPlayground::BuildMaze()
 						const float Depth = Random.FRandRange(180.f, 240.f);
 						const FVector Spot = Edge + Out * (Depth * 0.35f) + Along * (SideSign * Tile * 0.25f * Random.FRandRange(0.85f, 1.15f));
 						AddMazeRock(false, FVector(Spot.X, Spot.Y, RockBottom + (Tier + 0.5f) * TierHeight),
-							FVector(Random.FRandRange(280.f, 340.f), Depth, TierHeight * 1.12f), Along.Rotation().Yaw + Random.FRandRange(-12.f, 12.f));
+							FVector(Random.FRandRange(280.f, 340.f), Depth, TierHeight * 1.12f), Along.Rotation().Yaw + Random.FRandRange(-12.f, 12.f), DoorStep);
 					}
 				}
 			}
@@ -2697,7 +2748,7 @@ void ACoopPlayground::BuildMaze()
 				AddBlock(Blockers, BlockerHulls, FTransform(FVector(Center, LevelCeilingZ + CeilingThickness * 0.5f)),
 					FVector(Tile * 0.5f, Tile * 0.5f, CeilingThickness * 0.5f));
 				AddMazeRock(true, FVector(Center, LevelCeilingZ + 100.f), FVector(540.f, 540.f, 240.f) * Random.FRandRange(0.95f, 1.05f),
-					90.f * Random.RandRange(0, 3) + Random.FRandRange(-4.f, 4.f));
+					90.f * Random.RandRange(0, 3) + Random.FRandRange(-4.f, 4.f), DoorStep);
 			}
 		}
 	}
@@ -2711,6 +2762,7 @@ void ACoopPlayground::BuildMaze()
 	{
 		AddRock(WallRocks, FVector(Along, Half + 190.f, -40.f), FVector(340.f, 380.f, CeilingZ + 220.f), 0.f, 1, 0.2f, 0.f);
 	}
+	BuildDoorPortal();
 
 	// 6. Light and markers. Torches along paths 1, 2 and 4; glowing teal crystals along path 3.
 	//    Crystals in each path's color mark where it leaves and enters a room.
@@ -2794,6 +2846,7 @@ void ACoopPlayground::BuildMaze()
 		}
 	}
 	// Torches round the rooms' walls
+	TArray<TPair<FIntPoint, FIntPoint>> HallSideTorches;   // tile and wall direction of the halls' west and east wall torches
 	for (int32 R = Fork; R < RoomCount; ++R)
 	{
 		const FRoomSpec& Room = Rooms[R];
@@ -2810,6 +2863,10 @@ void ACoopPlayground::BuildMaze()
 					{
 						const FVector Out = WorldDir(Dir);
 						AddWallTorch(FVector(TileCenter(Tile2D), Level->Z + 260.f) + Out * (Tile * 0.5f - 30.f), -Out, false);
+						if ((R == HallA || R == HallB) && Dir.X != 0)
+						{
+							HallSideTorches.Emplace(Tile2D, Dir);
+						}
 					}
 				}
 			}
@@ -2859,18 +2916,48 @@ void ACoopPlayground::BuildMaze()
 		BuildMoments(MomentSpots);
 	}
 
-	// 7. The relic: a gold idol on a stone pedestal in the middle of the chamber
+	// 7. The relic: a gold idol on an altar in the middle of the chamber, facing the way in (south).
+	//    HC's idol and altar when they're in the project, otherwise a sphere and cone on a stone cylinder.
 	{
 		const FVector Spot = RoomCenter(Goal);
-		AddShape(CylinderMesh, Spot + FVector(0.f, 0.f, 50.f), FVector(150.f, 150.f, 100.f), FRotator::ZeroRotator, CoopCave::FloorStone);
-		UStaticMeshComponent* Body = AddShape(SphereMesh, Spot + FVector(0.f, 0.f, 140.f), FVector(60.f, 60.f, 80.f), FRotator::ZeroRotator, FLinearColor(0.8f, 0.55f, 0.12f));
-		UStaticMeshComponent* Head = AddShape(ConeMesh, Spot + FVector(0.f, 0.f, 200.f), FVector(40.f, 40.f, 45.f), FRotator::ZeroRotator, FLinearColor(0.8f, 0.55f, 0.12f));
-		for (UStaticMeshComponent* Part : { Body, Head })
+		constexpr float FacingSouth = -90.f;
+		constexpr float AltarTop = 97.f;   // where SM_Altar's capstone takes a relic
+		if (RepoAltarMesh)
 		{
-			if (Part && RepoGoldMaterial)
+			AddRepoProp(RepoAltarMesh, Spot, FacingSouth, true);
+		}
+		else
+		{
+			AddShape(CylinderMesh, Spot + FVector(0.f, 0.f, 50.f), FVector(150.f, 150.f, 100.f), FRotator::ZeroRotator, RockLight);
+		}
+		if (RepoIdolMesh)
+		{
+			AddRepoProp(RepoIdolMesh, Spot + FVector(0.f, 0.f, RepoAltarMesh ? AltarTop : 100.f), FacingSouth, false);
+		}
+		else
+		{
+			UStaticMeshComponent* Body = AddShape(SphereMesh, Spot + FVector(0.f, 0.f, 140.f), FVector(60.f, 60.f, 80.f), FRotator::ZeroRotator, RelicGold);
+			UStaticMeshComponent* Head = AddShape(ConeMesh, Spot + FVector(0.f, 0.f, 200.f), FVector(40.f, 40.f, 45.f), FRotator::ZeroRotator, RelicGold);
+			for (UStaticMeshComponent* Part : { Body, Head })
 			{
-				Part->SetMaterial(0, RepoGoldMaterial);
+				if (Part && RepoGoldMaterial)
+				{
+					Part->SetMaterial(0, RepoGoldMaterial);
+				}
 			}
+		}
+
+		// The other relics on low stone plinths in an arc behind the altar, away from the way in and the spot you arrive at
+		const FVector2D Arc[] = { FVector2D(-450.f, 250.f), FVector2D(0.f, 480.f), FVector2D(450.f, 250.f) };
+		for (int32 i = 0; i < FMath::Min(RepoDressingRelics.Num(), int32(UE_ARRAY_COUNT(Arc))); ++i)
+		{
+			UStaticMesh* Relic = RepoDressingRelics[i];
+			const FVector Base = Spot + FVector(Arc[i], 0.f);
+			const FVector Extent = Relic->GetBounds().BoxExtent;
+			const float Width = 2.f * FMath::Max(Extent.X, Extent.Y) + 30.f;
+			constexpr float PlinthHeight = 80.f;
+			AddShape(CylinderMesh, Base + FVector(0.f, 0.f, PlinthHeight * 0.5f), FVector(Width, Width, PlinthHeight), FRotator::ZeroRotator, RockLight);
+			AddRepoProp(Relic, Base + FVector(0.f, 0.f, PlinthHeight), (FVector(Spot) - Base).Rotation().Yaw, false);
 		}
 		UPointLightComponent* RelicLight = NewObject<UPointLightComponent>(this);
 		RelicLight->SetupAttachment(Root);
@@ -2889,25 +2976,70 @@ void ACoopPlayground::BuildMaze()
 
 	AddProcMesh(Glow, GlowMaterial(), {}, false);
 
-	// 8. Repo rocks as two instanced meshes (one draw each), when the mesh is in the project
-	for (TArray<FTransform>* Transforms : { &MazeWallRockTransforms, &MazeCeilingRockTransforms })
+	// HC's chamber gate frames (frame only, no leaf, so the way stays open) where each path enters the relic chamber.
+	// The 4 m opening is narrower than a 5 m tunnel; the frame's sides sink into the walls.
+	for (int32 P = 0; RepoGateFrameMesh && P < Segments.Num(); ++P)
 	{
-		if (!RepoRockMesh || Transforms->IsEmpty())
+		const FSegment& Last = Segments[P].Last();
+		const FIntPoint End = Last.Tiles.Last();
+		const FRoomSpec& Room = Rooms[Last.ToRoom];
+		for (const FIntPoint& Dir : Dirs)
+		{
+			const FIntPoint In = End + Dir;
+			if (In.X >= Room.C0 && In.X <= Room.C1 && In.Y >= Room.R0 && In.Y <= Room.R1)
+			{
+				const FVector2D Edge = (TileCenter(End) + TileCenter(In)) * 0.5f;
+				AddRepoProp(RepoGateFrameMesh, FVector(Edge, Room.Z * 100.f), Dir.X != 0 ? 0.f : 90.f, true);
+				break;
+			}
+		}
+	}
+
+	// HC's statues in both halls, the big one on the west wall and the small one on the east, each beside a wall torch
+	// so it's lit. Those walls lie between path mouths, and the statue stands well inside its tile, clear of them.
+	constexpr float StatueBesideTorch = 130.f;   // along the wall from the torch
+	for (const TPair<FIntPoint, FIntPoint>& Torch : HallSideTorches)
+	{
+		UStaticMesh* Statue = (Torch.Value.X < 0) ? RepoStatueMesh : RepoStatueSmallMesh;
+		const ERoom Hall = (Torch.Key.Y >= Rooms[HallA].R0) ? HallA : HallB;
+		const FLevel* Level = FindLevel(Torch.Key, RoomOwner + Hall);
+		if (!Statue || !Level)
 		{
 			continue;
 		}
+		const FVector Out = WorldDir(Torch.Value);
+		const FVector Along(-Out.Y, Out.X, 0.f);
+		const FVector Extent = Statue->GetBounds().BoxExtent;
+		const FVector At = FVector(TileCenter(Torch.Key), Level->Z) + Out * (Tile * 0.5f - FMath::Max(Extent.X, Extent.Y) - 40.f) + Along * StatueBesideTorch;
+		AddRepoProp(Statue, At, (-Out).Rotation().Yaw, true);
+	}
+
+	// 8. Repo rocks as instanced meshes (one draw each): walls and ceiling, plus one pair per door step,
+	//    tinted from the style sheet's rock colors in the maze to the cave's warm rock at the door.
+	int32 RepoRockCount = 0;
+	for (const TPair<int32, TArray<FTransform>>& Group : MazeRockTransforms)
+	{
+		if (!RepoRockMesh || Group.Value.IsEmpty())
+		{
+			continue;
+		}
+		const bool bCeiling = (Group.Key % 2) == 1;
+		const float Warmth = float(Group.Key / 2) / float(DoorSteps + 1);
 		UInstancedStaticMeshComponent* Rocks = NewObject<UInstancedStaticMeshComponent>(this);
 		Rocks->SetupAttachment(Root);
 		Rocks->SetMobility(EComponentMobility::Static);
 		Rocks->SetStaticMesh(RepoRockMesh);
 		if (RepoRockMaterial)
 		{
-			Rocks->SetMaterial(0, RepoRockMaterial);
+			UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(RepoRockMaterial, this);
+			Material->SetVectorParameterValue(TEXT("Tint"), bCeiling ? FMath::Lerp(RockMid, CoopCave::CeilingRock, Warmth) : FMath::Lerp(RockLight, CoopCave::WallRock, Warmth));
+			Rocks->SetMaterial(0, Material);
 		}
 		Rocks->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		Rocks->SetCastShadow(false);
 		Rocks->RegisterComponent();
-		Rocks->AddInstances(*Transforms, false);
+		Rocks->AddInstances(Group.Value, false);
+		RepoRockCount += Group.Value.Num();
 	}
 
 	// 9. A dark box round the whole maze, in case a gap between rocks shows through. Its floor catches anyone who falls.
@@ -2925,7 +3057,7 @@ void ACoopPlayground::BuildMaze()
 	constexpr float ShellTop = 2600.f;
 	auto AddShell = [this](const FVector& Center, const FVector& Size, bool bCollides)
 	{
-		if (UStaticMeshComponent* Box = AddBox(Center, Size, CoopCave::Backstop, bCollides))
+		if (UStaticMeshComponent* Box = AddBox(Center, Size, Shadow, bCollides))
 		{
 			Box->SetCastShadow(false);
 		}
@@ -2939,9 +3071,72 @@ void ACoopPlayground::BuildMaze()
 	AddShell(FVector(Mid.X, Mid.Y, ShellTop), FVector(Extent.X, Extent.Y, 100.f), false);
 	AddShell(FVector(Mid.X, Mid.Y, ShellBottom), FVector(Extent.X, Extent.Y, 100.f), true);
 
+	// 10. The maze's grade, from the door tunnel north (the cave's own room stays out of it)
+	BuildMazeGrade(FBox(FVector(Low.X, CoopCave::Half + GradeFade, ShellBottom), FVector(High.X, High.Y, ShellTop)));
+
 	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze built, %d tiles, %d bridges, %.0f x %.0f m, %d torches, %d repo rocks"),
-		Cells.Num(), CrossingCount, (Extent.X - 2.f * Tile) / 100.f, (Extent.Y - 2.f * Tile) / 100.f, TorchLights.Num(),
-		MazeWallRockTransforms.Num() + MazeCeilingRockTransforms.Num());
+		Cells.Num(), CrossingCount, (Extent.X - 2.f * Tile) / 100.f, (Extent.Y - 2.f * Tile) / 100.f, TorchLights.Num(), RepoRockCount);
+}
+
+void ACoopPlayground::BuildMazeGrade(const FBox& MazeBounds)
+{
+	// A post-process box over the maze. Outside it the grade fades out over GradeFade, which is the door tunnel,
+	// so walking through the door is a deliberate change of light, and the cave never sees it.
+	MazeGradeBounds = NewObject<UBoxComponent>(this);
+	MazeGradeBounds->SetupAttachment(Root);
+	MazeGradeBounds->SetMobility(EComponentMobility::Static);
+	MazeGradeBounds->SetRelativeLocation(MazeBounds.GetCenter());
+	MazeGradeBounds->SetBoxExtent(MazeBounds.GetExtent());
+	MazeGradeBounds->SetCollisionEnabled(ECollisionEnabled::QueryOnly);   // the grade measures its fade from the box's collision
+	MazeGradeBounds->SetCollisionResponseToAllChannels(ECR_Ignore);
+	MazeGradeBounds->SetGenerateOverlapEvents(false);
+	MazeGradeBounds->SetHiddenInGame(true);
+	MazeGradeBounds->RegisterComponent();
+
+	MazeGrade = NewObject<UPostProcessComponent>(this);
+	MazeGrade->SetupAttachment(MazeGradeBounds);
+	MazeGrade->bUnbound = false;
+	MazeGrade->BlendRadius = CoopMaze::GradeFade;
+	MazeGrade->Priority = 2.f;   // over the exposure volume
+	MazeGrade->Settings.bOverride_ColorGainShadows = true;
+	MazeGrade->Settings.bOverride_ColorOffsetShadows = true;
+	MazeGrade->RegisterComponent();
+}
+
+UStaticMeshComponent* ACoopPlayground::AddRepoProp(UStaticMesh* Mesh, const FVector& GroundPoint, float Yaw, bool bCollides)
+{
+	UStaticMeshComponent* Prop = NewObject<UStaticMeshComponent>(this);
+	Prop->SetMobility(EComponentMobility::Static);
+	Prop->SetupAttachment(Root);
+	Prop->SetStaticMesh(Mesh);
+	Prop->bDisallowNanite = true;   // HC's meshes have Nanite on; this prototype stays light and draws their full-detail fallback
+	Prop->SetRelativeLocationAndRotation(GroundPoint, FRotator(0.f, Yaw, 0.f));
+	if (bCollides)
+	{
+		Prop->SetCollisionProfileName(UCollisionProfile::BlockAll_ProfileName);   // the meshes' own simple boxes
+	}
+	Prop->SetCollisionEnabled(bCollides ? ECollisionEnabled::QueryAndPhysics : ECollisionEnabled::NoCollision);
+	Prop->RegisterComponent();
+	return Prop;
+}
+
+void ACoopPlayground::BuildDoorPortal()
+{
+	using namespace CoopCave;
+
+	// The mine's last timber frame, just inside the door: past it the rock turns from the cave's warm brown
+	// to the maze's lavender-grey, one tile at a time, and the light cools with it.
+	const float Y = Half + 40.f;
+	const float LintelZ = CoopMaze::CorridorHeadroom - 70.f;   // just under the tunnel's ceiling rocks
+	for (const float X : { DoorMinX + PostSize * 0.5f, DoorMaxX - PostSize * 0.5f })
+	{
+		AddBox(FVector(X, Y, LintelZ * 0.5f), FVector(PostSize, PostSize, LintelZ), Wood);
+		for (const float Z : { 110.f, LintelZ - 90.f })
+		{
+			AddBox(FVector(X, Y - PostSize * 0.5f - 1.f, Z), FVector(PostSize + 6.f, 4.f, 24.f), Iron, false);
+		}
+	}
+	AddBeam(FVector(DoorMinX - 30.f, Y, LintelZ + 18.f), FVector(DoorMaxX + 30.f, Y, LintelZ + 18.f), 38.f, 36.f, Wood);
 }
 
 // ---------------------------------------------------------------------------

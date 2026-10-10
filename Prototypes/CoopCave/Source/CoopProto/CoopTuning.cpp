@@ -48,6 +48,10 @@ namespace CoopTuningVars
 	static TAutoConsoleVariable<float> CVarFog(TEXT("coop.Cave.Fog"), 0.08f, TEXT("Haze density near the floor."));
 	static TAutoConsoleVariable<float> CVarLightDistance(TEXT("coop.Cave.LightDistance"), 5000.f, TEXT("Torch and crystal lights farther than this from the camera (cm) stop drawing, fading out over the last quarter. 0 = always draw."));
 
+	// Maze look (fades in through the door tunnel; the cave keeps its own)
+	static TAutoConsoleVariable<float> CVarMazeShadowTint(TEXT("coop.Maze.ShadowTint"), 0.7f, TEXT("How far the maze's shadows and haze turn from the cave's teal to blue-violet #1E2433: 0 = like the cave, 1 = full."));
+	static TAutoConsoleVariable<float> CVarMazeShadowLift(TEXT("coop.Maze.ShadowLift"), 0.35f, TEXT("How much blue-violet the maze's darkest shadows are lifted by, so they never go black: 0 = none, 1 = a full #1E2433."));
+
 	// Look
 	static TAutoConsoleVariable<float> CVarStickYaw(TEXT("coop.Look.StickYaw"), 170.f, TEXT("Right-stick turn speed, degrees/s."));
 	static TAutoConsoleVariable<float> CVarStickPitch(TEXT("coop.Look.StickPitch"), 110.f, TEXT("Right-stick up/down speed, degrees/s."));
@@ -95,6 +99,9 @@ float CoopTuning::CaveAmbient()      { return CoopTuningVars::CVarAmbient.GetVal
 float CoopTuning::CaveExposure()     { return CoopTuningVars::CVarExposure.GetValueOnGameThread(); }
 float CoopTuning::CaveFog()          { return CoopTuningVars::CVarFog.GetValueOnGameThread(); }
 float CoopTuning::LightDrawDistance(){ return CoopTuningVars::CVarLightDistance.GetValueOnGameThread(); }
+
+float CoopTuning::MazeShadowTint()   { return CoopTuningVars::CVarMazeShadowTint.GetValueOnGameThread(); }
+float CoopTuning::MazeShadowLift()   { return CoopTuningVars::CVarMazeShadowLift.GetValueOnGameThread(); }
 
 float CoopTuning::StickYawRate()     { return CoopTuningVars::CVarStickYaw.GetValueOnGameThread(); }
 float CoopTuning::StickPitchRate()   { return CoopTuningVars::CVarStickPitch.GetValueOnGameThread(); }
