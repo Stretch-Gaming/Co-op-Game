@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "source_delivery_only": true,
+  "processing": "Pillow LANCZOS size conversion; transparent icon padding; no repainting or alpha thresholding.",
+  "automated_checks": [
+    {
+      "file": "T_HUD_RelicIcon.png",
+      "sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+      "bytes": 223929,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 143633,
+      "visible_bounds_alpha_gt_8": [
+        61,
+        45,
+        451,
+        461
+      ],
+      "max_boundary_alpha": 0,
+      "source_sha256": "3dc1f721dac395943825c0dfabe0b75a3c04554d8d182b0b5aa444b9e48ca382"
+    },
+    {
+      "file": "T_HUD_RoundBannerFrame.png",
+      "sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+      "bytes": 86529,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 209380,
+      "visible_bounds_alpha_gt_8": [
+        20,
+        177,
+        492,
+        353
+      ],
+      "max_boundary_alpha": 0,
+      "source_sha256": "5cd96141f383a7d48757b515771db5fc053cfe12c51baea02ea7e1d707dda6b4",
+      "central_opening_alpha_extrema": [
+        0,
+        1
+      ]
+    },
+    {
+      "file": "T_HUD_InteractPromptFrame.png",
+      "sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c",
+      "bytes": 83662,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 213971,
+      "visible_bounds_alpha_gt_8": [
+        27,
+        176,
+        485,
+        362
+      ],
+      "max_boundary_alpha": 0,
+      "source_sha256": "10fe3c3a6198476f26212e6f5b39c584a82c7c04aea65fa5a4469f539fba2557",
+      "central_opening_alpha_extrema": [
+        0,
+        1
+      ]
+    }
+  ],
+  "preview": {
+    "file": "preview.png",
+    "dimensions": [
+      1200,
+      1350
+    ],
+    "sha256": "f5925a193620255aa8d57d0f819e83b477a91040d03d7dbe4bd7f9534059c519"
+  },
+  "visual_review": "See visual-review.md for independent inspection of the prepared textures and preview.",
+  "unreal_import": "pending",
+  "in_game_split_screen": "pending"
+}
