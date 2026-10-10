@@ -23,6 +23,15 @@ A 2–4 player online co-op puzzle game in Unreal Engine 5.8.3, Blueprint-only. 
 
 If you don't know which lane you're working for, ask before changing anything.
 
+## Tracking work
+
+Work for this project is tracked in this repo's [GitHub Issues](https://github.com/StretchGaming/Co-op-Game/issues), not in BB Tasks or any other tracker.
+
+- Each lane has an epic issue: [#1](https://github.com/StretchGaming/Co-op-Game/issues/1) for HC, [#2](https://github.com/StretchGaming/Co-op-Game/issues/2) for PG and [#3](https://github.com/StretchGaming/Co-op-Game/issues/3) for HZ. [#4](https://github.com/StretchGaming/Co-op-Game/issues/4) holds the playable checkpoints. Every phase, asset task and ready check is a sub-issue of its lane's epic, with its sprint as the [milestone](https://github.com/StretchGaming/Co-op-Game/milestones).
+- Start each commit message with the phase code and end it with the issue number, like `PG-2: split-screen on the host (#24)`. Close the issue when its "Done when" passes, with `Closes #24` in the last commit or by hand.
+- Tick off the issue's steps as you go. Comment on it with anything the next sprint needs to know, such as a blocker, or an asset's source and license.
+- When the plan changes, update the matching issues in the same push. The docs say what to build; the issues say who's on it and how far along it is.
+
 ## Hard rules
 
 1. **Never use `Get Player Character (0)`, `Get Player Controller (0)` or `Get Player Pawn (0)` in gameplay Blueprints.** Use the owning player, the instigator, or the actor that triggered the event. Index 0 breaks multiplayer, and split-screen is part of Demo 1: the host machine can have two local players at once.
@@ -45,7 +54,7 @@ If you don't know which lane you're working for, ask before changing anything.
 - It runs one tool call at a time on the editor's main thread. Don't send calls in parallel.
 - After a batch of changes, compile the Blueprints you touched, Save All, and check that `git status` lists only your lane's files plus any you locked.
 - If the save dialog lists a file you don't own, such as `L_Site01` or another lane's sublevel, uncheck it.
-- Generated assets go through [docs/assets.md](docs/assets.md): raw output in `SourceArt/<lane>/`, imports in your lane's `Art/` folder, and the source and license recorded in the asset task.
+- Generated assets go through [docs/assets.md](docs/assets.md): raw output in `SourceArt/<lane>/`, imports in your lane's `Art/` folder, and the source and license recorded on the asset's issue.
 
 ## Folder ownership
 

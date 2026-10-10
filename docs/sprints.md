@@ -6,6 +6,8 @@ The first sprints build a small cave you can walk around in and keep improving w
 
 Each machine has its own lane and epic, and each epic phase is one sprint. For example, PG-4 is Mac 1's work in Sprint 4. Each epic also has numbered **asset** tasks, such as HZ-A1, which run alongside the build.
 
+Every phase, asset task and checkpoint is also a [GitHub issue](https://github.com/StretchGaming/Co-op-Game/issues), grouped by [sprint milestone](https://github.com/StretchGaming/Co-op-Game/milestones). These docs say what to build; the issues say who's on it and how far along it is.
+
 | Machine | Person | Lane | Epic |
 | --- | --- | --- | --- |
 | Windows (integrator + host) | Stretch | HC | [Core, puzzles and rounds](epics/epic-core-rounds.md) |
@@ -204,4 +206,4 @@ Never cut joining at 2–4 players with a split-screen pair on the host, first p
 | Generated assets are slow or off-style. | Assets are a parallel track that gameplay never waits on, with a minimum kit, library fallbacks and small early deliveries. |
 | Epic's MCP tools can't wire Blueprint graphs. | The Sprint 0 smoke test records what they can do in [mcp.md](mcp.md). Agents scaffold assets, place actors and set properties; people wire the graphs. |
 | Phases take longer than a sprint. | Each phase is sized for about 30 minutes, and Sprint 10 is a planned buffer before the demo. |
-| The org runs out of Git LFS storage or bandwidth. | Generated assets add up fast. Check the org's LFS usage on GitHub after the first evening. |
+| The repo runs out of Git LFS storage or bandwidth. | Generated assets add up fast. Stretch, who owns the repo, checks its LFS usage on GitHub after the first evening. |

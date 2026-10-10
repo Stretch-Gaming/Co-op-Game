@@ -33,11 +33,11 @@ Copy the template for each sprint. Newest sprint at the top. The plan is in [doc
 
 **Checkpoint:** none, or Playable 1–4, or Demo 1
 
-| Person | Phase | Doing | Locks |
+| Person | Phase and issue | Doing | Locks |
 | --- | --- | --- | --- |
-| Stretch (HC) | HC-N | | |
-| PK (PG) | PG-N | | |
-| Ak47 (HZ) | HZ-N | | |
+| Stretch (HC) | HC-N (#) | | |
+| PK (PG) | PG-N (#) | | |
+| Ak47 (HZ) | HZ-N (#) | | |
 
 **Merged commit:**
 

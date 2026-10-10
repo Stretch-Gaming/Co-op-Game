@@ -33,7 +33,7 @@ Chosen tools and import presets: _to be filled in by PG-A0._
 
 Anything committed here, raw or imported, is published to the world. Being allowed to use an asset in a game isn't the same as being allowed to publish it in a public repo.
 
-Before you commit an asset, record in its asset task:
+Before you commit an asset, record on its GitHub issue:
 
 - the tool or source, with a URL, and the plan or tier you used;
 - the exact license and its version, such as CC0, CC BY 4.0 or a generator's terms;
@@ -44,7 +44,7 @@ Then:
 
 - **Commit it** only if its license allows public redistribution. Assets you generated yourself on a plan that gives you the rights, and CC0 assets, usually do. Check: some generators' free tiers make outputs public or require attribution.
 - **Add a line to [CREDITS.md](../CREDITS.md)** for anything that requires attribution, such as CC BY.
-- **Don't commit it** if the license forbids redistribution, as Fab's standard license does for assets on their own. Pick another asset, or ask an org admin to make the repo private first.
+- **Don't commit it** if the license forbids redistribution, as Fab's standard license does for assets on their own. Pick another asset, or ask Stretch, who owns the repo, to make it private first.
 
 ## Specs
 
@@ -66,14 +66,14 @@ On a Mac older than M2, Nanite falls back to simplified meshes. Check how your a
 
 1. **Brief.** Start from the asset task's description and specs. Write the prompt or pick the reference images.
 2. **Generate.** Keep candidates outside the repo, in a local folder. Only the one you choose goes in.
-3. **Check the license** as described above, and record it in the asset task.
+3. **Check the license** as described above, and record it on the asset's issue.
 4. **Save the chosen raw output**, such as GLB, FBX, PNG or WAV, in `SourceArt/<lane>/<asset task>/`, for example `SourceArt/HZ/HZ-A1/`. Git LFS stores it.
 5. **Import** into `Content/<lane folder>/Art/`, through the editor or Unreal MCP, with PG-A0's import presets. Set scale, pivot, collision and Nanite, check the texture settings, and switch the materials to instances of your master material. Reimport from the file in `SourceArt/`, so anyone can redo it.
 6. **Check in your test map.** Next to the template character, under the cave's lighting, on your machine and, for anything in the kit, on the other platform too.
 7. **Before you push**, run `git lfs ls-files` and check every new binary file is listed. If one isn't, its extension is missing from `.gitattributes`, or isn't lowercase.
 8. **Swap it in.** Replace the greybox in your sublevel, then look at it in the next playtest.
 
-An asset is done when it's at the right scale with working materials and collision, it's in place in your sublevel, its source and license are in the task, any credit is in `CREDITS.md`, and nobody at the playtest flagged it.
+An asset is done when it's at the right scale with working materials and collision, it's in place in your sublevel, its source and license are on its issue, any credit is in `CREDITS.md`, and nobody at the playtest flagged it.
 
 ## Folders
 
