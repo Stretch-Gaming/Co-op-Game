@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A1/SM_Relic_GemScarab.glb",
+  "output": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 8148,
+  "triangles_after": 8148,
+  "dimensions_cm": [
+    18.0,
+    16.3004,
+    7.0937
+  ],
+  "bounds_min_cm": [
+    -9.0,
+    -8.1502,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

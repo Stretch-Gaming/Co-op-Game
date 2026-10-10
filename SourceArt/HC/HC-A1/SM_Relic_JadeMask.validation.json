@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A1/SM_Relic_JadeMask.glb",
+  "output": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 8224,
+  "triangles_after": 8224,
+  "dimensions_cm": [
+    9.8168,
+    17.7345,
+    22.0
+  ],
+  "bounds_min_cm": [
+    -4.90839,
+    -8.86724,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
