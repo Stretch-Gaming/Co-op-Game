@@ -47,6 +47,9 @@ namespace CoopTuningVars
 	static TAutoConsoleVariable<float> CVarStickYaw(TEXT("coop.Look.StickYaw"), 170.f, TEXT("Right-stick turn speed, degrees/s."));
 	static TAutoConsoleVariable<float> CVarStickPitch(TEXT("coop.Look.StickPitch"), 110.f, TEXT("Right-stick up/down speed, degrees/s."));
 	static TAutoConsoleVariable<float> CVarMouse(TEXT("coop.Look.Mouse"), 2.5f, TEXT("Mouse sensitivity, degrees per mouse unit."));
+
+	// Maze dressing
+	static TAutoConsoleVariable<int32> CVarMazeDetail(TEXT("coop.Maze.Detail"), 1, TEXT("1 = the maze's detail pass (rocks, rubble, timber, crystals), 0 = plain tunnels. Takes effect the next time you press Play."));
 }
 
 
@@ -87,3 +90,5 @@ float CoopTuning::CaveFog()          { return CoopTuningVars::CVarFog.GetValueOn
 float CoopTuning::StickYawRate()     { return CoopTuningVars::CVarStickYaw.GetValueOnGameThread(); }
 float CoopTuning::StickPitchRate()   { return CoopTuningVars::CVarStickPitch.GetValueOnGameThread(); }
 float CoopTuning::MouseSensitivity() { return CoopTuningVars::CVarMouse.GetValueOnGameThread(); }
+
+bool  CoopTuning::MazeDetail()       { return CoopTuningVars::CVarMazeDetail.GetValueOnGameThread() != 0; }

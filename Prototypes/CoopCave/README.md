@@ -84,6 +84,7 @@ Through the door in the cave's north wall (between the timber posts). [maze_over
 - **They meet twice**, in a sunken hall (-3 m) and a raised hall (+4 m), where you can switch paths.
 - **Climbs and drops:** ramps of up to 2 m per 5 m (about 22 degrees). Corners and bridges are flat.
 - Paths 1, 2 and 4 are torch-lit; path 3 is lit by teal crystals. There are 7 dead ends.
+- **Dressing:** rock narrows and rounds off the tunnels, the roof drops between corners, and rubble, stalagmites, puddles, old timber (path 1), crystal walls (path 3) and a caved-in stretch (path 4) line the walls, with pillars, terraces and boulders in the rooms. A 2.5 m lane down the middle of every path stays clear. `coop.Maze.Detail 0` turns it off the next time you press Play.
 
 | Path | Length | Height |
 |---|---|---|
@@ -124,6 +125,7 @@ Typing a name on its own shows its current value.
 - **Boost jump:** `coop.Boost.Up/Forward/Range`
 - **Cave lighting:** `coop.Cave.Torch` (brightness), `coop.Cave.TorchRadius`, `coop.Cave.TorchShadows` (0 none, 1 the four torches out in the room, 2 all), `coop.Cave.Flicker`, `coop.Cave.Bounce`, `coop.Cave.Crystal`, `coop.Cave.Ambient` (cool fill in the shadows), `coop.Cave.Exposure` (stops), `coop.Cave.Fog`
 - **Camera:** `coop.Cam.Distance/Shoulder/Height/FOV/FPFOV/StartFirstPerson`, `coop.Look.StickYaw/StickPitch/Mouse`
+- **The maze:** `coop.Maze.Detail 0` turns off its dressing (rocks, rubble, timber, crystals) the next time you press Play, to compare.
 - **The rope:** `coop.Tether 1` ties the players together again the next time you press Play. `coop.Rope.MaxLength/MinLength/ReelSpeed/DragSpeed/AirWeight` tune it.
 
 **Keep a value you like:** add it to `Config/DefaultEngine.ini` under `[ConsoleVariables]` (e.g. `coop.Cave.Torch=60`), or just tell Claude the numbers.
