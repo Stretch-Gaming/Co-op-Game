@@ -20,26 +20,35 @@ The look is stylized and finished, in the spirit of Sea of Thieves, not realisti
 
 ## Tools
 
-PG-A0 picks the tools in Sprint 1, sets the import presets on both a Mac and Windows, takes one prop all the way through, and fills in this section. Other lanes start generating in Sprint 2. Candidates to compare:
-
-- **Meshes:** hosted generators such as [Meshy](https://www.meshy.ai) or [Tripo](https://www.tripo3d.ai), which export textured meshes and have Unreal integrations, or open models such as Hunyuan3D, which need a powerful GPU.
-- **Tileable textures:** an image model, or the texture tools in the mesh generator.
-- **Sound:** a sound-effects generator.
-- **Library assets:** free assets on [Fab](https://www.fab.com), subject to the license check below.
+PG-A0 picks the tools, sets the import presets on both a Mac and Windows, and takes one prop all the way through. Other lanes start generating in Sprint 2.
 
 Every tool must run outside the Unreal project, or support both Mac and Windows. Don't add a generator plugin to the project without checking with the team, because any plugin has to work on every machine.
 
-Chosen tools (PG-A0, Oct 9, 2026):
+Chosen tools (PG-A0, revised Oct 9, 2026 to avoid paid services):
 
-| Use | Tool | Plan and license |
+| Use | Tool | Cost and license |
 | --- | --- | --- |
-| Irregular meshes: relics, ghost, rocks, crystals, bones, statues, torches, braziers | [Meshy](https://www.meshy.ai), image-to-3D from a style frame | Start on the Free plan. Its outputs are CC BY 4.0, which allows publishing here, but each one needs a line in `CREDITS.md`, and Meshy shows free outputs publicly. Whoever runs out of credits first moves to Pro ($20 a month), which makes outputs private and needs no credit. One account per person; don't share logins. |
-| Exact or moving parts: plates, gates, the altar's contact surface, trap parts, the zipline handle and anchors | [Blender](https://www.blender.org), modeled by hand or by script from the greybox's dimensions. Clean up every generated mesh with [Tools/blender/cleanup_export.py](../Tools/blender/cleanup_export.py). | Your own work. No credit needed. |
-| Style frames and concept images | OpenAI image generation (ChatGPT's built-in tool, also in Codex), with [`style-reference.png`](../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the reference image | OpenAI's terms give you the output, so it can be published here with no credit. Record the prompt on the issue. |
+| Most meshes: rocks, crystals, stalagmites, bones, torches, braziers, statues, plates, gates, the altar, trap parts, the zipline | [Blender](https://www.blender.org), modeled by your agent through [Blender MCP](https://github.com/ahujasid/blender-mcp), or by hand, from the style frame and the greybox's dimensions. The chunky, broad-beveled style suits scripted modeling. Export every mesh through [Tools/blender/cleanup_export.py](../Tools/blender/cleanup_export.py), which fixes units, axes and normals and can decimate to a triangle budget. `M_Stylized`'s edge highlight still needs a curvature bake, which isn't in the script yet (PG-A0). | Free. Blender and Blender MCP (MIT) run on Mac and Windows. Your own work, so no credit is needed. |
+| Organic shapes that are hard to build by script: the lion idol, the ghosts | [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), image-to-3D from a style frame, run locally. On a Mac with 24 GB or more of memory, use [trellis-mac](https://github.com/shivampkumar/trellis-mac): about 5 minutes per model on an M4 Pro. On an NVIDIA GPU with 24 GB, use the official release. Keep the shape and re-texture it with `M_Stylized`. | Free. TRELLIS.2's code and weights are MIT, and outputs need no credit. Two conditions: **remove the frame's background first**, so the bundled background remover, which is non-commercial (RMBG-2.0, CC BY-NC 4.0), never runs; and accept Meta's DINOv3 license on Hugging Face, which TRELLIS.2's image encoder needs. DINOv3's custom license allows commercial use but doesn't spell out rights in outputs, so read it before the game is sold. |
+| Filler props and quick stand-ins | CC0 libraries: [Poly Haven](https://polyhaven.com) (also inside Blender MCP), [Kenney](https://kenney.nl/assets), [Quaternius](https://quaternius.com) and [KayKit](https://kaylousberg.itch.io). Re-material them with `M_Stylized` instances so they match. | Free. CC0 allows publishing here, with no credit needed. |
+| Style frames and concept images | OpenAI image generation (ChatGPT's built-in tool, also in Codex), with [`style-reference.png`](../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the reference image. Ask for a transparent background when the image will go to TRELLIS.2. | OpenAI's terms give you the output, so it can be published here with no credit. Record the prompt on the issue. |
 | Tileable textures | `M_Stylized`'s world-aligned mode with painted tileables from the image model | As above. |
 | Sound | Made yourself (recorded or synthesized), CC0 libraries, or a sound generator whose plan grants the rights | Check each source. |
 
-Not chosen: Tripo, because its own help page says free-plan outputs have no commercial rights, which conflicts with its blog; and local Hunyuan3D, which needs a strong NVIDIA GPU and has territory restrictions in its license.
+Optional: [Meshy](https://www.meshy.ai)'s Free plan (100 credits a month, enough for a few models) for a hero asset neither Blender nor TRELLIS.2 gets right. Its free outputs are CC BY 4.0 and shown publicly, so each one needs a line in `CREDITS.md`. Don't buy a paid plan for this project.
+
+Not chosen:
+
+- **Meshy as the main tool**, because the Free plan's credits cover only a few models and the rest needs a paid plan.
+- **Tripo**, because its help page says free-plan outputs have no commercial rights.
+- **Hunyuan3D**, including its Mac port, because its license excludes the EU, the UK and South Korea.
+- **Stable Fast 3D**, because it has no confirmed Mac support and its license is capped by revenue.
+- **TripoSG**, because it needs an NVIDIA GPU, makes geometry only and bundles a non-commercial background remover. It's worth a look for shapes if the Windows machine has an NVIDIA GPU with 8 GB or more.
+
+### Setting up the free tools
+
+- **Blender MCP:** install Blender and [uv](https://docs.astral.sh/uv/), then run `claude mcp add blender uvx mcp-for-blender` and `uvx mcp-for-blender install-addon`. Enable the add-on in Blender's preferences, then start the server from the MCP for Blender tab (press N in the 3D viewport). Like Unreal MCP, its server has no authentication: keep it on your own machine, and save your Blender file before letting an agent run code in it.
+- **trellis-mac:** follow its README. It needs about 15 GB for the model weights, a Hugging Face login, and approved access to the gated DINOv3 model. Give it PNGs whose backgrounds are already transparent, and on the first run check its output that the background remover was skipped. Its meshes have about 200K faces and can have small holes: fill the holes in Blender (Mesh → Clean Up → Fill Holes, or a voxel remesh), then let the cleanup script decimate with `--target-triangles`.
 
 Import presets: _to be filled in by PG-A0 once the Unreal project exists._
 
