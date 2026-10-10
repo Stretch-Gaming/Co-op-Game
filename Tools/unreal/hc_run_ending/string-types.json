@@ -1,0 +1,8 @@
+[
+  "Utilities|String|NotEqualExactly(String)",
+  "Utilities|String|NotEqual,CaseInsenstive(String)",
+  "Utilities|String|EqualExactly(String)",
+  "Utilities|String|Equal,CaseInsensitive(String)",
+  "Asserts|AssertNotEqual(String)",
+  "Asserts|AssertEqual(String)"
+]

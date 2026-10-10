@@ -1,0 +1,8 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "pid": 43812,
+  "port": 8017,
+  "requested_renderer": "D3D11; ray tracing disabled only by launch args",
+  "blueprint_only": true
+}

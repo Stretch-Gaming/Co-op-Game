@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "log": "Saved/Logs/CoopGame.log",
+  "start_byte": 736776,
+  "end_byte": 757949,
+  "errors": [
+    "[2026.10.10-14.36.08:194][655]LogScript: Warning: Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass",
+    "[2026.10.10-14.36.08:194][655]PIE: Error: Blueprint Runtime Error: \"Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass\". Node:  AddToPlayerScreen Graph:  RefreshResults Function:  Refresh Results Blueprint:  AC_RunResults",
+    "[2026.10.10-14.36.08:194][655]LogScript: Warning: Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass",
+    "[2026.10.10-14.36.08:195][655]PIE: Error: Blueprint Runtime Error: \"Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass\". Node:  SetDesiredSizeInViewport Graph:  RefreshResults Function:  Refresh Results Blueprint:  AC_RunResults",
+    "[2026.10.10-14.36.08:195][655]LogScript: Warning: Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass",
+    "[2026.10.10-14.36.08:195][655]PIE: Error: Blueprint Runtime Error: \"Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass\". Node:  SetAnchorsInViewport Graph:  RefreshResults Function:  Refresh Results Blueprint:  AC_RunResults",
+    "[2026.10.10-14.36.08:195][655]LogScript: Warning: Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass",
+    "[2026.10.10-14.36.08:195][655]PIE: Error: Blueprint Runtime Error: \"Accessed None trying to read (real) property CallFunc_Create_ReturnValue in not an UClass\". Node:  SetAlignmentInViewport Graph:  RefreshResults Function:  Refresh Results Blueprint:  AC_RunResults"
+  ]
+}

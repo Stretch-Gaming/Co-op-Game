@@ -1,0 +1,287 @@
+{
+  "passed": true,
+  "baseline": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "ownership_passed": true,
+  "protected_files_checked": 35,
+  "protected_hashes_unchanged": true,
+  "protected_baseline": [
+    {
+      "path": ".mcp.json",
+      "sha256": "2b8e02e2e24cda65efc93bd328b45c45019b63bbd6b21d29fee385435b3253f9"
+    },
+    {
+      "path": "Config/DefaultEditor.ini",
+      "sha256": "f7fa0669877eb782e14bf0f7ee63298a10b92c0f38e215ae41a478a70f018d81"
+    },
+    {
+      "path": "Config/DefaultEditorPerProjectUserSettings.ini",
+      "sha256": "8ec6963909ae5bbbb6f024029c007522f351b071c78495ab8f075bda5ee4c42c"
+    },
+    {
+      "path": "Config/DefaultEngine.ini",
+      "sha256": "5cc28bea8598deaf94cec5f56fab46ff1be70424d2fdee511c265fda14eda0b3"
+    },
+    {
+      "path": "Config/DefaultGame.ini",
+      "sha256": "08fa1ce87a583a02c06dab05ef2cbcbbc4d65569d8d7958f606b5720512f5940"
+    },
+    {
+      "path": "Config/DefaultInput.ini",
+      "sha256": "1e95b1e36ef1d605d90fb57f097ff6b6ca970ceebf434a85fc234fb520d67249"
+    },
+    {
+      "path": "Content/Core/Audio/SFX_RelicPickup.uasset",
+      "sha256": "d444aead6bfc58507d43a256b63e4ff9c49d1f7fae6010ffa9c972e27715ceb6"
+    },
+    {
+      "path": "Content/Core/BPI_Interactable.uasset",
+      "sha256": "8a65de1af904e530d40e912790199ef41290d617f6398dbb493ebf6862387c5d"
+    },
+    {
+      "path": "Content/Core/BPI_RoundReset.uasset",
+      "sha256": "0078fc4891bf8ae87af6e2307b0f8b75dd325ced8a06ae26c01aebccfed315b4"
+    },
+    {
+      "path": "Content/Core/BP_CoopCharacter.uasset",
+      "sha256": "5c03b05a5074841aece7c69b5435d8ac7863e50c29e75bd042d9b2b2c9163f94"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameInstance.uasset",
+      "sha256": "c3edffffdd0279477d5451813ba3c15b4a895055dc146bba0c9c6c446fe2a2f6"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameMode.uasset",
+      "sha256": "33eace87e28cb9e2481aa16989c1aa2455b1a8e24ddbf7105d10a6930ea4a07b"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameState.uasset",
+      "sha256": "6c1a50e1002221d85951ecb51ddd91f0715d0013fbd50feb1cb0cdd26ee484c6"
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerController.uasset",
+      "sha256": "1a6ba0c54ee6a9484282d13a47644108a0e76e8bae183f10dcd62cc591c6b8af"
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerState.uasset",
+      "sha256": "1b551b37c85e6cd9337a1ff0fb2af5ec3b5cb40f39cd4bc9c065c41b80c57b5f"
+    },
+    {
+      "path": "Content/Core/E_InteractMode.uasset",
+      "sha256": "59c0e1b642c6849d600692b39725fc1a5355c25b886f3eb6f8847cb6c648f20d"
+    },
+    {
+      "path": "Content/Core/E_RoundPhase.uasset",
+      "sha256": "b35b51e3563040273c57eab70ffecf1f54d332fd43e997e256a6007a7ac620cf"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugClear.uasset",
+      "sha256": "65baa912317258404018a316eed8817d6d3b2924d074c17a2ddfe32d3b7e5c54"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugComplete.uasset",
+      "sha256": "4e528a033ce5a62b62981f362f9fc0e41fd1c1edfd87a4571ee87d95b2d02611"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugFail.uasset",
+      "sha256": "08d9d0d0f40c41f93ec06fd85d41ca37c077421ed3590e43e52e3a4544c90d08"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugStart.uasset",
+      "sha256": "a67579b40bc00c767e9bd7cea8ac101f9a7df0c3b198b9889c284e9408d1d073"
+    },
+    {
+      "path": "Content/Core/Input/IA_Drop.uasset",
+      "sha256": "41e4b1e835382299086ba6ce9ed3891a7c3058cfe1a9e28a6f008b20f7246e0c"
+    },
+    {
+      "path": "Content/Core/Input/IA_Headlamp.uasset",
+      "sha256": "79303bb1fff2e1f7596abd2b0044d60f4c41eb2724fe412e7b723c4619fd546c"
+    },
+    {
+      "path": "Content/Core/Input/IA_Interact.uasset",
+      "sha256": "0739c5856960faaec56e4986b1240feda296abc4c64bf53572fbc521ecfa7d27"
+    },
+    {
+      "path": "Content/Core/Input/IA_ToggleView.uasset",
+      "sha256": "3e032a476b1a42f08cb74e328bd769c860f115c31c4f7cde2ef787f496458557"
+    },
+    {
+      "path": "Content/Core/Input/IMC_Coop.uasset",
+      "sha256": "699f95fbffb647503377eefa057bb5b148910f824323e9a093c388f2cc891959"
+    },
+    {
+      "path": "Content/Core/Input/IMC_CoopMouseLook.uasset",
+      "sha256": "a2e2ae0a450c7d1e734013fd7020188a55aae44b34550a570bca55366eeb0c81"
+    },
+    {
+      "path": "Content/Core/Input/IMC_Debug.uasset",
+      "sha256": "6f18f9b2d9ddcd4d49ee373188a4794032dfd0b1fd0ad2e0f13c294e0a49af48"
+    },
+    {
+      "path": "Content/Core/S_RoundState.uasset",
+      "sha256": "56e1b30cc6e6ffed8f3a35661a2f64964eda3fdbbea04c6a9f9a5696ec96925f"
+    },
+    {
+      "path": "Content/Maps/L_Site01.umap",
+      "sha256": "bb8f27999c77083bdbde21e059d22b6d8e694e5a72d9485f87bc10b18f21ba3f"
+    },
+    {
+      "path": "Content/Maps/L_Site02.umap",
+      "sha256": "f4506c868ed99d2b91a92a6d5bd4c2f13143d6fc9d14c8a63b7f37218ccbf25e"
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/AC_HCA3HUD.uasset",
+      "sha256": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae"
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset",
+      "sha256": "0f678dbaf22997224a39fb84e78d1fe0f882d24e12dfe96d8aaff10c695cad57"
+    },
+    {
+      "path": "Content/Puzzles/UI/WBP_InteractPrompt.uasset",
+      "sha256": "96422660ff7bc38ae54445294f2d535ff9eddd067ce53cf2521ebba29559f711"
+    },
+    {
+      "path": "CoopGame.uproject",
+      "sha256": "f1f8cb4db664fd2d3c3d4af892ead8cd887c2dc977c72668a64be1db13b0d68e"
+    }
+  ],
+  "native_assets": [
+    {
+      "path": "Content/Puzzles/BP_MapExit.uasset",
+      "worker_sha256": "b0ea362cea576a471bc259bfa1aa96ffe411ffa143a9173e9dbb7e1397bf5f31",
+      "final_sha256": "98bddc83e412d5c606c9c33f0532b15c1ef030f5495122cb1218caeb5feecdfb"
+    },
+    {
+      "path": "Content/Puzzles/Run/BP_RunCoordinator.uasset",
+      "worker_sha256": "da03e06b0ee68e83a1f8c45d111f0f537d36bf05c3fa4d5b48bfac2d924cd0b1",
+      "final_sha256": "da03e06b0ee68e83a1f8c45d111f0f537d36bf05c3fa4d5b48bfac2d924cd0b1"
+    },
+    {
+      "path": "Content/Puzzles/UI/Results/AC_RunResults.uasset",
+      "worker_sha256": "d35fa083666af40c4345bd69681091a26b9190961542778f65809ff4b927ca29",
+      "final_sha256": "177d7e6cb927ed8214bb5ac959a70c8c744a69939d5e589ce37f8c91be00093a"
+    },
+    {
+      "path": "Content/Puzzles/UI/Results/WBP_RunResults.uasset",
+      "worker_sha256": "f3ea4dda2b7a21d5e41ce8d128377d22cf8dc5a2a4a485f940a67f5916872af4",
+      "final_sha256": "f3ea4dda2b7a21d5e41ce8d128377d22cf8dc5a2a4a485f940a67f5916872af4"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM.uasset",
+      "worker_sha256": "2492ae1dc60802aafa7dc0405869631f0aa2088570c7cbc8ee400fcc93f5c1b5",
+      "final_sha256": "2492ae1dc60802aafa7dc0405869631f0aa2088570c7cbc8ee400fcc93f5c1b5"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC.uasset",
+      "worker_sha256": "fe0eb86849e6ba7cbefac9fbaba51cd5eeae792a1d7a99a8159acdc73ce02fdf",
+      "final_sha256": "b6e13837ef8b4b36f099b444417558b2047d113308ec2933928e6100bfa42795"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/IA_FixtureRestart.uasset",
+      "worker_sha256": "1ab88925dc9c89df8dc80fd11622918bd06b33bca0b2b8677944c58f5f7e070c",
+      "final_sha256": "1ab88925dc9c89df8dc80fd11622918bd06b33bca0b2b8677944c58f5f7e070c"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/IMC_FixtureRestart.uasset",
+      "worker_sha256": "a6da271ec93df586a6eeb5fbc17c5f4fc2f1bf298ccb37c2271865d78e30c0b3",
+      "final_sha256": "a6da271ec93df586a6eeb5fbc17c5f4fc2f1bf298ccb37c2271865d78e30c0b3"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_RunEnding/L_Site02.umap",
+      "worker_sha256": "52440ffe99c142f7daf8cdf909ed2c6398e8411bee7e792eb804686eae8a7f94",
+      "final_sha256": "52440ffe99c142f7daf8cdf909ed2c6398e8411bee7e792eb804686eae8a7f94"
+    }
+  ],
+  "native_graphs_match_worker_audit": true,
+  "python_syntax_checked": [
+    "Tools/unreal/hc_run_ending/audit.py",
+    "Tools/unreal/hc_run_ending/build.py",
+    "Tools/unreal/hc_run_ending/build_fixture.py",
+    "Tools/unreal/hc_run_ending/build_results.py",
+    "Tools/unreal/hc_run_ending/capture_schema.py",
+    "Tools/unreal/hc_run_ending/configure.py",
+    "Tools/unreal/hc_run_ending/discover.py",
+    "Tools/unreal/hc_run_ending/editor_loop.py",
+    "Tools/unreal/hc_run_ending/final_review.py",
+    "Tools/unreal/hc_run_ending/fixture_clear.py",
+    "Tools/unreal/hc_run_ending/fixture_spawn.py",
+    "Tools/unreal/hc_run_ending/fixtures.py",
+    "Tools/unreal/hc_run_ending/inspect.py",
+    "Tools/unreal/hc_run_ending/inspect_gm.py",
+    "Tools/unreal/hc_run_ending/primary_cleanup.py",
+    "Tools/unreal/hc_run_ending/primary_native.py",
+    "Tools/unreal/hc_run_ending/primary_runner.py",
+    "Tools/unreal/hc_run_ending/primary_save.py",
+    "Tools/unreal/hc_run_ending/record_identity.py",
+    "Tools/unreal/hc_run_ending/request.py",
+    "Tools/unreal/hc_run_ending/rpc.py",
+    "Tools/unreal/hc_run_ending/run_restore.py",
+    "Tools/unreal/hc_run_ending/run_test.py",
+    "Tools/unreal/hc_run_ending/scaffold.py",
+    "Tools/unreal/hc_run_ending/seed_fixture.py",
+    "Tools/unreal/hc_run_ending/string_types.py",
+    "Tools/unreal/hc_run_ending/test_restore.py",
+    "Tools/unreal/hc_run_ending/test_run.py"
+  ],
+  "passing_log_intervals": [
+    {
+      "gate": "clients-2",
+      "checks": 8,
+      "start_byte": 839036,
+      "end_byte": 862965,
+      "rescanned_clean": true,
+      "interval_sha256": "fe9fcf0736c2775545ae4cfabc9438b1de0df964889128dcaad79ac711e95e75"
+    },
+    {
+      "gate": "clients-3",
+      "checks": 8,
+      "start_byte": 873985,
+      "end_byte": 908647,
+      "rescanned_clean": true,
+      "interval_sha256": "457d6954e18f9600b0e91038b13d7f054f1b77252640a6e01a14bff775c3e02d"
+    },
+    {
+      "gate": "clients-4",
+      "checks": 8,
+      "start_byte": 924175,
+      "end_byte": 968839,
+      "rescanned_clean": true,
+      "interval_sha256": "3449f49be52dc329e111e15f733b9809d370bc2e2f91645f32d9d2a74ef2ffdf"
+    },
+    {
+      "gate": "host-split",
+      "checks": 13,
+      "start_byte": 805562,
+      "end_byte": 830825,
+      "rescanned_clean": true,
+      "interval_sha256": "f0c7aec4bb5357b33f503e5583ce40c953cde7b4486fd228896700406da5dfc3"
+    },
+    {
+      "gate": "restore-cleared-state",
+      "checks": 3,
+      "start_byte": 988648,
+      "end_byte": 1012504,
+      "rescanned_clean": true,
+      "interval_sha256": "49348ff2a775fdfa94dbff4c636104a05a6b3d8efa9725faf1418394f92d0fc2"
+    },
+    {
+      "gate": "primary-native",
+      "checks": 9,
+      "start_byte": 1025406,
+      "end_byte": 1063113,
+      "rescanned_clean": true,
+      "interval_sha256": "9a072d51ec3e6780fcd15115b91805e0d2f004fa97c16b982ca3213517c99395"
+    },
+    {
+      "gate": "primary-native-fresh",
+      "checks": 9,
+      "start_byte": 315680,
+      "end_byte": 356828,
+      "rescanned_clean": true,
+      "interval_sha256": "f75debf8f94ec978e0ca8a569e32722c8d56df8b14cee678b6cb6b5d149d1028"
+    }
+  ],
+  "actual_travel_tested": false,
+  "production_core_gamepad_mac_acceptance_pending": true
+}

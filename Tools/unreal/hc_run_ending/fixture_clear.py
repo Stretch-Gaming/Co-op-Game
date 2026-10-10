@@ -1,0 +1,5 @@
+exec(compile((HERE/'build.py').read_text().split('co=ue.load_asset')[0],str(HERE/'build.py'),'exec'),globals())
+gm=ue.load_asset('/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM');fn(gm,'FixtureClearTotals')
+write(gm,'FixtureClearTotals','''(fn FixtureClearTotals () (if (Networking|HasAuthority) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState)) (:then (Class|BPCoopGameState|SetRelicsCollected :self gs :RelicsCollected 0) (Class|BPCoopGameState|SetRelicsAvailable :self gs :RelicsAvailable 0)) (:CastFailed))))''')
+compile_bp(gm);assert ue.EditorAssetLibrary.save_loaded_asset(gm,False)
+(HERE/'fixture-clear.json').write_text(json.dumps({'passed':True,'fixture_only':True,'graph':BP.read_graph_dsl(BP.get_graph(gm,'FixtureClearTotals'))},indent=2))

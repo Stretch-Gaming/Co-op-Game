@@ -1,0 +1,57 @@
+{
+  "passed": false,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [],
+  "started_at": "2026-10-10 10:29:04.758341",
+  "ended_at": "2026-10-10 10:29:07.757664",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      }
+    ],
+    "complete_calls": 0
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 70, in tick\n    gs=ue.GameplayStatics.get_game_state(server());gs.set_editor_property('RelicsCollected',7);gs.set_editor_property('RelicsAvailable',19)\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: GameState: Property 'RelicsCollected' for attribute 'RelicsCollected' on 'BP_CoopGameState_C' cannot be edited on instances\n"
+}

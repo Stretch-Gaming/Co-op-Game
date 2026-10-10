@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "graph": "(fn FixtureSpawnCoordinator ()\n  (bind _returnvalue (Game|SpawnActorBPRunCoordinator \"/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C\" (Math|Transform|MakeTransform \"(X=0,Y=0,Z=300)\") \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n"
+}

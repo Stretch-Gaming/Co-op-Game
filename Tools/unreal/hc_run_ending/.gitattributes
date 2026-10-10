@@ -1,0 +1,3 @@
+* -text whitespace=cr-at-eol
+*.log whitespace=cr-at-eol,-trailing-space
+native-passing-log-intervals.txt whitespace=cr-at-eol,-trailing-space

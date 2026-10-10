@@ -1,0 +1,6 @@
+__pycache__/
+ready.json
+command.json
+command-result.json
+editor-pid.txt
+original-settings.json

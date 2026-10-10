@@ -1,0 +1,12 @@
+{
+  "pid": 21996,
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game",
+  "settings_restored": true,
+  "pie_stopped": true,
+  "dirty_content": [
+    "/Game/Puzzles/Run/BP_RunCoordinator",
+    "/Game/Core/BP_CoopPlayerController"
+  ],
+  "dirty_maps": []
+}
