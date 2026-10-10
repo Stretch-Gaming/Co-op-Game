@@ -39,4 +39,4 @@ Every feel number is a console variable in `CoopTuning.cpp` (`coop.*`), read eve
 - Lighting numbers are `coop.Cave.*` console variables, like every other feel number.
 
 ## Building in rounds
-New mechanics get their own spot in `CoopPlayground.cpp` so they can be tested in isolation with a controller. One mechanic per round. Graybox only (engine shapes, flat colors) until the human locks the metrics; then real art.
+New mechanics get their own spot in `CoopPlayground.cpp` so they can be tested in isolation with a controller. One mechanic per round. A new mechanic stays graybox (engine shapes, flat colors) until the human locks its metrics; then real art. The players and the maze's co-op moments are still graybox. The maze itself has moved on to real art: the shared style kit and HC's relics and props, migrated into `Content/` (see "Repo art" in the README). Keep each of those meshes optional (`LoadIfPresent`, with a code-built fallback), so the prototype still builds and plays without `Content/`.
