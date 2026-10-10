@@ -1,0 +1,20 @@
+{
+  "source_commit": "66a8dd272ceacf224696ceaa9790a8327a852d0f",
+  "reference_pr": 90,
+  "exporter_version": 2,
+  "components": {
+    "blocker": 7,
+    "instanced": 9,
+    "point": 81,
+    "procedural": 244,
+    "static": 575
+  },
+  "instances": 5929,
+  "convex_hulls": 3022,
+  "stations": 13,
+  "moving_pieces": 2,
+  "scene_sha256": "7c738a4c7dddfd9723073f32bedea197927dbe7999c3c62f4a456e5868535fce",
+  "uncompressed_bytes": 57842474,
+  "compressed_bytes": 7885217,
+  "license": "Team-authored project geometry and art; public redistribution permitted; no third-party assets added"
+}
