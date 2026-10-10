@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_1_L_HC4_Carrying.L_HC4_Carrying",
+      "TryPickup": false,
+      "GetCarried": null,
+      "ReleaseCarried": null,
+      "item_release": null
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_2_L_HC4_Carrying.L_HC4_Carrying",
+      "TryPickup": false,
+      "GetCarried": null,
+      "ReleaseCarried": null,
+      "item_release": null
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_3_L_HC4_Carrying.L_HC4_Carrying",
+      "TryPickup": false,
+      "GetCarried": null,
+      "ReleaseCarried": null,
+      "item_release": null
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_4_L_HC4_Carrying.L_HC4_Carrying",
+      "TryPickup": false,
+      "GetCarried": null,
+      "ReleaseCarried": null,
+      "item_release": null
+    }
+  ]
+}
