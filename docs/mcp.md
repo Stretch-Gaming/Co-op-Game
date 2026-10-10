@@ -100,6 +100,15 @@ Material building (PG-A0 style kit): `M_Stylized` has 92 expressions and was bui
 - The `EnhancedInputLocalPlayerSubsystem` objects in PIE live under `/Engine/Transient`, not under a `PIE` path. Find them with `ObjectIterator` and skip `Default__`. An injected `IA_Move` follows each client's control rotation, so the same input can send different players in different directions.
 - A `BoxComponent` with `OverlapOnlyPawn` still blocks `Visibility` line traces. Trace for `WorldStatic` objects when you want floors only.
 
+### HZ-1: struct members, pure functions and lighting, 2026-10-10
+
+- No MCP tool or editor Python call edits a user-defined struct's members. Create the struct with `StructureFactory`, open it, and drive the struct editor with `SlateInspectorToolset`. Synthetic clicks on the type picker's rows don't commit. Open the picker, `Type` the type name into its focused Search box, then `PressKey` `Down` and `Enter`. To rename a member, `Type` an empty string into its name box to focus it, `PressKey` `Ctrl+A` and `BackSpace`, then `Type` the name into the inner focused textbox with `submit: true`. `Add Variable` reuses the last type picked.
+- A Blueprint function's Pure flag isn't reachable from Python or `ObjectTools` (`ExtraFlags` is hidden). Double-click the function in My Blueprint with `SlateInspectorToolset`, then `Click` the Pure checkbox in Details.
+- The cave prototype's sun had every lighting channel off, and its enclosure didn't cast shadows, so the sun lit nothing. Check `lighting_channels` and `cast_shadow` before blaming a light.
+- `CaptureViewport` in the editor still draws actors that are only hidden in game, and their shadows. Turn on game view, or run Simulate, before judging light.
+- `EditorLevelLibrary.get_pie_worlds(True)` includes the dedicated server's world. A test change made only in the client worlds is undone by server corrections.
+- Python can't read which `PlayerController` owns an `EnhancedInputLocalPlayerSubsystem`. Nudge `IA_Move` through each subsystem in turn and see whose pawn moves.
+
 ## Working with the agent
 
 - **Good agent work:** blocking out rooms from the layout doc, placing and labeling actors, setting properties and defaults, material instances, data table rows, and scaffolding Blueprints (assets, components, variables, empty functions).
