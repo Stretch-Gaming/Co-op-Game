@@ -47,7 +47,13 @@ Not chosen:
 
 ### Setting up the free tools
 
-- **Blender MCP:** install Blender and [uv](https://docs.astral.sh/uv/), then run `claude mcp add blender uvx mcp-for-blender` and `uvx mcp-for-blender install-addon`. Enable the add-on in Blender's preferences, then start the server from the MCP for Blender tab (press N in the 3D viewport). Like Unreal MCP, its server has no authentication: keep it on your own machine, and save your Blender file before letting an agent run code in it.
+- **Blender MCP.** Set up and tested on PK's Mac on Oct 9 with Blender 5.2.2 and `mcp-for-blender` 2.1.9:
+  1. Install Blender and [uv](https://docs.astral.sh/uv/). On a Mac: `brew install --cask blender` and `brew install uv`. On Windows: `winget install BlenderFoundation.Blender` and `winget install astral-sh.uv`.
+  2. Install the Blender add-on with `uvx mcp-for-blender install-addon`, then turn on **Interface: MCP for Blender** in Blender's Preferences → Add-ons.
+  3. Register it with your agent, with its anonymous usage telemetry off. Claude Code: `claude mcp add --scope user blender -e DISABLE_TELEMETRY=true -- uvx mcp-for-blender`. Codex: `codex mcp add blender --env BLENDER_MCP_APPS=1 --env BLENDER_MCP_OPENAI_FORMS=1 --env DISABLE_TELEMETRY=true -- uvx mcp-for-blender`. (`uvx mcp-for-blender setup` adds it to every agent app it finds; run it with `--dry-run` first to see which.)
+  4. Open Blender. The add-on starts its server on `localhost:9876` by itself; the MCP for Blender tab (press N in the 3D viewport) has Start and Stop. Then start your agent: `claude mcp list` should show `blender` as connected.
+
+  Like Unreal MCP, the server has no authentication, so keep it on your own machine, and save your Blender file before letting an agent run code in it. The add-on's own telemetry, which would send prompts and screenshots, stays off unless you opt in.
 - **trellis-mac:** follow its README. It needs about 15 GB for the model weights, a Hugging Face login, and approved access to the gated DINOv3 model. Give it PNGs whose backgrounds are already transparent, and on the first run check its output that the background remover was skipped. Its meshes have about 200K faces and can have small holes: fill the holes in Blender (Mesh → Clean Up → Fill Holes, or a voxel remesh), then let the cleanup script decimate with `--target-triangles`.
 
 Import presets: _to be filled in by PG-A0 once the Unreal project exists._
