@@ -112,10 +112,10 @@ Every turn that opens or updates a pull request runs exactly one Codex review, a
 1. Fetch `origin`, then review the branch against `main`:
 
    ```sh
-   codex exec --color never -c model_reasoning_effort="high" -o <scratch>/codex-review.md review --base origin/main
+   codex exec --color never -m gpt-6.1-sol -c model_reasoning_effort="high" -o <scratch>/codex-review.md review --base origin/main
    ```
 
-   To give Codex extra instructions, drop `--base` and say the scope in the prompt instead, such as `review "Review this branch against origin/main. <extra>"`. The two can't be combined.
+   Always pin `gpt-6.1-sol` at high effort, whatever `~/.codex/config.toml` says. To give Codex extra instructions, drop `--base` and say the scope in the prompt instead, such as `review "Review this branch against origin/main. <extra>"`. The two can't be combined.
 2. Check every finding against the code as it is now. Mark it **confirmed** (name what triggers it and quote the line), **plausible** (the mechanism is real but the trigger is uncertain) or **refuted** (quote the line that disproves it).
 3. Fix confirmed findings that are low-risk and commit the fixes. Leave plausible and risky ones for the author to decide.
 4. Put the result in the pull request body: the confirmed and plausible findings, what was fixed, and a count like `5 raw -> 2 confirmed / 1 plausible / 2 refuted`.
