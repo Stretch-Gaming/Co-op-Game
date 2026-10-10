@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "preserved_upstream_actors": {
+    "BP_TestInteractable_C_0": {
+      "label": "HC1_Instant",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        -600.0,
+        100.0
+      ]
+    },
+    "BP_TestInteractable_C_1": {
+      "label": "HC1_Timed",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        0.0,
+        100.0
+      ]
+    },
+    "BP_TestInteractable_C_2": {
+      "label": "HC1_Continuous",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        600.0,
+        100.0
+      ]
+    }
+  },
+  "added_hc_a2_actors": [
+    "BP_HCA2_Plate_Diamond_C_0",
+    "BP_HCA2_Plate_Circle_C_0",
+    "BP_HCA2_Plate_Triangle_C_0",
+    "BP_HCA2_Plate_Cross_C_0",
+    "StaticMeshActor_0",
+    "StaticMeshActor_1",
+    "StaticMeshActor_2",
+    "StaticMeshActor_3",
+    "BP_HCA2_ChamberGate_C_0",
+    "BP_HCA2_ChamberGate_C_1",
+    "BP_HCA2_ChamberGate_C_2"
+  ],
+  "resolution": "Retained upstream map in Git; added only HC-A2 actors through the editor. No binary text merge or older-map replacement."
+}

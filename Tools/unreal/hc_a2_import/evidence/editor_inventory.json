@@ -1,0 +1,26 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a2-import-tools\\Co op Game\\CoopGame.uproject",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "puzzle_assets": [
+    "/Game/Puzzles/DT_RoundScaling",
+    "/Game/Puzzles/L_Site01_HC",
+    "/Game/Puzzles/S_RoundScaling",
+    "/Game/Puzzles/Test/BP_HC0ContractProbe"
+  ],
+  "apis": {
+    "KBoxElem": true,
+    "KAggregateGeom": true,
+    "EditorAssetLibrary": true,
+    "StaticMeshEditorSubsystem": true,
+    "SubobjectDataSubsystem": true,
+    "BlueprintEditorLibrary": true,
+    "AutomationLibrary": true
+  },
+  "status": "passed",
+  "actor_counts_by_level": {
+    "/Game/Maps/L_Site01": 4,
+    "/Game/Hazards/L_Site01_HZ": 329,
+    "/Game/Player/L_Site01_PG": 7
+  },
+  "initial_hc_actors": []
+}

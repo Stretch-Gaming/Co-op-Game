@@ -1,0 +1,27 @@
+test_all_real_sources_match_manifest (test_safety.SafetyTests.test_all_real_sources_match_manifest) ... ok
+test_assembly_and_nanite_changes_refused (test_safety.SafetyTests.test_assembly_and_nanite_changes_refused) ... ok
+test_default_editor_dry_run_is_read_only (test_safety.SafetyTests.test_default_editor_dry_run_is_read_only) ... ok
+test_default_offline_is_read_only (test_safety.SafetyTests.test_default_offline_is_read_only) ... ok
+test_execute_requires_absolute_project (test_safety.SafetyTests.test_execute_requires_absolute_project) ... ok
+test_execute_requires_editor (test_safety.SafetyTests.test_execute_requires_editor) ... ok
+test_existing_assets_refuse_whole_execution_batch (test_safety.SafetyTests.test_existing_assets_refuse_whole_execution_batch) ... ok
+test_false_setter_return_with_correct_override_is_accepted (test_safety.SafetyTests.test_false_setter_return_with_correct_override_is_accepted) ... ok
+test_lfs_pointer_refused (test_safety.SafetyTests.test_lfs_pointer_refused) ... ok
+test_manifest_destination_escape_refused (test_safety.SafetyTests.test_manifest_destination_escape_refused) ... ok
+test_manifest_source_or_hash_change_refused (test_safety.SafetyTests.test_manifest_source_or_hash_change_refused) ... ok
+test_metadata_hash_change_refused (test_safety.SafetyTests.test_metadata_hash_change_refused) ... ok
+test_missing_actual_override_is_rejected (test_safety.SafetyTests.test_missing_actual_override_is_rejected) ... ok
+test_missing_tint_or_translucent_parent_refused (test_safety.SafetyTests.test_missing_tint_or_translucent_parent_refused) ... ok
+test_no_statue_selection_or_gate_bbox_confusion (test_safety.SafetyTests.test_no_statue_selection_or_gate_bbox_confusion) ... ok
+test_offline_wrong_project_argument_refused (test_safety.SafetyTests.test_offline_wrong_project_argument_refused) ... ok
+test_palette_conversion_uses_linear_color (test_safety.SafetyTests.test_palette_conversion_uses_linear_color) ... ok
+test_unregistered_disk_asset_is_refused (test_safety.SafetyTests.test_unregistered_disk_asset_is_refused) ... ok
+test_wrong_engine_refused (test_safety.SafetyTests.test_wrong_engine_refused) ... ok
+test_wrong_explicit_project_refused (test_safety.SafetyTests.test_wrong_explicit_project_refused) ... ok
+test_wrong_open_project_refused_before_creation (test_safety.SafetyTests.test_wrong_open_project_refused_before_creation) ... ok
+test_wrong_tint_readback_is_rejected (test_safety.SafetyTests.test_wrong_tint_readback_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.820s
+
+OK

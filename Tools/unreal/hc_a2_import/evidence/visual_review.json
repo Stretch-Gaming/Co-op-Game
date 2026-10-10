@@ -1,0 +1,14 @@
+{
+  "test_gallery": "four symbols distinguishable at actual 800x450 capture; both statue sizes and altar geometry preserved",
+  "lighting_limit": "gallery amber light is strong and closed gate overlit; not a final cave-light approval",
+  "main_gate_g1": "too dark; failed visual readiness",
+  "main_altar": "outside usable enclosing cavern at documented coordinate; failed visual readiness",
+  "split_screen": "two local views confirmed; players fall at planned puzzle positions; failed main-map floor readiness",
+  "mac": "not run",
+  "remaining": [
+    "HZ floor/cavern/lighting integration at documented coordinates",
+    "HZ rock enclosure of gate upper leaf through Z850",
+    "Mac appearance/fallback review",
+    "consumer HC gameplay hookup in HC-4/5/6"
+  ]
+}

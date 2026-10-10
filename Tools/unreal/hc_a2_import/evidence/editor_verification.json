@@ -1,0 +1,231 @@
+{
+  "mesh_readback": [
+    {
+      "name": "SM_PressurePlate_Base",
+      "dimensions_cm": [
+        200.00003051757812,
+        200.00003051757812,
+        11.189067840576172
+      ],
+      "nanite": false,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top",
+      "dimensions_cm": [
+        179.8611297607422,
+        179.7790985107422,
+        14.682856559753418
+      ],
+      "nanite": false,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Circle",
+      "dimensions_cm": [
+        179.92648315429688,
+        179.91070556640625,
+        14.66369915008545
+      ],
+      "nanite": false,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Triangle",
+      "dimensions_cm": [
+        179.75531005859375,
+        179.484130859375,
+        14.733394622802734
+      ],
+      "nanite": false,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Cross",
+      "dimensions_cm": [
+        179.80389404296875,
+        179.93617248535156,
+        15.22839069366455
+      ],
+      "nanite": false,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_Statue",
+      "dimensions_cm": [
+        105.17275619506836,
+        103.48447799682617,
+        180.0
+      ],
+      "nanite": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_Statue_Small",
+      "dimensions_cm": [
+        64.27225112915039,
+        63.240522384643555,
+        110.0
+      ],
+      "nanite": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_Altar",
+      "dimensions_cm": [
+        120.0000228881836,
+        120.0000228881836,
+        100.30500030517578
+      ],
+      "nanite": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_ChamberGate_Frame",
+      "dimensions_cm": [
+        156.00009155273438,
+        708.8223876953125,
+        511.2001037597656
+      ],
+      "nanite": true,
+      "simple_collision_count": 8
+    },
+    {
+      "name": "SM_ChamberGate_Leaf",
+      "dimensions_cm": [
+        30.399991989135742,
+        430.0000305175781,
+        450.0
+      ],
+      "nanite": true,
+      "simple_collision_count": 1
+    }
+  ],
+  "pose_checks": [
+    {
+      "label": "HC_A2_Test_Diamond",
+      "raised_z_cm": 9.0,
+      "pressed_z_cm": 2.0
+    },
+    {
+      "label": "HC_A2_Test_Circle",
+      "raised_z_cm": 9.0,
+      "pressed_z_cm": 2.0
+    },
+    {
+      "label": "HC_A2_Test_Triangle",
+      "raised_z_cm": 9.0,
+      "pressed_z_cm": 2.0
+    },
+    {
+      "label": "HC_A2_Test_Cross",
+      "raised_z_cm": 9.0,
+      "pressed_z_cm": 2.0
+    },
+    {
+      "label": "HC_A2_Test_Gate_Closed",
+      "closed_z_cm": 0.0,
+      "open_z_cm": 400.0
+    },
+    {
+      "label": "HC_A2_Test_Gate_Open",
+      "closed_z_cm": 0.0,
+      "open_z_cm": 400.0
+    }
+  ],
+  "physics_checks": [
+    {
+      "label": "HC_A2_Test_Diamond",
+      "raised_surface_cm": 23.682856,
+      "pressed_surface_cm": 16.682856
+    },
+    {
+      "label": "HC_A2_Test_Circle",
+      "raised_surface_cm": 23.663698,
+      "pressed_surface_cm": 16.663699
+    },
+    {
+      "label": "HC_A2_Test_Triangle",
+      "raised_surface_cm": 23.733399,
+      "pressed_surface_cm": 16.7334
+    },
+    {
+      "label": "HC_A2_Test_Cross",
+      "raised_surface_cm": 24.228396,
+      "pressed_surface_cm": 17.228396
+    },
+    {
+      "label": "HC_A2_Test_Gate_Closed",
+      "closed_blocks_pawn_size_sweep": true,
+      "open_passage_clear": true
+    },
+    {
+      "label": "HC_A2_Test_Gate_Open",
+      "closed_blocks_pawn_size_sweep": true,
+      "open_passage_clear": true
+    },
+    {
+      "label": "altar socket",
+      "simple_surface_z_cm": 97.0
+    }
+  ],
+  "gate_envelope": [
+    {
+      "label": "HC_A2_Gate_G1",
+      "samples": [
+        {
+          "z_cm": 525,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 650,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 825,
+          "rock_hit_along_x": false
+        }
+      ],
+      "status": "requires visual envelope review; these rays do not alone prove complete leaf concealment"
+    },
+    {
+      "label": "HC_A2_Gate_G2",
+      "samples": [
+        {
+          "z_cm": 525,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 650,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 825,
+          "rock_hit_along_x": false
+        }
+      ],
+      "status": "requires visual envelope review; these rays do not alone prove complete leaf concealment"
+    },
+    {
+      "label": "HC_A2_Gate_G3",
+      "samples": [
+        {
+          "z_cm": 525,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 650,
+          "rock_hit_along_x": false
+        },
+        {
+          "z_cm": 825,
+          "rock_hit_along_x": false
+        }
+      ],
+      "status": "requires visual envelope review; these rays do not alone prove complete leaf concealment"
+    }
+  ],
+  "site_placements_in_HC_only": 11,
+  "pie_settings_before": "{\"PlayNetMode\":\"PIE_Standalone\",\"PlayNumberOfClients\":1,\"RunUnderOneProcess\":true,\"ServerPort\":17777}",
+  "status": "passed"
+}

@@ -1,0 +1,1214 @@
+{
+  "status": "passed",
+  "segments": [
+    {
+      "name": "prototype_exit",
+      "from_xy_cm": [
+        1100,
+        0
+      ],
+      "to_xy_cm": [
+        1500,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            1100,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1100.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1100.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1100.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1100.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1200.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1300.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1300.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1300.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1300.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1300.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1400.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1400.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1400.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1400.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1400.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1500,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "passage",
+      "from_xy_cm": [
+        1500,
+        0
+      ],
+      "to_xy_cm": [
+        2200,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            1500,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1675.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1675.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1675.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1675.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1675.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            1850.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=1850.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=1850.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=1850.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=1850.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2025.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2025.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2025.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2025.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2025.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "G1",
+      "from_xy_cm": [
+        2200,
+        0
+      ],
+      "to_xy_cm": [
+        2800,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            2200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2350.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2350.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2350.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2350.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2350.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2500.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2650.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2650.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2650.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2650.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2650.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            2800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "hall",
+      "from_xy_cm": [
+        2800,
+        0
+      ],
+      "to_xy_cm": [
+        5200,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            2800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=2800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=2800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=2800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=2800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3400.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3400.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=3400.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3400.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=3400.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4000.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4000.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4000.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4000.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4000.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4600.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4600.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4600.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4600.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4600.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            5200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "G2",
+      "from_xy_cm": [
+        5200,
+        0
+      ],
+      "to_xy_cm": [
+        5800,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            5200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            5350.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5350.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5350.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5350.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5350.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            5500.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            5650.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5650.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5650.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5650.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5650.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            5800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "trap_corridor",
+      "from_xy_cm": [
+        5800,
+        0
+      ],
+      "to_xy_cm": [
+        8300,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            5800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=5800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=5800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=5800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=5800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            6425.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=6425.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=6425.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=6425.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=6425.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            7050.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=7050.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=7050.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=7050.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=7050.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            7675.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=7675.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=7675.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=7675.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=7675.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            8300,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8300.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8300.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8300.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8300.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_entrance",
+      "from_xy_cm": [
+        8300,
+        0
+      ],
+      "to_xy_cm": [
+        8800,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            8300,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8300.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8300.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8300.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8300.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            8425.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8425.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8425.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8425.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8425.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=2,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            8550.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8550.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8550.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8550.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8550.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            8675.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8675.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8675.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8675.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8675.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            8800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_west",
+      "from_xy_cm": [
+        8800,
+        0
+      ],
+      "to_xy_cm": [
+        10300,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            8800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=8800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=8800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=8800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=8800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            9175.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=9175.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=9175.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=9175.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=9175.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            9550.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=9550.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=9550.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=9550.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=9550.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            9925.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=9925.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=9925.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=9925.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=9925.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10300,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10300.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=10300.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10300.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=10300.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_bypass_west",
+      "from_xy_cm": [
+        10300,
+        0
+      ],
+      "to_xy_cm": [
+        10500,
+        300
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            10300,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10300.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=10300.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10300.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=10300.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10350.0,
+            75.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10350.000000,Y=75.000000,Z=-0.000001),ImpactPoint=(X=10350.000000,Y=75.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10350.000000,Y=75.000000,Z=80.000000),TraceEnd=(X=10350.000000,Y=75.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10400.0,
+            150.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10400.000000,Y=150.000000,Z=-0.000001),ImpactPoint=(X=10400.000000,Y=150.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10400.000000,Y=150.000000,Z=80.000000),TraceEnd=(X=10400.000000,Y=150.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10450.0,
+            225.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10450.000000,Y=225.000000,Z=-0.000001),ImpactPoint=(X=10450.000000,Y=225.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10450.000000,Y=225.000000,Z=80.000000),TraceEnd=(X=10450.000000,Y=225.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10500,
+            300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10500.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=10500.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10500.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=10500.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_bypass",
+      "from_xy_cm": [
+        10500,
+        300
+      ],
+      "to_xy_cm": [
+        11100,
+        300
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            10500,
+            300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10500.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=10500.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10500.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=10500.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10650.0,
+            300.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10650.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=10650.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10650.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=10650.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10800.0,
+            300.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10800.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=10800.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10800.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=10800.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            10950.0,
+            300.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=10950.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=10950.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=10950.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=10950.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11100,
+            300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11100.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=11100.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11100.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=11100.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_bypass_east",
+      "from_xy_cm": [
+        11100,
+        300
+      ],
+      "to_xy_cm": [
+        11200,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            11100,
+            300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11100.000000,Y=300.000000,Z=-0.000001),ImpactPoint=(X=11100.000000,Y=300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11100.000000,Y=300.000000,Z=80.000000),TraceEnd=(X=11100.000000,Y=300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11125.0,
+            225.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11125.000000,Y=225.000000,Z=-0.000001),ImpactPoint=(X=11125.000000,Y=225.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11125.000000,Y=225.000000,Z=80.000000),TraceEnd=(X=11125.000000,Y=225.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11150.0,
+            150.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11150.000000,Y=150.000000,Z=-0.000001),ImpactPoint=(X=11150.000000,Y=150.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11150.000000,Y=150.000000,Z=80.000000),TraceEnd=(X=11150.000000,Y=150.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11175.0,
+            75.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11175.000000,Y=75.000000,Z=-0.000001),ImpactPoint=(X=11175.000000,Y=75.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11175.000000,Y=75.000000,Z=80.000000),TraceEnd=(X=11175.000000,Y=75.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "G3",
+      "from_xy_cm": [
+        11200,
+        0
+      ],
+      "to_xy_cm": [
+        11700,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            11200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11325.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11325.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11325.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11325.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11325.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11450.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11450.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11450.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11450.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11450.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11575.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11575.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11575.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11575.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11575.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11700,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11700.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11700.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11700.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11700.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "G3_landing",
+      "from_xy_cm": [
+        11700,
+        0
+      ],
+      "to_xy_cm": [
+        11800,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            11700,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11700.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11700.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11700.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11700.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11725.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11725.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11725.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11725.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11725.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11750.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11750.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11750.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11750.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11750.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11775.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11775.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11775.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11775.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11775.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=4,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "plate_3200_-650",
+      "from_xy_cm": [
+        3200,
+        0
+      ],
+      "to_xy_cm": [
+        3200,
+        -650
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            3200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            -162.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=-162.500000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=-162.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=-162.500000,Z=80.000000),TraceEnd=(X=3200.000000,Y=-162.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            -325.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=-325.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=-325.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=-325.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=-325.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            -487.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=-487.500000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=-487.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=-487.500000,Z=80.000000),TraceEnd=(X=3200.000000,Y=-487.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200,
+            -650
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=-650.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=-650.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=-650.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=-650.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "plate_3200_650",
+      "from_xy_cm": [
+        3200,
+        0
+      ],
+      "to_xy_cm": [
+        3200,
+        650
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            3200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            162.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=162.500000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=162.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=162.500000,Z=80.000000),TraceEnd=(X=3200.000000,Y=162.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            325.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=325.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=325.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=325.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=325.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200.0,
+            487.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=487.500000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=487.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=487.500000,Z=80.000000),TraceEnd=(X=3200.000000,Y=487.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3200,
+            650
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3200.000000,Y=650.000000,Z=-0.000001),ImpactPoint=(X=3200.000000,Y=650.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3200.000000,Y=650.000000,Z=80.000000),TraceEnd=(X=3200.000000,Y=650.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "plate_4800_-650",
+      "from_xy_cm": [
+        4800,
+        0
+      ],
+      "to_xy_cm": [
+        4800,
+        -650
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            -162.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=-162.500000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=-162.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=-162.500000,Z=80.000000),TraceEnd=(X=4800.000000,Y=-162.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            -325.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=-325.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=-325.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=-325.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=-325.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            -487.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=-487.500000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=-487.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=-487.500000,Z=80.000000),TraceEnd=(X=4800.000000,Y=-487.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800,
+            -650
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=-650.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=-650.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=-650.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=-650.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "plate_4800_650",
+      "from_xy_cm": [
+        4800,
+        0
+      ],
+      "to_xy_cm": [
+        4800,
+        650
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4800,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            162.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=162.500000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=162.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=162.500000,Z=80.000000),TraceEnd=(X=4800.000000,Y=162.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            325.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=325.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=325.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=325.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=325.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800.0,
+            487.5
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=487.500000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=487.500000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=487.500000,Z=80.000000),TraceEnd=(X=4800.000000,Y=487.500000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4800,
+            650
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4800.000000,Y=650.000000,Z=-0.000001),ImpactPoint=(X=4800.000000,Y=650.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4800.000000,Y=650.000000,Z=80.000000),TraceEnd=(X=4800.000000,Y=650.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_3500_approach",
+      "from_xy_cm": [
+        3500,
+        0
+      ],
+      "to_xy_cm": [
+        3650,
+        1100
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            3500,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=3500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=3500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3537.5,
+            275.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3537.500000,Y=275.000000,Z=-0.000001),ImpactPoint=(X=3537.500000,Y=275.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3537.500000,Y=275.000000,Z=80.000000),TraceEnd=(X=3537.500000,Y=275.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3575.0,
+            550.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3575.000000,Y=550.000000,Z=-0.000001),ImpactPoint=(X=3575.000000,Y=550.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3575.000000,Y=550.000000,Z=80.000000),TraceEnd=(X=3575.000000,Y=550.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3612.5,
+            825.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3612.500000,Y=825.000000,Z=-0.000001),ImpactPoint=(X=3612.500000,Y=825.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3612.500000,Y=825.000000,Z=80.000000),TraceEnd=(X=3612.500000,Y=825.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3650,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_3500_front",
+      "from_xy_cm": [
+        3650,
+        1100
+      ],
+      "to_xy_cm": [
+        3650,
+        1300
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            3650,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3650.0,
+            1150.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1150.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1150.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1150.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1150.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3650.0,
+            1200.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1200.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1200.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1200.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1200.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3650.0,
+            1250.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1250.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1250.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1250.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1250.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            3650,
+            1300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=3650.000000,Y=1300.000000,Z=-0.000001),ImpactPoint=(X=3650.000000,Y=1300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=3650.000000,Y=1300.000000,Z=80.000000),TraceEnd=(X=3650.000000,Y=1300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_4000_approach",
+      "from_xy_cm": [
+        4000,
+        0
+      ],
+      "to_xy_cm": [
+        4150,
+        1100
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4000,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4000.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4000.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4000.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4000.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4037.5,
+            275.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4037.500000,Y=275.000000,Z=-0.000001),ImpactPoint=(X=4037.500000,Y=275.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4037.500000,Y=275.000000,Z=80.000000),TraceEnd=(X=4037.500000,Y=275.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4075.0,
+            550.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4075.000000,Y=550.000000,Z=-0.000001),ImpactPoint=(X=4075.000000,Y=550.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4075.000000,Y=550.000000,Z=80.000000),TraceEnd=(X=4075.000000,Y=550.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4112.5,
+            825.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4112.500000,Y=825.000000,Z=-0.000001),ImpactPoint=(X=4112.500000,Y=825.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4112.500000,Y=825.000000,Z=80.000000),TraceEnd=(X=4112.500000,Y=825.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4150,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_4000_front",
+      "from_xy_cm": [
+        4150,
+        1100
+      ],
+      "to_xy_cm": [
+        4150,
+        1300
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4150,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4150.0,
+            1150.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1150.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1150.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1150.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1150.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4150.0,
+            1200.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1200.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1200.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1200.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1200.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4150.0,
+            1250.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1250.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1250.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1250.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1250.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4150,
+            1300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4150.000000,Y=1300.000000,Z=-0.000001),ImpactPoint=(X=4150.000000,Y=1300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4150.000000,Y=1300.000000,Z=80.000000),TraceEnd=(X=4150.000000,Y=1300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_4500_approach",
+      "from_xy_cm": [
+        4500,
+        0
+      ],
+      "to_xy_cm": [
+        4650,
+        1100
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4500,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4500.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=4500.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4500.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=4500.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4537.5,
+            275.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4537.500000,Y=275.000000,Z=-0.000001),ImpactPoint=(X=4537.500000,Y=275.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4537.500000,Y=275.000000,Z=80.000000),TraceEnd=(X=4537.500000,Y=275.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4575.0,
+            550.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4575.000000,Y=550.000000,Z=-0.000001),ImpactPoint=(X=4575.000000,Y=550.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4575.000000,Y=550.000000,Z=80.000000),TraceEnd=(X=4575.000000,Y=550.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4612.5,
+            825.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4612.500000,Y=825.000000,Z=-0.000001),ImpactPoint=(X=4612.500000,Y=825.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4612.500000,Y=825.000000,Z=80.000000),TraceEnd=(X=4612.500000,Y=825.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4650,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "statue_4500_front",
+      "from_xy_cm": [
+        4650,
+        1100
+      ],
+      "to_xy_cm": [
+        4650,
+        1300
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            4650,
+            1100
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1100.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1100.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1100.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1100.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4650.0,
+            1150.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1150.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1150.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1150.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1150.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4650.0,
+            1200.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1200.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1200.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1200.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1200.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4650.0,
+            1250.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1250.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1250.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1250.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1250.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            4650,
+            1300
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=4650.000000,Y=1300.000000,Z=-0.000001),ImpactPoint=(X=4650.000000,Y=1300.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=4650.000000,Y=1300.000000,Z=80.000000),TraceEnd=(X=4650.000000,Y=1300.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=1,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    },
+    {
+      "name": "altar_front",
+      "from_xy_cm": [
+        11200,
+        0
+      ],
+      "to_xy_cm": [
+        11000,
+        0
+      ],
+      "pawn_box_clear": true,
+      "blocking_hit": null,
+      "floor_samples": [
+        {
+          "xy_cm": [
+            11200,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11200.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11200.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11200.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11200.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11150.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11150.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11150.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11150.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11150.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11100.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11100.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11100.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11100.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11100.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11050.0,
+            0.0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11050.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11050.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11050.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11050.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        },
+        {
+          "xy_cm": [
+            11000,
+            0
+          ],
+          "hit": "(FaceIndex=-1,Time=0.347826,Distance=80.000000,Location=(X=11000.000000,Y=0.000000,Z=-0.000001),ImpactPoint=(X=11000.000000,Y=0.000000,Z=0.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=11000.000000,Y=0.000000,Z=80.000000),TraceEnd=(X=11000.000000,Y=0.000000,Z=-150.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=3,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+        }
+      ]
+    }
+  ],
+  "pawn_half_extent_cm": [
+    34,
+    34,
+    88
+  ],
+  "pawn_center_z_cm": 100,
+  "all_gates_temporarily_open": true,
+  "gate_poses_restored": true,
+  "packages_saved": false
+}

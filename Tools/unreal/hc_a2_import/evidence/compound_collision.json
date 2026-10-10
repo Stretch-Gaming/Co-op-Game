@@ -1,0 +1,207 @@
+{
+  "status": "passed",
+  "plans": [
+    {
+      "mesh": "SM_Statue",
+      "boxes": [
+        {
+          "min_cm": [
+            -52.0,
+            -51.0,
+            0
+          ],
+          "max_cm": [
+            52.0,
+            51.0,
+            60.0
+          ]
+        },
+        {
+          "min_cm": [
+            -43.0,
+            -47.0,
+            60.0
+          ],
+          "max_cm": [
+            43.0,
+            47.0,
+            180.0
+          ]
+        }
+      ],
+      "simple_collision_count": 2,
+      "saved": true
+    },
+    {
+      "mesh": "SM_Statue_Small",
+      "boxes": [
+        {
+          "min_cm": [
+            -31.77777777777778,
+            -31.166666666666668,
+            0
+          ],
+          "max_cm": [
+            31.77777777777778,
+            31.166666666666668,
+            36.66666666666667
+          ]
+        },
+        {
+          "min_cm": [
+            -26.27777777777778,
+            -28.722222222222225,
+            36.66666666666667
+          ],
+          "max_cm": [
+            26.27777777777778,
+            28.722222222222225,
+            110.00000000000001
+          ]
+        }
+      ],
+      "simple_collision_count": 2,
+      "saved": true
+    },
+    {
+      "mesh": "SM_Altar",
+      "boxes": [
+        {
+          "min_cm": [
+            -40,
+            -40,
+            0
+          ],
+          "max_cm": [
+            40,
+            40,
+            76
+          ]
+        },
+        {
+          "min_cm": [
+            -45,
+            -45,
+            76
+          ],
+          "max_cm": [
+            45,
+            45,
+            97
+          ]
+        }
+      ],
+      "simple_collision_count": 2,
+      "saved": true
+    },
+    {
+      "mesh": "SM_ChamberGate_Frame",
+      "boxes": [
+        {
+          "min_cm": [
+            -65,
+            -300,
+            0
+          ],
+          "max_cm": [
+            -17,
+            -200,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            17,
+            -300,
+            0
+          ],
+          "max_cm": [
+            65,
+            -200,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            -17,
+            -300,
+            0
+          ],
+          "max_cm": [
+            17,
+            -218,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            -65,
+            200,
+            0
+          ],
+          "max_cm": [
+            -17,
+            300,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            17,
+            200,
+            0
+          ],
+          "max_cm": [
+            65,
+            300,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            -17,
+            218,
+            0
+          ],
+          "max_cm": [
+            17,
+            300,
+            400
+          ]
+        },
+        {
+          "min_cm": [
+            -65,
+            -330,
+            400
+          ],
+          "max_cm": [
+            -17,
+            330,
+            511.2
+          ]
+        },
+        {
+          "min_cm": [
+            17,
+            -330,
+            400
+          ],
+          "max_cm": [
+            65,
+            330,
+            511.2
+          ]
+        }
+      ],
+      "simple_collision_count": 8,
+      "saved": true
+    }
+  ],
+  "notes": [
+    "Gate posts/lintel split around X +/-17 cm slot; Y +/-200 cm, Z0..400 cm passage clear.",
+    "Gate core starts at Y +/-218 cm; 430 cm leaf ends at +/-215 cm.",
+    "Altar cap collision top at Z97 cm keeps relic socket base accessible; pedestal collision is coarse.",
+    "Both statue sizes have independently scaled plinth/owl boxes; all gameplay uses simple collision."
+  ]
+}

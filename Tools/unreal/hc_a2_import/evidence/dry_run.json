@@ -1,0 +1,333 @@
+{
+  "mode": "dry-run",
+  "source_validation": "passed",
+  "assets": [
+    {
+      "name": "SM_PressurePlate_Base",
+      "source_sha256": "badd7ce55aee0a8b747c72867b1a0a75bc924367b6d012516f1c9a1ff2b302da",
+      "bytes": 84956,
+      "triangles": 1852,
+      "dimensions_cm": [
+        200.0,
+        200.0,
+        11.1891
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_PressurePlate_Top",
+      "source_sha256": "44eeb13dca2a6780efcd41858226d62e60e6f9ecd5aadfdf8be74fd30aaf20a5",
+      "bytes": 58508,
+      "triangles": 1024,
+      "dimensions_cm": [
+        179.8611,
+        179.7791,
+        14.6829
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_PressurePlate_Top_Circle",
+      "source_sha256": "1b7f5523651b57982c46d02bf4ba7ee724dceb19134443bcb42de77867c915a7",
+      "bytes": 86588,
+      "triangles": 1690,
+      "dimensions_cm": [
+        179.9265,
+        179.9107,
+        14.6637
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_PressurePlate_Top_Triangle",
+      "source_sha256": "192f9a19bbaec2092282c36d3b1328f663aca929b1496fd8989dce245a7ac0e7",
+      "bytes": 57228,
+      "triangles": 938,
+      "dimensions_cm": [
+        179.7553,
+        179.4842,
+        14.7334
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_PressurePlate_Top_Cross",
+      "source_sha256": "2f128a6b878e5cd44e7ec6132d30fb1229117e80850635fdbbc33865436f5283",
+      "bytes": 58172,
+      "triangles": 1006,
+      "dimensions_cm": [
+        179.8039,
+        179.9362,
+        15.2284
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_Statue",
+      "source_sha256": "92424e3791c856872ea9679128cd6d815332bda246442e4b7e382120daa1eb91",
+      "bytes": 339692,
+      "triangles": 8138,
+      "dimensions_cm": [
+        105.1728,
+        103.4845,
+        180.0
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving",
+        "M_Rope"
+      ],
+      "nanite": true,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: plinth box plus owl capsule or box; preserve sling silhouette. Verify carry/placement collision later.",
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_Statue_Small",
+      "source_sha256": "7c3aad0a65bbc78f513b70cda846178f7acd11b0ef057866a030900608e48d6b",
+      "bytes": 339420,
+      "triangles": 8138,
+      "dimensions_cm": [
+        64.2722,
+        63.2405,
+        110.0
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving",
+        "M_Rope"
+      ],
+      "nanite": true,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Statue_Small",
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: independently fitted plinth box plus owl capsule or box at 1.1 m; do not reuse 1.8 m hull unscaled.",
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_Altar",
+      "source_sha256": "6ddeec1e0139a1632f2c10a798be7363dd6258f22ab86a91a2693c6ee9549e27",
+      "bytes": 114780,
+      "triangles": 2394,
+      "dimensions_cm": [
+        120.0,
+        120.0,
+        100.305
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: two fitted boxes for pedestal and capstone; check 40 cm socket and relic base at Z=97. A capstone box must not block required relic interaction.",
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_ChamberGate_Frame",
+      "source_sha256": "62cfa5d8774cb1126f5db9bcde9a8e90d2ec570a3d99ba2e8a0597c27954b1a5",
+      "bytes": 340620,
+      "triangles": 8594,
+      "dimensions_cm": [
+        156.0,
+        708.8224,
+        511.2001
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame",
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: separate post and lintel boxes with 400x400 cm passage clear. Preserve 34 cm X slot; split front/back hulls if the leaf must collide with the frame. Never fit one box/convex hull to the entire frame.",
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    },
+    {
+      "name": "SM_ChamberGate_Leaf",
+      "source_sha256": "0705d0a07e69b91886030a6bf34abee567ef180120b4f7c84b93a4e6aef994db",
+      "bytes": 92556,
+      "triangles": 2222,
+      "dimensions_cm": [
+        30.4,
+        430.0,
+        450.0
+      ],
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf",
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "slot": "M_Stone",
+      "name": "MI_HCA2_Stone",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone",
+      "tint_srgb_hex": "#7A6E68",
+      "parameter": "Tint"
+    },
+    {
+      "slot": "M_StoneCarving",
+      "name": "MI_HCA2_StoneCarving",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving",
+      "tint_srgb_hex": "#4A4652",
+      "parameter": "Tint"
+    },
+    {
+      "slot": "M_Rope",
+      "name": "MI_HCA2_Rope",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope",
+      "tint_srgb_hex": "#C9A66B",
+      "parameter": "Tint"
+    }
+  ],
+  "assemblies": {
+    "pressure_plate": {
+      "top_raised_cm": [
+        0,
+        0,
+        9
+      ],
+      "top_pressed_cm": [
+        0,
+        0,
+        2
+      ]
+    },
+    "chamber_gate": {
+      "leaf_closed_cm": [
+        0,
+        0,
+        0
+      ],
+      "leaf_open_cm": [
+        0,
+        0,
+        400
+      ],
+      "opening_yz_cm": [
+        400,
+        400
+      ],
+      "passage_axis": "X",
+      "slot_width_x_cm": 34,
+      "open_leaf_top_z_cm": 850
+    },
+    "altar": {
+      "relic_base_cm": [
+        0,
+        0,
+        97
+      ]
+    },
+    "statues": {
+      "available": [
+        "SM_Statue",
+        "SM_Statue_Small"
+      ],
+      "selection": "pending owner decision"
+    }
+  },
+  "disk_conflicts": [
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone",
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving",
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Statue_Small",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+    "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame",
+    "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf"
+  ],
+  "editor_checks": "not run (offline)",
+  "remaining": [
+    "compound collision authoring",
+    "all collision verification",
+    "assembly and orientation checks",
+    "cave light and split-screen checks",
+    "statue selection",
+    "map placement and gameplay verification"
+  ],
+  "execution_ready": false
+}

@@ -1,0 +1,10 @@
+{
+  "removed_unsaved_partial": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone",
+  "reason": "UE 5.8.3 vector setter returns false after setting successfully; importer now verifies override/read-back",
+  "prior_tint": [
+    0.1946178376674652,
+    0.15592646598815918,
+    0.1384316086769104,
+    1.0
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "issue": 19,
+  "lane_owner": "HZ for cave geometry/lighting; HC props remain fixed",
+  "status": "approved Windows environment/placement gate verified; fresh client result recorded separately",
+  "acceptance": {
+    "opening": {
+      "axis": "Y",
+      "width_cm": 400,
+      "height_cm": 400,
+      "passage_axis": "X"
+    },
+    "leaf": {
+      "closed_z_cm": 0,
+      "open_z_cm": 400,
+      "dimensions_cm": [
+        30.4,
+        430,
+        450
+      ],
+      "open_top_z_cm": 850
+    },
+    "slot": {
+      "center_x_cm": 0,
+      "width_x_cm": 34,
+      "minimum_existing_clearance_per_x_side_cm": 1.8
+    },
+    "requirement": "Enclosing opaque rock must conceal the full upper leaf through its preserved travel, with the passage and centered leaf slot unobstructed. No source redesign, shortening or automatic hiding."
+  },
+  "gates": [
+    {
+      "label": "G1",
+      "origin_cm": [
+        2500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "G2",
+      "origin_cm": [
+        5500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "G3",
+      "origin_cm": [
+        11500,
+        0,
+        0
+      ]
+    }
+  ],
+  "environment_checks": [
+    "Provide usable cave floor/walls/ceiling at the documented plate/statue/altar positions.",
+    "Restore readable warm path light/cold fill and colored shadows at each placed prop.",
+    "Confirm no cave collision blocks the gate passage or moving slot.",
+    "Review concealment at closed, halfway and full +400 cm open positions."
+  ],
+  "authority": "Stretch approved HZ floor, lighting and enclosure work and explicitly selected two prototype doorway copies; HZ map locked throughout this repair",
+  "evidence": [
+    "evidence/environment_authoring.json",
+    "evidence/environment_verification.json",
+    "evidence/environment_capture.json",
+    "evidence/environment_review.json",
+    "evidence/walkable_connections.json",
+    "evidence/prototype_connection_scan.json",
+    "evidence/prototype_portal.json",
+    "evidence/client_checks.json"
+  ]
+}

@@ -1,0 +1,7883 @@
+{
+  "status": "authored; independent validation pending",
+  "authority": "Stretch explicitly approved HZ floor/lighting/gate-enclosure extension on 2026-10-10; #19 kickoff comment 6097208734",
+  "asset": "/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport",
+  "triangle_count": 2208,
+  "nanite": true,
+  "material": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone",
+  "collision": "compound simple boxes; no complex-as-simple",
+  "boxes": [
+    {
+      "name": "PassageFloor",
+      "min": [
+        1450,
+        -350,
+        -100
+      ],
+      "max": [
+        2550,
+        350,
+        0
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "HallFloor",
+      "min": [
+        2450,
+        -1750,
+        -100
+      ],
+      "max": [
+        5550,
+        1950,
+        0
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "TrapFloor",
+      "min": [
+        5450,
+        -350,
+        -100
+      ],
+      "max": [
+        8550,
+        350,
+        0
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "AltarFloor",
+      "min": [
+        8450,
+        -1400,
+        -100
+      ],
+      "max": [
+        11550,
+        1400,
+        0
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3Landing",
+      "min": [
+        11450,
+        -350,
+        -100
+      ],
+      "max": [
+        11850,
+        350,
+        0
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "HallSouth",
+      "min": [
+        2500,
+        -1750,
+        -40
+      ],
+      "max": [
+        5500,
+        -1500,
+        1050
+      ],
+      "bevel_cm": 35
+    },
+    {
+      "name": "HallNorth0",
+      "min": [
+        2500,
+        1500,
+        -40
+      ],
+      "max": [
+        3380,
+        1750,
+        1050
+      ],
+      "bevel_cm": 30
+    },
+    {
+      "name": "HallNorth1",
+      "min": [
+        3620,
+        1500,
+        -40
+      ],
+      "max": [
+        3880,
+        1750,
+        1050
+      ],
+      "bevel_cm": 30
+    },
+    {
+      "name": "HallNorth2",
+      "min": [
+        4120,
+        1500,
+        -40
+      ],
+      "max": [
+        4380,
+        1750,
+        1050
+      ],
+      "bevel_cm": 30
+    },
+    {
+      "name": "HallNorth3",
+      "min": [
+        4620,
+        1500,
+        -40
+      ],
+      "max": [
+        5500,
+        1750,
+        1050
+      ],
+      "bevel_cm": 30
+    },
+    {
+      "name": "AlcoveBack3500",
+      "min": [
+        3360,
+        1720,
+        -30
+      ],
+      "max": [
+        3640,
+        1970,
+        1040
+      ],
+      "bevel_cm": 25
+    },
+    {
+      "name": "AlcoveReturn3500_-1",
+      "min": [
+        3350,
+        1480,
+        -30
+      ],
+      "max": [
+        3410,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "AlcoveReturn3500_1",
+      "min": [
+        3590,
+        1480,
+        -30
+      ],
+      "max": [
+        3650,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "AlcoveBack4000",
+      "min": [
+        3860,
+        1720,
+        -30
+      ],
+      "max": [
+        4140,
+        1970,
+        1040
+      ],
+      "bevel_cm": 25
+    },
+    {
+      "name": "AlcoveReturn4000_-1",
+      "min": [
+        3850,
+        1480,
+        -30
+      ],
+      "max": [
+        3910,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "AlcoveReturn4000_1",
+      "min": [
+        4090,
+        1480,
+        -30
+      ],
+      "max": [
+        4150,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "AlcoveBack4500",
+      "min": [
+        4360,
+        1720,
+        -30
+      ],
+      "max": [
+        4640,
+        1970,
+        1040
+      ],
+      "bevel_cm": 25
+    },
+    {
+      "name": "AlcoveReturn4500_-1",
+      "min": [
+        4350,
+        1480,
+        -30
+      ],
+      "max": [
+        4410,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "AlcoveReturn4500_1",
+      "min": [
+        4590,
+        1480,
+        -30
+      ],
+      "max": [
+        4650,
+        1970,
+        1040
+      ],
+      "bevel_cm": 15
+    },
+    {
+      "name": "HallRoof",
+      "min": [
+        2500,
+        -1750,
+        1000
+      ],
+      "max": [
+        5500,
+        1950,
+        1250
+      ],
+      "bevel_cm": 40
+    },
+    {
+      "name": "AltarNorth",
+      "min": [
+        8500,
+        1200,
+        -40
+      ],
+      "max": [
+        11500,
+        1450,
+        1250
+      ],
+      "bevel_cm": 40
+    },
+    {
+      "name": "AltarSouth",
+      "min": [
+        8500,
+        -1450,
+        -40
+      ],
+      "max": [
+        11500,
+        -1200,
+        1250
+      ],
+      "bevel_cm": 40
+    },
+    {
+      "name": "AltarRoof",
+      "min": [
+        8500,
+        -1450,
+        1200
+      ],
+      "max": [
+        11500,
+        1450,
+        1450
+      ],
+      "bevel_cm": 40
+    },
+    {
+      "name": "AltarWestNorth",
+      "min": [
+        8320,
+        350,
+        -30
+      ],
+      "max": [
+        8680,
+        1450,
+        1250
+      ],
+      "bevel_cm": 25
+    },
+    {
+      "name": "AltarWestSouth",
+      "min": [
+        8320,
+        -1450,
+        -30
+      ],
+      "max": [
+        8680,
+        -350,
+        1250
+      ],
+      "bevel_cm": 25
+    },
+    {
+      "name": "AltarWestLintel",
+      "min": [
+        8320,
+        -350,
+        400
+      ],
+      "max": [
+        8680,
+        350,
+        1250
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "PassageNorth",
+      "min": [
+        1500,
+        200,
+        0
+      ],
+      "max": [
+        2320,
+        450,
+        400
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "PassageSouth",
+      "min": [
+        1500,
+        -450,
+        0
+      ],
+      "max": [
+        2320,
+        -200,
+        400
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "PassageRoof",
+      "min": [
+        1500,
+        -450,
+        400
+      ],
+      "max": [
+        2320,
+        450,
+        650
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "TrapNorth",
+      "min": [
+        5680,
+        200,
+        0
+      ],
+      "max": [
+        8500,
+        450,
+        400
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "TrapSouth",
+      "min": [
+        5680,
+        -450,
+        0
+      ],
+      "max": [
+        8500,
+        -200,
+        400
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "TrapRoof",
+      "min": [
+        5680,
+        -450,
+        400
+      ],
+      "max": [
+        8500,
+        450,
+        650
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G1PocketWest",
+      "min": [
+        2320,
+        -350,
+        512
+      ],
+      "max": [
+        2483,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1PocketInnerWest",
+      "min": [
+        2467,
+        -350,
+        400
+      ],
+      "max": [
+        2483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1PocketEast",
+      "min": [
+        2517,
+        -350,
+        512
+      ],
+      "max": [
+        2680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1PocketInnerEast",
+      "min": [
+        2517,
+        -350,
+        400
+      ],
+      "max": [
+        2533,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1PocketCap",
+      "min": [
+        2320,
+        -350,
+        900
+      ],
+      "max": [
+        2680,
+        350,
+        1250
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G1NorthCheek",
+      "min": [
+        2320,
+        300,
+        -40
+      ],
+      "max": [
+        2680,
+        1750,
+        1250
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G1SouthCheek",
+      "min": [
+        2320,
+        -1750,
+        -40
+      ],
+      "max": [
+        2680,
+        -300,
+        1250
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketWest",
+      "min": [
+        5320,
+        -350,
+        512
+      ],
+      "max": [
+        5483,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketInnerWest",
+      "min": [
+        5467,
+        -350,
+        400
+      ],
+      "max": [
+        5483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketEast",
+      "min": [
+        5517,
+        -350,
+        512
+      ],
+      "max": [
+        5680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketInnerEast",
+      "min": [
+        5517,
+        -350,
+        400
+      ],
+      "max": [
+        5533,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2PocketCap",
+      "min": [
+        5320,
+        -350,
+        900
+      ],
+      "max": [
+        5680,
+        350,
+        1250
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G2NorthCheek",
+      "min": [
+        5320,
+        300,
+        -40
+      ],
+      "max": [
+        5680,
+        1750,
+        1250
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G2SouthCheek",
+      "min": [
+        5320,
+        -1750,
+        -40
+      ],
+      "max": [
+        5680,
+        -300,
+        1250
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketWest",
+      "min": [
+        11320,
+        -350,
+        512
+      ],
+      "max": [
+        11483,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketInnerWest",
+      "min": [
+        11467,
+        -350,
+        400
+      ],
+      "max": [
+        11483,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketEast",
+      "min": [
+        11517,
+        -350,
+        512
+      ],
+      "max": [
+        11680,
+        350,
+        900
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketInnerEast",
+      "min": [
+        11517,
+        -350,
+        400
+      ],
+      "max": [
+        11533,
+        350,
+        512
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3PocketCap",
+      "min": [
+        11320,
+        -350,
+        900
+      ],
+      "max": [
+        11680,
+        350,
+        1500
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G3NorthCheek",
+      "min": [
+        11320,
+        300,
+        -40
+      ],
+      "max": [
+        11680,
+        1450,
+        1500
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3SouthCheek",
+      "min": [
+        11320,
+        -1450,
+        -40
+      ],
+      "max": [
+        11680,
+        -300,
+        1500
+      ],
+      "bevel_cm": 0
+    },
+    {
+      "name": "G3LandingNorth",
+      "min": [
+        11680,
+        200,
+        -40
+      ],
+      "max": [
+        11850,
+        450,
+        450
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G3LandingSouth",
+      "min": [
+        11680,
+        -450,
+        -40
+      ],
+      "max": [
+        11850,
+        -200,
+        450
+      ],
+      "bevel_cm": 20
+    },
+    {
+      "name": "G3LandingRoof",
+      "min": [
+        11680,
+        -450,
+        400
+      ],
+      "max": [
+        11850,
+        450,
+        650
+      ],
+      "bevel_cm": 20
+    }
+  ],
+  "lights": [
+    {
+      "label": "Plate_SW",
+      "location": [
+        3100,
+        -1050,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 35,
+      "radius_cm": 1300
+    },
+    {
+      "label": "Plate_NW",
+      "location": [
+        3100,
+        1000,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 35,
+      "radius_cm": 1300
+    },
+    {
+      "label": "Plate_SE",
+      "location": [
+        4700,
+        -1050,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 35,
+      "radius_cm": 1300
+    },
+    {
+      "label": "Plate_NE",
+      "location": [
+        4700,
+        1000,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 35,
+      "radius_cm": 1300
+    },
+    {
+      "label": "HallFill",
+      "location": [
+        4000,
+        0,
+        650
+      ],
+      "linear_color": [
+        0.0497,
+        0.6308,
+        0.5972,
+        1
+      ],
+      "candela": 350,
+      "radius_cm": 1900
+    },
+    {
+      "label": "Altar",
+      "location": [
+        10650,
+        -350,
+        350
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 35,
+      "radius_cm": 1400
+    },
+    {
+      "label": "AltarFill",
+      "location": [
+        10100,
+        500,
+        650
+      ],
+      "linear_color": [
+        0.0497,
+        0.6308,
+        0.5972,
+        1
+      ],
+      "candela": 350,
+      "radius_cm": 1900
+    },
+    {
+      "label": "G1_West",
+      "location": [
+        2050,
+        -100,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 30,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G2_West",
+      "location": [
+        5050,
+        -100,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 30,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G3_West",
+      "location": [
+        11050,
+        -100,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 30,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G1_East",
+      "location": [
+        2950,
+        100,
+        300
+      ],
+      "linear_color": [
+        0.0497,
+        0.6308,
+        0.5972,
+        1
+      ],
+      "candela": 110,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G2_East",
+      "location": [
+        5950,
+        100,
+        300
+      ],
+      "linear_color": [
+        0.0497,
+        0.6308,
+        0.5972,
+        1
+      ],
+      "candela": 110,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G3_East",
+      "location": [
+        11750,
+        100,
+        300
+      ],
+      "linear_color": [
+        0.0497,
+        0.6308,
+        0.5972,
+        1
+      ],
+      "candela": 110,
+      "radius_cm": 1000
+    },
+    {
+      "label": "HallShadow_W",
+      "location": [
+        3500,
+        0,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 160,
+      "radius_cm": 1200
+    },
+    {
+      "label": "HallShadow_E",
+      "location": [
+        4700,
+        0,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 160,
+      "radius_cm": 1200
+    },
+    {
+      "label": "AltarShadow",
+      "location": [
+        10700,
+        0,
+        400
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 200,
+      "radius_cm": 1300
+    },
+    {
+      "label": "G1_Shadow",
+      "location": [
+        2140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G2_Shadow",
+      "location": [
+        5140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
+      "radius_cm": 1000
+    },
+    {
+      "label": "G3_Shadow",
+      "location": [
+        11140,
+        160,
+        350
+      ],
+      "linear_color": [
+        0.395,
+        0.548,
+        1,
+        1
+      ],
+      "candela": 100,
+      "radius_cm": 1000
+    },
+    {
+      "label": "Trap_6300",
+      "location": [
+        6300,
+        0,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 80,
+      "radius_cm": 1000
+    },
+    {
+      "label": "Trap_7400",
+      "location": [
+        7400,
+        0,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 80,
+      "radius_cm": 1000
+    },
+    {
+      "label": "Trap_8200",
+      "location": [
+        8200,
+        0,
+        300
+      ],
+      "linear_color": [
+        1,
+        0.4508,
+        0.063,
+        1
+      ],
+      "candela": 80,
+      "radius_cm": 1000
+    }
+  ],
+  "preserved_existing_actors": 354,
+  "baseline": {
+    "/Game/Maps/L_Site01.L_Site01:PersistentLevel.PlayerStart_0": {
+      "label": "HC_PlayerStart_1",
+      "class": "/Script/Engine.PlayerStart",
+      "location": [
+        -1000.0,
+        -600.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Maps/L_Site01.L_Site01:PersistentLevel.PlayerStart_1": {
+      "label": "HC_PlayerStart_2",
+      "class": "/Script/Engine.PlayerStart",
+      "location": [
+        -1000.0,
+        -200.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Maps/L_Site01.L_Site01:PersistentLevel.PlayerStart_2": {
+      "label": "HC_PlayerStart_3",
+      "class": "/Script/Engine.PlayerStart",
+      "location": [
+        -1000.0,
+        200.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Maps/L_Site01.L_Site01:PersistentLevel.PlayerStart_3": {
+      "label": "HC_PlayerStart_4",
+      "class": "/Script/Engine.PlayerStart",
+      "location": [
+        -1000.0,
+        600.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.StaticMeshActor_0": {
+      "label": "PG_TempGreybox_ExitLedge",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        18000.0,
+        0.0,
+        -50.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        10.0,
+        16.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.StaticMeshActor_2": {
+      "label": "PG_TempGreybox_LandingPad",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        25700.0,
+        0.0,
+        -2050.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        14.0,
+        10.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.BP_Zipline_C_0": {
+      "label": "PG_Zipline_ExitLedge",
+      "class": "/Game/Player/Zipline/BP_Zipline.BP_Zipline_C",
+      "location": [
+        18470.0,
+        0.0,
+        280.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.BP_Ghost_C_0": {
+      "label": "PG_Ghost_NorthPassage",
+      "class": "/Game/Player/Ghosts/BP_Ghost.BP_Ghost_C",
+      "location": [
+        0.0,
+        3500.0,
+        150.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.BP_Lever_C_0": {
+      "label": "PG_Round3_Lever_1",
+      "class": "/Game/Player/Round3/BP_Lever.BP_Lever_C",
+      "location": [
+        12000.0,
+        -600.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.BP_Lever_C_1": {
+      "label": "PG_Round3_Lever_2_FourPlayers",
+      "class": "/Game/Player/Round3/BP_Lever.BP_Lever_C",
+      "location": [
+        12000.0,
+        600.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Player/L_Site01_PG.L_Site01_PG:PersistentLevel.BP_GauntletGate_C_0": {
+      "label": "PG_Round3_GauntletGate",
+      "class": "/Game/Player/Round3/BP_GauntletGate.BP_GauntletGate_C",
+      "location": [
+        12500.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_Plate_Diamond_C_0": {
+      "label": "HC_A2_Plate_Diamond",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond.BP_HCA2_Plate_Diamond_C",
+      "location": [
+        3200.0,
+        -800.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_Plate_Circle_C_0": {
+      "label": "HC_A2_Plate_Circle",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle.BP_HCA2_Plate_Circle_C",
+      "location": [
+        3200.0,
+        800.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_Plate_Triangle_C_0": {
+      "label": "HC_A2_Plate_Triangle",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle.BP_HCA2_Plate_Triangle_C",
+      "location": [
+        4800.0,
+        -800.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_Plate_Cross_C_0": {
+      "label": "HC_A2_Plate_Cross",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross.BP_HCA2_Plate_Cross_C",
+      "location": [
+        4800.0,
+        800.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.StaticMeshActor_0": {
+      "label": "HC_A2_Statue_Alcove_1",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        3500.0,
+        1300.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.StaticMeshActor_1": {
+      "label": "HC_A2_Statue_Alcove_2",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        4000.0,
+        1300.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.StaticMeshActor_2": {
+      "label": "HC_A2_Statue_Alcove_3",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        4500.0,
+        1300.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.StaticMeshActor_3": {
+      "label": "HC_A2_Altar",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        10800.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_ChamberGate_C_0": {
+      "label": "HC_A2_Gate_G1",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.BP_HCA2_ChamberGate_C",
+      "location": [
+        2500.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_ChamberGate_C_1": {
+      "label": "HC_A2_Gate_G2",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.BP_HCA2_ChamberGate_C",
+      "location": [
+        5500.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_HCA2_ChamberGate_C_2": {
+      "label": "HC_A2_Gate_G3",
+      "class": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.BP_HCA2_ChamberGate_C",
+      "location": [
+        11500.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_TestInteractable_C_0": {
+      "label": "HC1_Instant",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        -600.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_TestInteractable_C_1": {
+      "label": "HC1_Timed",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        0.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Puzzles/L_Site01_HC.L_Site01_HC:PersistentLevel.BP_TestInteractable_C_2": {
+      "label": "HC1_Continuous",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "location": [
+        -850.0,
+        600.0,
+        100.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_310": {
+      "label": "Cave_static_000",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        -20.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        34.0,
+        34.0,
+        0.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_311": {
+      "label": "Cave_blocker_001",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1310.0,
+        0.0,
+        500.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.2,
+        29.0,
+        12.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_312": {
+      "label": "Cave_blocker_002",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1310.0,
+        0.0,
+        500.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.2,
+        29.0,
+        12.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_313": {
+      "label": "Cave_blocker_003",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        1310.0,
+        500.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        29.0,
+        1.2,
+        12.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_314": {
+      "label": "Cave_blocker_004",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        -1310.0,
+        500.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        29.0,
+        1.2,
+        12.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_315": {
+      "label": "Cave_blocker_005",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        750.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        29.0,
+        29.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_316": {
+      "label": "Cave_static_006",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        2000.0,
+        0.0,
+        600.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        42.0,
+        16.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_317": {
+      "label": "Cave_static_007",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -2000.0,
+        0.0,
+        600.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        42.0,
+        16.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_318": {
+      "label": "Cave_static_008",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        2000.0,
+        600.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        42.0,
+        1.0,
+        16.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_319": {
+      "label": "Cave_static_009",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        -2000.0,
+        600.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        42.0,
+        1.0,
+        16.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_320": {
+      "label": "Cave_static_010",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        1450.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        42.0,
+        42.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_321": {
+      "label": "Cave_static_011",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_322": {
+      "label": "Cave_static_012",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_323": {
+      "label": "Cave_static_013",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -659.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_324": {
+      "label": "Cave_static_014",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -641.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_325": {
+      "label": "Cave_static_015",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_326": {
+      "label": "Cave_static_016",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -659.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_327": {
+      "label": "Cave_static_017",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -641.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_328": {
+      "label": "Cave_static_018",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        -90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_329": {
+      "label": "Cave_static_019",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_330": {
+      "label": "Cave_static_020",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_331": {
+      "label": "Cave_static_021",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -659.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_332": {
+      "label": "Cave_static_022",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -641.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_333": {
+      "label": "Cave_static_023",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_334": {
+      "label": "Cave_static_024",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -659.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_335": {
+      "label": "Cave_static_025",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -641.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_336": {
+      "label": "Cave_static_026",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_337": {
+      "label": "Cave_static_027",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        0.0,
+        658.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        22.0,
+        0.38,
+        0.36
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_338": {
+      "label": "Cave_static_028",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_339": {
+      "label": "Cave_static_029",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_340": {
+      "label": "Cave_static_030",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        41.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_341": {
+      "label": "Cave_static_031",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        59.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_342": {
+      "label": "Cave_static_032",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_343": {
+      "label": "Cave_static_033",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        41.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_344": {
+      "label": "Cave_static_034",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        59.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_345": {
+      "label": "Cave_static_035",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        -90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_346": {
+      "label": "Cave_static_036",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_347": {
+      "label": "Cave_static_037",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_348": {
+      "label": "Cave_static_038",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        41.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_349": {
+      "label": "Cave_static_039",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        59.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_350": {
+      "label": "Cave_static_040",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_351": {
+      "label": "Cave_static_041",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        41.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_352": {
+      "label": "Cave_static_042",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        59.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_353": {
+      "label": "Cave_static_043",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_354": {
+      "label": "Cave_static_044",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        0.0,
+        658.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        22.0,
+        0.38,
+        0.36
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_355": {
+      "label": "Cave_static_045",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_356": {
+      "label": "Cave_static_046",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_357": {
+      "label": "Cave_static_047",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        741.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_358": {
+      "label": "Cave_static_048",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        759.0,
+        1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_359": {
+      "label": "Cave_static_049",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_360": {
+      "label": "Cave_static_050",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        741.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_361": {
+      "label": "Cave_static_051",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        759.0,
+        1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_362": {
+      "label": "Cave_static_052",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        -90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_363": {
+      "label": "Cave_static_053",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1040.0,
+        320.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        6.4
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_364": {
+      "label": "Cave_static_054",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1022.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_365": {
+      "label": "Cave_static_055",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        741.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_366": {
+      "label": "Cave_static_056",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        759.0,
+        -1019.0,
+        110.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_367": {
+      "label": "Cave_static_057",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1022.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.4,
+        0.04,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_368": {
+      "label": "Cave_static_058",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        741.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_369": {
+      "label": "Cave_static_059",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        759.0,
+        -1019.0,
+        480.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        0.04,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_370": {
+      "label": "Cave_static_060",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -950.0,
+        557.0
+      ],
+      "rotation": [
+        40.548824310302756,
+        90.0,
+        -0.0
+      ],
+      "scale": [
+        2.3688815307617186,
+        0.2,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_371": {
+      "label": "Cave_static_061",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        0.0,
+        658.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        22.0,
+        0.38,
+        0.36
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_372": {
+      "label": "Cave_static_062",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -605.0,
+        1055.0,
+        171.5640411376953
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.4312808227539064
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_373": {
+      "label": "Cave_static_063",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -572.0,
+        1055.0,
+        163.2108917236328
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.2642178344726562
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_374": {
+      "label": "Cave_static_064",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -539.0,
+        1055.0,
+        169.25465393066406
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.385093078613281
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_375": {
+      "label": "Cave_static_065",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -506.0,
+        1055.0,
+        163.12417602539062
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.2624835205078124
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_376": {
+      "label": "Cave_static_066",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -473.0,
+        1055.0,
+        160.74310302734375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.214862060546875
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_377": {
+      "label": "Cave_static_067",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -440.0,
+        1055.0,
+        155.4525604248047
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.1090512084960937
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_378": {
+      "label": "Cave_static_068",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -407.0,
+        1055.0,
+        168.7440948486328
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.3748818969726564
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_379": {
+      "label": "Cave_static_069",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -374.0,
+        1055.0,
+        153.73300170898438
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.0746600341796877
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_380": {
+      "label": "Cave_static_070",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -341.0,
+        1055.0,
+        153.25921630859375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.065184326171875
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_381": {
+      "label": "Cave_static_071",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -308.0,
+        1055.0,
+        155.90675354003906
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.1181350708007813
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_382": {
+      "label": "Cave_static_072",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -275.0,
+        1055.0,
+        157.2233428955078
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.1444668579101562
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_383": {
+      "label": "Cave_static_073",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -242.0,
+        1055.0,
+        154.2425994873047
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.084851989746094
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_384": {
+      "label": "Cave_static_074",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -209.0,
+        1055.0,
+        157.63417053222656
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.1526834106445314
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_385": {
+      "label": "Cave_static_075",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -176.0,
+        1055.0,
+        160.55165100097656
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.2110330200195314
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_386": {
+      "label": "Cave_static_076",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -143.0,
+        1055.0,
+        155.56568908691406
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.111313781738281
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_387": {
+      "label": "Cave_static_077",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -110.0,
+        1055.0,
+        159.44004821777344
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.188800964355469
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_388": {
+      "label": "Cave_static_078",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -77.0,
+        1055.0,
+        153.13438415527344
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.062687683105469
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_389": {
+      "label": "Cave_static_079",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -44.0,
+        1055.0,
+        159.7486572265625
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.19497314453125
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_390": {
+      "label": "Cave_static_080",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -11.0,
+        1055.0,
+        167.81150817871094
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.3562301635742187
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_391": {
+      "label": "Cave_static_081",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        22.0,
+        1055.0,
+        157.51229858398438
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.150245971679688
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_392": {
+      "label": "Cave_static_082",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -300.0,
+        1048.0,
+        82.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        6.4,
+        0.06,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_393": {
+      "label": "Cave_static_083",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -300.0,
+        1048.0,
+        264.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        6.4,
+        0.06,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_394": {
+      "label": "Cave_static_084",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        95.0,
+        -1055.0,
+        148.20460510253906
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.964092102050781
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_395": {
+      "label": "Cave_static_085",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        128.0,
+        -1055.0,
+        151.48570251464844
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.0297140502929687
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_396": {
+      "label": "Cave_static_086",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        161.0,
+        -1055.0,
+        144.31881713867188
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8863763427734375
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_397": {
+      "label": "Cave_static_087",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        194.0,
+        -1055.0,
+        143.2798309326172
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8655966186523436
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_398": {
+      "label": "Cave_static_088",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        227.0,
+        -1055.0,
+        148.10105895996094
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.9620211791992186
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_399": {
+      "label": "Cave_static_089",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        260.0,
+        -1055.0,
+        142.17929077148438
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8435858154296874
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_400": {
+      "label": "Cave_static_090",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        293.0,
+        -1055.0,
+        145.5194549560547
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.910389099121094
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_401": {
+      "label": "Cave_static_091",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        326.0,
+        -1055.0,
+        143.52015686035156
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.870403137207031
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_402": {
+      "label": "Cave_static_092",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        359.0,
+        -1055.0,
+        138.2861785888672
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.7657235717773436
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_403": {
+      "label": "Cave_static_093",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        392.0,
+        -1055.0,
+        142.8476104736328
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8569522094726563
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_404": {
+      "label": "Cave_static_094",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        425.0,
+        -1055.0,
+        140.34304809570312
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8068609619140625
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_405": {
+      "label": "Cave_static_095",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        458.0,
+        -1055.0,
+        139.69361877441406
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.7938723754882813
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_406": {
+      "label": "Cave_static_096",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        491.0,
+        -1055.0,
+        150.14764404296875
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.0029528808593753
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_407": {
+      "label": "Cave_static_097",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        524.0,
+        -1055.0,
+        148.46722412109375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.969344482421875
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_408": {
+      "label": "Cave_static_098",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        557.0,
+        -1055.0,
+        153.37167358398438
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.0674334716796876
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_409": {
+      "label": "Cave_static_099",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        590.0,
+        -1055.0,
+        153.3840789794922
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        3.067681579589844
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_410": {
+      "label": "Cave_static_100",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        623.0,
+        -1055.0,
+        145.60401916503906
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.9120803833007813
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_411": {
+      "label": "Cave_static_101",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        656.0,
+        -1055.0,
+        138.3258056640625
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.76651611328125
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_412": {
+      "label": "Cave_static_102",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        689.0,
+        -1055.0,
+        144.78726196289062
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.8957452392578125
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_413": {
+      "label": "Cave_static_103",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        722.0,
+        -1055.0,
+        149.76693725585938
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.3,
+        0.07,
+        2.995338745117188
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_414": {
+      "label": "Cave_static_104",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        400.0,
+        -1048.0,
+        75.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        6.4,
+        0.06,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_415": {
+      "label": "Cave_static_105",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        400.0,
+        -1048.0,
+        240.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        6.4,
+        0.06,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_416": {
+      "label": "Cave_static_106",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        -115.0,
+        162.15977478027344
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.2431954956054687
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_417": {
+      "label": "Cave_static_107",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        -82.0,
+        160.18356323242188
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.2036712646484378
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_418": {
+      "label": "Cave_static_108",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        -49.0,
+        172.1746368408203
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.443492736816406
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_419": {
+      "label": "Cave_static_109",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        -16.0,
+        159.41702270507812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.1883404541015627
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_420": {
+      "label": "Cave_static_110",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        17.0,
+        164.9718475341797
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.2994369506835937
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_421": {
+      "label": "Cave_static_111",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        50.0,
+        166.05567932128906
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.3211135864257812
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_422": {
+      "label": "Cave_static_112",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        83.0,
+        168.24244689941406
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.364848937988281
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_423": {
+      "label": "Cave_static_113",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1100.0,
+        116.0,
+        163.7687225341797
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.275374450683594
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_424": {
+      "label": "Cave_static_114",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1093.0,
+        0.0,
+        82.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        2.6,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_425": {
+      "label": "Cave_static_115",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1093.0,
+        0.0,
+        264.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        2.6,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_426": {
+      "label": "Cave_static_116",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -465.0,
+        157.4906005859375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.1498120117187502
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_427": {
+      "label": "Cave_static_117",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -432.0,
+        172.4284210205078
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.4485684204101563
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_428": {
+      "label": "Cave_static_118",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -399.0,
+        153.5245819091797
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.0704916381835936
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_429": {
+      "label": "Cave_static_119",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -366.0,
+        154.5410919189453
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.0908218383789063
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_430": {
+      "label": "Cave_static_120",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -333.0,
+        172.23733520507812
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.4447467041015627
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_431": {
+      "label": "Cave_static_121",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -300.0,
+        167.7212371826172
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.354424743652344
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_432": {
+      "label": "Cave_static_122",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -267.0,
+        153.12457275390625
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.062491455078125
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_433": {
+      "label": "Cave_static_123",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1100.0,
+        -234.0,
+        167.44024658203125
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.07,
+        0.3,
+        3.348804931640625
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_434": {
+      "label": "Cave_static_124",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1093.0,
+        -350.0,
+        82.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        2.6,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_435": {
+      "label": "Cave_static_125",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1093.0,
+        -350.0,
+        264.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.06,
+        2.6,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_436": {
+      "label": "Cave_static_126",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_437": {
+      "label": "Cave_static_127",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_438": {
+      "label": "Cave_static_128",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_439": {
+      "label": "Cave_static_129",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_440": {
+      "label": "Cave_static_130",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        -90.0,
+        -4.497983566394947e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_441": {
+      "label": "Cave_procedural_131",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_15": {
+      "label": "Cave_point_132",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        -650.0,
+        942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_442": {
+      "label": "Cave_static_133",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_443": {
+      "label": "Cave_static_134",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_444": {
+      "label": "Cave_static_135",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_445": {
+      "label": "Cave_static_136",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_446": {
+      "label": "Cave_static_137",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        89.99999999999997,
+        4.497983566394946e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_447": {
+      "label": "Cave_procedural_138",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -650.0,
+        -982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_16": {
+      "label": "Cave_point_139",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        -650.0,
+        -942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_448": {
+      "label": "Cave_static_140",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_449": {
+      "label": "Cave_static_141",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_450": {
+      "label": "Cave_static_142",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_451": {
+      "label": "Cave_static_143",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_452": {
+      "label": "Cave_static_144",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        -90.0,
+        -4.497983566394947e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_453": {
+      "label": "Cave_procedural_145",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_17": {
+      "label": "Cave_point_146",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        50.0,
+        942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_18": {
+      "label": "Cave_point_147",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        50.0,
+        812.7712448234232,
+        147.06792849725377
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_454": {
+      "label": "Cave_static_148",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_455": {
+      "label": "Cave_static_149",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_456": {
+      "label": "Cave_static_150",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_457": {
+      "label": "Cave_static_151",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_458": {
+      "label": "Cave_static_152",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        89.99999999999997,
+        4.497983566394946e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_459": {
+      "label": "Cave_procedural_153",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        50.0,
+        -982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_19": {
+      "label": "Cave_point_154",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        50.0,
+        -942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_20": {
+      "label": "Cave_point_155",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        50.0,
+        -812.7712448234232,
+        147.06792849725377
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_460": {
+      "label": "Cave_static_156",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_461": {
+      "label": "Cave_static_157",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        -90.00000000000001,
+        0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_462": {
+      "label": "Cave_static_158",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_463": {
+      "label": "Cave_static_159",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000004,
+        -90.0000000000001,
+        1.6980772561748624e-14
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_464": {
+      "label": "Cave_static_160",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        -90.0,
+        -4.497983566394947e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_465": {
+      "label": "Cave_procedural_161",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_21": {
+      "label": "Cave_point_162",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        750.0,
+        942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_466": {
+      "label": "Cave_static_163",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1021.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_467": {
+      "label": "Cave_static_164",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1013.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_468": {
+      "label": "Cave_static_165",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -994.0094421437436,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_469": {
+      "label": "Cave_static_166",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -984.2696711327992,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.00000000000007,
+        90.0000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_470": {
+      "label": "Cave_static_167",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -1003.0,
+        235.0
+      ],
+      "rotation": [
+        45.000000000000014,
+        89.99999999999997,
+        4.497983566394946e-15
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_471": {
+      "label": "Cave_procedural_168",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        750.0,
+        -982.7712448234232,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_22": {
+      "label": "Cave_point_169",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        750.0,
+        -942.7712448234232,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_472": {
+      "label": "Cave_static_170",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1088.0,
+        0.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_473": {
+      "label": "Cave_static_171",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1080.0,
+        0.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_474": {
+      "label": "Cave_static_172",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1061.0094421437436,
+        0.0,
+        239.25241266544612
+      ],
+      "rotation": [
+        68.0,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_475": {
+      "label": "Cave_static_173",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1051.2696711327992,
+        0.0,
+        263.35919305301275
+      ],
+      "rotation": [
+        68.0,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_476": {
+      "label": "Cave_static_174",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1070.0,
+        0.0,
+        235.0
+      ],
+      "rotation": [
+        45.00000000000003,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_477": {
+      "label": "Cave_procedural_175",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1049.771244823423,
+        0.0,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_23": {
+      "label": "Cave_point_176",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        -1009.7712448234231,
+        0.0,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_478": {
+      "label": "Cave_static_177",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1088.0,
+        -350.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        0.04,
+        0.14,
+        0.22
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_479": {
+      "label": "Cave_static_178",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1080.0,
+        -350.0,
+        235.0
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        0.2,
+        0.05,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_480": {
+      "label": "Cave_static_179",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1061.0094421437436,
+        -350.0,
+        239.25241266544612
+      ],
+      "rotation": [
+        67.99999999999996,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        0.48,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_481": {
+      "label": "Cave_static_180",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1051.2696711327992,
+        -350.0,
+        263.35919305301275
+      ],
+      "rotation": [
+        67.99999999999996,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.11,
+        0.11
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_482": {
+      "label": "Cave_static_181",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1070.0,
+        -350.0,
+        235.0
+      ],
+      "rotation": [
+        44.99999999999999,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        0.056568541526794434,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_483": {
+      "label": "Cave_procedural_182",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1049.771244823423,
+        -350.0,
+        267.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_24": {
+      "label": "Cave_point_183",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        1009.7712448234231,
+        -350.0,
+        277.0679284972538
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_484": {
+      "label": "Cave_static_184",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        500.0,
+        -90.0,
+        95.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.09,
+        0.09,
+        1.9000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_485": {
+      "label": "Cave_static_185",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        500.0,
+        -90.0,
+        188.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.15,
+        0.15,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_486": {
+      "label": "Cave_procedural_186",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        500.0,
+        -90.0,
+        196.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_25": {
+      "label": "Cave_point_187",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        486.22143346436826,
+        -87.5198580235863,
+        206.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_26": {
+      "label": "Cave_point_188",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        332.6888349244718,
+        -59.883990286404924,
+        76.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_487": {
+      "label": "Cave_static_189",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -720.0,
+        -430.0,
+        95.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.09,
+        0.09,
+        1.9000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_488": {
+      "label": "Cave_static_190",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -720.0,
+        -430.0,
+        188.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.15,
+        0.15,
+        0.18
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_489": {
+      "label": "Cave_procedural_191",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -720.0,
+        -430.0,
+        196.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_27": {
+      "label": "Cave_point_192",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        -707.9803942330645,
+        -422.8216243336357,
+        206.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_28": {
+      "label": "Cave_point_193",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        -574.0476442586403,
+        -342.8340097655768,
+        76.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_490": {
+      "label": "Cave_static_194",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        830.0,
+        280.0,
+        89.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.18,
+        3.1,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_491": {
+      "label": "Cave_static_195",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        827.0,
+        160.0,
+        42.0
+      ],
+      "rotation": [
+        40.601295471191406,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        1.2907362365722657,
+        0.12,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_492": {
+      "label": "Cave_static_196",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        833.0,
+        160.0,
+        42.0
+      ],
+      "rotation": [
+        40.60129547119138,
+        180.0,
+        2.7904598295886495e-30
+      ],
+      "scale": [
+        1.2907362365722657,
+        0.12,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_493": {
+      "label": "Cave_static_197",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        830.0,
+        160.0,
+        78.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.04,
+        0.14,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_494": {
+      "label": "Cave_static_198",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        827.0,
+        400.0,
+        42.0
+      ],
+      "rotation": [
+        40.601295471191406,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        1.2907362365722657,
+        0.12,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_495": {
+      "label": "Cave_static_199",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        833.0,
+        400.0,
+        42.0
+      ],
+      "rotation": [
+        40.60129547119138,
+        180.0,
+        2.7904598295886495e-30
+      ],
+      "scale": [
+        1.2907362365722657,
+        0.12,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_496": {
+      "label": "Cave_static_200",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        830.0,
+        400.0,
+        78.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.04,
+        0.14,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_497": {
+      "label": "Cave_static_201",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        830.0,
+        280.0,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        2.4,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_498": {
+      "label": "Cave_static_202",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        825.0,
+        195.0,
+        118.0
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_499": {
+      "label": "Cave_static_203",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        808.640189408805,
+        169.80810094545427,
+        118.0
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.05519999980926514,
+        0.05519999980926514,
+        0.46
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_500": {
+      "label": "Cave_static_204",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        799.8081009454543,
+        211.35981059119504,
+        118.0
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.05519999980926514,
+        0.05519999980926514,
+        0.46
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_501": {
+      "label": "Cave_static_205",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        850.1918990545457,
+        178.64018940880496,
+        118.0
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.05519999980926514,
+        0.05519999980926514,
+        0.46
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_502": {
+      "label": "Cave_static_206",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        841.359810591195,
+        220.19189905454573,
+        118.0
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.05519999980926514,
+        0.05519999980926514,
+        0.46
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_503": {
+      "label": "Cave_static_207",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        825.0,
+        195.0,
+        97.76000022888184
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.47000000000000003,
+        0.47000000000000003,
+        0.05519999980926514
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_504": {
+      "label": "Cave_static_208",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        825.0,
+        195.0,
+        138.23999977111816
+      ],
+      "rotation": [
+        0.0,
+        12.000000000000004,
+        -0.0
+      ],
+      "scale": [
+        0.47000000000000003,
+        0.47000000000000003,
+        0.05519999980926514
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_505": {
+      "label": "Cave_static_209",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        840.0,
+        335.0,
+        103.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.36,
+        0.6,
+        0.16
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_506": {
+      "label": "Cave_static_210",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        801.0,
+        310.0,
+        97.0
+      ],
+      "rotation": [
+        0.0,
+        87.1375961303711,
+        -0.0
+      ],
+      "scale": [
+        0.4004996871948242,
+        0.04,
+        0.04
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_507": {
+      "label": "Cave_static_211",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        801.0,
+        332.0,
+        98.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.16,
+        0.07,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_508": {
+      "label": "Cave_static_212",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        758.0,
+        425.0,
+        56.0
+      ],
+      "rotation": [
+        80.43751525878932,
+        32.00538253784195,
+        -0.0
+      ],
+      "scale": [
+        1.1357816314697267,
+        0.06,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_509": {
+      "label": "Cave_static_213",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        760.0,
+        431.0,
+        111.0
+      ],
+      "rotation": [
+        9.782406806945804,
+        90.0,
+        -0.0
+      ],
+      "scale": [
+        0.5885575485229493,
+        0.07,
+        0.06
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_510": {
+      "label": "Cave_static_214",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        50.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        0.96,
+        0.96,
+        0.96
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_511": {
+      "label": "Cave_static_215",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1050.0497044846475,
+        880.5427338938715,
+        50.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.12,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_512": {
+      "label": "Cave_static_216",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1059.4572661061284,
+        970.0497044846475,
+        50.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.12,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_513": {
+      "label": "Cave_static_217",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -960.5427338938715,
+        889.9502955153525,
+        50.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.12,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_514": {
+      "label": "Cave_static_218",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -969.9502955153525,
+        979.4572661061285,
+        50.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        0.12,
+        0.12,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_515": {
+      "label": "Cave_static_219",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        6.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        1.01,
+        1.01,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_516": {
+      "label": "Cave_static_220",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        94.0
+      ],
+      "rotation": [
+        0.0,
+        6.0000000000000036,
+        -0.0
+      ],
+      "scale": [
+        1.01,
+        1.01,
+        0.12
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_517": {
+      "label": "Cave_static_221",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        135.0
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.66,
+        0.66,
+        0.66
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_518": {
+      "label": "Cave_static_222",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1048.548519406956,
+        906.8377126672334,
+        135.0
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.08399999618530274,
+        0.08399999618530274,
+        0.7000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_519": {
+      "label": "Cave_static_223",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1033.1622873327665,
+        968.5485194069561,
+        135.0
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.08399999618530274,
+        0.08399999618530274,
+        0.7000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_520": {
+      "label": "Cave_static_224",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -986.8377126672334,
+        891.4514805930439,
+        135.0
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.08399999618530274,
+        0.08399999618530274,
+        0.7000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_521": {
+      "label": "Cave_static_225",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -971.4514805930439,
+        953.1622873327666,
+        135.0
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.08399999618530274,
+        0.08399999618530274,
+        0.7000000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_522": {
+      "label": "Cave_static_226",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        104.20000076293945
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.08399999618530274
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_523": {
+      "label": "Cave_static_227",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        930.0,
+        165.79999923706055
+      ],
+      "rotation": [
+        0.0,
+        -13.999999999999998,
+        0.0
+      ],
+      "scale": [
+        0.71,
+        0.71,
+        0.08399999618530274
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_524": {
+      "label": "Cave_static_228",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -880.0,
+        1010.0,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_525": {
+      "label": "Cave_static_229",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -898.3464796290648,
+        962.2057870062291,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.09599999427795411,
+        0.09599999427795411,
+        0.8
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_526": {
+      "label": "Cave_static_230",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -927.7942129937709,
+        1028.3464796290648,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.09599999427795411,
+        0.09599999427795411,
+        0.8
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_527": {
+      "label": "Cave_static_231",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -832.2057870062291,
+        991.6535203709352,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.09599999427795411,
+        0.09599999427795411,
+        0.8
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_528": {
+      "label": "Cave_static_232",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -861.6535203709352,
+        1057.794212993771,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.09599999427795411,
+        0.09599999427795411,
+        0.8
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_529": {
+      "label": "Cave_static_233",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -880.0,
+        1010.0,
+        4.799999237060547
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.81,
+        0.81,
+        0.09599999427795411
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_530": {
+      "label": "Cave_static_234",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -880.0,
+        1010.0,
+        75.20000076293945
+      ],
+      "rotation": [
+        0.0,
+        24.00000000000001,
+        -0.0
+      ],
+      "scale": [
+        0.81,
+        0.81,
+        0.09599999427795411
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_531": {
+      "label": "Cave_static_235",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -760.0,
+        1000.0,
+        47.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.9500000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_532": {
+      "label": "Cave_static_236",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -760.0,
+        1000.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_533": {
+      "label": "Cave_static_237",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -760.0,
+        1000.0,
+        77.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_534": {
+      "label": "Cave_static_238",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -760.0,
+        1000.0,
+        47.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.7000000000000001,
+        0.7000000000000001,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_535": {
+      "label": "Cave_static_239",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -680.0,
+        950.0,
+        47.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.9500000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_536": {
+      "label": "Cave_static_240",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -680.0,
+        950.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_537": {
+      "label": "Cave_static_241",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -680.0,
+        950.0,
+        77.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_538": {
+      "label": "Cave_static_242",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -680.0,
+        950.0,
+        47.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.7000000000000001,
+        0.7000000000000001,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_539": {
+      "label": "Cave_static_243",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -570.0,
+        1010.0,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_540": {
+      "label": "Cave_static_244",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -574.7223703567498,
+        971.5393814869728,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.07199999809265137,
+        0.07199999809265137,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_541": {
+      "label": "Cave_static_245",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -608.4606185130272,
+        1014.7223703567498,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.07199999809265137,
+        0.07199999809265137,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_542": {
+      "label": "Cave_static_246",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -531.5393814869728,
+        1005.2776296432502,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.07199999809265137,
+        0.07199999809265137,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_543": {
+      "label": "Cave_static_247",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -565.2776296432502,
+        1048.4606185130272,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.07199999809265137,
+        0.07199999809265137,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_544": {
+      "label": "Cave_static_248",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -570.0,
+        1010.0,
+        3.6000003814697266
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.61,
+        0.61,
+        0.07199999809265137
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_545": {
+      "label": "Cave_static_249",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -570.0,
+        1010.0,
+        56.39999961853027
+      ],
+      "rotation": [
+        0.0,
+        38.000000000000014,
+        -0.0
+      ],
+      "scale": [
+        0.61,
+        0.61,
+        0.07199999809265137
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_546": {
+      "label": "Cave_static_250",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        985.0,
+        900.0,
+        170.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.8000000000000003,
+        2.8000000000000003,
+        0.16
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_547": {
+      "label": "Cave_static_251",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        860.0,
+        775.0,
+        85.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        0.18,
+        1.7
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_548": {
+      "label": "Cave_static_252",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        860.0,
+        1025.0,
+        85.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        0.18,
+        1.7
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_549": {
+      "label": "Cave_static_253",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1110.0,
+        775.0,
+        85.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        0.18,
+        1.7
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_550": {
+      "label": "Cave_static_254",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1110.0,
+        1025.0,
+        85.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        0.18,
+        1.7
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_551": {
+      "label": "Cave_static_255",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        860.0,
+        900.0,
+        84.0
+      ],
+      "rotation": [
+        29.941942214965845,
+        90.00000000000004,
+        -0.0
+      ],
+      "scale": [
+        2.885065002441406,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_552": {
+      "label": "Cave_static_256",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        860.0,
+        900.0,
+        84.0
+      ],
+      "rotation": [
+        29.941942214965845,
+        -90.00000000000004,
+        -0.0
+      ],
+      "scale": [
+        2.885065002441406,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_553": {
+      "label": "Cave_static_257",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        985.0,
+        775.0,
+        84.0
+      ],
+      "rotation": [
+        29.941942214965845,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        2.885065002441406,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_554": {
+      "label": "Cave_static_258",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        985.0,
+        775.0,
+        84.0
+      ],
+      "rotation": [
+        29.941942214965817,
+        180.0,
+        -0.0
+      ],
+      "scale": [
+        2.885065002441406,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_555": {
+      "label": "Cave_static_259",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1110.0,
+        1025.0,
+        228.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_556": {
+      "label": "Cave_static_260",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1110.0,
+        775.0,
+        228.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_557": {
+      "label": "Cave_static_261",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        860.0,
+        1025.0,
+        228.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_558": {
+      "label": "Cave_static_262",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1110.0,
+        900.0,
+        268.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999999999,
+        -0.0
+      ],
+      "scale": [
+        2.6,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_559": {
+      "label": "Cave_static_263",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        985.0,
+        1025.0,
+        268.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.6,
+        0.1,
+        0.1
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_560": {
+      "label": "Cave_static_264",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1045.0,
+        960.0,
+        225.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.9500000000000001
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_561": {
+      "label": "Cave_static_265",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1045.0,
+        960.0,
+        196.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_562": {
+      "label": "Cave_static_266",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1045.0,
+        960.0,
+        255.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_563": {
+      "label": "Cave_static_267",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        1045.0,
+        960.0,
+        225.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.7000000000000001,
+        0.7000000000000001,
+        0.2
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_564": {
+      "label": "Cave_static_268",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        760.0,
+        900.0,
+        45.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_565": {
+      "label": "Cave_static_269",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        719.4000015258789,
+        859.4000015258789,
+        45.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.10800000190734864,
+        0.10800000190734864,
+        0.9
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_566": {
+      "label": "Cave_static_270",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        719.4000015258789,
+        940.5999984741211,
+        45.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.10800000190734864,
+        0.10800000190734864,
+        0.9
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_567": {
+      "label": "Cave_static_271",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        800.5999984741211,
+        859.4000015258789,
+        45.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.10800000190734864,
+        0.10800000190734864,
+        0.9
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_568": {
+      "label": "Cave_static_272",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        800.5999984741211,
+        940.5999984741211,
+        45.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.10800000190734864,
+        0.10800000190734864,
+        0.9
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_569": {
+      "label": "Cave_static_273",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        760.0,
+        900.0,
+        5.400001525878906
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.91,
+        0.91,
+        0.10800000190734864
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_570": {
+      "label": "Cave_static_274",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        760.0,
+        900.0,
+        84.5999984741211
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.91,
+        0.91,
+        0.10800000190734864
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_571": {
+      "label": "Cave_static_275",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1080.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_572": {
+      "label": "Cave_static_276",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -1010.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_573": {
+      "label": "Cave_static_277",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -940.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_574": {
+      "label": "Cave_static_278",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -870.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_575": {
+      "label": "Cave_static_279",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -800.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_576": {
+      "label": "Cave_static_280",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -730.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_577": {
+      "label": "Cave_static_281",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -660.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_578": {
+      "label": "Cave_static_282",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -590.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_579": {
+      "label": "Cave_static_283",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -520.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_580": {
+      "label": "Cave_static_284",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -450.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_581": {
+      "label": "Cave_static_285",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -380.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_582": {
+      "label": "Cave_static_286",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -310.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_583": {
+      "label": "Cave_static_287",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -240.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_584": {
+      "label": "Cave_static_288",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -170.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_585": {
+      "label": "Cave_static_289",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -100.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_586": {
+      "label": "Cave_static_290",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -30.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_587": {
+      "label": "Cave_static_291",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        40.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_588": {
+      "label": "Cave_static_292",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        110.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_589": {
+      "label": "Cave_static_293",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        180.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_590": {
+      "label": "Cave_static_294",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        250.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_591": {
+      "label": "Cave_static_295",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        320.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_592": {
+      "label": "Cave_static_296",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        390.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_593": {
+      "label": "Cave_static_297",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        460.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_594": {
+      "label": "Cave_static_298",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        530.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_595": {
+      "label": "Cave_static_299",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        600.0,
+        -930.0,
+        2.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.18,
+        1.3,
+        0.05
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_596": {
+      "label": "Cave_static_300",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -220.0,
+        -970.0,
+        8.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        17.6,
+        0.06,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_597": {
+      "label": "Cave_static_301",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -220.0,
+        -890.0,
+        8.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        17.6,
+        0.06,
+        0.07
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_598": {
+      "label": "Cave_static_302",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        680.0,
+        -930.0,
+        40.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.22,
+        1.5,
+        0.24
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_599": {
+      "label": "Cave_static_303",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        692.0,
+        -990.0,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.16,
+        0.16,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_600": {
+      "label": "Cave_static_304",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        692.0,
+        -870.0,
+        30.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.16,
+        0.16,
+        0.6
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_601": {
+      "label": "Cave_static_305",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -335.0,
+        -974.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        89.99999999999999
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_602": {
+      "label": "Cave_static_306",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -335.0,
+        -886.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        89.99999999999999
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_603": {
+      "label": "Cave_static_307",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -225.0,
+        -974.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        89.99999999999999
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_604": {
+      "label": "Cave_static_308",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -225.0,
+        -886.0,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        89.99999999999999
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_605": {
+      "label": "Cave_static_309",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -280.0,
+        -930.0,
+        38.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.7,
+        1.04,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_606": {
+      "label": "Cave_static_310",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -361.0,
+        -930.0,
+        75.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.08,
+        1.1,
+        0.75
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_607": {
+      "label": "Cave_static_311",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -199.0,
+        -930.0,
+        75.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.08,
+        1.1,
+        0.75
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_608": {
+      "label": "Cave_static_312",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -280.0,
+        -981.0,
+        75.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.7,
+        0.08,
+        0.75
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_609": {
+      "label": "Cave_static_313",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -280.0,
+        -985.0,
+        109.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.76,
+        0.04,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_610": {
+      "label": "Cave_static_314",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -280.0,
+        -879.0,
+        75.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.7,
+        0.08,
+        0.75
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_611": {
+      "label": "Cave_static_315",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        -280.0,
+        -875.0,
+        109.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.76,
+        0.04,
+        0.08
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_612": {
+      "label": "Cave_procedural_316",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PointLight_29": {
+      "label": "Cave_point_317",
+      "class": "/Script/Engine.PointLight",
+      "location": [
+        840.0,
+        -840.0,
+        140.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_613": {
+      "label": "Cave_procedural_318",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_614": {
+      "label": "Cave_procedural_319",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_615": {
+      "label": "Cave_procedural_320",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_616": {
+      "label": "Cave_procedural_321",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_617": {
+      "label": "Cave_procedural_322",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.StaticMeshActor_618": {
+      "label": "Cave_procedural_323",
+      "class": "/Script/Engine.StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.DirectionalLight_2": {
+      "label": "Cave_AmbientSun",
+      "class": "/Script/Engine.DirectionalLight",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        -49.99999999999998,
+        -39.999999999999986,
+        -2.4740323502926103e-15
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.SkyAtmosphere_2": {
+      "label": "Cave_Atmosphere",
+      "class": "/Script/Engine.SkyAtmosphere",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.SkyLight_2": {
+      "label": "Cave_SkyFill",
+      "class": "/Script/Engine.SkyLight",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.ExponentialHeightFog_2": {
+      "label": "Cave_Haze",
+      "class": "/Script/Engine.ExponentialHeightFog",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.PostProcessVolume_0": {
+      "label": "Cave_Exposure",
+      "class": "/Script/Engine.PostProcessVolume",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "source_license": "Team-authored analytic geometry through Unreal editor GeometryScripting API; public redistribution permitted, no external source or generated source art",
+  "saved_packages": [
+    "/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport",
+    "/Game/Hazards/L_Site01_HZ"
+  ]
+}
