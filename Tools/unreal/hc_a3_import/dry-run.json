@@ -1,0 +1,55 @@
+{
+  "mode": "dry-run",
+  "engine_target": "5.8.3",
+  "dependency": "PR #68 / codex/hc-a3-hud-art",
+  "proposed_imports": [
+    {
+      "name": "T_HUD_RelicIcon",
+      "source": "SourceArt/HC/HC-A3/T_HUD_RelicIcon.png",
+      "sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "destination_path": "/Game/Puzzles/Art/HCA3_UI",
+      "destination_object": "/Game/Puzzles/Art/HCA3_UI/T_HUD_RelicIcon.T_HUD_RelicIcon"
+    },
+    {
+      "name": "T_HUD_RoundBannerFrame",
+      "source": "SourceArt/HC/HC-A3/T_HUD_RoundBannerFrame.png",
+      "sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+      "dimensions": [
+        512,
+        512
+      ],
+      "destination_path": "/Game/Puzzles/Art/HCA3_UI",
+      "destination_object": "/Game/Puzzles/Art/HCA3_UI/T_HUD_RoundBannerFrame.T_HUD_RoundBannerFrame"
+    },
+    {
+      "name": "T_HUD_InteractPromptFrame",
+      "source": "SourceArt/HC/HC-A3/T_HUD_InteractPromptFrame.png",
+      "sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "destination_path": "/Game/Puzzles/Art/HCA3_UI",
+      "destination_object": "/Game/Puzzles/Art/HCA3_UI/T_HUD_InteractPromptFrame.T_HUD_InteractPromptFrame"
+    }
+  ],
+  "texture_settings": {
+    "compression_settings": "TC_EDITOR_ICON",
+    "lod_group": "TEXTUREGROUP_UI",
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "srgb": true,
+    "compression_no_alpha": false,
+    "never_stream": true,
+    "virtual_texture_streaming": false,
+    "address_x": "TA_CLAMP",
+    "address_y": "TA_CLAMP",
+    "filter": "TF_BILINEAR"
+  },
+  "writes_performed": false,
+  "evidence": "Portable plan corresponding to passing test_default_no_unreal_import_or_repo_writes; source paths are repository-relative here, absolute in CLI output.",
+  "engine_apply_executed": false
+}

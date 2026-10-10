@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "map": "L_Site01",
+  "resolution": [
+    1280,
+    720
+  ],
+  "local_players": 2,
+  "dynamic_prompt_reflow": true,
+  "owners": [
+    {
+      "pawn": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_25.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_25.WBP_InteractPrompt_C_0",
+      "owner": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "pawn": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_1",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_25.WBP_HCA3RoundHUD_C_1",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_25.WBP_InteractPrompt_C_1",
+      "owner": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_1"
+    }
+  ]
+}

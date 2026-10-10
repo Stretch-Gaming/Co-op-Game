@@ -1,0 +1,5159 @@
+{
+  "dependency_pr": 68,
+  "dependency_head": "6f7e713f47f7d3ac8b9d96738639d3ea4bda4618",
+  "source_hashes": {
+    "T_HUD_RelicIcon": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+    "T_HUD_RoundBannerFrame": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+    "T_HUD_InteractPromptFrame": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c"
+  },
+  "cases": [
+    {
+      "file": "previews/1280x720_full_playing.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "full",
+      "state": "playing",
+      "sha256": "0b0d72662cc309c3d6d8d04e6a94482d49be1fb39bde8ef8e7e7edb570226e5d",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            720
+          ],
+          "scale": 1.0,
+          "safe_margin_px": 24,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                24,
+                24,
+                88,
+                88
+              ],
+              "visible_rect": [
+                31,
+                29,
+                81,
+                82
+              ],
+              "texture_size": [
+                64,
+                64
+              ],
+              "anchor_center": [
+                56.0,
+                56.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                91.5,
+                46.5,
+                162.5,
+                65.5
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                470,
+                -94,
+                810,
+                246
+              ],
+              "visible_rect": [
+                483,
+                24,
+                797,
+                140
+              ],
+              "texture_size": [
+                340,
+                340
+              ],
+              "anchor_center": [
+                640.0,
+                82.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                576.0,
+                73.0,
+                703.0,
+                92.0
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                490,
+                438,
+                790,
+                738
+              ],
+              "visible_rect": [
+                506,
+                541,
+                774,
+                650
+              ],
+              "texture_size": [
+                300,
+                300
+              ],
+              "anchor_center": [
+                640.0,
+                596
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                591.0,
+                586,
+                689.0,
+                606
+              ],
+              "font_px": 18
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_full_timed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "full",
+      "state": "timed",
+      "sha256": "a9a18de84ea6efc73764c676f7f06fb552d34253aecc175820047e0140520200",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            720
+          ],
+          "scale": 1.0,
+          "safe_margin_px": 24,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                24,
+                24,
+                88,
+                88
+              ],
+              "visible_rect": [
+                31,
+                29,
+                81,
+                82
+              ],
+              "texture_size": [
+                64,
+                64
+              ],
+              "anchor_center": [
+                56.0,
+                56.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                91.5,
+                46.5,
+                162.5,
+                65.5
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                470,
+                -94,
+                810,
+                246
+              ],
+              "visible_rect": [
+                483,
+                24,
+                797,
+                140
+              ],
+              "texture_size": [
+                340,
+                340
+              ],
+              "anchor_center": [
+                640.0,
+                82.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                576.0,
+                73.0,
+                703.0,
+                92.0
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                490,
+                438,
+                790,
+                738
+              ],
+              "visible_rect": [
+                506,
+                541,
+                774,
+                650
+              ],
+              "texture_size": [
+                300,
+                300
+              ],
+              "anchor_center": [
+                640.0,
+                596
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                569.0,
+                586,
+                710.0,
+                606
+              ],
+              "font_px": 18
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                565,
+                660,
+                715,
+                670
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                592.0,
+                677,
+                688.0,
+                692
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_full_cleared.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "full",
+      "state": "cleared",
+      "sha256": "2bfce8ba91abfe2000dafe4099ac42e5ce26dabdd117f9cfc7819a6f81ff06d9",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            720
+          ],
+          "scale": 1.0,
+          "safe_margin_px": 24,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                24,
+                24,
+                88,
+                88
+              ],
+              "visible_rect": [
+                31,
+                29,
+                81,
+                82
+              ],
+              "texture_size": [
+                64,
+                64
+              ],
+              "anchor_center": [
+                56.0,
+                56.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                91.5,
+                46.5,
+                162.5,
+                65.5
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                470,
+                -94,
+                810,
+                246
+              ],
+              "visible_rect": [
+                483,
+                24,
+                797,
+                140
+              ],
+              "texture_size": [
+                340,
+                340
+              ],
+              "anchor_center": [
+                640.0,
+                82.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                549.0,
+                74.0,
+                731.0,
+                91.0
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                529.0,
+                151,
+                750.0,
+                167
+              ],
+              "font_px": 18
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_full_failed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "full",
+      "state": "failed",
+      "sha256": "9ad92d439e65e454f889263db18f8feb94447b016e9571ad67704bceb2cdb156",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            720
+          ],
+          "scale": 1.0,
+          "safe_margin_px": 24,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                24,
+                24,
+                88,
+                88
+              ],
+              "visible_rect": [
+                31,
+                29,
+                81,
+                82
+              ],
+              "texture_size": [
+                64,
+                64
+              ],
+              "anchor_center": [
+                56.0,
+                56.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                91.5,
+                46.5,
+                162.5,
+                65.5
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                470,
+                -94,
+                810,
+                246
+              ],
+              "visible_rect": [
+                483,
+                24,
+                797,
+                140
+              ],
+              "texture_size": [
+                340,
+                340
+              ],
+              "anchor_center": [
+                640.0,
+                82.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                560.0,
+                74.0,
+                719.0,
+                91.0
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                510.0,
+                150,
+                770.0,
+                170
+              ],
+              "font_px": 18
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-horizontal_playing.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-horizontal",
+      "state": "playing",
+      "sha256": "f6134f5545442941dd486c628ae825ea3fb77f74491a93a6f89dc3826463ca60",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                585.0,
+                62.5,
+                694.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                512,
+                121,
+                767,
+                376
+              ],
+              "visible_rect": [
+                525,
+                208,
+                754,
+                302
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                640.0,
+                255
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                596.0,
+                247,
+                683.0,
+                264
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            360
+          ]
+        },
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                585.0,
+                62.5,
+                694.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                512,
+                121,
+                767,
+                376
+              ],
+              "visible_rect": [
+                525,
+                208,
+                754,
+                302
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                640.0,
+                255
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[A]  Interact",
+              "visible_rect": [
+                596.0,
+                247,
+                683.0,
+                264
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            360,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-horizontal_timed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-horizontal",
+      "state": "timed",
+      "sha256": "fc8cf75e76e51196b2e758da58817e0343375edecc544b7af41136b8ecbc3489",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                585.0,
+                62.5,
+                694.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                512,
+                121,
+                767,
+                376
+              ],
+              "visible_rect": [
+                525,
+                208,
+                754,
+                302
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                640.0,
+                255
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                577.0,
+                247,
+                703.0,
+                264
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                576,
+                310,
+                704,
+                318
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                592.0,
+                323,
+                688.0,
+                338
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            360
+          ]
+        },
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                585.0,
+                62.5,
+                694.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                512,
+                121,
+                767,
+                376
+              ],
+              "visible_rect": [
+                525,
+                208,
+                754,
+                302
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                640.0,
+                255
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [A]  Interact",
+              "visible_rect": [
+                577.0,
+                247,
+                703.0,
+                264
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.35,
+              "visible_rect": [
+                576,
+                310,
+                704,
+                318
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "35% / 3s hold",
+              "visible_rect": [
+                592.0,
+                323,
+                688.0,
+                338
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            360,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-horizontal_cleared.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-horizontal",
+      "state": "cleared",
+      "sha256": "9ca2b5e8efa9eeb8c69291a9d9b9751b8e30596b2a59a2638c1d92616e5f5c3b",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                561.0,
+                62.5,
+                718.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                542.0,
+                127,
+                739.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            360
+          ]
+        },
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                561.0,
+                62.5,
+                718.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                542.0,
+                127,
+                739.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            360,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-horizontal_failed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-horizontal",
+      "state": "failed",
+      "sha256": "694f8eb68c20e5b119bc2bede238910475b50a861e7d368887275bb7b398e82a",
+      "views": [
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                571.0,
+                62.5,
+                708.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                525.0,
+                127,
+                754.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1280,
+            360
+          ]
+        },
+        {
+          "viewport_size": [
+            1280,
+            360
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                496,
+                -80,
+                785,
+                209
+              ],
+              "visible_rect": [
+                507,
+                20,
+                774,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                640.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                571.0,
+                62.5,
+                708.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                525.0,
+                127,
+                754.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            360,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-vertical_playing.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-vertical",
+      "state": "playing",
+      "sha256": "c78c9d3a01e5484188861a473f279ffb6e257e5055639ba2568c2fc5c8646eb2",
+      "views": [
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                265.0,
+                62.5,
+                374.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                192,
+                481,
+                447,
+                736
+              ],
+              "visible_rect": [
+                205,
+                568,
+                434,
+                662
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                320.0,
+                615
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                276.0,
+                607,
+                363.0,
+                624
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            640,
+            720
+          ]
+        },
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                265.0,
+                62.5,
+                374.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                192,
+                481,
+                447,
+                736
+              ],
+              "visible_rect": [
+                205,
+                568,
+                434,
+                662
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                320.0,
+                615
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[A]  Interact",
+              "visible_rect": [
+                276.0,
+                607,
+                363.0,
+                624
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            640,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-vertical_timed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-vertical",
+      "state": "timed",
+      "sha256": "acd6621aea2930b43b5dc76d9351d6c23ab7e413820bbe10161e303cc5203b4f",
+      "views": [
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                265.0,
+                62.5,
+                374.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                192,
+                481,
+                447,
+                736
+              ],
+              "visible_rect": [
+                205,
+                568,
+                434,
+                662
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                320.0,
+                615
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                257.0,
+                607,
+                383.0,
+                624
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                256,
+                670,
+                384,
+                678
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                272.0,
+                683,
+                368.0,
+                698
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            640,
+            720
+          ]
+        },
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                265.0,
+                62.5,
+                374.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                192,
+                481,
+                447,
+                736
+              ],
+              "visible_rect": [
+                205,
+                568,
+                434,
+                662
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                320.0,
+                615
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [A]  Interact",
+              "visible_rect": [
+                257.0,
+                607,
+                383.0,
+                624
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.35,
+              "visible_rect": [
+                256,
+                670,
+                384,
+                678
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "35% / 3s hold",
+              "visible_rect": [
+                272.0,
+                683,
+                368.0,
+                698
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            640,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-vertical_cleared.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-vertical",
+      "state": "cleared",
+      "sha256": "25d97e3328a222bf407d2700dba5b11151bbbbcf10b03fa9f255fbe38ae6d295",
+      "views": [
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                241.0,
+                62.5,
+                398.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                222.0,
+                127,
+                419.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            640,
+            720
+          ]
+        },
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                241.0,
+                62.5,
+                398.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                222.0,
+                127,
+                419.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            640,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1280x720_split-vertical_failed.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "mode": "split-vertical",
+      "state": "failed",
+      "sha256": "82219d204480856632f6b99bbdc8d808f8d212affc5cfa0c81c7366c21d3d269",
+      "views": [
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                251.0,
+                62.5,
+                388.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                205.0,
+                127,
+                434.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            640,
+            720
+          ]
+        },
+        {
+          "viewport_size": [
+            640,
+            720
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                176,
+                -80,
+                465,
+                209
+              ],
+              "visible_rect": [
+                187,
+                20,
+                454,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                320.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                251.0,
+                62.5,
+                388.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                205.0,
+                127,
+                434.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            640,
+            0,
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_full_playing.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "full",
+      "state": "playing",
+      "sha256": "afc7acd87b298ba0bbdbd5f4049c6c72a9b18e64afbfcc187e2ab21fa6381dcb",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            1080
+          ],
+          "scale": 1.25,
+          "safe_margin_px": 30,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                30,
+                30,
+                110,
+                110
+              ],
+              "visible_rect": [
+                39,
+                37,
+                101,
+                103
+              ],
+              "texture_size": [
+                80,
+                80
+              ],
+              "anchor_center": [
+                70.0,
+                70.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                115.0,
+                60.0,
+                201.0,
+                83.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                748,
+                -117,
+                1173,
+                308
+              ],
+              "visible_rect": [
+                765,
+                30,
+                1156,
+                176
+              ],
+              "texture_size": [
+                425,
+                425
+              ],
+              "anchor_center": [
+                960.0,
+                103.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                881.0,
+                93.0,
+                1038.0,
+                116.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                772,
+                728,
+                1147,
+                1103
+              ],
+              "visible_rect": [
+                792,
+                856,
+                1127,
+                993
+              ],
+              "texture_size": [
+                375,
+                375
+              ],
+              "anchor_center": [
+                960.0,
+                925
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                901.0,
+                914,
+                1018.0,
+                937
+              ],
+              "font_px": 22
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_full_timed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "full",
+      "state": "timed",
+      "sha256": "6f747fc221132350a8a7519cf5b89bc73ec4ee3587a35774a36e3208cd0044f6",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            1080
+          ],
+          "scale": 1.25,
+          "safe_margin_px": 30,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                30,
+                30,
+                110,
+                110
+              ],
+              "visible_rect": [
+                39,
+                37,
+                101,
+                103
+              ],
+              "texture_size": [
+                80,
+                80
+              ],
+              "anchor_center": [
+                70.0,
+                70.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                115.0,
+                60.0,
+                201.0,
+                83.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                748,
+                -117,
+                1173,
+                308
+              ],
+              "visible_rect": [
+                765,
+                30,
+                1156,
+                176
+              ],
+              "texture_size": [
+                425,
+                425
+              ],
+              "anchor_center": [
+                960.0,
+                103.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                881.0,
+                93.0,
+                1038.0,
+                116.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                772,
+                728,
+                1147,
+                1103
+              ],
+              "visible_rect": [
+                792,
+                856,
+                1127,
+                993
+              ],
+              "texture_size": [
+                375,
+                375
+              ],
+              "anchor_center": [
+                960.0,
+                925
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                874.0,
+                914,
+                1046.0,
+                937
+              ],
+              "font_px": 22
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                866,
+                1005,
+                1054,
+                1017
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                899.0,
+                1027,
+                1020.0,
+                1044
+              ],
+              "font_px": 20
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_full_cleared.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "full",
+      "state": "cleared",
+      "sha256": "09667a72b800626378cbd7c2b198579ff65776b0b7307d5de10892ee7153ea3d",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            1080
+          ],
+          "scale": 1.25,
+          "safe_margin_px": 30,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                30,
+                30,
+                110,
+                110
+              ],
+              "visible_rect": [
+                39,
+                37,
+                101,
+                103
+              ],
+              "texture_size": [
+                80,
+                80
+              ],
+              "anchor_center": [
+                70.0,
+                70.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                115.0,
+                60.0,
+                201.0,
+                83.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                748,
+                -117,
+                1173,
+                308
+              ],
+              "visible_rect": [
+                765,
+                30,
+                1156,
+                176
+              ],
+              "texture_size": [
+                425,
+                425
+              ],
+              "anchor_center": [
+                960.0,
+                103.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                845.0,
+                94.0,
+                1075.0,
+                115.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                820.0,
+                189,
+                1100.0,
+                208
+              ],
+              "font_px": 22
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_full_failed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "full",
+      "state": "failed",
+      "sha256": "b5426c76c07a9aa93454f1451ebfdd9ea9a2941a6688b56a6a0ecbd7f3fe16f1",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            1080
+          ],
+          "scale": 1.25,
+          "safe_margin_px": 30,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                30,
+                30,
+                110,
+                110
+              ],
+              "visible_rect": [
+                39,
+                37,
+                101,
+                103
+              ],
+              "texture_size": [
+                80,
+                80
+              ],
+              "anchor_center": [
+                70.0,
+                70.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                115.0,
+                60.0,
+                201.0,
+                83.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                748,
+                -117,
+                1173,
+                308
+              ],
+              "visible_rect": [
+                765,
+                30,
+                1156,
+                176
+              ],
+              "texture_size": [
+                425,
+                425
+              ],
+              "anchor_center": [
+                960.0,
+                103.0
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                859.0,
+                94.0,
+                1060.0,
+                115.0
+              ],
+              "font_px": 28
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                796.0,
+                189,
+                1123.0,
+                211
+              ],
+              "font_px": 22
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-horizontal_playing.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-horizontal",
+      "state": "playing",
+      "sha256": "043426e807d34cc346803a188fcce1cc2a78ca6f224489b540cf1d2ce4d0dae1",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                905.0,
+                62.5,
+                1014.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                832,
+                301,
+                1087,
+                556
+              ],
+              "visible_rect": [
+                845,
+                388,
+                1074,
+                482
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                960.0,
+                435
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                916.0,
+                427,
+                1003.0,
+                444
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            540
+          ]
+        },
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                905.0,
+                62.5,
+                1014.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                832,
+                301,
+                1087,
+                556
+              ],
+              "visible_rect": [
+                845,
+                388,
+                1074,
+                482
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                960.0,
+                435
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[A]  Interact",
+              "visible_rect": [
+                916.0,
+                427,
+                1003.0,
+                444
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            540,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-horizontal_timed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-horizontal",
+      "state": "timed",
+      "sha256": "19258343900630df3264548a26052e74b23108e3a55834374d7f1ee307a58841",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                905.0,
+                62.5,
+                1014.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                832,
+                301,
+                1087,
+                556
+              ],
+              "visible_rect": [
+                845,
+                388,
+                1074,
+                482
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                960.0,
+                435
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                897.0,
+                427,
+                1023.0,
+                444
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                896,
+                490,
+                1024,
+                498
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                912.0,
+                503,
+                1008.0,
+                518
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            540
+          ]
+        },
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                905.0,
+                62.5,
+                1014.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                832,
+                301,
+                1087,
+                556
+              ],
+              "visible_rect": [
+                845,
+                388,
+                1074,
+                482
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                960.0,
+                435
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [A]  Interact",
+              "visible_rect": [
+                897.0,
+                427,
+                1023.0,
+                444
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.35,
+              "visible_rect": [
+                896,
+                490,
+                1024,
+                498
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "35% / 3s hold",
+              "visible_rect": [
+                912.0,
+                503,
+                1008.0,
+                518
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            540,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-horizontal_cleared.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-horizontal",
+      "state": "cleared",
+      "sha256": "6f9c93d597a6bba65b58480bfd328858f2f1b2fcd54312c972ff926b655d0484",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                881.0,
+                62.5,
+                1038.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                862.0,
+                127,
+                1059.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            540
+          ]
+        },
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                881.0,
+                62.5,
+                1038.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                862.0,
+                127,
+                1059.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            540,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-horizontal_failed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-horizontal",
+      "state": "failed",
+      "sha256": "3bf5aed5c81b6d386ace9641cf33c97fd32bc49901284c6dc484fcc73e29d58d",
+      "views": [
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                891.0,
+                62.5,
+                1028.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                845.0,
+                127,
+                1074.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            1920,
+            540
+          ]
+        },
+        {
+          "viewport_size": [
+            1920,
+            540
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                816,
+                -80,
+                1105,
+                209
+              ],
+              "visible_rect": [
+                827,
+                20,
+                1094,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                960.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                891.0,
+                62.5,
+                1028.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                845.0,
+                127,
+                1074.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            0,
+            540,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-vertical_playing.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-vertical",
+      "state": "playing",
+      "sha256": "4d32ebe1fd550a152cb3d58e66e692ab658b59b237f45a38bfdd721f26821afc",
+      "views": [
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                425.0,
+                62.5,
+                534.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                352,
+                841,
+                607,
+                1096
+              ],
+              "visible_rect": [
+                365,
+                928,
+                594,
+                1022
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                480.0,
+                975
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[E]  Interact",
+              "visible_rect": [
+                436.0,
+                967,
+                523.0,
+                984
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            960,
+            1080
+          ]
+        },
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                425.0,
+                62.5,
+                534.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                352,
+                841,
+                607,
+                1096
+              ],
+              "visible_rect": [
+                365,
+                928,
+                594,
+                1022
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                480.0,
+                975
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "[A]  Interact",
+              "visible_rect": [
+                436.0,
+                967,
+                523.0,
+                984
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            960,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-vertical_timed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-vertical",
+      "state": "timed",
+      "sha256": "d01af23d8bf7e3c5169f8df48c774c1a04bf74532e7eaae6379c4fd620429cbd",
+      "views": [
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                425.0,
+                62.5,
+                534.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                352,
+                841,
+                607,
+                1096
+              ],
+              "visible_rect": [
+                365,
+                928,
+                594,
+                1022
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                480.0,
+                975
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [E]  Interact",
+              "visible_rect": [
+                417.0,
+                967,
+                543.0,
+                984
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.65,
+              "visible_rect": [
+                416,
+                1030,
+                544,
+                1038
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "65% / 3s hold",
+              "visible_rect": [
+                432.0,
+                1043,
+                528.0,
+                1058
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            960,
+            1080
+          ]
+        },
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND 2 / 3",
+              "visible_rect": [
+                425.0,
+                62.5,
+                534.0,
+                78.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "interact-frame",
+              "kind": "image",
+              "asset": "T_HUD_InteractPromptFrame",
+              "brush_rect": [
+                352,
+                841,
+                607,
+                1096
+              ],
+              "visible_rect": [
+                365,
+                928,
+                594,
+                1022
+              ],
+              "texture_size": [
+                255,
+                255
+              ],
+              "anchor_center": [
+                480.0,
+                975
+              ]
+            },
+            {
+              "id": "interact-label",
+              "kind": "text",
+              "text": "Hold [A]  Interact",
+              "visible_rect": [
+                417.0,
+                967,
+                543.0,
+                984
+              ],
+              "font_px": 16
+            },
+            {
+              "id": "timed-progress",
+              "kind": "progress",
+              "percent": 0.35,
+              "visible_rect": [
+                416,
+                1030,
+                544,
+                1038
+              ]
+            },
+            {
+              "id": "timed-status",
+              "kind": "text",
+              "text": "35% / 3s hold",
+              "visible_rect": [
+                432.0,
+                1043,
+                528.0,
+                1058
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            960,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-vertical_cleared.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-vertical",
+      "state": "cleared",
+      "sha256": "ebdf8bc990bbbd016bac824ed7f152be5270ad1d58c8691c155e2da3f7ffc593",
+      "views": [
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                401.0,
+                62.5,
+                558.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                382.0,
+                127,
+                579.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            960,
+            1080
+          ]
+        },
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND CLEARED",
+              "visible_rect": [
+                401.0,
+                62.5,
+                558.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Next chamber",
+              "visible_rect": [
+                382.0,
+                127,
+                579.0,
+                142
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            960,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "file": "previews/1920x1080_split-vertical_failed.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "mode": "split-vertical",
+      "state": "failed",
+      "sha256": "9001fdecb4e857653cda33e44378e54193ddf5ea14d2d07c058dafde88026438",
+      "views": [
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                411.0,
+                62.5,
+                548.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                365.0,
+                127,
+                594.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 1,
+          "viewport_rect": [
+            0,
+            0,
+            960,
+            1080
+          ]
+        },
+        {
+          "viewport_size": [
+            960,
+            1080
+          ],
+          "scale": 0.85,
+          "safe_margin_px": 20,
+          "elements": [
+            {
+              "id": "relic-icon",
+              "kind": "image",
+              "asset": "T_HUD_RelicIcon",
+              "brush_rect": [
+                20,
+                20,
+                74,
+                74
+              ],
+              "visible_rect": [
+                26,
+                24,
+                68,
+                69
+              ],
+              "texture_size": [
+                54,
+                54
+              ],
+              "anchor_center": [
+                47.0,
+                47.0
+              ]
+            },
+            {
+              "id": "relic-total",
+              "kind": "text",
+              "text": "12 / 18",
+              "visible_rect": [
+                77.0,
+                39.5,
+                137.0,
+                55.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-frame",
+              "kind": "image",
+              "asset": "T_HUD_RoundBannerFrame",
+              "brush_rect": [
+                336,
+                -80,
+                625,
+                209
+              ],
+              "visible_rect": [
+                347,
+                20,
+                614,
+                119
+              ],
+              "texture_size": [
+                289,
+                289
+              ],
+              "anchor_center": [
+                480.0,
+                69.5
+              ]
+            },
+            {
+              "id": "round-label",
+              "kind": "text",
+              "text": "ROUND FAILED",
+              "visible_rect": [
+                411.0,
+                62.5,
+                548.0,
+                77.5
+              ],
+              "font_px": 19
+            },
+            {
+              "id": "round-status",
+              "kind": "text",
+              "text": "Round 2 / 3 - Checkpoint restart",
+              "visible_rect": [
+                365.0,
+                127,
+                594.0,
+                144
+              ],
+              "font_px": 16
+            }
+          ],
+          "player": 2,
+          "viewport_rect": [
+            960,
+            0,
+            1920,
+            1080
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "case_count": 24,
+    "view_count": 40,
+    "visible_art_and_text_inside_safe_area": true,
+    "no_hud_group_overlap": true,
+    "frame_text_inside_openings": true,
+    "square_texture_aspect_preserved": true,
+    "minimum_text_px": 16,
+    "engine_executed": false
+  }
+}

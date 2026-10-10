@@ -1,0 +1,8 @@
+{
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "real_unreal_used": false,
+  "apply_path_evidence": "fake editor API only; actual import acceptance pending"
+}

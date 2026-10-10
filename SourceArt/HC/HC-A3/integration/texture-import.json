@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "engine_version": "5.8.3-58210709+++UE5+Release-5.8",
+  "project": "C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/CoopGame.uproject",
+  "saved": [
+    "/Game/Puzzles/Art/HCA3_UI/T_HUD_RelicIcon.T_HUD_RelicIcon",
+    "/Game/Puzzles/Art/HCA3_UI/T_HUD_RoundBannerFrame.T_HUD_RoundBannerFrame",
+    "/Game/Puzzles/Art/HCA3_UI/T_HUD_InteractPromptFrame.T_HUD_InteractPromptFrame"
+  ],
+  "textures": [
+    {
+      "path": "/Game/Puzzles/Art/HCA3_UI/T_HUD_RelicIcon.T_HUD_RelicIcon",
+      "source_sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+      "properties": {
+        "compression_settings": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+        "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+        "mip_gen_settings": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+        "srgb": "True",
+        "compression_no_alpha": "False",
+        "never_stream": "True",
+        "virtual_texture_streaming": "False",
+        "address_x": "<TextureAddress.TA_CLAMP: 1>",
+        "address_y": "<TextureAddress.TA_CLAMP: 1>",
+        "filter": "<TextureFilter.TF_BILINEAR: 1>"
+      },
+      "source_file": "C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/SourceArt/HC/HC-A3/T_HUD_RelicIcon.png"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA3_UI/T_HUD_RoundBannerFrame.T_HUD_RoundBannerFrame",
+      "source_sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+      "properties": {
+        "compression_settings": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+        "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+        "mip_gen_settings": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+        "srgb": "True",
+        "compression_no_alpha": "False",
+        "never_stream": "True",
+        "virtual_texture_streaming": "False",
+        "address_x": "<TextureAddress.TA_CLAMP: 1>",
+        "address_y": "<TextureAddress.TA_CLAMP: 1>",
+        "filter": "<TextureFilter.TF_BILINEAR: 1>"
+      },
+      "source_file": "C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/SourceArt/HC/HC-A3/T_HUD_RoundBannerFrame.png"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA3_UI/T_HUD_InteractPromptFrame.T_HUD_InteractPromptFrame",
+      "source_sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c",
+      "properties": {
+        "compression_settings": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+        "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+        "mip_gen_settings": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+        "srgb": "True",
+        "compression_no_alpha": "False",
+        "never_stream": "True",
+        "virtual_texture_streaming": "False",
+        "address_x": "<TextureAddress.TA_CLAMP: 1>",
+        "address_y": "<TextureAddress.TA_CLAMP: 1>",
+        "filter": "<TextureFilter.TF_BILINEAR: 1>"
+      },
+      "source_file": "C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/SourceArt/HC/HC-A3/T_HUD_InteractPromptFrame.png"
+    }
+  ]
+}
