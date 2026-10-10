@@ -1,0 +1,1 @@
+(fn RequestLatch (Index Attempt) (return false))

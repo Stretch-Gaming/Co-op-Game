@@ -1,0 +1,70 @@
+{
+  "passed": false,
+  "mode": "clients",
+  "checks": [
+    "owned start prompt resolves through live interaction validation",
+    "start input requested Round3 with locked scaling row for actual roster",
+    "far-side fixture teleport has no server entry/crossover token",
+    "bypassing crossing cannot focus far-side objective",
+    "real PG levers focused by each owning player",
+    "real PG lever requirement is one at2/3 and two at4",
+    "real PG gate open state replicates after required native input holds",
+    "real PG safety overlap holds raised gate after lever release",
+    "real PG gate closes on release once pawn clears safety volume"
+  ],
+  "input_path": "owning EnhancedInputLocalPlayerSubsystem action injection -> inherited character events -> reliable character server RPC",
+  "fixture_setup": "Python positions/bootstrap/restart; native create_player only for host second owner",
+  "latch": "explicit fixture simulation; actual PG gate closure recorded separately",
+  "players": 2,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game\\Tools\\unreal\\hc_gauntlet\\test_input.py\", line 130, in tick\n    check(coordinator().get_editor_property('EnteredPawns') and target(server,'HC_GauntletGate').get_editor_property('bOpen'),'server entry token recorded within local route bounds while real gate reopens')\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game\\Tools\\unreal\\hc_gauntlet\\test_input.py\", line 53, in check\n    def check(value,label):assert value,label;report['checks'].append(label)\n                           ^^^^^^^^^^^^^^^^^^\nAssertionError: server entry token recorded within local route bounds while real gate reopens\n",
+  "snapshot": [
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_0_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 1,
+        "phaseEndsAt": 0,
+        "scalingRow": "2"
+      },
+      "attempt": 1,
+      "crossed": 0,
+      "completed": false,
+      "count": 0,
+      "gate_open": true,
+      "latched": false
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_1_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 1,
+        "phaseEndsAt": 0,
+        "scalingRow": "2"
+      },
+      "attempt": 1,
+      "crossed": 0,
+      "completed": false,
+      "count": 0,
+      "gate_open": true,
+      "latched": false
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_2_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 1,
+        "phaseEndsAt": 0,
+        "scalingRow": "2"
+      },
+      "attempt": 1,
+      "crossed": 0,
+      "completed": false,
+      "count": 0,
+      "gate_open": true,
+      "latched": false
+    }
+  ]
+}

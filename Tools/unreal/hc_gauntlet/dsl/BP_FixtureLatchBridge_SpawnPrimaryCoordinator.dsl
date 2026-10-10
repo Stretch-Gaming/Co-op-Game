@@ -1,0 +1,1 @@
+(fn SpawnPrimaryCoordinator () (bind spawned (Game|SpawnActorfromClass :Class "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C" :SpawnTransform (Transformation|GetActorTransform))) (return spawned))

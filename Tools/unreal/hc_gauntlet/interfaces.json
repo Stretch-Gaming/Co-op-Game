@@ -1,0 +1,38 @@
+{
+  "/Game/Puzzles/Test/BP_TestInteractable": {
+    "interfaces": {
+      "BPI_Interactable": true,
+      "BPI_RoundReset": false
+    },
+    "parent": "/Script/Engine.StaticMeshActor",
+    "components": [
+      "StaticMeshComponent0"
+    ]
+  },
+  "/Game/Puzzles/BP_Carryable": {
+    "interfaces": {
+      "BPI_Interactable": true,
+      "BPI_RoundReset": true
+    },
+    "parent": "/Script/Engine.StaticMeshActor",
+    "components": [
+      "StaticMeshComponent0"
+    ]
+  },
+  "/Game/Player/Round3/BP_Lever": {
+    "interfaces": {
+      "BPI_Interactable": true,
+      "BPI_RoundReset": true
+    },
+    "parent": "/Script/Engine.Actor",
+    "components": []
+  },
+  "/Game/Player/Round3/BP_GauntletGate": {
+    "interfaces": {
+      "BPI_Interactable": false,
+      "BPI_RoundReset": true
+    },
+    "parent": "/Script/Engine.Actor",
+    "components": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "blueprints": {
+    "/Game/Puzzles/Gauntlet/BP_HCGauntletStart.BP_HCGauntletStart": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator)\n  (if (Networking|HasAuthority)\n    (bind _coordinator (CallFunction|FindCoordinator))\n    (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator))\n    (Class|BPHCGauntletCoordinator|RefreshState _asbp_hcgauntlet_coordinator)\n    (if (Class|BPIInteractable|CanInteract Instigator)\n      (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Instigator))\n      (bind _allowed (Class|BPCoopCharacter|UseAllowed _asbp_coop_character self))\n      (if _allowed\n        (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n        (Class|BPCoopGameMode|StartRound _asbp_coop_game_mode 3)))))\n",
+        "FindCoordinator": "(fn FindCoordinator ()\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (return (Utilities|Array|Get(acopy) _outactors))\n    (else\n      (return 0))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (Class|BPHCGauntletGateBridge|BeginGauntlet))\n\n(event EventResetForRound (Index Attempt)\n  (Class|BPHCGauntletGateBridge|ResetGauntlet Index Attempt))\n\n(event EventInteract (Instigator)\n  (Class|BPHCGauntletGateBridge|OnInteraction Instigator))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (if (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 2) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\")))\n        (bind _coordinator (CallFunction|FindCoordinator))\n        (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator)\n          (:then\n            (bind _allowed (Class|BPHCGauntletCoordinator|ValidatePawn _asbp_hcgauntlet_coordinator Instigator))\n            (return (and _allowed (and (Class|BPHCGauntletCoordinator|GetSingletonValid _asbp_hcgauntlet_coordinator) (Class|BPHCGauntletCoordinator|GetDependencyReady _asbp_hcgauntlet_coordinator)))))\n          (:CastFailed\n            (return false)))\n        (else\n          (return false))))\n    (:CastFailed\n      (return false))))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"A145C3444C83534A89170EBDF8DC972E\\\", \\\"Start haunted gauntlet\\\")\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\")))\n"
+      }
+    }
+  }
+}

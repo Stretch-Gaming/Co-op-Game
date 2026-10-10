@@ -1,0 +1,1 @@
+(fn CanInteract (Instigator) (return false))

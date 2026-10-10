@@ -1,0 +1,1 @@
+(fn QueryLatch (Index Attempt) (return false))

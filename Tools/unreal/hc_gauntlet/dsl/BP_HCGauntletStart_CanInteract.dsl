@@ -1,0 +1,8 @@
+(fn CanInteract (Instigator) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))
+ (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs))) (if (and (== index 2) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator2")))
+ (bind found (CallFunction|FindCoordinator))
+ (bind c (Utilities|Casting|CastToBP_HCGauntletCoordinator :Object found)
+  (:then (bind valid (Class|BPHCGauntletCoordinator|ValidatePawn :self c :Pawn Instigator))
+   (return (and valid (and (Class|BPHCGauntletCoordinator|GetSingletonValid :self c) (Class|BPHCGauntletCoordinator|GetDependencyReady :self c))))) (:CastFailed (return false)))
+ (else (return false))))
+ (:CastFailed (return false))))

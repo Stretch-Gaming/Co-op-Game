@@ -1,0 +1,21 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "blueprints": {
+    "/Game/Puzzles/Test/HC_Gauntlet/BP_FixtureLatchBridge.BP_FixtureLatchBridge": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "RequestLatch": "(fn RequestLatch (Index Attempt)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (if (and (Networking|HasAuthority) (and (and (== Index 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Index)) (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Attempt) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")))))\n        (Variables|Default|SetLatched true)\n        (Variables|Default|SetLatchedAttempt Attempt)\n        (return true)\n        (else\n          (return false))))\n    (:CastFailed\n      (return false))))\n",
+        "QueryLatch": "(fn QueryLatch (Index Attempt)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (return (and (and (Variables|Default|GetLatched) (== (Variables|Default|GetLatchedAttempt) Attempt)) (and (and (== Index 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Index)) (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Attempt) (or (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\"))))))))\n    (:CastFailed\n      (return false))))\n",
+        "PollFixture": "(fn PollFixture ()\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n  (if (Networking|HasAuthority)\n    (if (not (and (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetLatchedAttempt))) (or (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\")))))\n      (CallFunction|ClearFixture))))\n",
+        "SupportsLatch": "(fn SupportsLatch ()\n  (return true))\n",
+        "StartFixture": "(fn StartFixture ()\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"PollFixture\" 0.1 true)))\n",
+        "ClearFixture": "(fn ClearFixture ()\n  (if (Networking|HasAuthority)\n    (Variables|Default|SetLatched false)\n    (Variables|Default|SetLatchedAttempt 0)))\n",
+        "SpawnPrimaryCoordinator": "(fn SpawnPrimaryCoordinator ()\n  (bind _returnvalue (Game|SpawnActorBPHCGauntletCoordinator \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\" (Transformation|GetActorTransform) \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n",
+        "SpawnPrimaryBridge": "(fn SpawnPrimaryBridge ()\n  (bind _returnvalue (Game|SpawnActorBPHCGauntletGateBridge \"/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge_C\" (Transformation|GetActorTransform) \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|StartFixture))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ClearFixture))\n"
+      }
+    }
+  }
+}

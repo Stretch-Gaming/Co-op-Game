@@ -1,0 +1,604 @@
+{
+  "root": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "blueprint_only": true,
+  "binary_authorship": "UnrealEditor only",
+  "production_completion": "blocked until PG persistent latch and Core/PG/HZ integration deliveries",
+  "native_matrix": {
+    "input-clients-2": {
+      "passed": true,
+      "log_passed": true,
+      "checks": 25
+    },
+    "input-clients-3": {
+      "passed": true,
+      "log_passed": true,
+      "checks": 23
+    },
+    "input-clients-4": {
+      "passed": true,
+      "log_passed": true,
+      "checks": 26
+    },
+    "input-host-3": {
+      "passed": true,
+      "log_passed": true,
+      "checks": 27
+    }
+  },
+  "primary_boundaries": {
+    "primary-boundaries-clients-2": {
+      "passed": true,
+      "checks": 10
+    },
+    "primary-boundaries-clients-3": {
+      "passed": true,
+      "checks": 10
+    },
+    "primary-boundaries-clients-4": {
+      "passed": true,
+      "checks": 10
+    },
+    "primary-boundaries-host-3": {
+      "passed": true,
+      "checks": 10
+    }
+  },
+  "files": [
+    {
+      "path": "Content/Puzzles/Gauntlet/BP_HCGauntletCoordinator.uasset",
+      "bytes": 647136,
+      "sha256": "5f88621c9cb51d374552dc9f1ad25d5d4bd6acb7d9f3b7d3cefb00741990d773"
+    },
+    {
+      "path": "Content/Puzzles/Gauntlet/BP_HCGauntletGateBridge.uasset",
+      "bytes": 65326,
+      "sha256": "ce81be3fd7741ff7643d2ca7a7a87676b61dd7cfba7753e3a367057a661a4b6f"
+    },
+    {
+      "path": "Content/Puzzles/Gauntlet/BP_HCGauntletObjective.uasset",
+      "bytes": 104336,
+      "sha256": "124b7c4bda9780f140df9f6af593da0bd5689033fca97ff0d305884f6d6649a4"
+    },
+    {
+      "path": "Content/Puzzles/Gauntlet/BP_HCGauntletStart.uasset",
+      "bytes": 157418,
+      "sha256": "3f8cf2cbfd98473d6e98531dce0f4f4ad66a6f3fc1b9388fff0e263b034b4234"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_Gauntlet/BP_FixtureLatchBridge.uasset",
+      "bytes": 233020,
+      "sha256": "335fae049fc5fd5430575440d885132335d793b00770184b491fd7808b108d13"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_Gauntlet/BP_GauntletInputProbe.uasset",
+      "bytes": 38363,
+      "sha256": "6bf2bd9b676d1c44e98c9cb83d7d221281b653af2a144f523294b1edcd82dc7e"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC_Gauntlet/L_HCGauntlet_Test.umap",
+      "bytes": 38880,
+      "sha256": "c8f042b91a50c5d2faeb488a49beadae9a83eecf55a7c38e44ce2df675ea5483"
+    },
+    {
+      "path": "docs/hc-gauntlet-verification.md",
+      "bytes": 13891,
+      "sha256": "b652fa51e626bd6217a0574ed09a2d366d33ff49c73581bdbe28119034207178"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/.gitignore",
+      "bytes": 112,
+      "sha256": "dc79d0289d73423851a6f00e12cf3d44648f2eeb7d92c50a211f2840ffa55b50"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/audit_primary.py",
+      "bytes": 2991,
+      "sha256": "0cd253a17c787904d9b427309e7050d908938d154c5b3c14c8e61f5c546fb74b"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_defaults.py",
+      "bytes": 1595,
+      "sha256": "4396c3500d9a5c9015d115946a809b9fe55e22ce8251e71e945f4db12f5f4c20"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_logic.py",
+      "bytes": 12614,
+      "sha256": "b2332c6913b0dd182fcac0f0486403937a9b8c11526533f1cc61bac35b3bb27c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_primary_correction.py",
+      "bytes": 1048,
+      "sha256": "649b8d31b871204ad51e0a09dcdb83467d2a9b28365ba02ee0dc70b4500c31ba"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_primary_fixture_spawns.py",
+      "bytes": 991,
+      "sha256": "cdfb0243fe5944ed52b01fbf3fd3871642d6a942297a827edf235dc3eee767b1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_reset_probe.py",
+      "bytes": 603,
+      "sha256": "a3f6e58487a5b030619681928327c92b1dba0caee91977175c5ba6bf72cbb089"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/author_scaffold.py",
+      "bytes": 3659,
+      "sha256": "5c6f9662036240ac746ae1768161412bb23bdf4bdddf4b6b67ab9da2e73134f5"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/authored-graphs.json",
+      "bytes": 23299,
+      "sha256": "f6143f269b0186d379b97d10fcce8c776976d8f28545f9355bddd56016122caf"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/authoring.py",
+      "bytes": 4631,
+      "sha256": "a650f3b6fdc25ae60b8673b499abe65197da0435f408919a6123cbd0270a3a73"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/collect_evidence.py",
+      "bytes": 2156,
+      "sha256": "a7ba369729713798b7b9a83bdcbec499bb09f4ad5534c924577d44b44992b369"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/configure.py",
+      "bytes": 1003,
+      "sha256": "36ee2a57d44a41855376c881ed905754be3746ba207571d1e16c44b12dabc8a4"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/contract-inspection.json",
+      "bytes": 17152,
+      "sha256": "27f42a482e4ac6e38ca83fdf2822ea2c0c599b108cc0cda9002494c4d9407766"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dependency-inspection.json",
+      "bytes": 7681,
+      "sha256": "f68e421881beadff6459bd5a2887156a8db86e0e2e7eacb476749b66f1b801ff"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_ClearFixture.dsl",
+      "bytes": 128,
+      "sha256": "b8490af17224230a1f4ebf74c2d847f104ae71022f1729546e6c0ddba16e1530"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_PollFixture.dsl",
+      "bytes": 613,
+      "sha256": "803b013d64af8cbcb1776a231aa254b12b6d38150ffa0630d196955c376ca2a6"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_QueryLatch.dsl",
+      "bytes": 663,
+      "sha256": "9aeb63c12f32b7e088d5fe875bce0a8c474bd37492050b4262357d4d8024b771"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_RequestLatch.dsl",
+      "bytes": 615,
+      "sha256": "44e24889d1e112b5e2ac83006ee3a2c3497c4dcade7588bff351412f1ad45107"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_SpawnPrimaryBridge.dsl",
+      "bytes": 218,
+      "sha256": "1eef7bc21ac1cb266115e4d2c046da31d5643cf4c67aee340c5fdfe51ddf206d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_SpawnPrimaryCoordinator.dsl",
+      "bytes": 225,
+      "sha256": "8dabf16996b2aaedec91253b2f097f8124ae999bf2fc307d099d83292404b008"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_StartFixture.dsl",
+      "bytes": 157,
+      "sha256": "c415ee5654b8b50619c0795902a56aad28a6208938b75d0e1f8a972940dc0461"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_FixtureLatchBridge_SupportsLatch.dsl",
+      "bytes": 35,
+      "sha256": "da54f88bb75133aa725218f0c1d30960529e03cbef9dccf628e0b364f455c802"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_GauntletInputProbe_DispatchFixtureReset.dsl",
+      "bytes": 146,
+      "sha256": "9d698822b7d12c507d6a2c6503528594fd764fb1d146f18db33b4af3bdcbebbf"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_GauntletInputProbe_ResolveInput.dsl",
+      "bytes": 146,
+      "sha256": "377b32906aa30abd4a7eb2bd3b1f14424ad9ee8e87178450e9e2aed31ad868ad"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_BeginGauntlet.dsl",
+      "bytes": 193,
+      "sha256": "237c5721ffbd67b5998405fc03a8fa1eb4e8863d7fc5e26ab6b6e30b254f457c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_CanInteract.dsl",
+      "bytes": 44,
+      "sha256": "72b89654bc45bccec36a7ff0c5f637aa3c908142f4a295d65e512c0d9a9b6c00"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_CompleteFor.dsl",
+      "bytes": 1075,
+      "sha256": "48d2ffb3384893765c3f71fcf0fbafd4ee9bf4ed1d67f9a6088e7f1056ba6459"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_FindBridge.dsl",
+      "bytes": 343,
+      "sha256": "fe17d2f058531cc7367744b5ec9febb991a49d7b58712af50950658611fcb445"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_FindGate.dsl",
+      "bytes": 331,
+      "sha256": "56b233ba44f34d0769951d5b14f75e4b6685174aa1c6ab681ef657a3530f9d3b"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_GateHeld.dsl",
+      "bytes": 354,
+      "sha256": "57047afcaf36ae4175982ad9c6b300dd3ca28d3da994b90282b13ab5c4d5136d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_GetInteractInfo.dsl",
+      "bytes": 135,
+      "sha256": "7d2c64751938a83ba19458867aef91d32e40681a02706b79b45b0564a20cdb95"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_HasProgress.dsl",
+      "bytes": 837,
+      "sha256": "addb27708e089116af1d76b970ba7b568f8c1dd01fa93b0b681ff16acd489115"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_OnInteraction.dsl",
+      "bytes": 32,
+      "sha256": "3b3060dbd1b7b0b0ad31bf8d0cf53fc2f223c49c7f53116ea35eea74c2fae99e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_RefreshDependencies.dsl",
+      "bytes": 564,
+      "sha256": "6095926d01469440ddc9120ecf1abc8f23ce30ccaa029f70c2da9f31fe8b79e3"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_RefreshState.dsl",
+      "bytes": 1696,
+      "sha256": "a43601aab66f695112ffd657a1c7f97422f2571f847d707681298b8abe41bdd7"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_ResetGauntlet.dsl",
+      "bytes": 338,
+      "sha256": "03284d6465d59d4c2324da4f1f8eb36cc1e8a19c10a6e925490fa41580980c8d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_UpdateProgress.dsl",
+      "bytes": 1307,
+      "sha256": "60a5201f97ff68ed8e510802570367adfff628f75fe15745d9d576002bdeea05"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletCoordinator_ValidatePawn.dsl",
+      "bytes": 1112,
+      "sha256": "e195a211ecd159eb17bb061fcfac38cddd742c4c4aef2b83c20ed00a209e5834"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_BeginGauntlet.dsl",
+      "bytes": 22,
+      "sha256": "47f509a041d6d98c21ff55cbfb6040f1a7394e6cd44e104cafec74127363fcd1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_CanInteract.dsl",
+      "bytes": 44,
+      "sha256": "72b89654bc45bccec36a7ff0c5f637aa3c908142f4a295d65e512c0d9a9b6c00"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_GetInteractInfo.dsl",
+      "bytes": 127,
+      "sha256": "ae99d6dfd1c451b3fbf04e792c3d796642a5cebfc725e9750257ff79bc4fc4e3"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_OnInteraction.dsl",
+      "bytes": 32,
+      "sha256": "3b3060dbd1b7b0b0ad31bf8d0cf53fc2f223c49c7f53116ea35eea74c2fae99e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_QueryLatch.dsl",
+      "bytes": 46,
+      "sha256": "3fdc210bd40b4ed3ed3a92f785612ed72a79ce34f9141ceb2ce08b7c8aab1d4c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_RequestLatch.dsl",
+      "bytes": 48,
+      "sha256": "f443e7d464aeb4c7ad5b51ca78c89200e1add3495716b87701f6a5c41e8706e4"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_ResetGauntlet.dsl",
+      "bytes": 35,
+      "sha256": "49e69d63a87da06a3038c25dfe93179e5c8f39fad2e62b4523f22c949a8cc271"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletGateBridge_SupportsLatch.dsl",
+      "bytes": 36,
+      "sha256": "20ea3c639839e4d94b1fa1675fb97a25fc9366a47e74dd236462ccc1a603f58c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_BeginGauntlet.dsl",
+      "bytes": 22,
+      "sha256": "47f509a041d6d98c21ff55cbfb6040f1a7394e6cd44e104cafec74127363fcd1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_CanInteract.dsl",
+      "bytes": 289,
+      "sha256": "5d5d5957d6584605f0fcbd462119557afdf03b82ec51a8f6222d120a258f4c45"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_FindCoordinator.dsl",
+      "bytes": 283,
+      "sha256": "e8ca12fb7b4148382eb32e3ffa9055b16cdd39995cebb8561a8ec66417dbe41c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_GetInteractInfo.dsl",
+      "bytes": 134,
+      "sha256": "1a27c3db2c008dc4e8b473baebf757e2a6085c48e654691a7d7766e9f4efeda1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_OnInteraction.dsl",
+      "bytes": 443,
+      "sha256": "cef9afacf0cd7c2282b1acd2d4ca0c9fc8161eb72e4bd79d0c488e155146f7d6"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletObjective_ResetGauntlet.dsl",
+      "bytes": 35,
+      "sha256": "49e69d63a87da06a3038c25dfe93179e5c8f39fad2e62b4523f22c949a8cc271"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_BeginGauntlet.dsl",
+      "bytes": 22,
+      "sha256": "47f509a041d6d98c21ff55cbfb6040f1a7394e6cd44e104cafec74127363fcd1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_CanInteract.dsl",
+      "bytes": 826,
+      "sha256": "333fa3f3a858d27325a2dacbaba3ef93d7cda5bcec4666d18b27083498d9a6a8"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_FindCoordinator.dsl",
+      "bytes": 283,
+      "sha256": "e8ca12fb7b4148382eb32e3ffa9055b16cdd39995cebb8561a8ec66417dbe41c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_GetInteractInfo.dsl",
+      "bytes": 137,
+      "sha256": "81f2584aea63842b5462af731b90f583a9d4abbfd6bb8533e227977f8c54643e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_OnInteraction.dsl",
+      "bytes": 691,
+      "sha256": "beb28fa4f20f490e9786717e8c039f9ef72235413e17b8f261629af773ea9c30"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/dsl/BP_HCGauntletStart_ResetGauntlet.dsl",
+      "bytes": 35,
+      "sha256": "49e69d63a87da06a3038c25dfe93179e5c8f39fad2e62b4523f22c949a8cc271"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/editor_loop.py",
+      "bytes": 2484,
+      "sha256": "627c9ad99422a4db09694f1716add9e15ec529ae9b4a4909c49e64cde95b521c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/fixture-level.json",
+      "bytes": 3359,
+      "sha256": "d146ecdeb904a83a2a790960d8de8e09cb1e2a2bbb11f18d8ffcc18ad8eb129c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/fixture_level.py",
+      "bytes": 3198,
+      "sha256": "3fac621fc60412fc375dd1c0a1384771f7aca65af44868244a1ba7b564566ddb"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-2-entry-failure-log.json",
+      "bytes": 141,
+      "sha256": "da01aa8db8c1af849de57e28186b2e00515c2c0d7f6e26ffc8041301f2330269"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-2-entry-failure.json",
+      "bytes": 3044,
+      "sha256": "4c8977ae8067be09936db78d0f10de0cac9b3e2ced268216b8d591ea198b549b"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-2-log.json",
+      "bytes": 141,
+      "sha256": "d97b1a7ee21eb839bac77d5eed517324bfead8d81d2fd95a970bd0b7a75f4267"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-2.json",
+      "bytes": 3903,
+      "sha256": "c814be8d13c2681f2af134d48b2dba5d32b38d82995acb16aaf964a4dabc5353"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-3-log.json",
+      "bytes": 141,
+      "sha256": "fa0b68a2b42d2f26c394f6df1b7d87be16e2489096387823a4d3fc05a7f39e3a"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-3-reset-fixture-failure-log.json",
+      "bytes": 141,
+      "sha256": "3a52b55d1d644dabb4c02c95d6cf9ecd8c7665e354b5f0dc0f9b918ecbc0e427"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-3-reset-fixture-failure.json",
+      "bytes": 4355,
+      "sha256": "3b75a85c291d89122d25bc84aa659504abd5299b6af8a2940208edccb333862e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-3.json",
+      "bytes": 4165,
+      "sha256": "9bc1b8fa17110dcb35ec35ecb7d02d90bdb7102b56fdb8304e98faa498ed6825"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-4-log.json",
+      "bytes": 141,
+      "sha256": "f6ca75db0e0a107f4ff9becce08493f0a216540549fdc0614c755d5b45ab383a"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-clients-4.json",
+      "bytes": 4822,
+      "sha256": "f3e797e95376a065aa82b6ff999783af6e16490085f8291cd208ed316dfc210d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-host-3-log.json",
+      "bytes": 141,
+      "sha256": "847f38cad7ada85ed030d773c7715265da077b7bffd9ad6b09498a3731c5133c"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/input-host-3.json",
+      "bytes": 4043,
+      "sha256": "0cd4f7449167e54faa346a984c5deffa500f99ce88cac90f034129de32f80ac4"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspect_contracts.py",
+      "bytes": 1924,
+      "sha256": "6321af719c88cbbe1ce075f6cc68d70f96d086ace36b4286f94941e29355c37a"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspect_dependencies.py",
+      "bytes": 1380,
+      "sha256": "ae5062d47207ac542530aadb96d51efc408eea3365bc9bd781868f2bf68c754d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspect_interfaces.py",
+      "bytes": 667,
+      "sha256": "a7e095f2a76cb5598c9775e9a2884cf65685910859d25f3010172ffb34e003e1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspect_nodes.py",
+      "bytes": 623,
+      "sha256": "1dd88a784a0d8985485278128e882ce3c3e7de37b1c8dd123368725e971203e2"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspect_primary_spawn.py",
+      "bytes": 310,
+      "sha256": "23de4cf30af8eebdb9372c284df63a70c1322c8b6eddae1014083a820407c3d7"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/inspection-progress.json",
+      "bytes": 72,
+      "sha256": "0dc300f3ea0212c8ff0839873bcce2e4a57a5dd1708c64b8e9cc059961bec268"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/interfaces.json",
+      "bytes": 896,
+      "sha256": "7f4bcf079847da1d7b1279ae14c86da4967a2f0172d6158ac7b79695fcc37de1"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/node-types.json",
+      "bytes": 1782,
+      "sha256": "5a7b06a815d52b6b9a92057b8e4e27cb850be1f8d5f5187770ced80ad2f21017"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries-clients-2.json",
+      "bytes": 1413,
+      "sha256": "2732f5e3ea037c6261c5193cff1d87a75e2f9d364114fcdc947c2bf260ab74d8"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries-clients-3.json",
+      "bytes": 1545,
+      "sha256": "a8828890a66c700699de40ace7450d8b9238f0a85d2a963c3a0bc28715fbb603"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries-clients-4.json",
+      "bytes": 1677,
+      "sha256": "c59ad3455ab985564fe8cf76af8cb160637c84e3dca08dceb72aa4796a73a39e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries-host-3.json",
+      "bytes": 1410,
+      "sha256": "2744f9b5d3bc10077177ead0fc593aff76b057c92024d4fadbd06318a7035a6a"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries-spawn-api-failure.json",
+      "bytes": 1598,
+      "sha256": "3f04090450c785e73e5d21d7f49574ee38ab98e4e1da3020b068bcf88872cea6"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-boundaries.json",
+      "bytes": 1280,
+      "sha256": "0c2fe23dc2b93f043567e1dee7af96b1cf0ae2753cf167e19fd1a948d34d5a70"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-fixture-spawns.json",
+      "bytes": 4278,
+      "sha256": "d712188b209f45b62a3c8fcdab5c4d085e5f4cf490567f340f7d89c5e99e653e"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-review.json",
+      "bytes": 23432,
+      "sha256": "42c06b7a249dbd681104e918a22ca9bbfa502c5e53af031a914e2caba59a0d4f"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-spawn-nodes.json",
+      "bytes": 2975,
+      "sha256": "fda2445dd19d12bd1b3ae9fe59dc2d0d587a2d4af5e3c353448227eeaf990c08"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary-start-correction.json",
+      "bytes": 3252,
+      "sha256": "c8439b28b83660a1365610b60000a81a95feac45aaf786c14b9f69b69a80c210"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/primary_edges.py",
+      "bytes": 6103,
+      "sha256": "fa760814eb76f68bde885f745766ec17ad7be164daed76cd0dd30384ae25a06a"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/README.md",
+      "bytes": 4201,
+      "sha256": "abba819575a36075ebfdcfb2c282c79e0cef8924731d6bba2b59a2c2b465a43d"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/request.py",
+      "bytes": 1085,
+      "sha256": "ccd6a35c821e1bf8bb64defbc3676a238cd97a663c8e297de8ff17c708af9421"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/reset-probe.json",
+      "bytes": 878,
+      "sha256": "0738b1593897e828f220e4f758f4e512901903839257030e092755baaae48be3"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/restore.py",
+      "bytes": 609,
+      "sha256": "1cf28053876638008a901574e9e1568e987e30658db5374c995540896579a032"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/root-defaults.json",
+      "bytes": 532,
+      "sha256": "d4a54da6a5935a5f3558c9060ae294838b566c58d2c45a5e4e93b82d5e1e08d0"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/rpc.py",
+      "bytes": 1800,
+      "sha256": "7f406494a9ccdb36fbc49e7382a3522241f0d90fe138e4e3657a55b03b3f2119"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/run_input.py",
+      "bytes": 1865,
+      "sha256": "20b63c3e266bcc6318c2ecaca0477a5c425e667e3dd623c6f4e8792e4b1253c3"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/run_primary.py",
+      "bytes": 1886,
+      "sha256": "816310a53f9854637d619854e0da7821eddc0ffba411f8f1a3165f9e3688adaa"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/scaffold.json",
+      "bytes": 4310,
+      "sha256": "9f8826a58c9a5ae26507ed9e369a1ecea0f5c0239362633d5c7b652a74baa081"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/settings-restored.json",
+      "bytes": 41,
+      "sha256": "9773e8cba136dbbcae10df0809e96ac4e4d6d41d418e11258d8992ce27ee6090"
+    },
+    {
+      "path": "Tools/unreal/hc_gauntlet/test_input.py",
+      "bytes": 15303,
+      "sha256": "acd43657e858060b77adcf17dac2c10ccf276115f7c76ac1c338d0177a106c3f"
+    }
+  ],
+  "aggregate_sha256": "2e1c5947d6c385d6d38bb983f235b5d48e9d6ec6ba4d6f9a78278c779d57bed1"
+}

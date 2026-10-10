@@ -1,0 +1,4 @@
+(fn PollFixture () (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))
+ (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs))) (if (Networking|HasAuthority)
+ (if (not (and (and (== index 3) (== attempt (Variables|Default|GetLatchedAttempt))) (or (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator1")) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator2"))))) (CallFunction|ClearFixture))))
+ (:CastFailed )))

@@ -1,0 +1,1 @@
+(fn ResolveInput (Controller) (return (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem :PlayerController Controller)))

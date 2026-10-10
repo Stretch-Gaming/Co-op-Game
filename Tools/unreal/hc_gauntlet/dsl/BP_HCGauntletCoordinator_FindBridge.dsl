@@ -1,0 +1,5 @@
+(fn FindBridge () (bind actors (Actor|GetAllActorswithTag :Tag "HC_GauntletBridge"))
+  (if (== (Utilities|Array|Length :TargetArray actors) 1)
+   (bind found (Utilities|Casting|CastToBP_HCGauntletGateBridge :Object (Utilities|Array|Get(acopy) actors 0))
+    (:then (return found)) (:CastFailed (return "None")))
+   (else (return "None"))))

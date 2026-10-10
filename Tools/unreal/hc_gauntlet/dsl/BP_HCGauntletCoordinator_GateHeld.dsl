@@ -1,0 +1,5 @@
+(fn GateHeld () (bind found (CallFunction|FindGate))
+ (bind gate (Utilities|Casting|CastToBP_GauntletGate :Object found)
+ (:then (bind held (Class|BPGauntletGate|AreLeversHeld :self gate))
+  (return (and held (and (Class|BPGauntletGate|GetOpen :self gate) (> (Class|BPGauntletGate|GetCurrentLift :self gate) 220.0)))))
+ (:CastFailed (return false))))

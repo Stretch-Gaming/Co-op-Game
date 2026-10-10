@@ -1,0 +1,112 @@
+{
+  "passed": false,
+  "mode": "clients",
+  "checks": [
+    "owned start prompt resolves through live interaction validation",
+    "start input requested Round3 with locked scaling row for actual roster",
+    "far-side fixture teleport has no server entry/crossover token",
+    "bypassing crossing cannot focus far-side objective",
+    "real PG levers focused by each owning player",
+    "real PG lever requirement is one at2/3 and two at4",
+    "real PG gate open state replicates after required native input holds",
+    "real PG safety overlap holds raised gate after lever release",
+    "real PG gate closes on release once pawn clears safety volume",
+    "server entry token recorded within local route bounds while real gate reopens",
+    "positive crossover used actual IA_Move with collision enabled through open real PG gate",
+    "only the actual crossing pawn receives the replicated crossover token; holders remain untokened",
+    "eligible far-side objective focuses after actual traversal",
+    "owned objective input completes matching Round3 attempt once after fixture latch acknowledgement",
+    "unmodified real PG gate closes after Core cancels holders; fixture latch is not production persistent latch",
+    "duplicate far-side input cannot clear matching attempt twice",
+    "distinct fresh client world receives current completed attempt and fixture latch snapshot on late join",
+    "fresh late-join pawn restores owning prompt and Enhanced Input subsystem",
+    "interruption/restart observed by polling resets stale token and fixture latch without dispatcher binding",
+    "server-world pawn at stale far-side position cannot reuse prior attempt token",
+    "owning input works on the next attempt, including fresh owner after reconnect when requested"
+  ],
+  "input_path": "owning EnhancedInputLocalPlayerSubsystem action injection -> inherited character events -> reliable character server RPC",
+  "fixture_setup": "Python positions/bootstrap/restart; native create_player only for host second owner",
+  "latch": "explicit fixture simulation; actual PG gate closure recorded separately",
+  "players": 3,
+  "crossing_token_player_ids": [
+    [
+      264
+    ],
+    [
+      264
+    ],
+    [
+      264
+    ],
+    [
+      264
+    ]
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game\\Tools\\unreal\\hc_gauntlet\\test_input.py\", line 196, in tick\n    coordinator().set_editor_property('CrossedPawns',[serverpawn])\nException: StaticMeshActor: Property 'CrossedPawns' for attribute 'CrossedPawns' on 'BP_HCGauntletCoordinator_C' cannot be edited on instances\n",
+  "snapshot": [
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_0_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 2,
+        "phaseEndsAt": 0,
+        "scalingRow": "3"
+      },
+      "attempt": 2,
+      "crossed": 0,
+      "completed": false,
+      "count": 1,
+      "gate_open": true,
+      "latched": false
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_1_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 2,
+        "phaseEndsAt": 0,
+        "scalingRow": "3"
+      },
+      "attempt": 2,
+      "crossed": 0,
+      "completed": false,
+      "count": 1,
+      "gate_open": true,
+      "latched": false
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_2_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 2,
+        "phaseEndsAt": 0,
+        "scalingRow": "3"
+      },
+      "attempt": 2,
+      "crossed": 0,
+      "completed": false,
+      "count": 1,
+      "gate_open": true,
+      "latched": false
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC_Gauntlet/UEDPIE_3_L_HCGauntlet_Test.L_HCGauntlet_Test",
+      "round": {
+        "index": 3,
+        "phase": "Playing",
+        "attempt": 2,
+        "phaseEndsAt": 0,
+        "scalingRow": "3"
+      },
+      "attempt": 2,
+      "crossed": 0,
+      "completed": false,
+      "count": 1,
+      "gate_open": true,
+      "latched": false
+    }
+  ]
+}

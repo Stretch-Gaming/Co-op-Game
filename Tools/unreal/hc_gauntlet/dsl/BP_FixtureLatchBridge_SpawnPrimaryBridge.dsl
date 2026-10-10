@@ -1,0 +1,1 @@
+(fn SpawnPrimaryBridge () (bind spawned (Game|SpawnActorfromClass :Class "/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge_C" :SpawnTransform (Transformation|GetActorTransform))) (return spawned))
