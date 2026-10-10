@@ -10,7 +10,7 @@ A 2–4 player online co-op puzzle game in Unreal Engine 5.8.3, Blueprint-only. 
 - Sprint plan, playable checkpoints and shared contracts: [docs/sprints.md](docs/sprints.md)
 - Epics, one per lane: [docs/epics/](docs/epics/)
 - Map layout: [docs/map/site01-layout.md](docs/map/site01-layout.md)
-- Asset generation: [docs/assets.md](docs/assets.md)
+- Asset generation: [docs/assets.md](docs/assets.md), with credits in [CREDITS.md](CREDITS.md)
 - Unreal MCP setup, and what its tools can do: [docs/mcp.md](docs/mcp.md)
 
 ## Lanes
@@ -37,6 +37,7 @@ If you don't know which lane you're working for, ask before changing anything.
 10. **Don't save hard references between placed actors in different sublevels.** Find another lane's actors at runtime, through the shared contracts in [docs/sprints.md](docs/sprints.md), the GameState or actor tags, and check that the reference is valid before using it.
 11. **Only the GameMode changes the round phase.** Other lanes call its functions.
 12. **Never edit `.uasset` or `.umap` files on disk.** Change them only through the editor.
+13. **This repo is public.** Only commit assets whose license allows publishing them, and record the source and license as [docs/assets.md](docs/assets.md#licenses-this-repo-is-public) describes. Never pull a Fab or marketplace asset into the project without that check.
 
 ## Working through Unreal MCP
 

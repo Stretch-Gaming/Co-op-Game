@@ -1,6 +1,6 @@
 # Sprint plan: from an empty repo to the cave demo
 
-Ten sprints take the team from an empty repo to **Demo 1**: an underground cave with three puzzle rounds, then a short trip to Map 2, played by 2–4 players online, with split-screen on the host. Sprints are 45 minutes, or 60 minutes when they end on a playable checkpoint. The plan fits three evenings, and each evening ends with a build everyone can join and play.
+Twelve sprints take the team from an empty repo to **Demo 1**: an underground cave with three puzzle rounds, then a short trip to Map 2, played by 2–4 players online, with split-screen on the host. Sprints are 45 minutes, or 60 minutes when they end on a playable checkpoint. The plan fits four evenings, and each evening ends with a build everyone can join and play.
 
 The first sprints build a small cave you can walk around in and keep improving with textures, items and traps. The rounds are built inside it after that. The direction behind this plan is in [design/direction-2026-10-09.md](design/direction-2026-10-09.md).
 
@@ -22,49 +22,68 @@ All three lanes build against one map layout: [map/site01-layout.md](map/site01-
 4. **Round 1, the plate hall:** pressure plates open the gate. Statues stand in for missing players, so the puzzle works with 2, 3 or 4.
 5. **Round 2, the altar:** carry the heavy key relic out of a trapped side passage, down the trap corridor, and onto the altar.
 6. **Round 3, the haunted gauntlet:** one or two players hold levers to keep a gate open while the others cross a dark hall of traps and ghosts, then open it from the far side.
-7. Traps and ghosts knock players down, and a teammate holds Interact to revive them. If everyone is down at once, the round restarts from its entrance.
-8. Players zipline out of the cave into Map 2, a small Egyptian antechamber, where the results show the relics collected.
+7. Traps and ghosts knock players down, and a teammate holds Interact to revive them. If everyone is down at once, they all get back up at the last checkpoint, and a round in progress restarts.
+8. Players zipline (or take the walkway) out of the cave into Map 2, a small Egyptian antechamber, where the results show the relics collected.
 
 ## Sprints
 
 | Sprint | Min | Windows · Stretch · HC | Mac 1 · PK · PG | Mac 2 · Ak47 · HZ | Ends with |
 | --- | --- | --- | --- | --- | --- |
-| 0. Setup | 60 | Create the project, plugins, settings, map and sublevels; push by minute 15. Stub the core contracts. | Open the project while shaders compile. Connect MCP and run the smoke test. | Open the project while shaders compile. Connect MCP. | **Playable 1** |
-| 1. The cave | 45 | Interaction: trace, prompt, hold. Input contexts. Debug keys. | First person with the switch to third person. Headlamp. | Cave blockout. First light shading. `AC_Health` stub. | Smoke join |
-| 2. Relics | 45 | Relics and the team count. Carry and drop. PG's view on the real character. | Split-screen on the host. | `AC_Health` working. Spike trap. Cave textures. | Smoke join |
-| 3. Cave demo | 60 | Revive. The heavy key relic. | First ghost. | Dart trap. Second light pass, with props. | **Playable 2** |
-| 4. Rounds | 45 | Round framework, chamber gates and the start pad. | Ghosts spawn each round, scaled. | Swinging trap. Dress chambers 1–3. | Smoke join |
-| 5. Round 1 | 45 | Round 1: plates and statues. Restart when everyone is down. | Ghosts back off from light. | Round 2's trap corridor and key relic nook. | Smoke join |
-| 6. Three rounds | 60 | Round 2: the altar. Round HUD. | Round 3: the haunted gauntlet. | Round 3's hall and traps. Fog, dust, drips. | **Playable 3** |
-| 7. Map 2 | 45 | Travel to Map 2 with the run's relics. Results and restart. | Zipline out of the cave. | Map 2: the Egyptian antechamber. | Smoke join |
-| 8. Full run | 60 | Run every path; fix and tune. | Tune ghosts, the views and split-screen. | Sound pass. Tune traps. | **Playable 4** |
-| 9. Demo | 60 | Fixes, performance with split-screen on Windows, tag `demo-1`. | Fixes and feel. | Fixes, effects, Mac performance. | **Demo 1** |
+| 0. Setup | 60 | Create the project, plugins, settings and maps; push by minute 15. Stub the core contracts. | Open the project while shaders compile. Connect MCP and run the smoke test. | Open the project while shaders compile. Connect MCP. | **Playable 1** |
+| 1. Foundations | 45 | Interaction with holds. Input contexts. Round state and debug keys. | First person with the switch to third person. | Cave blockout and the light it needs. `AC_Health` stub. | Smoke join |
+| 2. Relics | 45 | Relics and the team count. Player colors and split-screen keys. Put PG's view on the real character. Travel test. | Split-screen on the host. Headlamp. | `AC_Health` working. Spike trap. | Smoke join |
+| 3. Cave demo | 60 | Revive. Everyone-down recovery at the spawn checkpoint. | First ghost. | Dart trap. The first cave textures. | **Playable 2** |
+| 4. Carrying | 45 | Carrying, the key relic and statues. | Ghosts each round. Player colors applied. | Swinging trap. Round 2's corridor. | Smoke join |
+| 5. Rounds | 45 | Round triggers, gates, checkpoints and the start pad. Round restarts. | Ghosts back off from light. | Round 3's hall. Fall volume. | Smoke join |
+| 6. Three rounds | 60 | Round 1: plates and statues. Round 2: the altar. | Round 3: the haunted gauntlet. | Second light pass with props. Fog, dust, drips. | **Playable 3** |
+| 7. Map 2 | 45 | The run's state across travel. Map exit. | Zipline. | Map 2: the Egyptian antechamber. | Smoke join |
+| 8. HUD | 45 | Round HUD. Results and restart. | Split-screen and view polish. | Dressing and trap meshes swapped in. | Smoke join |
+| 9. Full run | 60 | Run every path; fix and tune. | Tune ghosts under network emulation. | Sound pass. Tune traps. | **Playable 4** |
+| 10. Buffer | 45 | Fixes. Performance with split-screen on Windows. | Fixes. | Effects. Mac performance. | Smoke join |
+| 11. Demo | 60 | Final fixes, tag `demo-1`. | Final fixes and feel. | Final fixes. | **Demo 1** |
 
-That's 8 hours 45 minutes of sprints. With 10-minute breaks it fits three evenings, each ending on a checkpoint:
+That's 10 hours 15 minutes of sprints. With 10-minute breaks it fits four evenings, each ending on a checkpoint:
 
 | Evening | Sprints | Time with breaks | Ends with |
 | --- | --- | --- | --- |
 | 1 | 0–3 | About 4 hours | Playable 2, the cave demo |
 | 2 | 4–6 | About 2 hours 50 minutes | Playable 3, three rounds |
-| 3 | 7–9 | About 3 hours 5 minutes | Demo 1 |
+| 3 | 7–9 | About 2 hours 50 minutes | Playable 4, the full run |
+| 4 | 10–11 | About 1 hour 55 minutes | Demo 1 |
 
-A phase that runs over moves into the next sprint. Don't stretch a sprint to finish it; use the [cut list](#cut-list) instead. If Playable 4 slips, add one 45-minute buffer sprint before the demo.
+A phase that runs over moves into the next sprint. Don't stretch a sprint to finish it; use the [cut list](#cut-list) instead. Sprint 10 is a planned buffer: if earlier phases slipped, it absorbs them; if not, it's for polish and performance.
 
 After Demo 1: more maps (Map 2 beyond its antechamber, with camels in Egypt), split-screen on joining machines, tool slots and the Scout, and Epic Online Services sessions.
 
 ## Asset generation
 
-Every lane generates or sources its own art, sound and UI, as separate tasks from its build work. Assets come a sprint before they're needed, and gameplay never waits on them: greybox stays in place until an asset passes review. The pipeline, specs and review steps are in [assets.md](assets.md).
+Every lane generates or sources its own art, sound and UI, as separate tasks from its build work. Each asset task has two deliveries: **generated**, with the chosen candidate saved, and **in place**, imported, reviewed and swapped in for the greybox. Gameplay never waits on assets, and greybox stays until an asset passes review. The pipeline, specs, licensing rules and review steps are in [assets.md](assets.md).
 
-| Sprint | HC (Windows) | PG (Mac 1) | HZ (Mac 2) |
+PG-A0 sets up the pipeline in Sprint 1, so other generation starts in Sprint 2. Generation runs unattended, but choosing, cleaning up and importing take the same person's time, so early deliveries are small.
+
+| Task | Owner | Generated by end of | In place by end of |
 | --- | --- | --- | --- |
-| 1 | HC-A1: relic set | PG-A0: pick the generator and prove the pipeline | HZ-A1: cave surfaces and a rock kit |
-| 2 | — | PG-A1: player color variants | HZ-A2: cave props and light sources |
-| 3 | HC-A2: puzzle props | PG-A2: ghost model and material | HZ-A3: spike and dart trap meshes |
-| 4 | — | — | HZ-A4: swinging log and chamber dressing |
-| 5 | HC-A3: HUD art | PG-A3: ghost sounds | — |
-| 6 | — | PG-A4: zipline cable and handle | HZ-A5: Map 2 kit |
-| 7 | — | — | HZ-A6: cave and trap sounds |
+| PG-A0: pipeline and import presets | PG | Sprint 1 | Sprint 1 |
+| HC-A1: relic set | HC | Sprint 2 | Sprint 3 |
+| HZ-A1: cave surfaces | HZ | Sprint 2 | Sprint 3 |
+| PG-A1: player colors | PG | Sprint 3 | Sprint 4 |
+| PG-A2: ghost | PG | Sprint 4 | Sprint 5 |
+| HC-A2: puzzle props | HC | Sprint 4 | Sprint 6 |
+| HZ-A2: props and light sources | HZ | Sprint 4 | Sprint 6 |
+| HZ-A3: trap meshes | HZ | Sprint 5 | Sprint 8 |
+| HZ-A4: dressing | HZ | Sprint 6 | Sprint 8 |
+| PG-A3: ghost sounds | PG | Sprint 6 | Sprint 8 |
+| PG-A4: zipline | PG | Sprint 6 | Sprint 7 |
+| HZ-A5: Map 2 kit | HZ | Sprint 6 | Sprint 7 |
+| HC-A3: HUD art | HC | Sprint 7 | Sprint 8 |
+| HZ-A6: cave and trap sounds | HZ | Sprint 8 | Sprint 9 |
+
+**Minimum presentation kit.** These can't be cut, because checkpoints depend on them. If one isn't ready, use a free library asset from Fab that the repo's license rules allow, rather than greybox.
+
+- Playable 2: HZ-A1 (cave surfaces), HC-A1 (relics), and HZ-1's and HZ-3's light.
+- Demo 1: everything for Playable 2, plus HZ-A2 (props and light sources), PG-A2 (ghost), HC-A2 (puzzle props), HZ-A5 (Map 2 kit) and HZ-A6 (cave and trap sounds).
+
+Every other asset is optional: if it isn't ready, the greybox stays and nothing comes off a checkpoint.
 
 ## Playable checkpoints
 
@@ -77,31 +96,33 @@ Each checkpoint is a build anyone on the team can join and play. The times are s
 
 ### Playable 2: The cave demo (end of Sprint 3, about 3:30)
 
-- Walk the spawn cavern and the first chambers in first person. The cave has its first textures and props, lit by the daylight shaft, torches and crystals.
-- Switch to third person and back. Turn your headlamp on and off; everyone sees it.
+- Walk the spawn cavern and the first chambers in first person. The cave has its first textures, lit by the daylight shaft, torches and crystals.
+- Switch to third person and back. Turn your headlamp on and off; everyone sees it pointing where you look.
 - A second player joins split-screen on the Windows machine with a gamepad while both Macs are online.
-- Pick up relics and watch the team count go up. Carry the key relic; it slows you down.
-- The spike and dart traps knock you down, and a teammate holds Interact to revive you.
+- Pick up relics and watch the team count go up.
+- The spike and dart traps warn before they hit and knock you down, and a teammate holds Interact to revive you.
+- If everyone goes down, you all get back up in the spawn cavern.
 - A ghost drifts through the walls after you.
 
 ### Playable 3: Three rounds (end of Sprint 6, about 6:00)
 
-- Everyone steps on the start pad, and the gate to Round 1 opens. The HUD shows the round and the relics.
+- Everyone steps on the start pad, and the gate to Round 1 opens.
 - Round 1: the plates open the gate with 2 players using statues, and with 4 players facing more plates.
 - Round 2: carry the key relic past the traps to the altar.
 - Round 3: hold the levers while the others cross the haunted gauntlet, then open the gate from the far side.
-- More ghosts come with 4 players, and headlamps drive them back.
-- When everyone is down at once, the round restarts from its entrance.
+- More ghosts come with 4 players, and a headlamp drives one back.
+- When everyone is down at once, the round restarts from its entrance with its puzzle reset.
 
-### Playable 4: Full run (end of Sprint 8, about 7:45)
+### Playable 4: Full run (end of Sprint 9, about 8:30)
 
-- One run from the start pad through all three rounds, out of the cave, and into Map 2, where the results show the relics collected. No debug keys. Once with 2 players and once with 4, including a split-screen pair.
+- One run from the start pad through all three rounds, out of the cave, and into Map 2, where the results show the relics collected out of those available. No debug keys. Once with 2 players and once with 4, including a split-screen pair.
+- The HUD shows the round and the relics, and announces each round cleared or failed.
 - The host restarts the run from the results screen, and every client reconnects.
-- Every path was checked during Sprint 8: each round's restart, the zipline or the walkway, travel to Map 2, and the results.
+- Every path was checked during Sprint 9: each round's restart, the zipline or walkway, travel to Map 2, the results and the restart.
 
-### Demo 1 (end of Sprint 9, about 8:45)
+### Demo 1 (end of Sprint 11, about 10:15)
 
-- The run is fun at 2, 3 and 4 players, textured, lit and with sound.
+- The run is fun at 2, 3 and 4 players, with the minimum presentation kit in place: textured, lit and with sound.
 - The demo commit is tagged `demo-1`.
 
 ## Sprint rhythm
@@ -133,44 +154,54 @@ Lanes depend on each other only through these. **Stub by** is the sprint when th
 
 Don't save hard references between placed actors in different sublevels; Unreal can't keep them. Find another lane's actors at runtime, through these contracts, the GameState or actor tags, and check that the reference is valid before you use it.
 
+Two rules hold for every contract that changes state: the server decides, and anything that replicates from a component needs **Component Replicates** turned on.
+
 | Contract | Owner | Stub by | Works by | What it is |
 | --- | --- | --- | --- | --- |
-| `Content/Core/BPI_Interactable` | HC | 0 | 1 | `GetInteractInfo(Instigator)` returns a prompt and a hold time in seconds (0 means instant). `CanInteract(Instigator)` returns a bool. `Interact(Instigator)` runs on the server only, after the server rechecks distance and `CanInteract`. |
-| `Content/Core/BP_CoopCharacter` | HC | 0 | 1–3 | The player character, a child of the template character. The interact trace works in Sprint 1. Carrying, `GetCarried()` and `ReleaseCarried()` work in Sprint 2, along with PG's `AC_PlayerView` and the view and headlamp keys. `AC_Health` and revive work in Sprint 3. |
-| `Content/Core/BP_CoopGameMode` | HC | 0 | See each function | A child of GameMode, not GameModeBase, and the only place the round phase changes. All server-only. `SetRoundPhase(Phase)` works from Sprint 0. `StartRound(Index)` and `ClearRound()` from Sprint 1. `AddRelics(Count)` from Sprint 2. `FailRound()` from Sprint 5. `CompleteMap()` from Sprint 7. |
-| `Content/Core/BP_CoopGameState` | HC | 0 | 0 | A child of GameState. `GetPlayerCount()` counts PlayerStates, including split-screen players. `GetScalingRow()` returns the row name `2`, `3` or `4`; a solo test uses `2`. `RoundIndex`. `RoundPhase` (RepNotify) fires `OnRoundPhaseChanged(NewPhase)` on the server and every client. `PhaseEndsAt` in server time (0 means no countdown). `RelicsCollected`. |
-| `Content/Core/E_RoundPhase` | HC | 0 | 0 | `Lobby`, `Playing`, `Cleared`, `Failed`, `MapComplete`. Ghosts and round-specific hazards run only while the phase is `Playing`. |
-| Debug and host keys in `BP_CoopPlayerController` | HC | — | 1, and F5–F6 in 2 | Debug, host only: F1 starts Round 1, F2 clears the round, F3 fails it, F4 completes the map. Host keys, not debug: F5 adds a split-screen player and F6 removes one, through PG's `BPFL_SplitScreen`. |
+| `Content/Core/BPI_Interactable` and `E_InteractMode` | HC | 0 | 1 | `GetInteractInfo(Instigator)` returns a prompt, a mode and a hold time. Modes: `Instant`, `Timed` (hold for the hold time) and `Continuous` (active while held). `CanInteract(Instigator)` returns a bool. On the server, the character calls `Interact(Instigator)` for an instant use or a completed hold, and `InteractBegin(Instigator)` and `InteractEnd(Instigator)` around a continuous one. |
+| Interaction handling in `BP_CoopCharacter` | HC | 0 | 1 | The character sends the press and the release to the server. The server tracks the active use: it times holds itself, and ends or cancels a use when the button is released, the player moves out of range (4 m) or goes down, the round resets, or the player leaves. |
+| `Content/Core/BPI_RoundReset` | HC | 0 | 5 | `ResetForRound(Index, Attempt)`. When a round restarts, the server calls it on every actor that implements it, and each lane resets its own: puzzles, carryables, levers, ghosts. Collected relics stay collected. |
+| `Content/Core/BP_CoopCharacter` | HC | 0 | 1–4 | The player character, a child of the template character. Interaction works in Sprint 1, PG's `AC_PlayerView` in Sprint 2, `AC_Health` and revive in Sprint 3, and carrying with its own Drop key in Sprint 4. |
+| `Content/Core/BP_CoopGameMode` | HC | 0 | See each function | The only place the round state changes. All server-only. `SetRoundPhase(Phase)` from Sprint 0. `StartRound(Index)` and `ClearRound()` from Sprint 1. `AddRelics(Count)` from Sprint 2. `CompleteMap()` from Sprint 2 as a plain travel to Map 2, and with the run's state from Sprint 7. Everyone-down recovery from Sprint 3. `FailRound()` from Sprint 5. |
+| `Content/Core/BP_CoopGameState` and `S_RoundState` | HC | 0 | 1 | `GetPlayerCount()` counts PlayerStates, including split-screen players. `RoundState` is one replicated struct: `Index`, `Phase`, `Attempt`, `PhaseEndsAt` (server time, 0 means no countdown) and `ScalingRow` (`2`, `3` or `4`). Its RepNotify fires `OnRoundStateChanged(State)` on the server and every client. Apply the current `RoundState` when you bind as well as when it changes, since a client can miss a short-lived phase. `RelicsCollected` and `RelicsAvailable`. |
+| `Content/Core/BP_CoopGameInstance` | HC | 0 | 7 | Holds the run's state on the server across travel: relics collected and available. |
+| `Content/Core/BP_CoopPlayerState` | HC | 0 | 2 | `ColorSlot` (0 to 3), replicated. The GameMode gives each player, including a split-screen player, the first free slot when they join. |
+| `Content/Core/E_RoundPhase` | HC | 0 | 0 | `Lobby`, `Playing`, `Cleared`, `Failed`, `MapComplete`. Ghosts run only while the phase is `Playing`. |
+| Debug and host keys in `BP_CoopPlayerController` | HC | — | 1, and F4–F6 in 2 | Debug, host only: F1 starts Round 1, F2 clears the round, F3 fails it, F4 completes the map. Host keys, not debug: F5 adds a split-screen player and F6 removes one, through PG's `BPFL_SplitScreen`. |
 | Input contexts | HC for the character and controller, PG for the view keys | — | 1 | Each pawn adds its own mapping context in Receive Controller Changed when a local player takes it, and removes only that context when the player leaves. Nobody calls Clear All Mappings. Controller-wide keys live in separate contexts that `BP_CoopPlayerController` adds once. |
-| Round actors | HC | 4 | 4 | `BP_RoundStart` at each chamber entrance calls `StartRound(N)`. `BP_ChamberGate` opens when its round is cleared. `BP_RespawnPoint` marks where a failed round restarts. Puzzle actors reset when their round starts again. |
-| `Content/Puzzles/BP_Relic` and `BP_Carryable` | HC | 2 | 2 | A relic adds its value to `RelicsCollected` when picked up. Each relic has `MinPlayers`, so bonus relics only appear with more players. Carryables are picked up, carried and dropped; `bHeavy` halves the carrier's speed and holds a pressure plate. |
-| `Content/Player/AC_PlayerView` | PG | 1 | 1 on PG's test character, 2 on the real one | First person by default. `ToggleView()` glides to third person and back, changing the field of view. `ToggleHeadlamp()`. The view mode and headlamp replicate, so every machine shows them the same way. |
-| `Content/Player/BPFL_SplitScreen` | PG | 2 | 2 | `AddLocalPlayer()` and `RemoveLocalPlayer()`, for the host machine. |
-| `Content/Player/Ghosts/BP_Ghost` | PG | 3 | 3 | Damages players through `Apply Damage`. From Sprint 4, ghosts spawn when a round starts, scaled by `DT_GhostScaling`, and leave when it ends. |
-| `Content/Hazards/AC_Health` | HZ | 1 | 2 | Player health only. `Health`, `MaxHealth`, `bDowned` (RepNotify). `IsDowned()`, `CanBeRevived()`, and server-only `Revive(Reviver)` and `ForceDown(bAllowRevive)`. `OnDowned` and `OnRevived` fire on the server. Damage arrives through `Apply Damage` on the owner. |
-| Scaling tables | Each lane, in its own folder | HC 0, PG and HZ 1 | When first used | `DT_RoundScaling` (HC), `DT_GhostScaling` (PG) and `DT_HazardScaling` (HZ), each with rows `2`, `3` and `4`, looked up with `GetScalingRow()`. Read them when a round starts, never at BeginPlay, when the host may still be alone. |
-| Maps and sublevels | HC for persistent levels, each lane for its sublevel | 0, and Map 2 in 7 | 0 | `/Game/Maps/L_Site01`, the cave, with always-loaded `L_Site01_HC`, `L_Site01_PG` and `L_Site01_HZ`. `/Game/Maps/L_Site02`, Map 2, with `L_Site02_HZ`. Persistent levels hold only player starts, the map exit and world settings, placed by HC under a lock. |
+| Round actors | HC | 3 | 5 | `BP_Checkpoint` holds four separate spawn spots; the spawn cavern's works from Sprint 3, and each round has its own from Sprint 5. `BP_RoundStart` at each chamber entrance calls `StartRound(N)`. `BP_ChamberGate` opens when its round clears. `BP_StartPad` opens the gate to Round 1. |
+| `Content/Puzzles/BP_Relic` | HC | 2 | 2 | Adds its value to `RelicsCollected` when picked up. `MinPlayers` makes bonus relics appear only with more players; each relic that appears counts toward `RelicsAvailable`. |
+| `Content/Puzzles/BP_Carryable` | HC | 4 | 4 | Picked up with Interact, put down with Drop. A replicated carry state (carrier, and free, carried or placed) applies the same collision on every machine. `bHeavy` halves the carrier's speed and holds a pressure plate. `ReleaseCarried()` hands the item to whatever takes it, such as the altar. |
+| `Content/Player/AC_PlayerView` | PG | 1 | 1 on PG's test character, 2 on the real one | `ApplyViewState()` sets the view from scratch, and runs at BeginPlay, on possession and on every change. `ToggleView()` switches between first and third person. `ToggleHeadlamp()`. `ApplyColorSlot()` from Sprint 4. |
+| `Content/Player/BPFL_SplitScreen` | PG | 1 | 2 | `AddLocalPlayer()` and `RemoveLocalPlayer()`, for the host machine only, in the `Lobby` and `Cleared` phases, up to 2 local players and 4 in total. |
+| `Content/Player/Ghosts/BP_Ghost` | PG | 3 | 3 | Damages players through `Apply Damage`. From Sprint 4, ghosts spawn when a round starts, scaled, and leave when it ends. |
+| `Content/Hazards/AC_Health` | HZ | 1 | 2 | Player health only, with Component Replicates on. `Health`, `MaxHealth`, `bDowned` (RepNotify). `IsDowned()`, and server-only `Revive(Reviver)` and `ResetHealth()`. `ResetHealth()` restores full health and gets the player up, for checkpoints and restarts. `OnDowned` and `OnRevived` fire on the server. Damage arrives through `Apply Damage` on the owner. |
+| Trap schedules | HZ | 2 | 2–4 | Each trap replicates its schedule (a start time in server time plus its interval or speed) or the moment it was triggered, so every machine shows the warning before the server applies damage. |
+| Scaling tables | Each lane, in its own folder | HC 0, PG and HZ 1 | When first used | `DT_RoundScaling` (HC), `DT_GhostScaling` (PG) and `DT_HazardScaling` (HZ), each with rows `2`, `3` and `4`. Look them up with `RoundState.ScalingRow`. In the `Lobby` phase, the server keeps the row in step with the player count; from Round 1, it changes only when a round starts. If a player leaves mid-round, the round restarts with the new count. |
+| Maps and sublevels | HC for persistent levels, each lane for its sublevel | 0 | 0 | `/Game/Maps/L_Site01`, the cave, with always-loaded `L_Site01_HC`, `L_Site01_PG` and `L_Site01_HZ`. `/Game/Maps/L_Site02`, Map 2: a bare level from Sprint 0 for travel tests, with `L_Site02_HZ` from Sprint 7. Persistent levels hold only player starts, the map exit and world settings, placed by HC under a lock. |
 
 ## Cut list
 
 If a lane falls behind, cut in this order rather than move a checkpoint. Each cut says what comes off the checkpoint lists with it.
 
-1. Any asset that isn't ready. The greybox stays, and nothing comes off a checkpoint.
+1. Any asset outside the minimum presentation kit. The greybox stays, and nothing comes off a checkpoint.
 2. The zipline. Players take the walkway down instead.
-3. Ghosts backing off from light. Ghosts still chase; "headlamps drive them back" comes off Playable 3.
+3. Ghosts backing off from light. Ghosts still chase; "a headlamp drives one back" comes off Playable 3.
 4. The second lever at 4 players. Round 3 uses one lever at every player count.
 5. Sound beyond ambience and trap sounds.
 
-Never cut joining at 2–4 players with a split-screen pair on the host, first person with the switch to third person, interact and carry, relics, knockdown and revive, the three rounds and their restarts, at least one ghost, or travel to Map 2.
+Never cut joining at 2–4 players with a split-screen pair on the host, first person with the switch to third person, interact and carry, relics, knockdown, revive and recovery, the three rounds and their restarts, at least one ghost, travel to Map 2, or the minimum presentation kit.
 
 ## Risks
 
 | Risk | What we do |
 | --- | --- |
 | The Macs' first open of the project takes a long time while shaders compile. | Sprint 0 is setup only for the Macs. Windows pushes the bare project by minute 15. |
-| Mac clients can't join the Windows host. | Playable 1 tests it first. Check the same engine version and commit, the Windows firewall, and UDP port 7777. See the [README](../README.md#playtesting). |
-| Split-screen and Lumen together are too slow on the Windows host. | PG tests split-screen in Sprint 2, and HC-9 tunes scalability for split-screen. The cave's darkness helps: fewer lights in view. |
-| The view mode looks different on each machine. | `AC_PlayerView` replicates the mode and applies the character's rotation settings everywhere. PG tests it as a client. |
-| Generated assets are slow, off-style or unlicensed. | Assets are a parallel track that gameplay never waits on, PG-A0 picks one pipeline in Sprint 1, and every asset records its source and license. |
+| Mac clients can't join the Windows host, or travel between maps fails for them. | Playable 1 tests joining. F4's plain travel to Map 2 and back is tested from Sprint 2, long before the run depends on it. |
+| Split-screen and Lumen together are too slow on the Windows host. | PG tests split-screen in Sprint 2, and HC-10 tunes scalability for split-screen. |
+| A view, headlamp or trap looks different on each machine. | View state is applied from scratch on every machine, headlamps aim from the head on every machine, and traps replicate schedules instead of one-off events. |
+| Assets break the license or bloat the repo. | The repo is public, so [assets.md](assets.md) only admits assets whose license allows publishing them, records each source, and commits only the chosen candidate. |
+| Generated assets are slow or off-style. | Assets are a parallel track that gameplay never waits on, with a minimum kit, library fallbacks and small early deliveries. |
 | Epic's MCP tools can't wire Blueprint graphs. | The Sprint 0 smoke test records what they can do in [mcp.md](mcp.md). Agents scaffold assets, place actors and set properties; people wire the graphs. |
+| Phases take longer than a sprint. | Each phase is sized for about 30 minutes, and Sprint 10 is a planned buffer before the demo. |
 | The org runs out of Git LFS storage or bandwidth. | Generated assets add up fast. Check the org's LFS usage on GitHub after the first evening. |

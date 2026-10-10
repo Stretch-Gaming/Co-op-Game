@@ -8,16 +8,16 @@ HZ builds the places the game happens in and the traps that make them dangerous:
 
 ## Context
 
-The first sprints build a small cave the team can walk around in and keep improving: textures, props, light and traps arrive a little each sprint. Because HZ owns the layout, the other lanes build their puzzles, ghosts and zipline into HZ's rooms at the positions in the layout doc, without waiting on HZ.
+The first sprints build a small cave the team can walk around in and keep improving: geometry and the light it needs first, then textures, traps, props and atmosphere, a little each sprint. Because HZ owns the layout, the other lanes build their puzzles, ghosts and zipline into HZ's rooms at the positions in the layout doc, without waiting on HZ.
 
 ## Locked decisions
 
 - HZ owns the blockout (floors, walls, ceilings, ramps), the cave's light and atmosphere, and Map 2's room, all in HZ's sublevels. Announce layout changes at kickoff, because the other lanes build on them.
 - The cave is dark. Light comes from a shaft of daylight through a crack in the spawn cavern's ceiling, from torches and from glowing crystals, with Lumen for bounce light. Players' headlamps do the rest.
-- `AC_Health` covers player health, knockdown and revive only. All player damage goes through `Apply Damage`.
-- Downed players can't move. A teammate revives them with a hold interaction. There's no bleed-out or death in Demo 1.
-- The server decides when a trap fires, and every machine replays it from replicated state: RepNotify for state changes, server time for constant motion, and unreliable multicasts only for cosmetic effects such as dust and sound.
-- Traps run all the time, not only during rounds, so the cave stays dangerous to explore. Their timing scales through `DT_HazardScaling`.
+- `AC_Health` covers player health, knockdown and revive only, with Component Replicates on. All player damage goes through `Apply Damage`.
+- Downed players can't move. A teammate revives them with a hold, and if everyone is down at once, HC's recovery gets them all up at the last checkpoint. There's no bleed-out or death in Demo 1.
+- The server decides when a trap does damage, and every machine knows in advance when that will be. Traps replicate a schedule (a start time in server time plus an interval or speed) or the moment they were triggered, and every machine shows the warning from it. Unreliable multicasts are only for cosmetic effects, such as dust and sound.
+- Traps run all the time, not only during rounds, so the cave stays dangerous to explore. Their timing scales through `DT_HazardScaling`, using `RoundState.ScalingRow`.
 
 ## Non-goals (for Demo 1)
 
@@ -29,10 +29,10 @@ The first sprints build a small cave the team can walk around in and keep improv
 ## Dependencies and sequencing
 
 - HZ-0 needs HC-0's bare project.
-- HZ-2's `AC_Health` is a hard gate for Playable 2. It must be merged by the end of Sprint 2 so HC-3 can wire revive; if it isn't, finish it first thing in Sprint 3.
-- HZ-5's key relic nook holds HC's `BP_KeyRelic`, placed by HC in HC-6.
-- HZ-6's fall volume sends fallers to HC's `BP_RespawnPoint` for the current round. Find it at runtime by its round number.
-- HZ-7's Map 2 room goes into HC-7's `L_Site02`, made in the same sprint.
+- HZ-2's `AC_Health` is a hard gate for Playable 2. It must be merged by the end of Sprint 2 so HC-3 can wire revive and recovery; if it isn't, finish it first thing in Sprint 3.
+- HC places the key relic at (70, 25) in Sprint 4. HZ-4 builds the nook and its trap around that spot, without moving it.
+- HZ-5's fall volume sends fallers to HC's latest `BP_Checkpoint`, which works from Sprint 3.
+- HZ-7's Map 2 room goes into HC-0's `L_Site02`, which HC-7 brings in as a sublevel in the same sprint.
 
 ## Phases
 
@@ -46,39 +46,39 @@ Before the sprint, run `Tools/check-mac.command` until it passes.
 
 ### HZ-1: The cave (Sprint 1, 45 min)
 
-- Make `L_Site01_HZ` the current level. Have your agent block out the cave from the layout table with the template's level prototyping meshes: the spawn cavern, the passages, chambers 1 to 3, the trap corridor and key relic nook, the exit ledge, and the walkway down to the map exit.
-- First light shading. Delete the Basic level's floor once the blockout's floors are in, and turn the sky light down to near black. Let the sun in only through a crack in the spawn cavern's ceiling, with volumetric fog so the shaft shows. Add a few warm torch lights, and cold glowing crystals made from emissive greybox shapes.
-- Stub `AC_Health` with its variables, dispatchers and empty functions.
+- Make `L_Site01_HZ` the current level. Have your agent block out the cave from the layout table with the template's level prototyping meshes: the spawn cavern, the passages, chambers 1 to 3, the trap corridor and key relic nook, the exit ledge, and the walkway down to the map exit. Geometry you can walk through matters more than detail; dressing comes later.
+- Only the light the cave needs to be playable: delete the Basic level's floor once the blockout's floors are in, turn the sky light down to near black, let the sun in only through a crack in the spawn cavern's ceiling, with volumetric fog so the shaft shows, and add a few warm torch lights and cold crystal lights on greybox shapes.
+- Stub `AC_Health` with Component Replicates on, and its variables, dispatchers and empty functions.
 - Create `S_HazardScaling` and `DT_HazardScaling` with rows `2`, `3` and `4`: `SpikeDelay`, `DartInterval`, `SwingSpeed` and `ReviveSeconds`.
 
-### HZ-2: Health, spikes and textures (Sprint 2, 45 min)
+### HZ-2: Health and spikes (Sprint 2, 45 min)
 
-- `AC_Health`, on the server: bind the owner's OnTakeAnyDamage, subtract the damage, and go down at 0. The `bDowned` RepNotify stops movement on every machine and shows a simple downed look, such as a tint.
-- `Revive(Reviver)` restores half health, but only if `CanBeRevived()`. `ForceDown(bAllowRevive)` downs the player at once, and with `false` they can't be revived. `OnDowned` and `OnRevived` fire on the server.
-- For testing before HC-3 wires revive: `BP_HZ_TestCharacter` (a child of `BP_CoopCharacter` with the component added), a test GameMode for `L_HZ_Test`, and `BP_HZ_TestReviveTrigger`, which revives anyone standing in it.
-- `BP_Trap_Spikes`: a plate that raises spikes after `SpikeDelay` and damages any pawn on it, then resets. Put the first one in the passage from the spawn cavern, where it teaches players to watch the floor. Start with 0.6 seconds for 2 players, 0.5 for 3 and 0.4 for 4.
+- `AC_Health`, on the server: bind the owner's OnTakeAnyDamage, subtract the damage, and go down at 0. The `bDowned` RepNotify applies the state on every machine: down stops movement and shows a simple downed look, such as a tint; up restores movement.
+- `Revive(Reviver)` restores half health. `ResetHealth()` restores full health and gets the player up, with no checks, for HC's recovery and restarts. Both are server-only. `OnDowned` and `OnRevived` fire on the server.
+- For testing before HC-3 wires revive: `BP_HZ_TestCharacter` (a child of `BP_CoopCharacter` with the component added), a test GameMode for `L_HZ_Test`, and `BP_HZ_TestReviveTrigger`, which calls `ResetHealth()` on anyone standing in it.
+- `BP_Trap_Spikes`: stepping on the plate replicates the server time it was triggered; every machine plays a click and a rumble from that, and the server raises the spikes and does damage after `SpikeDelay`. Put the first one in the passage from the spawn cavern, where it teaches players to watch the floor. Start with 0.6 seconds for 2 players, 0.5 for 3 and 0.4 for 4.
+
+### HZ-3: Darts and the first textures (Sprint 3, 60 min) → Playable 2
+
+- `BP_Trap_Darts`: a wall launcher that fires across the trap corridor on a schedule. It replicates a start time and `DartInterval`, so every machine knows when each volley comes and shows a warning half a second before it; the server does the damage at the same moments.
 - Put HZ-A1's cave surfaces on the blockout.
-
-### HZ-3: Darts and light (Sprint 3, 60 min) → Playable 2
-
-- `BP_Trap_Darts`: a wall launcher that fires across the trap corridor every `DartInterval` seconds. The server replicates the time of each volley, and every machine plays the darts from it; the server applies the damage. Don't use a multicast for the volley itself, since a dropped message would mean damage with no warning.
-- Second light pass with HZ-A2's props: real torches and crystals, stalagmites and rubble. Make each chamber's way forward the brightest thing in view.
+- Once HC-3 has `AC_Health` on the real character, remove it from `BP_HZ_TestCharacter`, so there's only one.
 - Join Playable 2.
 
-### HZ-4: Swing and dressing (Sprint 4, 45 min)
+### HZ-4: Swing and Round 2's corridor (Sprint 4, 45 min)
 
-- `BP_Trap_Swing`: a swinging log whose angle comes from server time, so every machine computes it with no replication. The server damages whatever it hits. `SwingSpeed` scales it.
-- Dress chambers 1 to 3 with HZ-A4's pieces, without moving any of the positions in the layout doc.
+- `BP_Trap_Swing`: a swinging log whose angle comes from server time, its replicated start time and `SwingSpeed`, so every machine computes the same swing. The server damages whatever it hits.
+- Round 2's trap corridor: darts, the swinging log and spikes, timed so a player carrying the key relic at half speed can get through by watching the rhythm.
+- The key relic nook around HC's key relic at (70, 25), with spikes guarding the way in.
 
-### HZ-5: Round 2's corridor (Sprint 5, 45 min)
+### HZ-5: Round 3's hall (Sprint 5, 45 min)
 
-- Arrange the trap corridor for Round 2: darts, the swinging log and spikes, timed so a player carrying the key relic at half speed can get through by watching the rhythm.
-- The key relic nook, a short side passage with spikes guarding it. Leave the key relic's spot clear for HC.
+- Round 3's hall: dark apart from a few crystals, with two swinging logs, spikes and darts set between PG's gate and exit lever, at the positions in the layout doc. PG builds the round on it in Sprint 6.
+- `BP_FallVolume` under the chasm at the exit ledge: on the server, a player who falls is moved to their spot at the latest checkpoint and takes 50 damage.
 
-### HZ-6: Round 3's hall and atmosphere (Sprint 6, 60 min) → Playable 3
+### HZ-6: Light and props (Sprint 6, 60 min) → Playable 3
 
-- Round 3's hall: dark apart from a few crystals, with two swinging logs, spikes and darts set between PG's gate and exit lever.
-- `BP_FallVolume` under the chasm at the exit ledge: a player who falls goes back to the current round's respawn point with 50 damage.
+- Second light pass with HZ-A2's props: real torches and crystals, and a stalagmite or two. Make each chamber's way forward the brightest thing in view.
 - Atmosphere across the cave: height fog, drifting dust and dripping water.
 - Join Playable 3.
 
@@ -86,30 +86,37 @@ Before the sprint, run `Tools/check-mac.command` until it passes.
 
 - `/Game/Hazards/L_Site02_HZ`, Map 2's antechamber: a 20 m square room in sandstone, two braziers for light, hieroglyphs on the walls, and a sealed door that says the way on opens later. Use HZ-A5's kit.
 
-### HZ-8: Sound and tuning (Sprint 8, 60 min) → Playable 4
+### HZ-8: Dressing and trap meshes (Sprint 8, 45 min)
 
-- Sound pass with HZ-A6: cave ambience and drips, torch crackle, and a sound for every trap, played as 3D sound.
+- Swap HZ-A3's trap meshes in for the greybox traps, and dress the chambers with HZ-A4's pieces, without moving any of the positions in the layout doc.
+
+### HZ-9: Sound and tuning (Sprint 9, 60 min) → Playable 4
+
+- Sound pass with HZ-A6: cave ambience and drips, torch crackle, and a sound for every trap, played as 3D sound. Trap sounds play from the same schedules as their warnings.
 - Tune `DT_HazardScaling` from the 2-player and 4-player runs.
 - Join Playable 4.
 
-### HZ-9: Demo (Sprint 9, 60 min) → Demo 1
+### HZ-10: Effects and Mac performance (Sprint 10, 45 min)
 
 - Effects: dust when the spikes fire, splinters when a log hits, embers from the torches.
 - Mac performance check. If a Mac drops below 30 fps, lower its scalability settings rather than cutting content.
-- Fix what Playable 4 found.
+
+### HZ-11: Demo (Sprint 11, 60 min) → Demo 1
+
+- Final fixes.
 
 ## Asset generation
 
-Follow [docs/assets.md](../assets.md) for specs, imports and reviews. Raw output goes in `SourceArt/HZ/`, imported assets in `Content/Hazards/Art/`.
+Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews. Raw output goes in `SourceArt/HZ/`, imported assets in `Content/Hazards/Art/`. Early deliveries are deliberately small: one material family or a few props.
 
 | Task | Sprint | Assets | Specs | Used in |
 | --- | --- | --- | --- | --- |
-| HZ-A1: Cave surfaces | 1 | Tileable materials for rock walls, the cave floor (damp rock and grit) and the ceiling, plus a kit of 4–6 rock pieces for building walls and boulders. | 2K tileable textures, full PBR. Rock pieces with Nanite on and simple collision. | HZ-2 |
-| HZ-A2: Props and light sources | 2 | Stalagmites and stalactites (3 each), crystal clusters in two colors that glow, a wall torch with a flame, rubble. | Props up to 20k triangles with Nanite on. The crystal material's glow must be adjustable. | HZ-3 |
-| HZ-A3: Trap meshes | 3 | A spike plate with spikes, a dart launcher carved into a wall, and darts. | Plates 2 m square. Simple collision; the damage volumes stay in the Blueprints. | HZ-3, HZ-5 |
-| HZ-A4: Swing and dressing | 4 | A swinging log, or a blade, with its chain or rope; carved pillars, bones and old rope for dressing. | The log pivots at its top. | HZ-4 to HZ-6 |
-| HZ-A5: Map 2 kit | 6 | Sandstone wall and floor materials, an Egyptian pillar, hieroglyph decals, a brazier. | 2K textures. Decals as material instances. | HZ-7 |
-| HZ-A6: Cave and trap sounds | 7 | Cave ambience, drips, torch crackle, and sounds for the spikes, darts and swinging log. | Mono WAV, 48 kHz, except stereo ambience. Ambience loops cleanly. | HZ-8 |
+| HZ-A1: Cave surfaces | 2 | One material family: tileable rock walls and the cave floor (damp rock and grit). The ceiling reuses the wall material. In place by Sprint 3. | 2K tileable textures, full PBR. | HZ-3 |
+| HZ-A2: Props and light sources | 4 | A wall torch with a flame, a crystal cluster that glows, and one or two stalagmites. Library props from Fab are fine. In place by Sprint 6. | Props up to 20k triangles with Nanite on for opaque ones. If the crystal material is translucent, turn Nanite off for it. The crystal glow must be adjustable. | HZ-6 |
+| HZ-A3: Trap meshes | 5 | A spike plate with spikes, a dart launcher carved into a wall, and darts. In place by Sprint 8. | Plates 2 m square. Simple collision; the damage volumes stay in the Blueprints. | HZ-8 |
+| HZ-A4: Dressing | 6 | A swinging log or blade with its chain, carved pillars, bones and old rope. In place by Sprint 8. | The log pivots at its top. | HZ-8 |
+| HZ-A5: Map 2 kit | 6 | Sandstone wall and floor materials, an Egyptian pillar, hieroglyph decals, a brazier. In place by Sprint 7. | 2K textures. Decals as material instances. | HZ-7 |
+| HZ-A6: Cave and trap sounds | 8 | Cave ambience, drips, torch crackle, and sounds for the spikes, darts and swinging log. In place by Sprint 9. | Mono WAV, 48 kHz, except stereo ambience. Ambience loops cleanly. | HZ-9 |
 
 ## Critical assets
 
@@ -119,23 +126,25 @@ Follow [docs/assets.md](../assets.md) for specs, imports and reviews. Raw output
 
 ## Build and playtest notes
 
-- Fire traps only on the server, then show them everywhere. A trap that only works for the host is the most common bug in this lane.
-- Test downed and revive with two clients, not with the host and one client.
-- Light looks different on Mac and Windows. Windows makes the final call in HC-9.
+- Traps do damage only on the server, then show it everywhere. A trap that only works for the host is the most common bug in this lane.
+- Test downed and revive with two clients, not with the host and one client, and test traps with network emulation on, so the warnings still come first.
+- Light looks different on Mac and Windows. Windows makes the final call in HC-10.
 - If the editor keeps marking `L_Site01` as changed after you move geometry, never save that level; uncheck it in the save dialog.
 
 ## Verification
 
 - HZ-0: both Macs join Playable 1.
 - HZ-1: a player walks the whole blockout, from the spawn cavern to the map exit by the walkway. The daylight shaft, torches and crystals all show on a Mac and on Windows.
-- HZ-2: a client who steps on the spikes goes down on every screen, and the test trigger revives them. `ForceDown(false)` leaves a player who can't be revived. The cave has its textures.
-- HZ-3: a client is hit by darts only when every machine shows a volley. The props light the way forward.
-- HZ-4: the swinging log hits the same way on every machine.
-- HZ-5: a player carrying the key relic can cross the corridor by timing the traps.
-- HZ-6: Round 3's hall reads as dark but playable with headlamps, and a fall at the ledge returns the player to the round's start.
+- HZ-2: a client who steps on the spikes hears the click before they rise, and goes down on every screen. The test trigger gets them back up with `ResetHealth()`.
+- HZ-3: every machine shows each dart volley's warning before it fires, including under network emulation. The cave has its textures.
+- HZ-4: the swinging log is in the same place on every machine at the same moment. A player carrying the key relic can cross the corridor by timing the traps.
+- HZ-5: Round 3's hall reads as dark but playable with headlamps, and a fall at the ledge returns the player to the latest checkpoint.
+- HZ-6: Playable 3 passes, with the props lighting the way forward.
 - HZ-7: Map 2's room loads with its light, and its walls and door read as Egyptian.
-- HZ-8: every trap and the ambience play on every machine. Playable 4 passes.
-- HZ-9: Demo 1 passes.
+- HZ-8: the traps and chambers have their meshes and dressing, and every trap still lines up with its damage.
+- HZ-9: every trap and the ambience play on every machine. Playable 4 passes.
+- HZ-10: both Macs hold 30 fps or better, with scalability settings if needed.
+- HZ-11: Demo 1 passes.
 
 ## Open questions
 

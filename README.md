@@ -7,7 +7,7 @@ We work in 45–60 minute sprints with three people in parallel. The Windows mac
 - **Plan:** [docs/sprints.md](docs/sprints.md): the sprints, playable checkpoints, shared contracts and cut list
 - **Epics, one per lane:** [docs/epics/](docs/epics/)
 - **Map layout:** [docs/map/site01-layout.md](docs/map/site01-layout.md)
-- **Asset generation:** [docs/assets.md](docs/assets.md)
+- **Asset generation:** [docs/assets.md](docs/assets.md), with credits in [CREDITS.md](CREDITS.md)
 - **Rules for agents (and people):** [AGENTS.md](AGENTS.md)
 - **Editor agent setup:** [docs/mcp.md](docs/mcp.md)
 - **Design:** [docs/design/direction-2026-10-09.md](docs/design/direction-2026-10-09.md), which updates [docs/design/two-to-four-players.md](docs/design/two-to-four-players.md)
