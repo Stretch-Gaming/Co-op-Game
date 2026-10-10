@@ -53,6 +53,10 @@ namespace CoopTuning
 	float CaveExposure();     // coop.Cave.Exposure      camera exposure, in stops (+1 = twice as bright)
 	float CaveFog();          // coop.Cave.Fog           haze density near the floor
 
+	// Maze look (the cave keeps its own)
+	float MazeShadowTint();   // coop.Maze.ShadowTint    0 = shadows like the cave's teal .. 1 = full blue-violet
+	float MazeShadowLift();   // coop.Maze.ShadowLift    0 = none .. 1 = darkest shadows lifted to a full #1E2433
+
 	// Look
 	float StickYawRate();     // coop.Look.StickYaw    degrees/s at full stick
 	float StickPitchRate();   // coop.Look.StickPitch  degrees/s at full stick

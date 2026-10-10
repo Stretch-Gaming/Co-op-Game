@@ -73,7 +73,7 @@ A 25 m x 25 m mine cave lit by torches. The spots you can jump to:
 | 6 | Maze fork | Four tunnel mouths, one per path. |
 | 7 | Meeting point A | The sunken hall (-3 m) where all four paths meet. |
 | 8 | Meeting point B | The raised hall (+4 m), the second meeting point. |
-| 9 | Relic chamber | The end of the maze (+6 m), with the gold idol. |
+| 9 | Relic chamber | The end of the maze (+6 m), with the gold idol on its altar. |
 
 ### The maze
 
@@ -94,7 +94,15 @@ Through the door in the cave's north wall (between the timber posts). [maze_over
 
 The layout is the table at the top of `CoopPlayground.cpp` (`CoopMaze`): rooms as tile rectangles, paths as waypoints with heights.
 
-**Repo art (optional):** the maze uses the shared style kit from the main project when it's in this project: `SM_StyleTest_Rock` and `MI_Stylized_Rock` for the walls and ceiling, `MI_Stylized_Gold` for the idol. To add them, open `CoopGame.uproject`, select those three assets in `Content/Shared/Style`, right-click, **Asset Actions > Migrate**, and pick this project's `Content` folder. Without them the maze uses code-built rocks. The Output Log line `CoopPlayground: repo rock mesh ...` says which it found.
+**Repo art:** the maze uses the shared style kit from the main project ([docs/art/style.md](../../docs/art/style.md)): `SM_StyleTest_Rock` with `MI_Stylized_Rock` for the walls and ceiling, and `MI_Stylized_Gold` for the idol. They're in `Content/Shared/Style/`, at the same `/Game/Shared/Style` path as in CoopGame. The Output Log line `CoopPlayground: repo rock mesh found` confirms they loaded; if that folder is missing, the maze falls back to code-built rocks.
+
+Where they came from: migrated on Oct 10, 2026 from the main project's `Content/Shared/Style/` (main at `8bfd3c5`) with the engine's asset migration (`AssetTools.migrate_packages`, run headless against `CoopGame.uproject`). The migration brought their dependencies too: `M_Stylized`, `MI_StyleTest_Rock` and the textures `T_StyleTest_RockNoise`, `T_StyleTest_Rock_BaseColor`, `T_StyleTest_Rock_ARM` and `T_Stylized_MaskDefault`. They're PG's style kit (PG-A0, [#34](https://github.com/Stretch-Gaming/Co-op-Game/issues/34)), made in the editor for this project, so they can be published here like the rest of the repo. No third-party content or credit is involved. One change from the originals: `M_Stylized` here has **Used with Instanced Static Meshes** turned on (set through the editor's Python, then saved), because the maze draws its rocks as instanced meshes. Without it, a standalone run draws them with the default material. The main project's copy doesn't have that flag yet. If you migrate the kit again, turn it back on here.
+
+**HC's relics and props** dress the maze too, as art only, with none of their Blueprints or puzzle logic. The gold idol (`SM_Relic_GoldIdol`) stands on `SM_Altar` in the relic chamber. The jade mask, gem scarab and stone heart sit on plinths behind it. `SM_ChamberGate_Frame` (the frame only, with no leaf, so the way stays open) marks each path's entrance to the chamber. In both halls, `SM_Statue` stands on the west wall and `SM_Statue_Small` on the east wall, each beside a wall torch so it's lit, and both between path mouths. Each one is optional: the Output Log lists `CoopPlayground: SM_... found` or `missing`, and a missing mesh falls back to the code-built shape or is left out. They're drawn without Nanite and use their own simple collision; the relics have none.
+
+They were migrated the same way on Oct 10, 2026, from `Content/Puzzles/Art/HCA1_Relics/` and `Content/Puzzles/Art/HCA2_Props/` (meshes and their `MI_HCA1_*` and `MI_HCA2_*` instances of `M_Stylized`), into the same paths here. Credits: Stretch scripted them in Blender for this project, so they're the team's own work and need no credit line. The sources and scripts are in [SourceArt/HC/HC-A1](../../SourceArt/HC/HC-A1) ([#18](https://github.com/Stretch-Gaming/Co-op-Game/issues/18)) and [SourceArt/HC/HC-A2](../../SourceArt/HC/HC-A2) ([#19](https://github.com/Stretch-Gaming/Co-op-Game/issues/19)), with the license recorded on those issues. `SM_HCA2_CaveSupport` wasn't brought over: it's a single 104 m piece of L_Site01_HZ's floor and gate enclosures, not a support you can place on its own.
+
+**The maze's look** follows the style sheet; the cave keeps its warm mine look. Maze walls use the style sheet's light rock grey `#7A6E68` and ceilings its lavender mid grey `#4A4652`, and each floor is tinted with its path's color. Its shadows turn from the cave's teal fill to blue-violet `#1E2433`, so teal light is left only near the crystals. The change happens in the door tunnel: the mine's last timber frame stands at the door, and over the tunnel's three tiles the rock turns from the cave's brown to the maze's greys, while the shadows cool. `coop.Maze.ShadowTint` and `coop.Maze.ShadowLift` tune the shadows live.
 
 ## 5. What to test in the cave
 
@@ -123,6 +131,7 @@ Typing a name on its own shows its current value.
 - **Movement:** `coop.WalkSpeed`, `coop.JumpVelocity`, `coop.Gravity`, `coop.AirControl`, `coop.StepHeight` (tallest bump you walk over, cm)
 - **Boost jump:** `coop.Boost.Up/Forward/Range`
 - **Cave lighting:** `coop.Cave.Torch` (brightness), `coop.Cave.TorchRadius`, `coop.Cave.TorchShadows` (0 none, 1 the four torches out in the room, 2 all), `coop.Cave.Flicker`, `coop.Cave.Bounce`, `coop.Cave.Crystal`, `coop.Cave.Ambient` (cool fill in the shadows), `coop.Cave.Exposure` (stops), `coop.Cave.Fog`
+- **Maze look:** `coop.Maze.ShadowTint` (0 = the cave's teal shadows, 1 = full blue-violet), `coop.Maze.ShadowLift` (how far the darkest shadows are lifted toward `#1E2433`)
 - **Camera:** `coop.Cam.Distance/Shoulder/Height/FOV/FPFOV/StartFirstPerson`, `coop.Look.StickYaw/StickPitch/Mouse`
 - **The rope:** `coop.Tether 1` ties the players together again the next time you press Play. `coop.Rope.MaxLength/MinLength/ReelSpeed/DragSpeed/AirWeight` tune it.
 
@@ -162,6 +171,8 @@ You can build and play this whole prototype on your Mac. **Xbox and PlayStation 
 
 ```
 CoopProto.uproject          Project file (UE 5.8, Enhanced Input, Procedural Mesh)
+Content/Shared/Style/       The shared style kit, migrated from CoopGame (see "Repo art" in section 4)
+Content/Puzzles/Art/        HC's relics and props, migrated from CoopGame as maze dressing (see "HC's relics and props" in section 4)
 Config/DefaultEngine.ini    Split screen on (vertical), default map, game mode, light rendering settings (TAA anti-aliasing)
 Config/DefaultInput.ini     Enhanced Input as default
 Source/CoopProto/

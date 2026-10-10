@@ -16,6 +16,8 @@ class UStaticMesh;
 class UMaterialInterface;
 class UMaterialInstanceDynamic;
 class APostProcessVolume;
+class UBoxComponent;
+class UPostProcessComponent;
 
 /** A spot in the play area you can jump straight to (D-pad left/right, or number keys 1-9). */
 struct FCoopStation
@@ -84,8 +86,17 @@ private:
 
 	/** Loads the shared style kit (rock mesh, rock and gold materials) if it has been migrated into this project. */
 	void LoadRepoAssets();
-	/** One rock of the maze's walls or ceiling: the repo rock mesh if present, otherwise a code-built rock. */
-	void AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw);
+	/**
+	 * One rock of the maze's walls or ceiling: the repo rock mesh if present, otherwise a code-built rock.
+	 * DoorStep: 0 in the maze, 1..CoopMaze::DoorSteps in the door tunnel, counting up towards the cave (warmer rock).
+	 */
+	void AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw, int32 DoorStep = 0);
+	/** The maze's own look: blue-violet shadows, fading in through the door tunnel so the cave keeps its own. */
+	void BuildMazeGrade(const FBox& MazeBounds);
+	/** A timber frame at the door's cave end: where the mine stops and the natural cave begins. */
+	void BuildDoorPortal();
+	/** A migrated art mesh with its own materials, standing on GroundPoint (its pivot is at its base). Never Nanite. */
+	UStaticMeshComponent* AddRepoProp(UStaticMesh* Mesh, const FVector& GroundPoint, float Yaw, bool bCollides);
 
 	// Pieces
 	void AddWallTorch(const FVector& MountPoint, const FVector& WallNormal, bool bKeyLight);
@@ -183,9 +194,35 @@ private:
 	UPROPERTY(Transient)
 	TObjectPtr<UMaterialInterface> RepoGoldMaterial;
 
-	// Maze rocks using the repo rock mesh, turned into instanced meshes at the end of BuildMaze
-	TArray<FTransform> MazeWallRockTransforms;
-	TArray<FTransform> MazeCeilingRockTransforms;
+	// HC's relic and puzzle-prop art (HC-A1, HC-A2), when migrated: dressing only, no puzzle logic
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoIdolMesh;
+
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<UStaticMesh>> RepoDressingRelics;   // jade mask, gem scarab, stone heart
+
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoAltarMesh;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoStatueMesh;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoStatueSmallMesh;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoGateFrameMesh;
+
+	// Maze rocks using the repo rock mesh, turned into instanced meshes at the end of BuildMaze.
+	// Key: DoorStep * 2 + 1 for ceiling rocks, so each door step gets its own tint.
+	TMap<int32, TArray<FTransform>> MazeRockTransforms;
+
+	/** The maze's color grade, bounded by MazeGradeBounds and fading in over the door tunnel. */
+	UPROPERTY(Transient)
+	TObjectPtr<UPostProcessComponent> MazeGrade;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UBoxComponent> MazeGradeBounds;
 
 	// Rock groups, turned into meshes at the end of BeginPlay
 	FCoopRockGroup WallRocks;
