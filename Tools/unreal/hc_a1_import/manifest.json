@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "issue": "https://github.com/Stretch-Gaming/Co-op-Game/issues/18",
+  "source_pr": "https://github.com/Stretch-Gaming/Co-op-Game/pull/65",
+  "source_pr_merge_commit": "f2d0800b0c552b9da8819d60f4fc2a35fb3a1afb",
+  "base_origin_main": "b9ed193fb35458f1c35588362d7a629949313362",
+  "engine": "5.8.3",
+  "project_file": "CoopGame.uproject",
+  "lane": "HC",
+  "owner": "Stretch",
+  "destination_root": "/Game/Puzzles/Art/HCA1_Relics",
+  "material_parent": "/Game/Shared/Style/M_Stylized",
+  "material_parent_policy": "Read only; never modify or save this master or existing shared instances.",
+  "source_license_record": "Issue #18 and merged PR #65: team-authored scripted Blender outputs; own work, public redistribution allowed, no attribution required. No new licensed assets added.",
+  "geometry_policy": "Import original FBX with normals; no decimation, redesign, new UVs, pivot bake or nominal-size normalization. FBX vertices are meter-sized with Lcl Scaling 100 and UnitScaleFactor 1; transform_vertex_to_absolute applies the source model transform. Default FBX scene conversion expected to face +X per PR #65; verify in editor.",
+  "preset_status": "docs/assets.md still marks PG-A0 import presets to be filled in. These explicit HC-A1 options derive from supplied metadata, PR #65 and installed UE 5.8.3 headers; engine behavior remains untested.",
+  "assets": [
+    {
+      "name": "SM_Relic_GoldIdol",
+      "fbx_path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+      "validation_path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.validation.json",
+      "source_files": [
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+          "sha256": "00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b",
+          "size_bytes": 437676
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.validation.json",
+          "sha256": "4b8a8276ed93566581d2fa7817c13b1beae21f7be5eb796153df7a1269b99169",
+          "size_bytes": 496
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/make_SM_Relic_GoldIdol.py",
+          "sha256": "04968210e630d569bd91122b5a3e05390bdd0de00bd909806323601f386633e5",
+          "size_bytes": 14614
+        }
+      ],
+      "lfs_object": {
+        "oid_sha256": "00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b",
+        "size_bytes": 437676
+      },
+      "source_validation": {
+        "input": "/tmp/HC-A1/SM_Relic_GoldIdol.glb",
+        "output": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 9406,
+        "triangles_after": 9406,
+        "dimensions_cm": [
+          22.1418,
+          22.7571,
+          25.0
+        ],
+        "bounds_min_cm": [
+          -11.07091,
+          -11.37853,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "mesh_count": 1,
+        "vertex_count": 8726,
+        "polygon_count": 9406,
+        "triangles": 9406,
+        "all_triangles": true,
+        "material_slots": [
+          "M_Gold",
+          "M_Jade"
+        ],
+        "has_normals": true,
+        "uv_layer_count": 1,
+        "raw_vertex_bounds_min": [
+          -0.1107090562582016,
+          -0.11378531157970428,
+          0.0
+        ],
+        "raw_vertex_bounds_max": [
+          0.1107090562582016,
+          0.11378531157970428,
+          0.2499999850988388
+        ],
+        "raw_vertex_dimensions": [
+          0.2214181125164032,
+          0.22757062315940857,
+          0.2499999850988388
+        ],
+        "global_settings": {
+          "UpAxis": 2,
+          "UpAxisSign": 1,
+          "FrontAxis": 1,
+          "FrontAxisSign": 1,
+          "CoordAxis": 0,
+          "CoordAxisSign": -1,
+          "UnitScaleFactor": 1.0
+        },
+        "model_transforms": [
+          {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "material_properties": {
+          "M_Gold": {
+            "DiffuseColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              48.99999833106996
+            ],
+            "ShininessExponent": [
+              48.99999833106996
+            ],
+            "ReflectionColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ]
+          },
+          "M_Jade": {
+            "DiffuseColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "EmissiveColor": [
+              0.029823942109942436,
+              0.2287956178188324,
+              0.10096164047718048
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              56.25
+            ],
+            "ShininessExponent": [
+              56.25
+            ],
+            "ReflectionColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          }
+        }
+      },
+      "nominal_design": {
+        "brief": "small relics 20-30 cm",
+        "pr65_rounded_dimensions_cm": [
+          22,
+          23,
+          25
+        ]
+      },
+      "preserve_design": "Seated lion, jade chest cabochon, glow 0.6 retained as material intent.",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol",
+      "material_slots": [
+        {
+          "source_slot": "M_Gold",
+          "profile": "gold"
+        },
+        {
+          "source_slot": "M_Jade",
+          "profile": "idol_jade"
+        }
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "nanite": true,
+      "textures": {
+        "source": "No texture images supplied; FBX carries material constants and one Smart UV layer.",
+        "target_if_added": "1K, base color sRGB; DirectX normal, Normalmap compression; ORM non-sRGB R=AO/G=roughness/B=metallic. No texture generation in this tooling."
+      }
+    },
+    {
+      "name": "SM_Relic_JadeMask",
+      "fbx_path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+      "validation_path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.validation.json",
+      "source_files": [
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+          "sha256": "f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703",
+          "size_bytes": 316636
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.validation.json",
+          "sha256": "1c63e673d3b0c6354127d67409c62bf01c4b5be51b94ab810c905e346541293b",
+          "size_bytes": 493
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/make_SM_Relic_JadeMask.py",
+          "sha256": "b3bd3a41d5b9aea5894af91efbc698159969df7275c6e0b00054c9a4ddf51ff1",
+          "size_bytes": 5117
+        }
+      ],
+      "lfs_object": {
+        "oid_sha256": "f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703",
+        "size_bytes": 316636
+      },
+      "source_validation": {
+        "input": "/tmp/HC-A1/SM_Relic_JadeMask.glb",
+        "output": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 8224,
+        "triangles_after": 8224,
+        "dimensions_cm": [
+          9.8168,
+          17.7345,
+          22.0
+        ],
+        "bounds_min_cm": [
+          -4.90839,
+          -8.86724,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "mesh_count": 1,
+        "vertex_count": 6232,
+        "polygon_count": 8224,
+        "triangles": 8224,
+        "all_triangles": true,
+        "material_slots": [
+          "M_Jade",
+          "M_Gold"
+        ],
+        "has_normals": true,
+        "uv_layer_count": 1,
+        "raw_vertex_bounds_min": [
+          -0.049083903431892395,
+          -0.08867242932319641,
+          0.0
+        ],
+        "raw_vertex_bounds_max": [
+          0.049083903431892395,
+          0.08867242932319641,
+          0.2199999988079071
+        ],
+        "raw_vertex_dimensions": [
+          0.09816780686378479,
+          0.17734485864639282,
+          0.2199999988079071
+        ],
+        "global_settings": {
+          "UpAxis": 2,
+          "UpAxisSign": 1,
+          "FrontAxis": 1,
+          "FrontAxisSign": 1,
+          "CoordAxis": 0,
+          "CoordAxisSign": -1,
+          "UnitScaleFactor": 1.0
+        },
+        "model_transforms": [
+          {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "material_properties": {
+          "M_Jade": {
+            "DiffuseColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              56.25
+            ],
+            "ShininessExponent": [
+              56.25
+            ],
+            "ReflectionColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          },
+          "M_Gold": {
+            "DiffuseColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              48.99999833106996
+            ],
+            "ShininessExponent": [
+              48.99999833106996
+            ],
+            "ReflectionColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ]
+          }
+        }
+      },
+      "nominal_design": {
+        "brief": "small relics 20-30 cm",
+        "pr65_rounded_dimensions_cm": [
+          10,
+          18,
+          22
+        ]
+      },
+      "preserve_design": "Keep gold plinth and through-cut eye/mouth slots.",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask",
+      "material_slots": [
+        {
+          "source_slot": "M_Jade",
+          "profile": "jade"
+        },
+        {
+          "source_slot": "M_Gold",
+          "profile": "gold"
+        }
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "nanite": true,
+      "textures": {
+        "source": "No texture images supplied; FBX carries material constants and one Smart UV layer.",
+        "target_if_added": "1K, base color sRGB; DirectX normal, Normalmap compression; ORM non-sRGB R=AO/G=roughness/B=metallic. No texture generation in this tooling."
+      }
+    },
+    {
+      "name": "SM_Relic_GemScarab",
+      "fbx_path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+      "validation_path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json",
+      "source_files": [
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+          "sha256": "c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8",
+          "size_bytes": 318316
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json",
+          "sha256": "feb1d661c6b69aed93692f66915473a9e1ca9ffb658a342e85087c7278c7f91b",
+          "size_bytes": 490
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/make_SM_Relic_GemScarab.py",
+          "sha256": "5c32f1a55cf9526f945c788f6a1d1f651c4b723a5eb7bf2fe3dca388a8b37bb5",
+          "size_bytes": 3947
+        }
+      ],
+      "lfs_object": {
+        "oid_sha256": "c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8",
+        "size_bytes": 318316
+      },
+      "source_validation": {
+        "input": "/tmp/HC-A1/SM_Relic_GemScarab.glb",
+        "output": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 8148,
+        "triangles_after": 8148,
+        "dimensions_cm": [
+          18.0,
+          16.3004,
+          7.0937
+        ],
+        "bounds_min_cm": [
+          -9.0,
+          -8.1502,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "mesh_count": 1,
+        "vertex_count": 6515,
+        "polygon_count": 8148,
+        "triangles": 8148,
+        "all_triangles": true,
+        "material_slots": [
+          "M_Gold",
+          "M_Jade"
+        ],
+        "has_normals": true,
+        "uv_layer_count": 1,
+        "raw_vertex_bounds_min": [
+          -0.09000000357627869,
+          -0.08150195330381393,
+          0.0
+        ],
+        "raw_vertex_bounds_max": [
+          0.09000000357627869,
+          0.08150195330381393,
+          0.07093658298254013
+        ],
+        "raw_vertex_dimensions": [
+          0.18000000715255737,
+          0.16300390660762787,
+          0.07093658298254013
+        ],
+        "global_settings": {
+          "UpAxis": 2,
+          "UpAxisSign": 1,
+          "FrontAxis": 1,
+          "FrontAxisSign": 1,
+          "CoordAxis": 0,
+          "CoordAxisSign": -1,
+          "UnitScaleFactor": 1.0
+        },
+        "model_transforms": [
+          {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "material_properties": {
+          "M_Gold": {
+            "DiffuseColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              48.99999833106996
+            ],
+            "ShininessExponent": [
+              48.99999833106996
+            ],
+            "ReflectionColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ]
+          },
+          "M_Jade": {
+            "DiffuseColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              56.25
+            ],
+            "ShininessExponent": [
+              56.25
+            ],
+            "ReflectionColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          }
+        }
+      },
+      "nominal_design": {
+        "brief": "small relics 20-30 cm",
+        "pr65_rounded_dimensions_cm": [
+          18,
+          16,
+          7
+        ]
+      },
+      "preserve_design": "Keep gold rim/seam and polished jade shell; 18 cm length retained despite nominal 20-30 cm brief.",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab",
+      "material_slots": [
+        {
+          "source_slot": "M_Gold",
+          "profile": "gold"
+        },
+        {
+          "source_slot": "M_Jade",
+          "profile": "jade"
+        }
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "nanite": true,
+      "textures": {
+        "source": "No texture images supplied; FBX carries material constants and one Smart UV layer.",
+        "target_if_added": "1K, base color sRGB; DirectX normal, Normalmap compression; ORM non-sRGB R=AO/G=roughness/B=metallic. No texture generation in this tooling."
+      }
+    },
+    {
+      "name": "SM_KeyRelic_StoneHeart",
+      "fbx_path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+      "validation_path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.validation.json",
+      "source_files": [
+        {
+          "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+          "sha256": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda",
+          "size_bytes": 396700
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.validation.json",
+          "sha256": "5ea23f8928e1d2ffb57e5b62e2fde610358bd2178bdcd67f00d59843c2d04c1e",
+          "size_bytes": 506
+        },
+        {
+          "path": "SourceArt/HC/HC-A1/make_SM_KeyRelic_StoneHeart.py",
+          "sha256": "522dcf0dd7a3d53e1cd2bccd6eca6c146d2dd1bf3ddecca2dd45cd5e2f366877",
+          "size_bytes": 7788
+        }
+      ],
+      "lfs_object": {
+        "oid_sha256": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda",
+        "size_bytes": 396700
+      },
+      "source_validation": {
+        "input": "/tmp/HC-A1/SM_KeyRelic_StoneHeart.glb",
+        "output": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 9866,
+        "triangles_after": 9866,
+        "dimensions_cm": [
+          39.2349,
+          74.0457,
+          62.0
+        ],
+        "bounds_min_cm": [
+          -19.61747,
+          -37.02286,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "mesh_count": 1,
+        "vertex_count": 8346,
+        "polygon_count": 9866,
+        "triangles": 9866,
+        "all_triangles": true,
+        "material_slots": [
+          "M_Stone",
+          "M_Gold",
+          "M_Jade",
+          "M_Rope"
+        ],
+        "has_normals": true,
+        "uv_layer_count": 1,
+        "raw_vertex_bounds_min": [
+          -0.19617468118667603,
+          -0.3702285885810852,
+          0.0
+        ],
+        "raw_vertex_bounds_max": [
+          0.19617468118667603,
+          0.3702285885810852,
+          0.6200000047683716
+        ],
+        "raw_vertex_dimensions": [
+          0.39234936237335205,
+          0.7404571771621704,
+          0.6200000047683716
+        ],
+        "global_settings": {
+          "UpAxis": 2,
+          "UpAxisSign": 1,
+          "FrontAxis": 1,
+          "FrontAxisSign": 1,
+          "CoordAxis": 0,
+          "CoordAxisSign": -1,
+          "UnitScaleFactor": 1.0
+        },
+        "model_transforms": [
+          {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "material_properties": {
+          "M_Stone": {
+            "DiffuseColor": [
+              0.1946178376674652,
+              0.15592646598815918,
+              0.1384316086769104
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.1946178376674652,
+              0.15592646598815918,
+              0.1384316086769104
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              2.2499992847443195
+            ],
+            "ShininessExponent": [
+              2.2499992847443195
+            ],
+            "ReflectionColor": [
+              0.1946178376674652,
+              0.15592646598815918,
+              0.1384316086769104
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          },
+          "M_Gold": {
+            "DiffuseColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              48.99999833106996
+            ],
+            "ShininessExponent": [
+              48.99999833106996
+            ],
+            "ReflectionColor": [
+              0.8069522380828857,
+              0.4507857859134674,
+              0.0423114113509655
+            ]
+          },
+          "M_Jade": {
+            "DiffuseColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              56.25
+            ],
+            "ShininessExponent": [
+              56.25
+            ],
+            "ReflectionColor": [
+              0.04970656707882881,
+              0.38132601976394653,
+              0.16826939582824707
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          },
+          "M_Rope": {
+            "DiffuseColor": [
+              0.3915724754333496,
+              0.23074005544185638,
+              0.09530746936798096
+            ],
+            "EmissiveColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "EmissiveFactor": [
+              0.0
+            ],
+            "AmbientColor": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "AmbientFactor": [
+              0.0
+            ],
+            "BumpFactor": [
+              0.0
+            ],
+            "SpecularColor": [
+              0.3915724754333496,
+              0.23074005544185638,
+              0.09530746936798096
+            ],
+            "SpecularFactor": [
+              0.25
+            ],
+            "Shininess": [
+              1.000000476837215
+            ],
+            "ShininessExponent": [
+              1.000000476837215
+            ],
+            "ReflectionColor": [
+              0.3915724754333496,
+              0.23074005544185638,
+              0.09530746936798096
+            ],
+            "ReflectionFactor": [
+              0.0
+            ]
+          }
+        }
+      },
+      "nominal_design": {
+        "brief": "key relic about 60 cm",
+        "pr65_rounded_dimensions_cm": [
+          39,
+          74,
+          62
+        ]
+      },
+      "preserve_design": "Keep 62 cm heart, gold/jade runes, three tan rope wraps and both carry loops; no redesign or resizing.",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart",
+      "material_slots": [
+        {
+          "source_slot": "M_Stone",
+          "profile": "stone"
+        },
+        {
+          "source_slot": "M_Gold",
+          "profile": "gold"
+        },
+        {
+          "source_slot": "M_Jade",
+          "profile": "jade"
+        },
+        {
+          "source_slot": "M_Rope",
+          "profile": "rope"
+        }
+      ],
+      "collision": {
+        "automatic": "none",
+        "plan": "Manually add and fit one box around stone only in Static Mesh Editor, excluding rope loops; approximately 39 cm depth, 55 cm stone width, 62 cm height. Bounds are a guide, not a measured stone-only hull.",
+        "engine_acceptance_pending": true
+      },
+      "nanite": true,
+      "textures": {
+        "source": "No texture images supplied; FBX carries material constants and one Smart UV layer.",
+        "target_if_added": "1K, base color sRGB; DirectX normal, Normalmap compression; ORM non-sRGB R=AO/G=roughness/B=metallic. No texture generation in this tooling."
+      }
+    }
+  ],
+  "material_proposals": [
+    {
+      "id": "gold",
+      "name": "MI_HCA1_RelicGold",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+      "base_color_srgb_hex": "#E8B33A",
+      "target_roughness": 0.3,
+      "target_metallic": 1.0,
+      "source_emission_strength": 0,
+      "status": "proposal; verify exposed master parameters and rendered response in UE 5.8.3"
+    },
+    {
+      "id": "jade",
+      "name": "MI_HCA1_RelicJade",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade",
+      "base_color_srgb_hex": "#3FA672",
+      "target_roughness": 0.25,
+      "target_metallic": 0.0,
+      "source_emission_strength": 0,
+      "status": "proposal; verify exposed master parameters and rendered response in UE 5.8.3"
+    },
+    {
+      "id": "idol_jade",
+      "name": "MI_HCA1_IdolJadeGlow",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow",
+      "base_color_srgb_hex": "#3FA672",
+      "target_roughness": 0.25,
+      "target_metallic": 0.0,
+      "source_emission_strength": 0.6,
+      "status": "proposal; verify exposed master parameters and rendered response in UE 5.8.3"
+    },
+    {
+      "id": "stone",
+      "name": "MI_HCA1_HeartStone",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone",
+      "base_color_srgb_hex": "#7A6E68",
+      "target_roughness": 0.85,
+      "target_metallic": 0.0,
+      "source_emission_strength": 0,
+      "status": "proposal; verify exposed master parameters and rendered response in UE 5.8.3"
+    },
+    {
+      "id": "rope",
+      "name": "MI_HCA1_HeartRopeTan",
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan",
+      "base_color_srgb_hex": "#A88457",
+      "target_roughness": 0.9,
+      "target_metallic": 0.0,
+      "source_emission_strength": 0,
+      "status": "proposal; verify exposed master parameters and rendered response in UE 5.8.3"
+    }
+  ],
+  "shared_source_dependencies": [
+    {
+      "path": "SourceArt/HC/HC-A1/relic_parts.py",
+      "sha256": "76b35a9db886076fbe1f5a8b33fee69ca06f245d284f96f7117b6899e0323299",
+      "size_bytes": 8552
+    }
+  ]
+}

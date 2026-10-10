@@ -1,0 +1,149 @@
+{
+  "validation_date": "2026-10-10",
+  "base_origin_main": "b9ed193fb35458f1c35588362d7a629949313362",
+  "branch": "codex/hc-a1-import-tools",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "offline_tests_passed": 16,
+  "test_output": "test_binary_inspection_mismatch_refused (__main__.SafetyChecks.test_binary_inspection_mismatch_refused) ... ok\ntest_default_dry_run_does_not_import_unreal_or_execute (__main__.SafetyChecks.test_default_dry_run_does_not_import_unreal_or_execute) ... ok\ntest_destination_isolation (__main__.SafetyChecks.test_destination_isolation) ... ok\ntest_execute_missing_bindings_refused_before_editor (__main__.SafetyChecks.test_execute_missing_bindings_refused_before_editor) ... ok\ntest_hash_mismatch_refused (__main__.SafetyChecks.test_hash_mismatch_refused) ... ok\ntest_missing_source_refused (__main__.SafetyChecks.test_missing_source_refused) ... ok\ntest_pointer_source_refused (__main__.SafetyChecks.test_pointer_source_refused) ... ok\ntest_repeat_run_existing_package_refused_before_factory (__main__.SafetyChecks.test_repeat_run_existing_package_refused_before_factory) ... ok\ntest_source_gate (__main__.SafetyChecks.test_source_gate) ... ok\ntest_source_path_traversal_refused (__main__.SafetyChecks.test_source_path_traversal_refused) ... ok\ntest_unknown_material_parameter_refused (__main__.SafetyChecks.test_unknown_material_parameter_refused) ... ok\ntest_unregistered_disk_content_refused (__main__.SafetyChecks.test_unregistered_disk_content_refused) ... ok\ntest_unverified_material_example_refused (__main__.SafetyChecks.test_unverified_material_example_refused) ... ok\ntest_wrong_active_editor_project_refused (__main__.SafetyChecks.test_wrong_active_editor_project_refused) ... ok\ntest_wrong_checkout_refused (__main__.SafetyChecks.test_wrong_checkout_refused) ... ok\ntest_wrong_engine_patch_refused (__main__.SafetyChecks.test_wrong_engine_patch_refused) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.144s\n\nOK\n",
+  "python_syntax_passed": [
+    "fbx_inspect.py",
+    "import_relics.py",
+    "validate_offline.py"
+  ],
+  "source_validation": {
+    "mode": "read_only_dry_run",
+    "project_root": "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game",
+    "assets": [
+      {
+        "name": "SM_Relic_GoldIdol",
+        "source_sha256": "00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b",
+        "hydrated": true,
+        "source_reported_dimensions_cm": [
+          22.1418,
+          22.7571,
+          25.0
+        ],
+        "triangles": 9406,
+        "material_slots": [
+          "M_Gold",
+          "M_Jade"
+        ],
+        "collision": {
+          "automatic": "box",
+          "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+          "engine_acceptance_pending": true
+        },
+        "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol"
+      },
+      {
+        "name": "SM_Relic_JadeMask",
+        "source_sha256": "f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703",
+        "hydrated": true,
+        "source_reported_dimensions_cm": [
+          9.8168,
+          17.7345,
+          22.0
+        ],
+        "triangles": 8224,
+        "material_slots": [
+          "M_Jade",
+          "M_Gold"
+        ],
+        "collision": {
+          "automatic": "box",
+          "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+          "engine_acceptance_pending": true
+        },
+        "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask"
+      },
+      {
+        "name": "SM_Relic_GemScarab",
+        "source_sha256": "c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8",
+        "hydrated": true,
+        "source_reported_dimensions_cm": [
+          18.0,
+          16.3004,
+          7.0937
+        ],
+        "triangles": 8148,
+        "material_slots": [
+          "M_Gold",
+          "M_Jade"
+        ],
+        "collision": {
+          "automatic": "box",
+          "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+          "engine_acceptance_pending": true
+        },
+        "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab"
+      },
+      {
+        "name": "SM_KeyRelic_StoneHeart",
+        "source_sha256": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda",
+        "hydrated": true,
+        "source_reported_dimensions_cm": [
+          39.2349,
+          74.0457,
+          62.0
+        ],
+        "triangles": 9866,
+        "material_slots": [
+          "M_Stone",
+          "M_Gold",
+          "M_Jade",
+          "M_Rope"
+        ],
+        "collision": {
+          "automatic": "none",
+          "plan": "Manually add and fit one box around stone only in Static Mesh Editor, excluding rope loops; approximately 39 cm depth, 55 cm stone width, 62 cm height. Bounds are a guide, not a measured stone-only hull.",
+          "engine_acceptance_pending": true
+        },
+        "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart"
+      }
+    ],
+    "proposed_material_destinations": [
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan"
+    ],
+    "writes_performed": false,
+    "unreal_imports_tested": false,
+    "pending": [
+      "UE 5.8.3 editor preflight and execution",
+      "Verified M_Stylized parameter bindings including idol emission",
+      "Heart stone-only collision fitting",
+      "Style, platform and gameplay acceptance"
+    ]
+  },
+  "lfs_hydration": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda * SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx\nc95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8 * SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx\n00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b * SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx\nf3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703 * SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+  "working_tree_scope_check": "Only Tools/unreal/hc_a1_import/ is changed",
+  "default_dry_run_no_tooling_file_changes": true,
+  "tooling_hashes": {
+    "fbx_inspect.py": "63eef57729ad5a9225adaaaddb661dda8945492a4e8f4b93e83755920ce644fc",
+    "import_relics.py": "f6ea58d2eb4bcbf6e15b1c9d7150ca4f87c2f691b79c433b2770058383339c98",
+    "manifest.json": "09970199b5ac0741cf5a74eb6b6f5af06176e536b68a319d5aa3ebc6a0520d05",
+    "material_bindings.example.json": "956fe67f2f0d647cde964e24da006caadadc356a5d6a377035a3372e45bf4d9f",
+    "README.md": "11a79ae9435236dc11f9720c7f48476d9285eb9e7b20067696f1ab0a91f301f2",
+    "validate_offline.py": "6231e6ca95c27cd323137365af58f08b5db65e13f043e1448f7393b8d0372c7f"
+  },
+  "editor_launched_or_controlled": false,
+  "engine_import_tested": false,
+  "gameplay_tested": false,
+  "mock_tests_note": "Editor refusal cases use a fake API only; these are not Unreal validation.",
+  "installed_api_reference": {
+    "engine": "5.8.3",
+    "changelist": 58210709,
+    "headers_read": [
+      "Engine/Build/Build.version",
+      "AssetImportTask.h",
+      "FbxStaticMeshImportData.h",
+      "FbxMeshImportData.h",
+      "StaticMesh.h",
+      "MaterialEditingLibrary.h",
+      "StaticMeshEditorSubsystem.h",
+      "UnrealEditorSubsystem.h"
+    ]
+  }
+}

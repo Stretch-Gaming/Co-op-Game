@@ -1,0 +1,107 @@
+{
+  "mode": "read_only_dry_run",
+  "project_root": "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game",
+  "assets": [
+    {
+      "name": "SM_Relic_GoldIdol",
+      "source_sha256": "00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b",
+      "hydrated": true,
+      "source_reported_dimensions_cm": [
+        22.1418,
+        22.7571,
+        25.0
+      ],
+      "triangles": 9406,
+      "material_slots": [
+        "M_Gold",
+        "M_Jade"
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol"
+    },
+    {
+      "name": "SM_Relic_JadeMask",
+      "source_sha256": "f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703",
+      "hydrated": true,
+      "source_reported_dimensions_cm": [
+        9.8168,
+        17.7345,
+        22.0
+      ],
+      "triangles": 8224,
+      "material_slots": [
+        "M_Jade",
+        "M_Gold"
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask"
+    },
+    {
+      "name": "SM_Relic_GemScarab",
+      "source_sha256": "c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8",
+      "hydrated": true,
+      "source_reported_dimensions_cm": [
+        18.0,
+        16.3004,
+        7.0937
+      ],
+      "triangles": 8148,
+      "material_slots": [
+        "M_Gold",
+        "M_Jade"
+      ],
+      "collision": {
+        "automatic": "box",
+        "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
+        "engine_acceptance_pending": true
+      },
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab"
+    },
+    {
+      "name": "SM_KeyRelic_StoneHeart",
+      "source_sha256": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda",
+      "hydrated": true,
+      "source_reported_dimensions_cm": [
+        39.2349,
+        74.0457,
+        62.0
+      ],
+      "triangles": 9866,
+      "material_slots": [
+        "M_Stone",
+        "M_Gold",
+        "M_Jade",
+        "M_Rope"
+      ],
+      "collision": {
+        "automatic": "none",
+        "plan": "Manually add and fit one box around stone only in Static Mesh Editor, excluding rope loops; approximately 39 cm depth, 55 cm stone width, 62 cm height. Bounds are a guide, not a measured stone-only hull.",
+        "engine_acceptance_pending": true
+      },
+      "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart"
+    }
+  ],
+  "proposed_material_destinations": [
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan"
+  ],
+  "writes_performed": false,
+  "unreal_imports_tested": false,
+  "pending": [
+    "UE 5.8.3 editor preflight and execution",
+    "Verified M_Stylized parameter bindings including idol emission",
+    "Heart stone-only collision fitting",
+    "Style, platform and gameplay acceptance"
+  ]
+}

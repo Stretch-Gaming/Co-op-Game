@@ -1,0 +1,86 @@
+{
+  "verified_in_ue_5_8_3": false,
+  "profiles": {
+    "gold": {
+      "scalars": {
+        "RoughnessMultiplier": 0.3,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 1.0
+      },
+      "vectors": {
+        "Tint": [
+          0.8069522576692516,
+          0.45078578283822346,
+          0.042311410620809675,
+          1.0
+        ]
+      }
+    },
+    "jade": {
+      "scalars": {
+        "RoughnessMultiplier": 0.25,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.04970656598412723,
+          0.38132601143253014,
+          0.16826940018969075,
+          1.0
+        ]
+      }
+    },
+    "idol_jade": {
+      "scalars": {
+        "RoughnessMultiplier": 0.25,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.04970656598412723,
+          0.38132601143253014,
+          0.16826940018969075,
+          1.0
+        ],
+        "EmissiveColor": [
+          0.02982393959047634,
+          0.22879560685951808,
+          0.10096164011381445,
+          1.0
+        ]
+      }
+    },
+    "stone": {
+      "scalars": {
+        "RoughnessMultiplier": 0.85,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.1946178304415758,
+          0.1559264637078274,
+          0.13843161503245183,
+          1.0
+        ]
+      }
+    },
+    "rope": {
+      "scalars": {
+        "RoughnessMultiplier": 0.9,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.39157247774972326,
+          0.23074004852434915,
+          0.0953074666309647,
+          1.0
+        ]
+      }
+    }
+  }
+}
