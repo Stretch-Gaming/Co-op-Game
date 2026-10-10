@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A2/SM_ChamberGate_Leaf.glb",
+  "output": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 2222,
+  "triangles_after": 2222,
+  "dimensions_cm": [
+    30.4,
+    430.0,
+    450.0
+  ],
+  "bounds_min_cm": [
+    -15.2,
+    -215.00001,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

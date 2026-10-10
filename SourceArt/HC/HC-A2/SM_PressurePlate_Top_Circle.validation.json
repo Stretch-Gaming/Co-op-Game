@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A2/SM_PressurePlate_Top_Circle.glb",
+  "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1690,
+  "triangles_after": 1690,
+  "dimensions_cm": [
+    179.9265,
+    179.9107,
+    14.6637
+  ],
+  "bounds_min_cm": [
+    -89.96325,
+    -89.95535,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

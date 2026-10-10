@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A2/SM_PressurePlate_Top_Cross.glb",
+  "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1006,
+  "triangles_after": 1006,
+  "dimensions_cm": [
+    179.8039,
+    179.9362,
+    15.2284
+  ],
+  "bounds_min_cm": [
+    -89.90194,
+    -89.9681,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
