@@ -21,8 +21,6 @@ class UPostProcessComponent;
 
 namespace CoopMaze { struct FLevel; }
 
-namespace CoopMaze { struct FLevel; }
-
 /** A spot in the play area you can jump straight to (D-pad left/right, or number keys 1-9). */
 struct FCoopStation
 {
