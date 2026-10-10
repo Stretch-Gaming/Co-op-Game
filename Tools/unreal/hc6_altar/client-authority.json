@@ -1,0 +1,18 @@
+[
+  {
+    "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+    "direct_client_accept_and_reset_rejected": true
+  },
+  {
+    "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+    "direct_client_accept_and_reset_rejected": true
+  },
+  {
+    "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar",
+    "direct_client_accept_and_reset_rejected": true
+  },
+  {
+    "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_4_L_HC6_Altar.L_HC6_Altar",
+    "direct_client_accept_and_reset_rejected": true
+  }
+]

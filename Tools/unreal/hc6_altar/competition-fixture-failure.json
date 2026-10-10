@@ -1,0 +1,968 @@
+{
+  "clients": 2,
+  "passed": false,
+  "input_path": "native IA_Interact/IA_Drop -> production RPC -> BPI_Interactable",
+  "checks": [
+    "wrong round rejects",
+    "empty hands rejects",
+    "native heavy pickup Wrong",
+    "wrong heavy statue rejects",
+    "native heavy pickup KeyA",
+    "replicated placement and exactly once clear 1",
+    "server and owning peers clear slot and restore heavy speed",
+    "replicated placement and exactly once clear 1",
+    "existing BPI_RoundReset resets altar and key; order idempotent",
+    "native heavy pickup KeyA"
+  ],
+  "snapshots": {
+    "wrong round rejects": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=1,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=1,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=1,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9274C0B0) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      }
+    ],
+    "empty hands rejects": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018C9269FC10) {x: -1.968971, y: 701.078712, z: 25.000015}>"
+          }
+        ]
+      }
+    ],
+    "wrong heavy statue rejects": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Statue_C_0' (0x0000018CD667D800) Class 'BP_Statue_C'>"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C799D3200) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C799D3200) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: 490.000000, y: 0.000000, z: 107.000000}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Statue_C_0' (0x0000018D21311200) Class 'BP_Statue_C'>"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7ED3BE00) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7ED3BE00) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: 490.000000, y: 0.000000, z: 107.000000}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Statue_C_0' (0x0000018D21318A00) Class 'BP_Statue_C'>"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: -299.831708, z: 25.000009}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C79323C00) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C79323C00) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CA1D93760) {x: 490.000000, y: 0.000000, z: -4143.883353}>"
+          }
+        ]
+      }
+    ],
+    "placed1": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator2,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": true,
+        "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018CD6674E00) Class 'BP_KeyRelic_C'>",
+        "clear_calls": 1,
+        "accept_count": 1,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 2,
+            "carrier": "None",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C78F18200) Class 'BP_Altar_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: 600.000000, y: 0.000000, z: 100.305000}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -1.825944, y: 1101.003738, z: 25.000002}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator2,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": true,
+        "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21318400) Class 'BP_KeyRelic_C'>",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 2,
+            "carrier": "None",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C7DB4EB00) Class 'BP_Altar_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: 600.000000, y: 0.000000, z: 100.305000}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -1.825944, y: 1101.003738, z: 25.000002}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator2,Attempt_12_246832B34F4E147660E8729696BDD44A=1,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": true,
+        "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21317E00) Class 'BP_KeyRelic_C'>",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 2,
+            "carrier": "None",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C95251400) Class 'BP_Altar_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: 600.000000, y: 0.000000, z: 100.305000}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.348326, y: 300.168292, z: 25.000009}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -1.825944, y: 1101.003738, z: 25.000002}>"
+          }
+        ]
+      }
+    ],
+    "reset": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 1,
+        "accept_count": 1,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: -299.753180, z: 25.000011}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: -299.753180, z: 25.000011}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: -299.753180, z: 25.000011}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      }
+    ],
+    "final": [
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+        "server": true,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 1,
+        "accept_count": 1,
+        "players": [
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018CD6674E00) Class 'BP_KeyRelic_C'>"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C799D3200) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C799D3200) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -110.404462, y: -299.753180, z: 107.000000}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21318400) Class 'BP_KeyRelic_C'>"
+          },
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7ED3BE00) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7ED3BE00) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -110.404462, y: -299.753180, z: 107.000000}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+        "server": false,
+        "round": "(Index_11_91104438409472A6DD374BADC8DC29B1=2,Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF=NewEnumerator1,Attempt_12_246832B34F4E147660E8729696BDD44A=2,PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350=0.000000,ScalingRow_14_43C74C304230A92B6620E1A520A230C0=\"2\")",
+        "completed": false,
+        "placed": "None",
+        "clear_calls": 0,
+        "accept_count": 0,
+        "players": [
+          {
+            "id": 259,
+            "speed": 600.0,
+            "crouch": 300.0,
+            "carried": "None"
+          },
+          {
+            "id": 258,
+            "speed": 300.0,
+            "crouch": 150.0,
+            "carried": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21317E00) Class 'BP_KeyRelic_C'>"
+          }
+        ],
+        "items": [
+          {
+            "tag": "KeyA",
+            "state": 1,
+            "carrier": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C79323C00) Class 'BP_CoopCharacter_C'>",
+            "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C79323C00) Class 'BP_CoopCharacter_C'>",
+            "physics": false,
+            "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -110.400000, y: -299.750000, z: -19586.009986}>"
+          },
+          {
+            "tag": "KeyB",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.404462, y: 300.246820, z: 25.000011}>"
+          },
+          {
+            "tag": "Wrong",
+            "state": 0,
+            "carrier": "None",
+            "parent": "None",
+            "physics": true,
+            "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+            "location": "<Struct 'Vector' (0x0000018CD7155690) {x: -0.863127, y: 700.736291, z: 25.000001}>"
+          }
+        ]
+      }
+    ]
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\Tools\\unreal\\hc6_altar\\test_clients.py\", line 97, in tick\n    fn,delay=steps[state['stage']];fn();state['stage']+=1;state['at']=now+delay\n                                   ^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\Tools\\unreal\\hc6_altar\\test_clients.py\", line 83, in <lambda>\n    add(lambda:focus('KeyA',0));add(lambda:pulse(0));add(lambda:state.update(held=[]) or inject(0,'IA_Interact',0));add(lambda:check_held('KeyA',0));add(lambda:focus('KeyB',1));add(lambda:pulse(1));add(lambda:state.update(held=[]) or inject(1,'IA_Interact',0));add(lambda:check_held('KeyB',1));add(lambda:focus('Altar',0));add(lambda:focus('Altar',1));add(lambda:state.update(held=[(0,'IA_Interact'),(1,'IA_Interact')],frames=0));add(lambda:state.update(held=[]) or (inject(0,'IA_Interact',0),inject(1,'IA_Interact',0)));add(lambda:check_placed(2))\n                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\Tools\\unreal\\hc6_altar\\test_clients.py\", line 43, in check_held\n    assert a.get_editor_property('CarryState')==1,(t,w,a.get_editor_property('CarryState'))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('KeyB', <Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar' (0x0000018CD6766200) Class 'World'>, 0)\n"
+}

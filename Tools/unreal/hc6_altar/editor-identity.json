@@ -1,0 +1,7 @@
+{
+  "port": 8042,
+  "process_id": 37752,
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\CoopGame.uproject",
+  "baseline": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "command_line": "\"C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe\" \"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game/CoopGame.uproject\" -ExecutePythonScript=\"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\Tools\\unreal\\hc6_altar/editor_loop.py\" -ModelContextProtocolStartServer -ModelContextProtocolPort=8042 -nosplash -nop4 -NoRestoreOpenAssetTabs -ini:EditorPerProjectUserSettings:[/Script/ModelContextProtocolEngine.ModelContextProtocolSettings]:bAutoStartServer=False -abslog=\"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game/Saved/Logs/HC6Altar.log\""
+}

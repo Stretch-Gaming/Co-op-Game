@@ -1,0 +1,5 @@
+__pycache__/
+request.json
+response.json
+*.tmp
+mcp_session.txt

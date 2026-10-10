@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Content/Puzzles/BP_Carryable.uasset",
+    "baseline_oid": "15ba9f8524b61e7f9dcf53b46522496885b3c599b0cd907be594b20d5be89d93",
+    "actual_sha256": "15ba9f8524b61e7f9dcf53b46522496885b3c599b0cd907be594b20d5be89d93",
+    "unchanged": true
+  },
+  {
+    "path": "Content/Puzzles/BP_KeyRelic.uasset",
+    "baseline_oid": "53489542110d519a77bf02a59e530d2762651c3c6e0f8a7b94aeb5245ee30b07",
+    "actual_sha256": "53489542110d519a77bf02a59e530d2762651c3c6e0f8a7b94aeb5245ee30b07",
+    "unchanged": true
+  },
+  {
+    "path": "Content/Puzzles/Carrying/AC_Carrying.uasset",
+    "baseline_oid": "cf36d308b8ef2405ce873ebd673ef9746ab7e73e7048b201cf150b0c2ac2a848",
+    "actual_sha256": "cf36d308b8ef2405ce873ebd673ef9746ab7e73e7048b201cf150b0c2ac2a848",
+    "unchanged": true
+  },
+  {
+    "path": "Content/Core/BP_CoopCharacter.uasset",
+    "baseline_oid": "5c03b05a5074841aece7c69b5435d8ac7863e50c29e75bd042d9b2b2c9163f94",
+    "actual_sha256": "5c03b05a5074841aece7c69b5435d8ac7863e50c29e75bd042d9b2b2c9163f94",
+    "unchanged": true
+  },
+  {
+    "path": "Content/Core/BP_CoopGameMode.uasset",
+    "baseline_oid": "33eace87e28cb9e2481aa16989c1aa2455b1a8e24ddbf7105d10a6930ea4a07b",
+    "actual_sha256": "33eace87e28cb9e2481aa16989c1aa2455b1a8e24ddbf7105d10a6930ea4a07b",
+    "unchanged": true
+  },
+  {
+    "path": "Content/Maps/L_Site01.umap",
+    "baseline_oid": "bb8f27999c77083bdbde21e059d22b6d8e694e5a72d9485f87bc10b18f21ba3f",
+    "actual_sha256": "bb8f27999c77083bdbde21e059d22b6d8e694e5a72d9485f87bc10b18f21ba3f",
+    "unchanged": true
+  }
+]

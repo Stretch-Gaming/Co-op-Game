@@ -1,0 +1,33 @@
+{
+  "variables": "[\"Prompt\", \"HoldSeconds\", \"InteractionEnabled\", \"InstantCount\", \"BeginCount\", \"EndCount\", \"ActiveUsers\", \"Mode\", \"Carrier\", \"CarryState\", \"Heavy\", \"InitialTransform\", \"CarrierComponent\", \"DropDirection\"]",
+  "methods": [
+    "_is_dispatcher_graph",
+    "_make_variable_type",
+    "add_function_graph",
+    "add_object_variable",
+    "add_struct_variable",
+    "add_variable",
+    "get_connected_subgraph",
+    "get_graph",
+    "get_graph_dsl_docs",
+    "get_variable_category",
+    "get_variable_replication",
+    "list_graphs",
+    "list_variables",
+    "read_graph_dsl",
+    "remove_function_graph",
+    "remove_variable",
+    "set_variable_category",
+    "set_variable_instance_editable",
+    "set_variable_replication",
+    "write_graph_dsl"
+  ],
+  "RoundState": "[\"Utilities|Struct|BreakSRoundState\", \"Utilities|Struct|MakeSRoundState\", \"Utilities|Struct|SetmembersinSRoundState\", \"Default|BindEventtoOnRoundStateChanged\", \"Default|AssignOnRoundStateChanged\", \"Default|CallOnRoundStateChanged\", \"Default|UnbindEventfromOnRoundStateChanged\", \"Default|UnbindallEventsfromOnRoundStateChanged\", \"Class|BPCoopGameState|GetRoundState\", \"Class|BPCoopGameState|SetRoundState\"]",
+  "BreakS_RoundState": "[]",
+  "ResetForRound": "[\"AddEvent|EventResetForRound\", \"Class|BPGauntletGate|ResetforRound\", \"Class|BPLever|ResetforRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPCarryable|ResetforRound\", \"CallFunction|ResetforRound\"]",
+  "AttachActorToComponent": "[\"Transformation|AttachActorToComponent\"]",
+  "SetActorRelativeTransform": "[\"Transformation|SetActorRelativeTransform\"]",
+  "GetCarried": "[\"Class|ACCarrying|GetCarried\", \"Class|ACCarrying|GetCarriedItem\", \"Class|BPCoopCharacter|GetCarried\"]",
+  "ReleaseCarried": "[\"Class|ACCarrying|ReleaseCarried\", \"Class|BPCoopCharacter|ReleaseCarried\", \"Class|BPCarryable|ReleaseCarried\", \"CallFunction|ReleaseCarried\"]",
+  "ClearRound": "[\"Class|BPCoopGameMode|ClearRound\", \"Class|BPCoopPlayerController|HostClearRound\"]"
+}
