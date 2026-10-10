@@ -289,6 +289,7 @@ private:
 	bool bMazeDetail = true;               // coop.Maze.Detail, read when play starts
 	TArray<FVector> MazeWallMarkers;       // where the maze's crystal markers stand, so the detail pass keeps clear of them
 	TArray<FIntVector> MazeMomentTiles;    // (Col, Row, Path) of the co-op moments' tiles, which the detail pass leaves bare
+	TArray<FVector> MazeStatueSpots;       // (X, Y, radius) of HC's statues in the halls, which the detail pass keeps clear of
 	TArray<FCoopStation> Stations;
 	TArray<FBox2D> KeepClearBoxes;
 	int32 LastShadowMode = -1;

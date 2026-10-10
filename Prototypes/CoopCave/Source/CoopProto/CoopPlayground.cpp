@@ -2037,8 +2037,6 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		const FVector2D Middle2D(Middle);
 		const float Z = Room.Z * 100.f;
 		const float Ceiling = Z + RoomHeadroom;
-		const bool bHall = (Id == HallA || Id == HallB);
-		const int32 MidCol = (Room.C0 + Room.C1) / 2;
 		auto InRoom = [&Room](const FIntPoint& T) { return T.X >= Room.C0 && T.X <= Room.C1 && T.Y >= Room.R0 && T.Y <= Room.R1; };
 		auto RoomLevel = [&Cells, RoomIndex](const FIntPoint& T) -> const FLevel*
 		{
@@ -2094,10 +2092,17 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 				}
 			}
 		}
-		// Statues stand in the halls' corners and against the middle of their north and south walls (the style pass)
-		auto StatueTile = [&](const FIntPoint& T)
+		// HC's statues, against the halls' west and east walls (MazeStatueSpots: X, Y and radius)
+		auto NearStatue = [this](const FVector2D& P, float Radius)
 		{
-			return bHall && (T.Y == Room.R0 || T.Y == Room.R1) && (T.X == Room.C0 || T.X == Room.C1 || T.X == MidCol);
+			for (const FVector& S : MazeStatueSpots)
+			{
+				if (FVector2D::Distance(P, FVector2D(S.X, S.Y)) < S.Z + Radius)
+				{
+					return true;
+				}
+			}
+			return false;
 		};
 		auto Blocked = [&](const FVector2D& P, float Radius)
 		{
@@ -2115,8 +2120,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 					return true;
 				}
 			}
-			const FIntPoint T(FMath::RoundToInt(P.X / Tile) + OriginCol, OriginRow - FMath::RoundToInt(P.Y / Tile));
-			return NearStation(P, Z, Radius) || StatueTile(T) || (Id == Goal && FVector2D::Distance(P, Middle2D) < AltarClear + Radius)
+			return NearStation(P, Z, Radius) || NearStatue(P, Radius + 40.f) || (Id == Goal && FVector2D::Distance(P, Middle2D) < AltarClear + Radius)
 				|| NearFixture(FVector(P, Z + 150.f), 150.f + Radius);
 		};
 
@@ -2144,7 +2148,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 					{
 						FloorStone(E.At(Rand.FRandRange(120.f, 180.f), Rand.FRandRange(-180.f, 180.f)), T, *L, Rand.FRandRange(70.f, 140.f));
 					}
-					if (StatueTile(T) || NearFixture(FVector(E.At(WallFace, 0.f), Z + 150.f), 330.f))
+					if (NearStatue(E.At(WallFace, 0.f), 330.f) || NearFixture(FVector(E.At(WallFace, 0.f), Z + 150.f), 330.f))
 					{
 						continue;   // kept low: only pebbles and stones
 					}
@@ -2986,6 +2990,27 @@ void ACoopPlayground::BuildMaze()
 		RelicLight->RegisterComponent();
 	}
 
+	// HC's statues in both halls, the big one on the west wall and the small one on the east, each beside a wall torch
+	// so it's lit. Those walls lie between path mouths, and the statue stands well inside its tile, clear of them.
+	// They go in before the detail pass, which keeps its rocks clear of them (MazeStatueSpots).
+	constexpr float StatueBesideTorch = 130.f;   // along the wall from the torch
+	for (const TPair<FIntPoint, FIntPoint>& Torch : HallSideTorches)
+	{
+		UStaticMesh* Statue = (Torch.Value.X < 0) ? RepoStatueMesh : RepoStatueSmallMesh;
+		const ERoom Hall = (Torch.Key.Y >= Rooms[HallA].R0) ? HallA : HallB;
+		const FLevel* Level = FindLevel(Torch.Key, RoomOwner + Hall);
+		if (!Statue || !Level)
+		{
+			continue;
+		}
+		const FVector Out = WorldDir(Torch.Value);
+		const FVector Along(-Out.Y, Out.X, 0.f);
+		const FVector Extent = Statue->GetBounds().BoxExtent;
+		const FVector At = FVector(TileCenter(Torch.Key), Level->Z) + Out * (Tile * 0.5f - FMath::Max(Extent.X, Extent.Y) - 40.f) + Along * StatueBesideTorch;
+		AddRepoProp(Statue, At, (-Out).Rotation().Yaw, true);
+		MazeStatueSpots.Emplace(At.X, At.Y, FMath::Max(Extent.X, Extent.Y));
+	}
+
 	// 7b. The detail pass: rocks, rubble, timber and crystals that break up the tunnels and rooms (coop.Maze.Detail)
 	BuildMazeDetail(Cells, Glow);
 
@@ -3008,25 +3033,6 @@ void ACoopPlayground::BuildMaze()
 				break;
 			}
 		}
-	}
-
-	// HC's statues in both halls, the big one on the west wall and the small one on the east, each beside a wall torch
-	// so it's lit. Those walls lie between path mouths, and the statue stands well inside its tile, clear of them.
-	constexpr float StatueBesideTorch = 130.f;   // along the wall from the torch
-	for (const TPair<FIntPoint, FIntPoint>& Torch : HallSideTorches)
-	{
-		UStaticMesh* Statue = (Torch.Value.X < 0) ? RepoStatueMesh : RepoStatueSmallMesh;
-		const ERoom Hall = (Torch.Key.Y >= Rooms[HallA].R0) ? HallA : HallB;
-		const FLevel* Level = FindLevel(Torch.Key, RoomOwner + Hall);
-		if (!Statue || !Level)
-		{
-			continue;
-		}
-		const FVector Out = WorldDir(Torch.Value);
-		const FVector Along(-Out.Y, Out.X, 0.f);
-		const FVector Extent = Statue->GetBounds().BoxExtent;
-		const FVector At = FVector(TileCenter(Torch.Key), Level->Z) + Out * (Tile * 0.5f - FMath::Max(Extent.X, Extent.Y) - 40.f) + Along * StatueBesideTorch;
-		AddRepoProp(Statue, At, (-Out).Rotation().Yaw, true);
 	}
 
 	// 8. Repo rocks as instanced meshes (one draw each): walls and ceiling, plus one pair per door step,
