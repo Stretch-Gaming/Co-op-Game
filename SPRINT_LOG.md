@@ -9,7 +9,7 @@ Copy the template for each sprint. Newest sprint at the top. The plan is in [doc
 | Person | Phase | Doing | Locks |
 | --- | --- | --- | --- |
 | Stretch (HC) | HC-0 (#6) | Published the cave foundation as `1be227b`, including current team documents. Local tests passed; preparing the cross-machine host. | All bootstrap/integration locks released after the verified push. |
-| PK (VG) | VG-0 | Pulled HC's preparation through `e664177`; checked project and MCP availability; recorded the blocked smoke test in `docs/mcp.md`. Preflight gate skipped at PK's request. | None; no Unreal assets edited. |
+| PK (PG) | PG-0 (#22), PG-A0 (#34) | Installed Unreal 5.8.3 on Mac 1 (preflight passes) and opened HC's project. Ran the MCP smoke test (`6d24645`, results in `docs/mcp.md`). Built the shared style kit in `Content/Shared/Style/` (`8c63860`, `d921d5d`) and committed the style frames in `SourceArt/PG/PG-A0/`. Joining the Windows host for Playable 1 is still to do. | Locked `Content/Shared/Style/` for the style kit; released after the push. |
 | Ak47 (HZ) | HZ-0 | Not confirmed in this chat. | Not confirmed. |
 
 **Merged commit:** This HC-0 alignment integrates the team plan through `f1011f9` and the locally saved foundation `9c534c7`. Earlier Mac setup notes are retained below. Starting checkout: `cffd7e1`.
