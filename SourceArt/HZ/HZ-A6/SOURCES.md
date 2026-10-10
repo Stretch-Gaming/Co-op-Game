@@ -25,8 +25,6 @@ URL pattern: `https://raw.githubusercontent.com/kapishdima/soundcn/7cbfbb3f56e85
 | `kenney_impact-sounds/impactWood_medium_003.ogg` | `impact-wood-medium-003` | Impact Sounds | CC0 | `635c37cfcd85` |
 | `kenney_rpg-audio/beltHandle2.ogg` | `belt-handle-2` | RPG Audio | CC0 | `f3b692d5c832` |
 | `kenney_rpg-audio/chop.ogg` | `chop` | RPG Audio | CC0 | `d00c2b3c9fff` |
-| `kenney_rpg-audio/creak1.ogg` | `creak-1` | RPG Audio | CC0 | `8a346186fd29` |
-| `kenney_rpg-audio/creak2.ogg` | `creak-2` | RPG Audio | CC0 | `8a990afdc03a` |
 | `kenney_rpg-audio/creak3.ogg` | `creak-3` | RPG Audio | CC0 | `f9638787f950` |
 | `kenney_rpg-audio/drawKnife2.ogg` | `draw-knife-2` | RPG Audio | CC0 | `d5df6a4130cb` |
 | `kenney_rpg-audio/drawKnife3.ogg` | `draw-knife-3` | RPG Audio | CC0 | `a11ae62fb1a6` |
@@ -54,7 +52,6 @@ Synthesized means built by `make_sounds.py` and `sfx_kit.py` with fixed seeds: o
 | `SFX_Dart_Impact_01` | `chop` | The chop, cut to 0.24 s, is the hit, with a synthesized 165 Hz shaft quiver. Small room. |
 | `SFX_Dart_Impact_02` | `impactPlank_medium_001` | The plank hit, cut to 0.35 s, with a synthesized 215 Hz quiver. Small room. |
 | `SFX_Dart_Impact_03` | `impactMining_002`, `impactMetal_medium_004`, `impactWood_medium_003` | A ricochet off stone: the mining hit (low-passed at 3 kHz, cut to 0.25 s), a small metal ting about 6 dB down, and the wood hit sped up 1.5x as two lighter bounces at 0.11 s and 0.19 s. Small room. |
-| `SFX_SwingLog_Creak_01`–`03` | `creak1`, `creak2`, `creak3` | Each creak slowed (0.82x, 0.82x, 0.75x) so it sounds heavier, with a 260 Hz body resonance added. Small room. |
 | `SFX_SwingLog_Whoosh` | `knifeSlice` | The slice, slowed to 0.4x, shaped by a bell envelope and low-passed at 2.5 kHz, over a synthesized low band-pass sweep (180–630 Hz) and a 55 Hz sub swell. |
 
 Every Kenney input is decoded with ffmpeg, resampled to 48 kHz with scipy's polyphase filter and folded from stereo to mono. Every one-shot then gets a 30 Hz high-pass (300 Hz for the drips), raised-cosine fades at both ends and a trim of the silent tail. The loops have no fades; their low cut is applied in the FFT domain so it stays circular. Every output is peak-normalized to -3 dBFS and written as 16-bit PCM with seeded TPDF dither.

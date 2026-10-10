@@ -14,7 +14,6 @@ Raw sounds for [#57](https://github.com/StretchGaming/Co-op-Game/issues/57), use
 | `SFX_DartLauncher_Fire_01`–`02.wav` | 1 | 0.47–0.48 s | At each volley, from the launcher | Kenney + synthesis |
 | `SFX_Dart_Whoosh.wav` | 1 | 0.46 s | On each dart in flight | Kenney + synthesis |
 | `SFX_Dart_Impact_01`–`03.wav` | 1 | 0.54–0.66 s | Where a dart lands (01–02 stick and quiver, 03 bounces off stone) | Kenney + synthesis |
-| `SFX_SwingLog_Creak_01`–`03.wav` | 1 | 0.69–1.15 s | At each end of the swing | Kenney |
 | `SFX_SwingLog_Whoosh.wav` | 1 | 1.21 s | Through the bottom of each swing | Kenney + synthesis |
 
 Every file is a 48 kHz, 16-bit PCM WAV, peak-normalized to -3 dBFS with no clipping. Only the ambience is stereo. The one-shots start and end on silence. The two loops are built circularly (FFT filtering, wrapped events and a wrapped reverb), so the last sample runs into the first like any other pair of samples.
@@ -39,6 +38,8 @@ python3 -I SourceArt/HZ/HZ-A6/validate_sounds.py    # writes the validation JSON
 
 Pass a folder to either script to write somewhere else, for example `/tmp/HZ-A6`. Every random choice uses a fixed seed, so two runs on the same machine produce byte-identical WAVs (checked with sha256). A different numpy, scipy or ffmpeg build can change the last bit of some samples, and then the hashes won't match, but the sounds will be the same.
 
+Each sound has its own fixed dither seed in `SOUNDS`, so adding or removing a sound doesn't change the bytes of the others. The swinging log's creaks were dropped after a listen, which is why the dither seeds skip from 9014 to 9018.
+
 The levels and timings are constants in `make_sounds.py`, one function per sound. For example, the ambience's layer levels are the `k.db(...)` values in `cave_ambience()`, and the drip reverb is the `cave_ir(...)` call in `drip_variant()`.
 
 ## Files
@@ -46,5 +47,5 @@ The levels and timings are constants in `make_sounds.py`, one function per sound
 - `make_sounds.py`: builds every sound.
 - `sfx_kit.py`: shared DSP: filters, envelopes, modal hits, the cave reverb, circular helpers for the loops, the OGG loader and the WAV writer.
 - `validate_sounds.py`: the checks and previews.
-- `raw/`: the 18 Kenney OGGs the trap sounds use, unchanged from soundcn. See [SOURCES.md](SOURCES.md).
+- `raw/`: the 16 Kenney OGGs the trap sounds use, unchanged from soundcn. See [SOURCES.md](SOURCES.md).
 - `build.json`: each output's inputs and processing, written by `make_sounds.py`.

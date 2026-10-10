@@ -344,16 +344,6 @@ def dart_impact_stone():
 
 # ----------------------------------------------------------------------------- swinging log
 
-def log_creak(seed, src, ratio):
-    def build():
-        rng = np.random.default_rng(seed)
-        x = from_onset(k.repitch(k.load_raw(src), ratio), rel_db=-40)
-        x = unit(x + k.peak_filter(x, 260, 2.0, 1.5))
-        return finish(x, rng, room_rt60=0.6, wet_db=-16, fade_out=0.08), [src], \
-            f'{Path(src).stem} slowed to {ratio}x (lower, heavier) with a 260 Hz body resonance; small room.'
-    return build
-
-
 def log_whoosh():
     """A heavy low "whoom": knifeSlice slowed to 0.4x over a synthesized low band-pass sweep."""
     rng = np.random.default_rng(6071)
@@ -374,26 +364,26 @@ def log_whoosh():
 
 # ----------------------------------------------------------------------------- the list
 
+# name: (builder, dither seed). Each sound has its own fixed dither seed, so adding or
+# removing a sound never changes another sound's bytes.
 SOUNDS = {
-    'SFX_CaveAmbience_Loop': cave_ambience,
-    'SFX_TorchCrackle_Loop': torch_crackle,
-    'SFX_Drip_01': drip_variant(6011, 1050, 2.0, 0.035),
-    'SFX_Drip_02': drip_variant(6012, 780, 1.7, 0.045),
-    'SFX_Drip_03': drip_variant(6013, 1350, 2.3, 0.028, second=((0.11, 0.5), 950, 2.1, 0.03)),
-    'SFX_Spikes_Arm': spikes_arm,
-    'SFX_Spikes_Rise': spikes_rise,
-    'SFX_Spikes_Retract': spikes_retract,
-    'SFX_DartLauncher_Arm': dart_arm,
-    'SFX_DartLauncher_Fire_01': dart_fire(6032, 'kenney_impact-sounds/impactWood_medium_000.ogg', 0.04, 200),
-    'SFX_DartLauncher_Fire_02': dart_fire(6033, 'kenney_impact-sounds/impactWood_medium_003.ogg', 0.055, 170),
-    'SFX_Dart_Whoosh': dart_whoosh,
-    'SFX_Dart_Impact_01': dart_impact_wood(6051, 'kenney_rpg-audio/chop.ogg', 165, 0.22, 0.4, 0.24),
-    'SFX_Dart_Impact_02': dart_impact_wood(6052, 'kenney_impact-sounds/impactPlank_medium_001.ogg', 215, 0.16, 0.32, 0.35),
-    'SFX_Dart_Impact_03': dart_impact_stone,
-    'SFX_SwingLog_Creak_01': log_creak(6061, 'kenney_rpg-audio/creak1.ogg', 0.82),
-    'SFX_SwingLog_Creak_02': log_creak(6062, 'kenney_rpg-audio/creak2.ogg', 0.82),
-    'SFX_SwingLog_Creak_03': log_creak(6063, 'kenney_rpg-audio/creak3.ogg', 0.75),
-    'SFX_SwingLog_Whoosh': log_whoosh,
+    'SFX_CaveAmbience_Loop': (cave_ambience, 9000),
+    'SFX_TorchCrackle_Loop': (torch_crackle, 9001),
+    'SFX_Drip_01': (drip_variant(6011, 1050, 2.0, 0.035), 9002),
+    'SFX_Drip_02': (drip_variant(6012, 780, 1.7, 0.045), 9003),
+    'SFX_Drip_03': (drip_variant(6013, 1350, 2.3, 0.028, second=((0.11, 0.5), 950, 2.1, 0.03)), 9004),
+    'SFX_Spikes_Arm': (spikes_arm, 9005),
+    'SFX_Spikes_Rise': (spikes_rise, 9006),
+    'SFX_Spikes_Retract': (spikes_retract, 9007),
+    'SFX_DartLauncher_Arm': (dart_arm, 9008),
+    'SFX_DartLauncher_Fire_01': (dart_fire(6032, 'kenney_impact-sounds/impactWood_medium_000.ogg', 0.04, 200), 9009),
+    'SFX_DartLauncher_Fire_02': (dart_fire(6033, 'kenney_impact-sounds/impactWood_medium_003.ogg', 0.055, 170), 9010),
+    'SFX_Dart_Whoosh': (dart_whoosh, 9011),
+    'SFX_Dart_Impact_01': (dart_impact_wood(6051, 'kenney_rpg-audio/chop.ogg', 165, 0.22, 0.4, 0.24), 9012),
+    'SFX_Dart_Impact_02': (dart_impact_wood(6052, 'kenney_impact-sounds/impactPlank_medium_001.ogg',
+                                            215, 0.16, 0.32, 0.35), 9013),
+    'SFX_Dart_Impact_03': (dart_impact_stone, 9014),
+    'SFX_SwingLog_Whoosh': (log_whoosh, 9018),
 }
 
 
@@ -401,9 +391,9 @@ def main():
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else k.HERE
     out.mkdir(parents=True, exist_ok=True)
     build = {}
-    for i, (name, fn) in enumerate(SOUNDS.items()):
+    for name, (fn, dither_seed) in SOUNDS.items():
         x, inputs, notes = fn()
-        k.write_wav(out / f'{name}.wav', x, seed=9000 + i)
+        k.write_wav(out / f'{name}.wav', x, seed=dither_seed)
         build[name] = {'inputs': ['raw/' + p for p in inputs], 'processing': notes}
         print(f'{name:28s} {x.shape[0] / SR:6.3f} s  {"stereo" if x.ndim > 1 else "mono"}')
     (out / 'build.json').write_text(json.dumps(build, indent=2) + '\n')

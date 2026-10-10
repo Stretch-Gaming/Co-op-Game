@@ -86,24 +86,6 @@
     ],
     "processing": "impactMining_002 low-passed at 3 kHz and cut to 0.25 s; impactMetal_medium_004 at -6 dB; impactWood_medium_003 sped up 1.5x as two bounces at 0.11 s and 0.19 s; small room."
   },
-  "SFX_SwingLog_Creak_01": {
-    "inputs": [
-      "raw/kenney_rpg-audio/creak1.ogg"
-    ],
-    "processing": "creak1 slowed to 0.82x (lower, heavier) with a 260 Hz body resonance; small room."
-  },
-  "SFX_SwingLog_Creak_02": {
-    "inputs": [
-      "raw/kenney_rpg-audio/creak2.ogg"
-    ],
-    "processing": "creak2 slowed to 0.82x (lower, heavier) with a 260 Hz body resonance; small room."
-  },
-  "SFX_SwingLog_Creak_03": {
-    "inputs": [
-      "raw/kenney_rpg-audio/creak3.ogg"
-    ],
-    "processing": "creak3 slowed to 0.75x (lower, heavier) with a 260 Hz body resonance; small room."
-  },
   "SFX_SwingLog_Whoosh": {
     "inputs": [
       "raw/kenney_rpg-audio/knifeSlice.ogg"
