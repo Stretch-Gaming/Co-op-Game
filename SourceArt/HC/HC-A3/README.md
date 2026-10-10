@@ -42,8 +42,6 @@ Terms: [OpenAI Terms of Use, effective January 1, 2026](https://openai.com/polic
 
 The only image input was the project's existing OpenAI-generated style reference, whose provenance and permission to publish are recorded in `SourceArt/PG/PG-A0/README.md`. Reference SHA-256: `e1a33275dbc0f87fef385d4e9b0d753730752f9fab57ed299d17ef4bf5004914`. No game screenshots, third-party logos, stock art or external fonts were added. The preview reuses that same project reference and Pillow's bundled font.
 
-## Deferred import and acceptance
+## Engine integration
 
-Suggested destination: `Content/Puzzles/Art/UI/`, keeping the three production texture names. Use UI texture compression, sRGB, an alpha-aware UMG brush and clamp addressing as appropriate to the approved PG-A0 preset. Preserve the square canvas; do not stretch the border to fill an arbitrary rectangle. Nine-slice behavior has not been tested.
-
-Source-art delivery and offline readability review are complete. Unreal import, actual HUD widget integration, style-test review, client checks and in-game split-screen acceptance remain pending. Nothing in `Content/` was changed, and the Unreal editor was not used. Leave issue #20 open.
+The engine delivery is recorded in [integration/README.md](integration/README.md), including actual Unreal 5.8.3 imports under `Content/Puzzles/Art/HCA3_UI/`, owning-player HUD construction, runtime checks and screenshots. The original source-art gate in PR #68 did not use the editor; the follow-up integration gate does. The three production PNGs remain unchanged.

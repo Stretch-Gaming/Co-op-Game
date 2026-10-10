@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "map": "L_Site01",
+  "net_mode": "Play As Client",
+  "clients": 2,
+  "local_ownership": [
+    {
+      "pawn": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_23.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_23.WBP_InteractPrompt_C_0",
+      "owning_controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "net_mode": "PIE_Client"
+    },
+    {
+      "pawn": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_24.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_24.WBP_InteractPrompt_C_0",
+      "owning_controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "net_mode": "PIE_Client"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "map": "L_Site01",
+  "local_players": 2,
+  "distinct_round_huds": true,
+  "distinct_prompts": true,
+  "owning_controllers_correct": true,
+  "actual_totals": [
+    0,
+    0
+  ],
+  "independent_interactions": true
+}

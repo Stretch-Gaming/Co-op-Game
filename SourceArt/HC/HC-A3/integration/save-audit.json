@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "before": {
+    "dirty_maps": [],
+    "dirty_content": [
+      "/Game/Core/BP_CoopCharacter",
+      "/Game/Puzzles/UI/HCA3/AC_HCA3HUD",
+      "/Game/Puzzles/UI/WBP_InteractPrompt",
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD"
+    ]
+  },
+  "saved_only": [
+    "/Game/Core/BP_CoopCharacter",
+    "/Game/Puzzles/UI/HCA3/AC_HCA3HUD",
+    "/Game/Puzzles/UI/WBP_InteractPrompt",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD"
+  ],
+  "dirty_maps": [],
+  "dirty_content": []
+}

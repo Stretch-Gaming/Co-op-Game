@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "syntax": [
+    "build_component.py",
+    "build_hud.py",
+    "check_interaction_hud.py",
+    "execute_import.py",
+    "import_hud.py",
+    "integrate_hud.py",
+    "test_import_hud.py"
+  ],
+  "guards": [
+    {
+      "script": "build_component.py",
+      "correct_project_engine_accepted": true,
+      "wrong_project_rejected": true,
+      "wrong_engine_rejected": true
+    },
+    {
+      "script": "build_hud.py",
+      "correct_project_engine_accepted": true,
+      "wrong_project_rejected": true,
+      "wrong_engine_rejected": true
+    },
+    {
+      "script": "integrate_hud.py",
+      "correct_project_engine_accepted": true,
+      "wrong_project_rejected": true,
+      "wrong_engine_rejected": true
+    }
+  ]
+}
