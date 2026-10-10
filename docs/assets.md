@@ -10,6 +10,8 @@ Three rules keep assets from slowing the game down:
 
 ## Art direction
 
+The look is stylized and finished, in the spirit of Sea of Thieves, not realistic. The rules, the palette, the prompt suffix and the shared style kit are in [art/style.md](art/style.md). Read it before you generate anything.
+
 - **The cave (Map 1):** dark, damp rock. Warm pools of torchlight, cold glowing crystals, one shaft of daylight in the spawn cavern. The way forward is always the brightest thing in view.
 - **Relics:** gold, jade and gemstone, shiny enough to catch a headlamp from across a room.
 - **Ghosts:** pale and translucent, glowing faintly, fading at the edges.
@@ -27,7 +29,19 @@ PG-A0 picks the tools in Sprint 1, sets the import presets on both a Mac and Win
 
 Every tool must run outside the Unreal project, or support both Mac and Windows. Don't add a generator plugin to the project without checking with the team, because any plugin has to work on every machine.
 
-Chosen tools and import presets: _to be filled in by PG-A0._
+Chosen tools (PG-A0, Oct 9, 2026):
+
+| Use | Tool | Plan and license |
+| --- | --- | --- |
+| Irregular meshes: relics, ghost, rocks, crystals, bones, statues, torches, braziers | [Meshy](https://www.meshy.ai), image-to-3D from a style frame | Start on the Free plan. Its outputs are CC BY 4.0, which allows publishing here, but each one needs a line in `CREDITS.md`, and Meshy shows free outputs publicly. Whoever runs out of credits first moves to Pro ($20 a month), which makes outputs private and needs no credit. One account per person; don't share logins. |
+| Exact or moving parts: plates, gates, the altar's contact surface, trap parts, the zipline handle and anchors | [Blender](https://www.blender.org), modeled by hand or by script from the greybox's dimensions | Your own work. No credit needed. |
+| Style frames and concept images | One image model for the whole team; PK uses ChatGPT's image generation | Its terms give you the output. Record the model and prompt on the issue. |
+| Tileable textures | `M_Stylized`'s world-aligned mode with painted tileables from the image model | As above. |
+| Sound | Made yourself (recorded or synthesized), CC0 libraries, or a sound generator whose plan grants the rights | Check each source. |
+
+Not chosen: Tripo, because its own help page says free-plan outputs have no commercial rights, which conflicts with its blog; and local Hunyuan3D, which needs a strong NVIDIA GPU and has territory restrictions in its license.
+
+Import presets: _to be filled in by PG-A0 once the Unreal project exists._
 
 ## Licenses: this repo is public
 
@@ -54,7 +68,7 @@ Then:
 | Pivot | At the base, centered, unless the asset rotates around something else (a gate's hinge, a log's top). |
 | Static meshes | Nanite on above about 2k triangles for **opaque and masked** materials. **Nanite off for translucent materials**, such as the ghost and any translucent crystals; Nanite doesn't support them. Simple collision for anything players touch. Keep the triangle counts in your epic's spec. |
 | Textures | Base color in sRGB. Normal maps with Normalmap compression, in DirectX convention; if a generator exports OpenGL normals, turn on Flip Green Channel. One packed mask per material, with sRGB off: red for ambient occlusion, green for roughness, blue for metallic. 2K for large props and tileable surfaces, 1K for small props. |
-| Materials | Material instances of your lane's master material, not one-off materials from the import. |
+| Materials | Material instances of the shared `M_Stylized` in `Content/Shared/Style/`, not one-off materials from the import. Translucent or glowing materials can be lane master materials, but use the palette in [art/style.md](art/style.md#palette). |
 | Sound | WAV, 48 kHz. Mono for anything placed in the world, stereo only for ambience. Loops must loop cleanly. |
 | UI | PNG with transparency, 512 px, readable at small sizes in a split view. |
 | Names | The prefixes in [AGENTS.md](../AGENTS.md#naming): `SM_`, `T_`, `M_`, `MI_`, `SFX_`. File extensions in lowercase. |
@@ -64,12 +78,12 @@ On a Mac older than M2, Nanite falls back to simplified meshes. Check how your a
 
 ## Pipeline
 
-1. **Brief.** Start from the asset task's description and specs. Write the prompt or pick the reference images.
+1. **Brief.** Start from the asset task's description and specs. Make a style frame and add the prompt suffix, as [art/style.md](art/style.md#making-an-asset) describes.
 2. **Generate.** Keep candidates outside the repo, in a local folder. Only the one you choose goes in.
 3. **Check the license** as described above, and record it on the asset's issue.
 4. **Save the chosen raw output**, such as GLB, FBX, PNG or WAV, in `SourceArt/<lane>/<asset task>/`, for example `SourceArt/HZ/HZ-A1/`. Git LFS stores it.
 5. **Import** into `Content/<lane folder>/Art/`, through the editor or Unreal MCP, with PG-A0's import presets. Set scale, pivot, collision and Nanite, check the texture settings, and switch the materials to instances of your master material. Reimport from the file in `SourceArt/`, so anyone can redo it.
-6. **Check in your test map.** Next to the template character, under the cave's lighting, on your machine and, for anything in the kit, on the other platform too.
+6. **Check it in `L_StyleTest`.** Next to the template character and the example assets, under the cave's lighting, on your machine and, for anything in the kit, on the other platform too. Then check it in your own test map.
 7. **Before you push**, run `git lfs ls-files` and check every new binary file is listed. If one isn't, its extension is missing from `.gitattributes`, or isn't lowercase.
 8. **Swap it in.** Replace the greybox in your sublevel, then look at it in the next playtest.
 

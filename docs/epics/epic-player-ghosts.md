@@ -124,8 +124,8 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 
 | Task | Sprint | Assets | Specs | Used in |
 | --- | --- | --- | --- | --- |
-| PG-A0: Pipeline | 1 | Pick the generators for meshes, textures and sound, and settle the import presets for meshes and textures on both a Mac and Windows. Take one prop all the way from a prompt to placed in a test map, and fill in the open parts of `docs/assets.md`. | Record each tool's cost, plan and license terms, including whether outputs on that plan can be published in a public repo. | Every lane |
-| PG-A1: Player colors | 3 | Four color variants of the template character, such as a helmet, scarf or backpack tint, so players are easy to tell apart in a dark cave and in split views. In place by Sprint 4. | Material instances of one master material; no new meshes needed. | PG-4 |
+| PG-A0: Pipeline | 1 | Pick the generators for meshes, textures and sound, and settle the import presets for meshes and textures on both a Mac and Windows. Take one prop all the way from a prompt to placed in a test map, and fill in the open parts of `docs/assets.md`. Build the style kit in [art/style.md](../art/style.md#the-style-kit): `M_Stylized`, `L_StyleTest`, and an example rock and gold prop. | Record each tool's cost, plan and license terms, including whether outputs on that plan can be published in a public repo. | Every lane |
+| PG-A1: Player colors | 3 | Four color variants of the template character, such as a helmet, scarf or backpack tint, so players are easy to tell apart in a dark cave and in split views. In place by Sprint 4. | Material instances of `M_Stylized`; no new meshes needed. Colors stay clear of the reserved palette colors. | PG-4 |
 | PG-A2: Ghost | 4 | A ghost mesh and a translucent, glowing material that fades at the edges. In place by Sprint 5. | Up to 5k triangles, with **Nanite off**, since Nanite doesn't support translucent materials. The material must read in the dark from 15 m away. | PG-3 onward |
 | PG-A3: Ghost sounds | 6 | A whisper loop, an attack shriek, and a hiss when light drives a ghost back. In place by Sprint 8. | Mono WAV, 48 kHz, played as 3D sound with attenuation. | PG-5 onward |
 | PG-A4: Zipline | 6 | Cable, anchors and a trolley handle. In place by Sprint 7. | Cable as a spline mesh. Handle up to 2k triangles. | PG-7 |
@@ -162,5 +162,4 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 
 ## Open questions
 
-- Which generators: Meshy, Tripo, Hunyuan3D or something else? PG-A0 decides, with the team's budget and the public repo in mind.
 - Should the third-person view be available everywhere, or only outside tight passages where the camera would clip? The plan allows it everywhere and relies on the spring arm's collision.

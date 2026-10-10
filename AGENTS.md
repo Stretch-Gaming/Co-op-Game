@@ -10,7 +10,7 @@ A 2–4 player online co-op puzzle game in Unreal Engine 5.8.3, Blueprint-only. 
 - Sprint plan, playable checkpoints and shared contracts: [docs/sprints.md](docs/sprints.md)
 - Epics, one per lane: [docs/epics/](docs/epics/)
 - Map layout: [docs/map/site01-layout.md](docs/map/site01-layout.md)
-- Asset generation: [docs/assets.md](docs/assets.md), with credits in [CREDITS.md](CREDITS.md)
+- Asset generation: [docs/assets.md](docs/assets.md), with the visual style in [docs/art/style.md](docs/art/style.md) and credits in [CREDITS.md](CREDITS.md)
 - Unreal MCP setup, and what its tools can do: [docs/mcp.md](docs/mcp.md)
 
 ## Lanes

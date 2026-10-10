@@ -111,7 +111,7 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 
 | Task | Sprint | Assets | Specs | Used in |
 | --- | --- | --- | --- | --- |
-| HZ-A1: Cave surfaces | 2 | One material family: tileable rock walls and the cave floor (damp rock and grit). The ceiling reuses the wall material. In place by Sprint 3. | 2K tileable textures, full PBR. | HZ-3 |
+| HZ-A1: Cave surfaces | 2 | One material family: tileable rock walls and the cave floor (damp rock and grit). The ceiling reuses the wall material. Also the atmosphere preset: a post-process volume with a color grading LUT, and fog in the shadow color from [art/style.md](../art/style.md#palette). In place by Sprint 3. | 2K tileable textures with a painted look, used through world-aligned instances of `M_Stylized`. | HZ-3 |
 | HZ-A2: Props and light sources | 4 | A wall torch with a flame, a crystal cluster that glows, and one or two stalagmites. Library props from Fab are fine. In place by Sprint 6. | Props up to 20k triangles with Nanite on for opaque ones. If the crystal material is translucent, turn Nanite off for it. The crystal glow must be adjustable. | HZ-6 |
 | HZ-A3: Trap meshes | 5 | A spike plate with spikes, a dart launcher carved into a wall, and darts. In place by Sprint 8. | Plates 2 m square. Simple collision; the damage volumes stay in the Blueprints. | HZ-8 |
 | HZ-A4: Dressing | 6 | A swinging log or blade with its chain, carved pillars, bones and old rope. In place by Sprint 8. | The log pivots at its top. | HZ-8 |
