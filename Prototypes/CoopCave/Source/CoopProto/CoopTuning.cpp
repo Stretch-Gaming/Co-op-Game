@@ -16,6 +16,10 @@ namespace CoopTuningVars
 	static TAutoConsoleVariable<float> CVarBoostForward(TEXT("coop.Boost.Forward"), 250.f, TEXT("Boost jump forward speed in cm/s."));
 	static TAutoConsoleVariable<float> CVarBoostRange(TEXT("coop.Boost.Range"), 200.f, TEXT("How close (cm) you must be to your braced partner to boost."));
 
+	// Maze co-op moments
+	static TAutoConsoleVariable<float> CVarMazeLiftSpeed(TEXT("coop.Maze.LiftSpeed"), 125.f, TEXT("How fast the winch lift on path 2 rises and sinks, cm/s."));
+	static TAutoConsoleVariable<float> CVarMazeGateSpeed(TEXT("coop.Maze.GateSpeed"), 400.f, TEXT("How fast the gate in path 4's dip opens and shuts, cm/s."));
+
 	// Rope
 	static TAutoConsoleVariable<int32> CVarTether(TEXT("coop.Tether"), 0, TEXT("1 = tie the players together with the rope. Takes effect the next time you press Play."));
 	static TAutoConsoleVariable<float> CVarRopeMax(TEXT("coop.Rope.MaxLength"), 800.f, TEXT("Longest the rope can get, cm."));
@@ -59,6 +63,9 @@ float CoopTuning::StepHeight()       { return CoopTuningVars::CVarStepHeight.Get
 float CoopTuning::BoostUp()          { return CoopTuningVars::CVarBoostUp.GetValueOnGameThread(); }
 float CoopTuning::BoostForward()     { return CoopTuningVars::CVarBoostForward.GetValueOnGameThread(); }
 float CoopTuning::BoostRange()       { return CoopTuningVars::CVarBoostRange.GetValueOnGameThread(); }
+
+float CoopTuning::MazeLiftSpeed()    { return CoopTuningVars::CVarMazeLiftSpeed.GetValueOnGameThread(); }
+float CoopTuning::MazeGateSpeed()    { return CoopTuningVars::CVarMazeGateSpeed.GetValueOnGameThread(); }
 
 bool  CoopTuning::TetherEnabled()    { return CoopTuningVars::CVarTether.GetValueOnGameThread() != 0; }
 float CoopTuning::RopeMaxLength()    { return CoopTuningVars::CVarRopeMax.GetValueOnGameThread(); }

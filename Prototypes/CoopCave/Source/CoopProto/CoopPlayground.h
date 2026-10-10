@@ -26,6 +26,36 @@ struct FCoopStation
 	float Yaw = 0.f;                         // which way they face on arrival
 };
 
+/** A spot on a maze path where a co-op moment is built, measured the way the path runs there. */
+struct FCoopPathSpot
+{
+	FVector Origin = FVector::ZeroVector;     // the tile centre, on the floor
+	FVector Forward = FVector::ForwardVector; // onward along the path
+	FVector Right = FVector::RightVector;
+	TArray<float> FloorZ;                     // floor height at the tile centres, from two tiles back to two on
+	TArray<float> CeilingZ;                   // underside of the ceiling over the same tiles
+
+	/** Floor height Along cm from the tile centre (+ = onward). */
+	float FloorAt(float Along) const;
+	/** Lowest ceiling over the tile Along cm from the tile centre. */
+	float CeilingAt(float Along) const;
+	/** A world point: Along the path, Side across it (+ = right), at height Z. */
+	FVector At(float Along, float Side, float Z) const;
+};
+
+/** A piece that moves while a player stands (or braces) on one of its plates: the winch lift and the dip gate. */
+struct FCoopMover
+{
+	int32 Piece = INDEX_NONE;                 // index into MoverPieces
+	FVector RestLocation = FVector::ZeroVector;
+	FVector ActiveLocation = FVector::ZeroVector;
+	TArray<FBox> Plates;                      // where a player's feet must be
+	bool bNeedsBrace = false;                 // only a braced player works the plates
+	bool bGate = false;                       // speed from coop.Maze.GateSpeed instead of coop.Maze.LiftSpeed
+	FBox KeepOpen = FBox(ForceInit);          // a gate never closes on a player standing in here
+	float Alpha = 0.f;                        // 0 = at rest, 1 = active
+};
+
 /** Rocks that share one color, built into one mesh. */
 struct FCoopRockGroup
 {
@@ -49,6 +79,7 @@ struct FCoopRockGroup
  * North of the cave, through a door in its north wall, is a maze (BuildMaze): four paths that cross
  * each other on rock bridges, climb and drop, meet in two halls, and end in a relic chamber.
  * Its layout is the table at the top of CoopPlayground.cpp; maze_overview.png is a picture of it.
+ * Each path has one co-op moment (BuildMoments), from the CoopMaze::Moments table next to it.
  *
  * Lighting numbers are live console variables (coop.Cave.*), see CoopTuning.h.
  * Positions are in cm (100 = 1 m); the room spans -1250..1250 on X and Y.
@@ -80,7 +111,12 @@ private:
 	void BuildCrystals();
 	void BuildLighting();
 	void BuildMaze();
+	/** The co-op moments on the maze paths (CoopMaze::Moments), one spot per moment. */
+	void BuildMoments(const TArray<FCoopPathSpot>& Spots);
 	void FinishRockGroups();
+
+	/** Moves the lift and the gate toward open or shut, depending on who stands on their plates. */
+	void UpdateMovers(float DeltaSeconds);
 
 	/** Loads the shared style kit (rock mesh, rock and gold materials) if it has been migrated into this project. */
 	void LoadRepoAssets();
@@ -182,6 +218,12 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UMaterialInterface> RepoGoldMaterial;
+
+	/** The moving pieces of the co-op moments (see Movers). */
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<UStaticMeshComponent>> MoverPieces;
+
+	TArray<FCoopMover> Movers;
 
 	// Maze rocks using the repo rock mesh, turned into instanced meshes at the end of BuildMaze
 	TArray<FTransform> MazeWallRockTransforms;
