@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": 24,
+  "player_views": 40,
+  "png_alpha_decoder_matches_pillow": true,
+  "original_source_hashes_unchanged": true,
+  "native_preview_dimensions_and_hashes_verified": true,
+  "text_and_visible_art_in_safe_area": true,
+  "aspect_ratios_verified": true,
+  "round_number_retained_in_end_states": true,
+  "no_unreal_execution": true
+}

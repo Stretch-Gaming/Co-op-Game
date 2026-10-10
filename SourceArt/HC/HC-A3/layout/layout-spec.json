@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "resolutions": [
+    [
+      1280,
+      720
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "modes": [
+    "full",
+    "split-horizontal",
+    "split-vertical"
+  ],
+  "states": [
+    "playing",
+    "timed",
+    "cleared",
+    "failed"
+  ],
+  "scale": {
+    "reference_viewport": [
+      1280,
+      720
+    ],
+    "minimum": 0.85,
+    "maximum": 1.25
+  },
+  "metrics": {
+    "safe_margin": 24,
+    "icon_texture_width": 64,
+    "counter_font": 22,
+    "banner_texture_width": 340,
+    "banner_font": 22,
+    "prompt_texture_width": 300,
+    "prompt_font": 18,
+    "progress_width": 150,
+    "progress_height": 10,
+    "minimum_font": 16
+  },
+  "colors": {
+    "text": "#F7E7C4",
+    "text_shadow": "#101722",
+    "track": "#1E2433",
+    "progress": "#3FD0C9",
+    "border": "#FFB347"
+  },
+  "sample": {
+    "relics_collected": 12,
+    "relics_available": 18,
+    "round_index": 2,
+    "round_total": 3,
+    "hold_seconds": 3
+  }
+}
