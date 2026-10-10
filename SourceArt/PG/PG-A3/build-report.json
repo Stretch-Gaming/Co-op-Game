@@ -1,0 +1,186 @@
+{
+ "outputs": {
+  "SFX_Taking_HandDrag.wav": {
+   "seconds": 3.6,
+   "sha256": "a65a6ccc6ae5f1c4163834dfbc61113aadbd82591fcaef52451ec83fd1d77698"
+  },
+  "SFX_Taking_FloorCrack.wav": {
+   "seconds": 3.0,
+   "sha256": "ddc9ee957c0c8d900d8830169669e155d9c3bf3020fc0b17a5cd675df4588b6b"
+  },
+  "SFX_Taking_FloorShut.wav": {
+   "seconds": 2.9,
+   "sha256": "2873a532928f02b732c342c79a26aeabc442ea5841eb3124e8ec017b82de0fc5"
+  },
+  "SFX_Taking_LightsOut.wav": {
+   "seconds": 2.4,
+   "sha256": "8d882a46d70993238fc2cd87c86021d71f48c34e0e0ae9065f8c801ffff01ef0"
+  },
+  "SFX_Taking_HeadlampRoll.wav": {
+   "seconds": 4.6,
+   "sha256": "0c383cde846b9bf908403602e69a41f863f480129d2fd402c2e14c57c381169f"
+  },
+  "SFX_Taking_Sting_2D.wav": {
+   "seconds": 2.6,
+   "sha256": "6dc9aa864e49a9ed97604947129c8d494d244ab0a34e49d8dc460da22b087133"
+  },
+  "SFX_Taker_Breath_Loop.wav": {
+   "seconds": 17.621,
+   "sha256": "cd453b218ac5f61a748c7a6fb3fde2a053dd42cf5f9b3838ffcbad3b58636989"
+  },
+  "SFX_Chase_Loop_2D.wav": {
+   "seconds": 26.16,
+   "sha256": "9ef712a6ca423260563b5efe872fc10f79238fa60aa70296dc5565253578b4da"
+  },
+  "SFX_Chase_Build_Loop_2D.wav": {
+   "seconds": 26.16,
+   "sha256": "70d6ca8331d8a576bd60a24974fb0a87d098c61f1a33ec06190135f0fdcc5d65"
+  }
+ },
+ "sources": {
+  "grab": {
+   "id": "667271",
+   "user": "alegemaate",
+   "title": "Cloth Grab",
+   "page": "https://freesound.org/people/alegemaate/sounds/667271/",
+   "download": "https://cdn.freesound.org/previews/667/667271_2531187-hq.mp3",
+   "sha256": "37ace097df7e313acea904ee26c338889156929c0694399678fdc90f4ba20a42"
+  },
+  "drag": {
+   "id": "481863",
+   "user": "craigsmith",
+   "title": "R18-35-Drag Body Across Floor.wav",
+   "page": "https://freesound.org/people/craigsmith/sounds/481863/",
+   "download": "https://cdn.freesound.org/previews/481/481863_2524442-hq.mp3",
+   "sha256": "839b92d646d9726da9f37a23ab411d8394527be67dbd06e47a993af4200c943c"
+  },
+  "stone": {
+   "id": "354094",
+   "user": "Bini_trns",
+   "title": "Stone scratching over rock (close up), H6.wav",
+   "page": "https://freesound.org/people/Bini_trns/sounds/354094/",
+   "download": "https://cdn.freesound.org/previews/354/354094_6544544-hq.mp3",
+   "sha256": "b088ebc432f16fd7590b7b29267100c8331f39e68ed1769b1807b529a5872c74"
+  },
+  "slam": {
+   "id": "465807",
+   "user": "PaceHeart",
+   "title": "big stone door suddenly slamming shut",
+   "page": "https://freesound.org/people/PaceHeart/sounds/465807/",
+   "download": "https://cdn.freesound.org/previews/465/465807_1348084-hq.mp3",
+   "sha256": "6ed627beeef2a4fbd58814b2ee9b60589b0ad30acbca591597f4e5840cc376f7"
+  },
+  "crack": {
+   "id": "157804",
+   "user": "SoundCollectah",
+   "title": "rock falls with cracking.mp3",
+   "page": "https://freesound.org/people/SoundCollectah/sounds/157804/",
+   "download": "https://cdn.freesound.org/previews/157/157804_1868848-hq.mp3",
+   "sha256": "4a42da617414b6955bdb62073ed8c69099e444913c7ff680691ed1b9bc1d44d9"
+  },
+  "crackle": {
+   "id": "489905",
+   "user": "falcospizaetus",
+   "title": "RockCrack03",
+   "page": "https://freesound.org/people/falcospizaetus/sounds/489905/",
+   "download": "https://cdn.freesound.org/previews/489/489905_10570192-hq.mp3",
+   "sha256": "ca875252384f7b120114d2f3f498584178d8f13d9c584b9193581e5e28aa57af"
+  },
+  "smash": {
+   "id": "512243",
+   "user": "NeoSpica",
+   "title": "Rock Smash",
+   "page": "https://freesound.org/people/NeoSpica/sounds/512243/",
+   "download": "https://cdn.freesound.org/previews/512/512243_7704891-hq.mp3",
+   "sha256": "1626b73acf51ed2dc86667bca72a7e0a916c0e0baf33768ca8a6bb1509abfe6a"
+  },
+  "crumble": {
+   "id": "608957",
+   "user": "NinjaSharkStudios",
+   "title": "Rockslide_1.wav",
+   "page": "https://freesound.org/people/NinjaSharkStudios/sounds/608957/",
+   "download": "https://cdn.freesound.org/previews/608/608957_4067-hq.mp3",
+   "sha256": "5ceadf743a7d343395f82a1b5b7ae3fecc746f46e226d2e3b4b9db60c7dc5c22"
+  },
+  "grind": {
+   "id": "844329",
+   "user": "NahuelMartinez",
+   "title": "Stone Slab Door Grinding - Heavy Rock Scrape (Mono)",
+   "page": "https://freesound.org/people/NahuelMartinez/sounds/844329/",
+   "download": "https://cdn.freesound.org/previews/844/844329_17689204-hq.mp3",
+   "sha256": "371780a604be0516de64e987dce2eefd58fb1bc6725e518cbea2084aba497237"
+  },
+  "bulb": {
+   "id": "866662",
+   "user": "hipoidogs",
+   "title": "Vintage Edison Bulb Flicker & Warm-Up Sound Effect",
+   "page": "https://freesound.org/people/hipoidogs/sounds/866662/",
+   "download": "https://cdn.freesound.org/previews/866/866662_19146166-hq.mp3",
+   "sha256": "15794530f2f91a21d00ebaa7dad89250cf49ebe09941b6e2f6f1da5a1df8c57c"
+  },
+  "click": {
+   "id": "557509",
+   "user": "Nox_Sound",
+   "title": "Foley_Object_Flashlight_Small_SingleButton_Mono.wav",
+   "page": "https://freesound.org/people/Nox_Sound/sounds/557509/",
+   "download": "https://cdn.freesound.org/previews/557/557509_9250976-hq.mp3",
+   "sha256": "5c2e855ab753a9e21819a60d2185e5fdbf07c8d46e4e14c4896179f6457f851d"
+  },
+  "powercut": {
+   "id": "636578",
+   "user": "swag1773",
+   "title": "Cutting Power",
+   "page": "https://freesound.org/people/swag1773/sounds/636578/",
+   "download": "https://cdn.freesound.org/previews/636/636578_13749534-hq.mp3",
+   "sha256": "f6394212d2185eb008c23db209c84acddf62a8ca7825b88fbba5ef7512867043"
+  },
+  "roll": {
+   "id": "423750",
+   "user": "haynze",
+   "title": "FLASHLIGHT_ROLL.wav",
+   "page": "https://freesound.org/people/haynze/sounds/423750/",
+   "download": "https://cdn.freesound.org/previews/423/423750_8832-hq.mp3",
+   "sha256": "333f310c3ee9b8cd75e52abb28f33637cdeeae42b63de0001fb8ee4834e797ed"
+  },
+  "jumpscare": {
+   "id": "814050",
+   "user": "qubodup",
+   "title": "Jumpscare",
+   "page": "https://freesound.org/people/qubodup/sounds/814050/",
+   "download": "https://cdn.freesound.org/previews/814/814050_71257-hq.mp3",
+   "sha256": "9d51ec45c2c2d9fe90b53f9709fa368d110e30c0d22987fa8bc7c2ddf375b319"
+  },
+  "breathsting": {
+   "id": "530778",
+   "user": "Tissman",
+   "title": "breath stinger1",
+   "page": "https://freesound.org/people/Tissman/sounds/530778/",
+   "download": "https://cdn.freesound.org/previews/530/530778_5452388-hq.mp3",
+   "sha256": "e391a6246937baed4289095820966ad3918112b5b8003f56fd402d92303a7feb"
+  },
+  "breath": {
+   "id": "574208",
+   "user": "mucky_pete7",
+   "title": "MONSTER BREATH 1.wav",
+   "page": "https://freesound.org/people/mucky_pete7/sounds/574208/",
+   "download": "https://cdn.freesound.org/previews/574/574208_8523091-hq.mp3",
+   "sha256": "c21489ff1b4e6304e094edf7ab6ed25cc6324cafaaec0a143ef0302d97618cac"
+  },
+  "drone": {
+   "id": "457046",
+   "user": "gerainsan",
+   "title": "Horror Pulsating Drone Loop",
+   "page": "https://freesound.org/people/gerainsan/sounds/457046/",
+   "download": "https://cdn.freesound.org/previews/457/457046_3577171-hq.mp3",
+   "sha256": "bb9add762692f612b52459af912294b86c451b94d1d25893e1fe5c153c7e54b9"
+  },
+  "clang": {
+   "id": "141135",
+   "user": "jhooper",
+   "title": "Horror Chase.wav",
+   "page": "https://freesound.org/people/jhooper/sounds/141135/",
+   "download": "https://cdn.freesound.org/previews/141/141135_2276936-hq.mp3",
+   "sha256": "b0451b4d3fa745615add2822668cbeb6936540adb33c898aef6e526b5901c4e6"
+  }
+ }
+}
