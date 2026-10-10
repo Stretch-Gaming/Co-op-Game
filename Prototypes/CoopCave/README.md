@@ -84,6 +84,7 @@ Through the door in the cave's north wall (between the timber posts). [maze_over
 - **They meet twice**, in a sunken hall (-3 m) and a raised hall (+4 m), where you can switch paths.
 - **Climbs and drops:** ramps of up to 2 m per 5 m (about 22 degrees). Corners and bridges are flat.
 - Paths 1, 2 and 4 are torch-lit; path 3 is lit by teal crystals. There are 7 dead ends.
+- About 60 torches light the maze. Torch and crystal lights more than 50 m from your camera switch off, fading out over the last 12.5 m (`coop.Cave.LightDistance`). The winding walls hide them out there anyway, and even the fork torch you see through the cave door stays at full brightness.
 
 | Path | Length | Height |
 |---|---|---|
@@ -122,7 +123,7 @@ Typing a name on its own shows its current value.
 
 - **Movement:** `coop.WalkSpeed`, `coop.JumpVelocity`, `coop.Gravity`, `coop.AirControl`, `coop.StepHeight` (tallest bump you walk over, cm)
 - **Boost jump:** `coop.Boost.Up/Forward/Range`
-- **Cave lighting:** `coop.Cave.Torch` (brightness), `coop.Cave.TorchRadius`, `coop.Cave.TorchShadows` (0 none, 1 the four torches out in the room, 2 all), `coop.Cave.Flicker`, `coop.Cave.Bounce`, `coop.Cave.Crystal`, `coop.Cave.Ambient` (cool fill in the shadows), `coop.Cave.Exposure` (stops), `coop.Cave.Fog`
+- **Cave lighting:** `coop.Cave.Torch` (brightness), `coop.Cave.TorchRadius`, `coop.Cave.TorchShadows` (0 none, 1 the four torches out in the room, 2 all), `coop.Cave.Flicker`, `coop.Cave.Bounce`, `coop.Cave.Crystal`, `coop.Cave.Ambient` (cool fill in the shadows), `coop.Cave.Exposure` (stops), `coop.Cave.Fog`, `coop.Cave.LightDistance` (cm; lights farther from the camera stop drawing, 0 = never)
 - **Camera:** `coop.Cam.Distance/Shoulder/Height/FOV/FPFOV/StartFirstPerson`, `coop.Look.StickYaw/StickPitch/Mouse`
 - **The rope:** `coop.Tether 1` ties the players together again the next time you press Play. `coop.Rope.MaxLength/MinLength/ReelSpeed/DragSpeed/AirWeight` tune it.
 
@@ -150,6 +151,7 @@ How to apply code changes on a Mac: **close the editor, run `bash build_mac.sh`,
 | Mouse stuck in the game | fn+Shift+F1 on a Mac (Shift+F1 on Windows). |
 | Build error about Xcode | Check you're on Xcode 26.1.1 (`xcodebuild -version` in Terminal). |
 | Low frame rate | Torch shadows cost the most: `coop.Cave.TorchShadows 0`. Playing in a standalone window is faster than in the editor. |
+| A code change doesn't show up after `build_mac.sh` | Make sure no CoopProto editor is open. The script builds with `-NoHotReload`, so another Unreal editor running on the same engine (such as CoopGame) no longer leaves you on a stale build. |
 
 ## 9. Mac now, Windows for consoles
 

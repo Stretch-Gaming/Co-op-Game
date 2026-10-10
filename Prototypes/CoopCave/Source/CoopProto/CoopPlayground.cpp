@@ -441,6 +441,17 @@ void ACoopPlayground::ApplyLiveLighting(float TimeSeconds)
 	const float Radius = CoopTuning::TorchRadius();
 	const int32 ShadowMode = CoopTuning::TorchShadowMode();
 
+	// Lights past this distance from the camera stop drawing (they fade out over the last quarter).
+	const float LightDistance = FMath::Max(0.f, CoopTuning::LightDrawDistance());
+	auto ApplyDistance = [LightDistance](UPointLightComponent* Light)
+	{
+		if (Light && !FMath::IsNearlyEqual(Light->MaxDrawDistance, LightDistance))
+		{
+			Light->SetMaxDrawDistance(LightDistance);
+			Light->SetMaxDistanceFadeRange(LightDistance * 0.25f);
+		}
+	};
+
 	for (int32 i = 0; i < TorchLights.Num(); ++i)
 	{
 		const float Phase = TorchPhases.IsValidIndex(i) ? TorchPhases[i] : 0.f;
@@ -461,10 +472,12 @@ void ACoopPlayground::ApplyLiveLighting(float TimeSeconds)
 			{
 				Light->SetCastShadows(TorchCastsShadow(TorchIsKey.IsValidIndex(i) && TorchIsKey[i]));
 			}
+			ApplyDistance(Light);
 		}
 		if (BounceLights.IsValidIndex(i) && BounceLights[i])
 		{
 			BounceLights[i]->SetIntensity(Base * Bounce * Scale);
+			ApplyDistance(BounceLights[i]);
 		}
 		if (TorchFlames.IsValidIndex(i) && TorchFlames[i])
 		{
@@ -484,6 +497,7 @@ void ACoopPlayground::ApplyLiveLighting(float TimeSeconds)
 		if (Light)
 		{
 			Light->SetIntensity(CoopTuning::CrystalBrightness() * 0.6f * Pulse);
+			ApplyDistance(Light);
 		}
 	}
 
@@ -1588,8 +1602,27 @@ void ACoopPlayground::BuildMaze()
 				const FVector Out = WorldDir(Dir);
 				const FVector Along(-Out.Y, Out.X, 0.f);
 				const FVector Edge = FVector(Center, 0.f) + Out * (Tile * 0.5f);
-				AddBlock(Blockers, BlockerHulls, FTransform(Out.Rotation(), FVector(Edge.X, Edge.Y, (Bottom + Top) * 0.5f) + Out * 50.f),
-					FVector(50.f, Tile * 0.5f + 50.f, (Top - Bottom) * 0.5f));
+
+				// Each end overlaps the next wall by 50 cm, except into an opening (where a path meets a room):
+				// there the overhang would narrow the way in and snag you on an invisible corner.
+				float Overlap[2] = { 50.f, 50.f };   // toward +Along, toward -Along
+				for (int32 End = 0; End < 2; ++End)
+				{
+					const FIntPoint Beside = Cell.Key + (End == 0 ? FIntPoint(Dir.Y, -Dir.X) : FIntPoint(-Dir.Y, Dir.X));
+					if (const TArray<FLevel>* BesideLevels = Cells.Find(Beside))
+					{
+						for (const FLevel& Other : *BesideLevels)
+						{
+							if (Connected(Level, Other) && !HasWall(Beside, Other, Dir))
+							{
+								Overlap[End] = 0.f;
+							}
+						}
+					}
+				}
+				AddBlock(Blockers, BlockerHulls,
+					FTransform(Out.Rotation(), FVector(Edge.X, Edge.Y, (Bottom + Top) * 0.5f) + Out * 50.f + Along * ((Overlap[0] - Overlap[1]) * 0.5f)),
+					FVector(50.f, Tile * 0.5f + (Overlap[0] + Overlap[1]) * 0.5f, (Top - Bottom) * 0.5f));
 
 				// Rocks: two along the edge, stacked to fill the height, set back so their faces line the tunnel
 				const float RockBottom = Level.bBridge ? Level.Z - Slab : Level.FloorMin - 80.f;
