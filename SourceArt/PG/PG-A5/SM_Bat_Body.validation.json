@@ -1,0 +1,23 @@
+{
+  "input": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Bat_Body.glb",
+  "output": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Bat_Body.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1120,
+  "triangles_after": 1120,
+  "dimensions_cm": [
+    20.4557,
+    8.5087,
+    11.2923
+  ],
+  "bounds_min_cm": [
+    -10.22786,
+    -4.25437,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

@@ -1,0 +1,23 @@
+{
+  "input": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Mouse.glb",
+  "output": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Mouse.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 2410,
+  "triangles_after": 2410,
+  "dimensions_cm": [
+    22.3809,
+    10.7706,
+    8.4634
+  ],
+  "bounds_min_cm": [
+    -11.19046,
+    -5.38532,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

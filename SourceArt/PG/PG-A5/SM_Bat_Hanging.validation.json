@@ -1,0 +1,23 @@
+{
+  "input": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Bat_Hanging.glb",
+  "output": "/Users/peterkim/Projects/Co-op-Game/SourceArt/PG/PG-A5/SM_Bat_Hanging.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1636,
+  "triangles_after": 1636,
+  "dimensions_cm": [
+    10.8214,
+    9.5023,
+    23.8517
+  ],
+  "bounds_min_cm": [
+    -5.4107,
+    -4.75114,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

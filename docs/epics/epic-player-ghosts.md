@@ -129,6 +129,7 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 | PG-A2: Ghost | 4 | A ghost mesh and a translucent, glowing material that fades at the edges. In place by Sprint 5. | Up to 5k triangles, with **Nanite off**, since Nanite doesn't support translucent materials. The material must read in the dark from 15 m away. | PG-3 onward |
 | PG-A3: Ghost sounds | 6 | A whisper loop, an attack shriek, and a hiss when light drives a ghost back. In place by Sprint 8. | Mono WAV, 48 kHz, played as 3D sound with attenuation. | PG-5 onward |
 | PG-A4: Zipline | 6 | Cable, anchors and a trolley handle. In place by Sprint 7. | Cable as a spline mesh. Handle up to 2k triangles. | PG-7 |
+| PG-A5: Bats and mice | 8 | Ambient life for Site 1: bats hanging from beams and ceilings, bats circling overhead, and mice scurrying along the walls. No gameplay effect. In place by Sprint 8. | Static meshes up to 2.5k triangles, with Nanite and collision off. Colors stay clear of the reserved palette colors. The motion is cosmetic: each machine animates its own copy, with no replication. | Site 1 dressing |
 
 ## Critical assets
 

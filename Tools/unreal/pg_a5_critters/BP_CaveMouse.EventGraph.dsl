@@ -1,0 +1,8 @@
+(event EventTick (DeltaSeconds)
+  (bind a (* (+ (Utilities|Time|GetGameTimeinSeconds) (Variables|Default|GetPhase)) (Variables|Default|GetSpeed)))
+  (bind s (* (Math|Trig|Sin(Degrees) a) 1.25))
+  (bind moving (< (Math|Float|Absolute(Float) s) 1.0))
+  (bind hop (* 0.8 (Math|Float|Absolute(Float) (Math|Trig|Sin(Degrees) (* a 25.0)))))
+  (Transformation|SetRelativeLocationAndRotation (Variables|Default|GetMouse)
+    (Math|Vector|MakeVector (* (Math|Float|Clamp(Float) s -1.0 1.0) (Variables|Default|GetHalfLength)) 0.0 (select moving hop 0.0))
+    (Math|Rotator|MakeRotator 0.0 0.0 (select (>= (Math|Trig|Cos(Degrees) a) 0.0) 0.0 180.0))))
