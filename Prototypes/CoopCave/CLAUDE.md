@@ -19,7 +19,7 @@
 
 ## Hard rules
 1. **Gameplay logic goes in C++.** Blueprints are only for hooking up art assets and tweaking numbers. Never put logic in Blueprints.
-2. **Never create or edit `.uasset` or `.umap` files.** They are binary. If something needs an asset, write the C++ and tell the human exactly what to set up in the editor.
+2. **Change `.uasset` and `.umap` files only through the engine** (the editor, or its Python run headless), never by hand on disk, as in the root AGENTS.md.
 3. **Input stays in `CoopInput.cpp`.** No Input Action or Mapping Context assets.
 4. **Keep it light:** no Lumen, Nanite or virtual shadow maps unless the human asks. Settings live in `Config/DefaultEngine.ini`.
 5. **Use Unreal conventions:** `A`/`U`/`F` prefixes, `TObjectPtr<>` for `UPROPERTY` object pointers, include what you use, `.generated.h` as the last include in headers.
@@ -39,4 +39,4 @@ Every feel number is a console variable in `CoopTuning.cpp` (`coop.*`), read eve
 - Lighting numbers are `coop.Cave.*` console variables, like every other feel number.
 
 ## Building in rounds
-New mechanics get their own spot in `CoopPlayground.cpp` so they can be tested in isolation with a controller. One mechanic per round. Graybox only (engine shapes, flat colors) until the human locks the metrics; then real art.
+New mechanics get their own spot in `CoopPlayground.cpp` so they can be tested in isolation with a controller. One mechanic per round. Real art is fine: the maze already uses the shared style kit and HC's relics and props, migrated into `Content/` (see "Repo art" in the README). Keep each mesh optional (`LoadIfPresent`, with a code-built fallback), so the prototype still builds and plays without `Content/`.
