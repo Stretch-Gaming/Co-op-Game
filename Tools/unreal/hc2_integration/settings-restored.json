@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "settings": {
+    "play": {
+      "PlayNetMode": "PIE_Standalone",
+      "PlayNumberOfClients": 1,
+      "RunUnderOneProcess": true
+    },
+    "performance": {
+      "bThrottleCPUWhenNotForeground": true
+    }
+  }
+}

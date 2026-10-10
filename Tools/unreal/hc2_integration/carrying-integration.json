@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "component": "AC_Carrying",
+  "attachment": "server BeginPlay adds the reviewed replicated component only when absent; existing fixture component is reused",
+  "protected_graphs": [
+    "UserConstructionScript",
+    "UseAllowed",
+    "BeginUse",
+    "CancelUse",
+    "ValidateUse",
+    "CompleteTimedUse",
+    "RefreshFocus",
+    "PressInteract",
+    "ReleaseInteract",
+    "SetupLocalInput",
+    "RemoveLocalInput",
+    "ConfirmLocalUse",
+    "EndLocalUse",
+    "ServerNow",
+    "SetInteractionBlocked",
+    "HC1ControllerChanged",
+    "HC1EndPlay",
+    "ClearOwnedInputMaps",
+    "ClearOwnedPrompt",
+    "ApplyHCA3PromptLayout"
+  ],
+  "server_rpc_flag": "requires editor UI configuration before acceptance",
+  "signatures_preserved": [
+    "GetCarried -> CarriedActor",
+    "ReleaseCarried -> CarriedActor"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "event": "Server_DropCarried",
+  "observed_lines": [
+    "generic \"Replicates\\r\\nReliable\\r\\nReset to Default\" [pos=1920,273 size=636,41] [ref=g234]",
+    "text \"Run on Server\" [pos=2194,277 size=89,13] [ref=x787]",
+    "checkbox \"Reliable\" [checked] [pos=2186,295 size=65,18] [ref=cb43]",
+    "text \"Reliable\" [pos=2206,296 size=45,15] [ref=x788]"
+  ]
+}

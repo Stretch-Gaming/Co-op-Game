@@ -1,0 +1,15 @@
+{
+  "source": "SourceArt/HC/HC2/SFX_RelicPickup.wav",
+  "sha256": "13f605b3ed38773ffaf21ac3404108da7ada2a7d34a2c04c72efcc68f6741775",
+  "samples": 15360,
+  "rate_hz": 48000,
+  "channels": 1,
+  "duration_seconds": 0.32,
+  "peak_sample": 5149,
+  "tool": "Python standard library wave/math; team-authored deterministic additive synthesis",
+  "tool_url": "https://docs.python.org/3/library/wave.html",
+  "plan": "local, no paid generator",
+  "license": "original team-authored work; no third-party samples or attribution; public repository redistribution permitted",
+  "attribution": "none required",
+  "destination": "/Game/Core/Audio/SFX_RelicPickup"
+}

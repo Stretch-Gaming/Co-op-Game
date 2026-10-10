@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "sound": "/Game/Core/Audio/SFX_RelicPickup.SFX_RelicPickup",
+  "properties": {
+    "Duration": 0.3199999928474426,
+    "NumChannels": 1,
+    "SampleRate": 48000
+  },
+  "feedback_counter_replication": "None; debug count of received cosmetic event, never drives collection"
+}

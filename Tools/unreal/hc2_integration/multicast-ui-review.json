@@ -1,0 +1,16 @@
+{
+  "editor_project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc2-core-integration\\Co op Game",
+  "observed_lines": [
+    "listitem \"Multicast_Pickup\" [pos=678,1194 size=236,25] [ref=li53]",
+    "text \"Multicast_Pickup\" [pos=750,1201 size=185,15] [ref=x196]",
+    "textbox \"Multicast_Pickup\" [pos=2820,659 size=125,20] [ref=tb6]",
+    "generic \"Replicates\\r\\nReliable\\r\\nReset to Default\" [pos=2553,776 size=414,41] [ref=g58]",
+    "text \"Replicates\" [pos=2586,796 size=49,13] [ref=x155]",
+    "text \"Multicast\" [pos=2832,783 size=89,13] [ref=x211]",
+    "checkbox \"Reliable\" [unchecked] [pos=2820,809 size=67,18] [ref=cb16]",
+    "text \"Reliable\" [pos=2850,811 size=47,15] [ref=x212]"
+  ],
+  "event": "Multicast_Pickup",
+  "selected_multicast": true,
+  "reliable_unchecked": true
+}

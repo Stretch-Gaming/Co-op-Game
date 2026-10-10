@@ -1,0 +1,61 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc2-core-integration\\Co op Game",
+  "compiles": {
+    "/Game/Core/BP_CoopCharacter": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Core/BP_CoopPlayerController": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Core/BP_CoopGameMode": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Core/BP_CoopGameState": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Core/BP_CoopPlayerState": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Puzzles/BP_Relic": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Puzzles/Test/HC2/BP_HC2InputProbe": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Puzzles/UI/HCA3/AC_HCA3HUD": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+  },
+  "replication": {
+    "/Game/Core/BP_CoopGameState": {
+      "RelicsCollected": "<BlueprintVariableReplication.REPLICATED: 1>",
+      "RelicsAvailable": "<BlueprintVariableReplication.REPLICATED: 1>",
+      "RoundState": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+    },
+    "/Game/Core/BP_CoopPlayerState": {
+      "ColorSlot": "<BlueprintVariableReplication.REPLICATED: 1>"
+    },
+    "/Game/Puzzles/BP_Relic": {
+      "Collected": "<BlueprintVariableReplication.REP_NOTIFY: 2>",
+      "Available": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+    }
+  },
+  "table": {
+    "2": {
+      "plateCount": 3,
+      "statueCount": 2
+    },
+    "3": {
+      "plateCount": 3,
+      "statueCount": 1
+    },
+    "4": {
+      "plateCount": 4,
+      "statueCount": 1
+    }
+  },
+  "relic_defaults": {
+    "Value": 1,
+    "MinPlayers": 2,
+    "Available": false,
+    "Collected": false,
+    "bReplicates": true,
+    "bAlwaysRelevant": true,
+    "PickupSound": {
+      "refPath": "/Game/Core/Audio/SFX_RelicPickup.SFX_RelicPickup"
+    }
+  },
+  "missing_pg": [
+    "/Game/Player/AC_PlayerView",
+    "/Game/Player/BPFL_SplitScreen"
+  ],
+  "table_struct": "/Game/Puzzles/S_RoundScaling.S_RoundScaling",
+  "passed": true
+}

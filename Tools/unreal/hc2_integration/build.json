@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "saved": [
+    "/Game/Core/BP_CoopGameMode.BP_CoopGameMode",
+    "/Game/Core/BP_CoopGameState.BP_CoopGameState",
+    "/Game/Core/BP_CoopPlayerState.BP_CoopPlayerState",
+    "/Game/Puzzles/BP_Relic.BP_Relic"
+  ]
+}
