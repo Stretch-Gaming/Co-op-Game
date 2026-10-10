@@ -1,0 +1,88 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"Tools/unreal/pr119_followups/test_cave_traps.py\", line 103, in tick\n    assert state['warning_seen'], 'no client saw the spike warning'\nAssertionError: no client saw the spike warning\n",
+  "checks": [
+    "9 traps and the fall volume exist on the server; every client has every trap with the same replicated schedule",
+    "4 players; every trap reads DT_HazardScaling row 4"
+  ],
+  "data": {
+    "schedule_replicated_after_s": 15.8,
+    "scaling_row": "4",
+    "schedule": {
+      "200000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "620000000": {
+        "Kind": 1,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "700001200": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "720000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "800000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "1400000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "1480000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "1550000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      },
+      "1600000000": {
+        "Kind": 1,
+        "StartTime": 3.0,
+        "Interval": 2.0,
+        "SpikeDelay": 0.4,
+        "SwingSpeed": 1.2
+      }
+    },
+    "trigger_lag_L_Site010": 0.968,
+    "trigger_lag_L_Site011": 0.968,
+    "trigger_lag_L_Site012": 0.968,
+    "trigger_lag_L_Site013": 0.968,
+    "spike_delay": 0.4,
+    "editor_fps": 2.3,
+    "server_health_after": {
+      "darts": 65.0,
+      "spikes": 65.0
+    }
+  },
+  "phase": 1
+}
