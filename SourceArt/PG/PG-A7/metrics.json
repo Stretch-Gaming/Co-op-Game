@@ -1,0 +1,98 @@
+{
+  "SM_Taker": {
+    "triangles": 13200,
+    "dimensions_cm": [
+      176.5,
+      130.0,
+      266.4
+    ],
+    "bounds_cm": [
+      [
+        -31.0,
+        145.5
+      ],
+      [
+        -60.7,
+        69.3
+      ],
+      [
+        0.0,
+        266.4
+      ]
+    ],
+    "pivot": "On the floor under the middle of the feet; also the lunge pivot. Faces +X. Lunge: pitch forward about it (negative pitch in Unreal) while moving forward.",
+    "uv": "UV0: one packed smart-project atlas, shared by both slots",
+    "health": {
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_verts": 0
+    },
+    "material_slots": [
+      "0 Body (shadow family)",
+      "1 Eyes (ghost white)"
+    ],
+    "eye_triangles": 200,
+    "sockets_unreal_cm": {
+      "Eyes": {
+        "location": [
+          64.0,
+          0.0,
+          232.3
+        ],
+        "use": "Between the eyes: an eye glow light or the look-at point."
+      },
+      "ReachHand": {
+        "location": [
+          109.9,
+          44.0,
+          163.5
+        ],
+        "use": "Palm of the forward-reaching hand: where a lunge grabs."
+      }
+    },
+    "triangles_exported": 13199
+  },
+  "SM_TakerArm": {
+    "triangles": 5500,
+    "dimensions_cm": [
+      285.4,
+      163.3,
+      122.3
+    ],
+    "bounds_cm": [
+      [
+        -36.3,
+        249.1
+      ],
+      [
+        -88.2,
+        75.1
+      ],
+      [
+        -60.3,
+        61.9
+      ]
+    ],
+    "pivot": "Where the arm leaves the wall. The wall faces +X; the root is buried behind it (X < 0); the open hand reaches toward the victim along +X.",
+    "uv": "UV0: one packed smart-project atlas",
+    "health": {
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_verts": 0
+    },
+    "material_slots": [
+      "0 Body (shadow family)"
+    ],
+    "sockets_unreal_cm": {
+      "Palm": {
+        "location": [
+          194.4,
+          -3.8,
+          8.6
+        ],
+        "use": "Palm of the open hand: attach or aim the victim here."
+      }
+    },
+    "triangles_exported": 5500
+  }
+}
