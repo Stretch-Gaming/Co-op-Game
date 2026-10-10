@@ -200,6 +200,7 @@ namespace CoopMaze
 		float Depth;           // the main piece's depth along the path, cm
 		float Helper;          // how the partner follows (see below), cm
 		float Span;            // (see below), cm
+		int32 BareFrom, BareTo;  // the path tiles the detail pass leaves bare, counted from this one (+ = onward)
 	};
 	// Wall:  a wall across the path. Behind it a Helper-high, Span-deep drop-down ledge: brace there to boost your partner over.
 	// Lift:  a cliff in the climb; its top runs on until the ramp meets it. In front, a Span-long lift rises to the top
@@ -209,11 +210,11 @@ namespace CoopMaze
 	// Gate:  a gate across the dip. A Height-high switch ledge before it (Helper along) and a floor plate Span past it
 	//        each hold it open.
 	const FMomentSpec Moments[] = {
-		// Name                Status                                                                                          Kind            Path Col Row  Station  Along  Height Depth  Helper  Span
-		{ TEXT("Boost wall"),    TEXT("Boost your partner over the wall. Then brace on the ledge behind it and boost them over."),      EMoment::Wall,  0, 24, 19, -350.f,    0.f, 250.f,  30.f,  120.f,  150.f },
-		{ TEXT("Winch lift"),    TEXT("Boost your partner up the cliff. Then they brace on the plate up there to lift you."),          EMoment::Lift,  1, 21,  7, -400.f,    0.f, 250.f,   0.f,    0.f,  200.f },
-		{ TEXT("Split tunnels"), TEXT("One of you in each tunnel. Boost each other over the blocks through the divider, in turn."),    EMoment::Split, 2, 33, 34, -800.f,    0.f, 250.f, 150.f,  400.f, 1000.f },
-		{ TEXT("Dip gate"),      TEXT("Boost your partner onto the ledge to open the gate. Go through and stand on the plate."),       EMoment::Gate,  3, 10,  0, -600.f,  150.f, 250.f,  40.f, -300.f,  200.f },
+		// Name                Status                                                                                          Kind            Path Col Row  Station  Along  Height Depth  Helper  Span    Bare
+		{ TEXT("Boost wall"),    TEXT("Boost your partner over the wall. Then brace on the ledge behind it and boost them over."),      EMoment::Wall,  0, 24, 19, -350.f,    0.f, 250.f,  30.f,  120.f,  150.f,  0, 0 },
+		{ TEXT("Winch lift"),    TEXT("Boost your partner up the cliff. Then they brace on the plate up there to lift you."),          EMoment::Lift,  1, 21,  7, -400.f,    0.f, 250.f,   0.f,    0.f,  200.f,  0, 1 },
+		{ TEXT("Split tunnels"), TEXT("One of you in each tunnel. Boost each other over the blocks through the divider, in turn."),    EMoment::Split, 2, 33, 34, -800.f,    0.f, 250.f, 150.f,  400.f, 1000.f, -2, 2 },
+		{ TEXT("Dip gate"),      TEXT("Boost your partner onto the ledge to open the gate. Go through and stand on the plate."),       EMoment::Gate,  3, 10,  0, -600.f,  150.f, 250.f,  40.f, -300.f,  200.f,  0, 1 },
 	};
 
 	FVector2D TileCenter(const FIntPoint& T)
@@ -1377,32 +1378,11 @@ namespace CoopMazeDetail
 	constexpr float StationClear = 130.f;   // round each player's spot at a station
 
 	/**
-	 * The co-op moments' tiles (CoopMaze::Moments in the mechanics pass). Their pieces use the whole 5 m width and their
-	 * boosts need the air up to MomentHeadroom, so these tiles get no dressing at all, and nothing hangs lower than
-	 * MomentHeadroom on the tiles next to them. Path is 0-3.
+	 * The co-op moments' pieces use the whole 5 m width and their boosts need the air up to MomentHeadroom, so their tiles
+	 * (MazeMomentTiles, from CoopMaze::Moments) get no dressing at all, and nothing hangs lower than MomentHeadroom on
+	 * the tiles next to them.
 	 */
-	struct FPathTile { int32 Path, Col, Row; };
-	const FPathTile MomentTiles[] = {
-		{ 0, 24, 19 },                                                                   // path 1: boost wall
-		{ 1, 21, 7 }, { 1, 21, 6 },                                                      // path 2: winch lift
-		{ 2, 31, 34 }, { 2, 32, 34 }, { 2, 33, 34 }, { 2, 34, 34 }, { 2, 35, 34 },       // path 3: split tunnels
-		{ 3, 10, 0 }, { 3, 10, -1 },                                                     // path 4: dip gate
-	};
 	constexpr float MomentHeadroom = 360.f;
-
-	/** 0 = a moment's tile, 1 = next to one (sides or corners), 2 = neither. */
-	int32 MomentDistance(int32 Path, const FIntPoint& At)
-	{
-		int32 Best = 2;
-		for (const FPathTile& M : MomentTiles)
-		{
-			if (M.Path == Path)
-			{
-				Best = FMath::Min(Best, FMath::Max(FMath::Abs(M.Col - At.X), FMath::Abs(M.Row - At.Y)));
-			}
-		}
-		return Best;
-	}
 
 	/** A smooth wave, -1..1, so a tunnel narrows and widens over a few tiles rather than tile by tile. */
 	float Wave(float S, float Seed)
@@ -1471,7 +1451,8 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 	WoodDark.Color = CoopCave::WoodDark;
 	FCoopMeshData BlockerMesh;
 	TArray<TArray<FVector>> BlockerHulls;
-	TArray<FTransform> RepoRocks;
+	TArray<FTransform> RepoRocks;          // wall, boulder and pillar rocks
+	TArray<FTransform> RepoCeilingRocks;   // DCeiling's: tinted like the maze's ceiling
 	int32 Colliders = 0;
 
 	auto Collide = [&](TArray<FVector>&& Hull)
@@ -1495,7 +1476,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			const FBox Bounds = RepoRockMesh->GetBoundingBox();
 			const FVector Scale = Size / Bounds.GetSize().ComponentMax(FVector(1.f));
 			const FVector Middle = FTransform(Rotation, Base).TransformPosition(FVector(0.f, 0.f, Size.Z * 0.5f));
-			RepoRocks.Add(FTransform(Rotation, Middle - Rotation.RotateVector(Bounds.GetCenter() * Scale), Scale));
+			(&Kind == &DCeiling ? RepoCeilingRocks : RepoRocks).Add(FTransform(Rotation, Middle - Rotation.RotateVector(Bounds.GetCenter() * Scale), Scale));
 		}
 		if (bCollides)
 		{
@@ -1595,6 +1576,20 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			}
 		}
 		return false;
+	};
+
+	// 0 = a co-op moment's tile, 1 = next to one (sides or corners), 2 = neither
+	auto MomentDistance = [this](int32 Path, const FIntPoint& At)
+	{
+		int32 Best = 2;
+		for (const FIntVector& M : MazeMomentTiles)
+		{
+			if (M.Z == Path)
+			{
+				Best = FMath::Min(Best, FMath::Max(FMath::Abs(M.X - At.X), FMath::Abs(M.Y - At.Y)));
+			}
+		}
+		return Best;
 	};
 
 	auto Neighbour = [&Cells](const FIntPoint& At, const FLevel& Level, const FIntPoint& Dir) -> const FLevel*
@@ -1992,7 +1987,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 						Hanging(Rand.FRandRange(0.f, 360.f)), true, true);
 				}
 			}
-			else if (bOpenUp && !bMouth)
+			else if (bOpenUp && !bMouth && !bNearMoment)
 			{
 				// Where the tunnel opens up, a lip of rock hangs over each way in, like an arch
 				for (int32 d = 0; d < 4; ++d)
@@ -2042,8 +2037,6 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		const FVector2D Middle2D(Middle);
 		const float Z = Room.Z * 100.f;
 		const float Ceiling = Z + RoomHeadroom;
-		const bool bHall = (Id == HallA || Id == HallB);
-		const int32 MidCol = (Room.C0 + Room.C1) / 2;
 		auto InRoom = [&Room](const FIntPoint& T) { return T.X >= Room.C0 && T.X <= Room.C1 && T.Y >= Room.R0 && T.Y <= Room.R1; };
 		auto RoomLevel = [&Cells, RoomIndex](const FIntPoint& T) -> const FLevel*
 		{
@@ -2099,10 +2092,17 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 				}
 			}
 		}
-		// Statues stand in the halls' corners and against the middle of their north and south walls (the style pass)
-		auto StatueTile = [&](const FIntPoint& T)
+		// HC's statues, against the halls' west and east walls (MazeStatueSpots: X, Y and radius)
+		auto NearStatue = [this](const FVector2D& P, float Radius)
 		{
-			return bHall && (T.Y == Room.R0 || T.Y == Room.R1) && (T.X == Room.C0 || T.X == Room.C1 || T.X == MidCol);
+			for (const FVector& S : MazeStatueSpots)
+			{
+				if (FVector2D::Distance(P, FVector2D(S.X, S.Y)) < S.Z + Radius)
+				{
+					return true;
+				}
+			}
+			return false;
 		};
 		auto Blocked = [&](const FVector2D& P, float Radius)
 		{
@@ -2120,8 +2120,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 					return true;
 				}
 			}
-			const FIntPoint T(FMath::RoundToInt(P.X / Tile) + OriginCol, OriginRow - FMath::RoundToInt(P.Y / Tile));
-			return NearStation(P, Z, Radius) || StatueTile(T) || (Id == Goal && FVector2D::Distance(P, Middle2D) < AltarClear + Radius)
+			return NearStation(P, Z, Radius) || NearStatue(P, Radius + 40.f) || (Id == Goal && FVector2D::Distance(P, Middle2D) < AltarClear + Radius)
 				|| NearFixture(FVector(P, Z + 150.f), 150.f + Radius);
 		};
 
@@ -2149,7 +2148,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 					{
 						FloorStone(E.At(Rand.FRandRange(120.f, 180.f), Rand.FRandRange(-180.f, 180.f)), T, *L, Rand.FRandRange(70.f, 140.f));
 					}
-					if (StatueTile(T) || NearFixture(FVector(E.At(WallFace, 0.f), Z + 150.f), 330.f))
+					if (NearStatue(E.At(WallFace, 0.f), 330.f) || NearFixture(FVector(E.At(WallFace, 0.f), Z + 150.f), 330.f))
 					{
 						continue;   // kept low: only pebbles and stones
 					}
@@ -2340,22 +2339,30 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 	{
 		Collision->SetHiddenInGame(true);
 	}
-	if (RepoRockMesh && RepoRocks.Num() > 0)
+	// The repo rocks, tinted like the maze's own walls and ceiling (MI_Stylized_Rock's Tint)
+	for (const bool bCeiling : { false, true })
 	{
+		const TArray<FTransform>& Transforms = bCeiling ? RepoCeilingRocks : RepoRocks;
+		if (!RepoRockMesh || Transforms.IsEmpty())
+		{
+			continue;
+		}
 		UInstancedStaticMeshComponent* Rocks = NewObject<UInstancedStaticMeshComponent>(this);
 		Rocks->SetupAttachment(Root);
 		Rocks->SetMobility(EComponentMobility::Static);
 		Rocks->SetStaticMesh(RepoRockMesh);
 		if (RepoRockMaterial)
 		{
-			Rocks->SetMaterial(0, RepoRockMaterial);
+			UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(RepoRockMaterial, this);
+			Material->SetVectorParameterValue(TEXT("Tint"), bCeiling ? MazeCeilingRocks.Color : MazeWallRocks.Color);
+			Rocks->SetMaterial(0, Material);
 		}
 		Rocks->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		Rocks->SetCastShadow(false);
 		Rocks->RegisterComponent();
-		Rocks->AddInstances(RepoRocks, false);
+		Rocks->AddInstances(Transforms, false);
 	}
-	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze detail built, %d triangles in %d meshes, %d colliders, %d repo rocks"), Triangles, Meshes, Colliders, RepoRocks.Num());
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze detail built, %d triangles in %d meshes, %d colliders, %d repo rocks"), Triangles, Meshes, Colliders, RepoRocks.Num() + RepoCeilingRocks.Num());
 }
 
 void ACoopPlayground::BuildMaze()
@@ -2890,6 +2897,13 @@ void ACoopPlayground::BuildMaze()
 			Spot.Forward = WorldDir(Run);
 			Spot.Right = FVector(-Spot.Forward.Y, Spot.Forward.X, 0.f);
 			Spot.Origin = FVector(TileCenter(At), Seg.Z[i]);
+			for (int32 k = i + Moment.BareFrom; k <= i + Moment.BareTo; ++k)
+			{
+				if (Seg.Tiles.IsValidIndex(k))
+				{
+					MazeMomentTiles.Emplace(Seg.Tiles[k].X, Seg.Tiles[k].Y, Moment.Path);
+				}
+			}
 			for (int32 k = i - 2; k <= i + 2; ++k)
 			{
 				const int32 j = FMath::Clamp(k, 0, Seg.Tiles.Num() - 1);
@@ -2914,6 +2928,11 @@ void ACoopPlayground::BuildMaze()
 	if (MomentSpots.Num() == UE_ARRAY_COUNT(Moments))
 	{
 		BuildMoments(MomentSpots);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Maze: found %d of %d co-op moments' tiles, so none of the moments were built"),
+			MomentSpots.Num(), int32(UE_ARRAY_COUNT(Moments)));
 	}
 
 	// 7. The relic: a gold idol on an altar in the middle of the chamber, facing the way in (south).
@@ -2971,6 +2990,27 @@ void ACoopPlayground::BuildMaze()
 		RelicLight->RegisterComponent();
 	}
 
+	// HC's statues in both halls, the big one on the west wall and the small one on the east, each beside a wall torch
+	// so it's lit. Those walls lie between path mouths, and the statue stands well inside its tile, clear of them.
+	// They go in before the detail pass, which keeps its rocks clear of them (MazeStatueSpots).
+	constexpr float StatueBesideTorch = 130.f;   // along the wall from the torch
+	for (const TPair<FIntPoint, FIntPoint>& Torch : HallSideTorches)
+	{
+		UStaticMesh* Statue = (Torch.Value.X < 0) ? RepoStatueMesh : RepoStatueSmallMesh;
+		const ERoom Hall = (Torch.Key.Y >= Rooms[HallA].R0) ? HallA : HallB;
+		const FLevel* Level = FindLevel(Torch.Key, RoomOwner + Hall);
+		if (!Statue || !Level)
+		{
+			continue;
+		}
+		const FVector Out = WorldDir(Torch.Value);
+		const FVector Along(-Out.Y, Out.X, 0.f);
+		const FVector Extent = Statue->GetBounds().BoxExtent;
+		const FVector At = FVector(TileCenter(Torch.Key), Level->Z) + Out * (Tile * 0.5f - FMath::Max(Extent.X, Extent.Y) - 40.f) + Along * StatueBesideTorch;
+		AddRepoProp(Statue, At, (-Out).Rotation().Yaw, true);
+		MazeStatueSpots.Emplace(At.X, At.Y, FMath::Max(Extent.X, Extent.Y));
+	}
+
 	// 7b. The detail pass: rocks, rubble, timber and crystals that break up the tunnels and rooms (coop.Maze.Detail)
 	BuildMazeDetail(Cells, Glow);
 
@@ -2993,25 +3033,6 @@ void ACoopPlayground::BuildMaze()
 				break;
 			}
 		}
-	}
-
-	// HC's statues in both halls, the big one on the west wall and the small one on the east, each beside a wall torch
-	// so it's lit. Those walls lie between path mouths, and the statue stands well inside its tile, clear of them.
-	constexpr float StatueBesideTorch = 130.f;   // along the wall from the torch
-	for (const TPair<FIntPoint, FIntPoint>& Torch : HallSideTorches)
-	{
-		UStaticMesh* Statue = (Torch.Value.X < 0) ? RepoStatueMesh : RepoStatueSmallMesh;
-		const ERoom Hall = (Torch.Key.Y >= Rooms[HallA].R0) ? HallA : HallB;
-		const FLevel* Level = FindLevel(Torch.Key, RoomOwner + Hall);
-		if (!Statue || !Level)
-		{
-			continue;
-		}
-		const FVector Out = WorldDir(Torch.Value);
-		const FVector Along(-Out.Y, Out.X, 0.f);
-		const FVector Extent = Statue->GetBounds().BoxExtent;
-		const FVector At = FVector(TileCenter(Torch.Key), Level->Z) + Out * (Tile * 0.5f - FMath::Max(Extent.X, Extent.Y) - 40.f) + Along * StatueBesideTorch;
-		AddRepoProp(Statue, At, (-Out).Rotation().Yaw, true);
 	}
 
 	// 8. Repo rocks as instanced meshes (one draw each): walls and ceiling, plus one pair per door step,
