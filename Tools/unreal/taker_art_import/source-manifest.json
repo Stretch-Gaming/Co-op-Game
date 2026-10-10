@@ -1,0 +1,565 @@
+{
+  "status": "source_warning_topology_editor_pending",
+  "source_pr": 121,
+  "source_commit": "60ae5e0250e790f943064f54e400574e8285463c",
+  "files": [
+    {
+      "path": "SourceArt/PG/PG-A7/build_taker.py",
+      "bytes": 19671,
+      "sha256": "3b9a6cd56bf3e80f47e3e8f1477dd5101d41def5946788bb078e087b4df0e83a"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/metrics.json",
+      "bytes": 2150,
+      "sha256": "17e4da2aba3e7b2ddf8d74b351119c10e3bf4fae437a05479ffea1e7d4ba5793"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/PG-A7_Taker.blend",
+      "bytes": 2715084,
+      "sha256": "b0f5fe619ba0873a9513691ec795f6c4aad8cef90e2bab3cce985c28c6d3057b"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/previews/SM_Taker_lunge.png",
+      "bytes": 697643,
+      "sha256": "4c410c43ac560926b51c5f57114de7979616dde89a9401e5514c50a9f2b3233d"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/previews/SM_Taker_preview.png",
+      "bytes": 916381,
+      "sha256": "5d2c5d8716d2376f1e0e0e095522cae01c284f424c2c31b53749b64a9f70d610"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/previews/SM_Taker_read_15m.png",
+      "bytes": 489995,
+      "sha256": "de3acaee1d34866cc68d56f3b72b0fba155368dc0198edf9191c502a52080183"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/previews/SM_TakerArm_in_wall.png",
+      "bytes": 811486,
+      "sha256": "c16613c58c5f0b5ac30d7db80917913f6fc75149167cdd2c2bc6b153db1e14a6"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/previews/SM_TakerArm_preview.png",
+      "bytes": 839132,
+      "sha256": "738985294d37af9f2d5444f86f99482762d500c863ae140ea125210b2362a149"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/README.md",
+      "bytes": 6148,
+      "sha256": "0f939c52f5ec96fd01b400632547ff2c15805ad5f1e04ffbe8bff94600ff6b2e"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/SM_Taker.fbx",
+      "bytes": 446412,
+      "sha256": "1a8ff242291fb2549e85304bfc4fa224fb361e495237d97a4b1c7fbad08436de"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/SM_TakerArm.fbx",
+      "bytes": 193660,
+      "sha256": "8849ab3b937075852f804d079dfc14fe116cdedca0b9d88fe1a971f55a7c1a87"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/taker_look.py",
+      "bytes": 6177,
+      "sha256": "471be101e1d78e867c158bd52a07063d18a2194d4e8894da657e3b9478ac6feb"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/taker_shapes.py",
+      "bytes": 19521,
+      "sha256": "1875b5942069d571ccc0a6276b9c62a90856b6b05cf4e0987135ecab076eb69e"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/textures/T_Taker_BaseColor.png",
+      "bytes": 390814,
+      "sha256": "5b6bc6b47196db1887cba0a3c7783b1c532e9c7912f420acf2632f7d9053ed50"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/textures/T_Taker_ORM.png",
+      "bytes": 819831,
+      "sha256": "4fa39d9860af4f16d7e03248f33d150c117fd192c02ba4054e0212ef79faae09"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/textures/T_TakerArm_BaseColor.png",
+      "bytes": 250131,
+      "sha256": "03f54d7014655bf6dd652dcee52c1592c7b974214fd5603a28ed33cd3e220b17"
+    },
+    {
+      "path": "SourceArt/PG/PG-A7/textures/T_TakerArm_ORM.png",
+      "bytes": 537651,
+      "sha256": "251550bd0afa87d8cc558f6380430f9e97d505cda6cb3b882567049f86456b44"
+    }
+  ],
+  "meshes": {
+    "SM_Taker": {
+      "fbx_version": 7400,
+      "mesh_count": 1,
+      "vertex_count": 6604,
+      "polygon_count": 13199,
+      "triangles": 13199,
+      "all_triangles": true,
+      "material_slots": [
+        "MI_Taker_Body",
+        "MI_Taker_Eyes"
+      ],
+      "has_normals": true,
+      "uv_layer_count": 1,
+      "raw_vertex_bounds_min": [
+        -0.31035497784614563,
+        -0.6072547435760498,
+        0.0
+      ],
+      "raw_vertex_bounds_max": [
+        1.4549281597137451,
+        0.6929900646209717,
+        2.663696527481079
+      ],
+      "raw_vertex_dimensions": [
+        1.7652831375598907,
+        1.3002448081970215,
+        2.663696527481079
+      ],
+      "global_settings": {
+        "UpAxis": 2,
+        "UpAxisSign": 1,
+        "FrontAxis": 1,
+        "FrontAxisSign": 1,
+        "CoordAxis": 0,
+        "CoordAxisSign": -1,
+        "UnitScaleFactor": 100.0
+      },
+      "model_transforms": [
+        {
+          "Lcl Rotation": [
+            0.0,
+            -0.0,
+            179.999991348578
+          ]
+        }
+      ],
+      "material_properties": {
+        "MI_Taker_Body": {
+          "DiffuseColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "EmissiveColor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "EmissiveFactor": [
+            0.0
+          ],
+          "AmbientColor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "AmbientFactor": [
+            0.0
+          ],
+          "BumpFactor": [
+            0.0
+          ],
+          "SpecularColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "SpecularFactor": [
+            0.25
+          ],
+          "Shininess": [
+            25.0
+          ],
+          "ShininessExponent": [
+            25.0
+          ],
+          "ReflectionColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "ReflectionFactor": [
+            0.0
+          ]
+        },
+        "MI_Taker_Eyes": {
+          "DiffuseColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "EmissiveColor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "EmissiveFactor": [
+            8.0
+          ],
+          "AmbientColor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "AmbientFactor": [
+            0.0
+          ],
+          "BumpFactor": [
+            0.0
+          ],
+          "SpecularColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "SpecularFactor": [
+            0.25
+          ],
+          "Shininess": [
+            25.0
+          ],
+          "ShininessExponent": [
+            25.0
+          ],
+          "ReflectionColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "ReflectionFactor": [
+            0.0
+          ]
+        }
+      },
+      "boundary_edges": 2,
+      "non_manifold_edges": 3,
+      "loose_vertices": 0,
+      "edge_anomalies": [
+        {
+          "indices": [
+            670,
+            671
+          ],
+          "incident_faces": 1,
+          "points_cm": [
+            [
+              -5.616027,
+              0.230181,
+              264.228916
+            ],
+            [
+              -5.046858,
+              0.168486,
+              264.336705
+            ]
+          ]
+        },
+        {
+          "indices": [
+            661,
+            670
+          ],
+          "incident_faces": 1,
+          "points_cm": [
+            [
+              -5.181007,
+              -0.025379,
+              263.880777
+            ],
+            [
+              -5.616027,
+              0.230181,
+              264.228916
+            ]
+          ]
+        },
+        {
+          "indices": [
+            661,
+            671
+          ],
+          "incident_faces": 3,
+          "points_cm": [
+            [
+              -5.181007,
+              -0.025379,
+              263.880777
+            ],
+            [
+              -5.046858,
+              0.168486,
+              264.336705
+            ]
+          ]
+        }
+      ],
+      "socket_models": {
+        "SOCKET_Eyes": {
+          "Lcl Translation": [
+            0.6404595375061035,
+            -8.462618161786395e-09,
+            2.3232977390289307
+          ]
+        },
+        "SOCKET_ReachHand": {
+          "Lcl Translation": [
+            1.0989238023757935,
+            -0.44009777903556824,
+            1.635275959968567
+          ]
+        }
+      },
+      "manifold_pass": false
+    },
+    "SM_TakerArm": {
+      "fbx_version": 7400,
+      "mesh_count": 1,
+      "vertex_count": 2752,
+      "polygon_count": 5500,
+      "triangles": 5500,
+      "all_triangles": true,
+      "material_slots": [
+        "MI_TakerArm_Body"
+      ],
+      "has_normals": true,
+      "uv_layer_count": 1,
+      "raw_vertex_bounds_min": [
+        -0.3633941411972046,
+        -0.882070779800415,
+        -0.6032347083091736
+      ],
+      "raw_vertex_bounds_max": [
+        2.490957260131836,
+        0.7509449124336243,
+        0.6193704605102539
+      ],
+      "raw_vertex_dimensions": [
+        2.8543514013290405,
+        1.6330156922340393,
+        1.2226051688194275
+      ],
+      "global_settings": {
+        "UpAxis": 2,
+        "UpAxisSign": 1,
+        "FrontAxis": 1,
+        "FrontAxisSign": 1,
+        "CoordAxis": 0,
+        "CoordAxisSign": -1,
+        "UnitScaleFactor": 100.0
+      },
+      "model_transforms": [
+        {
+          "Lcl Rotation": [
+            0.0,
+            -0.0,
+            179.999991348578
+          ]
+        }
+      ],
+      "material_properties": {
+        "MI_TakerArm_Body": {
+          "DiffuseColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "EmissiveColor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "EmissiveFactor": [
+            0.0
+          ],
+          "AmbientColor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "AmbientFactor": [
+            0.0
+          ],
+          "BumpFactor": [
+            0.0
+          ],
+          "SpecularColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "SpecularFactor": [
+            0.25
+          ],
+          "Shininess": [
+            25.0
+          ],
+          "ShininessExponent": [
+            25.0
+          ],
+          "ReflectionColor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "ReflectionFactor": [
+            0.0
+          ]
+        }
+      },
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "edge_anomalies": [],
+      "socket_models": {
+        "SOCKET_Palm": {
+          "Lcl Translation": [
+            1.9443081617355347,
+            0.03807796165347099,
+            0.08622288703918457
+          ]
+        }
+      },
+      "manifold_pass": true
+    }
+  },
+  "textures": {
+    "T_Taker_BaseColor.png": {
+      "width": 1024,
+      "height": 1024,
+      "bit_depth": 8,
+      "color_type": 2
+    },
+    "T_Taker_ORM.png": {
+      "width": 1024,
+      "height": 1024,
+      "bit_depth": 8,
+      "color_type": 2
+    },
+    "T_TakerArm_BaseColor.png": {
+      "width": 1024,
+      "height": 1024,
+      "bit_depth": 8,
+      "color_type": 2
+    },
+    "T_TakerArm_ORM.png": {
+      "width": 1024,
+      "height": 1024,
+      "bit_depth": 8,
+      "color_type": 2
+    }
+  },
+  "author_report": {
+    "SM_Taker": {
+      "triangles": 13200,
+      "dimensions_cm": [
+        176.5,
+        130.0,
+        266.4
+      ],
+      "bounds_cm": [
+        [
+          -31.0,
+          145.5
+        ],
+        [
+          -60.7,
+          69.3
+        ],
+        [
+          0.0,
+          266.4
+        ]
+      ],
+      "pivot": "On the floor under the middle of the feet; also the lunge pivot. Faces +X. Lunge: pitch forward about it (negative pitch in Unreal) while moving forward.",
+      "uv": "UV0: one packed smart-project atlas, shared by both slots",
+      "health": {
+        "non_manifold_edges": 0,
+        "boundary_edges": 0,
+        "loose_verts": 0
+      },
+      "material_slots": [
+        "0 Body (shadow family)",
+        "1 Eyes (ghost white)"
+      ],
+      "eye_triangles": 200,
+      "sockets_unreal_cm": {
+        "Eyes": {
+          "location": [
+            64.0,
+            0.0,
+            232.3
+          ],
+          "use": "Between the eyes: an eye glow light or the look-at point."
+        },
+        "ReachHand": {
+          "location": [
+            109.9,
+            44.0,
+            163.5
+          ],
+          "use": "Palm of the forward-reaching hand: where a lunge grabs."
+        }
+      },
+      "triangles_exported": 13199
+    },
+    "SM_TakerArm": {
+      "triangles": 5500,
+      "dimensions_cm": [
+        285.4,
+        163.3,
+        122.3
+      ],
+      "bounds_cm": [
+        [
+          -36.3,
+          249.1
+        ],
+        [
+          -88.2,
+          75.1
+        ],
+        [
+          -60.3,
+          61.9
+        ]
+      ],
+      "pivot": "Where the arm leaves the wall. The wall faces +X; the root is buried behind it (X < 0); the open hand reaches toward the victim along +X.",
+      "uv": "UV0: one packed smart-project atlas",
+      "health": {
+        "non_manifold_edges": 0,
+        "boundary_edges": 0,
+        "loose_verts": 0
+      },
+      "material_slots": [
+        "0 Body (shadow family)"
+      ],
+      "sockets_unreal_cm": {
+        "Palm": {
+          "location": [
+            194.4,
+            -3.8,
+            8.6
+          ],
+          "use": "Palm of the open hand: attach or aim the victim here."
+        }
+      },
+      "triangles_exported": 5500
+    }
+  },
+  "license": {
+    "classification": "original team Blender modeling; no third-party assets or generator",
+    "public_redistribution": true,
+    "attribution_required": false,
+    "evidence": "SourceArt/PG/PG-A7/README.md final paragraph; PR121 body"
+  },
+  "pending": [
+    "UE scale/facing/pivot/socket validation",
+    "Unreal material/texture binding readback",
+    "dark cave/split-screen appearance",
+    "Mac fallback inspection",
+    "No gameplay or taking/chase integration performed"
+  ]
+}

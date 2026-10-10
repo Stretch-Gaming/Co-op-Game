@@ -11,3 +11,5 @@ Door API: `/Game/Puzzles/EnvironmentConnection/BP_EnvironmentDoor`; actor tag`Co
 Editor-only assembly/verification scripts live here; runtime remains Blueprint-only. Run scripts through the guarded `playable_game/run_environment.py` wrapper. Generation order: build_meshes, build_door, assemble_map, center_door, remove_invalid_volume, quiet_preview. Committed source and maps are ready to open without regenerating.
 
 Validation: two joining clients physically walk from room to maze and back through native movement/E input; both retain the same world/roster. Both local host players also physically crossed the doorway and fork; the host walked back. Presentation is checked separately. Initial approach positions are explicit fixtures; the passage itself is walked, not teleported.
+
+Current scenery: the PR122 source is adopted privately under Refresh_fd40cdeb; see Tools/unreal/connection_refresh and SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb. Original source/build scripts here describe the historic PR124 geometry and refuse to overwrite the refreshed map. The door and the room are preserved; no trap placements are adopted into the walk-through preview.

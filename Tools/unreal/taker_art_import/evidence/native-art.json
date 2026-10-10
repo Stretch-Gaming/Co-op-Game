@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "verification": {
+    "passed": true,
+    "assets": {
+      "SM_Taker": {
+        "path": "/Game/Player/Art/Taker/SM_Taker.SM_Taker",
+        "bounds_min_cm": [
+          -31.035497665405273,
+          -69.29900360107422,
+          0.0
+        ],
+        "bounds_max_cm": [
+          145.49281311035156,
+          60.72548294067383,
+          266.3696594238281
+        ],
+        "source_triangles": 13199,
+        "nanite_triangles": 13199,
+        "fallback_triangles": 2440,
+        "sockets": {
+          "Eyes": [
+            64.04595375060951,
+            1.051693177389179e-05,
+            232.329773902893
+          ],
+          "ReachHand": [
+            109.89237359228655,
+            44.00979449684409,
+            163.52759599685666
+          ]
+        },
+        "material_slots": [
+          "MI_Taker_Body",
+          "MI_Taker_Eyes"
+        ],
+        "collision": 0,
+        "nanite": true
+      },
+      "SM_TakerArm": {
+        "path": "/Game/Player/Art/Taker/SM_TakerArm.SM_TakerArm",
+        "bounds_min_cm": [
+          -36.339412689208984,
+          -75.09449005126953,
+          -60.32347106933594
+        ],
+        "bounds_max_cm": [
+          249.09573364257812,
+          88.20707702636719,
+          61.93704605102539
+        ],
+        "source_triangles": 5500,
+        "nanite_triangles": 5500,
+        "fallback_triangles": 1124,
+        "sockets": {
+          "Palm": [
+            194.43081674851254,
+            -3.8077668071106237,
+            8.622288703918455
+          ]
+        },
+        "material_slots": [
+          "MI_TakerArm_Body"
+        ],
+        "collision": 0,
+        "nanite": true
+      },
+      "T_Taker_BaseColor": {
+        "srgb": true,
+        "compression": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      "T_Taker_ORM": {
+        "srgb": false,
+        "compression": "<TextureCompressionSettings.TC_MASKS: 2>",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      "T_TakerArm_BaseColor": {
+        "srgb": true,
+        "compression": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      "T_TakerArm_ORM": {
+        "srgb": false,
+        "compression": "<TextureCompressionSettings.TC_MASKS: 2>",
+        "size": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "known_warning": "Delivered body has2 boundary edges/one3-face edge near top of head. No collision; source left unchanged.",
+    "pending": [
+      "Cave/split-screen render and Mac fallback visual check",
+      "Placement/behavior integration separately authorized"
+    ]
+  },
+  "saved": true,
+  "parent_sha256": "ad6ad079a5d2ef794bf80a68818ba10b768ee8d845038add2581c3d4a43f2855",
+  "source_manifest_sha256": "d2581c9340e1a78d2898a1b5d790ddff96a064c1e181762ac90cee485dbd6664",
+  "asset_sha256": {
+    "SM_Taker": "2d0a541c1ca8e3ee5c04f249e27bcce153d235bab5f19ece260aee231e6bb110",
+    "SM_TakerArm": "21c39a7cea8741816e9e108be165c073584085a5a5700bb809e20767fc140ace",
+    "T_Taker_BaseColor": "3e29fa03c8504376d662a53f2e21bfc4366316f50506a520592bd23eec4f82c1",
+    "T_Taker_ORM": "f61ae50249fd537545600b18191e0fe47ddd5e417d51b21368c2dcf33ec481b4",
+    "T_TakerArm_BaseColor": "935d737cf558c8712d9251a6b39c8e5084f98ee9a1121f32dbbc77de86dbc23b",
+    "T_TakerArm_ORM": "cb0902ea4519127d4161af4fef7e0403d3af8e88b4526923381fed2a9401d328",
+    "MI_Taker_Body": "ec68a634c8b4e48cb2adee293be6e64b5a61dd4e8d356e36196ab9988a692cbe",
+    "MI_TakerArm_Body": "36059f7aab1e806f74950c094aa74003caf8803680452b1ce1555e07386a7e4d",
+    "M_TakerEyes": "a74c67c9cb7f6fbe6f97d7a901e52c89dfc5e2bf2cdcd86907136d1239d8047e",
+    "MI_Taker_Eyes": "8f970da7819a717b8b8f4b82be74ec4bd79cea2f012da1f5dc0d6f9b7787c4c4"
+  },
+  "paths": [
+    "/Game/Player/Art/Taker/SM_Taker",
+    "/Game/Player/Art/Taker/SM_TakerArm",
+    "/Game/Player/Art/Taker/T_Taker_BaseColor",
+    "/Game/Player/Art/Taker/T_Taker_ORM",
+    "/Game/Player/Art/Taker/T_TakerArm_BaseColor",
+    "/Game/Player/Art/Taker/T_TakerArm_ORM",
+    "/Game/Player/Art/Taker/MI_Taker_Body",
+    "/Game/Player/Art/Taker/MI_TakerArm_Body",
+    "/Game/Player/Art/Taker/M_TakerEyes",
+    "/Game/Player/Art/Taker/MI_Taker_Eyes"
+  ]
+}
