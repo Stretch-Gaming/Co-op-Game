@@ -13,7 +13,7 @@
 - `Source/CoopProto/CoopInput.*`: **all** controls, built in C++ with Enhanced Input
 - `Source/CoopProto/CoopTether.*`: rope between players (constraint, drag, reel, respawn, visual). Off by default.
 - `Source/CoopProto/CoopTuning.*`: every feel number as a live console variable (`coop.*`)
-- `Source/CoopProto/CoopPlayground.*`: the play area: a self-building 25 m x 25 m torch-lit mine cave with spots to jump to
+- `Source/CoopProto/CoopPlayground.*`: the play area: a self-building 25 m x 25 m torch-lit mine cave with spots to jump to, and the maze north of it (layout table `CoopMaze` at the top of the .cpp; `maze_overview.png` pictures it)
 - `Source/CoopProto/CoopMeshKit.*`: faceted shapes built in code (rocks, crystals, flames) for procedural mesh components
 - `Source/CoopProto/CoopTestCourse.*`: the old co-op course, parked (not spawned)
 

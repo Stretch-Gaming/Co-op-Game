@@ -4,6 +4,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Components/ExponentialHeightFogComponent.h"
+#include "Components/InstancedStaticMeshComponent.h"
 #include "Components/PointLightComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkyAtmosphereComponent.h"
@@ -17,6 +18,7 @@
 #include "Materials/Material.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "Materials/MaterialInterface.h"
+#include "Misc/PackageName.h"
 #include "ProceduralMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
 
@@ -44,6 +46,10 @@ namespace CoopCave
 	const FVector CrystalCorner(1010.f, -1010.f, 0.f);
 	const FVector StandingTorchA(500.f, -90.f, 0.f);
 	const FVector StandingTorchB(-720.f, -430.f, 0.f);
+
+	// The door to the maze in the north wall, between the timber posts (the maze's tile column 23)
+	constexpr float DoorMinX = 250.f;
+	constexpr float DoorMaxX = 750.f;
 
 	// Surface colors (linear)
 	const FLinearColor Sand(0.20f, 0.17f, 0.16f);
@@ -73,6 +79,172 @@ namespace CoopCave
 	const FColor FlameTip(255, 110, 25);
 	const FColor CrystalRoot(10, 90, 100);
 	const FColor CrystalTip(150, 255, 235);
+}
+
+namespace CoopMaze
+{
+	// The maze north of the cave, on a grid of 5 m tiles. Tile (Col, Row) is centred on
+	// X = (Col - 22) * 5 m, Y = (41 - Row) * 5 m: the cave is cols 20-24, rows 39-43, and rows count down going north.
+	// Heights in the tables are metres; everything else is cm. maze_overview.png in the project folder pictures this layout.
+	constexpr float Tile = 500.f;
+	constexpr int32 OriginCol = 22;
+	constexpr int32 OriginRow = 41;
+	constexpr float Free = -1000.f;            // waypoint height: work it out from the waypoints either side
+	constexpr float CorridorHeadroom = 550.f;
+	constexpr float RoomHeadroom = 750.f;
+	constexpr float Slab = 60.f;               // floor and bridge deck thickness
+	constexpr float CeilingThickness = 300.f;
+	constexpr float MaxRampStep = 205.f;       // most a floor rises from one tile to the next: about 22 degrees
+	constexpr int32 TorchEvery = 6;            // tiles between torches along a path (30 m)
+
+	enum ERoom : int32 { Hub, Door, Fork, HallA, HallB, Goal, RoomCount };
+	struct FRoomSpec { const TCHAR* Name; int32 C0, R0, C1, R1; float Z; };
+	const FRoomSpec Rooms[RoomCount] = {
+		{ TEXT("Start cave"),      20, 39, 24, 43,  0.f },   // the cave itself, built by the rest of this file
+		{ TEXT("Door"),            23, 36, 23, 38,  0.f },
+		{ TEXT("Fork"),            17, 33, 27, 35,  0.f },
+		{ TEXT("Meeting point A"), 18, 21, 26, 24, -3.f },   // sunken hall
+		{ TEXT("Meeting point B"), 18,  9, 26, 11,  4.f },   // raised hall
+		{ TEXT("Relic chamber"),   18, -8, 26, -5,  6.f },
+	};
+	// Each path has three segments: fork to hall A, hall A to hall B, hall B to the relic chamber.
+	const ERoom SegmentRooms[] = { Fork, HallA, HallB, Goal };
+
+	/** A corner (or a fixed height) along a path. Consecutive waypoints share a row or a column. */
+	struct FWaypoint { int32 Col, Row; float Z; };
+	struct FTileRef { int32 Col, Row; };
+	struct FPathSpec
+	{
+		FColor Color;
+		TArray<TArray<FWaypoint>> Segments;
+		TArray<TArray<FTileRef>> DeadEnds;   // each starts on a tile of the path and keeps its height
+	};
+
+	/**
+	 * Where two paths cross, the higher one is a bridge over the lower (at least 6 m apart).
+	 * Ramps only go on straight runs: corners, bridges, path ends and dead-end junctions stay flat.
+	 */
+	TArray<FPathSpec> MakePaths()
+	{
+		const float F = Free;
+		return {
+			// Path 1 (orange): over path 3, down into a trench under path 2, up to hall B, under path 2 again
+			{ FColor(232, 121, 74), {
+				{ {25,32,0}, {25,30,F}, {32,30,F}, {32,28,5}, {32,23,F}, {27,23,-3} },
+				{ {24,20,-3}, {24,18,-3}, {24,15,F}, {15,15,F}, {15,13,4}, {15,11,F}, {17,11,4} },
+				{ {23,8,4}, {23,3,4}, {23,1,F}, {20,1,F}, {20,-4,6} } },
+			  { { {20,0}, {14,0}, {14,3} } } },
+			// Path 2 (yellow): under path 4, over path 1, under path 3, then up onto the highest bridge over path 1
+			{ FColor(224, 189, 69), {
+				{ {19,32,0}, {19,30,F}, {12,30,F}, {12,28,-1}, {12,23,F}, {17,23,-3} },
+				{ {18,20,-3}, {18,18,F}, {24,18,3}, {29,18,F}, {29,13,4}, {29,11,F}, {27,11,4} },
+				{ {21,8,4}, {21,3,F}, {23,3,10}, {25,3,F}, {25,-4,6} } },
+			  { { {12,25}, {15,25} } } },
+			// Path 3 (teal, crystal-lit): under path 1, a long climb over path 2, a +10 m lookout
+			{ FColor(63, 201, 184), {
+				{ {28,34,0}, {38,34,F}, {38,28,F}, {32,28,-1}, {24,28,F}, {24,25,-3} },
+				{ {27,21,-3}, {36,21,F}, {36,13,F}, {29,13,10}, {24,13,F}, {24,12,4} },
+				{ {26,8,4}, {26,6,F}, {34,6,10}, {34,-6,F}, {27,-6,6} } },
+			  { { {38,31}, {41,31} }, { {34,0}, {38,0} } } },
+			// Path 4 (purple, the long way): over path 2, down to hall A, under path 1, a dip before the end
+			{ FColor(165, 140, 240), {
+				{ {16,34,0}, {4,34,F}, {4,28,F}, {12,28,5}, {20,28,F}, {20,25,-3} },
+				{ {17,21,-3}, {8,21,F}, {8,13,F}, {15,13,-2}, {20,13,F}, {20,12,4} },
+				{ {18,8,4}, {18,6,F}, {10,6,F}, {10,0,0}, {10,-6,F}, {17,-6,6} } },
+			  { { {4,31}, {1,31} }, { {8,17}, {13,17} } } },
+		};
+	}
+
+	FVector2D TileCenter(const FIntPoint& T)
+	{
+		return FVector2D((T.X - OriginCol) * Tile, (OriginRow - T.Y) * Tile);
+	}
+
+	/** Tile-grid direction to world direction (rows count down going north, +Y). */
+	FVector WorldDir(const FIntPoint& D)
+	{
+		return FVector(D.X, -D.Y, 0.f);
+	}
+
+	FVector RoomCenter(ERoom Room)
+	{
+		const FRoomSpec& R = Rooms[Room];
+		return FVector(((R.C0 + R.C1) * 0.5f - OriginCol) * Tile, (OriginRow - (R.R0 + R.R1) * 0.5f) * Tile, R.Z * 100.f);
+	}
+
+	/** One walkable floor on a tile. A tile under a bridge has two. */
+	struct FLevel
+	{
+		int32 Owner = 0;                   // 0-3 = a path, RoomOwner + ERoom = a room
+		float Z = 0.f;                     // floor height at the tile centre
+		float FloorMin = 0.f;              // lowest and highest floor point on the tile (ramps)
+		float FloorMax = 0.f;
+		float Headroom = CorridorHeadroom;
+		int32 LinkOwner = INDEX_NONE;      // a path's end tile: the room it opens into
+		bool bBridge = false;              // the upper path at a crossing
+		bool bUnderBridge = false;         // the lower path at a crossing
+	};
+	constexpr int32 RoomOwner = 100;
+
+	bool Connected(const FLevel& A, const FLevel& B)
+	{
+		const float Rise = FMath::Abs(A.Z - B.Z);
+		if (A.Owner == B.Owner)
+		{
+			return Rise <= MaxRampStep;
+		}
+		if (A.LinkOwner == B.Owner || B.LinkOwner == A.Owner)
+		{
+			return Rise < 1.f;
+		}
+		return A.Owner >= RoomOwner && B.Owner >= RoomOwner && Rise < 1.f;   // the door opens into the cave and the fork
+	}
+
+	/** A solid box as triangles plus a convex collision shape. */
+	void AddBlock(FCoopMeshData& Mesh, TArray<TArray<FVector>>& Hulls, const FTransform& Frame, const FVector& Half)
+	{
+		TArray<FVector> Corners;
+		for (int32 i = 0; i < 8; ++i)
+		{
+			Corners.Add(Frame.TransformPosition(FVector((i & 1) ? Half.X : -Half.X, (i & 2) ? Half.Y : -Half.Y, (i & 4) ? Half.Z : -Half.Z)));
+		}
+		for (int32 Axis = 0; Axis < 3; ++Axis)
+		{
+			for (const float Sign : { -1.f, 1.f })
+			{
+				// The face's four corners, in bit order: (-,-), (+,-), (-,+), (+,+) along the other two axes
+				int32 Face[4];
+				int32 Count = 0;
+				for (int32 i = 0; i < 8; ++i)
+				{
+					if ((((i >> Axis) & 1) == 1) == (Sign > 0.f))
+					{
+						Face[Count++] = i;
+					}
+				}
+				const FVector Normal = Frame.TransformVectorNoScale(FVector(Axis == 0 ? Sign : 0.f, Axis == 1 ? Sign : 0.f, Axis == 2 ? Sign : 0.f));
+				Mesh.AddTriangle(Corners[Face[0]], Corners[Face[1]], Corners[Face[3]], Normal);
+				Mesh.AddTriangle(Corners[Face[0]], Corners[Face[3]], Corners[Face[2]], Normal);
+			}
+		}
+		Hulls.Add(MoveTemp(Corners));
+	}
+
+	FColor Scaled(const FColor& C, float S)
+	{
+		return FColor(FMath::Clamp(FMath::RoundToInt(C.R * S), 0, 255), FMath::Clamp(FMath::RoundToInt(C.G * S), 0, 255), FMath::Clamp(FMath::RoundToInt(C.B * S), 0, 255));
+	}
+
+	FColor Lighter(const FColor& C)
+	{
+		return FColor((C.R + 255) / 2, (C.G + 255) / 2, (C.B + 255) / 2);
+	}
+
+	template <typename T>
+	T* LoadIfPresent(const TCHAR* PackageName, const TCHAR* ObjectPath)
+	{
+		return FPackageName::DoesPackageExist(FString(PackageName)) ? LoadObject<T>(nullptr, ObjectPath) : nullptr;
+	}
 }
 
 ACoopPlayground::ACoopPlayground()
@@ -138,6 +310,13 @@ ACoopPlayground::ACoopPlayground()
 	AddStation(TEXT("Mine cart"), TEXT("Jump into the cart."), FVector(-280.f, -600.f, 0.f), -90.f);
 	AddStation(TEXT("Scaffold"), TEXT("Jump onto the crate, then up onto the platform."), FVector(540.f, 900.f, 0.f), 0.f);
 	AddStation(TEXT("Crystals"), TEXT("The glowing corner."), FVector(620.f, -620.f, 0.f), -45.f);
+
+	// The maze, through the door in the north wall. Facing north (+Y) is yaw 90.
+	using namespace CoopMaze;
+	AddStation(TEXT("Maze fork"), TEXT("Four tunnels: pick a path. They cross on bridges and meet again in two halls."), RoomCenter(Fork), 90.f);
+	AddStation(TEXT("Meeting point A"), TEXT("The sunken hall (-3 m) where all four paths meet."), RoomCenter(HallA), 90.f);
+	AddStation(TEXT("Meeting point B"), TEXT("The raised hall (+4 m), the second meeting point."), RoomCenter(HallB), 90.f);
+	AddStation(TEXT("Relic chamber"), TEXT("The end of the maze (+6 m)."), FVector(TileCenter(FIntPoint(22, Rooms[Goal].R1)), Rooms[Goal].Z * 100.f), 90.f);
 }
 
 void ACoopPlayground::BeginPlay()
@@ -161,6 +340,14 @@ void ACoopPlayground::BeginPlay()
 	FloorStones.Color = FloorStone;
 	FloorStones.bCollides = false;
 	FloorStones.bCastShadow = false;
+	MazeWallRocks.Color = WallRock;
+	MazeWallRocks.bCollides = false;      // the maze has its own invisible walls
+	MazeWallRocks.bCastShadow = false;
+	MazeCeilingRocks.Color = CeilingRock;
+	MazeCeilingRocks.bCollides = false;
+	MazeCeilingRocks.bCastShadow = false;
+
+	LoadRepoAssets();
 
 	// Places random rocks must stay out of (cm, with some margin)
 	auto Clear = [this](float X0, float Y0, float X1, float Y1) { KeepClearBoxes.Add(FBox2D(FVector2D(X0, Y0), FVector2D(X1, Y1))); };
@@ -179,6 +366,7 @@ void ACoopPlayground::BeginPlay()
 	Clear(RailStartX - 60.f, RailY - 120.f, RailEndX + 120.f, RailY + 120.f);
 	Clear(-1180.f, 780.f, -460.f, 1180.f);   // crates and barrels
 	Clear(CrystalCorner.X - 320.f, CrystalCorner.Y - 200.f, CrystalCorner.X + 200.f, CrystalCorner.Y + 320.f);
+	Clear(DoorMinX - 60.f, 850.f, DoorMaxX + 60.f, 1300.f);   // the way to the maze door
 	for (const FVector& T : { StandingTorchA, StandingTorchB })
 	{
 		Clear(T.X - 80.f, T.Y - 80.f, T.X + 80.f, T.Y + 80.f);
@@ -193,6 +381,7 @@ void ACoopPlayground::BeginPlay()
 	BuildMineCart();
 	BuildCrystals();
 	BuildFloorRocks();
+	BuildMaze();
 	FinishRockGroups();
 }
 
@@ -285,10 +474,17 @@ void ACoopPlayground::ApplyLiveLighting(float TimeSeconds)
 	}
 	LastShadowMode = ShadowMode;
 
+	const float Pulse = 1.f + 0.06f * FMath::Sin(TimeSeconds * 1.3f);
 	if (CrystalLight)
 	{
-		const float Pulse = 1.f + 0.06f * FMath::Sin(TimeSeconds * 1.3f);
 		CrystalLight->SetIntensity(CoopTuning::CrystalBrightness() * Pulse);
+	}
+	for (UPointLightComponent* Light : MazeCrystalLights)
+	{
+		if (Light)
+		{
+			Light->SetIntensity(CoopTuning::CrystalBrightness() * 0.6f * Pulse);
+		}
 	}
 
 	const float Ambient = CoopTuning::CaveAmbient();
@@ -334,13 +530,17 @@ void ACoopPlayground::BuildShell()
 		Box->RegisterComponent();
 	};
 	const float Wall = Half + 60.f;
-	AddBlocker(FVector(Wall, 0.f, 500.f), FVector(60.f, Half + 200.f, 600.f));
-	AddBlocker(FVector(-Wall, 0.f, 500.f), FVector(60.f, Half + 200.f, 600.f));
-	AddBlocker(FVector(0.f, Wall, 500.f), FVector(Half + 200.f, 60.f, 600.f));
-	AddBlocker(FVector(0.f, -Wall, 500.f), FVector(Half + 200.f, 60.f, 600.f));
+	const float Reach = Half + 200.f;
+	AddBlocker(FVector(Wall, 0.f, 500.f), FVector(60.f, Reach, 600.f));
+	AddBlocker(FVector(-Wall, 0.f, 500.f), FVector(60.f, Reach, 600.f));
+	// North wall: either side of the maze door
+	AddBlocker(FVector((-Reach + DoorMinX) * 0.5f, Wall, 500.f), FVector((DoorMinX + Reach) * 0.5f, 60.f, 600.f));
+	AddBlocker(FVector((DoorMaxX + Reach) * 0.5f, Wall, 500.f), FVector((Reach - DoorMaxX) * 0.5f, 60.f, 600.f));
+	AddBlocker(FVector(0.f, -Wall, 500.f), FVector(Reach, 60.f, 600.f));
 	AddBlocker(FVector(0.f, 0.f, BlockerCeilingZ + 50.f), FVector(Half + 200.f, Half + 200.f, 50.f));
 
-	// Dark backstop far behind the rock walls, in case a gap shows through
+	// Dark backstop far behind the rock walls, in case a gap shows through.
+	// Not to the north, where the maze is: BuildMaze puts one round the whole maze.
 	auto AddBackstop = [this](const FVector& Center, const FVector& Size)
 	{
 		if (UStaticMeshComponent* Box = AddBox(Center, Size, Backstop, false))
@@ -350,7 +550,6 @@ void ACoopPlayground::BuildShell()
 	};
 	AddBackstop(FVector(2000.f, 0.f, 600.f), FVector(100.f, 4200.f, 1600.f));
 	AddBackstop(FVector(-2000.f, 0.f, 600.f), FVector(100.f, 4200.f, 1600.f));
-	AddBackstop(FVector(0.f, 2000.f, 600.f), FVector(4200.f, 100.f, 1600.f));
 	AddBackstop(FVector(0.f, -2000.f, 600.f), FVector(4200.f, 100.f, 1600.f));
 	AddBackstop(FVector(0.f, 0.f, 1450.f), FVector(4200.f, 4200.f, 100.f));
 }
@@ -375,6 +574,10 @@ void ACoopPlayground::BuildRockWalls()
 		}
 	};
 
+	// Rocks that would block the maze door go here and are never built. Building them anyway
+	// keeps the random sequence, so the rest of the cave comes out exactly as before.
+	FCoopRockGroup DoorGap;
+
 	for (int32 Side = 0; Side < 4; ++Side)
 	{
 		const float SideYaw = (Side < 2) ? 0.f : 90.f;
@@ -395,14 +598,17 @@ void ACoopPlayground::BuildRockWalls()
 				Out += 110.f;
 			}
 
-			AddRock(WallRocks, SidePoint(Side, Along, Out) + FVector(0.f, 0.f, -40.f), FVector(Width, Depth, Height),
+			const bool bInDoor = (Side == 0 && Along + Width * 0.6f > DoorMinX - 40.f && Along - Width * 0.6f < DoorMaxX + 40.f);
+			FCoopRockGroup& Group = bInDoor ? DoorGap : WallRocks;
+
+			AddRock(Group, SidePoint(Side, Along, Out) + FVector(0.f, 0.f, -40.f), FVector(Width, Depth, Height),
 				SideYaw + Random.FRandRange(-18.f, 18.f), 1, 0.22f, 0.25f);
 
 			// Upper tier up to the ceiling
 			if (Height < 700.f)
 			{
 				const float UpperHeight = CeilingZ + 220.f - (Height - 140.f);
-				AddRock(WallRocks, SidePoint(Side, Along + Random.FRandRange(-80.f, 80.f), Out + 90.f) + FVector(0.f, 0.f, Height - 140.f),
+				AddRock(Group, SidePoint(Side, Along + Random.FRandRange(-80.f, 80.f), Out + 90.f) + FVector(0.f, 0.f, Height - 140.f),
 					FVector(Width * 0.95f, Depth, UpperHeight), SideYaw + Random.FRandRange(-25.f, 25.f), 1, 0.2f, 0.f);
 			}
 			Along += Width * Random.FRandRange(0.62f, 0.78f);
@@ -1000,10 +1206,618 @@ void ACoopPlayground::BuildFloorRocks()
 	}
 }
 
+// ---------------------------------------------------------------------------
+// The maze: four paths that cross on bridges, climb and drop, and meet in two halls
+// ---------------------------------------------------------------------------
+
+void ACoopPlayground::LoadRepoAssets()
+{
+	// The shared style kit lives in the main CoopGame project (Content/Shared/Style). To use it here, migrate
+	// these three assets into this project's Content folder; they keep the same /Game/Shared/Style path.
+	// Until then the maze uses code-built rocks and a flat gold color.
+	using CoopMaze::LoadIfPresent;
+	RepoRockMesh = LoadIfPresent<UStaticMesh>(TEXT("/Game/Shared/Style/SM_StyleTest_Rock"), TEXT("/Game/Shared/Style/SM_StyleTest_Rock.SM_StyleTest_Rock"));
+	RepoRockMaterial = LoadIfPresent<UMaterialInterface>(TEXT("/Game/Shared/Style/MI_Stylized_Rock"), TEXT("/Game/Shared/Style/MI_Stylized_Rock.MI_Stylized_Rock"));
+	RepoGoldMaterial = LoadIfPresent<UMaterialInterface>(TEXT("/Game/Shared/Style/MI_Stylized_Gold"), TEXT("/Game/Shared/Style/MI_Stylized_Gold.MI_Stylized_Gold"));
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: repo rock mesh %s, rock material %s, gold material %s"),
+		RepoRockMesh ? TEXT("found") : TEXT("missing (using code-built rocks)"),
+		RepoRockMaterial ? TEXT("found") : TEXT("missing"),
+		RepoGoldMaterial ? TEXT("found") : TEXT("missing"));
+}
+
+void ACoopPlayground::AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw)
+{
+	if (RepoRockMesh)
+	{
+		// Scale the mesh to the wanted size and put its middle on Center. Ceiling rocks hang upside down.
+		const FBox Bounds = RepoRockMesh->GetBoundingBox();
+		const FVector MeshSize = Bounds.GetSize().ComponentMax(FVector(1.f));
+		const FVector Scale = Size / MeshSize;
+		const FQuat Rotation(FRotator(0.f, Yaw, bCeiling ? 180.f : 0.f));
+		const FVector Location = Center - Rotation.RotateVector(Bounds.GetCenter() * Scale);
+		(bCeiling ? MazeCeilingRockTransforms : MazeWallRockTransforms).Add(FTransform(Rotation, Location, Scale));
+		return;
+	}
+	if (bCeiling)
+	{
+		AddRock(MazeCeilingRocks, Center + FVector(0.f, 0.f, Size.Z * 0.5f), Size, Yaw, 0, 0.22f, 0.3f, FRotator(0.f, 0.f, 180.f));
+	}
+	else
+	{
+		AddRock(MazeWallRocks, Center - FVector(0.f, 0.f, Size.Z * 0.5f), Size, Yaw, 0, 0.22f, 0.25f);
+	}
+}
+
+void ACoopPlayground::BuildMaze()
+{
+	using namespace CoopCave;
+	using namespace CoopMaze;
+	const TArray<FPathSpec> Paths = MakePaths();
+	const FIntPoint Dirs[4] = { FIntPoint(1, 0), FIntPoint(-1, 0), FIntPoint(0, 1), FIntPoint(0, -1) };
+
+	// 1. Each path segment, tile by tile, with its corners and the heights the table fixes
+	struct FSegment
+	{
+		TArray<FIntPoint> Tiles;
+		TArray<float> Z;
+		TArray<bool> Anchor;      // flat tiles: corners, ends, bridges, dead-end junctions
+		TMap<int32, float> Keys;  // tile index -> fixed height
+		TSet<int32> Corners;
+		int32 FromRoom = 0;
+		int32 ToRoom = 0;
+	};
+	TArray<TArray<FSegment>> Segments;
+	Segments.SetNum(Paths.Num());
+	TMap<FIntPoint, int32> UseCount;
+	TSet<FIntPoint> DeadEndRoots;
+
+	for (int32 P = 0; P < Paths.Num(); ++P)
+	{
+		for (int32 S = 0; S < Paths[P].Segments.Num(); ++S)
+		{
+			const TArray<FWaypoint>& Points = Paths[P].Segments[S];
+			FSegment& Seg = Segments[P].AddDefaulted_GetRef();
+			Seg.FromRoom = SegmentRooms[S];
+			Seg.ToRoom = SegmentRooms[S + 1];
+			Seg.Tiles.Add(FIntPoint(Points[0].Col, Points[0].Row));
+			Seg.Keys.Add(0, Points[0].Z * 100.f);
+			for (int32 K = 1; K < Points.Num(); ++K)
+			{
+				const FIntPoint From(Points[K - 1].Col, Points[K - 1].Row);
+				const FIntPoint To(Points[K].Col, Points[K].Row);
+				const FIntPoint Step(FMath::Sign(To.X - From.X), FMath::Sign(To.Y - From.Y));
+				if (Step.X != 0 && Step.Y != 0)
+				{
+					UE_LOG(LogTemp, Error, TEXT("Maze: path %d waypoints (%d,%d) and (%d,%d) don't share a row or column"), P + 1, From.X, From.Y, To.X, To.Y);
+					continue;
+				}
+				for (FIntPoint T = From; T != To;)
+				{
+					T += Step;
+					Seg.Tiles.Add(T);
+				}
+				if (Points[K].Z != Free)
+				{
+					Seg.Keys.Add(Seg.Tiles.Num() - 1, Points[K].Z * 100.f);
+				}
+				if (K + 1 < Points.Num())
+				{
+					const FIntPoint Next(Points[K + 1].Col, Points[K + 1].Row);
+					if (FIntPoint(FMath::Sign(Next.X - To.X), FMath::Sign(Next.Y - To.Y)) != Step)
+					{
+						Seg.Corners.Add(Seg.Tiles.Num() - 1);
+					}
+				}
+			}
+			TSet<FIntPoint> Unique;
+			for (const FIntPoint& T : Seg.Tiles)
+			{
+				Unique.Add(T);
+			}
+			for (const FIntPoint& T : Unique)
+			{
+				UseCount.FindOrAdd(T)++;
+			}
+		}
+		for (const TArray<FTileRef>& Dead : Paths[P].DeadEnds)
+		{
+			DeadEndRoots.Add(FIntPoint(Dead[0].Col, Dead[0].Row));
+		}
+	}
+
+	// 2. Heights: ramps spread evenly over the steps between two non-flat tiles
+	for (int32 P = 0; P < Segments.Num(); ++P)
+	{
+		for (FSegment& Seg : Segments[P])
+		{
+			const int32 Num = Seg.Tiles.Num();
+			Seg.Anchor.Init(false, Num);
+			Seg.Anchor[0] = true;
+			Seg.Anchor[Num - 1] = true;
+			for (const int32 Corner : Seg.Corners)
+			{
+				Seg.Anchor[Corner] = true;
+			}
+			for (int32 i = 0; i < Num; ++i)
+			{
+				if (UseCount.FindRef(Seg.Tiles[i]) > 1 || DeadEndRoots.Contains(Seg.Tiles[i]))
+				{
+					Seg.Anchor[i] = true;
+				}
+			}
+			TArray<int32> RampSteps;   // ramp steps before each tile
+			RampSteps.Init(0, Num);
+			for (int32 i = 1; i < Num; ++i)
+			{
+				RampSteps[i] = RampSteps[i - 1] + ((!Seg.Anchor[i] && !Seg.Anchor[i - 1]) ? 1 : 0);
+			}
+			TArray<int32> KeyTiles;
+			Seg.Keys.GenerateKeyArray(KeyTiles);
+			KeyTiles.Sort();
+
+			Seg.Z.SetNum(Num);
+			for (int32 i = 0; i < Num; ++i)
+			{
+				int32 A = KeyTiles[0];
+				int32 B = KeyTiles.Last();
+				for (const int32 K : KeyTiles)
+				{
+					if (K <= i) { A = K; }
+					if (K >= i) { B = K; break; }
+				}
+				const float ZA = Seg.Keys[A];
+				const float ZB = Seg.Keys[B];
+				if (A == B || ZA == ZB)
+				{
+					Seg.Z[i] = ZA;
+					continue;
+				}
+				const int32 Span = RampSteps[B] - RampSteps[A];
+				if (Span <= 0)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Maze: path %d has no straight run to ramp between tiles %d and %d"), P + 1, A, B);
+					Seg.Z[i] = FMath::Lerp(ZA, ZB, float(i - A) / float(B - A));
+					continue;
+				}
+				Seg.Z[i] = FMath::Lerp(ZA, ZB, float(RampSteps[i] - RampSteps[A]) / float(Span));
+			}
+			for (int32 i = 1; i < Num; ++i)
+			{
+				if (FMath::Abs(Seg.Z[i] - Seg.Z[i - 1]) > MaxRampStep)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Maze: path %d is too steep at tile (%d,%d)"), P + 1, Seg.Tiles[i].X, Seg.Tiles[i].Y);
+				}
+			}
+		}
+	}
+
+	// 3. Every walkable floor on every tile: rooms, path tiles, dead ends
+	TMap<FIntPoint, TArray<FLevel>> Cells;
+	for (int32 R = 0; R < RoomCount; ++R)
+	{
+		const FRoomSpec& Room = Rooms[R];
+		for (int32 Row = Room.R0; Row <= Room.R1; ++Row)
+		{
+			for (int32 Col = Room.C0; Col <= Room.C1; ++Col)
+			{
+				FLevel& Level = Cells.FindOrAdd(FIntPoint(Col, Row)).AddDefaulted_GetRef();
+				Level.Owner = RoomOwner + R;
+				Level.Z = Level.FloorMin = Level.FloorMax = Room.Z * 100.f;
+				Level.Headroom = (R == Door) ? CorridorHeadroom : RoomHeadroom;
+			}
+		}
+	}
+	for (int32 P = 0; P < Segments.Num(); ++P)
+	{
+		for (const FSegment& Seg : Segments[P])
+		{
+			const int32 Num = Seg.Tiles.Num();
+			for (int32 i = 0; i < Num; ++i)
+			{
+				FLevel& Level = Cells.FindOrAdd(Seg.Tiles[i]).AddDefaulted_GetRef();
+				Level.Owner = P;
+				Level.Z = Level.FloorMin = Level.FloorMax = Seg.Z[i];
+				for (const int32 j : { i - 1, i + 1 })
+				{
+					if (Seg.Z.IsValidIndex(j))
+					{
+						const float Edge = (Seg.Z[i] + Seg.Z[j]) * 0.5f;
+						Level.FloorMin = FMath::Min(Level.FloorMin, Edge);
+						Level.FloorMax = FMath::Max(Level.FloorMax, Edge);
+					}
+				}
+				Level.LinkOwner = (i == 0) ? RoomOwner + Seg.FromRoom : (i == Num - 1) ? RoomOwner + Seg.ToRoom : INDEX_NONE;
+			}
+		}
+	}
+	struct FDeadTile { FIntPoint At; float Z; int32 Path; };
+	TArray<FDeadTile> DeadTiles;
+	for (int32 P = 0; P < Paths.Num(); ++P)
+	{
+		for (const TArray<FTileRef>& Dead : Paths[P].DeadEnds)
+		{
+			const FIntPoint RootTile(Dead[0].Col, Dead[0].Row);
+			float RootZ = 0.f;
+			if (const TArray<FLevel>* RootLevels = Cells.Find(RootTile))
+			{
+				for (const FLevel& Level : *RootLevels)
+				{
+					if (Level.Owner == P) { RootZ = Level.Z; }
+				}
+			}
+			for (int32 K = 1; K < Dead.Num(); ++K)
+			{
+				const FIntPoint From(Dead[K - 1].Col, Dead[K - 1].Row);
+				const FIntPoint To(Dead[K].Col, Dead[K].Row);
+				const FIntPoint Step(FMath::Sign(To.X - From.X), FMath::Sign(To.Y - From.Y));
+				if (Step.X != 0 && Step.Y != 0)
+				{
+					continue;
+				}
+				for (FIntPoint T = From; T != To;)
+				{
+					T += Step;
+					FLevel& Level = Cells.FindOrAdd(T).AddDefaulted_GetRef();
+					Level.Owner = P;
+					Level.Z = Level.FloorMin = Level.FloorMax = RootZ;
+					DeadTiles.Add({ T, RootZ, P });
+				}
+			}
+		}
+	}
+	// Crossings: the lower path's ceiling is the bridge deck
+	int32 CrossingCount = 0;
+	for (TPair<FIntPoint, TArray<FLevel>>& Cell : Cells)
+	{
+		if (Cell.Value.Num() == 2)
+		{
+			Cell.Value.Sort([](const FLevel& A, const FLevel& B) { return A.Z < B.Z; });
+			FLevel& Lower = Cell.Value[0];
+			FLevel& Upper = Cell.Value[1];
+			Lower.bUnderBridge = true;
+			Lower.Headroom = Upper.Z - Slab - Lower.Z;
+			Upper.bBridge = true;
+			++CrossingCount;
+		}
+	}
+	auto FindLevel = [&Cells](const FIntPoint& At, int32 Owner) -> const FLevel*
+	{
+		if (const TArray<FLevel>* Levels = Cells.Find(At))
+		{
+			for (const FLevel& Level : *Levels)
+			{
+				if (Level.Owner == Owner) { return &Level; }
+			}
+		}
+		return nullptr;
+	};
+	auto HasWall = [&Cells](const FIntPoint& At, const FLevel& Level, const FIntPoint& Dir)
+	{
+		if (const TArray<FLevel>* Next = Cells.Find(At + Dir))
+		{
+			for (const FLevel& Other : *Next)
+			{
+				if (Connected(Level, Other)) { return false; }
+			}
+		}
+		return true;
+	};
+
+	// 4. Floors: a slab from each path tile to the next (sloped on ramps), a flat pad on each flat tile, one block per room.
+	//    Each path's floor is tinted with its color so you can tell which way you're going.
+	TArray<FCoopMeshData> PathFloors;
+	TArray<TArray<TArray<FVector>>> PathFloorHulls;
+	PathFloors.SetNum(Paths.Num());
+	PathFloorHulls.SetNum(Paths.Num());
+	FCoopMeshData RoomFloors;
+	TArray<TArray<FVector>> RoomFloorHulls;
+
+	auto AddSlab = [](FCoopMeshData& Mesh, TArray<TArray<FVector>>& Hulls, const FVector& From, const FVector& To)
+	{
+		const FVector Span = To - From;
+		const FRotator Rotation = Span.Rotation();
+		const FVector Up = FRotationMatrix(Rotation).GetUnitAxis(EAxis::Z);
+		AddBlock(Mesh, Hulls, FTransform(Rotation, (From + To) * 0.5f - Up * Slab * 0.5f), FVector(Span.Size() * 0.5f + 2.f, Tile * 0.5f, Slab * 0.5f));
+	};
+	auto AddPad = [](FCoopMeshData& Mesh, TArray<TArray<FVector>>& Hulls, const FIntPoint& Tile2D, float Z)
+	{
+		AddBlock(Mesh, Hulls, FTransform(FVector(TileCenter(Tile2D), Z - Slab * 0.5f)), FVector(Tile * 0.5f, Tile * 0.5f, Slab * 0.5f));
+	};
+	for (int32 P = 0; P < Segments.Num(); ++P)
+	{
+		for (const FSegment& Seg : Segments[P])
+		{
+			for (int32 i = 0; i < Seg.Tiles.Num(); ++i)
+			{
+				if (Seg.Anchor[i])
+				{
+					AddPad(PathFloors[P], PathFloorHulls[P], Seg.Tiles[i], Seg.Z[i]);
+				}
+				if (i + 1 < Seg.Tiles.Num())
+				{
+					AddSlab(PathFloors[P], PathFloorHulls[P], FVector(TileCenter(Seg.Tiles[i]), Seg.Z[i]), FVector(TileCenter(Seg.Tiles[i + 1]), Seg.Z[i + 1]));
+				}
+			}
+		}
+	}
+	for (const FDeadTile& Dead : DeadTiles)
+	{
+		AddPad(PathFloors[Dead.Path], PathFloorHulls[Dead.Path], Dead.At, Dead.Z);
+	}
+	for (int32 R = 0; R < RoomCount; ++R)
+	{
+		if (R == Hub)
+		{
+			continue;
+		}
+		const FRoomSpec& Room = Rooms[R];
+		const FVector Center = RoomCenter(ERoom(R));
+		AddBlock(RoomFloors, RoomFloorHulls, FTransform(Center - FVector(0.f, 0.f, Slab * 0.5f)),
+			FVector((Room.C1 - Room.C0 + 1) * Tile * 0.5f, (Room.R1 - Room.R0 + 1) * Tile * 0.5f, Slab * 0.5f));
+	}
+	for (int32 P = 0; P < Paths.Num(); ++P)
+	{
+		const FLinearColor Tint = FLinearColor::LerpUsingHSV(CoopCave::Sand, FLinearColor::FromSRGBColor(Paths[P].Color) * 0.3f, 0.35f);
+		AddProcMesh(PathFloors[P], MaterialFor(Tint), PathFloorHulls[P], false);
+	}
+	AddProcMesh(RoomFloors, MaterialFor(CoopCave::Sand), RoomFloorHulls, false);
+
+	// 5. Walls and ceilings: invisible boxes that stop you, and rocks you see.
+	//    A wall goes wherever a floor has no connected floor next to it, from just under the floor to the ceiling.
+	FCoopMeshData Blockers;
+	TArray<TArray<FVector>> BlockerHulls;
+	for (const TPair<FIntPoint, TArray<FLevel>>& Cell : Cells)
+	{
+		const FVector2D Center = TileCenter(Cell.Key);
+		for (const FLevel& Level : Cell.Value)
+		{
+			if (Level.Owner == RoomOwner + Hub)
+			{
+				continue;   // the cave has its own walls
+			}
+			const float LevelCeilingZ = Level.FloorMax + Level.Headroom;
+			const float Bottom = Level.bBridge ? Level.Z - Slab : Level.FloorMin - Slab - 40.f;
+			const float Top = Level.bUnderBridge ? LevelCeilingZ : LevelCeilingZ + CeilingThickness;
+
+			for (const FIntPoint& Dir : Dirs)
+			{
+				if (!HasWall(Cell.Key, Level, Dir))
+				{
+					continue;
+				}
+				const FVector Out = WorldDir(Dir);
+				const FVector Along(-Out.Y, Out.X, 0.f);
+				const FVector Edge = FVector(Center, 0.f) + Out * (Tile * 0.5f);
+				AddBlock(Blockers, BlockerHulls, FTransform(Out.Rotation(), FVector(Edge.X, Edge.Y, (Bottom + Top) * 0.5f) + Out * 50.f),
+					FVector(50.f, Tile * 0.5f + 50.f, (Top - Bottom) * 0.5f));
+
+				// Rocks: two along the edge, stacked to fill the height, set back so their faces line the tunnel
+				const float RockBottom = Level.bBridge ? Level.Z - Slab : Level.FloorMin - 80.f;
+				const float RockTop = Level.bUnderBridge ? LevelCeilingZ : LevelCeilingZ + 60.f;
+				const int32 Tiers = FMath::Max(1, FMath::CeilToInt((RockTop - RockBottom) / 330.f));
+				const float TierHeight = (RockTop - RockBottom) / Tiers;
+				for (int32 Tier = 0; Tier < Tiers; ++Tier)
+				{
+					for (const float SideSign : { -1.f, 1.f })
+					{
+						const float Depth = Random.FRandRange(180.f, 240.f);
+						const FVector Spot = Edge + Out * (Depth * 0.35f) + Along * (SideSign * Tile * 0.25f * Random.FRandRange(0.85f, 1.15f));
+						AddMazeRock(false, FVector(Spot.X, Spot.Y, RockBottom + (Tier + 0.5f) * TierHeight),
+							FVector(Random.FRandRange(280.f, 340.f), Depth, TierHeight * 1.12f), Along.Rotation().Yaw + Random.FRandRange(-12.f, 12.f));
+					}
+				}
+			}
+
+			// Ceiling (under a bridge, the bridge deck is the ceiling)
+			if (!Level.bUnderBridge)
+			{
+				AddBlock(Blockers, BlockerHulls, FTransform(FVector(Center, LevelCeilingZ + CeilingThickness * 0.5f)),
+					FVector(Tile * 0.5f, Tile * 0.5f, CeilingThickness * 0.5f));
+				AddMazeRock(true, FVector(Center, LevelCeilingZ + 100.f), FVector(540.f, 540.f, 240.f) * Random.FRandRange(0.95f, 1.05f),
+					90.f * Random.RandRange(0, 3) + Random.FRandRange(-4.f, 4.f));
+			}
+		}
+	}
+	if (UProceduralMeshComponent* Collision = AddProcMesh(Blockers, nullptr, BlockerHulls, false))
+	{
+		Collision->SetHiddenInGame(true);
+	}
+
+	// Fill the cave's north wall either side of the door
+	for (const float Along : { DoorMinX - 170.f, DoorMaxX + 170.f })
+	{
+		AddRock(WallRocks, FVector(Along, Half + 190.f, -40.f), FVector(340.f, 380.f, CeilingZ + 220.f), 0.f, 1, 0.2f, 0.f);
+	}
+
+	// 6. Light and markers. Torches along paths 1, 2 and 4; glowing teal crystals along path 3.
+	//    Crystals in each path's color mark where it leaves and enters a room.
+	FCoopMeshData Glow;
+	auto AddCluster = [this, &Glow](const FVector& Base, const FVector& Inward, const FColor& RootColor, const FColor& TipColor, float Scale)
+	{
+		const FVector Side(-Inward.Y, Inward.X, 0.f);
+		for (int32 k = 0; k < 4; ++k)
+		{
+			const FVector Spot = Base + Side * Random.FRandRange(-70.f, 70.f) + Inward * Random.FRandRange(0.f, 30.f);
+			const FVector Dir = (FVector(0.f, 0.f, 1.f) + Inward * Random.FRandRange(0.3f, 0.8f) + Side * Random.FRandRange(-0.3f, 0.3f)).GetSafeNormal();
+			CoopMeshKit::AddCrystal(Glow, FTransform(FRotationMatrix::MakeFromZ(Dir).Rotator(), Spot),
+				Random.FRandRange(10.f, 18.f) * Scale, Random.FRandRange(50.f, 110.f) * Scale, RootColor, TipColor);
+		}
+	};
+	// A wall beside the path at tile i, across from the way it runs. Returns false if there's none.
+	auto SideWall = [&](const FSegment& Seg, int32 i, const FLevel& Level, bool bPreferLeft, FVector& OutDir)
+	{
+		const FIntPoint Run = (i + 1 < Seg.Tiles.Num()) ? Seg.Tiles[i + 1] - Seg.Tiles[i] : Seg.Tiles[i] - Seg.Tiles[i - 1];
+		const FIntPoint Left(Run.Y, -Run.X);
+		const FIntPoint Right(-Run.Y, Run.X);
+		for (const FIntPoint& Dir : { bPreferLeft ? Left : Right, bPreferLeft ? Right : Left })
+		{
+			if (HasWall(Seg.Tiles[i], Level, Dir))
+			{
+				OutDir = WorldDir(Dir);
+				return true;
+			}
+		}
+		return false;
+	};
+	for (int32 P = 0; P < Segments.Num(); ++P)
+	{
+		const FColor PathColor = Paths[P].Color;
+		const bool bCrystalPath = (P == 2);
+		for (const FSegment& Seg : Segments[P])
+		{
+			const int32 Num = Seg.Tiles.Num();
+			for (int32 i = 0; i < Num; ++i)
+			{
+				const FLevel* Level = FindLevel(Seg.Tiles[i], P);
+				if (!Level || Level->bBridge || Level->bUnderBridge)
+				{
+					continue;
+				}
+				const FVector Floor(TileCenter(Seg.Tiles[i]), Level->Z);
+				FVector Out;
+
+				// Path color at both ends of the segment
+				if ((i == 0 || i == Num - 1) && SideWall(Seg, i, *Level, true, Out))
+				{
+					AddCluster(Floor + Out * (Tile * 0.5f - 45.f), -Out, Scaled(PathColor, 0.3f), Lighter(PathColor), 0.9f);
+				}
+
+				const bool bLightSpot = (i % TorchEvery == TorchEvery / 2) && i != 0 && i != Num - 1;
+				if (bCrystalPath && (bLightSpot || i % 2 == 1) && SideWall(Seg, i, *Level, (i / 2) % 2 == 0, Out))
+				{
+					AddCluster(Floor + Out * (Tile * 0.5f - 45.f), -Out, CoopCave::CrystalRoot, CoopCave::CrystalTip, bLightSpot ? 1.2f : 0.6f);
+					if (bLightSpot)
+					{
+						UPointLightComponent* Light = NewObject<UPointLightComponent>(this);
+						Light->SetupAttachment(Root);
+						Light->SetMobility(EComponentMobility::Movable);
+						Light->SetRelativeLocation(Floor + Out * (Tile * 0.5f - 160.f) + FVector(0.f, 0.f, 150.f));
+						Light->IntensityUnits = ELightUnits::Candelas;
+						Light->SetIntensity(CoopTuning::CrystalBrightness() * 0.6f);
+						Light->SetLightColor(CoopCave::CrystalLightColor);
+						Light->SetAttenuationRadius(750.f);
+						Light->SetSourceRadius(30.f);
+						Light->SetCastShadows(false);
+						Light->RegisterComponent();
+						MazeCrystalLights.Add(Light);
+					}
+				}
+				else if (!bCrystalPath && bLightSpot && SideWall(Seg, i, *Level, (i / TorchEvery) % 2 == 0, Out))
+				{
+					AddWallTorch(Floor + Out * (Tile * 0.5f - 30.f) + FVector(0.f, 0.f, 235.f), -Out, false);
+				}
+			}
+		}
+	}
+	// Torches round the rooms' walls
+	for (int32 R = Fork; R < RoomCount; ++R)
+	{
+		const FRoomSpec& Room = Rooms[R];
+		for (int32 Row = Room.R0; Row <= Room.R1; ++Row)
+		{
+			for (int32 Col = Room.C0; Col <= Room.C1; ++Col)
+			{
+				const FIntPoint Tile2D(Col, Row);
+				const FLevel* Level = FindLevel(Tile2D, RoomOwner + R);
+				for (const FIntPoint& Dir : Dirs)
+				{
+					const bool bSpot = (Dir.Y != 0) ? ((Col - Room.C0) % 4 == 2) : ((Row - Room.R0) % 3 == 1);
+					if (Level && bSpot && HasWall(Tile2D, *Level, Dir))
+					{
+						const FVector Out = WorldDir(Dir);
+						AddWallTorch(FVector(TileCenter(Tile2D), Level->Z + 260.f) + Out * (Tile * 0.5f - 30.f), -Out, false);
+					}
+				}
+			}
+		}
+	}
+
+	// 7. The relic: a gold idol on a stone pedestal in the middle of the chamber
+	{
+		const FVector Spot = RoomCenter(Goal);
+		AddShape(CylinderMesh, Spot + FVector(0.f, 0.f, 50.f), FVector(150.f, 150.f, 100.f), FRotator::ZeroRotator, CoopCave::FloorStone);
+		UStaticMeshComponent* Body = AddShape(SphereMesh, Spot + FVector(0.f, 0.f, 140.f), FVector(60.f, 60.f, 80.f), FRotator::ZeroRotator, FLinearColor(0.8f, 0.55f, 0.12f));
+		UStaticMeshComponent* Head = AddShape(ConeMesh, Spot + FVector(0.f, 0.f, 200.f), FVector(40.f, 40.f, 45.f), FRotator::ZeroRotator, FLinearColor(0.8f, 0.55f, 0.12f));
+		for (UStaticMeshComponent* Part : { Body, Head })
+		{
+			if (Part && RepoGoldMaterial)
+			{
+				Part->SetMaterial(0, RepoGoldMaterial);
+			}
+		}
+		UPointLightComponent* RelicLight = NewObject<UPointLightComponent>(this);
+		RelicLight->SetupAttachment(Root);
+		RelicLight->SetMobility(EComponentMobility::Movable);
+		RelicLight->SetRelativeLocation(Spot + FVector(0.f, -150.f, 320.f));
+		RelicLight->IntensityUnits = ELightUnits::Candelas;
+		RelicLight->SetIntensity(40.f);
+		RelicLight->SetLightColor(FLinearColor(1.f, 0.78f, 0.4f));
+		RelicLight->SetAttenuationRadius(1000.f);
+		RelicLight->SetCastShadows(false);
+		RelicLight->RegisterComponent();
+	}
+
+	AddProcMesh(Glow, GlowMaterial(), {}, false);
+
+	// 8. Repo rocks as two instanced meshes (one draw each), when the mesh is in the project
+	for (TArray<FTransform>* Transforms : { &MazeWallRockTransforms, &MazeCeilingRockTransforms })
+	{
+		if (!RepoRockMesh || Transforms->IsEmpty())
+		{
+			continue;
+		}
+		UInstancedStaticMeshComponent* Rocks = NewObject<UInstancedStaticMeshComponent>(this);
+		Rocks->SetupAttachment(Root);
+		Rocks->SetMobility(EComponentMobility::Static);
+		Rocks->SetStaticMesh(RepoRockMesh);
+		if (RepoRockMaterial)
+		{
+			Rocks->SetMaterial(0, RepoRockMaterial);
+		}
+		Rocks->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		Rocks->SetCastShadow(false);
+		Rocks->RegisterComponent();
+		Rocks->AddInstances(*Transforms, false);
+	}
+
+	// 9. A dark box round the whole maze, in case a gap between rocks shows through. Its floor catches anyone who falls.
+	FIntPoint MinTile(TNumericLimits<int32>::Max()), MaxTile(TNumericLimits<int32>::Lowest());
+	for (const TPair<FIntPoint, TArray<FLevel>>& Cell : Cells)
+	{
+		MinTile = FIntPoint(FMath::Min(MinTile.X, Cell.Key.X), FMath::Min(MinTile.Y, Cell.Key.Y));
+		MaxTile = FIntPoint(FMath::Max(MaxTile.X, Cell.Key.X), FMath::Max(MaxTile.Y, Cell.Key.Y));
+	}
+	const FVector2D Low = TileCenter(FIntPoint(MinTile.X, MaxTile.Y)) - FVector2D(2.f * Tile);
+	const FVector2D High = TileCenter(FIntPoint(MaxTile.X, MinTile.Y)) + FVector2D(2.f * Tile);
+	const FVector2D Mid = (Low + High) * 0.5f;
+	const FVector2D Extent = High - Low;
+	constexpr float ShellBottom = -1500.f;
+	constexpr float ShellTop = 2600.f;
+	auto AddShell = [this](const FVector& Center, const FVector& Size, bool bCollides)
+	{
+		if (UStaticMeshComponent* Box = AddBox(Center, Size, CoopCave::Backstop, bCollides))
+		{
+			Box->SetCastShadow(false);
+		}
+	};
+	const float ShellMidZ = (ShellBottom + ShellTop) * 0.5f;
+	const float ShellHeight = ShellTop - ShellBottom;
+	AddShell(FVector(Low.X, Mid.Y, ShellMidZ), FVector(100.f, Extent.Y, ShellHeight), false);
+	AddShell(FVector(High.X, Mid.Y, ShellMidZ), FVector(100.f, Extent.Y, ShellHeight), false);
+	AddShell(FVector(Mid.X, Low.Y, ShellMidZ), FVector(Extent.X, 100.f, ShellHeight), false);
+	AddShell(FVector(Mid.X, High.Y, ShellMidZ), FVector(Extent.X, 100.f, ShellHeight), false);
+	AddShell(FVector(Mid.X, Mid.Y, ShellTop), FVector(Extent.X, Extent.Y, 100.f), false);
+	AddShell(FVector(Mid.X, Mid.Y, ShellBottom), FVector(Extent.X, Extent.Y, 100.f), true);
+
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze built, %d tiles, %d bridges, %.0f x %.0f m, %d torches, %d repo rocks"),
+		Cells.Num(), CrossingCount, (Extent.X - 2.f * Tile) / 100.f, (Extent.Y - 2.f * Tile) / 100.f, TorchLights.Num(),
+		MazeWallRockTransforms.Num() + MazeCeilingRockTransforms.Num());
+}
+
 void ACoopPlayground::FinishRockGroups()
 {
 	const TArray<TArray<FVector>> NoHulls;
-	for (FCoopRockGroup* Group : { &WallRocks, &CeilingRocks, &Boulders, &SmallRocks, &Pebbles, &FloorStones })
+	for (FCoopRockGroup* Group : { &WallRocks, &CeilingRocks, &Boulders, &SmallRocks, &Pebbles, &FloorStones, &MazeWallRocks, &MazeCeilingRocks })
 	{
 		if (!Group->Mesh.IsEmpty())
 		{

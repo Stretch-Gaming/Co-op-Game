@@ -17,7 +17,7 @@ class UMaterialInterface;
 class UMaterialInstanceDynamic;
 class APostProcessVolume;
 
-/** A spot in the play area you can jump straight to (D-pad left/right, or number keys 1-5). */
+/** A spot in the play area you can jump straight to (D-pad left/right, or number keys 1-9). */
 struct FCoopStation
 {
 	FString Name;
@@ -45,6 +45,10 @@ struct FCoopRockGroup
  *  - A work area: workbench, crates, barrels, a raised scaffold, a mine cart on rails
  *  - A corner of glowing teal crystals (the cool counter-light)
  *  - Cool fill light in the shadows, low haze, and a fixed camera exposure
+ *
+ * North of the cave, through a door in its north wall, is a maze (BuildMaze): four paths that cross
+ * each other on rock bridges, climb and drop, meet in two halls, and end in a relic chamber.
+ * Its layout is the table at the top of CoopPlayground.cpp; maze_overview.png is a picture of it.
  *
  * Lighting numbers are live console variables (coop.Cave.*), see CoopTuning.h.
  * Positions are in cm (100 = 1 m); the room spans -1250..1250 on X and Y.
@@ -75,7 +79,13 @@ private:
 	void BuildFloorRocks();
 	void BuildCrystals();
 	void BuildLighting();
+	void BuildMaze();
 	void FinishRockGroups();
+
+	/** Loads the shared style kit (rock mesh, rock and gold materials) if it has been migrated into this project. */
+	void LoadRepoAssets();
+	/** One rock of the maze's walls or ceiling: the repo rock mesh if present, otherwise a code-built rock. */
+	void AddMazeRock(bool bCeiling, const FVector& Center, const FVector& Size, float Yaw);
 
 	// Pieces
 	void AddWallTorch(const FVector& MountPoint, const FVector& WallNormal, bool bKeyLight);
@@ -159,6 +169,24 @@ private:
 	UPROPERTY(Transient)
 	TObjectPtr<UPointLightComponent> CrystalLight;
 
+	/** Teal lights along the maze's crystal path (follow coop.Cave.Crystal). */
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<UPointLightComponent>> MazeCrystalLights;
+
+	// The shared style kit from the main project's Content/Shared/Style, when migrated here
+	UPROPERTY(Transient)
+	TObjectPtr<UStaticMesh> RepoRockMesh;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInterface> RepoRockMaterial;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInterface> RepoGoldMaterial;
+
+	// Maze rocks using the repo rock mesh, turned into instanced meshes at the end of BuildMaze
+	TArray<FTransform> MazeWallRockTransforms;
+	TArray<FTransform> MazeCeilingRockTransforms;
+
 	// Rock groups, turned into meshes at the end of BeginPlay
 	FCoopRockGroup WallRocks;
 	FCoopRockGroup CeilingRocks;
@@ -166,6 +194,8 @@ private:
 	FCoopRockGroup SmallRocks;
 	FCoopRockGroup Pebbles;
 	FCoopRockGroup FloorStones;
+	FCoopRockGroup MazeWallRocks;      // only used when the repo rock mesh isn't in the project
+	FCoopRockGroup MazeCeilingRocks;
 
 	FRandomStream Random;
 	TArray<FCoopStation> Stations;
