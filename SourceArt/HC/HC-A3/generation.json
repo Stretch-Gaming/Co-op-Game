@@ -1,0 +1,27 @@
+{
+  "tool": "OpenAI built-in image_gen.imagegen",
+  "date": "2026-10-10",
+  "transparent_background": true,
+  "reference_path": "SourceArt/PG/PG-A0/style-frames/style-reference.png",
+  "reference_sha256": "e1a33275dbc0f87fef385d4e9b0d753730752f9fab57ed299d17ef4bf5004914",
+  "records": [
+    {
+      "name": "T_HUD_RelicIcon",
+      "source": "sources/T_HUD_RelicIcon_source.png",
+      "source_sha256": "3dc1f721dac395943825c0dfabe0b75a3c04554d8d182b0b5aa444b9e48ca382",
+      "output": "T_HUD_RelicIcon.png"
+    },
+    {
+      "name": "T_HUD_RoundBannerFrame",
+      "source": "sources/T_HUD_RoundBannerFrame_source.png",
+      "source_sha256": "5cd96141f383a7d48757b515771db5fc053cfe12c51baea02ea7e1d707dda6b4",
+      "output": "T_HUD_RoundBannerFrame.png"
+    },
+    {
+      "name": "T_HUD_InteractPromptFrame",
+      "source": "sources/T_HUD_InteractPromptFrame_source.png",
+      "source_sha256": "10fe3c3a6198476f26212e6f5b39c584a82c7c04aea65fa5a4469f539fba2557",
+      "output": "T_HUD_InteractPromptFrame.png"
+    }
+  ]
+}
