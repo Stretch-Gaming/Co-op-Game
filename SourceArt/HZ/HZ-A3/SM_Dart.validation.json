@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A3/SM_Dart.glb",
+  "output": "SourceArt/HZ/HZ-A3/SM_Dart.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 272,
+  "triangles_after": 272,
+  "dimensions_cm": [
+    30.0,
+    8.579,
+    7.712
+  ],
+  "bounds_min_cm": [
+    -15.0,
+    -4.28949,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
