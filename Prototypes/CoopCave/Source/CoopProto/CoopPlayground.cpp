@@ -1266,9 +1266,33 @@ namespace CoopMazeDetail
 	constexpr float AltarClear = 650.f;     // the relic chamber's altar and relics
 	constexpr float StationClear = 130.f;   // round each player's spot at a station
 
-	/** The co-op moments' tiles (CoopMaze::Moments in the mechanics pass): the floor near them stays as it was. */
+	/**
+	 * The co-op moments' tiles (CoopMaze::Moments in the mechanics pass). Their pieces use the whole 5 m width and their
+	 * boosts need the air up to MomentHeadroom, so these tiles get no dressing at all, and nothing hangs lower than
+	 * MomentHeadroom on the tiles next to them. Path is 0-3.
+	 */
 	struct FPathTile { int32 Path, Col, Row; };
-	const FPathTile MomentTiles[] = { { 0, 24, 19 }, { 1, 21, 7 }, { 2, 33, 34 }, { 3, 10, 0 } };
+	const FPathTile MomentTiles[] = {
+		{ 0, 24, 19 },                                                                   // path 1: boost wall
+		{ 1, 21, 7 }, { 1, 21, 6 },                                                      // path 2: winch lift
+		{ 2, 31, 34 }, { 2, 32, 34 }, { 2, 33, 34 }, { 2, 34, 34 }, { 2, 35, 34 },       // path 3: split tunnels
+		{ 3, 10, 0 }, { 3, 10, -1 },                                                     // path 4: dip gate
+	};
+	constexpr float MomentHeadroom = 360.f;
+
+	/** 0 = a moment's tile, 1 = next to one (sides or corners), 2 = neither. */
+	int32 MomentDistance(int32 Path, const FIntPoint& At)
+	{
+		int32 Best = 2;
+		for (const FPathTile& M : MomentTiles)
+		{
+			if (M.Path == Path)
+			{
+				Best = FMath::Min(Best, FMath::Max(FMath::Abs(M.Col - At.X), FMath::Abs(M.Row - At.Y)));
+			}
+		}
+		return Best;
+	}
 
 	/** A smooth wave, -1..1, so a tunnel narrows and widens over a few tiles rather than tile by tile. */
 	float Wave(float S, float Seed)
@@ -1559,11 +1583,13 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			const bool bCorner = OpenCount == 2 && !bStraight;
 			const bool bTip = OpenCount == 1;
 			const bool bMouth = Level.LinkOwner != INDEX_NONE;
-			bool bMoment = false;
-			for (const FPathTile& M : MomentTiles)
+			if (MomentDistance(Path, At) == 0)
 			{
-				bMoment |= (M.Path == Path && FMath::Abs(M.Col - At.X) <= 2 && FMath::Abs(M.Row - At.Y) <= 2);
+				continue;   // a co-op moment: no dressing at all
 			}
+			const bool bNearMoment = MomentDistance(Path, At) == 1;
+			// A station's spots on a path (the co-op moments have them) take nothing you could land on
+			const bool bMoment = bNearMoment || NearStation(Center, Level.Z, 250.f);
 			const bool bFlat = Level.FloorMax - Level.FloorMin < 1.f;
 			const float Ceiling = Level.FloorMax + Level.Headroom;   // the invisible lid; under a bridge, the deck's underside
 			const bool bOpenUp = bCorner || OpenCount >= 3 || bMouth;   // corners and junctions keep the full height
@@ -1605,7 +1631,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 						// The tunnel narrows: rock stands out from the wall
 						Depth = FMath::Lerp(25.f, WallFace - BandIn, FMath::Min(1.f, (W - 0.2f) / 0.6f));
 						Bulge(E, At, Level, Rand.FRandRange(-40.f, 40.f), Rand.FRandRange(330.f, 430.f), Depth, Rand.FRandRange(230.f, 380.f));
-						if (Rand.FRand() < 0.5f)
+						if (!bNearMoment && Rand.FRand() < 0.5f)
 						{
 							// and leans out over you higher up
 							const float Height = Rand.FRandRange(160.f, 230.f);
@@ -1632,7 +1658,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 							SmallRock(E.At(Rand.FRandRange(175.f, 205.f), Rand.FRandRange(-60.f, 60.f)), At, Level);
 						}
 					}
-					else if (Rand.FRand() < 0.25f)
+					else if (!bNearMoment && Rand.FRand() < 0.25f)
 					{
 						// An overhang high up the wall
 						const float Height = Rand.FRandRange(170.f, 240.f);
@@ -1747,7 +1773,8 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 				const FLevel* SideB = Neighbour(At, Level, FIntPoint::ZeroValue - WallB);
 				const FVector2D Near = Center - (OutA + OutB) * (Tile * 0.5f);
 				if (bDiagonalFree && SideA && SideB && !SideA->bBridge && !SideA->bUnderBridge && !SideB->bBridge && !SideB->bUnderBridge
-					&& SideA->Owner < RoomOwner && SideB->Owner < RoomOwner && !NearFixture(FVector(Near, Level.Z + 150.f), 200.f))
+					&& SideA->Owner < RoomOwner && SideB->Owner < RoomOwner && MomentDistance(Path, At - WallA) > 0 && MomentDistance(Path, At - WallB) > 0
+					&& !NearFixture(FVector(Near, Level.Z + 150.f), 200.f))
 				{
 					const float Floor = FMath::Min(SideA->Z, SideB->Z);
 					Rock(DWall, FVector(Near, FMath::Min(Floor, Level.Z) - 30.f), FVector(150.f, 145.f, Rand.FRandRange(250.f, 380.f)),
@@ -1846,7 +1873,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			for (int32 k = Rand.RandRange(0, 3) + (bOpenUp ? 2 : 0); k > 0; --k)
 			{
 				const FVector2D Offset(Rand.FRandRange(-210.f, 210.f), Rand.FRandRange(-210.f, 210.f));
-				const float Lowest = Level.FloorMax + (Offset.Size() < Lane + 60.f ? Clearance + 80.f : Clearance);
+				const float Lowest = Level.FloorMax + FMath::Max(bNearMoment ? MomentHeadroom : 0.f, Offset.Size() < Lane + 60.f ? Clearance + 80.f : Clearance);
 				const float Longest = FMath::Min(Roof - Lowest, 180.f + Drop);
 				if (Longest < Shortest)
 				{
