@@ -1,0 +1,34 @@
+{
+  "status": "passed for Windows HC-A2 prop presentation; Mac pending",
+  "method": "Direct inspection of Unreal renderer PNGs",
+  "capture_run_id": "environment-visual-clean",
+  "reviewed_images": [
+    "cave_plate_hall.png",
+    "cave_altar.png",
+    "cave_gate_G1_closed.png",
+    "cave_gate_G1_half.png",
+    "cave_gate_G1_open.png",
+    "cave_gate_G2_closed.png",
+    "cave_gate_G2_half.png",
+    "cave_gate_G2_open.png",
+    "cave_gate_G3_closed.png",
+    "cave_gate_G3_half.png",
+    "cave_gate_G3_open.png",
+    "cave_half_diamond.png",
+    "cave_half_circle.png",
+    "cave_half_triangle.png",
+    "cave_half_cross.png"
+  ],
+  "findings": [
+    "Four symbols are distinct at actual 800x450 under the added cave lighting.",
+    "Altar/socket silhouette and three 1.8 m statues remain readable at their supplied positions; both statue sizes remain available in the test map.",
+    "Gate leaf rises through 0/200/400 cm while enclosing opaque faces conceal the upper portion; full-open passage stays readable.",
+    "Alcove and altar entrance daylight gaps from initial authoring were sealed.",
+    "Shadows read dark blue with amber path light and teal fill. The support shell is deliberately simple and does not replace a full HZ environment pass."
+  ],
+  "limits": [
+    "G3 looks into unfinished downstream gauntlet space; the support floor extends to X118.5 m only.",
+    "Windows image review is not the teammate Mac/fallback result.",
+    "Normal player-camera, physical gamepad and gameplay networking checks are separate from these art fixtures."
+  ]
+}

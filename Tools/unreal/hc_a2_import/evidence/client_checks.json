@@ -99,13 +99,30 @@
         "art_actors": 11,
         "controllers": 2,
         "local_controllers": 2
-      }
+      },
+      "supported_pawn_locations_cm": [
+        [
+          3550.0,
+          -800.0,
+          92.15000009536743
+        ],
+        [
+          5150.0,
+          800.0,
+          92.15000009536743
+        ]
+      ]
     }
   ],
   "settings_restored": true,
   "split_screenshot_saved": true,
   "scope": "Asset loading, static poses and local views only; gameplay RPC/carry/round logic is not implemented or claimed.",
-  "baseline": "Upstream HC-1 plus preserved HC-A2 art additions after binary-map integration.",
-  "split_screenshot": "split_screen00001.png",
-  "split_visual_result": "Two local views are present; both players fall at planned puzzle coordinates. Main-cave floor/geometry readiness has not passed."
+  "split_screenshot": "cave_split_screen00001.png",
+  "split_visual_result": "Two horizontal third-person local views; both local pawns remain supported at Z92.15 cm. Pawn and control yaw aligned only in PIE; no Player assets edited.",
+  "split_actual_pixels": [
+    1036,
+    575
+  ],
+  "baseline": "Upstream HC-1 plus HC-A2 art and approved HZ environment support",
+  "capture_sequence": "environment-visual-clean finished and restored poses before environment-client-clean"
 }

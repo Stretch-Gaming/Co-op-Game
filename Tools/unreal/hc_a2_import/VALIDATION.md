@@ -1,6 +1,6 @@
 # HC-A2 validation
 
-The source/import/collision/assembly gates passed in the isolated Windows Unreal 5.8.3 editor. The main-cave visual acceptance gate has not passed, so #19 is not complete.
+The source/import/collision/assembly gates and approved HZ integration passed in the isolated Windows Unreal 5.8.3 editor. The other-platform appearance/fallback check remains pending, so #19 stays open.
 
 ## Passed
 
@@ -17,17 +17,21 @@ See `evidence/editor_import.json`, `compound_collision.json`, `pose_graphs.json`
 
 ## Visual review
 
-The renderer captured six actual images; this is not a mockup. In `symbols_and_statues.png` and the actual 800×450 `symbols_half_screen.png`, the four symbols read distinctly and both owl sizes/altar retain the supplied shapes. The test lighting is deliberately strong amber with teal fill; `gate_closed.png` is overlit, so it establishes geometry rather than proving the final cave-light balance.
+The renderer captured six actual images; this is not a mockup. In `symbols_and_statues.png` and the actual 800Ã—450 `symbols_half_screen.png`, the four symbols read distinctly and both owl sizes/altar retain the supplied shapes. The test lighting is deliberately strong amber with teal fill; `gate_closed.png` is overlit, so it establishes geometry rather than proving the final cave-light balance.
 
-The main-map renders show unresolved environment integration: `site_gate_g1.png` is very dark, and `site_altar.png` shows the altar outside a usable enclosing cavern. Gate upper-space probes found no rock across sampled Z525/650/825 at G1/G2/G3. `gate_open.png` shows the leaf's full upward travel in the test gallery; that exposure is intentional for assembly review, not a claimed concealed cave gate.
+The original `site_gate_g1.png`, `site_altar.png` and `split_screen0000*.png` record the earlier missing HZ support. They are historical failure evidence. Stretch subsequently approved HZ floor, local lighting and gate-enclosure changes; the HZ map was locked and the kickoff posted on #19 before authoring.
 
-Consequently, **main-cave placement, lighting and leaf concealment remain pending HZ work/review**. No HZ geometry or lighting was modified, no leaf was hidden, no travel was shortened and no asset was resized to mask the issue. The concrete gate clearance/enclosure requirements are in `enclosure_plan.json`.
+The current `cave_*` images and `environment_capture.json` cover the supported plate hall, altar, all three gates at Z0/Z200/Z400 and each symbol at an actual 800×450. The daylight gaps found in initial enclosure renders were sealed with alcove returns, an altar entrance bulkhead and caps meeting the ceilings. Amber lighting was reduced and teal fill strengthened. The upper leaf is enclosed through its full travel; it is never shortened or hidden. Existing prototype actors and all HC prop origins remain intact.
+
+See `environment_authoring.json` for the exact 47 boxes and lights, `environment_verification.json` for saved-map readback, 17 floor contacts, closed/open pawn sweeps, leaf-volume clearance and both-face occlusion probes, and `environment_review.json` for the image review. The leaf-volume sweep uses a 0.5 cm offset above the resting floor to exclude floor contact while retaining full leaf dimensions and 400 cm travel.
+
+The HZ support asset has 2,244 opaque triangles, Nanite enabled with 100% fallback triangles/zero error, simple compound boxes and MI_HCA2_Stone. It is analytic team-authored geometry created through editor GeometryScripting APIs. Source art and shared materials are unchanged. This supports #19's props and a short G3 landing; it does not finish the downstream gauntlet/chasm environment visible through G3.
 
 ## Client scope
 
-`client_checks.json` records 2/3/4 Play As Client asset-presence and initial-pose checks plus the current split-screen result. The 2/3/4-player asset-presence/initial-pose checks and two-local-controller check passed. `split_screen00000.png` confirms two local views, but both players fall at the planned puzzle coordinates, reinforcing the main-map floor/geometry blocker. These checks establish static-art loading and local view creation, not final visual acceptance or gameplay RPC transport. Carrying, pressure-plate counting, GameMode gate/round decisions and altar relic interaction belong to HC-4/5/6 and are not implemented by art fixtures.
+`client_checks.json` records fresh 2/3/4 Play As Client asset-presence/initial-pose checks and a listen-server check with two local controllers. Both local pawns at the plate test positions remain supported at Z92.15 cm instead of falling. The current split-screen renderer image is recorded separately from the historical falling views. These checks establish static-art loading, local views and floor support. They do not establish gameplay RPC/carry/round logic, which belongs to HC-4/5/6.
 
-Physical gamepad routing, teammate Mac appearance/fallback checks and a final team playtest are not established by this Windows automation. The minimum-kit other-platform requirement in docs/assets.md remains pending.
+Physical gamepad routing, the regular PG camera/view behavior and a final team playtest remain outside this art automation. The other-platform appearance/fallback requirement in docs/assets.md cannot be established on this Windows host. `MAC_CHECK.md` contains the bounded teammate handoff. #19 must remain open until that result is recorded.
 
 ## Practical editor findings
 
@@ -37,6 +41,6 @@ Physical gamepad routing, teammate Mac appearance/fallback checks and a final te
 - Generic unsaved World duplication followed by load caused a GC crash. The delivery uses LevelEditorSubsystem.new_level_from_template instead.
 - The Blueprint DSL requires an explicit `(else ...)`. Both branches are independently exercised; compile success alone was not accepted as pose correctness.
 
-The original dirty checkout, source art, Core, Player, Hazards, shared materials/maps and project settings are preserved. No hosted subagents were used. #19 must remain open until the remaining art acceptance criteria pass.
+The original dirty checkout, source art, Core, Player, shared materials/maps and project settings are preserved. HZ changes are limited to the explicitly approved, locked sublevel and its unique supporting mesh; original HZ actors are preserved. No hosted subagents were used. #19 must remain open until the remaining art acceptance criteria pass.
 
 Upstream HC-1 integration: the final rebase retained its three test interactables in L_Site01_HC, then added the eleven HC-A2 actors through the editor. See evidence/upstream_integration.json. No older binary map replaced the upstream map.

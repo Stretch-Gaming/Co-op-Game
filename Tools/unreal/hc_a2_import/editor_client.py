@@ -4,6 +4,9 @@ from pathlib import Path
 import unreal
 root=Path(__file__).resolve().parents[3]
 assert Path(unreal.Paths.convert_relative_path_to_full(unreal.Paths.get_project_file_path())).resolve()==root/"CoopGame.uproject"
+capture=root/'Tools/unreal/hc_a2_import/evidence/environment_capture.json'
+if capture.exists():
+ assert json.loads(capture.read_text()).get('status')!='running','Finish renderer capture before starting PIE'
 levels=unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
 settings=unreal.load_object(None,"/Script/UnrealEd.Default__LevelEditorPlaySettings")
 keys=["PlayNetMode","PlayNumberOfClients","RunUnderOneProcess","ServerPort"]
@@ -77,20 +80,28 @@ def tick(delta):
      for pc,pos,yaw in zip(pcs,[(3550,-800,100),(5150,800,100)],[180,180]):
       pawn=pc.get_controlled_pawn();assert pawn is not None
       pawn.set_actor_location(unreal.Vector(*pos),False,True)
-      pc.set_control_rotation(unreal.Rotator(-25,yaw,0))
+      pawn.set_actor_rotation(unreal.Rotator(pitch=0,yaw=yaw,roll=0),False)
+      pc.set_control_rotation(unreal.Rotator(pitch=-25,yaw=yaw,roll=0))
      state["results"].append({"mode":"Listen server split-screen","local_players":len(pcs),"world":row})
      state["shot_world"]=w;state["shot_pc"]=pcs[0];found=True
    assert found,"Second local controller not present"
    state["phase"]="split_capture";state["ready_after"]=time.monotonic()+3;return
   if state["phase"]=="split_capture":
    if time.monotonic()<state["ready_after"]:return
-   path=root/"Tools/unreal/hc_a2_import/evidence/split_screen.png"
+   path=root/"Tools/unreal/hc_a2_import/evidence/cave_split_screen.png"
+   pcs=unreal.GameplayStatics.get_all_actors_of_class(state['shot_world'],unreal.PlayerController)
+   positions=[]
+   for pc in [pc for pc in pcs if pc.is_local_controller()]:
+    p=pc.get_controlled_pawn().get_actor_location();assert 70<p.z<130,('Unsupported split-screen pawn',p)
+    positions.append([p.x,p.y,p.z])
+   assert len(positions)==2
+   state['results'][-1]['supported_pawn_locations_cm']=positions
    unreal.SystemLibrary.execute_console_command(state["shot_world"],'Shot filename="'+str(path)+'"',state["shot_pc"])
    state["shot_world"]=None;state["shot_pc"]=None;state["phase"]="split_done";state["ready_after"]=time.monotonic()+3;return
   if state["phase"]=="split_done":
    if time.monotonic()<state["ready_after"]:return
-   path=root/"Tools/unreal/hc_a2_import/evidence/split_screen.png"
-   state["split_shot"]=bool(list(path.parent.glob("split_screen*.png")))
+   path=root/"Tools/unreal/hc_a2_import/evidence/cave_split_screen.png"
+   state["split_shot"]=bool(list(path.parent.glob("cave_split_screen*.png")))
    levels.editor_request_end_play();state["phase"]="stop";state["deadline"]=time.monotonic()+45;return
   if state["phase"]=="stop":
    if levels.is_in_play_in_editor() or unreal.EditorLevelLibrary.get_pie_worlds(True):return

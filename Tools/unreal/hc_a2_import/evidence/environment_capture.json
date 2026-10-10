@@ -1,0 +1,293 @@
+{
+  "status": "captured; visual review required",
+  "run_id": "environment-visual-clean",
+  "shots": [
+    {
+      "name": "cave_plate_hall",
+      "camera_cm": [
+        4100,
+        -1200,
+        310
+      ],
+      "target_cm": [
+        4000,
+        1100,
+        100
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 754972
+    },
+    {
+      "name": "cave_altar",
+      "camera_cm": [
+        11300,
+        -150,
+        170
+      ],
+      "target_cm": [
+        10800,
+        0,
+        65
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 685696
+    },
+    {
+      "name": "cave_gate_G1_closed",
+      "camera_cm": [
+        2000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        2500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 0,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 736903
+    },
+    {
+      "name": "cave_gate_G1_half",
+      "camera_cm": [
+        2000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        2500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 200,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 731426
+    },
+    {
+      "name": "cave_gate_G1_open",
+      "camera_cm": [
+        2000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        2500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 400,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 828290
+    },
+    {
+      "name": "cave_gate_G2_closed",
+      "camera_cm": [
+        5000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        5500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 0,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 828115
+    },
+    {
+      "name": "cave_gate_G2_half",
+      "camera_cm": [
+        5000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        5500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 200,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 811175
+    },
+    {
+      "name": "cave_gate_G2_open",
+      "camera_cm": [
+        5000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        5500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 400,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 877906
+    },
+    {
+      "name": "cave_gate_G3_closed",
+      "camera_cm": [
+        11000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        11500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 0,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 865615
+    },
+    {
+      "name": "cave_gate_G3_half",
+      "camera_cm": [
+        11000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        11500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 200,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 884011
+    },
+    {
+      "name": "cave_gate_G3_open",
+      "camera_cm": [
+        11000,
+        -60,
+        210
+      ],
+      "target_cm": [
+        11500,
+        0,
+        260
+      ],
+      "leaf_z_cm": 400,
+      "actual_pixels": [
+        1600,
+        900
+      ],
+      "bytes": 942121
+    },
+    {
+      "name": "cave_half_diamond",
+      "camera_cm": [
+        3500,
+        -800,
+        170
+      ],
+      "target_cm": [
+        3200,
+        -800,
+        25
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        800,
+        450
+      ],
+      "bytes": 193688
+    },
+    {
+      "name": "cave_half_circle",
+      "camera_cm": [
+        3500,
+        800,
+        170
+      ],
+      "target_cm": [
+        3200,
+        800,
+        25
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        800,
+        450
+      ],
+      "bytes": 198171
+    },
+    {
+      "name": "cave_half_triangle",
+      "camera_cm": [
+        5100,
+        -800,
+        170
+      ],
+      "target_cm": [
+        4800,
+        -800,
+        25
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        800,
+        450
+      ],
+      "bytes": 200058
+    },
+    {
+      "name": "cave_half_cross",
+      "camera_cm": [
+        5100,
+        800,
+        170
+      ],
+      "target_cm": [
+        4800,
+        800,
+        25
+      ],
+      "leaf_z_cm": null,
+      "actual_pixels": [
+        800,
+        450
+      ],
+      "bytes": 222625
+    }
+  ],
+  "temporary_poses_restored": true,
+  "camera_packages_saved": false
+}

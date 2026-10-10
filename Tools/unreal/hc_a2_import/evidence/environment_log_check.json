@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "Unreal 5.8.3",
+  "log": "Saved/HCA2/editor_acceptance.log (local ignored log)",
+  "log_sha256": "7be7ebb7e953f4895ec9b570549b533fd72f5ebd106e223550ed62157f74bd56",
+  "error_patterns": [
+    "LogBlueprint: Error",
+    "LogScript: Error",
+    "LogMaterial: Error",
+    "LogPython: Error",
+    "Accessed None"
+  ],
+  "matches": 0,
+  "capture_run": "environment-visual-clean",
+  "client_run": "environment-client-clean",
+  "scope": "Clean isolated editor session after authoring fixes; historical authoring failures excluded and documented in environment_recovery.json",
+  "editor_closed": true
+}

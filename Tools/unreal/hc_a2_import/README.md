@@ -8,6 +8,7 @@ Stretch's HC lane delivery for [#19](https://github.com/Stretch-Gaming/Co-op-Gam
 - Five Blueprint art assemblies in `HCA2_Props/Assemblies/`: diamond/circle/triangle/cross plates and the chamber gate.
 - `/Game/Puzzles/Test/L_HCA2_Props`, created through the editor's level-template API from L_StyleTest. Its copied lighting/reference assets and HC-owned test fixtures support comparison without modifying the shared map.
 - Eleven art-only placements in `L_Site01_HC`: four symbol plates, three 1.8 m statues in the documented alcoves, the altar, and G1/G2/G3. The starting main branch had no HC puzzle greyboxes or gameplay actors to replace.
+- Approved HZ support in `L_Site01_HZ`: a unique 2,244-triangle cave shell with 47 simple boxes, local warm/teal lighting, and enclosed gate pockets. Existing HZ actors are preserved.
 - Both statue variants remain available. Alcove placement uses #19's 1.8 m specification; the 1.1 m version appears beside it in the test map. No carry variant is silently selected.
 
 These are art assemblies, with cosmetic `SetPressedVisual` and `SetOpenVisual` functions. Gameplay authority, carrying, puzzle counts and round completion belong to HC-4/5/6. The future gameplay owner must drive the cosmetic functions from server-owned replicated state. There are no new input, HUD, GameMode or round-state changes in this delivery.
@@ -74,7 +75,7 @@ Use actor/component scale (1,1,1), base-centered pivots and component-relative t
 | Altar | Front +X; relic base **(0,0,97 cm)** in the 40 cm diameter, 3 cm deep socket. |
 | Statues | 1.8 m and 1.1 m variants retained, fronts +X. |
 
-The gate's **400 cm Y opening × 400 cm height** is its passage. Full frame bounds are **156 × 708.8224 × 511.2001 cm**, including rubble; the leaf is **30.4 × 430 × 450 cm**. Passage is along X; the centered X slot is 34 cm wide. Open leaf top is **Z 850 cm**. Never resize/recenter the art or shorten travel to force a fit.
+The gate's **400 cm Y opening Ãƒâ€” 400 cm height** is its passage. Full frame bounds are **156 Ãƒâ€” 708.8224 Ãƒâ€” 511.2001 cm**, including rubble; the leaf is **30.4 Ãƒâ€” 430 Ãƒâ€” 450 cm**. Passage is along X; the centered X slot is 34 cm wide. Open leaf top is **Z 850 cm**. Never resize/recenter the art or shorten travel to force a fit.
 
 Symbol placement is explicit: diamond (32,-8 m), circle (32,+8 m), triangle (48,-8 m), cross (48,+8 m). Gates remain at the documented 25/55/115 m X positions and the altar at X108 m. All new main-map actors belong to L_Site01_HC, with no cross-sublevel actor references.
 
@@ -85,7 +86,7 @@ All ten meshes now have simple collision, with simple-and-complex query behavior
 - Plate base, each top and leaf: one fitted box.
 - Each statue: separately scaled plinth and owl boxes.
 - Altar: pedestal and capstone boxes; capstone collision stops at Z97 so the socket base remains accessible.
-- Frame: eight split post/core/lintel boxes. The 4×4 m passage and 34 cm X slot stay clear; the cores start at Y ±218 cm, beyond the leaf ends at ±215 cm.
+- Frame: eight split post/core/lintel boxes. The 4Ãƒâ€”4 m passage and 34 cm X slot stay clear; the cores start at Y Ã‚Â±218 cm, beyond the leaf ends at Ã‚Â±215 cm.
 
 Live checks verified all four 7 cm surface-height changes, closed-gate blocking/open-gate clearance with a pawn-size sweep, and the altar contact surface at Z97. The precise box ranges are in `evidence/compound_collision.json`.
 
@@ -93,10 +94,24 @@ Live checks verified all four 7 cm surface-height changes, closed-gate blocking/
 
 Read `VALIDATION.md` and the current captured evidence. Do not treat historical offline results as live gameplay proof.
 
-- Gate concealment needs the HZ owner's enclosing-rock review/work up to Z850. The current cave probes found no rock across the sampled upper-leaf space. This delivery preserves the leaf and travel and does not edit HZ's cave or hide it to conceal the problem.
+- The approved HZ integration supplies floor, walls, roof and gate pockets up to the full Z850 leaf envelope. See the current environment collision, renderer and client evidence. Older `site_*`/gallery captures record the earlier blocker and are historical.
 - Other-platform appearance/fallback checks remain necessary under docs/assets.md. A Windows run cannot establish a Mac result.
 - Carry/view choice and the eventual pressure-plate/statue/altar/gate gameplay hookup remain the consuming HC phases. There were no existing HC gameplay greyboxes to swap.
 
 Only tick or close #19 when the applicable art acceptance gates have actually passed. Do not claim missing gameplay or external-platform checks passed. Shared materials, shared maps, core assets, source art, project settings and the original dirty checkout are preserved.
 
 Upstream HC-1 integration: the final rebase retained its three test interactables in L_Site01_HC, then added the eleven HC-A2 actors through the editor. See evidence/upstream_integration.json. No older binary map replaced the upstream map.
+
+## Approved HZ integration
+
+Stretch approved the HZ floor, local lighting and gate-enclosure extension. The kickoff is recorded on #19, comment 6097208734. `Content/Hazards/L_Site01_HZ.umap` was locked before authoring. Positions in the shared layout stay fixed; the existing prototype spans only X -20 to +20 m, so this change adds support around the documented puzzle positions rather than moving the props into that prototype.
+
+`/Game/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport` is team-authored analytic geometry made through Unreal GeometryScripting editor APIs. It uses the existing read-only MI_HCA2_Stone, itself an instance of M_Stylized. No additional source art, texture, shared material or credit is needed. Opaque geometry above 2,000 triangles uses Nanite with full-fidelity fallback. All 47 collision primitives are simple boxes. The decorative bevels sit within the collision bounds.
+
+Gate pockets have opaque faces on X [-180,-17] and [17,180] relative to each gate, beginning at Z400; the centered 34 cm slot remains clear. The leaf ends at Z850 and the cap begins at Z900. Corridor walls/roofs stop 180 cm short of the gate origins so the full 430 cm leaf width clears them. Support floors finish at Z0. Never add collision across the center slot or shorten the leaf travel.
+
+`editor_environment.py` requires an explicit `execute_environment: true` in the local editor-session request and verifies the exact project and Stretch's HZ map lock. A normal repeat refuses the existing support asset and placements. The bounded `repair_owned_support` path additionally requires the exact current asset SHA-256 and prior authoring evidence; it removes only the tagged HZ integration actors and its unique support mesh through editor APIs, then rebuilds them. It never deletes an existing prototype actor. This environment authoring path is separate from the default read-only prop importer.
+
+Independent `editor_environment_verify.py` reloads the saved map, checks all preserved actor transforms/classes, floor contacts and three gates. The full leaf-volume sweep starts 0.5 cm above the resting floor to avoid a contact-only hit; it preserves the full width/thickness/height and 400 cm travel. Renderer review covers closed, halfway and fully open states. `editor_environment_visual.py` restores all temporary poses and removes cameras without saving them.
+
+For a future authorized fresh environment bake, acquire the HZ map lock and invoke the script explicitly from that checkout's full 5.8.3 editor. Write a local `Saved/HCA2/request.json` containing `{"id":"unique-authoring-run","execute_environment":true}`, then execute the saved `editor_environment.py` through the editor Python API with its real `__file__`. The delivered asset already exists, so the normal invocation intentionally refuses it. Verification scripts may be executed through the same editor Python route; run renderer capture to completion before PIE. The client script refuses a capture report still marked running.

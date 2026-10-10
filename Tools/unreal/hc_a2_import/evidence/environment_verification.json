@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "floors": [
+    {
+      "xy_cm": [
+        1800,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        2700,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        3200,
+        -800
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        3200,
+        800
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        4800,
+        -800
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        4800,
+        800
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        3500,
+        1300
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        4000,
+        1300
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        4500,
+        1300
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        5800,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        7000,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        8400,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        9000,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        10800,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        11700,
+        0
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        3550,
+        -800
+      ],
+      "floor_z_cm": -1e-06
+    },
+    {
+      "xy_cm": [
+        5150,
+        800
+      ],
+      "floor_z_cm": -1e-06
+    }
+  ],
+  "gates": [
+    {
+      "label": "HC_A2_Gate_G1",
+      "closed_blocks_pawn": true,
+      "open_clears_pawn": true,
+      "full_leaf_travel_clear": true,
+      "opaque_faces_cover_samples": 18,
+      "slot_x_cm": 34,
+      "full_open_leaf_top_z_cm": 850
+    },
+    {
+      "label": "HC_A2_Gate_G2",
+      "closed_blocks_pawn": true,
+      "open_clears_pawn": true,
+      "full_leaf_travel_clear": true,
+      "opaque_faces_cover_samples": 18,
+      "slot_x_cm": 34,
+      "full_open_leaf_top_z_cm": 850
+    },
+    {
+      "label": "HC_A2_Gate_G3",
+      "closed_blocks_pawn": true,
+      "open_clears_pawn": true,
+      "full_leaf_travel_clear": true,
+      "opaque_faces_cover_samples": 18,
+      "slot_x_cm": 34,
+      "full_open_leaf_top_z_cm": 850
+    }
+  ],
+  "simple_boxes": 47,
+  "nanite": true,
+  "preserved_existing_actors": 354,
+  "saved_map_reload": true,
+  "transient_poses_restored": true,
+  "visual_review": "separate renderer captures required"
+}

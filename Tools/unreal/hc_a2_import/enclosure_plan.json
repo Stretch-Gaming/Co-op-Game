@@ -1,7 +1,7 @@
 {
   "issue": 19,
   "lane_owner": "HZ for cave geometry/lighting; HC props remain fixed",
-  "status": "proposed requirements; no HZ edits made",
+  "status": "implemented in isolated worktree; editor collision and renderer review recorded separately",
   "acceptance": {
     "opening": {
       "axis": "Y",
@@ -58,10 +58,11 @@
     "Confirm no cave collision blocks the gate passage or moving slot.",
     "Review concealment at closed, halfway and full +400 cm open positions."
   ],
-  "authority": "AGENTS.md: only edit own lane folder/sublevel; cross-lane changes need a lock and kickoff heads-up. No authorization to modify HZ is assumed.",
+  "authority": "Stretch explicitly approved HZ floor/local lighting/gate-enclosure extension on 2026-10-10; HZ map locked before edits; kickoff recorded on #19 comment 6097208734",
   "evidence": [
-    "site_gate_g1.png",
-    "site_altar.png",
-    "editor_verification.json"
+    "evidence/environment_authoring.json",
+    "evidence/environment_verification.json",
+    "evidence/environment_capture.json",
+    "evidence/environment_review.json"
   ]
 }
