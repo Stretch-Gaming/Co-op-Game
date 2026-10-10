@@ -1,0 +1,36 @@
+{
+  "status": "passed for approved Windows environment/placement gate; Mac pending",
+  "method": "Direct inspection of Unreal renderer PNGs",
+  "capture_run_id": "continuation-final-render",
+  "reviewed_images": [
+    "prototype_doorway.png",
+    "cave_plate_hall.png",
+    "cave_altar.png",
+    "cave_gate_G1_closed.png",
+    "cave_gate_G1_half.png",
+    "cave_gate_G1_open.png",
+    "cave_gate_G2_closed.png",
+    "cave_gate_G2_half.png",
+    "cave_gate_G2_open.png",
+    "cave_gate_G3_closed.png",
+    "cave_gate_G3_half.png",
+    "cave_gate_G3_open.png",
+    "cave_half_diamond.png",
+    "cave_half_circle.png",
+    "cave_half_triangle.png",
+    "cave_half_cross.png"
+  ],
+  "findings": [
+    "Clockwise support faces make the floor, walls and roof correctly visible; earlier simple collision success did not establish visible-face winding.",
+    "Four symbols remain distinct at actual 800x450. Stone reads as muted rock with warm accents, teal fill and blue-violet shadows, rather than the earlier saturated amber surfaces.",
+    "All three supplied frame beams/symbols remain visible. Lower pocket padding sits behind the lintels; upper leaf travel is concealed without shortening or hiding the leaf.",
+    "Original prototype entrance is connected through explicitly approved doorway copies; original actor identities/transforms and mesh assets remain intact.",
+    "Frame-side daylight seams are sealed in the new support. Forty-eight complex geometry rays verify those faces; 24 connections and four spawn routes have separate geometric clearance evidence."
+  ],
+  "limits": [
+    "Supported environment ends at X118.5 m; the unfinished downstream gauntlet/chasm is visible through the open G3 landing.",
+    "Mac appearance/fallback check remains pending.",
+    "Route evidence uses geometric capsule sweeps and the existing step budget; human controller traversal and navmesh/gameplay networking are not claimed.",
+    "The copied legacy rock shell retains its existing complex-as-simple collision semantics. Generated support, portal blocker and all HC-A2 props use simple collision."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "historical authoring failures, not passing evidence",
+  "corrections": [
+    "git lfs locks --json returns a list",
+    "nondegenerate chamfer rings",
+    "corridor roof and walls trimmed 180 cm before gate pockets",
+    "altar entrance bulkheads and alcove returns seal daylight gaps",
+    "gate caps meet room ceilings",
+    "local amber reduced and teal fill strengthened",
+    "Nanite enabled explicitly after GeometryScripting creation; full fallback retained",
+    "Capture report now marks running and carries a unique run ID; screenshot callback unregisters before cleanup; PIE is queued only after matching completed capture evidence. A clean isolated session replaces the interleaved capture/PIE result.",
+    "Explicitly approved prototype doorway copies preserve actor identities/transforms and original assets.",
+    "Support winding corrected to Unreal clockwise; 48 complex face/seam probes now pass.",
+    "1/16 cm Nanite position precision preserves slot geometry.",
+    "Four-start route scan uses existing 35 cm radius, 90 cm half-height and 45 cm step budget.",
+    "Lower enclosure padding placed behind frame lintels; upper faces begin Z512 to preserve the supplied beam/symbol."
+  ],
+  "acceptance": "separate environment_verification.json, environment_capture.json, environment_review.json and client_checks.json"
+}

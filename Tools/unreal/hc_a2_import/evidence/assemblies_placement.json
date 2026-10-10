@@ -1,0 +1,221 @@
+{
+  "blueprints": [
+    {
+      "path": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond",
+      "compile": "passed"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle",
+      "compile": "passed"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle",
+      "compile": "passed"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross",
+      "compile": "passed"
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "compile": "passed"
+    }
+  ],
+  "test_placements": [
+    {
+      "label": "HC_A2_Test_Diamond",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond",
+      "location": [
+        -500,
+        900,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Circle",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle",
+      "location": [
+        -250,
+        900,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Triangle",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle",
+      "location": [
+        0,
+        900,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Cross",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross",
+      "location": [
+        250,
+        900,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Statue_180",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "location": [
+        -400,
+        1250,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Statue_110",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Statue_Small",
+      "location": [
+        -150,
+        1250,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Altar",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+      "location": [
+        150,
+        1250,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Gate_Closed",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "location": [
+        850,
+        1000,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Test_Gate_Open",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "location": [
+        1800,
+        1000,
+        0
+      ]
+    }
+  ],
+  "site_placements": [
+    {
+      "label": "HC_A2_Plate_Diamond",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond",
+      "location": [
+        3200,
+        -800,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Plate_Circle",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle",
+      "location": [
+        3200,
+        800,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Plate_Triangle",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle",
+      "location": [
+        4800,
+        -800,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Plate_Cross",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross",
+      "location": [
+        4800,
+        800,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Statue_Alcove_1",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "location": [
+        3500,
+        1300,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Statue_Alcove_2",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "location": [
+        4000,
+        1300,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Statue_Alcove_3",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "location": [
+        4500,
+        1300,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Altar",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+      "location": [
+        10800,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Gate_G1",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "location": [
+        2500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Gate_G2",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "location": [
+        5500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "HC_A2_Gate_G3",
+      "asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate",
+      "location": [
+        11500,
+        0,
+        0
+      ]
+    }
+  ],
+  "gameplay_scope": "art-only; HC-4/5/6 gameplay is not created",
+  "saved_packages": [
+    "/Game/Puzzles/L_Site01_HC",
+    "/Game/Puzzles/Test/L_HCA2_Props",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate"
+  ],
+  "statue_choice": "Original #19 specification: 1.8 m statue for alcove placements. 1.1 m asset retained and shown in test map; no gameplay carry variant chosen.",
+  "greybox_replacement": "No HC puzzle actors or greyboxes existed on the starting main; new art-only placements at documented coordinates. Gameplay integration remains HC-4/5/6.",
+  "status": "passed"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "asset": "BP_HCA2_Plate_Diamond",
+    "graph": "(fn SetPressedVisual (Active)\n  (if Active\n    (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=2)\")\n    (else\n      (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=9)\"))))\n",
+    "compile": "passed"
+  },
+  {
+    "asset": "BP_HCA2_Plate_Circle",
+    "graph": "(fn SetPressedVisual (Active)\n  (if Active\n    (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=2)\")\n    (else\n      (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=9)\"))))\n",
+    "compile": "passed"
+  },
+  {
+    "asset": "BP_HCA2_Plate_Triangle",
+    "graph": "(fn SetPressedVisual (Active)\n  (if Active\n    (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=2)\")\n    (else\n      (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=9)\"))))\n",
+    "compile": "passed"
+  },
+  {
+    "asset": "BP_HCA2_Plate_Cross",
+    "graph": "(fn SetPressedVisual (Active)\n  (if Active\n    (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=2)\")\n    (else\n      (Transformation|SetRelativeLocation (Variables|Default|GetPlateTop) \"(X=0,Y=0,Z=9)\"))))\n",
+    "compile": "passed"
+  },
+  {
+    "asset": "BP_HCA2_ChamberGate",
+    "graph": "(fn SetOpenVisual (Active)\n  (if Active\n    (Transformation|SetRelativeLocation (Variables|Default|GetGateLeaf) \"(X=0,Y=0,Z=400)\")\n    (else\n      (Transformation|SetRelativeLocation (Variables|Default|GetGateLeaf) \"(X=0,Y=0,Z=0)\"))))\n",
+    "compile": "passed"
+  }
+]

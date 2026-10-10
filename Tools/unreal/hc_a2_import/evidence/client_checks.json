@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "mode": "Play As Client",
+      "players": 2,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 2,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Play As Client",
+      "players": 3,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 3,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Play As Client",
+      "players": 4,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 4,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_4_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Listen server split-screen",
+      "local_players": 2,
+      "world": {
+        "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+        "art_actors": 11,
+        "controllers": 2,
+        "local_controllers": 2
+      },
+      "supported_pawn_locations_cm": [
+        [
+          3550.0,
+          -800.0,
+          92.15000009536743
+        ],
+        [
+          5150.0,
+          800.0,
+          92.15000009536743
+        ]
+      ]
+    }
+  ],
+  "settings_restored": true,
+  "split_screenshot_saved": true,
+  "scope": "Asset loading, static poses and local views only; gameplay RPC/carry/round logic is not implemented or claimed.",
+  "split_screenshot": "cave_split_screen00003.png",
+  "split_actual_pixels": [
+    1039,
+    579
+  ],
+  "baseline": "Final clockwise support, retained frame beams, approved doorway copies and unchanged HC-1/HC-A2 placements",
+  "capture_sequence": "continuation-final-render completed/restored poses before continuation-final-client",
+  "split_visual_result": "Two horizontal local third-person views with visible supported floor/props; both pawns stay at Z92.15 cm."
+}
