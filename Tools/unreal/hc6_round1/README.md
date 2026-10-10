@@ -1,0 +1,15 @@
+# HC6 Round 1 tooling
+
+The checked-in Blueprint actors are the delivery. Do not rerun authoring to use them. Placement and verification details are in `docs/hc6-round1-verification.md`.
+
+All engine scripts verify their own checkout's project path and UE 5.8.3. `mcp_client.py` talks only to the dedicated editor on loopback port **8016**. It never uses the shared port 8000 or changes `.mcp.json`. Calls are sequential.
+
+For a new, empty actor destination, explicit authoring order is `build.py`, `add_interfaces.py`, `logic.py`, `bind_round.py`, then `integrate_references.py`. Scaffolding refuses existing actor assets. The later scripts are explicit editor writes restricted to the four owned actors; `integrate_references.py` only assigns references to existing art/carrying assets. `fixture.py` explicitly builds the owned compact fixture and its test-only materials/weight/GameMode. No raw `.uasset` or `.umap` byte editing is used.
+
+`run_editor.py <script-path>` submits a script through Slate's console in the dedicated full editor. `run_matrix.py` runs the six 2/3/4-player client and host-pair configurations; an optional argument restricts it to a player count or `split`. It injects real Enhanced Input and records server/client readback. The test code also supports an unattended editor after startup difficulties: launch the same project with `-ExecCmds="py <absolute editor_loop.py path>"`, `-unattended -nullrhi -nosound`, and the same unique MCP port. Use `run_command.py <allowed-script-name>` for its bounded main-thread bridge; set the task-local environment variable `HC6_COMMAND_BRIDGE=1` when running the matrix this way. `-ExecutePythonScript` exits after script completion and is unsuitable for this bridge.
+
+The initial matrix used the full rendering editor and a native screenshot confirms both host views. The post-rebase matrix uses NullRHI; its rendering-disabled results verify the unchanged gameplay with the newly merged Core/HUD/carrying prerequisites. They do not replace the rendered screenshot or claim physical controller/Mac/separate-machine execution.
+
+`saved_audit.py` reads saved class status, replication and reset interfaces without compiling/saving. `audit.py` is an explicit compile/save gate for owned packages only; it reports any unowned dirty packages, which must remain unsaved. `compare_core.py` compares Core graphs to the initial readback; a rebased Core graph change belongs to upstream, so the original comparison is historical evidence. `verify_disk.py` checks protected raw hashes against the current `origin/main`, exact scope and the six result gates.
+
+Passing result files are the six `clients-N.json` / `split-N.json` reports. `attempts.json` separately records earlier authoring/harness attempts. `configuration-verification.json` covers the configurable-class failure path. `integrated-smoke.json` reports only the L_Site01 baseline smoke, since no HC6 cave placement is saved by this slice. `delivery-validation.json` records the final raw asset hashes and compact matrix summary. Runtime bridge request/status files are transient operational data.

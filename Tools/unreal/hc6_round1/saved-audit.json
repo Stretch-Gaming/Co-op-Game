@@ -1,0 +1,45 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "read_only": true,
+  "actors": {
+    "BP_PressurePlate": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "round_reset": true,
+      "replicates": true,
+      "replication": {
+        "Enabled": "<BlueprintVariableReplication.REP_NOTIFY: 2>",
+        "Pressed": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+      }
+    },
+    "BP_PuzzleSetup": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "round_reset": true,
+      "replicates": true,
+      "replication": {
+        "PlateCount": "<BlueprintVariableReplication.REP_NOTIFY: 2>",
+        "StatueCount": "<BlueprintVariableReplication.REP_NOTIFY: 2>",
+        "Ready": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+      }
+    },
+    "BP_ChamberGate": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "round_reset": true,
+      "replicates": true,
+      "replication": {
+        "Open": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+      }
+    },
+    "BP_StartPad": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "round_reset": true,
+      "replicates": true,
+      "replication": {
+        "Started": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+      }
+    }
+  },
+  "core_saved": false,
+  "dirty_packages": [],
+  "passed": true
+}

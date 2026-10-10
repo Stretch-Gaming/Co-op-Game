@@ -1,0 +1,8 @@
+{
+  "host": "/Game/Puzzles/Test/HC6/UEDPIE_0_L_HC6_Round1.L_HC6_Round1",
+  "local_players": 2,
+  "controllers": [
+    "/Game/Puzzles/Test/HC6/UEDPIE_0_L_HC6_Round1.L_HC6_Round1:PersistentLevel.BP_CoopPlayerController_C_0",
+    "/Game/Puzzles/Test/HC6/UEDPIE_0_L_HC6_Round1.L_HC6_Round1:PersistentLevel.BP_CoopPlayerController_C_3"
+  ]
+}
