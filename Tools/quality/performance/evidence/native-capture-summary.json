@@ -134,5 +134,7 @@
     "GPU time/frame pacing/shared load deserves targeted comparison; no light/mesh/collision bottleneck proved."
   ],
   "optimizations_applied": false,
-  "assets_or_project_settings_changed": false
+  "assets_or_project_settings_changed": false,
+  "session_stability_note": "The user preview was alive after both captures and our editor closed, then exited at23:52:03UTC due to DXGI_ERROR_DEVICE_REMOVED/DEVICE_RESET. Exact cause unconfirmed. Pre-reset timing rows do not establish game or driver stability. No further GPU tests run.",
+  "additional_gpu_context": "One unrelated rendered Unreal editor was also running; its files/state were not inspected or changed. Two older graphics-free editors were present. These captures were not GPU-isolated."
 }
