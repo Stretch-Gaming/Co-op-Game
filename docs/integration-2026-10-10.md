@@ -9,9 +9,12 @@ commits remain in the merge ancestry.
 The primary checked exact scopes, native validation records and artifact
 hashes. All 76 altar, 111 gauntlet and 56 round-progression manifest entries
 match their saved delivery bytes. Core and run-ending binaries match their
-tested manifests. Four text-file hash differences in those published
-manifests are checkout line-ending differences; their committed normalized
-text is preserved. No Unreal asset was edited on disk or globally saved.
+tested manifests. Three PG follow-up tooling entries in the Core manifest
+have stale text hashes; independent reads confirm the candidate is identical
+to the published scripts and their source worktree. The run-ending document's
+text hash differs only by checkout line endings. These historical records are
+preserved with this qualification. No Unreal asset was edited on disk or
+globally saved.
 
 Fresh combined-project verification on Unreal 5.8.3, CL 58210709:
 
