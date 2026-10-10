@@ -1,0 +1,189 @@
+{
+  "SM_Lever_Base": {
+    "triangles": 1492,
+    "dimensions_cm": [
+      75.4,
+      60.39,
+      64.7
+    ],
+    "bounds_cm": [
+      [
+        -37.7,
+        37.7
+      ],
+      [
+        -30.2,
+        30.2
+      ],
+      [
+        0.0,
+        64.7
+      ]
+    ],
+    "pivot": "Base centre on the floor. Hinge axle along Y through (0, 0, 45) cm; slot 16 cm wide (Y -8..+8).",
+    "uv": "unique packed UV atlas",
+    "material_slots_after_bake": 1,
+    "collision_cm": [
+      {
+        "name": "UCX_SM_Lever_Base_00",
+        "min": [
+          -37.5,
+          -30.0,
+          0.0
+        ],
+        "max": [
+          37.5,
+          30.0,
+          65.0
+        ]
+      }
+    ]
+  },
+  "SM_Lever_Handle": {
+    "triangles": 1472,
+    "dimensions_cm": [
+      16.32,
+      52.2,
+      85.1
+    ],
+    "bounds_cm": [
+      [
+        -8.22,
+        8.1
+      ],
+      [
+        -26.1,
+        26.1
+      ],
+      [
+        -7.8,
+        77.3
+      ]
+    ],
+    "pivot": "Exactly on the hinge axis. Place at (0, 0, 45) cm on the base and rotate by pitch; upright along +Z at rest, swings +/-45 deg about Y.",
+    "uv": "unique packed UV atlas",
+    "material_slots_after_bake": 1,
+    "collision_cm": [
+      {
+        "name": "UCX_SM_Lever_Handle_00",
+        "min": [
+          -8.22,
+          -26.1,
+          -7.8
+        ],
+        "max": [
+          8.1,
+          26.1,
+          77.3
+        ]
+      }
+    ],
+    "rotation_note": "Blender +Y rotation tilts the top toward +X (40 deg: top reaches X 53.5 cm)."
+  },
+  "SM_GauntletGate": {
+    "triangles": 3472,
+    "dimensions_cm": [
+      28.0,
+      430.0,
+      400.0
+    ],
+    "bounds_cm": [
+      [
+        -14.0,
+        14.0
+      ],
+      [
+        -215.0,
+        215.0
+      ],
+      [
+        0.0,
+        400.0
+      ]
+    ],
+    "pivot": "Bottom centre, flat bottom at Z 0. Slides up 420 cm in the frame grooves (top then at 820 cm).",
+    "uv": "unique packed UV atlas",
+    "material_slots_after_bake": 1,
+    "collision_cm": [
+      {
+        "name": "UCX_SM_GauntletGate_00",
+        "min": [
+          -14.0,
+          -215.0,
+          0.0
+        ],
+        "max": [
+          14.0,
+          215.0,
+          400.0
+        ]
+      }
+    ]
+  },
+  "SM_GauntletGate_Frame": {
+    "triangles": 4504,
+    "dimensions_cm": [
+      112.23,
+      570.35,
+      523.9
+    ],
+    "bounds_cm": [
+      [
+        -56.12,
+        56.12
+      ],
+      [
+        -285.18,
+        285.18
+      ],
+      [
+        0.0,
+        523.9
+      ]
+    ],
+    "pivot": "Bottom centre on the floor. Clear opening Y -200..+200 cm, Z 0..460 cm; grooves and lintel slot X -16..+16, Y to +/-219 cm.",
+    "uv": "unique packed UV atlas",
+    "material_slots_after_bake": 1,
+    "collision_cm": [
+      {
+        "name": "UCX_SM_GauntletGate_Frame_00",
+        "min": [
+          -56.12,
+          -285.18,
+          0.0
+        ],
+        "max": [
+          56.12,
+          -200.0,
+          460.0
+        ]
+      },
+      {
+        "name": "UCX_SM_GauntletGate_Frame_01",
+        "min": [
+          -56.12,
+          200.0,
+          0.0
+        ],
+        "max": [
+          56.12,
+          285.18,
+          460.0
+        ]
+      },
+      {
+        "name": "UCX_SM_GauntletGate_Frame_02",
+        "min": [
+          -56.12,
+          -285.18,
+          460.0
+        ],
+        "max": [
+          56.12,
+          285.18,
+          523.9
+        ]
+      }
+    ]
+  }
+}
