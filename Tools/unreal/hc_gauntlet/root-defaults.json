@@ -1,0 +1,13 @@
+[
+  {
+    "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator",
+    "before_scale": "<Struct 'Vector' (0x000001424AE229B0) {x: 0.500000, y: 0.500000, z: 0.500000}>"
+  },
+  {
+    "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge",
+    "before_scale": "<Struct 'Vector' (0x000001424AE2BFB0) {x: 0.500000, y: 0.500000, z: 0.500000}>"
+  },
+  {
+    "placed_coordinator_scale": "<Struct 'Vector' (0x0000014279A0D550) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+  }
+]

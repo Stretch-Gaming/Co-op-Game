@@ -1,0 +1,2 @@
+(fn FindCoordinator () (bind actors (Actor|GetAllActorsOfClass :ActorClass "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C"))
+ (if (== (Utilities|Array|Length :TargetArray actors) 1) (return (Utilities|Array|Get(acopy) actors 0)) (else (return "None"))))

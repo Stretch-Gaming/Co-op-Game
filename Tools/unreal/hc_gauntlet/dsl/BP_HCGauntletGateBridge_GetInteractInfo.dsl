@@ -1,0 +1,1 @@
+(fn GetInteractInfo (Instigator) (return "Gate adapter" 0.0 (Utilities|Enum|LiteralenumE_InteractMode :Enum "NewEnumerator0")))

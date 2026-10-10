@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "checks": [
+    "default production fixture prohibition disables startup readiness",
+    "actual client input cannot start with a forbidden fixture bridge",
+    "duplicate runtime coordinator is rejected",
+    "actual client input cannot start with ambiguous coordinator",
+    "pre-race startup readiness is valid",
+    "synchronous fixture start request revalidates a just-created bridge ambiguity before the polling timer can run",
+    "duplicate tagged gate bridges fail runtime resolution",
+    "actual client input cannot start with ambiguous bridge",
+    "readiness recovers when fixture ambiguity is removed",
+    "same owning client input starts Round3 after valid fixture readiness is restored"
+  ],
+  "setup": "transient server fixture flags/spawns and GameMode bootstrap; requests use owning client Enhanced Input",
+  "rounds": [
+    {
+      "index": 3,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "4"
+    },
+    {
+      "index": 3,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "4"
+    },
+    {
+      "index": 3,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "4"
+    },
+    {
+      "index": 3,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "4"
+    },
+    {
+      "index": 3,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "4"
+    }
+  ],
+  "mode": "clients",
+  "configured_players": 4,
+  "post_stop_log_errors": [],
+  "log_interval": [
+    860185,
+    922989
+  ]
+}

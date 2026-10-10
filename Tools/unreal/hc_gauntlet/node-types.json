@@ -1,0 +1,18 @@
+{
+  "GetPlayerState": "[\"Game|GetPlayerStatefromUniqueNetId\", \"Game|GetPlayerState\", \"Class|Controller|GetPlayerState\", \"Class|Pawn|GetPlayerState\", \"Class|GameModeBase|GetPlayerStateClass\"]",
+  "ContainsItem": "[\"Utilities|Array|ContainsItem\", \"Utilities|Set|ContainsItem\"]",
+  "AddUnique": "[\"Utilities|Array|AddUnique\"]",
+  "InverseTransformLocation": "[\"Math|Transform|InverseTransformLocation\"]",
+  "GetControlledPawn": "[\"Pawn|GetControlledPawn\"]",
+  "GetController": "[\"Pawn|GetController\", \"Class|AnimSequenceBase|GetController\", \"URigHierarchy|GetController\"]",
+  "GetOpen": "[\"Class|PCGSaveDataViewSettings|GetOpenDialogueonEmptyPath\", \"Class|PCGCreatePolygon2DSettings|GetOpenPolygonWidth\", \"Class|BPGauntletGate|GetOpen\", \"Class|BPGauntletGate|GetOpenHeight\"]",
+  "GetCurrentLift": "[\"Class|BPGauntletGate|GetCurrentLift\"]",
+  "AreLeversHeld": "[\"Class|BPGauntletGate|AreLeversHeld\"]",
+  "GetComponentByClass": "[\"Actor|GetComponentbyClass\"]",
+  "IsDowned": "[]",
+  "GetFixtureOnly": "[\"Class|BPHCGauntletGateBridge|GetFixtureOnly\"]",
+  "RequestLatch": "[\"Class|BPHCGauntletGateBridge|RequestLatch\"]",
+  "QueryLatch": "[\"Class|BPHCGauntletGateBridge|QueryLatch\"]",
+  "FindCoordinator": "[\"Class|BPHCGauntletStart|FindCoordinator\", \"Class|BPHCGauntletObjective|FindCoordinator\"]",
+  "ResetForRound": "[\"AddEvent|EventResetForRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPLever|ResetforRound\", \"Class|BPGauntletGate|ResetforRound\", \"Class|BPCarryable|ResetforRound\", \"Class|BPHCGauntletGateBridge|ResetforRound\", \"CallFunction|ResetforRound\", \"Class|BPHCGauntletStart|ResetforRound\", \"Class|BPHCGauntletObjective|ResetforRound\"]"
+}

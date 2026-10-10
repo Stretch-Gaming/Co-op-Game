@@ -1,0 +1,1 @@
+(fn ResetGauntlet (Index Attempt) (if (Networking|HasAuthority) (Utilities|Array|Clear :TargetArray (Variables|Default|GetEnteredPawns)) (Utilities|Array|Clear :TargetArray (Variables|Default|GetCrossedPawns)) (Variables|Default|SetCompleted false) (Variables|Default|SetRoundPlaying false) (Variables|Default|SetCurrentAttempt Attempt)))

@@ -1,0 +1,15 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "blueprints": {
+    "/Game/Puzzles/Test/HC_Gauntlet/BP_GauntletInputProbe.BP_GauntletInputProbe": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "ResolveInput": "(fn ResolveInput (Controller)\n  (return (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem Controller)))\n",
+        "DispatchFixtureReset": "(fn DispatchFixtureReset (TargetActor Index Attempt)\n  (Class|BPIRoundReset|ResetforRound TargetActor Index Attempt))\n",
+        "EventGraph": "(event EventBeginPlay)\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    }
+  }
+}

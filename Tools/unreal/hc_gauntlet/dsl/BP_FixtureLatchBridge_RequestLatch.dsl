@@ -1,0 +1,4 @@
+(fn RequestLatch (Index Attempt) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))
+ (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs))) (if (and (Networking|HasAuthority) (and (and (== Index 3) (== index Index)) (and (== attempt Attempt) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator1")))))
+ (Variables|Default|SetLatched true) (Variables|Default|SetLatchedAttempt Attempt) (return true) (else (return false))))
+ (:CastFailed (return false))))

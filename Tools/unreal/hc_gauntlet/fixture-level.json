@@ -1,0 +1,145 @@
+{
+  "map": "/Game/Puzzles/Test/HC_Gauntlet/L_HCGauntlet_Test",
+  "placements": {
+    "HC_GauntletLever1": {
+      "asset": "/Game/Player/Round3/BP_Lever",
+      "position": [
+        100,
+        -550,
+        0
+      ],
+      "components": [
+        {
+          "name": "DefaultSceneRoot",
+          "class": "SceneComponent"
+        },
+        {
+          "name": "BillboardComponent_2",
+          "class": "BillboardComponent"
+        },
+        {
+          "name": "Base",
+          "class": "StaticMeshComponent"
+        },
+        {
+          "name": "Handle",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    },
+    "HC_GauntletLever2": {
+      "asset": "/Game/Player/Round3/BP_Lever",
+      "position": [
+        100,
+        550,
+        0
+      ],
+      "components": [
+        {
+          "name": "DefaultSceneRoot",
+          "class": "SceneComponent"
+        },
+        {
+          "name": "BillboardComponent_2",
+          "class": "BillboardComponent"
+        },
+        {
+          "name": "Base",
+          "class": "StaticMeshComponent"
+        },
+        {
+          "name": "Handle",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    },
+    "HC_GauntletGate": {
+      "asset": "/Game/Player/Round3/BP_GauntletGate",
+      "position": [
+        700,
+        0,
+        0
+      ],
+      "components": [
+        {
+          "name": "DefaultSceneRoot",
+          "class": "SceneComponent"
+        },
+        {
+          "name": "BillboardComponent_2",
+          "class": "BillboardComponent"
+        },
+        {
+          "name": "Frame",
+          "class": "StaticMeshComponent"
+        },
+        {
+          "name": "Slab",
+          "class": "StaticMeshComponent"
+        },
+        {
+          "name": "UnderGate",
+          "class": "BoxComponent"
+        }
+      ]
+    },
+    "HC_GauntletCoordinator": {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator",
+      "position": [
+        700,
+        0,
+        0
+      ],
+      "components": [
+        {
+          "name": "StaticMeshComponent0",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    },
+    "HC_GauntletStart": {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletStart",
+      "position": [
+        -250,
+        1000,
+        110
+      ],
+      "components": [
+        {
+          "name": "StaticMeshComponent0",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    },
+    "HC_GauntletObjective": {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletObjective",
+      "position": [
+        1800,
+        0,
+        110
+      ],
+      "components": [
+        {
+          "name": "StaticMeshComponent0",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    },
+    "HC_GauntletBridge": {
+      "asset": "/Game/Puzzles/Test/HC_Gauntlet/BP_FixtureLatchBridge",
+      "position": [
+        2000,
+        1000,
+        0
+      ],
+      "components": [
+        {
+          "name": "StaticMeshComponent0",
+          "class": "StaticMeshComponent"
+        }
+      ]
+    }
+  },
+  "latch": "fixture simulation only; PG gate is unmodified and will close after ClearRound cancels holders",
+  "health_ghost_trap_cave": "not present; external integration dependencies"
+}
