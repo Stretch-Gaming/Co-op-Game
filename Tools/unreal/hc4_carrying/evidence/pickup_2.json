@@ -1,0 +1,875 @@
+{
+  "worlds": [
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_0_L_HC4_Carrying.L_HC4_Carrying",
+      "server": true,
+      "plate_weights": [
+        {
+          "probe": "TriggerBox_0",
+          "count": 1
+        }
+      ],
+      "players": [
+        {
+          "name": "BP_HC4Character_C_0",
+          "id": 294,
+          "local": false,
+          "position": [
+            -0.087,
+            -599.932,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_0",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "BP_HC4Character_C_1",
+          "id": 295,
+          "local": false,
+          "position": [
+            -0.09,
+            -199.931,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_1",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "items": [
+        {
+          "name": "BP_Carryable_C_0",
+          "tags": [
+            "HC4_BP_Carryable_0"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_0",
+          "carrier_id": 294,
+          "parent": "BP_HC4Character_C_0",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            99.913,
+            -599.932,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_1",
+          "tags": [
+            "HC4_BP_Carryable_1"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_1",
+          "carrier_id": 295,
+          "parent": "BP_HC4Character_C_1",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            99.91,
+            -199.931,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_2",
+          "tags": [
+            "HC4_BP_Carryable_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.91,
+            200.069,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_3",
+          "tags": [
+            "HC4_BP_Carryable_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.913,
+            600.068,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_0",
+          "tags": [
+            "HC4_BP_KeyRelic_0",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -599.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_1",
+          "tags": [
+            "HC4_BP_KeyRelic_1",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -199.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_2",
+          "tags": [
+            "HC4_BP_KeyRelic_2",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            200.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_3",
+          "tags": [
+            "HC4_BP_KeyRelic_3",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            600.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_0",
+          "tags": [
+            "HC4_BP_Statue_0",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -599.99,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_1",
+          "tags": [
+            "HC4_BP_Statue_1",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -199.99,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_2",
+          "tags": [
+            "HC4_BP_Statue_2",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            200.01,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_3",
+          "tags": [
+            "HC4_BP_Statue_3",
+            "HC_PlateWeight"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            600.01,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_1_L_HC4_Carrying.L_HC4_Carrying",
+      "server": false,
+      "plate_weights": [],
+      "players": [
+        {
+          "name": "BP_HC4Character_C_0",
+          "id": 294,
+          "local": true,
+          "position": [
+            0.0,
+            -600.0,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_0",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "BP_HC4Character_C_1",
+          "id": 295,
+          "local": false,
+          "position": [
+            -0.09,
+            -199.93,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_1",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "items": [
+        {
+          "name": "BP_Carryable_C_0",
+          "tags": [
+            "HC4_BP_Carryable_0"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_0",
+          "carrier_id": 294,
+          "parent": "BP_HC4Character_C_0",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            100.0,
+            -600.0,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_1",
+          "tags": [
+            "HC4_BP_Carryable_1"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_1",
+          "carrier_id": 295,
+          "parent": "BP_HC4Character_C_1",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            99.91,
+            -199.93,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_2",
+          "tags": [
+            "HC4_BP_Carryable_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.91,
+            200.069,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_3",
+          "tags": [
+            "HC4_BP_Carryable_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.913,
+            600.068,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_0",
+          "tags": [
+            "HC4_BP_KeyRelic_0"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -599.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_1",
+          "tags": [
+            "HC4_BP_KeyRelic_1"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -199.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_2",
+          "tags": [
+            "HC4_BP_KeyRelic_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            200.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_3",
+          "tags": [
+            "HC4_BP_KeyRelic_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            600.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_0",
+          "tags": [
+            "HC4_BP_Statue_0"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -599.99,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_1",
+          "tags": [
+            "HC4_BP_Statue_1"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -199.99,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_2",
+          "tags": [
+            "HC4_BP_Statue_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            200.012,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_3",
+          "tags": [
+            "HC4_BP_Statue_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.002,
+            600.02,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_2_L_HC4_Carrying.L_HC4_Carrying",
+      "server": false,
+      "plate_weights": [],
+      "players": [
+        {
+          "name": "BP_HC4Character_C_0",
+          "id": 295,
+          "local": true,
+          "position": [
+            -0.09,
+            -199.931,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_1",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "BP_HC4Character_C_1",
+          "id": 294,
+          "local": false,
+          "position": [
+            -0.09,
+            -599.93,
+            92.15
+          ],
+          "speed": 600.0,
+          "crouch_speed": 300.0,
+          "carried": "BP_Carryable_C_0",
+          "speed_rep": 600.0,
+          "input_held": false,
+          "focus": null,
+          "components": 1,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "items": [
+        {
+          "name": "BP_Carryable_C_0",
+          "tags": [
+            "HC4_BP_Carryable_0"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_1",
+          "carrier_id": 294,
+          "parent": "BP_HC4Character_C_1",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            99.91,
+            -599.93,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_1",
+          "tags": [
+            "HC4_BP_Carryable_1"
+          ],
+          "state": 1,
+          "carrier": "BP_HC4Character_C_0",
+          "carrier_id": 295,
+          "parent": "BP_HC4Character_C_0",
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>",
+          "physics": false,
+          "position": [
+            99.91,
+            -199.931,
+            107.15
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_2",
+          "tags": [
+            "HC4_BP_Carryable_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.91,
+            200.069,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Carryable_C_3",
+          "tags": [
+            "HC4_BP_Carryable_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            149.913,
+            600.068,
+            25.0
+          ],
+          "heavy": false,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_0",
+          "tags": [
+            "HC4_BP_KeyRelic_0"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -599.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_1",
+          "tags": [
+            "HC4_BP_KeyRelic_1"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            -199.835,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_2",
+          "tags": [
+            "HC4_BP_KeyRelic_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            200.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_KeyRelic_C_3",
+          "tags": [
+            "HC4_BP_KeyRelic_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            599.816,
+            600.165,
+            25.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_0",
+          "tags": [
+            "HC4_BP_Statue_0"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -599.99,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_1",
+          "tags": [
+            "HC4_BP_Statue_1"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            -199.988,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_2",
+          "tags": [
+            "HC4_BP_Statue_2"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            200.01,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        },
+        {
+          "name": "BP_Statue_C_3",
+          "tags": [
+            "HC4_BP_Statue_3"
+          ],
+          "state": 0,
+          "carrier": null,
+          "carrier_id": null,
+          "parent": null,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "physics": true,
+          "position": [
+            1050.001,
+            600.012,
+            55.0
+          ],
+          "heavy": true,
+          "mobility": "<ComponentMobility.MOVABLE: 2>"
+        }
+      ]
+    }
+  ],
+  "subsystems": [
+    {
+      "path": "/Engine/Transient.UnrealEdEngine_0:LocalPlayer_38.EnhancedInputLocalPlayerSubsystem_0",
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_1_L_HC4_Carrying.L_HC4_Carrying"
+    },
+    {
+      "path": "/Engine/Transient.UnrealEdEngine_0:LocalPlayer_39.EnhancedInputLocalPlayerSubsystem_0",
+      "world": "/Game/Puzzles/Test/HC4/UEDPIE_2_L_HC4_Carrying.L_HC4_Carrying"
+    }
+  ],
+  "asset_sha256": {
+    "Content\\Puzzles\\BP_Carryable.uasset": "15ba9f8524b61e7f9dcf53b46522496885b3c599b0cd907be594b20d5be89d93",
+    "Content\\Puzzles\\Carrying\\AC_Carrying.uasset": "cf36d308b8ef2405ce873ebd673ef9746ab7e73e7048b201cf150b0c2ac2a848",
+    "Content\\Puzzles\\Test\\HC4\\BP_HC4Character.uasset": "b64ef58ff6ce5f2ed12534319dc7e4a80bb4a471fbf98222a5ef1a40d631f5b7"
+  }
+}
