@@ -17,6 +17,14 @@ removes disconnected states; an exit commits its local latch before delegation.
 No health/downed dependency was added because that system is absent at this
 baseline and revive work is outside this approved slice.
 
+Before the completion latch, leaving the volume cancels readiness, a disconnected
+PlayerState is removed from the requirement, and a newly admitted PlayerState must
+acquire its own valid pawn and enter the volume. After the latch, departures and
+new joins do not cancel completion or recapture the snapshot. A player admitted
+to the results world receives the current replicated snapshot and its own results
+widget when its local player is ready. Admission/routing for a connection arriving
+during non-seamless travel remains with Core and requires actual travel acceptance.
+
 `BP_RunCoordinator` is an authority-owned, replicated, always-relevant actor.
 It must be a singleton: missing/ambiguous coordinators fail safely in the exit,
 results lifecycle and the coordinator's own capture/restore/restart guards.
