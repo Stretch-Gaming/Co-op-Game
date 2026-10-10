@@ -1,0 +1,47 @@
+{
+  "type": "<class 'HitResult'>",
+  "is_none": false,
+  "has_get_actor": false,
+  "has_get_component": false,
+  "fields": {
+    "blocking_hit": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'blocking_hit' for attribute 'blocking_hit' on 'HitResult'"
+    },
+    "start_penetrating": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'start_penetrating' for attribute 'start_penetrating' on 'HitResult'"
+    },
+    "distance": {
+      "available": false,
+      "error": "HitResult: Property 'Distance' for attribute 'distance' on 'HitResult' is protected and cannot be read"
+    },
+    "location": {
+      "available": false,
+      "error": "HitResult: Property 'Location' for attribute 'location' on 'HitResult' is protected and cannot be read"
+    },
+    "impact_point": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'impact_point' for attribute 'impact_point' on 'HitResult'"
+    },
+    "impact_normal": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'impact_normal' for attribute 'impact_normal' on 'HitResult'"
+    },
+    "component": {
+      "available": false,
+      "error": "HitResult: Property 'Component' for attribute 'component' on 'HitResult' is protected and cannot be read"
+    },
+    "actor": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'actor' for attribute 'actor' on 'HitResult'"
+    },
+    "hit_object_handle": {
+      "available": false,
+      "error": "HitResult: Failed to find property 'hit_object_handle' for attribute 'hit_object_handle' on 'HitResult'"
+    }
+  },
+  "packages_saved": false,
+  "queries": 1,
+  "export_text": "(FaceIndex=21,Time=0.400000,Distance=200.000000,Location=(X=-175.000000,Y=9250.000000,Z=-300.000003),ImpactPoint=(X=-175.000000,Y=9250.000000,Z=-300.000000),Normal=(X=0.000000,Y=0.000000,Z=1.000000),ImpactNormal=(X=0.000000,Y=0.000000,Z=1.000000),TraceStart=(X=-175.000000,Y=9250.000000,Z=-100.000000),TraceEnd=(X=-175.000000,Y=9250.000000,Z=-600.000000),PenetrationDepth=0.000000,MyItem=-1,Item=-1,ElementIndex=0,bBlockingHit=True,bStartPenetrating=False,PhysMaterial=\"/Script/PhysicsCore.PhysicalMaterial'/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial'\",HitObjectHandle=(ReferenceObject=\"/Script/Engine.StaticMeshComponent'/Game/Puzzles/EnvironmentConnection/L_ConnectedMaze.L_ConnectedMaze:PersistentLevel.StaticMeshActor_995.StaticMeshComponent0'\"),Component=\"/Script/Engine.StaticMeshComponent'/Game/Puzzles/EnvironmentConnection/L_ConnectedMaze.L_ConnectedMaze:PersistentLevel.StaticMeshActor_995.StaticMeshComponent0'\",BoneName=\"\",MyBoneName=\"\")"
+}
