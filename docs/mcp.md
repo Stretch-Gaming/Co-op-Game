@@ -67,6 +67,17 @@ Mac-specific notes:
 - PIE started by the agent logged `max tick rate 3` while the terminal had focus. Bring the editor to the front for any check where frame rate matters.
 - `LogAudioMixerAudioUnit: Error querying Sample Rate` appears at startup and on PIE. It's harmless.
 
+Material building (PG-A0 style kit): `M_Stylized` has 92 expressions and was built in one editor Python script run through `py`, with `MaterialEditingLibrary` (`create_material_expression`, `connect_material_expressions`, `connect_material_property`, `recompile_material`), then checked with `MaterialTools.recompile`, which raises on shader errors and came back clean. `MaterialTools` alone could build the same graph node by node, but each node and wire is a separate call, so a script is much faster. What the tools can't do or don't expose:
+
+- Read compile errors back as data. Look for `LogMaterial` errors with `LogsToolset`, or capture the material's thumbnail.
+- Change texture import settings. Use Python to set `srgb` and `compression_settings` (for example `TC_Masks` for packed masks). The sampler type on each texture parameter must match those settings, or the material fails to compile.
+- Set a level's exposure. A post-process volume is needed for a stable look; `L_StyleTest` locks it at EV100 1.3.
+- Hide editor sprites in `CaptureViewport`, even with `bShowUI: false`. Turn on game view first with `LevelEditorSubsystem.editor_set_game_view(True)`.
+- Use `CaptureViewport` without an `annotations` object. Pass one with zero values to get a plain image.
+- Check property names in advance. Some differ from the Details panel, such as `enable_volumetric_fog` on the height fog and `fog_inscattering_luminance` for its color.
+
+`EditorLoadingAndSavingUtils.new_blank_map(False)` and `save_map` created `L_StyleTest` without a save prompt. Save the open assets first, because the map switch discards unsaved changes in other maps.
+
 ## Working with the agent
 
 - **Good agent work:** blocking out rooms from the layout doc, placing and labeling actors, setting properties and defaults, material instances, data table rows, and scaffolding Blueprints (assets, components, variables, empty functions).
