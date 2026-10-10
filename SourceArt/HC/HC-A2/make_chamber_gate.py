@@ -175,30 +175,23 @@ def build_leaf():
     return leaf
 
 
-def preview(objects, path, title):
-    """The kit's preview, with a light rig scaled to the gate and a 1.8 m figure in front."""
-    extras = P.big_preview_extras(2.4, figure_at=(1.6, 0.9, 0.0))
-    kit.preview_sheet(objects, path, title=title)
-    P.remove(extras)
-
-
 def main():
     out = P.out_dir()
     kit.reset()
     frame = build_frame()
-    preview([frame], f"{out}/SM_ChamberGate_Frame_preview.png", "SM_ChamberGate_Frame")
+    kit.preview_sheet([frame], f"{out}/SM_ChamberGate_Frame_preview.png", title="SM_ChamberGate_Frame")
     kit.export_glb([frame], f"{out}/SM_ChamberGate_Frame.glb")
     kit.reset()
     leaf = build_leaf()
-    preview([leaf], f"{out}/SM_ChamberGate_Leaf_preview.png", "SM_ChamberGate_Leaf")
+    kit.preview_sheet([leaf], f"{out}/SM_ChamberGate_Leaf_preview.png", title="SM_ChamberGate_Leaf")
     kit.export_glb([leaf], f"{out}/SM_ChamberGate_Leaf.glb")
     # The assembly, half open, for review only (not exported).
     kit.reset()
     frame = build_frame()
     leaf = build_leaf()
     leaf.location.z += TRAVEL * 0.5
-    preview([frame, leaf], f"{out}/SM_ChamberGate_Assembled_preview.png",
-            "SM_ChamberGate assembled, half open")
+    kit.preview_sheet([frame, leaf], f"{out}/SM_ChamberGate_Assembled_preview.png",
+                      title="SM_ChamberGate assembled, half open")
 
 
 main()

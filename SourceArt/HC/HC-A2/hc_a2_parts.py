@@ -294,37 +294,17 @@ def chip_cutter(name, x0, x1, edge_y, edge_z, depth):
 
 
 def soften(obj, width=0.012, segments=2, angle_deg=60):
-    """Bevel only the sharp edges left by carving, so grooves and chips stay soft."""
+    """Bevel only the sharp edges left by carving, so grooves and chips stay soft.
+
+    This is the stone's second bevel. The first one's hardened custom normals survive the
+    carving, and the second bevel scrambles them, so big flat faces shade in streaks. Clearing
+    them first lets this bevel work out fresh ones, and face-area weighted normals then keep the
+    carved n-gons flat. Only normals change."""
+    kit._select_only(obj)
+    bpy.ops.mesh.customdata_custom_splitnormals_clear()
     kit.chunky_bevel(obj, width=width, segments=segments, angle_deg=angle_deg, smooth_deg=40)
-
-
-def big_preview_extras(scale, figure_at=None):
-    """asset_kit's preview lights are placed and sized for props about 2 m across, and it skips
-    the scale figure above 3 m. For the gate, add the same rig scaled up around the asset and a
-    1.8 m figure, before calling kit.preview_sheet. Returns the objects to delete afterwards."""
-    made = []
-    rig = [("Big_Key_Warm", "#FFD7A3", 260, (2.5, -2.0, 3.0), 3.0),
-           ("Big_Fill_Teal", kit.PALETTE["crystal_teal"], 90, (-2.5, -1.5, 1.5), 3.0),
-           ("Big_Top", "#E6E9F2", 150, (0.0, 0.0, 4.0), 4.0),
-           ("Big_Rim", "#FFFFFF", 200, (-1.0, 3.0, 2.5), 2.0)]
-    for name, color, energy, loc, size in rig:
-        data = bpy.data.lights.new(name, "AREA")
-        data.color = kit.hex_rgba(color)[:3]
-        # Same irradiance at scaled distances: energy grows with the square of the scale.
-        data.energy = energy * scale * scale * 0.8
-        data.size = size * scale
-        obj = bpy.data.objects.new(name, data)
-        bpy.context.scene.collection.objects.link(obj)
-        obj.location = Vector(loc) * scale
-        obj.rotation_euler = (Vector((0, 0, 0.5 * scale)) - obj.location).to_track_quat("-Z", "Y").to_euler()
-        made.append(obj)
-    if figure_at is not None:
-        fig = kit._scale_figure()
-        fig.location = Vector(figure_at)
-        made.append(fig)
-    return made
-
-
-def remove(objs):
-    for o in objs:
-        bpy.data.objects.remove(o, do_unlink=True)
+    mod = obj.modifiers.new("FlatFaces", "WEIGHTED_NORMAL")
+    mod.mode = "FACE_AREA"
+    mod.weight = 100
+    mod.keep_sharp = True
+    kit._apply_modifiers(obj)
