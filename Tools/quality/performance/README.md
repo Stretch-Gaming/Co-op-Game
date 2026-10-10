@@ -37,11 +37,11 @@ python -c "import ast,pathlib; [ast.parse(p.read_text()) for p in pathlib.Path('
 
 Unreal API calls remain subject to primary editor execution. The collector uses supported Python reflection and read methods with unavailable-property diagnostics; offline tests cannot prove engine binding compatibility or callback behavior inside the actual editor.
 
-## Native GPU/game/render timing capture (future primary run)
+## Native GPU/game/render timing capture
 
 `native_csv.py` parses native CSV metrics rather than Slate cadence. Installed UE 5.8.3 `LaunchEngineLoop.cpp` (`UpdateCoreCsvStats_EndFrame`) records global `GameThreadTime`, `RenderThreadTime`, and `GPUTime` in milliseconds. `CsvProfiler.cpp` implements `csvprofile START`, `STOP`, `FRAMES=N`, and the final `EVENTS` header plus `[HasHeaderRowAtEnd]` metadata. The parser uses that final header, supports quoted events/metadata, requires all three native metrics, rejects negative/nonfinite/malformed values, counts incomplete early rows, and warns when GPU timing is entirely zero. It does not sum overlapping thread/GPU times or infer a bottleneck from actor counts.
 
-Execution awaits the other chat's handback and the user's choice of which existing preview window to use. The original preview may still be running and competing for GPU time. Do not close it or another editor arbitrarily, and do not run a GPU comparison under NullRHI.
+The first native captures are complete after the other chat's handback; see evidence/native-capture-summary.json. Further isolated comparisons require a coordinated measurement window. The original preview may still be running and competing for GPU time. Do not close it or another editor arbitrarily, and do not run a GPU comparison under NullRHI.
 
 Primary procedure after coordination:
 
@@ -52,3 +52,9 @@ Primary procedure after coordination:
 5. `-csvCaptureFrames=N` is a future launch-only alternative confirmed in installed source, but starts during boot and includes startup/loading. Do not treat such a capture as steady gameplay unless startup boundaries and retained frames are independently identified. Prefer post-warmup runtime capture.
 
 Verify CSV parsing with `python Tools/quality/performance/test_native_csv.py`. Its synthetic fixtures prove parser behavior only, and are never reported as measured game performance. A native capture with valid GPU/game/render data and matching context is required before suggesting a measured optimization benefit.
+
+## Completed native baseline
+
+Two actual post-warmup captures contain912room and893maze-view frames, about30s each, from single-player editor/PIE at3056x1833 onD3D11 with raytracing off. The user's separate preview remained open. Average FrameTime is32.90ms(room)/33.59ms(maze); GameThreadTime5.17/5.05ms and GPUTime32.90/33.59ms. These are shared-load editor measurements, not isolated standalone game FPS. RenderThreadTime is near zero and is not useful proof of rendering cost in this setup.
+
+Metric rows are published without native login/system metadata; original capture hashes are recorded. No optimization or quality change is justified yet. Next gate is an isolated standalone sample and targeted graphics/frame-pacing comparison with the user's approval before product changes. `native_capture.py` automates bounded30s warmup/30s capture and callback cleanup; `maze_view_fixture.py` moves only the isolated temporary test pawn, never the user's game or saved actors.

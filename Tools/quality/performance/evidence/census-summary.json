@@ -1,5 +1,5 @@
 {
-  "status": "read_only_census_complete_timing_pending",
+  "status": "read_only_census_and_native_timing_complete",
   "baseline": "9dc0fabd6a467444049cec0ed8ee2763c11acfa6",
   "map": "/Game/Maps/L_ConnectedRoomMaze",
   "engine": "5.8.3-58210709+++UE5+Release-5.8",
@@ -22,9 +22,9 @@
   "lights": 113,
   "shadow_lights": 37,
   "instances": 5642,
-  "frame_time_measured": false,
+  "frame_time_measured": true,
   "optimizations_applied": false,
-  "pending": "GPU capture deliberately held while the other chat runs rendered multiplayer QA; counts are candidates, not bottleneck proof. Existing user preview may also consume GPU.",
+  "pending": "Isolated standalone/targeted-cost comparison before optimizing; native timings completed with shared-GPU limits in native-capture-summary.json.",
   "measurement_tools": [
     "collect.py observer context only",
     "native_csv.py actual GPU/game/render CSV parser"
