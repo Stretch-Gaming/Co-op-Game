@@ -1,0 +1,205 @@
+{
+  "generator": "SourceArt/HZ/HZ-A5/make_sandstone.py",
+  "command": "python3 -I SourceArt/HZ/HZ-A5/make_sandstone.py",
+  "seed": 5601,
+  "candidates": {
+    "A": "coursed ashlar",
+    "B": "rough uneven courses"
+  },
+  "picked": "A",
+  "layout": {
+    "courses_cm": [
+      60.2,
+      54.1,
+      65.5,
+      65.6,
+      54.6
+    ],
+    "blocks_per_course": [
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "split_blocks": 0,
+    "cells": 14
+  },
+  "resolution_px": [
+    2048,
+    2048
+  ],
+  "tile_size_cm": 300,
+  "texel_density_px_per_m": 682.7,
+  "world_aligned": {
+    "UseWorldAligned": true,
+    "WorldTileSize": 300.0
+  },
+  "outputs": {
+    "BC": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_BC.png",
+      "sha256": "432022b6e10be75dbf27100064d60cc510f900d34fb1a67f9a55bd77556c107c",
+      "bytes": 1090811
+    },
+    "N": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_N.png",
+      "sha256": "b4318ec6791127e93a5cddeeb9e99380437963b07337c019d4407d5f4186d3bc",
+      "bytes": 1315689
+    },
+    "R": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_R.png",
+      "sha256": "461ecf90c8862d625de1ee415c59a02f2cf71fa1cf7f939519f83b1b67f7b514",
+      "bytes": 286738
+    },
+    "AO": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_AO.png",
+      "sha256": "ab66e0b5f8f9f0d31cdfb1843fafdb43ed1098d1d1f893da2292e0b538710a79",
+      "bytes": 260004
+    },
+    "ARM": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_ARM.png",
+      "sha256": "af5124ab958afdd599a520d152cf5eff170969753659fbdb33c5b3c5acf37023",
+      "bytes": 816615
+    },
+    "H": {
+      "file": "SourceArt/HZ/HZ-A5/T_Sandstone_Wall_H.png",
+      "sha256": "e944042e80187e3b69a61ac3362915a529751345ca43f53012a2373f50d5ef1e",
+      "bytes": 3966188
+    }
+  },
+  "color_space": {
+    "BC": "sRGB",
+    "N": "linear",
+    "R": "linear",
+    "AO": "linear",
+    "H": "linear",
+    "ARM": "linear"
+  },
+  "bit_depth": {
+    "BC": 8,
+    "N": 8,
+    "R": 8,
+    "AO": 8,
+    "H": 16,
+    "ARM": 8
+  },
+  "normal_convention": "DirectX (green down, Y-); Unreal's own, so leave Flip Green Channel off",
+  "normal_self_test": {
+    "dome_upper_slope_green": 0.276,
+    "dome_lower_slope_green": 0.724,
+    "dome_left_slope_red": 0.276,
+    "dome_right_slope_red": 0.724
+  },
+  "arm_channels": {
+    "R": "cavity/edge for M_Stylized: 0.5 flat, >0.6 convex edges, <0.4 joints",
+    "G": "roughness",
+    "B": "metallic (0)"
+  },
+  "palette_reference": "#D9A86C",
+  "face_mean_color": "#D8A76F",
+  "overall_mean_color": "#C99D6E",
+  "roughness_range": [
+    0.784,
+    0.98
+  ],
+  "seams": {
+    "BC": {
+      "x": {
+        "seam_mean_step": 0.00049,
+        "interior_mean_step": 0.0011,
+        "interior_max_line_step": 0.00568,
+        "seam_to_interior_ratio": 0.442,
+        "seam_percentile_among_lines": 42.8
+      },
+      "y": {
+        "seam_mean_step": 0.0004,
+        "interior_mean_step": 0.00184,
+        "interior_max_line_step": 0.01583,
+        "seam_to_interior_ratio": 0.217,
+        "seam_percentile_among_lines": 6.3
+      }
+    },
+    "N": {
+      "x": {
+        "seam_mean_step": 0.00072,
+        "interior_mean_step": 0.00134,
+        "interior_max_line_step": 0.01162,
+        "seam_to_interior_ratio": 0.538,
+        "seam_percentile_among_lines": 39.9
+      },
+      "y": {
+        "seam_mean_step": 0.00031,
+        "interior_mean_step": 0.00178,
+        "interior_max_line_step": 0.02247,
+        "seam_to_interior_ratio": 0.174,
+        "seam_percentile_among_lines": 6.2
+      }
+    },
+    "R": {
+      "x": {
+        "seam_mean_step": 0.0003,
+        "interior_mean_step": 0.00052,
+        "interior_max_line_step": 0.00173,
+        "seam_to_interior_ratio": 0.591,
+        "seam_percentile_among_lines": 35.4
+      },
+      "y": {
+        "seam_mean_step": 0.00017,
+        "interior_mean_step": 0.0007,
+        "interior_max_line_step": 0.00393,
+        "seam_to_interior_ratio": 0.238,
+        "seam_percentile_among_lines": 6.4
+      }
+    },
+    "AO": {
+      "x": {
+        "seam_mean_step": 0.00045,
+        "interior_mean_step": 0.00175,
+        "interior_max_line_step": 0.0127,
+        "seam_to_interior_ratio": 0.256,
+        "seam_percentile_among_lines": 37.4
+      },
+      "y": {
+        "seam_mean_step": 0.00021,
+        "interior_mean_step": 0.00277,
+        "interior_max_line_step": 0.02916,
+        "seam_to_interior_ratio": 0.077,
+        "seam_percentile_among_lines": 29.3
+      }
+    },
+    "ARM": {
+      "x": {
+        "seam_mean_step": 0.00038,
+        "interior_mean_step": 0.00083,
+        "interior_max_line_step": 0.00543,
+        "seam_to_interior_ratio": 0.455,
+        "seam_percentile_among_lines": 33.5
+      },
+      "y": {
+        "seam_mean_step": 0.00014,
+        "interior_mean_step": 0.00119,
+        "interior_max_line_step": 0.01146,
+        "seam_to_interior_ratio": 0.118,
+        "seam_percentile_among_lines": 4.9
+      }
+    },
+    "H": {
+      "x": {
+        "seam_mean_step": 0.00081,
+        "interior_mean_step": 0.00223,
+        "interior_max_line_step": 0.00919,
+        "seam_to_interior_ratio": 0.364,
+        "seam_percentile_among_lines": 20.1
+      },
+      "y": {
+        "seam_mean_step": 0.00054,
+        "interior_mean_step": 0.00331,
+        "interior_max_line_step": 0.02278,
+        "seam_to_interior_ratio": 0.164,
+        "seam_percentile_among_lines": 8.7
+      }
+    }
+  },
+  "tileable": true,
+  "control_cropped_bc_fails": true
+}

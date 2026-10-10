@@ -1,0 +1,200 @@
+{
+  "generator": "SourceArt/HZ/HZ-A5/make_hieroglyphs.py",
+  "command": "python3 -I SourceArt/HZ/HZ-A5/make_hieroglyphs.py",
+  "seed": 5603,
+  "design_density_px_per_m": 1024.0,
+  "normal_convention": "DirectX (green down, Y-); Unreal's own, so leave Flip Green Channel off",
+  "normal_self_test": {
+    "dome_upper_slope_green": 0.276,
+    "dome_lower_slope_green": 0.724,
+    "dome_left_slope_red": 0.276,
+    "dome_right_slope_red": 0.724
+  },
+  "color_space": {
+    "BC": "sRGB",
+    "Mask": "linear",
+    "N": "linear"
+  },
+  "decals": {
+    "T_Hieroglyph_01": {
+      "description": "sun disc with rays over a bar",
+      "resolution_px": [
+        1024,
+        1024
+      ],
+      "decal_size_cm": [
+        100,
+        100
+      ],
+      "coverage_percent": 12.9,
+      "border_mask_max": 0.0,
+      "outputs": {
+        "BC": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_01_BC.png",
+          "sha256": "3ae810cba17315abce640c05859e6e473a1408b1d5f96dfac9352c6ba66e3e2f",
+          "bytes": 149404
+        },
+        "Mask": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_01_Mask.png",
+          "sha256": "9f5a29bfcb4de37c454051c515f8890a60320d147603405654eaa5c3cfac2982",
+          "bytes": 28810
+        },
+        "N": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_01_N.png",
+          "sha256": "ab1b27bfba047d90e3f54b1d3462d79b6065781da4c74d9f58c04a0c47bf408e",
+          "bytes": 131095
+        }
+      },
+      "ok": true
+    },
+    "T_Hieroglyph_02": {
+      "description": "twin peaks, sun and three rows of water",
+      "resolution_px": [
+        1024,
+        1024
+      ],
+      "decal_size_cm": [
+        100,
+        100
+      ],
+      "coverage_percent": 18.5,
+      "border_mask_max": 0.0,
+      "outputs": {
+        "BC": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_02_BC.png",
+          "sha256": "67b63b1e941441c999ae3ee9a7bd3462a089176f4e8a9bd9cb9883aa6d0b7fb0",
+          "bytes": 228644
+        },
+        "Mask": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_02_Mask.png",
+          "sha256": "54ce87fea6893680b5853c4e7a66d7ff06ab616543cedea160cdf938cbae3f30",
+          "bytes": 43279
+        },
+        "N": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_02_N.png",
+          "sha256": "0b13b565d32886445f5e0a4fd0c663b4313e516f50cba3f736c7b4899c50724d",
+          "bytes": 209051
+        }
+      },
+      "ok": true
+    },
+    "T_Hieroglyph_03": {
+      "description": "framed column of five glyphs",
+      "resolution_px": [
+        512,
+        2048
+      ],
+      "decal_size_cm": [
+        50,
+        200
+      ],
+      "coverage_percent": 20.8,
+      "border_mask_max": 0.0,
+      "outputs": {
+        "BC": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_03_BC.png",
+          "sha256": "0b5800851ee5620672f01f933573709f6c6f75dcae62addfb56eb005ea431780",
+          "bytes": 277630
+        },
+        "Mask": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_03_Mask.png",
+          "sha256": "7d8ea373cababf49f7475d800af4f9c63cd3d9b6eb717462024cbf817caf457b",
+          "bytes": 59786
+        },
+        "N": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_03_N.png",
+          "sha256": "ba662bad1aa26f681b2372be6dc04f5ab02e2e6e5fe258799f449da0cf8f7384",
+          "bytes": 277266
+        }
+      },
+      "ok": true
+    },
+    "T_Hieroglyph_04": {
+      "description": "frieze band, tiles horizontally",
+      "resolution_px": [
+        2048,
+        512
+      ],
+      "decal_size_cm": [
+        200,
+        50
+      ],
+      "coverage_percent": 23.8,
+      "border_mask_max": 0.0,
+      "outputs": {
+        "BC": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_04_BC.png",
+          "sha256": "319e467e307ac8a0cff6035ed0573322b7eb26b10aa5f07a10e9642f699e2273",
+          "bytes": 307807
+        },
+        "Mask": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_04_Mask.png",
+          "sha256": "379fbaeda1238097c98c77e393ca35f03273239680654c0040028486973b1e39",
+          "bytes": 62731
+        },
+        "N": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_04_N.png",
+          "sha256": "389f3732c117f89c0757b65c9b1fc9d590a197b35606ee369b1871701143fca3",
+          "bytes": 310962
+        }
+      },
+      "x_wrap": {
+        "BC": {
+          "seam_mean_step": 0.00526,
+          "interior_mean_step": 0.00396,
+          "interior_max_line_step": 0.0182,
+          "seam_to_interior_ratio": 1.33,
+          "seam_percentile_among_lines": 70.5
+        },
+        "Mask": {
+          "seam_mean_step": 0.01071,
+          "interior_mean_step": 0.00899,
+          "interior_max_line_step": 0.0922,
+          "seam_to_interior_ratio": 1.191,
+          "seam_percentile_among_lines": 72.4
+        },
+        "N": {
+          "seam_mean_step": 0.00415,
+          "interior_mean_step": 0.00341,
+          "interior_max_line_step": 0.01705,
+          "seam_to_interior_ratio": 1.216,
+          "seam_percentile_among_lines": 65.2
+        }
+      },
+      "tileable_x": true,
+      "ok": true
+    },
+    "T_Hieroglyph_05": {
+      "description": "cartouche with three glyphs",
+      "resolution_px": [
+        512,
+        1024
+      ],
+      "decal_size_cm": [
+        50,
+        100
+      ],
+      "coverage_percent": 22.1,
+      "border_mask_max": 0.0,
+      "outputs": {
+        "BC": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_05_BC.png",
+          "sha256": "cd9557db41b175eb66aa197aa29feddd3a405a5c1e178bd02bcf50da85ba2217",
+          "bytes": 145640
+        },
+        "Mask": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_05_Mask.png",
+          "sha256": "26e1bf51e423b69589969836afcc1b46fd9583b5b04d539affb23e335ee165c5",
+          "bytes": 30171
+        },
+        "N": {
+          "file": "SourceArt/HZ/HZ-A5/T_Hieroglyph_05_N.png",
+          "sha256": "f2e222e1841f9d7d05ae749023d26b6d12b04abf751642e6ca6bad608aa32eed",
+          "bytes": 139587
+        }
+      },
+      "ok": true
+    }
+  },
+  "all_ok": true
+}
