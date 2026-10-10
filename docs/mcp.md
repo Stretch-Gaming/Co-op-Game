@@ -78,6 +78,20 @@ Material building (PG-A0 style kit): `M_Stylized` has 92 expressions and was bui
 
 `EditorLoadingAndSavingUtils.new_blank_map(False)` and `save_map` created `L_StyleTest` without a save prompt. Save the open assets first, because the map switch discards unsaved changes in other maps.
 
+### PG-3 and PG-7: wiring whole Blueprints, 2026-10-09
+
+`BP_Ghost`, `BP_Zipline` and `BP_ZiplineTrolley` were wired entirely by the agent, mostly with `write_graph_dsl`. What to know:
+
+- `write_graph_dsl` **appends** to a graph and never replaces it. To rewrite a graph, delete its nodes first (`find_nodes` with an empty title, then `delete_node` on each one except the function entry and result). A failed write can leave half a graph behind.
+- Look up node IDs with `find_node_types` before writing. Your own functions are `CallFunction|Name`, another Blueprint's are `Class|BPName|Name` (without underscores), and bool variables lose their `b` (`Variables|Default|GetRiding`). Giving a variable a category changes its ID to `Variables|<Category>|Get…`. The construction script is `(fn ConstructionScript () …)`.
+- For member functions, a positional argument goes to `self` first. Pass everything else by pin name, such as `(Actor|SetLifeSpan :InLifespan 2.0)`. Read the graph back after writing it: an argument that went to the wrong pin shows up as `0`.
+- The DSL can't create Enhanced Input action events or custom events. Make them with `create_node` (`Input|EnhancedActionEvents|IA_Name`, `AddEvent|Custom|Name`), put the logic in a function, and join the pins with `connect_pins`.
+- Nothing in MCP or editor Python can make a custom event **Run on Server**: the flag is protected. Set it in the Blueprint editor's Details panel; driving that through `SlateInspectorToolset` works, as `SelectOption`, then `Click` on the option.
+- You can't set another actor's `bCanBeDamaged` from an Actor Blueprint, because the setter only targets `self`. A non-Actor Blueprint gets a Target pin, so `AC_ZiplineRide.SetRiderProtected` does it. Function-library functions don't show up in `find_node_types`, so a library can't host this.
+- Editor Python is the fast way to create Blueprints and components (`SubobjectDataSubsystem`), set class defaults (`get_default_object`) and import FBX files (`AssetImportTask` with `FbxImportUI`).
+- To set the play options for a client test, write `PlayNetMode` and `PlayNumberOfClients` with `ObjectTools.set_properties`. Turn off `bThrottleCPUWhenNotForeground` on `/Script/UnrealEd.Default__EditorPerformanceSettings` while testing, or the editor drops to 3 frames a second, and turn it back on afterwards. Read every world during PIE with `EditorLevelLibrary.get_pie_worlds(True)`.
+- Editor Python runs actor functions locally, even RPCs, so calling `Server_…` from Python doesn't test replication. Inject the input instead: `EnhancedInputLocalPlayerSubsystem.inject_input_vector_for_action` on a client's subsystem (find it with `unreal.ObjectIterator`) goes down the real input-to-RPC path.
+
 ## Working with the agent
 
 - **Good agent work:** blocking out rooms from the layout doc, placing and labeling actors, setting properties and defaults, material instances, data table rows, and scaffolding Blueprints (assets, components, variables, empty functions).
