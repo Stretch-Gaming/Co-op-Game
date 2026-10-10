@@ -95,3 +95,23 @@ Work for this project is tracked in this repo's [GitHub Issues](https://github.c
 - Open `L_Site01` and run Play In Editor with **Net Mode: Play As Client** and at least 2 players. Check your feature as a client; the host view hides most network bugs. Anything with a view, HUD or input also needs a check with a second local player in split-screen.
 - Check the Output Log for errors and "Accessed None" warnings.
 - Commit only your lane's files plus any you locked. Run `git pull --rebase`, push, then unlock what you locked.
+
+## Open a pull request every turn
+
+When an agent's turn ends with changes, it commits them, pushes the branch and opens a pull request against `main` before handing back. If the branch already has an open pull request, push to it instead of opening another.
+
+- Never commit straight to `main`. Work on a branch named for the lane and phase, like `pg/pg6-taking`.
+- Title the pull request like a commit message, such as `PG-2: split-screen on the host (#24)`, and link the issue in the body.
+- If the work isn't finished or hasn't passed [Before you push](#before-you-push) yet, open it as a draft and say in the body what's left.
+- Leave out files that aren't ready, such as assets still waiting on a lock. Say in the body what was held back and why.
+
+## Review guidelines
+
+Codex reviews every pull request automatically. When reviewing, flag these as P1:
+
+- Anything that breaks a [hard rule](#hard-rules).
+- Files changed outside the author's lane folder or sublevel, unless the pull request says they were locked.
+- A new asset without its source and license recorded, as [docs/assets.md](docs/assets.md#licenses-this-repo-is-public) describes.
+- A commit message with an AI co-author or "Generated with" line.
+
+`.uasset` and `.umap` files are binary, so review them by name, folder and the pull request's description, and say what you couldn't check.
