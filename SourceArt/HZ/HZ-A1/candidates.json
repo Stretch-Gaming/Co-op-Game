@@ -1,0 +1,118 @@
+{
+  "note": "Candidates were generated outside the repo with make_cave_surfaces.py --candidates; only these scores and small contact sheets are kept.",
+  "size_px": 1024,
+  "surfaces": {
+    "rock": {
+      "A_facets": {
+        "seed": 5201,
+        "tile_cm": 400,
+        "mode": "facet",
+        "seam_ratio_bc": [
+          0.9945,
+          1.0181
+        ],
+        "fine_noise_share_under_8cm": 0.026,
+        "big_shape_share_over_25cm": 0.75942,
+        "split_screen_contrast_std": 0.03527,
+        "lightness_p05_p95": [
+          0.2469,
+          0.4036
+        ],
+        "mean_hex": "#5A545A",
+        "chosen": true
+      },
+      "B_strata": {
+        "seed": 5202,
+        "tile_cm": 400,
+        "mode": "facet",
+        "seam_ratio_bc": [
+          0.9336,
+          0.993
+        ],
+        "fine_noise_share_under_8cm": 0.04496,
+        "big_shape_share_over_25cm": 0.67878,
+        "split_screen_contrast_std": 0.03512,
+        "lightness_p05_p95": [
+          0.2525,
+          0.403
+        ],
+        "mean_hex": "#5A5359",
+        "chosen": false
+      },
+      "C_pillows": {
+        "seed": 5203,
+        "tile_cm": 400,
+        "mode": "facet",
+        "seam_ratio_bc": [
+          0.9749,
+          0.9709
+        ],
+        "fine_noise_share_under_8cm": 0.01496,
+        "big_shape_share_over_25cm": 0.78988,
+        "split_screen_contrast_std": 0.03955,
+        "lightness_p05_p95": [
+          0.2276,
+          0.3991
+        ],
+        "mean_hex": "#595358",
+        "chosen": false
+      }
+    },
+    "floor": {
+      "A_slabs": {
+        "seed": 5211,
+        "tile_cm": 300,
+        "mode": "slab",
+        "seam_ratio_bc": [
+          1.0507,
+          0.9632
+        ],
+        "fine_noise_share_under_8cm": 0.15924,
+        "big_shape_share_over_25cm": 0.48478,
+        "split_screen_contrast_std": 0.03157,
+        "lightness_p05_p95": [
+          0.251,
+          0.4212
+        ],
+        "mean_hex": "#625A5D",
+        "chosen": true
+      },
+      "B_cobbles": {
+        "seed": 5212,
+        "tile_cm": 300,
+        "mode": "slab",
+        "seam_ratio_bc": [
+          0.9601,
+          1.0231
+        ],
+        "fine_noise_share_under_8cm": 0.20202,
+        "big_shape_share_over_25cm": 0.41032,
+        "split_screen_contrast_std": 0.03248,
+        "lightness_p05_p95": [
+          0.232,
+          0.4136
+        ],
+        "mean_hex": "#5B5458",
+        "chosen": false
+      },
+      "C_bedrock": {
+        "seed": 5213,
+        "tile_cm": 300,
+        "mode": "facet",
+        "seam_ratio_bc": [
+          0.9504,
+          0.8769
+        ],
+        "fine_noise_share_under_8cm": 0.30875,
+        "big_shape_share_over_25cm": 0.59489,
+        "split_screen_contrast_std": 0.02916,
+        "lightness_p05_p95": [
+          0.2678,
+          0.3944
+        ],
+        "mean_hex": "#595358",
+        "chosen": false
+      }
+    }
+  }
+}

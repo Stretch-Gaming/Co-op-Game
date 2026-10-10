@@ -1,0 +1,71 @@
+{
+  "task": "HZ-A1",
+  "script": "SourceArt/HZ/HZ-A1/make_cave_surfaces.py",
+  "candidate": "A_slabs",
+  "size_px": 2048,
+  "parameters": {
+    "seed": 5211,
+    "tile_cm": 300,
+    "mode": "slab",
+    "cells": 13,
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "warp": [
+      0.3,
+      0.02
+    ],
+    "tilt": 0.03,
+    "step_cm": 1.0,
+    "bevel_cm": 7.0,
+    "crack_cm": 5.0,
+    "facets": 60,
+    "facet_amt": 0.8,
+    "soften_cm": 0.8,
+    "lump": [
+      0.22,
+      0.8
+    ],
+    "value": [
+      0.35,
+      0.85
+    ],
+    "facet_value": 0.18,
+    "stroke": [
+      0.06,
+      4.0,
+      0.03
+    ],
+    "drift": 0.05,
+    "grit": {
+      "count": 5200,
+      "r_cm": [
+        0.7,
+        2.2
+      ],
+      "fill_cm": 2.6,
+      "in_crack": 0.95,
+      "on_top": 0.0004
+    },
+    "puddles": [
+      0.3,
+      1.05
+    ],
+    "damp": [
+      0.3,
+      0.25
+    ],
+    "rough": [
+      0.8,
+      0.93,
+      0.74,
+      0.36
+    ]
+  },
+  "height_range_cm": [
+    -3.0427,
+    3.3036
+  ],
+  "tool": "Python 3 with numpy, scipy and Pillow; no downloaded data or models"
+}

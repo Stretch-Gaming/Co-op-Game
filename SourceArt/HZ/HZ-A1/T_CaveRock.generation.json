@@ -1,0 +1,59 @@
+{
+  "task": "HZ-A1",
+  "script": "SourceArt/HZ/HZ-A1/make_cave_surfaces.py",
+  "candidate": "A_facets",
+  "size_px": 2048,
+  "parameters": {
+    "seed": 5201,
+    "tile_cm": 400,
+    "mode": "facet",
+    "chunks": 12,
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "warp": [
+      0.35,
+      0.025
+    ],
+    "dome_cm": 60.0,
+    "chunk_h": [
+      20.0,
+      5.0
+    ],
+    "chunk_tilt": 0.12,
+    "facets": 110,
+    "soften_cm": 1.4,
+    "lump": [
+      0.25,
+      1.2
+    ],
+    "value": [
+      0.22,
+      0.8
+    ],
+    "facet_value": 0.55,
+    "stroke": [
+      0.05,
+      4.0,
+      0.035
+    ],
+    "drift": 0.06,
+    "damp": [
+      0.4,
+      0.08
+    ],
+    "rough": [
+      0.88,
+      0.95,
+      0.8,
+      0.62
+    ],
+    "grit": null
+  },
+  "height_range_cm": [
+    -3.447,
+    28.3997
+  ],
+  "tool": "Python 3 with numpy, scipy and Pillow; no downloaded data or models"
+}
