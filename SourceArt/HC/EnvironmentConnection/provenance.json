@@ -1,0 +1,33 @@
+{
+  "source_sha256": "7c738a4c7dddfd9723073f32bedea197927dbe7999c3c62f4a456e5868535fce",
+  "reference_pr": 90,
+  "purpose": "Environment connection only; no puzzle implementation",
+  "cut_world_y": 3200.0,
+  "maze_offset_x": -175.0,
+  "connected_room": "/Game/Hazards/L_Site01_HZ",
+  "door_location": [
+    325,
+    1400,
+    200
+  ],
+  "records": 561,
+  "clipped_record_indices": [
+    322,
+    324,
+    730,
+    737,
+    759,
+    762,
+    789,
+    796,
+    820,
+    827,
+    851,
+    856,
+    884
+  ],
+  "license": "Team-authored project geometry; public redistribution permitted; derivative of existing source export.",
+  "excluded_non_environment_volumes": [
+    909
+  ]
+}

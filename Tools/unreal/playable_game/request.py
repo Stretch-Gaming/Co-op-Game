@@ -13,7 +13,14 @@ request = {'id': str(uuid.uuid4()), 'script': sys.argv[1], 'args': json.loads(sy
 request['during_pie'] = request['args'].pop('_during_pie', False)
 temporary = QUEUE / 'command.tmp'
 temporary.write_text(json.dumps(request))
-temporary.replace(QUEUE / 'command.json')
+for publish_attempt in range(10):
+    try:
+        temporary.replace(QUEUE / 'command.json')
+        break
+    except PermissionError:
+        if publish_attempt == 9:
+            raise
+        time.sleep(.025)
 deadline = time.monotonic() + request['args'].get('_timeout', 50)
 while time.monotonic() < deadline:
     path = QUEUE / 'command-result.json'
