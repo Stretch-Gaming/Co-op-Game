@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "base": "91a5195ec6d31060d4e28d02f2e068ac595cd0b1",
+  "asset": {
+    "path": "Content\\Player\\Test\\BP_PG_TestCharacter.uasset",
+    "bytes": 133330,
+    "sha256": "7c0bab78ef813570e8609454f65bbd095639e2c21000e96cc06269692eb2a286"
+  },
+  "lock_id": "56109203",
+  "compiled": [
+    "/Game/Puzzles/BP_Carryable.BP_Carryable",
+    "/Game/Puzzles/BP_KeyRelic.BP_KeyRelic",
+    "/Game/Puzzles/BP_Statue.BP_Statue",
+    "/Game/Core/BPI_Interactable.BPI_Interactable",
+    "/Game/Core/BPI_RoundReset.BPI_RoundReset",
+    "/Game/Core/BP_CoopCharacter.BP_CoopCharacter",
+    "/Game/Core/BP_CoopGameInstance.BP_CoopGameInstance",
+    "/Game/Core/BP_CoopGameMode.BP_CoopGameMode",
+    "/Game/Core/BP_CoopGameState.BP_CoopGameState",
+    "/Game/Core/BP_CoopPlayerController.BP_CoopPlayerController",
+    "/Game/Core/BP_CoopPlayerState.BP_CoopPlayerState",
+    "/Game/VehicleTemplate/Blueprints/BP_AssetGuideline_Chaos.BP_AssetGuideline_Chaos",
+    "/Game/VehicleTemplate/Blueprints/BP_VehicleAdvGameMode.BP_VehicleAdvGameMode",
+    "/Game/VehicleTemplate/Blueprints/BP_VehicleAdvPawnBase.BP_VehicleAdvPawnBase",
+    "/Game/VehicleTemplate/Blueprints/BP_VehicleAdvPlayerController.BP_VehicleAdvPlayerController",
+    "/Game/Player/Zipline/AC_ZiplineRide.AC_ZiplineRide",
+    "/Game/Player/Zipline/BP_Zipline.BP_Zipline",
+    "/Game/Player/Zipline/BP_ZiplineTrolley.BP_ZiplineTrolley",
+    "/Game/VehicleTemplate/Input/BPI_TouchInterface_Vehicle.BPI_TouchInterface_Vehicle",
+    "/Game/Puzzles/Carrying/AC_Carrying.AC_Carrying",
+    "/Game/Player/Test/BP_PG_TestCharacter.BP_PG_TestCharacter",
+    "/Game/Player/Test/BP_PG_TestGameMode.BP_PG_TestGameMode",
+    "/Game/Puzzles/Test/BP_HC0ContractProbe.BP_HC0ContractProbe",
+    "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable",
+    "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter",
+    "/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.BP_ThirdPersonGameMode",
+    "/Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController.BP_ThirdPersonPlayerController",
+    "/Game/Input/Touch/BPI_TouchInterface.BPI_TouchInterface",
+    "/Game/Player/Ghosts/BP_Ghost.BP_Ghost",
+    "/Game/Player/Round3/BP_GauntletGate.BP_GauntletGate",
+    "/Game/Player/Round3/BP_Lever.BP_Lever",
+    "/Game/LevelPrototyping/Interactable/Door/BP_DoorFrame.BP_DoorFrame",
+    "/Game/LevelPrototyping/Interactable/JumpPad/BP_JumpPad.BP_JumpPad",
+    "/Game/LevelPrototyping/Interactable/Target/BP_WobbleTarget.BP_WobbleTarget",
+    "/Game/VehicleTemplate/Blueprints/OffroadCar/BP_VehicleAdvOffroadCar.BP_VehicleAdvOffroadCar",
+    "/Game/VehicleTemplate/Blueprints/OffroadCar/OffroadCar_WheelsFront.OffroadCar_WheelsFront",
+    "/Game/VehicleTemplate/Blueprints/OffroadCar/OffroadCar_WheelsRear.OffroadCar_WheelsRear",
+    "/Game/VehicleTemplate/Blueprints/SportsCar/BP_VehicleAdvSportsCar.BP_VehicleAdvSportsCar",
+    "/Game/VehicleTemplate/Blueprints/SportsCar/SportsCar_WheelsFront.SportsCar_WheelsFront",
+    "/Game/VehicleTemplate/Blueprints/SportsCar/SportsCar_WheelsRear.SportsCar_WheelsRear",
+    "/Game/VehicleTemplate/Blueprints/Tools/BP_SplineMesh.BP_SplineMesh",
+    "/Game/VehicleTemplate/Blueprints/Tools/BP_SplineSpawn.BP_SplineSpawn",
+    "/Game/Puzzles/UI/HCA3/AC_HCA3HUD.AC_HCA3HUD",
+    "/Game/Puzzles/Test/HC4/BP_HC4Character.BP_HC4Character",
+    "/Game/Puzzles/Test/HC4/BP_HC4Controller.BP_HC4Controller",
+    "/Game/Puzzles/Test/HC4/BP_HC4GameMode.BP_HC4GameMode",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.BP_HCA2_ChamberGate",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle.BP_HCA2_Plate_Circle",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross.BP_HCA2_Plate_Cross",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond.BP_HCA2_Plate_Diamond",
+    "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle.BP_HCA2_Plate_Triangle",
+    "/Game/VehicleTemplate/Input/UI_Touch_Vehicle.UI_Touch_Vehicle",
+    "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle",
+    "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt",
+    "/Game/Input/Touch/UI_Thumbstick.UI_Thumbstick",
+    "/Game/Input/Touch/UI_TouchSimple.UI_TouchSimple",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD",
+    "/Game/Characters/Mannequins/Anims/Unarmed/ABP_Unarmed.ABP_Unarmed",
+    "/Game/Characters/Mannequins/Rigs/CR_Mannequin_Body.CR_Mannequin_Body",
+    "/Game/Characters/Mannequins/Rigs/CR_Mannequin_FootIK.CR_Mannequin_FootIK",
+    "/Game/Characters/Mannequins/Rigs/CR_Mannequin_Procedural.CR_Mannequin_Procedural"
+  ],
+  "compile_errors": 0,
+  "compile_warnings": 0,
+  "cook_errors": 0,
+  "cook_warnings": 0,
+  "runtime_input_assertions": 419,
+  "network_players": [
+    2,
+    3,
+    4
+  ],
+  "split": "Two local host owners and two remote clients; four players total",
+  "main_map_two_client_smoke": true,
+  "runtime_blueprint_script_errors_or_accessed_none": 0,
+  "package": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows",
+  "package_artifacts": [
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Binaries\\Win64\\CoopGame.exe",
+      "bytes": 332593152,
+      "sha256": "d0aac2a9f270f1d6cd1a1dbbbd1b863fef43205197e4b8b95567b3a4eb2b308c"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Content\\Paks\\CoopGame-Windows.pak",
+      "bytes": 11466073,
+      "sha256": "8dabd1a78535708c11960b28bbaaada7592806e82bc8b89aade5ff4651cf8b1a"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Content\\Paks\\CoopGame-Windows.ucas",
+      "bytes": 280350080,
+      "sha256": "2e796f732dc1d39f3c54d4cc6e3a7ef3072793b60416f915079833ca3ee18b52"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Content\\Paks\\CoopGame-Windows.utoc",
+      "bytes": 257147,
+      "sha256": "63c74eebca3deaf0af78ff4a7c10f81c56e3583374f900ffba1ed505da58dc52"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Content\\Paks\\global.ucas",
+      "bytes": 3342384,
+      "sha256": "20516b293c571ca7ea2177749662417c251a5ccebcdacef4bb9f4f060f7853f2"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame\\Content\\Paks\\global.utoc",
+      "bytes": 818,
+      "sha256": "3ddd3e716f549c9ea7019fbba47fde85ebb41462c03d07ed190cb5784bc95158"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\Builds\\PG-Signature-Fix-Windows\\Windows\\CoopGame.exe",
+      "bytes": 171520,
+      "sha256": "290ee8e8f8b606e09186762770c93b86ceae161cd00c073798391da7cc7ab27a"
+    }
+  ],
+  "logs": [
+    {
+      "path": "Saved\\PGSignatureFix\\compile-final.log",
+      "bytes": 293749,
+      "sha256": "004c18f6ed8f0783d7aea91744c908e271ea2ee0cc58cd39bf9f69a6043819f2"
+    },
+    {
+      "path": "Saved\\PGSignatureFix\\package.log",
+      "bytes": 77833,
+      "sha256": "b3a04c3a1d7dd7d6fbff1789cd0ec322fdc2290d532d04497eaa245bb4215023"
+    },
+    {
+      "path": "Saved\\PGSignatureFix\\runtime-editor.log",
+      "bytes": 470169,
+      "sha256": "3b876d6ed9ba88d85b7b1b6052ad2658b07bdc421b977dd92b8824dfc191e82b"
+    }
+  ],
+  "limits": [
+    "Headless Windows PIE; no visual, physical-gamepad or Mac acceptance.",
+    "Core carrying attachment belongs to the active HC-2 integration chat; health/downed integration is separate.",
+    "Earlier Python/MCP harness discovery diagnostics remain in the ignored runtime log; no gameplay Blueprint or Script errors occurred."
+  ]
+}

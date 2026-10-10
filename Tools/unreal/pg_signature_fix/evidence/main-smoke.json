@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "worlds": [
+    {
+      "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+      "server": true,
+      "players": 2
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+      "server": false,
+      "players": 2
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+      "server": false,
+      "players": 2
+    }
+  ],
+  "scope": "Main-map client startup, owning-player prompt/input and PG class-load regression"
+}

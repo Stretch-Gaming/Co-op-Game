@@ -1,0 +1,39 @@
+{
+  "asset": "/Game/Player/Test/BP_PG_TestCharacter",
+  "compiled": true,
+  "removed_nodes": [
+    "AddEvent|Custom|Server_InteractBegin",
+    "AddEvent|Custom|Server_InteractEnd",
+    "|DoInteractBegin",
+    "|DoInteractEnd",
+    "|Server_InteractBegin",
+    "|Server_InteractEnd"
+  ],
+  "inherited_input_calls": {
+    "Started": "PressInteract",
+    "Completed": "ReleaseInteract",
+    "Canceled": "ReleaseInteract"
+  },
+  "controller_setup": "HC1ControllerChanged",
+  "preserved_graphs": [
+    "UserConstructionScript",
+    "SpawnTestGhost",
+    "AddTestInput"
+  ],
+  "before": {
+    "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+    "SpawnTestGhost": "(fn SpawnTestGhost ()\n  (Game|SpawnActorBPGhost \"/Game/Player/Ghosts/BP_Ghost.BP_Ghost_C\" (Math|Transform|MakeTransform (Math|Vector|vector+vector (Math|Vector|vector+vector (Transformation|GetActorLocation) (Math|Vector|vector*vector (Transformation|GetActorForwardVector) 800.0)) (Math|Vector|MakeVector 0.0 0.0 60.0))) \"AlwaysSpawn\" \"MultiplyWithRoot\" 0 0))\n",
+    "AddTestInput": "(fn AddTestInput (Controller)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem (Utilities|Casting|CastToPlayerController Controller)))\n  (if (Pawn|IsLocallyControlled)\n    (bind _asplayer_controller (Utilities|Casting|CastToPlayerController Controller))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (Input|AddMappingContext _returnvalue \"/Game/Player/Test/IMC_PG_Test.IMC_PG_Test\" 1 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")))))\n",
+    "FindInteractable": "(fn FindInteractable ()\n  (bind _outactors (Actor|GetAllActorsWithInterface \"/Game/Core/BPI_Interactable.BPI_Interactable_C\"))\n  (for _array_element _outactors\n    (if (< (Transformation|GetDistanceTo _array_element) (|GetInteractRange))\n      (bind _result (|CanInteract _array_element self))\n      (if _result\n        (return _array_element))))\n  (return 0))\n",
+    "DoInteractBegin": "(fn DoInteractBegin ()\n  (bind _self self)\n  (bind _result (|FindInteractable))\n  (Utilities|IsValid _result\n    (:\"Is Valid\"\n      (bind _mode (|GetInteractInfo _result _self))\n      (switch Utilities|FlowControl|Switch|SwitchonE_InteractMode _mode\n        (:NewEnumerator0\n          (|Interact _result _self))\n        (:NewEnumerator1\n          (|Interact _result _self))\n        (:NewEnumerator2\n          (|InteractBegin _result _self)\n          (|SetHeldInteractable _result))))))\n",
+    "DoInteractEnd": "(fn DoInteractEnd ()\n  (bind _heldinteractable (|GetHeldInteractable))\n  (Utilities|IsValid _heldinteractable\n    (:\"Is Valid\"\n      (|InteractEnd _heldinteractable self)\n      (|SetHeldInteractable 0))))\n",
+    "EventGraph": "(event EventReceiveControllerChanged (OldController NewController)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem (Utilities|Casting|CastToPlayerController OldController)))\n  (bind _asplayer_controller (Utilities|Casting|CastToPlayerController OldController)\n    (:then\n      (Utilities|IsValid _returnvalue\n        (:\"Is Valid\"\n          (Input|RemoveMappingContext _returnvalue \"/Game/Player/Test/IMC_PG_Test.IMC_PG_Test\" \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n          (|AddTestInput NewController))\n        (:\"Is Not Valid\"\n          (|AddTestInput NewController))))\n    (:CastFailed\n      (|AddTestInput NewController))))\n\n(event EnhancedInputActionIA_PG_SpawnGhost (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event EnhancedInputActionIA_PG_Interact (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event Custom|Server_SpawnGhost\n  (|SpawnTestGhost))\n\n(event Custom|Server_InteractBegin\n  (|DoInteractBegin))\n\n(event Custom|Server_InteractEnd\n  (|DoInteractEnd))\n"
+  },
+  "after": {
+    "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+    "SpawnTestGhost": "(fn SpawnTestGhost ()\n  (Game|SpawnActorBPGhost \"/Game/Player/Ghosts/BP_Ghost.BP_Ghost_C\" (Math|Transform|MakeTransform (Math|Vector|vector+vector (Math|Vector|vector+vector (Transformation|GetActorLocation) (Math|Vector|vector*vector (Transformation|GetActorForwardVector) 800.0)) (Math|Vector|MakeVector 0.0 0.0 60.0))) \"AlwaysSpawn\" \"MultiplyWithRoot\" 0 0))\n",
+    "AddTestInput": "(fn AddTestInput (Controller)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem (Utilities|Casting|CastToPlayerController Controller)))\n  (if (Pawn|IsLocallyControlled)\n    (bind _asplayer_controller (Utilities|Casting|CastToPlayerController Controller))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (Input|AddMappingContext _returnvalue \"/Game/Player/Test/IMC_PG_Test.IMC_PG_Test\" 1 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")))))\n",
+    "EventGraph": "(event EventReceiveControllerChanged (OldController NewController)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem (Utilities|Casting|CastToPlayerController OldController)))\n  (|HC1ControllerChanged)\n  (bind _asplayer_controller (Utilities|Casting|CastToPlayerController OldController)\n    (:then\n      (Utilities|IsValid _returnvalue\n        (:\"Is Valid\"\n          (Input|RemoveMappingContext _returnvalue \"/Game/Player/Test/IMC_PG_Test.IMC_PG_Test\" \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n          (|AddTestInput NewController))\n        (:\"Is Not Valid\"\n          (|AddTestInput NewController))))\n    (:CastFailed\n      (|AddTestInput NewController))))\n\n(event EnhancedInputActionIA_PG_SpawnGhost (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event EnhancedInputActionIA_PG_Interact (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n\n(event Custom|Server_SpawnGhost\n  (|SpawnTestGhost))\n"
+  },
+  "sha256": "7c0bab78ef813570e8609454f65bbd095639e2c21000e96cc06269692eb2a286"
+}
