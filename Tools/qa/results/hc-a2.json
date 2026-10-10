@@ -1,0 +1,470 @@
+{
+  "repository": "<attached worktree>",
+  "task": "HC-A2",
+  "assets_checked": 22,
+  "errors": 22,
+  "warnings": 11,
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "provenance.missing",
+      "path": "SourceArt/HC/HC-A2",
+      "basis": "repository",
+      "message": "No local provenance document; check asset issue offline evidence or supply a manifest. No license inferred."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Altar.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 6ddeec1e0139a1632f2c10a798be7363dd6258f22ab86a91a2693c6ee9549e27, expected 114780 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_Altar.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Altar_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 9b4318375d8b6c55c394ac4fbfbef1d4d0bd2e53fbbacec26aa30535501cc011, expected 955210 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Assembled_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 d4246d78516c05a5912e7f8af1dd2e1773c5f6f04e4066281c49c9a850775838, expected 968484 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 62cfa5d8774cb1126f5db9bcde9a8e90d2ec570a3d99ba2e8a0597c27954b1a5, expected 340620 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 d78ec415050248173aac2023bfd56bfb0ef7d1a104bbedd479b1c0bcd29748c9, expected 960165 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 0705d0a07e69b91886030a6bf34abee567ef180120b4f7c84b93a4e6aef994db, expected 92556 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 a3b53862311a43396ecb9a34ee0ef5c9511a58392b7c80ed351432db3a05dc99, expected 950813 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Assembled_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 c2d5ce5909597ba57ff2ba3ef991d5be82f371f0c5a79b8a1387e6c44a93aeba, expected 918764 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 badd7ce55aee0a8b747c72867b1a0a75bc924367b6d012516f1c9a1ff2b302da, expected 84956 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 cec3ba18a3ec78ca92fb3c38a401b0008bc48817f8f0f40541fbe3e76b263c24, expected 899530 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 44eeb13dca2a6780efcd41858226d62e60e6f9ecd5aadfdf8be74fd30aaf20a5, expected 58508 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 1b7f5523651b57982c46d02bf4ba7ee724dceb19134443bcb42de77867c915a7, expected 86588 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 2159415bedccb96e296ddbc99f062cad6d46388fbf020fc481f045447d6f5ccf, expected 893745 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 2f128a6b878e5cd44e7ec6132d30fb1229117e80850635fdbbc33865436f5283, expected 58172 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 31e85581bb1e2cd5ec389ed215411c773875f654dbf79c1290fc2e7a1b3f3ec7, expected 888030 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 192f9a19bbaec2092282c36d3b1328f663aca929b1496fd8989dce245a7ac0e7, expected 57228 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 c9327c55e04d746c22ca8f1ebb16728ce9b0c9c96cd7a30c5f20c83e8ebd4293, expected 888027 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 1ec7d3be27b8d24d3b9d19c4f2221fc4a7956279e473e6792f4949684867037a, expected 889446 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Statue.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 92424e3791c856872ea9679128cd6d815332bda246442e4b7e382120daa1eb91, expected 339692 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_Statue.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 7c3aad0a65bbc78f513b70cda846178f7acd11b0ef057866a030900608e48d6b, expected 339420 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 6fd1c93b6ff8eb11f2daca6bc031c8dce7dccc95e5e527bc6dc963e426a29204, expected 951642 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A2/SM_Statue_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 2dc5c6426269b199ed67333951020807c95603c2b2fe08a292f9c147b05a25e4, expected 1019290 bytes)."
+    }
+  ],
+  "facts": [
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Altar.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          120.0,
+          120.0,
+          100.305
+        ],
+        "bounds_min_cm": [
+          -60.0,
+          -60.0,
+          0.0
+        ],
+        "triangles_after": 2394,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          156.0,
+          708.8224,
+          511.2001
+        ],
+        "bounds_min_cm": [
+          -78.0,
+          -354.4112,
+          0.0
+        ],
+        "triangles_after": 8594,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          30.4,
+          430.0,
+          450.0
+        ],
+        "bounds_min_cm": [
+          -15.2,
+          -215.00001,
+          0.0
+        ],
+        "triangles_after": 2222,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          200.0,
+          200.0,
+          11.1891
+        ],
+        "bounds_min_cm": [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        "triangles_after": 1852,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          179.8611,
+          179.7791,
+          14.6829
+        ],
+        "bounds_min_cm": [
+          -89.93055,
+          -89.88954,
+          0.0
+        ],
+        "triangles_after": 1024,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          179.9265,
+          179.9107,
+          14.6637
+        ],
+        "bounds_min_cm": [
+          -89.96325,
+          -89.95535,
+          0.0
+        ],
+        "triangles_after": 1690,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          179.8039,
+          179.9362,
+          15.2284
+        ],
+        "bounds_min_cm": [
+          -89.90194,
+          -89.9681,
+          0.0
+        ],
+        "triangles_after": 1006,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          179.7553,
+          179.4842,
+          14.7334
+        ],
+        "bounds_min_cm": [
+          -89.87767,
+          -89.74208,
+          0.0
+        ],
+        "triangles_after": 938,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          105.1728,
+          103.4845,
+          180.0
+        ],
+        "bounds_min_cm": [
+          -52.58638,
+          -51.74224,
+          0.0
+        ],
+        "triangles_after": 8138,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          64.2722,
+          63.2405,
+          110.0
+        ],
+        "bounds_min_cm": [
+          -32.13612,
+          -31.62026,
+          0.0
+        ],
+        "triangles_after": 8138,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    }
+  ],
+  "limitations": [
+    "Blender export dimensions, bounds, triangles, pivots, units and axes are recorded claims; FBX geometry is not measured.",
+    "Gate opening dimensions are not full mesh bounds; no 400 cm full-bounds assertion is made.",
+    "PNG checks inspect IHDR only, not pixels, actual alpha, image decoding or visual readability.",
+    "Unreal import settings, materials, collision, Nanite, client/split-screen behavior and appearance require editor review.",
+    "No network access: issue provenance and licensing terms are not fetched or legally verified."
+  ],
+  "exit_code": 1
+}

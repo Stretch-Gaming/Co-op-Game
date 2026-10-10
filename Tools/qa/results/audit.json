@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-10",
+  "base_commit": "b9ed193fb35458f1c35588362d7a629949313362",
+  "python": "3.12.14",
+  "platform": "win32",
+  "results": {
+    "HC-A1": {
+      "assets_checked": 13,
+      "errors": 13,
+      "warnings": 6,
+      "exit_code": 1,
+      "codes": {
+        "provenance.missing": 1,
+        "lfs.unhydrated": 13,
+        "record.unbound": 4,
+        "record.relic_size": 1
+      }
+    },
+    "HC-A2": {
+      "assets_checked": 22,
+      "errors": 22,
+      "warnings": 11,
+      "exit_code": 1,
+      "codes": {
+        "provenance.missing": 1,
+        "lfs.unhydrated": 22,
+        "record.unbound": 10
+      }
+    },
+    "all HC": {
+      "assets_checked": 35,
+      "errors": 35,
+      "warnings": 17,
+      "exit_code": 1
+    }
+  },
+  "read_only_snapshot": {
+    "tracked_files": 642,
+    "tracked_sha256_and_mtime_fingerprint": "0cc6c10fd59caa1c93c95f55a76e3f265abaf337ed43b2bcef1831b5f78cd5d4",
+    "git_state": {
+      "index": {
+        "sha256": "e824c744e19f0e1b78bce33d007720d0fe84dd8e98ccb451131610977e1a7ba5",
+        "mtime_ns": 1791607228731355700
+      },
+      "config": {
+        "sha256": "53f35f4aabbf2793dc2372051e86ba28f303b0cee3232bc040208c01b5baa2b8",
+        "mtime_ns": 1791607730405671500
+      }
+    }
+  },
+  "read_only_snapshot_unchanged": true,
+  "source_input_sha256": {
+    "SourceArt/HC/HC-A1/make_SM_KeyRelic_StoneHeart.py": "522dcf0dd7a3d53e1cd2bccd6eca6c146d2dd1bf3ddecca2dd45cd5e2f366877",
+    "SourceArt/HC/HC-A1/make_SM_Relic_GemScarab.py": "5c32f1a55cf9526f945c788f6a1d1f651c4b723a5eb7bf2fe3dca388a8b37bb5",
+    "SourceArt/HC/HC-A1/make_SM_Relic_GoldIdol.py": "04968210e630d569bd91122b5a3e05390bdd0de00bd909806323601f386633e5",
+    "SourceArt/HC/HC-A1/make_SM_Relic_JadeMask.py": "b3bd3a41d5b9aea5894af91efbc698159969df7275c6e0b00054c9a4ddf51ff1",
+    "SourceArt/HC/HC-A1/relic_parts.py": "76b35a9db886076fbe1f5a8b33fee69ca06f245d284f96f7117b6899e0323299",
+    "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx": "2046345b02571f25b9abc9cdcc3d84f2a4aebfbf65c75cb35fe0c3f4e20e4ec0",
+    "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.validation.json": "5ea23f8928e1d2ffb57e5b62e2fde610358bd2178bdcd67f00d59843c2d04c1e",
+    "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview.png": "b30cd9827bcb01dfbf41d2c118d65f12ec84037e88d98c6dcb2603cd45e3f134",
+    "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview_closeup.png": "9cc1ae092def40a7a4bbdaa0ce59ecdbb267f52ec7f9a4249abd1c0d0d8c3268",
+    "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx": "abd75c66ea71bbcece58b46701ecacffb0c6a61887bc7bdffe645f1485d7a225",
+    "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json": "feb1d661c6b69aed93692f66915473a9e1ca9ffb658a342e85087c7278c7f91b",
+    "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview.png": "a7a318498d1f1634d49019813f35f788206e0980790dac8123fae7e552e8c0ce",
+    "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview_closeup.png": "9a196c2a8ad7d2cdd7404ced73123821837aa9cc8b3b66954cc73d6e9b9a23ff",
+    "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx": "de14900e41e519e8a34f3f51c1e472c812ff9cc2f889abfe7efa243bcdb520f5",
+    "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.validation.json": "4b8a8276ed93566581d2fa7817c13b1beae21f7be5eb796153df7a1269b99169",
+    "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_compare.png": "727975f700d259ec2b785eb851e8fe1c427ab6239dd18b850e4412b626c1ed00",
+    "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview.png": "68d62721a6126ee33ac4d411ca8e149ea1516c753b9ca7913d770ffd5d8f4835",
+    "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview_closeup.png": "cf830eed131671654d07d7d65fc74171e71902d5c250f618d8f22e7b4df66b4d",
+    "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx": "10fd49b0e40b1d98cfdcfef0353a28520bb4561f98f2e0686c97dd996b6fc8e1",
+    "SourceArt/HC/HC-A1/SM_Relic_JadeMask.validation.json": "1c63e673d3b0c6354127d67409c62bf01c4b5be51b94ab810c905e346541293b",
+    "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview.png": "66526ac3d30b9cbe00d964901f49ad2cdd737f05693eea43cc830815dff56459",
+    "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview_closeup.png": "b4f60684f4c2fc78efc6c962e7fa27b03a03406f435fc26c1b08171342115910",
+    "SourceArt/HC/HC-A2/hc_a2_parts.py": "334813929578600377469b194430a4226d876f080c0799ece9cc83267f2bee9d",
+    "SourceArt/HC/HC-A2/make_altar.py": "15579ac5ed899aa8e3f5c9859ccca136b1cbebf6ebe56a1f2176fc59811a66af",
+    "SourceArt/HC/HC-A2/make_chamber_gate.py": "a2c3f01a120f4428f62df529dae1a3361b98cbb88b08d8351e52d26b6a8fb601",
+    "SourceArt/HC/HC-A2/make_pressure_plate.py": "bd3ef9077f2b682f2d6820590d0f67e5f961823dd2a48bd08473ae1ba448e340",
+    "SourceArt/HC/HC-A2/make_statue.py": "16fd6ba774442b67b21f7043cb317faa9c65aee6af4aa308715cc941301afc97",
+    "SourceArt/HC/HC-A2/SM_Altar.fbx": "4bdc81c106dbbb4a27c48f7d34d290c81a6b0c3cf7c539c62c0e5bb54e560918",
+    "SourceArt/HC/HC-A2/SM_Altar.validation.json": "651d969b68942778b2cea41c6316bbdfce00bf5b1407f24ebd32d18b3a714bfe",
+    "SourceArt/HC/HC-A2/SM_Altar_preview.png": "813ae7e6522c54f1dcc563a50e59d04dca4fed2b55de70cd7da55cbd87f0464d",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Assembled_preview.png": "4aa8f2dad9941b0740fa555462db77d3fa51b94ebd6c1890915d8a7e346502d6",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx": "0f499169cb7c2bd8d49b709fa3045dbc425fba736ce28cfa75ec0d66e00c8ded",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.validation.json": "8a8d0b5d846d67c0a802c7fe9cb1393ec0d32fd0a6041818359882fce7433dc4",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Frame_preview.png": "f6af799065c6a027c60e84d7af17c5cf43fe82e3dc50d7ccaa18062b6abe63e1",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx": "b1aecbbe81fc29d8c674713f1cbb83bf3af32404c7d1d9d61b84253f97a63b73",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.validation.json": "4c1b54fe8e31e915674322510ee966fd8dd2ddf8eb22709bca63c0cf929f8c7a",
+    "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf_preview.png": "f327abda0147c663e79d34f8f9cb93c0a04338c2ceca97a761b70a8b97a19446",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Assembled_preview.png": "15a1763b3f56135141b26281b5b62d10b3b61579a003083046031d5478277782",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx": "3f7b72395cd79141919b361953ed4e92e93674f8518ee82342e5bbe9420a23a4",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Base.validation.json": "8f1c6dc5a4b1fa8ba82e221efeb2389b2d70836156d233ddfb28234b1367c35b",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Base_preview.png": "32b20e8e932c85456c9dddebec5a8e23a8b667858f1b47362cfe8001386f3a4d",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx": "217690cb946ad8d65641d063d06cef20b8bf142d4ef95811e3bd6d28a2c4220d",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top.validation.json": "d5c37188e589df302a695b462c2684f10b7a38e14305a7458b0c6ffe66cbd944",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx": "782d5340437aaa53568244ad264b797d4607b38ac867b96b61c8103b15da5b79",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.validation.json": "de53463fd1ee9631bbb2451690f4e73f31080ac037c3fc6b44aacd591865a617",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle_preview.png": "2c371f6fd2b3798e1b0682f3085377413859963134d212ba26f3d228d21b00d5",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx": "926bd1a2b65987a2d093deb171126f2c55e8e08ad070f2a495470b89eddca4ad",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.validation.json": "667c50f00e259d0715f61a39b234997245665c495ab1a80c68edaea8527a4ebe",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross_preview.png": "ba2b234b9fbc9ba5f10cd4d97cc4e0ae22115f04c51890f7ad61aaae493f5ae1",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_preview.png": "a3ff29b6fc9c226620ca5ccf51d36cea5369abf2ed2b1121f4c09c7fb30e9043",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx": "b4c98c45e0eda230d380e595614c38ed2b6d7818b993af27c5b5898f96b45de3",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.validation.json": "a6710f69a95b9aa0daa2ab7a2a31d1624660dcc5f675b5166bac2c389c98f515",
+    "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle_preview.png": "8b39c62cdc7c450b74855e0fc52b36350654d993910488e7cb359c9b1c92b0b5",
+    "SourceArt/HC/HC-A2/SM_Statue.fbx": "05b5a8508510eb460c857d6502c2c0220e2bce5b5199b3371abfb6173f52b8dc",
+    "SourceArt/HC/HC-A2/SM_Statue.validation.json": "499558331b742942ab9f064f76a6e0e2d2abd3b2fadb3d9cb6f77b3a2e11dc7d",
+    "SourceArt/HC/HC-A2/SM_Statue_preview.png": "c33210b96fd6721967eac5da8bca748028dc20a374beaffbfb1082313fa7ef7c",
+    "SourceArt/HC/HC-A2/SM_Statue_Small.fbx": "9e87663d8260724e49ed4464cbce286660a341be757198d3c3993b1dba8d6fae",
+    "SourceArt/HC/HC-A2/SM_Statue_Small.validation.json": "66ece75cc3d4f4cbe81a47730f3d1ad577b00c55e40bfad31238ca017685c1e6",
+    "SourceArt/HC/HC-A2/SM_Statue_Small_preview.png": "214d50c7fe7d0199322cc9b40b07948ceb476853fc8c971a1fbcf8fbfaf00881"
+  },
+  "validator_sha256": "f03c95e483543d7e0ae6e6eb34e74af634ac7ba06953ed5facb1868e23b44fd2",
+  "tests_sha256": "5c8b8acc166f78875e91fc3970b8bb6f086b706ba4cd4a2e395eb5ade25a7340",
+  "python_3_9_syntax": "passed; runtime was Python 3.12.14",
+  "final_validation_git_state_unchanged": true,
+  "acceptance_tests": {
+    "run": 34,
+    "passed": 33,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows account cannot create symlinks"
+  }
+}
