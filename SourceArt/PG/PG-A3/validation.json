@@ -1,0 +1,125 @@
+{
+ "SFX_Chase_Build_Loop_2D.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 26.16,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -17.21,
+  "first_last_abs_dbfs": [
+   -76.6,
+   -78.1
+  ],
+  "loop_seam_step_dbfs": -92.6,
+  "median_step_dbfs": -35.9
+ },
+ "SFX_Chase_Loop_2D.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 26.16,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -16.32,
+  "first_last_abs_dbfs": [
+   -94.0,
+   -92.6
+  ],
+  "loop_seam_step_dbfs": -109.2,
+  "median_step_dbfs": -56.7
+ },
+ "SFX_Taker_Breath_Loop.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 17.621,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -22.38,
+  "first_last_abs_dbfs": [
+   -112.5,
+   -112.5
+  ],
+  "loop_seam_step_dbfs": -240.0,
+  "median_step_dbfs": -60.8
+ },
+ "SFX_Taking_FloorCrack.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 3.0,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -24.86,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -79.9
+  ]
+ },
+ "SFX_Taking_FloorShut.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 2.9,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -18.71,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -68.3
+  ]
+ },
+ "SFX_Taking_HandDrag.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 3.6,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -18.56,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -95.6
+  ]
+ },
+ "SFX_Taking_HeadlampRoll.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 4.6,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -30.76,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -80.5
+  ]
+ },
+ "SFX_Taking_LightsOut.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 2.4,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -19.01,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -85.8
+  ]
+ },
+ "SFX_Taking_Sting_2D.wav": {
+  "codec": "pcm_s24le",
+  "sample_rate": 48000,
+  "channels": 1,
+  "bits": 24,
+  "seconds": 2.6,
+  "peak_dbfs": -3.0,
+  "rms_dbfs": -18.18,
+  "first_last_abs_dbfs": [
+   -240.0,
+   -240.0
+  ]
+ }
+}
