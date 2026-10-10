@@ -29,7 +29,7 @@ Work for this project is tracked in this repo's [GitHub Issues](https://github.c
 
 - Each lane has an epic issue: [#1](https://github.com/StretchGaming/Co-op-Game/issues/1) for HC, [#2](https://github.com/StretchGaming/Co-op-Game/issues/2) for PG and [#3](https://github.com/StretchGaming/Co-op-Game/issues/3) for HZ. [#4](https://github.com/StretchGaming/Co-op-Game/issues/4) holds the playable checkpoints. Every phase, asset task and ready check is a sub-issue of its lane's epic, with its sprint as the [milestone](https://github.com/StretchGaming/Co-op-Game/milestones).
 - Start each commit message with the phase code and end it with the issue number, like `PG-2: split-screen on the host (#24)`. Close the issue when its "Done when" passes, with `Closes #24` in the last commit or by hand.
-- Commit as the person who owns the lane, with their own Git name and email. Never add a `Co-Authored-By: Claude` trailer, or any other AI co-author or "Generated with" line, to a commit message, pull request or issue.
+- Commit as yourself, with your own Git name and email, even when the work is for another lane. An agent commits as the person who ran it. Never put a teammate's name on work they didn't do, and never add a `Co-Authored-By: Claude` trailer, or any other AI co-author or "Generated with" line, to a commit message, pull request or issue.
 - Tick off the issue's steps as you go. Comment on it with anything the next sprint needs to know, such as a blocker, or an asset's source and license.
 - When the plan changes, update the matching issues in the same push. The docs say what to build; the issues say who's on it and how far along it is.
 
