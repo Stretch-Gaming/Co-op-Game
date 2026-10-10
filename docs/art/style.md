@@ -36,13 +36,14 @@ Player colors (PG-A1) must stay clearly apart from the reserved colors: relic, t
 
 ## Making an asset
 
-1. **Start from a style frame.** Make a concept image of the asset with the team's image model, using the style reference image in the reference board as the image reference. Then run image-to-3D on that concept. That gives much more consistent results than text-to-3D.
+1. **Start from a style frame.** Make a concept image of the asset with the team's image model, using [`style-reference.png`](../../SourceArt/PG/PG-A0/style-frames/style-reference.png) as the image reference. The [style frames](../../SourceArt/PG/PG-A0/README.md) show what finished scenes should look like. Then run image-to-3D on that concept. That gives much more consistent results than text-to-3D.
 2. **Append the prompt suffix** to every image and mesh prompt:
 
    > stylized hand-painted game asset, chunky exaggerated proportions, slightly uneven shapes, soft wide bevels, simple painted color, gradient from dark base to lighter top, no fine surface noise, no photo textures
 
-3. **Don't trust the generator's textures.** Import them, then tint and adjust them through an instance of `M_Stylized`. If they still fight the style, drop them and use the material's painted look on its own.
-4. **Check it in `L_StyleTest`** next to the example assets before it replaces a greybox.
+3. **Clean it up** with [Tools/blender/cleanup_export.py](../../Tools/blender/cleanup_export.py): scale, axes, pivot and triangle count.
+4. **Don't trust the generator's textures.** Import them, then tint and adjust them through an instance of `M_Stylized`. If they still fight the style, drop them and use the material's painted look on its own.
+5. **Check it in `L_StyleTest`** next to the example assets before it replaces a greybox.
 
 ## The style kit
 
