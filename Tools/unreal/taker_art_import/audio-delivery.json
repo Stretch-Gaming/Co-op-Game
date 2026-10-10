@@ -1,0 +1,93 @@
+{
+  "source_pr": 123,
+  "source_commit": "534973a06c6702a82b0b4959b0b98427c1ea6722",
+  "canonical": "/Game/Player/Art/Audio",
+  "asset_sha256": {
+    "ATT_PG_Taker": "f9cde210328c45f901c30e7c7660d944842c947597a4644a48ca131e18b0997c",
+    "ATT_PG_Taking": "41e461b001ac74c584fe27cdfbb6256643ee5c0276cb578d3b81f5bb6a8a69d5",
+    "SFX_Chase_Build_Loop_2D": "5de75948570ce7d389723bb24bd866f99ad97a2dafca04b755c7e23cb1d04487",
+    "SFX_Chase_Loop_2D": "39c003c1321962670085783dfc8c91da16c949a2c56b736757137fae1bd7eabf",
+    "SFX_Taker_Breath_Loop": "8fe5e035f7659e4d04172550ec9eea7037447b115842ad528d6db65970b04724",
+    "SFX_Taking_FloorCrack": "ef576087df0807cc65f2cc094818a84832bc2c234f64308e057f2b794b561fdd",
+    "SFX_Taking_FloorShut": "a4918e0943f567fc5718a82c0c205f79fc044f8f6c2e098dce8b42f5dc48917f",
+    "SFX_Taking_HandDrag": "bcd1d074e804c423ae0457316a68c821a9dc4558b4cbb2b5ab20916df1ef8efc",
+    "SFX_Taking_HeadlampRoll": "803cef12ce22bda72540cd1111d557b1a564bb58c68dfa529e0fe4a5407e3cee",
+    "SFX_Taking_LightsOut": "665344de1354994e55fc5d5fa1c884eaff1c05b37c81cacbe1563f4840fe8e09",
+    "SFX_Taking_Sting_2D": "8438b0093243172ec778ff73c402cf49b88d578e19e1af76f3eff9c1df642c0a"
+  },
+  "source_wavs": {
+    "SFX_Chase_Build_Loop_2D": {
+      "sha256": "70d6ca8331d8a576bd60a24974fb0a87d098c61f1a33ec06190135f0fdcc5d65",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 26.16,
+      "pcm": true
+    },
+    "SFX_Chase_Loop_2D": {
+      "sha256": "9ef712a6ca423260563b5efe872fc10f79238fa60aa70296dc5565253578b4da",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 26.16,
+      "pcm": true
+    },
+    "SFX_Taker_Breath_Loop": {
+      "sha256": "cd453b218ac5f61a748c7a6fb3fde2a053dd42cf5f9b3838ffcbad3b58636989",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 17.620541666666668,
+      "pcm": true
+    },
+    "SFX_Taking_FloorCrack": {
+      "sha256": "ddc9ee957c0c8d900d8830169669e155d9c3bf3020fc0b17a5cd675df4588b6b",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 3.0,
+      "pcm": true
+    },
+    "SFX_Taking_FloorShut": {
+      "sha256": "2873a532928f02b732c342c79a26aeabc442ea5841eb3124e8ec017b82de0fc5",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 2.9,
+      "pcm": true
+    },
+    "SFX_Taking_HandDrag": {
+      "sha256": "a65a6ccc6ae5f1c4163834dfbc61113aadbd82591fcaef52451ec83fd1d77698",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 3.6,
+      "pcm": true
+    },
+    "SFX_Taking_HeadlampRoll": {
+      "sha256": "0c383cde846b9bf908403602e69a41f863f480129d2fd402c2e14c57c381169f",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 4.6,
+      "pcm": true
+    },
+    "SFX_Taking_LightsOut": {
+      "sha256": "8d882a46d70993238fc2cd87c86021d71f48c34e0e0ae9065f8c801ffff01ef0",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 2.4,
+      "pcm": true
+    },
+    "SFX_Taking_Sting_2D": {
+      "sha256": "6dc9aa864e49a9ed97604947129c8d494d244ab0a34e49d8dc460da22b087133",
+      "channels": 1,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "duration": 2.6,
+      "pcm": true
+    }
+  },
+  "imports_performed_by_this_worker": false
+}

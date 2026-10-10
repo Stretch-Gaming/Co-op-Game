@@ -1,0 +1,14 @@
+{
+ "source_pr":122,
+ "source_commit":"107cf1e9466a0ab7780eb282220fcf83a4d15086",
+ "source_sha256":"fd40cdeb47f2233c31125e16a2b62636734eb543ebd4f3ff4ae63a7ca6495b2a",
+ "derivative_sha256":"2008b7a684ba0f82d34b97fe259c20ec7abc46e09d00ead5f9c1dd8c6fcbf0ed",
+ "cut_world_y":3200,
+ "offset_x":-175,
+ "private_asset_root":"/Game/Puzzles/EnvironmentConnection/Refresh_fd40cdeb",
+ "scenery_records":563,
+ "procedural_meshes":224,
+ "excluded_nonblocking_volume":912,
+ "scope":"Maze scenery only; original HZ room/maps, gameplay and door preserved",
+ "license":"Original team-authored prototype geometry; public redistribution permitted. No third-party additions."
+}

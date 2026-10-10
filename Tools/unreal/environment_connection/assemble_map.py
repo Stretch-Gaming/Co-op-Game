@@ -1,4 +1,5 @@
 import gzip,json,unreal as ue
+assert not (ROOT/'SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb/connection.json.gz').exists(), 'This map uses refreshed scenery; see Tools/unreal/connection_refresh instead of the historical builder.'
 from editor_toolset.toolsets.actor import ActorTools
 assert not ue.EditorLevelLibrary.get_pie_worlds(True)
 editor=ue.get_editor_subsystem(ue.LevelEditorSubsystem);actors=ue.get_editor_subsystem(ue.EditorActorSubsystem)

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "error": null,
+  "phase": "second",
+  "checks": [
+    "closed door physically blocks walking from the room",
+    "normal E opens the moving door on server and both local players",
+    "local player walks from room through open doorway and joined passage into maze fork",
+    "same local player walks back into original room",
+    "second joining local player walks into maze; both players keep same world/roster; no puzzle actors active"
+  ],
+  "players": [
+    {
+      "id": 258,
+      "position": "<Struct 'Vector' (0x00000143F142AC70) {x: 275.000000, y: 904.744966, z: 92.150003}>"
+    },
+    {
+      "id": 259,
+      "position": "<Struct 'Vector' (0x00000143F142AC70) {x: 375.000000, y: 3603.079896, z: 92.150002}>"
+    }
+  ],
+  "door_position": "<Struct 'Vector' (0x00000143F142AC70) {x: 325.000000, y: 1400.000000, z: 650.000000}>",
+  "worlds": [
+    "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+  ],
+  "method": "Two local host players use native movement/E and the existing shared-keyboard routing; only initial approach positions are fixtures.",
+  "scenario": "two local host players"
+}
