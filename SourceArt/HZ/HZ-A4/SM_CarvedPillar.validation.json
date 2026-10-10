@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A4/SM_CarvedPillar.glb",
+  "output": "SourceArt/HZ/HZ-A4/SM_CarvedPillar.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1888,
+  "triangles_after": 1888,
+  "dimensions_cm": [
+    115.6067,
+    115.8773,
+    400.4307
+  ],
+  "bounds_min_cm": [
+    -57.80337,
+    -57.93867,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

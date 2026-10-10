@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A4/SM_SwingLog.glb",
+  "output": "SourceArt/HZ/HZ-A4/SM_SwingLog.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 5236,
+  "triangles_after": 5236,
+  "dimensions_cm": [
+    300.0,
+    80.8826,
+    319.7589
+  ],
+  "bounds_min_cm": [
+    -150.0,
+    -40.44132,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
