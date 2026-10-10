@@ -23,7 +23,7 @@ shrinks. Neither round start nor restart clears collection.
 The GameMode checks the roster every 0.2 seconds. In Lobby, it changes only the
 scaling row when the clamped 2/3/4-player row changes. Starting a round samples
 the current roster; other phases retain the chosen row. New PlayerStates begin
-at ColorSlot -1 and receive the first free slot 0ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“3 on the server, including
+at ColorSlot -1 and receive the first free slot 0-3 on the server, including
 local split players. ColorSlot replicates. Existing scaling struct signatures
 and the data-table rows are preserved.
 
@@ -52,7 +52,7 @@ PlaySoundAtLocation only when an instance's PickupSound is assigned. The default
 - Round 1 at `d7167949b2ac08fa590747e7ec37a87de3a31388`: contracts reviewed as compatible with the existing scaling row/table and round notification. Its later-phase actor delivery stays separate from this HC2/Core slice; no Core adapter is required.
 
 Each accepted delivery has its own integration commit. No binary merge
-conflicts occurred in these three deliveries. No cave actors were placed or authored by this chat. L_Site01_HC, the approved HZ repairs and carrying assets enter only through their exact reviewed delivery commits; their bytes are preserved.
+conflicts occurred in the reviewed deliveries. No cave actors were placed or authored by this chat. L_Site01_HC, the approved HZ repairs and carrying assets enter only through their exact reviewed delivery commits; their bytes are preserved.
 
 ## Windows verification
 
@@ -105,3 +105,26 @@ contains no tutorial placements in the cave.
 - Production Drop now forwards to the reviewed AC_Carrying through the owning character's reliable Run on Server event. Server BeginPlay adds the replicated component only when absent, reusing the HC4 fixture's existing static component and avoiding duplicates. GetCarried/ReleaseCarried retain their CarriedActor return signatures and server-only component semantics. Production health/downed binding and carrying art/placement remain with their owners/future slice.
 - #8 remains open for these dependencies and the cave placement/travel team
   acceptance. HC-3 revive and later puzzle logic are outside this slice.
+
+## Completion follow-up
+
+The latest published PG branch and PR #82 were reviewed on 2026-10-10.
+PR #82 at `a54a2e692ccac00b1e95442de1b64877ef79ee0a` repairs the PG test
+character RPC signature and forwards its input to inherited HC-1 behavior.
+It is integrated as a separate reviewed delivery, without editing its binary
+or tools. The protected PG graphs and the delivered asset hash match.
+`pg-compatibility-review.json` records all 63 Blueprints compiling without errors or warnings against
+HC-2 Core. `pg-core-input-*.json` and `pg-core-input-log.json` record the
+reviewed PG input regression running against this integration: 419 assertions
+passed at 2, 3 and 4 clients and with two local host owners plus two remote
+clients; the log interval contains no errors or Accessed None.
+
+This repair does not provide AC_PlayerView or BPFL_SplitScreen. Both assets
+remain absent from all published repository branches examined; #23 and #24
+remain open. The user confirmed that the existing PG and cave owners remain
+responsible and will provide the delivery and Mac test access. HC-2 will
+consume the reviewed PG contracts, wire production inputs under Core locks,
+and verify the cave owner's tutorial placement once those deliveries exist.
+Both Macs must actually join and travel in both directions with the host's
+split-screen player before the travel checkbox is closed. Until then, #8 and
+PR #81 remain open; no missing acceptance is inferred from Windows PIE.

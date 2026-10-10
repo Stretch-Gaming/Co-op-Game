@@ -8,7 +8,8 @@
     "71": "4a1e74e408c0b37a690aef660bb9e255cb39ca03",
     "73": "14b967ff417d871c10fac08d7beef075f1994a1c",
     "74": "41ce132d72b26a709091af1961ed501ada857d99",
-    "carrying": "a162df8d842ce347c14195c2cc6551543d7ab8a1"
+    "carrying": "a162df8d842ce347c14195c2cc6551543d7ab8a1",
+    "82": "a54a2e692ccac00b1e95442de1b64877ef79ee0a"
   },
   "own_artifacts": [
     {
@@ -477,12 +478,61 @@
     },
     {
       "path": "docs/hc2-verification.md",
-      "bytes": 9455,
-      "sha256": "3c2b9501a97faadd103a8b08a743809c2e8db1315a7ac218c52b46b396a710a9"
+      "bytes": 10903,
+      "sha256": "67df146d92ea382f730129033450209e1a643fb895ad2768a0b104183c7b797e"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-compatibility-review.json",
+      "bytes": 4979,
+      "sha256": "e1ee150b66726501c40a449aab7b2b16458f51a6650a9475ec5240f25a526134"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-core-input-2.json",
+      "bytes": 8747,
+      "sha256": "ee3444554c1bd53d770b90550462f3f47889d5215f06f9a559ba8c8e1606578a"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-core-input-3.json",
+      "bytes": 15222,
+      "sha256": "2efb179a2bbf97745ade72f1595b60852dfa84d3dd913deb3976de5b964e8fb7"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-core-input-4.json",
+      "bytes": 23530,
+      "sha256": "ff65250079d19c1a4f74919e29e53d652179e882f7b2a8bbcd7f88ebea4738a2"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-core-input-log.json",
+      "bytes": 468,
+      "sha256": "93fc51ed7d4a585ebc0032afd16973e0c937f604d5c527787a27460b6798503b"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/pg-core-input-split.json",
+      "bytes": 14439,
+      "sha256": "09a5f91b24fb7515b63557119acd66708a64862b9fe11db37d2692983cf090d9"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/review_pg.py",
+      "bytes": 1686,
+      "sha256": "cd546e04920af7365907056fbdaf7312ab9172cd18fcb7356f36e5f0145166c2"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/review_pg_input.py",
+      "bytes": 393,
+      "sha256": "fb606a9f84014dca7c0f8c7d02cfdef6540053e275255bc86bc1598cd7859421"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/run_pg_input.py",
+      "bytes": 2076,
+      "sha256": "6fae19f7f24db3ce77dc0537bcbbf775b906580bd1f23908720cd57b361b77eb"
     }
   ],
   "original_probe_sha256": "fbdf1e6a210801f1c542474f7319e2d0b078297c61806930f760ba5e36d58299",
   "published_base": "91a5195ec6d31060d4e28d02f2e068ac595cd0b1",
   "rebase_preserved_tested_binaries": true,
-  "text_hash_note": "Working bytes include checkout line endings; binary/LFS OIDs are invariant."
+  "text_hash_note": "Working bytes include checkout line endings; binary/LFS OIDs are invariant.",
+  "pg_compatibility_asset": {
+    "path": "Content/Player/Test/BP_PG_TestCharacter.uasset",
+    "sha256": "7c0bab78ef813570e8609454f65bbd095639e2c21000e96cc06269692eb2a286"
+  }
 }
