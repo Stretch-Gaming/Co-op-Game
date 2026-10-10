@@ -1,0 +1,95 @@
+{
+  "SFX_CaveAmbience_Loop": {
+    "inputs": [],
+    "processing": "Synthesized: rumble, air, wind moan, distant drips and pebbles, circular cave reverb."
+  },
+  "SFX_TorchCrackle_Loop": {
+    "inputs": [],
+    "processing": "Synthesized: flickering low roar, gas hiss, clustered crackles and pops, built circularly."
+  },
+  "SFX_Drip_01": {
+    "inputs": [],
+    "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb."
+  },
+  "SFX_Drip_02": {
+    "inputs": [],
+    "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb."
+  },
+  "SFX_Drip_03": {
+    "inputs": [],
+    "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb."
+  },
+  "SFX_Spikes_Arm": {
+    "inputs": [
+      "raw/kenney_rpg-audio/metalLatch.ogg",
+      "raw/kenney_sci-fi-sounds/lowFrequency_explosion_001.ogg"
+    ],
+    "processing": "metalLatch as the click; lowFrequency_explosion_001 low-passed at 250 Hz as a knock; synthesized grinding rumble that swells over 0.3 s; small room."
+  },
+  "SFX_Spikes_Rise": {
+    "inputs": [
+      "raw/kenney_rpg-audio/drawKnife3.ogg",
+      "raw/kenney_impact-sounds/impactMetal_heavy_001.ogg",
+      "raw/kenney_impact-sounds/impactMining_003.ogg"
+    ],
+    "processing": "drawKnife3 cut to 60 ms before its peak as the scrape; impactMetal_heavy_001 clang and impactMining_003 (low-passed 1.2 kHz) at the peak; synthesized 85-45 Hz thump; small room."
+  },
+  "SFX_Spikes_Retract": {
+    "inputs": [
+      "raw/kenney_rpg-audio/drawKnife2.ogg",
+      "raw/kenney_impact-sounds/impactMining_002.ogg"
+    ],
+    "processing": "drawKnife2 slowed to 0.7x (lower) and high-passed as the slide; synthesized grind sweeping 1.2 kHz to 500 Hz; impactMining_002 low-passed at 900 Hz plus a synthesized thump as the end clunk at 0.62 s."
+  },
+  "SFX_DartLauncher_Arm": {
+    "inputs": [
+      "raw/kenney_rpg-audio/beltHandle2.ogg",
+      "raw/kenney_rpg-audio/creak3.ogg"
+    ],
+    "processing": "beltHandle2 as the ratchet, with a +6 dB resonance at 700 Hz for body; creak3 slowed to 0.9x at -12 dB underneath; small room."
+  },
+  "SFX_DartLauncher_Fire_01": {
+    "inputs": [
+      "raw/kenney_impact-sounds/impactWood_medium_000.ogg"
+    ],
+    "processing": "impactWood_medium_000 cut to 0.18 s as the mechanism clack; synthesized air puff (band-pass sweeping 3.5 kHz to 1.1 kHz) and a 200 Hz tube \"thoomp\"; small room."
+  },
+  "SFX_DartLauncher_Fire_02": {
+    "inputs": [
+      "raw/kenney_impact-sounds/impactWood_medium_003.ogg"
+    ],
+    "processing": "impactWood_medium_003 cut to 0.18 s as the mechanism clack; synthesized air puff (band-pass sweeping 3.5 kHz to 1.1 kHz) and a 170 Hz tube \"thoomp\"; small room."
+  },
+  "SFX_Dart_Whoosh": {
+    "inputs": [
+      "raw/kenney_rpg-audio/knifeSlice2.ogg"
+    ],
+    "processing": "knifeSlice2 shaped by a bell envelope around its loudest point and high-passed at 900 Hz; synthesized flyby (band-pass sweeping up to 3 kHz and back) under it."
+  },
+  "SFX_Dart_Impact_01": {
+    "inputs": [
+      "raw/kenney_rpg-audio/chop.ogg"
+    ],
+    "processing": "chop cut to 0.24 s as the hit; synthesized shaft quiver at 165 Hz; small room."
+  },
+  "SFX_Dart_Impact_02": {
+    "inputs": [
+      "raw/kenney_impact-sounds/impactPlank_medium_001.ogg"
+    ],
+    "processing": "impactPlank_medium_001 cut to 0.35 s as the hit; synthesized shaft quiver at 215 Hz; small room."
+  },
+  "SFX_Dart_Impact_03": {
+    "inputs": [
+      "raw/kenney_impact-sounds/impactMining_002.ogg",
+      "raw/kenney_impact-sounds/impactMetal_medium_004.ogg",
+      "raw/kenney_impact-sounds/impactWood_medium_003.ogg"
+    ],
+    "processing": "impactMining_002 low-passed at 3 kHz and cut to 0.25 s; impactMetal_medium_004 at -6 dB; impactWood_medium_003 sped up 1.5x as two bounces at 0.11 s and 0.19 s; small room."
+  },
+  "SFX_SwingLog_Whoosh": {
+    "inputs": [
+      "raw/kenney_rpg-audio/knifeSlice.ogg"
+    ],
+    "processing": "knifeSlice slowed to 0.4x, shaped by a bell around its loudest point and low-passed at 2.5 kHz; synthesized low band-pass sweep (180-630 Hz) and a 55 Hz sub swell."
+  }
+}
