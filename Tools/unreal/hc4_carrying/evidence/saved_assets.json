@@ -1,0 +1,144 @@
+{
+  "/Game/Puzzles/BP_Carryable": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Script/Engine.StaticMeshActor",
+    "replicates": true,
+    "movement": true,
+    "root_mesh": true,
+    "mobility": "<ComponentMobility.MOVABLE: 2>",
+    "overlaps": true,
+    "heavy": false,
+    "events": [
+      "ReceiveTick",
+      "ReceiveRadialDamage",
+      "ReceivePointDamage",
+      "ReceiveHit",
+      "ReceiveEndPlay",
+      "ReceiveDestroyed",
+      "ReceiveBeginPlay",
+      "ReceiveAsyncPhysicsTick",
+      "ReceiveAnyDamage",
+      "ReceiveActorOnReleased",
+      "ReceiveActorOnInputTouchLeave",
+      "ReceiveActorOnInputTouchEnter",
+      "ReceiveActorOnInputTouchEnd",
+      "ReceiveActorOnInputTouchBegin",
+      "ReceiveActorOnClicked",
+      "ReceiveActorEndOverlap",
+      "ReceiveActorEndCursorOver",
+      "ReceiveActorBeginOverlap",
+      "ReceiveActorBeginCursorOver",
+      "K2_OnReset",
+      "K2_OnEndViewTarget",
+      "K2_OnBecomeViewTarget",
+      "InteractEnd",
+      "InteractBegin",
+      "Interact",
+      "ResetForRound"
+    ],
+    "replication": {
+      "CarryState": "<BlueprintVariableReplication.REP_NOTIFY: 2>",
+      "Carrier": "<BlueprintVariableReplication.REP_NOTIFY: 2>"
+    }
+  },
+  "/Game/Puzzles/BP_KeyRelic": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Game/Puzzles/BP_Carryable.BP_Carryable_C",
+    "replicates": true,
+    "movement": true,
+    "root_mesh": true,
+    "mobility": "<ComponentMobility.MOVABLE: 2>",
+    "overlaps": true,
+    "heavy": true
+  },
+  "/Game/Puzzles/BP_Statue": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Game/Puzzles/BP_Carryable.BP_Carryable_C",
+    "replicates": true,
+    "movement": true,
+    "root_mesh": true,
+    "mobility": "<ComponentMobility.MOVABLE: 2>",
+    "overlaps": true,
+    "heavy": true
+  },
+  "/Game/Puzzles/Carrying/AC_Carrying": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Script/Engine.ActorComponent",
+    "replicated": true
+  },
+  "/Game/Puzzles/Test/HC4/BP_HC4Character": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C",
+    "components": [
+      "Carrying_GEN_VARIABLE"
+    ],
+    "input_links": {
+      "Input|EnhancedActionEvents|EnhancedInputActionIA_Drop": 1,
+      "Input|EnhancedActionEvents|EnhancedInputActionIA_HC4Release": 1,
+      "Input|EnhancedActionEvents|EnhancedInputActionIA_HC4Reset": 1,
+      "Input|EnhancedActionEvents|EnhancedInputActionIA_HC4AddLocal": 1
+    }
+  },
+  "/Game/Puzzles/Test/HC4/BP_HC4Controller": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Game/Core/BP_CoopPlayerController.BP_CoopPlayerController_C"
+  },
+  "/Game/Puzzles/Test/HC4/BP_HC4GameMode": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "parent": "/Game/Core/BP_CoopGameMode.BP_CoopGameMode_C"
+  },
+  "Core_handoff": {
+    "GetCarried": [
+      {
+        "type": "|GetCarried",
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "then",
+            "type": "Exec"
+          }
+        ]
+      },
+      {
+        "type": "|ReturnNode",
+        "inputs": [
+          {
+            "name": "execute",
+            "type": "Exec"
+          },
+          {
+            "name": "CarriedActor",
+            "type": "Actor Object Reference"
+          }
+        ],
+        "outputs": []
+      }
+    ],
+    "ReleaseCarried": [
+      {
+        "type": "|ReleaseCarried",
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "then",
+            "type": "Exec"
+          }
+        ]
+      },
+      {
+        "type": "|ReturnNode",
+        "inputs": [
+          {
+            "name": "execute",
+            "type": "Exec"
+          },
+          {
+            "name": "CarriedActor",
+            "type": "Actor Object Reference"
+          }
+        ],
+        "outputs": []
+      }
+    ]
+  }
+}

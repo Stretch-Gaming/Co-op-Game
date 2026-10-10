@@ -1,0 +1,310 @@
+{
+  "Content/Puzzles/BP_Carryable.uasset": {
+    "sha256": "15ba9f8524b61e7f9dcf53b46522496885b3c599b0cd907be594b20d5be89d93",
+    "bytes": 447779
+  },
+  "Content/Puzzles/BP_KeyRelic.uasset": {
+    "sha256": "53489542110d519a77bf02a59e530d2762651c3c6e0f8a7b94aeb5245ee30b07",
+    "bytes": 42160
+  },
+  "Content/Puzzles/BP_Statue.uasset": {
+    "sha256": "48f98da54738fdc6713407bb44ef29fe843867648182f7366fdea54a6d38b647",
+    "bytes": 42124
+  },
+  "Content/Puzzles/Carrying/AC_Carrying.uasset": {
+    "sha256": "cf36d308b8ef2405ce873ebd673ef9746ab7e73e7048b201cf150b0c2ac2a848",
+    "bytes": 328682
+  },
+  "Content/Puzzles/Test/HC4/BP_HC4Character.uasset": {
+    "sha256": "b64ef58ff6ce5f2ed12534319dc7e4a80bb4a471fbf98222a5ef1a40d631f5b7",
+    "bytes": 208878
+  },
+  "Content/Puzzles/Test/HC4/BP_HC4Controller.uasset": {
+    "sha256": "3486e65b64129a9934e51574eed668f34d4bafb28b976914c67c7db9207693c7",
+    "bytes": 28381
+  },
+  "Content/Puzzles/Test/HC4/BP_HC4GameMode.uasset": {
+    "sha256": "04b85a3851b25344f3a1bbc76f6dca7971abd2f25cba3ce8adf8cc007d823d5c",
+    "bytes": 28485
+  },
+  "Content/Puzzles/Test/HC4/IA_HC4AddLocal.uasset": {
+    "sha256": "41218ecc0e2fd0ffca68f308613f8f7d30d12a0bbe48aa3101665f954b2d945e",
+    "bytes": 1215
+  },
+  "Content/Puzzles/Test/HC4/IA_HC4Release.uasset": {
+    "sha256": "573e15fb8f8f98397730cb1868b5422c12a67265b3210095745a1e4dad7e0e51",
+    "bytes": 1210
+  },
+  "Content/Puzzles/Test/HC4/IA_HC4Reset.uasset": {
+    "sha256": "4f64e5c27d09b97d77dc0382886b3388eda1567e305fec685321998d212a0d5c",
+    "bytes": 1200
+  },
+  "Content/Puzzles/Test/HC4/IMC_HC4Test.uasset": {
+    "sha256": "365ff0ef86fb1f557f36b7f5f633695e8b063906854625eb98d2418f45653912",
+    "bytes": 3260
+  },
+  "Content/Puzzles/Test/HC4/L_HC4_Carrying.umap": {
+    "sha256": "ca8a3dd907d2441213aeca2732903e7c4925697415e5ccf796030c9ec256dcf2",
+    "bytes": 47627
+  },
+  "docs/hc4-verification.md": {
+    "sha256": "5c28c73fd6b58e76bf6a1028d60c29c0c44f4e035627f94fdfa2b5c4d7fa42e9",
+    "bytes": 9472
+  },
+  "Tools/unreal/hc4_carrying/action.ps1": {
+    "sha256": "5f5e991f5bb6b0a78997f09d16a3c1fa3104bc8a59a0aef83c4745d4623b540f",
+    "bytes": 815
+  },
+  "Tools/unreal/hc4_carrying/authoring.py": {
+    "sha256": "e1bf369649ccd93645b5a7b3c1538dd364f8373e39a5105c0c0344b8f6392d65",
+    "bytes": 4067
+  },
+  "Tools/unreal/hc4_carrying/build_fixtures.py": {
+    "sha256": "55f48cac4bbd6640c24c58de4e45471eabb3ef3c1e6067a7ad2997a824cf2233",
+    "bytes": 7105
+  },
+  "Tools/unreal/hc4_carrying/build_logic.py": {
+    "sha256": "0d26e5a499cf085fe026d5cf8046a709f1e64a37d94f6025053377f98dcde7ce",
+    "bytes": 11957
+  },
+  "Tools/unreal/hc4_carrying/editor_loop.py": {
+    "sha256": "d9ac25c494593bef24b3de79efa5135b1a5d19cabc30ac218325f91877d8e4b1",
+    "bytes": 1670
+  },
+  "Tools/unreal/hc4_carrying/evidence/acceptance_runtime.log": {
+    "sha256": "9b66588ae528eeabde73a333822a001e86c64f79aa38ca1178d2e3e803421900",
+    "bytes": 78611
+  },
+  "Tools/unreal/hc4_carrying/evidence/assertions.json": {
+    "sha256": "4b416dcc660a7e1f0d2b7c06e2fa3dfbc6aef2e602320daa72d763404b0b0b0d",
+    "bytes": 458983
+  },
+  "Tools/unreal/hc4_carrying/evidence/client_authority.json": {
+    "sha256": "c6fab0e3845cd02336b238c6d1cd216f5e7ce55b5f8d9c4b184c26f82654482e",
+    "bytes": 878
+  },
+  "Tools/unreal/hc4_carrying/evidence/competition_2.json": {
+    "sha256": "74c478c3dcf89b4ed791ec69029f764995336cf4175062ddefc9984da8b3c9f6",
+    "bytes": 23003
+  },
+  "Tools/unreal/hc4_carrying/evidence/drop_2.json": {
+    "sha256": "7c5451783c54ed680118829efdd6b1678e1b0f5ba0955e2da0160656b5a47f7e",
+    "bytes": 23455
+  },
+  "Tools/unreal/hc4_carrying/evidence/drop_3.json": {
+    "sha256": "fcef3492b305f16bcf0a3a1fa5efa74d286b8ae6447c91794f4e65fbd22ad572",
+    "bytes": 33135
+  },
+  "Tools/unreal/hc4_carrying/evidence/drop_4.json": {
+    "sha256": "0d051750ab8156312f184ac6784cc9769107547fdc595d145dd6ec236550f6b5",
+    "bytes": 43833
+  },
+  "Tools/unreal/hc4_carrying/evidence/final_report.json": {
+    "sha256": "6afa90f39bc75bad14cd825c41bbc28faba523f4750851bcdd1af4f9583a350e",
+    "bytes": 5585
+  },
+  "Tools/unreal/hc4_carrying/evidence/fresh_client_drop_4.json": {
+    "sha256": "f05ee5178566128f749333a1060c037afc934fa978bbc4cad3027fff436cda10",
+    "bytes": 26913
+  },
+  "Tools/unreal/hc4_carrying/evidence/fresh_client_pickup_4.json": {
+    "sha256": "8efab19d35bce9933a730025dda1e0061f6c5c59e8950fcff19676c29b3d08ad",
+    "bytes": 27027
+  },
+  "Tools/unreal/hc4_carrying/evidence/handoff_2.json": {
+    "sha256": "bb01ba7ab63f716ae300b14d1d20101d07d3918dd421d5524c33cb5a42bb4032",
+    "bytes": 22861
+  },
+  "Tools/unreal/hc4_carrying/evidence/heavy_2.json": {
+    "sha256": "1fbe1150cc753cd56e1d1d3462abec3d83f0c67d8705f0cbd6da80091f329aa8",
+    "bytes": 23633
+  },
+  "Tools/unreal/hc4_carrying/evidence/heavy_3.json": {
+    "sha256": "aa9c80d74e65a329b8e84a3c2d4c1105eac8a0fa98344e58ddf8b90f9d813677",
+    "bytes": 33538
+  },
+  "Tools/unreal/hc4_carrying/evidence/heavy_4.json": {
+    "sha256": "f76e8e32d81fb63be5c0263efbd47dea9783211b741705e2e802f678b85be4c8",
+    "bytes": 44536
+  },
+  "Tools/unreal/hc4_carrying/evidence/initial_2.json": {
+    "sha256": "582a43b3450531e74ff32111418789d49b4edfab0cd1d16897d28bc7e310a368",
+    "bytes": 23390
+  },
+  "Tools/unreal/hc4_carrying/evidence/initial_3.json": {
+    "sha256": "454fd27c0d071c09090298e7361b1ea0be040f742d8040665228a3bb79ee947a",
+    "bytes": 33027
+  },
+  "Tools/unreal/hc4_carrying/evidence/initial_4.json": {
+    "sha256": "3ee98313ceb0d17c72d68c4d5305dab618fc882e5a12f7ba283ef0ab1ab7f09e",
+    "bytes": 43670
+  },
+  "Tools/unreal/hc4_carrying/evidence/late_join_2.json": {
+    "sha256": "64143464b870c89c73424b2602ed251b0979cedad3fd84c402e7e2fc463903d9",
+    "bytes": 22990
+  },
+  "Tools/unreal/hc4_carrying/evidence/late_join_heavy_4.json": {
+    "sha256": "f8eb2a50c1f34ebfa5abff2125e823238e3c12083131b53cb6761282c613387f",
+    "bytes": 43940
+  },
+  "Tools/unreal/hc4_carrying/evidence/late_join_pickup_2.json": {
+    "sha256": "e114f957cc29336fdcd2286c06e4d5fb95998198f4fea7fe6cb3c437bc186000",
+    "bytes": 23007
+  },
+  "Tools/unreal/hc4_carrying/evidence/movement_end_4.json": {
+    "sha256": "487c0698c477281c0f9f4dd57c0ba84973c42da378c56caa18ad1cd32b3e2041",
+    "bytes": 43945
+  },
+  "Tools/unreal/hc4_carrying/evidence/movement_final_4.json": {
+    "sha256": "65508345ce7f8489eb97d61354ae55699573cc0c8ffb29b33d6cdc273a0683b7",
+    "bytes": 675677
+  },
+  "Tools/unreal/hc4_carrying/evidence/pickup_2.json": {
+    "sha256": "d7ceca82a23265d470c0ddba79316ca5c01e98a65842283fe7b329341618c07d",
+    "bytes": 23682
+  },
+  "Tools/unreal/hc4_carrying/evidence/pickup_3.json": {
+    "sha256": "099dadcd26feaa31a0d117cdc6153fbe31538df7748e6fc4a88c21b965b4ee22",
+    "bytes": 33603
+  },
+  "Tools/unreal/hc4_carrying/evidence/pickup_4.json": {
+    "sha256": "703602a35745cdf59f58e6880f0d5d30e526fdb75c4ebab1ad8a4434ff66a732",
+    "bytes": 44644
+  },
+  "Tools/unreal/hc4_carrying/evidence/repickup_2.json": {
+    "sha256": "d7ceca82a23265d470c0ddba79316ca5c01e98a65842283fe7b329341618c07d",
+    "bytes": 23682
+  },
+  "Tools/unreal/hc4_carrying/evidence/repickup_3.json": {
+    "sha256": "099dadcd26feaa31a0d117cdc6153fbe31538df7748e6fc4a88c21b965b4ee22",
+    "bytes": 33603
+  },
+  "Tools/unreal/hc4_carrying/evidence/repickup_4.json": {
+    "sha256": "703602a35745cdf59f58e6880f0d5d30e526fdb75c4ebab1ad8a4434ff66a732",
+    "bytes": 44644
+  },
+  "Tools/unreal/hc4_carrying/evidence/reset_2.json": {
+    "sha256": "2867e86f9941599751b2a5446146420db0135678a30c0b07ded4ef8b073a6343",
+    "bytes": 23468
+  },
+  "Tools/unreal/hc4_carrying/evidence/reset_3.json": {
+    "sha256": "76778358cb52178c6b82ba936d70947cbe5fce41e9f1d62abe450332830181bf",
+    "bytes": 33149
+  },
+  "Tools/unreal/hc4_carrying/evidence/reset_4.json": {
+    "sha256": "84e0d193e80b13acecd312c3d22e0402aba5e03f23d4c8bd6a03c887916beab1",
+    "bytes": 43850
+  },
+  "Tools/unreal/hc4_carrying/evidence/saved_assets.json": {
+    "sha256": "6a50cce2380b5adbac0a41d19abed963d4cb03739fc16a884de735d07d565121",
+    "bytes": 4058
+  },
+  "Tools/unreal/hc4_carrying/evidence/site01_smoke.json": {
+    "sha256": "a4883f7057b20768fbdaeb171026ad8ff13363375a36083a28a593a876eae5ed",
+    "bytes": 480
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_drop_one.json": {
+    "sha256": "0ef13463e6dfe73bd1830dff8d681b2a3aaa629c40ab081d4f3231b8ac9176e2",
+    "bytes": 26958
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_handoff.json": {
+    "sha256": "b206b1270f98b8df612864326abc2ffdc54792d8411d90f39e3aa6a5ad963bfd",
+    "bytes": 26946
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_initial.json": {
+    "sha256": "10e54e54704249babd0d21f18e1aac64d408c97792ee70f6fb26e884be003f20",
+    "bytes": 26819
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_pickup.json": {
+    "sha256": "6b08ef1957e70b7c293813660b566c7cafc32b1ef4ccc81369336c81d33b8674",
+    "bytes": 27036
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_repickup.json": {
+    "sha256": "6b08ef1957e70b7c293813660b566c7cafc32b1ef4ccc81369336c81d33b8674",
+    "bytes": 27036
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_reset.json": {
+    "sha256": "f593b058e7ec2b760e4d8bde6ea0d5591b6441cf2d0e6d4ac511c67a081965df",
+    "bytes": 26878
+  },
+  "Tools/unreal/hc4_carrying/evidence/split_screen.png": {
+    "sha256": "9be213d63eacc48a59e2981fc7dfdd5cb1f4b9128567878b1890bd61caecc2b4",
+    "bytes": 564386
+  },
+  "Tools/unreal/hc4_carrying/evidence/weight_carried_4.json": {
+    "sha256": "90655b85e6ea4cc348ce17ee8b726091e52b3bd74c26440bf18e68b1945e3174",
+    "bytes": 44025
+  },
+  "Tools/unreal/hc4_carrying/evidence/weight_drop_4.json": {
+    "sha256": "26c58268338cc2c072449c98970f5299140d55c7dd11a2e0d44ab6b03ddfeda2",
+    "bytes": 43855
+  },
+  "Tools/unreal/hc4_carrying/evidence/weight_placed_4.json": {
+    "sha256": "8a3d3ceafdfdcbc2ac3bde3246eb2c17dee7104a1e495320c773ad483143843d",
+    "bytes": 43837
+  },
+  "Tools/unreal/hc4_carrying/finalize_evidence.py": {
+    "sha256": "3ab7525c87baef555b2b8cd7e11eae7edae0df60c522ba34633c5ecb03ce4c8c",
+    "bytes": 3628
+  },
+  "Tools/unreal/hc4_carrying/launch_editor.ps1": {
+    "sha256": "ae0f55d9d1ce4863e520eb552f76126f9a1a3222721c47b1d2bb96cad14c60c2",
+    "bytes": 913
+  },
+  "Tools/unreal/hc4_carrying/matrix.ps1": {
+    "sha256": "48b216083f27e7e53c01ca35ef83b1d5615bceb053f98533c5275ce5dad9f5bb",
+    "bytes": 3773
+  },
+  "Tools/unreal/hc4_carrying/mcp_call.py": {
+    "sha256": "9fd4766734aa4a3c049706671059a7cb7e1896b96badc975248c08e0376941c5",
+    "bytes": 2024
+  },
+  "Tools/unreal/hc4_carrying/prepare_pie.py": {
+    "sha256": "fa599ce9994ff3887daf8ec99e53226b857e3ddd270a2af5fcf492cd376ac582",
+    "bytes": 1051
+  },
+  "Tools/unreal/hc4_carrying/README.md": {
+    "sha256": "d8ba45d68d18f711966ff8adb0e4d08e15559eefc2fc6ba2575cf92c1daa2405",
+    "bytes": 3109
+  },
+  "Tools/unreal/hc4_carrying/restore_editor_preferences.py": {
+    "sha256": "772176c7e439acada8f4b8042d7473cbe0e8acb8e155ad886586abbb3f53eed9",
+    "bytes": 448
+  },
+  "Tools/unreal/hc4_carrying/run_editor.ps1": {
+    "sha256": "8073be7148a60e6dfd6ad9474f91708b9e7ec4f1835282af309f5ce7ab8d0859",
+    "bytes": 1848
+  },
+  "Tools/unreal/hc4_carrying/runtime_action.py": {
+    "sha256": "d2a33629ecd196ea217be85b4fb37f2fa842a6ed92dff131ef382603e7ba8666",
+    "bytes": 9125
+  },
+  "Tools/unreal/hc4_carrying/scaffold.py": {
+    "sha256": "0e5d90c07ca9baee9cc41ce3cdb61200e041b9f1e0a8118fda0e362947b12906",
+    "bytes": 3164
+  },
+  "Tools/unreal/hc4_carrying/site_smoke.py": {
+    "sha256": "10f67b413e55c65c69032a11b33a76fc6f2719d38a502f6dced9a68462de3393",
+    "bytes": 881
+  },
+  "Tools/unreal/hc4_carrying/slate.ps1": {
+    "sha256": "1c481ac542b48612bc3fdc4ebd60ff42d2fdfbf4d6499a3e36da0f1042526f03",
+    "bytes": 1412
+  },
+  "Tools/unreal/hc4_carrying/split.ps1": {
+    "sha256": "4ba95680ed5a8aaff9346b5561a79686616374f7aa5971de1cd98f7c652dfc7c",
+    "bytes": 2558
+  },
+  "Tools/unreal/hc4_carrying/verify_assets.py": {
+    "sha256": "ff966c83675b925775f6dfe3bd3bdcf237ddbf8c5c7df4b89decc44cd97a0e54",
+    "bytes": 3290
+  },
+  "Tools/unreal/hc4_carrying/verify_evidence.py": {
+    "sha256": "cf211a2edab39252f9c21fa0d8ebbbe29a43aa9fade69672ea34bf1e00d550de",
+    "bytes": 5881
+  },
+  "Tools/unreal/hc4_carrying/verify_identity.py": {
+    "sha256": "c4526e5d753a642db99e8c2b842e9e5949187ec655e0e889b1d0aa16e2aee37d",
+    "bytes": 15
+  }
+}
