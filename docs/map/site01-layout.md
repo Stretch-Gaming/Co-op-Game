@@ -65,3 +65,7 @@ The relic's carrier moves at half speed and can't sprint or climb, so the escape
 ## Changing the layout
 
 HZ owns the layout. Announce any change to a room's position, a gate or a passage at kickoff, and update these tables in the same commit.
+
+## HZ-1 geometry delivery notes
+
+The north passage is centred at X 3.25 m to clear the first room's timber shoring. The existing chasm walkway runs at Y -7 m, from (185, -7, 0) to (255, -7, -20). HC-INT2 incorporates these delivered geometry fixes while keeping the maze-run layout above.
