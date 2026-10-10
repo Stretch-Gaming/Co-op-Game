@@ -43,23 +43,29 @@ Ask your agent to do each of these, and record the results below. PG owns this t
 
 | Task | Works? | Notes |
 | --- | --- | --- |
-| List toolsets | Not tested | VG-0: no editor MCP server available. |
-| Spawn, move and label actors | Not tested | Awaiting the editor and HC-0's project/sublevels. |
-| Set actor and component properties | Not tested | Awaiting the editor and HC-0's project/sublevels. |
-| Create a Blueprint asset | Not tested | Awaiting the editor and HC-0's project. |
-| Add components and variables | Not tested | Awaiting the editor and HC-0's project. |
-| Add and connect graph nodes | Not tested | Awaiting the editor and HC-0's project. |
-| Compile a Blueprint | Not tested | Awaiting the editor and HC-0's project. |
-| Create or edit a widget | Not tested | Awaiting the editor and HC-0's project. |
-| Edit data table rows | Not tested | Awaiting the editor and HC-0's project. |
-| Start and stop Play In Editor | Not tested | Awaiting the editor and HC-0's project. |
-| Run a console command | Not tested | Awaiting the editor and HC-0's project. |
+| List toolsets | Works | `list_toolsets` returns about 60 toolsets; `describe_toolset` gives each tool's schema. Call a tool with its short name plus `toolset_name` (the full dotted name fails with "Unknown tool"); inside `execute_tool_script`, use the full dotted name. `BlueprintTools` and `UMGToolSet` descriptions are 60–70 KB, so save them to a file and search them rather than reading them whole. |
+| Spawn, move and label actors | Works | `SceneTools.add_to_scene_from_asset` (`/Engine/BasicShapes/Cube`) spawns into the current level; `ActorTools.set_actor_transform`, `set_label` and `add_tag`. No MCP tool sets the current level: `SceneTools.get_current_level` only returns the persistent map, and the viewport's Current Context dropdown can't be driven through `SlateInspectorToolset.SelectOption`. Set it in the Levels panel, or with `py` (see "Run a console command"): `unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).set_current_level_by_name('L_Site01_PG')`. |
+| Set actor and component properties | Works | `ObjectTools.list_properties`, `get_properties` and `set_properties` (values as a JSON string), for example `CastShadow` on a `StaticMeshComponent`. Some engine state isn't exposed as properties, such as `UWorld.CurrentLevel`. |
+| Create a Blueprint asset | Works | `BlueprintTools.create` with a folder, a name and the parent class (`/Script/Engine.Actor`). |
+| Add components and variables | Works | `BlueprintTools.add_variable` takes primitives plus `Vector`, `Rotator`, `Transform`, `Vector2D` and `LinearColor`; `add_object_variable` and `add_struct_variable` cover the rest. `set_variable_replication` and `set_variable_instance_editable` exist. `ActorTools.add_component` works on a Blueprint. |
+| Add and connect graph nodes | Works | `add_event` (`ReceiveBeginPlay`), `find_node_types`, `create_node` (`Development\|PrintString`), `connect_pins` with pin IDs from `get_node_infos` (node, direction, index), and `set_pin_value`. `read_graph_dsl` and `write_graph_dsl` read and write a whole graph as an S-expression script. |
+| Compile a Blueprint | Works | `compile_blueprint` with `warnings_as_errors: true` came back clean. |
+| Create or edit a widget | Works | `UMGToolSet.CreateWidgetBlueprint`, `AddWidget` (a `CanvasPanel` root, then a `TextBlock`), `ObjectTools.set_properties` for `Text`, then `CompileWidgetBlueprint`. |
+| Edit data table rows | Works | `DataTableTools.create`, `add_rows`, `set_rows` (camelCase field names), `rename_rows`, `remove_rows` and `get_rows`. PG's `DT_GhostScaling` arrives in PG-1, so this ran on a throwaway table in `Content/Player/Test/` with HC's `S_RoundScaling` as its row struct, then deleted it. |
+| Start and stop Play In Editor | Partly | `EditorAppToolset.StartPIE`, `IsPIERunning` and `StopPIE` work, but `StartPIE` has no net mode or player count; it uses the editor's play settings (here Standalone, 1 player). Those are readable on `/Script/UnrealEd.Default__LevelEditorPlaySettings` (`PlayNetMode`, `PlayNumberOfClients`); set them in the Play menu before a client test. |
+| Run a console command | Partly | No MCP tool for it. Workaround: `SlateInspectorToolset.Snapshot` to find the status bar's Cmd textbox, then `Type` with `submit: true`; read the result with `LogsToolset.GetLogEntries`. With `PythonScriptPlugin`, `py <file.py>` runs full editor Python this way. `ProgrammaticToolset.execute_tool_script` is a different, sandboxed Python (only `json`, `math`, `re`, `time`, `datetime` and `copy`; no `unreal` module) for batching MCP calls. |
 
-### VG-0 attempt — 2026-10-09, PK's Mac
+Also available but not part of the smoke test: `MaterialTools` (create materials and functions, add, connect and delete expressions, connect to material outputs, recompile), `MaterialInstanceTools`, `EditorAppToolset.CaptureViewport` and `CaptureEditorImage` (base64 PNGs, too big to read inline, so decode them to a file), `SetCameraTransform`, and `AssetTools`.
 
-Pulled `main` through `e664177` and checked upstream again. HC-0 has published Windows preparation, but no `.uproject`, `Content/` assets or `.mcp.json` yet. No local Unreal Editor installation was found in the default engine folder or Spotlight, and the endpoint at `http://127.0.0.1:8000/mcp` refused the connection. These are setup blockers; they do not establish whether any tool supports an operation.
+### PG-0 — 2026-10-09, PK's Mac (M4 Pro)
 
-PK requested skipping the Mac preflight gate. Continue in PG-0 (formerly VG-0) when the editor is available and HC publishes the bare project: pull it, open it, start MCP using the per-user setup above, and run the smoke test with `L_Site01_PG` current and test assets under `Content/Player/Test/` (PK's lane is now PG). Compile touched Blueprints, save only owned assets, then join the Windows host at the same commit. Playable 1 and the tool capabilities remain unverified.
+Ran on Unreal 5.8.3 with `L_Site01` open and `L_Site01_PG` made current through `py`. The test cube, `BP_PG_SmokeTest`, `WBP_PG_SmokeTest`, `DT_PG_SmokeTest` and the `Content/Player/Test/` folder were deleted afterwards, and `L_Site01_PG` wasn't saved, so nothing changed on disk.
+
+Mac-specific notes:
+
+- The editor raised a Memory Pressure Warning toast while idle with `L_Site01` open. Close other apps before long sessions.
+- PIE started by the agent logged `max tick rate 3` while the terminal had focus. Bring the editor to the front for any check where frame rate matters.
+- `LogAudioMixerAudioUnit: Error querying Sample Rate` appears at startup and on PIE. It's harmless.
 
 ## Working with the agent
 
