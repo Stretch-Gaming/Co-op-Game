@@ -1,0 +1,237 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "heart_collision": {
+    "type": "one simple box fitted to stone material bounds with 0.2 cm margin; symmetric XY fit",
+    "center_cm": [
+      0.0,
+      0.0,
+      31.00000023841858
+    ],
+    "dimensions_cm": [
+      34.52643074989319,
+      60.54884114265442,
+      62.40000047683716
+    ],
+    "bounds_min_cm": [
+      -17.263215374946594,
+      -30.27442057132721,
+      -0.1999999999999993
+    ],
+    "bounds_max_cm": [
+      17.263215374946594,
+      30.27442057132721,
+      62.20000047683716
+    ],
+    "source_material_bounds_cm": {
+      "M_Stone": {
+        "min": [
+          -16.754034161567688,
+          -28.47779393196106,
+          0.0
+        ],
+        "max": [
+          17.063215374946594,
+          30.07442057132721,
+          62.00000047683716
+        ]
+      },
+      "M_Gold": {
+        "min": [
+          -17.45148003101349,
+          -21.121986210346222,
+          30.42159080505371
+        ],
+        "max": [
+          18.2597815990448,
+          11.159338802099228,
+          54.144108295440674
+        ]
+      },
+      "M_Jade": {
+        "min": [
+          -17.96290874481201,
+          -8.109971135854721,
+          5.836322158575058
+        ],
+        "max": [
+          17.865845561027527,
+          20.786911249160767,
+          53.70904207229614
+        ]
+      },
+      "M_Rope": {
+        "min": [
+          -19.617468118667603,
+          -37.02285885810852,
+          15.969406068325043
+        ],
+        "max": [
+          19.617468118667603,
+          37.02285885810852,
+          30.044052004814148
+        ]
+      }
+    },
+    "collision_complexity": "<CollisionTraceFlag.CTF_USE_SIMPLE_AS_COMPLEX: 2>"
+  },
+  "assets": [
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol",
+      "dimensions_cm": [
+        22.141810417175293,
+        22.757062911987305,
+        24.999998092651367
+      ],
+      "bounds_origin_cm": [
+        4.76837158203125e-07,
+        0.0,
+        12.499999046325684
+      ],
+      "source_triangles": 9406,
+      "render_fallback_triangles": 4536,
+      "nanite_triangles": 9406,
+      "nanite_enabled": true,
+      "simple_collision_count": 1,
+      "convex_collision_count": 0,
+      "uv_channels": 1,
+      "materials": [
+        {
+          "slot": "M_Gold",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.MI_HCA1_RelicGold",
+          "roughness": 0.30000001192092896,
+          "metallic": 1.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Jade",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow.MI_HCA1_IdolJadeGlow",
+          "roughness": 0.25,
+          "metallic": 0.0,
+          "rim_strength": 0.6000000238418579
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask",
+      "dimensions_cm": [
+        9.816781044006348,
+        17.734485626220703,
+        22.0
+      ],
+      "bounds_origin_cm": [
+        0.0,
+        0.0,
+        11.0
+      ],
+      "source_triangles": 8224,
+      "render_fallback_triangles": 2851,
+      "nanite_triangles": 8224,
+      "nanite_enabled": true,
+      "simple_collision_count": 1,
+      "convex_collision_count": 0,
+      "uv_channels": 1,
+      "materials": [
+        {
+          "slot": "M_Jade",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.MI_HCA1_RelicJade",
+          "roughness": 0.25,
+          "metallic": 0.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Gold",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.MI_HCA1_RelicGold",
+          "roughness": 0.30000001192092896,
+          "metallic": 1.0,
+          "rim_strength": 0.0
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab",
+      "dimensions_cm": [
+        18.0,
+        16.30039119720459,
+        7.093658447265625
+      ],
+      "bounds_origin_cm": [
+        0.0,
+        -4.76837158203125e-07,
+        3.5468292236328125
+      ],
+      "source_triangles": 8148,
+      "render_fallback_triangles": 3995,
+      "nanite_triangles": 8148,
+      "nanite_enabled": true,
+      "simple_collision_count": 1,
+      "convex_collision_count": 0,
+      "uv_channels": 1,
+      "materials": [
+        {
+          "slot": "M_Gold",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.MI_HCA1_RelicGold",
+          "roughness": 0.30000001192092896,
+          "metallic": 1.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Jade",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.MI_HCA1_RelicJade",
+          "roughness": 0.25,
+          "metallic": 0.0,
+          "rim_strength": 0.0
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart",
+      "dimensions_cm": [
+        39.23493576049805,
+        74.04571533203125,
+        62.0
+      ],
+      "bounds_origin_cm": [
+        0.0,
+        0.0,
+        31.0
+      ],
+      "source_triangles": 9866,
+      "render_fallback_triangles": 2466,
+      "nanite_triangles": 9866,
+      "nanite_enabled": true,
+      "simple_collision_count": 1,
+      "convex_collision_count": 0,
+      "uv_channels": 1,
+      "materials": [
+        {
+          "slot": "M_Stone",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone.MI_HCA1_HeartStone",
+          "roughness": 0.8500000238418579,
+          "metallic": 0.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Gold",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.MI_HCA1_RelicGold",
+          "roughness": 0.30000001192092896,
+          "metallic": 1.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Jade",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.MI_HCA1_RelicJade",
+          "roughness": 0.25,
+          "metallic": 0.0,
+          "rim_strength": 0.0
+        },
+        {
+          "slot": "M_Rope",
+          "instance": "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan.MI_HCA1_HeartRopeTan",
+          "roughness": 0.8999999761581421,
+          "metallic": 0.0,
+          "rim_strength": 0.0
+        }
+      ]
+    }
+  ]
+}

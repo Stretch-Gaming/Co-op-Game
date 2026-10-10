@@ -1,0 +1,311 @@
+{
+  "gameplay_baseline": "dcecbab",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "collision_probes": {
+    "stone_center_hit": true,
+    "left_outer_handle_hit": false,
+    "right_outer_handle_hit": false
+  },
+  "sessions": [
+    {
+      "requested_clients": 2,
+      "mode": "Play As Client; one process; dedicated PIE server",
+      "world_count": 3,
+      "samples": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_AUTHORITY: 3>",
+          "player_count": 2,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 2,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 2,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_clients": 3,
+      "mode": "Play As Client; one process; dedicated PIE server",
+      "world_count": 4,
+      "samples": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_AUTHORITY: 3>",
+          "player_count": 3,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 3,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 3,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 3,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_clients": 4,
+      "mode": "Play As Client; one process; dedicated PIE server",
+      "world_count": 5,
+      "samples": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_AUTHORITY: 3>",
+          "player_count": 4,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 4,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 4,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 4,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_4_L_Site01.L_Site01",
+          "game_state_role": "<NetRole.ROLE_SIMULATED_PROXY: 1>",
+          "player_count": 4,
+          "relics": [
+            {
+              "name": "HCA1_SM_Relic_GoldIdol",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol"
+            },
+            {
+              "name": "HCA1_SM_Relic_JadeMask",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask"
+            },
+            {
+              "name": "HCA1_SM_Relic_GemScarab",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab"
+            },
+            {
+              "name": "HCA1_SM_KeyRelic_StoneHeart",
+              "mesh": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gameplay_pickup_or_carry_tested": false,
+  "test_note": "Static imported-art loading and collider smoke only. BP_Relic/BP_KeyRelic do not exist on current main.",
+  "shared_master_unchanged": true
+}

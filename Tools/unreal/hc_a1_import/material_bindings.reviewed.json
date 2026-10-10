@@ -1,0 +1,108 @@
+{
+  "verified_in_ue_5_8_3": true,
+  "profiles": {
+    "gold": {
+      "scalars": {
+        "RoughnessMultiplier": 0.3,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 1.0,
+        "RimStrength": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.8069522576692516,
+          0.45078578283822346,
+          0.042311410620809675,
+          1.0
+        ]
+      }
+    },
+    "jade": {
+      "scalars": {
+        "RoughnessMultiplier": 0.25,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0,
+        "RimStrength": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.04970656598412723,
+          0.38132601143253014,
+          0.16826940018969075,
+          1.0
+        ]
+      }
+    },
+    "idol_jade": {
+      "scalars": {
+        "RoughnessMultiplier": 0.25,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0,
+        "RimExponent": 0.0,
+        "RimStrength": 0.6
+      },
+      "vectors": {
+        "Tint": [
+          0.04970656598412723,
+          0.38132601143253014,
+          0.16826940018969075,
+          1.0
+        ],
+        "RimColor": [
+          0.04970656598412723,
+          0.38132601143253014,
+          0.16826940018969075,
+          1.0
+        ]
+      }
+    },
+    "stone": {
+      "scalars": {
+        "RoughnessMultiplier": 0.85,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0,
+        "RimStrength": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.1946178304415758,
+          0.1559264637078274,
+          0.13843161503245183,
+          1.0
+        ]
+      }
+    },
+    "rope": {
+      "scalars": {
+        "RoughnessMultiplier": 0.9,
+        "MetallicMultiplier": 0.0,
+        "MetallicOffset": 0.0,
+        "RimStrength": 0.0
+      },
+      "vectors": {
+        "Tint": [
+          0.39157247774972326,
+          0.23074004852434915,
+          0.0953074666309647,
+          1.0
+        ]
+      }
+    }
+  },
+  "verification_notes": {
+    "engine": "5.8.3-58210709+++UE5+Release-5.8",
+    "parent": "/Game/Shared/Style/M_Stylized",
+    "parent_sha256": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9",
+    "mask_rgba_u8": [
+      128,
+      255,
+      0,
+      255
+    ],
+    "mask_srgb": false,
+    "roughness": "Green=1, master Saturate(Green*RoughnessMultiplier).",
+    "metallic": "Master Saturate(Blue*MetallicMultiplier+MetallicOffset).",
+    "idol_emission": "Existing RimColor*RimStrength*Fresnel(RimExponent); exponent=0 makes Fresnel=1 per UE5.8.3 MaterialExpressions.cpp. Glow strength 0.6 preserved without new parent.",
+    "shader_visual_acceptance": "Pending rendered review; these bindings verify API names and source graph response."
+  }
+}
