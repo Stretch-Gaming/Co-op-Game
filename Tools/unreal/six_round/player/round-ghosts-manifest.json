@@ -1,0 +1,36 @@
+{
+  "new_asset_reservation": "Content/Player/Ghosts/BP_RoundGhostDirector.uasset",
+  "placement_save_only": "Content/Player/Test/SixRound/L_SixRound_PG_Test.umap",
+  "readonly": [
+    "Content/Player/Ghosts/BP_Ghost.uasset",
+    "Content/Player/Ghosts/BP_ChaseDirector.uasset",
+    "Content/Player/Taking/BP_TakingDirector.uasset",
+    "Content/Player/DT_GhostScaling.uasset",
+    "Content/Player/S_GhostScaling.uasset",
+    "Tools/unreal/six_round/world/positions.json"
+  ],
+  "order": [
+    "Primary reserve the exact new director path and existing owned PG test map",
+    "Stop PIE; execute player/round_ghosts.py without interfaces_ready",
+    "Primary add Core/BPI_RoundReset to the new director through supported UI",
+    "Execute player/round_ghosts.py with interfaces_ready:true",
+    "Execute player/place_test.py with verified zipline end args, preserving only PG test map writes",
+    "Audit composite test map streams PG test map once; confirm one Six_RoundGhostDirector",
+    "Native compile/save and fresh PIE lifecycle/scaling gates"
+  ],
+  "scaling": "Runtime reads official DT_GhostScaling using BP_CoopGameState.GetScalingRow. Rooms1/3/5 use GhostCount bounded at2; paths2/4 use one threat per actual living unique ColorSlot if the official row enables ghosts.",
+  "path_positions": "First/SecondThreat0..3 from each current route's later nodes[-2], floorZ+100, editable and refreshed in PG placement. They are separated from taking/checkpoint starts.",
+  "lifecycle": "Server only; spawn once per round index and attempt. Destroy only this director's OwnedThreats on nonPlaying, index6, endPlay and ResetForRound. Never changes the round phase or destroys chase-owned ghosts.",
+  "existing_parent_contract": "Saved/SixRound/bootstrap-probe.json lists no RoundIndex on BP_Ghost; its saved UpdateTarget/ApplyScaling/health/light/flare/movement behavior is reused without source or asset changes.",
+  "native_gates_pending": [
+    "Official row field types and actor/node compile checks; syntax/native parser alone is insufficient",
+    "Rooms1/3/5 produce official1/1/2 counts at2/3/4-player rosters",
+    "Rounds2/4 spawn exactly one per living unique actual ColorSlot, with no unused-path threats",
+    "Same attempt does not duplicate; fail/clear/enter6 clean only owned threats",
+    "Retry gets new threat set; departure/late join still follows GameMode restart contracts",
+    "Parent targets living players, applies server damage, respects taking immunity and headlamp/flare backoff",
+    "Every client receives the actors/count and both host owners retain independent defense tools",
+    "Round6 is exclusively the existing chase director; resource/route/client/split fairness and visual review remain"
+  ],
+  "worker_editor_calls_or_binary_writes": false
+}

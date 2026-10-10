@@ -1,0 +1,54 @@
+{
+  "scope": "Behavior and visual hooks only; imported art and source adoption are owned by the other task",
+  "art_source": {
+    "pr": "https://github.com/Stretch-Gaming/Co-op-Game/pull/121",
+    "commit": "60ae5e0250e790f943064f54e400574e8285463c",
+    "readme": "https://github.com/Stretch-Gaming/Co-op-Game/blob/60ae5e0250e790f943064f54e400574e8285463c/SourceArt/PG/PG-A7/README.md",
+    "license_evidence": "Original team Blender Python modeling, no third-party inputs or generators, public redistribution allowed, no credit needed",
+    "worker_imported_or_adopted_source": false,
+    "readonly_mesh_defaults": ["/Game/Player/Art/Taker/SM_Taker", "/Game/Player/Art/Taker/SM_TakerArm"],
+    "material_policy": "Read assigned imported material slots; optional explicit body_material/eyes_material/arm_material arguments. All must already be assigned lane materials."
+  },
+  "existing_asset_locks_before_primary_execution": [
+    "Content/Player/AC_PlayerView.uasset",
+    "Content/Player/Taking/BP_TakingDirector.uasset",
+    "Content/Player/Ghosts/BP_ChaseDirector.uasset"
+  ],
+  "new_asset_writes": [
+    "Content/Player/Taking/M_TakingVoid.uasset",
+    "Content/Player/Ghosts/BP_CaveBeing.uasset",
+    "Content/Player/Ghosts/AC_CaveBeingPresentation.uasset"
+  ],
+  "readonly_existing_assets": ["/Game/Player/Ghosts/BP_Ghost", "/Game/Shared/Style/MI_Stylized_Rock"],
+  "taking_hooks": {
+    "method": "Additional presentation timer reads existing replicated Victim, VictimOrigin, ScareStyle and server TakingStarted; original mask and protected teleport remain intact",
+    "hand": "Imported full-scale arm reaches from in front, then retracts at the scheduled disappearance",
+    "floor": "Movable collision-free stylized slabs part over a dark render-only aperture; physical HZ floor is untouched",
+    "light_cut": "Imported shadow body lunges and nearby headlamps render black from the same schedule, restoring their logical power state automatically",
+    "owning_camera": "Existing victim-only fade remains untouched; presentation never changes another player's camera target"
+    ,"primary_remaining_style_hook": "TakePlayer reads NextPresentationStyle instead of independent RandomInteger: random server offset then three unique styles, resetting on each attempt"
+  },
+  "cave_being_hooks": {
+    "class": "BP_CaveBeing is a replicated child of existing BP_Ghost",
+    "movement_collision_damage": "Inherited unchanged, including server carrier targeting, damage, headlamp backoff and flare avoidance",
+    "visual_initialization": "An owned ActorComponent BeginPlay hides only old ghost visual meshes and keeps the tagged imported body visible, preserving parent Ghost BeginPlay and Tick",
+    "speed": "Authority component timer applies a one-time 1.12 multiplier after parent scaling; no repeated multiplication",
+    "primary_remaining_wave_hook": "Odd SpawnWave members call SpawnCaveBeingWaveMember(Location); even members retain the current ghost branch. Preserve roster count, timing, lifespan and cleanup."
+  },
+  "verification": {
+    "offline_script": "presentation_validate.py",
+    "native_compile_unrun": true,
+    "runtime_network_visual_unrun": true,
+    "required": [
+      "Review source hash and exact writes/locks before primary editor execution",
+      "All imported meshes/materials ready before any hook asset changes",
+      "Compile touched/new Blueprints and save only exact owned packages",
+      "Check arm pivot, floor height, shadow-body direction, every client and both split views",
+      "Check blackout timing and restoration including taking interruption/retry",
+      "Check child parent movement/damage/light/flare behavior plus one-time speed scaling",
+      "Check mixed chase waves and cleanup at restart, completion and lifespan expiry",
+      "NullRHI cannot certify the scene, art, camera fade or sound"
+    ],
+    "not_claimed": "Native node/pin validity, imported art acceptance, floor swallow body animation, rolling lamp prop, shader eye dim, physical device or Mac/network-emulation acceptance"
+  }
+}

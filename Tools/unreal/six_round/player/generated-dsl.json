@@ -1,0 +1,462 @@
+[
+  {
+    "script": "audio.py",
+    "function": "PlayTakingAudio",
+    "dsl": "(fn PlayTakingAudio () \n (if (and (>= (Variables|Default|GetTakingStarted) 0.0) (!= (Variables|Default|GetVisualStarted) (Variables|Default|GetTakingStarted)))\n  (Utilities|IsValid :InputObject (Variables|Default|GetVictim)\n   (:\"Is Valid\" (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n    (:then (if (>= (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetTakingStarted)) (Variables|Default|SetVisualStarted (Variables|Default|GetTakingStarted))\n    (Audio|PlaySoundatLocation :Sound (select (== (Variables|Default|GetScareStyle) 0) \"/Game/Player/Audio/SFX_Taking_HandDrag.SFX_Taking_HandDrag\" (select (== (Variables|Default|GetScareStyle) 1) \"/Game/Player/Audio/SFX_Taking_FloorCrack.SFX_Taking_FloorCrack\" \"/Game/Player/Audio/SFX_Taking_LightsOut.SFX_Taking_LightsOut\")) :Location (Transformation|GetActorLocation :self (Variables|Default|GetVictim)) :VolumeMultiplier 0.6))) (:CastFailed))) (:\"Is Not Valid\"))))"
+  },
+  {
+    "script": "audio.py",
+    "function": "BeginTakingAudio",
+    "dsl": "(fn BeginTakingAudio () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"PlayTakingAudio\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "audio.py",
+    "function": "RefreshChaseAudio",
+    "dsl": "(fn RefreshChaseAudio () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n   (bind active (and (== index 6) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum \"NewEnumerator1\"))))\n   (if (and active (not (Variables|Default|GetAudioPlaying))) (Audio|Components|Audio|Play :self (Variables|Default|GetChaseAudio)))\n   (if (and (not active) (Variables|Default|GetAudioPlaying)) (Audio|Components|Audio|Stop :self (Variables|Default|GetChaseAudio)))\n   (Variables|Default|SetAudioPlaying active)) (:CastFailed)))"
+  },
+  {
+    "script": "audio.py",
+    "function": "BeginChaseAudio",
+    "dsl": "(fn BeginChaseAudio () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshChaseAudio\" :Time 0.2 :bLooping true))"
+  },
+  {
+    "script": "chase.py",
+    "function": "IsPlayerDowned",
+    "dsl": "(fn IsPlayerDowned (Player) \n (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self Player :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n  (:then (bind dead (Class|ACHealth|IsDead :self health)) (return dead)) (:CastFailed (return true))))"
+  },
+  {
+    "script": "chase.py",
+    "function": "IsInFlareGlow",
+    "dsl": "(fn IsInFlareGlow (Candidate) \n (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Player/Tools/BP_Flare.BP_Flare_C\")\n  (bind active (Class|BPFlare|IsActive :self actor))\n  (if (and active (<= (Transformation|GetDistanceTo :self Candidate :OtherActor actor) 450.0)) (return true)))\n (return false))"
+  },
+  {
+    "script": "chase.py",
+    "function": "UpdateTarget",
+    "dsl": "(fn UpdateTarget () \n (if (Networking|HasAuthority)\n  (Variables|Default|SetBestDist 2500.0) (Variables|Default|SetBestPawn \"None\")\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n    (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n     (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object actor)\n      (:then (bind dead (CallFunction|IsPlayerDowned :Player pawn))\n       (bind safe (CallFunction|IsInFlareGlow :Candidate pawn))\n       (bind distance (Transformation|GetDistanceTo :OtherActor pawn))\n       (if (and (not dead) (and (not safe) (<= distance 2500.0)))\n        (bind carrying (Class|BPCoopCharacter|GetCarryingRelic :self pawn))\n        (if (and (== index 6) carrying) (Variables|Default|SetBestPawn pawn) (Variables|Default|SetBestDist -1.0)\n         (else (if (< distance (Variables|Default|GetBestDist)) (Variables|Default|SetBestPawn pawn) (Variables|Default|SetBestDist distance)))))) (:CastFailed)))\n    (Variables|Default|SetTarget (Variables|Default|GetBestPawn))) (:CastFailed (Variables|Default|SetTarget \"None\")))))"
+  },
+  {
+    "script": "chase.py",
+    "function": "RefreshFlareRepulsion",
+    "dsl": "(fn RefreshFlareRepulsion () \n (if (Networking|HasAuthority)\n  (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Player/Tools/BP_Flare.BP_Flare_C\")\n   (bind active (Class|BPFlare|IsActive :self actor))\n   (if (and active (< (Transformation|GetDistanceTo :OtherActor actor) 450.0))\n    (Variables|Default|SetBackoffUntil (+ (Utilities|Time|GetGameTimeinSeconds) 0.2))\n    (Transformation|SetActorLocation :NewLocation (+ (Transformation|GetActorLocation) (* (Math|Vector|Normalize :A (- (Transformation|GetActorLocation) (Transformation|GetActorLocation :self actor))) 25.0)) :bSweep false)))))"
+  },
+  {
+    "script": "chase.py",
+    "function": "BeginFlareRepulsion",
+    "dsl": "(fn BeginFlareRepulsion () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshFlareRepulsion\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "chase.py",
+    "function": "ClearChase",
+    "dsl": "(fn ClearChase () \n (if (Networking|HasAuthority) (for actor (Variables|Default|GetWaveGhosts)\n  (Utilities|IsValid :InputObject actor (:\"Is Valid\" (Actor|DestroyActor :self actor)) (:\"Is Not Valid\")))\n  (Utilities|Array|Clear :TargetArray (Variables|Default|GetWaveGhosts)) (Variables|Default|SetWaveNumber 0)))"
+  },
+  {
+    "script": "chase.py",
+    "function": "SpawnWave",
+    "dsl": "(fn SpawnWave () \n (if (Networking|HasAuthority)\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind row (Class|BPCoopGameState|GetScalingRow :self gs))\n    (Variables|Default|SetWaveSize (select (== row \"2\") 2 (select (== row \"3\") 3 (select (== row \"4\") 4 0))))\n    (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n     (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object actor)\n      (:then (bind carrying (Class|BPCoopCharacter|GetCarryingRelic :self pawn))\n       (if carrying\n        (for i (range (Variables|Default|GetWaveSize))\n         (bind spawned (Game|SpawnActorfromClass :Class \"/Game/Player/Ghosts/BP_Ghost.BP_Ghost_C\" :SpawnTransform (Math|Transform|MakeTransform :Location (+ (Transformation|GetActorLocation :self pawn) (Utilities|Struct|MakeVector :X (select (== i 0) -1500.0 1500.0) :Y (* i 250.0) :Z 100.0))) :CollisionHandlingOverride \"AlwaysSpawn\")\n          (:then (Actor|SetLifeSpan :self spawned :InLifespan 45.0) (Utilities|Array|Add :TargetArray (Variables|Default|GetWaveGhosts) :NewItem spawned)))))) (:CastFailed)))\n    (Variables|Default|SetWaveNumber (+ (Variables|Default|GetWaveNumber) 1))\n    (Variables|Default|SetLastWaveAt (GameState|GetServerWorldTimeSeconds :self gs))) (:CastFailed))))"
+  },
+  {
+    "script": "chase.py",
+    "function": "RefreshChase",
+    "dsl": "(fn RefreshChase () \n (if (Networking|HasAuthority) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n   (if (and (== index 6) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum \"NewEnumerator1\")))\n    (if (!= attempt (Variables|Default|GetSpawnedAttempt)) (CallFunction|ClearChase) (Variables|Default|SetSpawnedAttempt attempt) (Variables|Default|SetLastWaveAt -100.0))\n    (if (>= (- (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetLastWaveAt)) 20.0) (CallFunction|SpawnWave))\n    (else (CallFunction|ClearChase) (Variables|Default|SetSpawnedAttempt -1)))) (:CastFailed))))"
+  },
+  {
+    "script": "chase.py",
+    "function": "ResetChase",
+    "dsl": "(fn ResetChase (Index Attempt) (CallFunction|ClearChase))"
+  },
+  {
+    "script": "chase.py",
+    "function": "BeginChase",
+    "dsl": "(fn BeginChase () (if (Networking|HasAuthority) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshChase\" :Time 0.2 :bLooping true)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "CanSixHold",
+    "dsl": "(fn CanSixHold (PlayerPawn) \n (Utilities|IsValid :InputObject PlayerPawn\n  (:\"Is Valid\" (if (<= (Transformation|GetDistanceTo :OtherActor PlayerPawn) 400.0)\n   (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self PlayerPawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n    (:then (bind dead (Class|ACHealth|IsDead :self health)) (return (not dead))) (:CastFailed (return false))))\n   (return false)) (:\"Is Not Valid\" (return false))))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "CanInteract",
+    "dsl": "(fn CanInteract (Instigator) (bind allowed (CallFunction|CanSixHold :PlayerPawn Instigator)) (return allowed))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "GetInteractInfo",
+    "dsl": "(fn GetInteractInfo (Instigator) (return \"Hold to raise the relic cage\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode :Enum \"NewEnumerator2\")))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "BeginHold",
+    "dsl": "(fn BeginHold (PlayerPawn) \n (if (Networking|HasAuthority) (bind allowed (CallFunction|CanSixHold :PlayerPawn PlayerPawn))\n  (if (and allowed (or (not (Variables|Default|GetHeld)) (== (Variables|Default|GetHolder) PlayerPawn)))\n   (bind pawn (Utilities|Casting|CastToPawn :Object PlayerPawn)\n    (:then (Variables|Default|SetHolder pawn) (Variables|Default|SetHeld true)) (:CastFailed)))))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "EndHold",
+    "dsl": "(fn EndHold (PlayerPawn) (if (and (Networking|HasAuthority) (== (Variables|Default|GetHolder) PlayerPawn)) (Variables|Default|SetHolder \"None\") (Variables|Default|SetHeld false)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "IsHeld",
+    "dsl": "(fn IsHeld () (return (Variables|Default|GetHeld)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "RefreshLever",
+    "dsl": "(fn RefreshLever () \n (if (Networking|HasAuthority) (bind allowed (CallFunction|CanSixHold :PlayerPawn (Variables|Default|GetHolder)))\n  (if (not allowed) (Variables|Default|SetHolder \"None\") (Variables|Default|SetHeld false))))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "ResetSixLever",
+    "dsl": "(fn ResetSixLever (Index Attempt) (if (Networking|HasAuthority) (Variables|Default|SetHolder \"None\") (Variables|Default|SetHeld false)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "BeginLever",
+    "dsl": "(fn BeginLever () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshLever\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "LeverBeginAdapter",
+    "dsl": "(fn LeverBeginAdapter (Instigator) (CallFunction|BeginHold :PlayerPawn Instigator))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "LeverEndAdapter",
+    "dsl": "(fn LeverEndAdapter (Instigator) (CallFunction|EndHold :PlayerPawn Instigator))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "IsRaised",
+    "dsl": "(fn IsRaised () (return (or (Variables|Default|GetRaised) (Variables|Default|GetLatched))))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "LatchOpen",
+    "dsl": "(fn LatchOpen () (if (Networking|HasAuthority) (Variables|Default|SetLatched true) (Variables|Default|SetRaised true) (CallFunction|ApplyCage)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "ApplyCage",
+    "dsl": "(fn ApplyCage () (Transformation|SetRelativeLocation :self (Variables|Default|GetCageMesh) :NewLocation (Utilities|Struct|MakeVector :Z (select (or (Variables|Default|GetRaised) (Variables|Default|GetLatched)) 350.0 0.0)) :bSweep false))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "CageAuthorityTick",
+    "dsl": "(fn CageAuthorityTick () \n (if (Networking|HasAuthority)\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind row (Class|BPCoopGameState|GetScalingRow :self gs))\n    (Variables|Default|SetRequiredLevers (select (== row \"4\") 2 (select (or (== row \"2\") (== row \"3\")) 1 999)))\n    (Variables|Default|SetHeldLevers 0)\n    (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Player/RelicChamber/BP_Lever.BP_Lever_C\")\n     (bind held (Class|BPLever|IsHeld :self actor))\n     (if held (Variables|Default|SetHeldLevers (+ (Variables|Default|GetHeldLevers) 1))))\n    (Variables|Default|SetRaised (or (Variables|Default|GetLatched) (>= (Variables|Default|GetHeldLevers) (Variables|Default|GetRequiredLevers))))) (:CastFailed))))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "RefreshCage",
+    "dsl": "(fn RefreshCage () (CallFunction|CageAuthorityTick) (CallFunction|ApplyCage))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "ResetCage",
+    "dsl": "(fn ResetCage (Index Attempt) (if (Networking|HasAuthority) (Variables|Default|SetLatched (== Index 6)) (Variables|Default|SetRaised (== Index 6)) (CallFunction|ApplyCage)))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "OnRep_bRaised",
+    "dsl": "(fn OnRep_bRaised () (CallFunction|ApplyCage))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "OnRep_bLatched",
+    "dsl": "(fn OnRep_bLatched () (CallFunction|ApplyCage))"
+  },
+  {
+    "script": "relic_cage.py",
+    "function": "BeginCage",
+    "dsl": "(fn BeginCage () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshCage\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "OwnerIsDead",
+    "dsl": "(fn OwnerIsDead () \n (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self (Components|GetOwner) :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n  (:then (bind dead (Class|ACHealth|IsDead :self health)) (return dead)) (:CastFailed (return false))))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "InspectSpectatorCandidate",
+    "dsl": "(fn InspectSpectatorCandidate (Candidate) \n (if (not (== Candidate (Components|GetOwner)))\n  (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self Candidate :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health))\n    (if (not dead) (bind other (Utilities|Casting|CastToPawn :Object Candidate)\n     (:then (bind ps (Utilities|Casting|CastToBP_CoopPlayerState :Object (Class|Pawn|GetPlayerState :self other))\n      (:then (bind slot (Class|BPCoopPlayerState|GetColorSlot :self ps))\n       (if (and (>= slot 0) (<= slot 3))\n        (if (< slot (Variables|Default|GetWrapSpectatorSlot)) (Variables|Default|SetWrapSpectatorSlot slot) (Variables|Default|SetWrapSpectator Candidate))\n        (if (and (> slot (Variables|Default|GetLastSpectatorSlot)) (< slot (Variables|Default|GetNextSpectatorSlot)))\n         (Variables|Default|SetNextSpectatorSlot slot) (Variables|Default|SetNextSpectator Candidate)))) (:CastFailed))) (:CastFailed)))) (:CastFailed))))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "CycleSpectator",
+    "dsl": "(fn CycleSpectator () \n (bind pawn (Utilities|Casting|CastToPawn :Object (Components|GetOwner))\n  (:then (bind dead (CallFunction|OwnerIsDead))\n   (if (and dead (Pawn|IsLocallyControlled :self pawn))\n    (Variables|Default|SetNextSpectatorSlot 4) (Variables|Default|SetWrapSpectatorSlot 4)\n    (Variables|Default|SetNextSpectator \"None\") (Variables|Default|SetWrapSpectator \"None\")\n    (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n     (CallFunction|InspectSpectatorCandidate :Candidate actor))\n    (if (== (Variables|Default|GetNextSpectator) \"None\")\n     (Variables|Default|SetNextSpectator (Variables|Default|GetWrapSpectator)) (Variables|Default|SetNextSpectatorSlot (Variables|Default|GetWrapSpectatorSlot)))\n    (Variables|Default|SetSpectatedPawn (Variables|Default|GetNextSpectator))\n    (Variables|Default|SetLastSpectatorSlot (select (== (Variables|Default|GetNextSpectator) \"None\") -1 (Variables|Default|GetNextSpectatorSlot))))) (:CastFailed)))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "ValidateSpectatedPawn",
+    "dsl": "(fn ValidateSpectatedPawn () \n (Utilities|IsValid :InputObject (Variables|Default|GetSpectatedPawn)\n  (:\"Is Valid\" (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self (Variables|Default|GetSpectatedPawn) :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health)) (if dead (Variables|Default|SetSpectatedPawn \"None\")))\n   (:CastFailed (Variables|Default|SetSpectatedPawn \"None\"))))\n  (:\"Is Not Valid\" (Variables|Default|SetSpectatedPawn \"None\"))))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "RefreshTargetCamera",
+    "dsl": "(fn RefreshTargetCamera () \n (bind target (Utilities|Casting|CastToPawn :Object (Variables|Default|GetSpectatedPawn))\n  (:then (bind targetView (Utilities|Casting|CastToAC_PlayerView :Object (Actor|GetComponentbyClass :self target :ComponentClass \"/Game/Player/AC_PlayerView.AC_PlayerView_C\"))\n   (:then (Class|ACPlayerView|ApplyCameraArm :self targetView) (Class|ACPlayerView|ApplyCameraFov :self targetView)\n    (bind arm (Utilities|Casting|CastToSpringArmComponent :Object (Actor|GetComponentbyClass :self target :ComponentClass \"/Script/Engine.SpringArmComponent\"))\n     (:then (Transformation|SetWorldRotation :self arm :NewRotation (Pawn|GetBaseAimRotation :self target))) (:CastFailed))) (:CastFailed))) (:CastFailed)))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "ApplySpectatorCamera",
+    "dsl": "(fn ApplySpectatorCamera () \n (bind pawn (Utilities|Casting|CastToPawn :Object (Components|GetOwner))\n  (:then (if (Pawn|IsLocallyControlled :self pawn)\n   (bind pc (Utilities|Casting|CastToPlayerController :Object (Pawn|GetController :self pawn))\n    (:then (bind dead (CallFunction|OwnerIsDead))\n     (if (and dead (not (== (Variables|Default|GetSpectatedPawn) \"None\")))\n      (CallFunction|RefreshTargetCamera)\n      (if (not (== (Camera|GetViewTarget :self pc) (Variables|Default|GetSpectatedPawn)))\n       (Camera|SetViewTargetwithBlend :self pc :NewViewTarget (Variables|Default|GetSpectatedPawn) :BlendTime 0.2))\n      (else (if (not (== (Camera|GetViewTarget :self pc) pawn))\n       (Camera|SetViewTargetwithBlend :self pc :NewViewTarget pawn :BlendTime 0.2))))) (:CastFailed)))) (:CastFailed)))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "RefreshSpectator",
+    "dsl": "(fn RefreshSpectator () \n (CallFunction|ValidateSpectatedPawn)\n (bind dead (CallFunction|OwnerIsDead))\n (if dead (if (== (Variables|Default|GetSpectatedPawn) \"None\") (CallFunction|CycleSpectator))\n  (else (Variables|Default|SetSpectatedPawn \"None\") (Variables|Default|SetLastSpectatorSlot -1)))\n (CallFunction|ApplySpectatorCamera))"
+  },
+  {
+    "script": "spectator.py",
+    "function": "BeginSpectator",
+    "dsl": "(fn BeginSpectator () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshSpectator\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "taking.py",
+    "function": "ChooseRemainingPlayer",
+    "dsl": "(fn ChooseRemainingPlayer () \n (Utilities|Array|Clear :TargetArray (Variables|Default|GetEligiblePlayers))\n (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n  (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self actor :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health))\n    (if (not dead) (Utilities|Array|Add :TargetArray (Variables|Default|GetEligiblePlayers) :NewItem actor))) (:CastFailed)))\n (if (> (Utilities|Array|Length :TargetArray (Variables|Default|GetEligiblePlayers)) 0)\n  (bind chosen (Utilities|Array|Get(acopy) (Variables|Default|GetEligiblePlayers) (Math|Random|RandomInteger :Max (Utilities|Array|Length :TargetArray (Variables|Default|GetEligiblePlayers)))))\n  (bind pawn (Utilities|Casting|CastToPawn :Object chosen)\n   (:then (bind ps (Utilities|Casting|CastToBP_CoopPlayerState :Object (Class|Pawn|GetPlayerState :self pawn))\n    (:then (Variables|Default|SetRemainingSlot (Class|BPCoopPlayerState|GetColorSlot :self ps))) (:CastFailed))) (:CastFailed))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "TakePlayer",
+    "dsl": "(fn TakePlayer (PlayerPawn) \n (if (Networking|HasAuthority)\n  (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object PlayerPawn)\n   (:then (Variables|Default|SetVictim pawn) (Variables|Default|SetTeleported false) (Variables|Default|SetVictimOrigin (Transformation|GetActorLocation :self pawn))\n    (Class|BPCoopCharacter|SetTakingProtected :self pawn :Protected true)\n    (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n     (:then (Variables|Default|SetTakingStarted (+ (GameState|GetServerWorldTimeSeconds :self gs) 0.5))\n      (Variables|Default|SetScareStyle (Math|Random|RandomInteger :Max 3))) (:CastFailed))) (:CastFailed))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "MoveVictimToPath",
+    "dsl": "(fn MoveVictimToPath () \n (if (and (Networking|HasAuthority) (not (Variables|Default|GetTeleported)))\n  (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object (Variables|Default|GetVictim))\n   (:then (bind ps (Utilities|Casting|CastToBP_CoopPlayerState :Object (Class|Pawn|GetPlayerState :self pawn))\n    (:then (bind slot (Class|BPCoopPlayerState|GetColorSlot :self ps))\n     (if (and (>= slot 0) (<= slot 3))\n      (Transformation|SetActorLocation :self pawn :NewLocation (select (== slot 0) (Variables|Default|GetPathStart0) (select (== slot 1) (Variables|Default|GetPathStart1) (select (== slot 2) (Variables|Default|GetPathStart2) (Variables|Default|GetPathStart3)))) :bSweep false :bTeleport true)\n      (Variables|Default|SetTeleported true))) (:CastFailed))) (:CastFailed))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "UnprotectVictim",
+    "dsl": "(fn UnprotectVictim () \n (if (Networking|HasAuthority)\n  (Utilities|IsValid :InputObject (Variables|Default|GetVictim)\n   (:\"Is Valid\" (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object (Variables|Default|GetVictim))\n    (:then (Class|BPCoopCharacter|SetTakingProtected :self pawn :Protected false)) (:CastFailed))) (:\"Is Not Valid\"))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "FinishTaking",
+    "dsl": "(fn FinishTaking () (if (Networking|HasAuthority) (CallFunction|UnprotectVictim) (Variables|Default|SetVictim \"None\") (Variables|Default|SetTakingStarted -1.0)))"
+  },
+  {
+    "script": "taking.py",
+    "function": "HasActiveVictim",
+    "dsl": "(fn HasActiveVictim () (Utilities|IsValid :InputObject (Variables|Default|GetVictim) (:\"Is Valid\" (return true)) (:\"Is Not Valid\" (return false))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "CanTake",
+    "dsl": "(fn CanTake (PlayerPawn) \n (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self PlayerPawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n  (:then (bind dead (Class|ACHealth|IsDead :self health)) (return (not dead))) (:CastFailed (return false))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "ScheduleNext",
+    "dsl": "(fn ScheduleNext () \n (if (Networking|HasAuthority)\n  (for slot (range 4)\n   (if (and (>= slot (Variables|Default|GetNextSlot)) (and (!= slot (Variables|Default|GetRemainingSlot)) (not (CallFunction|HasActiveVictim))))\n    (for actor (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n     (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object actor)\n      (:then (bind ps (Utilities|Casting|CastToBP_CoopPlayerState :Object (Class|Pawn|GetPlayerState :self pawn))\n       (:then (bind playerSlot (Class|BPCoopPlayerState|GetColorSlot :self ps))\n        (bind allowed (CallFunction|CanTake :PlayerPawn pawn))\n        (if (and allowed (and (== slot playerSlot) (not (CallFunction|HasActiveVictim))))\n         (CallFunction|TakePlayer :PlayerPawn pawn) (Variables|Default|SetNextSlot (+ slot 1)))) (:CastFailed))) (:CastFailed)))))\n  (if (not (CallFunction|HasActiveVictim)) (Variables|Default|SetNextSlot 4)\n   (else (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n    (:then (Variables|Default|SetNextTakingAt (+ (GameState|GetServerWorldTimeSeconds :self gs) (Math|Random|RandomFloatinRange :Min 2.0 :Max 5.0)))) (:CastFailed))))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "ProcessTakingPlayer",
+    "dsl": "(fn ProcessTakingPlayer () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (bind now (GameState|GetServerWorldTimeSeconds :self gs))\n   (Utilities|IsValid :InputObject (Variables|Default|GetVictim)\n    (:\"Is Valid\" (if (>= (- now (Variables|Default|GetTakingStarted)) 0.65) (CallFunction|MoveVictimToPath))\n     (if (>= (- now (Variables|Default|GetTakingStarted)) 1.3) (CallFunction|FinishTaking)))\n    (:\"Is Not Valid\" (if (and (>= now (Variables|Default|GetNextTakingAt)) (< (Variables|Default|GetNextSlot) 4)) (CallFunction|ScheduleNext))))) (:CastFailed)))"
+  },
+  {
+    "script": "taking.py",
+    "function": "PlayTakingVisual",
+    "dsl": "(fn PlayTakingVisual () \n (Utilities|IsValid :InputObject (Variables|Default|GetVictim)\n  (:\"Is Valid\" (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind age (- (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetTakingStarted)))\n    (Actor|SetActorHiddenInGame :bNewHidden (or (< age 0.0) (> age 0.65)))\n    (Transformation|SetActorLocation :NewLocation (+ (Variables|Default|GetVictimOrigin) (Utilities|Struct|MakeVector :Z (select (== (Variables|Default|GetScareStyle) 1) -100.0 80.0))) :bSweep false)\n    (bind pawn (Utilities|Casting|CastToPawn :Object (Variables|Default|GetVictim))\n     (:then (if (Pawn|IsLocallyControlled :self pawn)\n      (bind pc (Utilities|Casting|CastToPlayerController :Object (Pawn|GetController :self pawn))\n       (:then (bind camera (Class|PlayerController|GetPlayerCameraManager :self pc))\n        (Camera|Fading|SetManualCameraFade :self camera :InFadeAmount (select (and (>= age 0.35) (< age 1.15)) 1.0 0.0) :Color (Utilities|Struct|MakeLinearColor :R 0.0 :G 0.0 :B 0.0) :bInFadeAudio true)) (:CastFailed)))) (:CastFailed))) (:CastFailed)))\n  (:\"Is Not Valid\" (Actor|SetActorHiddenInGame :bNewHidden true))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "TakingAuthorityTick",
+    "dsl": "(fn TakingAuthorityTick () \n (if (Networking|HasAuthority)\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n    (bind now (GameState|GetServerWorldTimeSeconds :self gs))\n    (if (and (== index 2) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum \"NewEnumerator1\")))\n     (if (!= (Variables|Default|GetStartedAttempt) attempt)\n      (CallFunction|FinishTaking) (Variables|Default|SetStartedAttempt attempt) (Variables|Default|SetNextSlot 0)\n      (CallFunction|ChooseRemainingPlayer) (Variables|Default|SetSealed false)\n      (Variables|Default|SetNextTakingAt (+ now 1.0)))\n     (if (== attempt 1)\n      (CallFunction|ProcessTakingPlayer)\n      (if (and (not (Variables|Default|GetSealed)) (and (>= (Variables|Default|GetNextSlot) 4) (not (CallFunction|HasActiveVictim))))\n       (for seal (Actor|GetAllActorsOfClass :ActorClass \"/Game/Hazards/Maze/BP_MouthSeal.BP_MouthSeal_C\")\n        (Class|BPMouthSeal|SealAllBut :self seal :PathIndex (Variables|Default|GetRemainingSlot))) (Variables|Default|SetSealed true)))\n     (else (CallFunction|FinishTaking)))) (:CastFailed))))"
+  },
+  {
+    "script": "taking.py",
+    "function": "RefreshTaking",
+    "dsl": "(fn RefreshTaking () (CallFunction|TakingAuthorityTick) (CallFunction|PlayTakingVisual))"
+  },
+  {
+    "script": "taking.py",
+    "function": "ResetTaking",
+    "dsl": "(fn ResetTaking (Index Attempt) (CallFunction|FinishTaking))"
+  },
+  {
+    "script": "taking.py",
+    "function": "BeginTaking",
+    "dsl": "(fn BeginTaking () (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshTaking\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "script": "tools.py",
+    "function": "GetHeadlampOn",
+    "dsl": "(fn GetHeadlampOn () (return (Variables|Default|GetHeadlampOn)))"
+  },
+  {
+    "script": "tools.py",
+    "function": "CanUseTools",
+    "dsl": "(fn CanUseTools () \n (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object (Components|GetOwner))\n  (:then (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health)) (bind carrying (Class|BPCoopCharacter|IsCarryingHeavy :self pawn))\n    (bind protected (Class|BPCoopCharacter|GetTakenProtected :self pawn))\n    (return (and (not protected) (and (not dead) (not carrying))))) (:CastFailed (return false)))) (:CastFailed (return false))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "GetFlareAllowance",
+    "dsl": "(fn GetFlareAllowance () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (bind row (Class|BPCoopGameState|GetScalingRow :self gs))\n   (if (== row \"2\") (return 3)) (if (or (== row \"3\") (== row \"4\")) (return 2)) (return 0)) (:CastFailed (return 0))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "RestockFlares",
+    "dsl": "(fn RestockFlares () (if (Networking|HasAuthority :self (Components|GetOwner)) (bind count (CallFunction|GetFlareAllowance)) (Variables|Default|SetFlaresLeft count)))"
+  },
+  {
+    "script": "tools.py",
+    "function": "ThrowFlareOnServer",
+    "dsl": "(fn ThrowFlareOnServer () \n (if (Networking|HasAuthority :self (Components|GetOwner)) (bind allowed (CallFunction|CanUseTools))\n  (if (and allowed (> (Variables|Default|GetFlaresLeft) 0))\n   (bind pawn (Utilities|Casting|CastToPawn :Object (Components|GetOwner))\n    (:then (bind (eye rotation) (Actor|GetActorEyesViewPoint :self pawn))\n     (bind aim (Pawn|GetBaseAimRotation :self pawn))\n     (bind forward (Math|Vector|GetForwardVector :InRot aim))\n     (bind spawned (Game|SpawnActorfromClass :Class \"/Game/Player/Tools/BP_Flare.BP_Flare_C\" :SpawnTransform (Math|Transform|MakeTransform :Location (+ eye (* forward 90.0)) :Rotation aim) :Owner pawn :CollisionHandlingOverride \"AdjustIfPossibleButDontSpawnIfColliding\")\n      (:then (Utilities|IsValid :InputObject spawned\n       (:\"Is Valid\" (Variables|Default|SetFlaresLeft (- (Variables|Default|GetFlaresLeft) 1)) (Class|BPFlare|SetBurnSeconds :self spawned :Seconds (Variables|Default|GetFlareSeconds))) (:\"Is Not Valid\"))))) (:CastFailed)))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "ThrowFlare",
+    "dsl": "(fn ThrowFlare () (CallFunction|ThrowFlareOnServer))"
+  },
+  {
+    "script": "tools.py",
+    "function": "EndBeamTarget",
+    "dsl": "(fn EndBeamTarget () \n (Utilities|IsValid :InputObject (Variables|Default|GetBeamTarget)\n  (:\"Is Valid\" (Class|BPILightable|LightEnd(Message) :self (Variables|Default|GetBeamTarget) :Source (Components|GetOwner))) (:\"Is Not Valid\")))"
+  },
+  {
+    "script": "tools.py",
+    "function": "ClearBeam",
+    "dsl": "(fn ClearBeam () (CallFunction|EndBeamTarget) (Variables|Default|SetBeamTarget \"None\"))"
+  },
+  {
+    "script": "tools.py",
+    "function": "RefreshBeam",
+    "dsl": "(fn RefreshBeam () \n (if (Networking|HasAuthority :self (Components|GetOwner))\n  (bind pawn (Utilities|Casting|CastToPawn :Object (Components|GetOwner))\n   (:then (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n    (:then (bind dead (Class|ACHealth|IsDead :self health))\n     (bind view (Utilities|Casting|CastToAC_PlayerView :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Player/AC_PlayerView.AC_PlayerView_C\"))\n      (:then (if (and (not dead) (Class|ACPlayerView|GetHeadlampOn :self view))\n       (bind (eye rotation) (Actor|GetActorEyesViewPoint :self pawn))\n       (bind forward (Math|Vector|GetForwardVector :InRot (Pawn|GetBaseAimRotation :self pawn)))\n       (bind (hit blocked) (Collision|LineTraceByChannel :Start (+ eye (* forward 70.0)) :End (+ eye (* forward 1200.0)) :TraceChannel \"TraceTypeQuery1\" :bIgnoreSelf true :DrawDebugType \"None\"))\n       (bind (blocking overlap time distance location impact normal impactNormal material hitActor component bone myBone item element face traceStart traceEnd) (Collision|BreakHitResult :Hit hit))\n       (if (!= hitActor (Variables|Default|GetBeamTarget)) (CallFunction|ClearBeam) (Variables|Default|SetBeamTarget hitActor))\n       (Utilities|IsValid :InputObject (Variables|Default|GetBeamTarget) (:\"Is Valid\" (Class|BPILightable|LightBegin(Message) :self (Variables|Default|GetBeamTarget) :Source pawn)) (:\"Is Not Valid\"))\n       (else (CallFunction|ClearBeam)))) (:CastFailed (CallFunction|ClearBeam)))) (:CastFailed (CallFunction|ClearBeam)))) (:CastFailed (CallFunction|ClearBeam)))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "BeginTools",
+    "dsl": "(fn BeginTools () (if (Networking|HasAuthority :self (Components|GetOwner)) (CallFunction|RestockFlares) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshBeam\" :Time 0.2 :bLooping true)))"
+  },
+  {
+    "script": "tools.py",
+    "function": "EndTools",
+    "dsl": "(fn EndTools () (if (Networking|HasAuthority :self (Components|GetOwner)) (CallFunction|ClearBeam)) (Utilities|Time|ClearTimerbyFunctionName :Object self :FunctionName \"RefreshBeam\"))"
+  },
+  {
+    "script": "tools.py",
+    "function": "SetBurnSeconds",
+    "dsl": "(fn SetBurnSeconds (Seconds) (if (Networking|HasAuthority) (Variables|Default|SetBurnSeconds Seconds)))"
+  },
+  {
+    "script": "tools.py",
+    "function": "EndFlareTarget",
+    "dsl": "(fn EndFlareTarget () (Utilities|IsValid :InputObject (Variables|Default|GetLightTarget) (:\"Is Valid\" (Class|BPILightable|LightEnd(Message) :self (Variables|Default|GetLightTarget) :Source self)) (:\"Is Not Valid\")))"
+  },
+  {
+    "script": "tools.py",
+    "function": "IsActive",
+    "dsl": "(fn IsActive () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (return (and (>= (Variables|Default|GetBurnStarted) 0.0) (< (GameState|GetServerWorldTimeSeconds :self gs) (+ (Variables|Default|GetBurnStarted) (Variables|Default|GetBurnSeconds)))))) (:CastFailed (return false))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "RefreshFlare",
+    "dsl": "(fn RefreshFlare () \n (bind active (CallFunction|IsActive))\n (Rendering|Components|Light|SetIntensity :self (Variables|Default|GetFlareLight) :NewIntensity (select active 2500.0 0.0))\n (if (Networking|HasAuthority)\n  (if active\n   (for lock (Actor|GetAllActorswithTag :Tag \"FlareLock\")\n    (if (<= (Transformation|GetDistanceTo :OtherActor lock) 180.0)\n     (if (!= lock (Variables|Default|GetLightTarget))\n      (CallFunction|EndFlareTarget)\n      (Variables|Default|SetLightTarget lock))\n     (Class|BPILightable|LightBegin(Message) :self lock :Source self)))\n   (Utilities|IsValid :InputObject (Variables|Default|GetLightTarget)\n    (:\"Is Valid\" (if (> (Transformation|GetDistanceTo :OtherActor (Variables|Default|GetLightTarget)) 180.0)\n     (Class|BPILightable|LightEnd(Message) :self (Variables|Default|GetLightTarget) :Source self) (Variables|Default|SetLightTarget \"None\"))) (:\"Is Not Valid\"))\n   (else (CallFunction|EndFlare) (Actor|DestroyActor)))))"
+  },
+  {
+    "script": "tools.py",
+    "function": "EndFlare",
+    "dsl": "(fn EndFlare () (if (Networking|HasAuthority) (Utilities|IsValid :InputObject (Variables|Default|GetLightTarget) (:\"Is Valid\" (Class|BPILightable|LightEnd(Message) :self (Variables|Default|GetLightTarget) :Source self)) (:\"Is Not Valid\"))) (Utilities|Time|ClearTimerbyFunctionName :Object self :FunctionName \"RefreshFlare\"))"
+  },
+  {
+    "script": "tools.py",
+    "function": "BeginFlare",
+    "dsl": "(fn BeginFlare () \n (if (Networking|HasAuthority) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (Variables|Default|SetBurnStarted (GameState|GetServerWorldTimeSeconds :self gs))) (:CastFailed)))\n (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshFlare\" :Time 0.1 :bLooping true))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "CanTraverse",
+    "dsl": "(fn CanTraverse () \n (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object (Components|GetOwner))\n  (:then (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health))\n    (bind carrying (Class|BPCoopCharacter|IsCarryingHeavy :self pawn))\n    (bind protected (Class|BPCoopCharacter|GetTakenProtected :self pawn))\n    (return (and (not protected) (and (not dead) (not carrying))))) (:CastFailed (return false)))) (:CastFailed (return false))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "CanAct",
+    "dsl": "(fn CanAct () \n (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object (Components|GetOwner))\n  (:then (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n   (:then (bind dead (Class|ACHealth|IsDead :self health))\n    (bind protected (Class|BPCoopCharacter|GetTakenProtected :self pawn))\n    (return (and (not protected) (not dead)))) (:CastFailed (return false)))) (:CastFailed (return false))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "CanStartTraversalFlight",
+    "dsl": "(fn CanStartTraversalFlight () \n (bind allowed (CallFunction|CanTraverse))\n (if allowed (bind pawn (Utilities|Casting|CastToCharacter :Object (Components|GetOwner))\n  (:then (bind movement (Class|Character|GetCharacterMovement :self pawn))\n   (return (or (Variables|Default|GetTraversalFlightApplied) (not (AI|Components|NavMovement|IsFlying :self movement))))) (:CastFailed (return false)))\n  (else (return false))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "ReleaseTraversalFlight",
+    "dsl": "(fn ReleaseTraversalFlight () \n (if (Variables|Default|GetTraversalFlightApplied)\n  (bind pawn (Utilities|Casting|CastToCharacter :Object (Components|GetOwner))\n   (:then (bind movement (Class|Character|GetCharacterMovement :self pawn))\n    (bind active (CallFunction|CanAct))\n    (if (and active (AI|Components|NavMovement|IsFlying :self movement))\n     (Pawn|Components|CharacterMovement|SetMovementMode :self movement :NewMovementMode \"MOVE_Falling\"))\n    (Variables|Default|SetTraversalFlightApplied false)) (:CastFailed (Variables|Default|SetTraversalFlightApplied false)))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "ApplyTraversal",
+    "dsl": "(fn ApplyTraversal () \n (bind pawn (Utilities|Casting|CastToCharacter :Object (Components|GetOwner))\n  (:then (bind movement (Class|Character|GetCharacterMovement :self pawn))\n   (bind allowed (CallFunction|CanTraverse))\n   (if (and allowed (or (Variables|Default|GetClimbing) (Variables|Default|GetMantling)))\n    (Pawn|Components|CharacterMovement|SetMovementMode :self movement :NewMovementMode \"MOVE_Flying\")\n    (Class|CharacterMovementComponent|SetMaxFlySpeed :self movement :MaxFlySpeed (select (Variables|Default|GetMantling) 0.0 (Variables|Default|GetClimbSpeed)))\n    (Variables|Default|SetTraversalFlightApplied true)\n    (else (CallFunction|ReleaseTraversalFlight)))\n   (if (and allowed (or (Variables|Default|GetTraversalFlightApplied) (not (AI|Components|NavMovement|IsFlying :self movement))))\n    (Class|CharacterMovementComponent|SetMaxWalkSpeed :self movement :MaxWalkSpeed (select (Variables|Default|GetSprinting) (Variables|Default|GetSprintSpeed) (Variables|Default|GetWalkSpeed))))) (:CastFailed)))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "SprintOnServer",
+    "dsl": "(fn SprintOnServer () (if (Networking|HasAuthority :self (Components|GetOwner)) (bind allowed (CallFunction|CanStartTraversalFlight)) (if (and allowed (and (not (Variables|Default|GetMantling)) (not (Variables|Default|GetClimbing)))) (Variables|Default|SetSprinting true) (CallFunction|ApplyTraversal))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "StopSprintOnServer",
+    "dsl": "(fn StopSprintOnServer () (if (Networking|HasAuthority :self (Components|GetOwner)) (Variables|Default|SetSprinting false) (CallFunction|ApplyTraversal)))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "ClimbOnServer",
+    "dsl": "(fn ClimbOnServer () \n (if (Networking|HasAuthority :self (Components|GetOwner)) (bind allowed (CallFunction|CanStartTraversalFlight))\n  (if (and allowed (not (Variables|Default|GetMantling))) (for volume (Collision|GetOverlappingActors :self (Components|GetOwner) :ClassFilter \"/Script/Engine.Actor\")\n   (if (Utilities|ActorHasTag :self volume :Tag \"Climbable\")\n    (Variables|Default|SetClimbing true) (Variables|Default|SetClimbForwardInput 1.0) (Variables|Default|SetSprinting false) (CallFunction|ApplyTraversal))))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "SetClimbForwardOnServer",
+    "dsl": "(fn SetClimbForwardOnServer (Forward) \n (if (Networking|HasAuthority :self (Components|GetOwner))\n  (bind allowed (CallFunction|CanTraverse))\n  (if (and allowed (not (Variables|Default|GetMantling)))\n   (if (and (> Forward 0.1) (not (Variables|Default|GetClimbing))) (CallFunction|ClimbOnServer))\n   (Variables|Default|SetClimbForwardInput (Math|Float|Clamp(Float) :Value Forward :Min -1.0 :Max 1.0))\n   (else (Variables|Default|SetClimbForwardInput 0.0)))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "StopClimbOnServer",
+    "dsl": "(fn StopClimbOnServer () (if (Networking|HasAuthority :self (Components|GetOwner)) (Variables|Default|SetClimbing false) (Variables|Default|SetClimbForwardInput 0.0) (CallFunction|ApplyTraversal)))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "TraversalAuthorityTick",
+    "dsl": "(fn TraversalAuthorityTick () \n (if (Networking|HasAuthority :self (Components|GetOwner)) (bind allowed (CallFunction|CanTraverse))\n  (if (not allowed) (Variables|Default|SetSprinting false) (Variables|Default|SetClimbing false) (Variables|Default|SetMantling false) (Variables|Default|SetClimbForwardInput 0.0))\n  (if (Variables|Default|GetClimbing)\n   (bind pawn (Utilities|Casting|CastToCharacter :Object (Components|GetOwner))\n    (:then (Variables|Default|SetInsideClimbable false)\n     (for volume (Collision|GetOverlappingActors :self pawn :ClassFilter \"/Script/Engine.Actor\")\n      (if (Utilities|ActorHasTag :self volume :Tag \"Climbable\") (Variables|Default|SetInsideClimbable true)))\n     (if (Variables|Default|GetInsideClimbable) (Pawn|AddMovementInput :self pawn :WorldDirection (Utilities|Struct|MakeVector :Z 1.0) :ScaleValue (Variables|Default|GetClimbForwardInput))\n      (else (Variables|Default|SetClimbing false)))) (:CastFailed)))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "EndMantle",
+    "dsl": "(fn EndMantle () (if (Networking|HasAuthority :self (Components|GetOwner)) (Variables|Default|SetMantling false) (CallFunction|ApplyTraversal)))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "MantleOnServer",
+    "dsl": "(fn MantleOnServer () \n (if (Networking|HasAuthority :self (Components|GetOwner))\n  (bind allowed (CallFunction|CanStartTraversalFlight))\n  (if (and allowed (and (not (Variables|Default|GetMantling)) (not (Variables|Default|GetClimbing))))\n   (bind pawn (Utilities|Casting|CastToCharacter :Object (Components|GetOwner))\n    (:then (bind start (Transformation|GetActorLocation :self pawn))\n     (bind forward (Transformation|GetActorForwardVector :self pawn))\n     (bind ledgePoint (+ start (* forward 160.0)))\n     (bind (frontHit frontBlocked) (Collision|LineTraceByChannel :Start (+ start (* forward 65.0)) :End (+ start (* forward 180.0)) :TraceChannel \"TraceTypeQuery1\" :bIgnoreSelf true :DrawDebugType \"None\"))\n     (if frontBlocked\n      (bind (topHit topBlocked) (Collision|LineTraceByChannel :Start (+ ledgePoint (Utilities|Struct|MakeVector :Z 240.0)) :End (+ ledgePoint (Utilities|Struct|MakeVector :Z 5.0)) :TraceChannel \"TraceTypeQuery1\" :bIgnoreSelf true :DrawDebugType \"None\"))\n      (bind (blocking overlap time distance location impact normal impactNormal material hitActor component bone myBone item element face traceStart traceEnd) (Collision|BreakHitResult :Hit topHit))\n      (bind height (+ (- (.z location) (.z start)) 96.0))\n      (if (and topBlocked (and (>= height 100.0) (and (<= height 200.0) (>= (.z normal) 0.7))))\n       (bind destination (+ location (Utilities|Struct|MakeVector :Z 100.0)))\n       (bind (clearanceHit clearanceBlocked) (Collision|CapsuleTraceByChannel :Start destination :End (+ destination (Utilities|Struct|MakeVector :Z 1.0)) :Radius 43.0 :HalfHeight 95.0 :TraceChannel \"TraceTypeQuery1\" :bIgnoreSelf true :DrawDebugType \"None\"))\n       (if (not clearanceBlocked)\n        (Variables|Default|SetMantleStart start) (Variables|Default|SetMantleTarget destination) (Variables|Default|SetMantling true) (Variables|Default|SetSprinting false)\n        (CallFunction|ApplyTraversal)\n        (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n         (:then (Variables|Default|SetMantleStarted (GameState|GetServerWorldTimeSeconds :self gs))) (:CastFailed (CallFunction|EndMantle))))))) (:CastFailed)))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "MantleAuthorityTick",
+    "dsl": "(fn MantleAuthorityTick () \n (if (and (Networking|HasAuthority :self (Components|GetOwner)) (Variables|Default|GetMantling))\n  (bind allowed (CallFunction|CanTraverse))\n  (if allowed\n   (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n    (:then (bind age (- (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetMantleStarted)))\n     (bind verticalTarget (+ (Variables|Default|GetMantleStart) (Utilities|Struct|MakeVector :Z (+ (- (.z (Variables|Default|GetMantleTarget)) (.z (Variables|Default|GetMantleStart))) 10.0))))\n     (bind next (select (< age 0.25)\n      (Math|Vector|Lerp(Vector) :A (Variables|Default|GetMantleStart) :B verticalTarget :Alpha (Math|Float|Clamp(Float) :Value (/ age 0.25) :Min 0.0 :Max 1.0))\n      (Math|Vector|Lerp(Vector) :A verticalTarget :B (Variables|Default|GetMantleTarget) :Alpha (Math|Float|Clamp(Float) :Value (/ (- age 0.25) 0.25) :Min 0.0 :Max 1.0))))\n     (Transformation|SetActorLocation :self (Components|GetOwner) :NewLocation next :bSweep true :bTeleport false)\n     (if (>= age 0.5) (CallFunction|EndMantle))) (:CastFailed (CallFunction|EndMantle)))\n   (else (CallFunction|EndMantle)))))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "RefreshTraversal",
+    "dsl": "(fn RefreshTraversal () (CallFunction|TraversalAuthorityTick) (CallFunction|MantleAuthorityTick) (CallFunction|ApplyTraversal))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "OnRep_bSprinting",
+    "dsl": "(fn OnRep_bSprinting () (CallFunction|ApplyTraversal))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "OnRep_bClimbing",
+    "dsl": "(fn OnRep_bClimbing () (CallFunction|ApplyTraversal))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "OnRep_bMantling",
+    "dsl": "(fn OnRep_bMantling () (CallFunction|ApplyTraversal))"
+  },
+  {
+    "script": "traversal.py",
+    "function": "BeginTraversal",
+    "dsl": "(fn BeginTraversal () (CallFunction|ApplyTraversal) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshTraversal\" :Time 0.05 :bLooping true))"
+  }
+]

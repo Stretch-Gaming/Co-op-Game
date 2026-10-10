@@ -1,0 +1,8 @@
+{
+  "python_ast": true,
+  "dsl_functions": 7,
+  "const_paint_graphs": 4,
+  "onpaint_setters": 0,
+  "failures": [],
+  "runtime_visual_acceptance_pending": true
+}

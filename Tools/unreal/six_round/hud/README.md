@@ -1,0 +1,11 @@
+# Six-round HUD packet
+
+Run `build_hud.py` through the isolated editor queue with primary-approved `ARGS['font_heading']` (Cinzel Font asset) and `ARGS['font_body']` (Alegreya Sans SC Font asset). Both upstream fonts use OFL; this packet neither downloads nor imports fonts. Omitting paths uses a temporary engine fallback and returns `font_acceptance_pending: true`. Do not accept that fallback for the final presentation.
+
+Writes: Puzzles/UI/HCA3/WBP_HCA3RoundHUD, Puzzles/UI/WBP_InteractPrompt, Puzzles/UI/Results/WBP_RunResults, and four new Puzzles/UI/SixRound/DA_*Brush assets. No Core assets, input, owner lifecycle, HUD component, result component or other lane files are modified. Existing per-owning-controller AddToPlayerScreen setup stays intact. Prompt UpdatePrompt is checked unchanged before save.
+
+All gameplay displayed is read from the current GameState and owning pawn components. The HUD reads six named rounds, live objectives, relic counts, ColorSlot team rows with alive/dead/carry status, headlamp/flaring stock, and the owning spectator's target slot. It shows a large initial/phase-change banner for three seconds, then a compact line. Panels have an opaque shadow-family recessed plate, blue-violet shadow, frame layer plus the existing HCA3 carved-frame art, inset top edge and cream/amber text. The prompt and results use the same layers. Layout uses the owning widget's cached geometry and the documented clamped per-view scale.
+
+`validate_syntax.py` evaluates the generated painting DSL with the actual Epic parser and rejects terminal-cast sibling mistakes; all three paint graphs passed offline. This proves syntax only. `test_owned_hud.py` is a read-only runtime gate for independent owners, per-player cached bounds, actual GameState round names, team/component values, and owning results. Run after the widgets have painted in 2/3/4-player PIE and both split layouts.
+
+Pending primary gates: actual brush/tint property and node/pin resolution; Blueprint compile; approved fonts; runtime readback; screenshots in both split layouts; exact 2px text outline, carved title gradient, counter dimming and weighted 0.35s/0.5s banner motion polish. A drawn color for each ColorSlot is provisional until the PG player material swatches are independently compared. No runtime, visual or final UI completion is claimed by this packet.

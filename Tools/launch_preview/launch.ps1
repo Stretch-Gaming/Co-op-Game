@@ -5,7 +5,7 @@ param(
 $ErrorActionPreference='Stop'
 try {
  $root=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
- $map=if ($Mode -eq 'preview') { '/Game/Maps/L_ConnectedRoomMaze' } else { '/Game/Maps/L_Site01' }
+ $map=if ($Mode -eq 'preview') { '/Game/Maps/L_ConnectedRoomMaze' } else { '/Game/Puzzles/Test/SixRound/L_SixRound_Test' }
  $dryRun=$false
  $mapGiven=$false
  foreach ($option in $LaunchOptions) {

@@ -1,0 +1,6 @@
+{
+  "python_ast": true,
+  "dsl_functions": 57,
+  "failures": [],
+  "note": "Syntax only; node resolution, compilation and runtime remain editor gates."
+}

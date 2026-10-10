@@ -4,12 +4,13 @@ set -eu
 HERE="$(cd "$(dirname "$0")" && pwd)"
 fixture="$(mktemp -d "${TMPDIR:-/tmp}/Co op launcher test.XXXXXX")"
 trap 'rm -rf -- "$fixture"' EXIT
-mkdir -p "$fixture/Tools/launch_preview" "$fixture/Content/Maps" "$fixture/Engine install with spaces/Engine/Build" "$fixture/Engine install with spaces/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS"
+mkdir -p "$fixture/Tools/launch_preview" "$fixture/Content/Maps" "$fixture/Content/Puzzles/Test/SixRound" "$fixture/Engine install with spaces/Engine/Build" "$fixture/Engine install with spaces/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS"
 cp "$HERE/launch.sh" "$fixture/Tools/launch_preview/"
-cp "$HERE/../host.command" "$HERE/../play-connected.command" "$fixture/Tools/"
+cp "$HERE/../host.command" "$HERE/../play-connected.command" "$HERE/../play-adventure.command" "$fixture/Tools/"
 printf '{}\n' > "$fixture/CoopGame.uproject"
 printf 'synthetic map fixture\n' > "$fixture/Content/Maps/L_Site01.umap"
 printf 'synthetic map fixture\n' > "$fixture/Content/Maps/L_ConnectedRoomMaze.umap"
+printf 'synthetic adventure map fixture\n' > "$fixture/Content/Puzzles/Test/SixRound/L_SixRound_Test.umap"
 export UE_ROOT="$fixture/Engine install with spaces"
 build="$UE_ROOT/Engine/Build/Build.version"
 printf '{"MajorVersion":5,"MinorVersion":8,"PatchVersion":3}\n' > "$build"
@@ -30,7 +31,10 @@ check 0 '/Game/Maps/L_ConnectedRoomMaze' play-connected.command --dry-run
 check 0 "ARG: $fixture/CoopGame.uproject" play-connected.command --dry-run
 check 0 'ARG: -DisablePython' play-connected.command --dry-run
 check 0 'at commit unknown' play-connected.command --dry-run
-check 0 '/Game/Maps/L_Site01?listen' host.command --dry-run
+check 0 '/Game/Puzzles/Test/SixRound/L_SixRound_Test?listen' host.command --dry-run
+check 0 '/Game/Puzzles/Test/SixRound/L_SixRound_Test?listen' play-adventure.command --dry-run
+check 0 'ARG: -DisablePython' play-adventure.command --dry-run
+check 1 'Usage:' play-adventure.command /Game/Maps/L_Site01 --dry-run
 check 0 '/Game/Maps/L_ConnectedRoomMaze?listen' host.command /Game/Maps/L_ConnectedRoomMaze --dry-run
 check 0 '/Game/Maps/L_ConnectedRoomMaze?listen' host.command --dry-run /Game/Maps/L_ConnectedRoomMaze
 check 1 'Map missing:' host.command /Game/Maps/Missing --dry-run
@@ -39,6 +43,10 @@ check 1 'Usage:' host.command '/Game/Maps/L_Site01?listen' --dry-run
 check 1 'Usage:' play-connected.command /Game/Maps/L_Site01 --dry-run
 printf 'version https://git-lfs.github.com/spec/v1\noid sha256:fixture\nsize 0\n' > "$fixture/Content/Maps/L_ConnectedRoomMaze.umap"
 check 1 'Git LFS pointer:' play-connected.command --dry-run
+printf 'version https://git-lfs.github.com/spec/v1\noid sha256:fixture\nsize 0\n' > "$fixture/Content/Puzzles/Test/SixRound/L_SixRound_Test.umap"
+check 1 'Git LFS pointer:' host.command --dry-run
+check 1 'Git LFS pointer:' play-adventure.command --dry-run
+printf 'synthetic adventure map fixture\n' > "$fixture/Content/Puzzles/Test/SixRound/L_SixRound_Test.umap"
 printf '{"MajorVersion":5,"MinorVersion":8,"PatchVersion":2}\n' > "$build"
 check 1 'requires 5.8.3' host.command --dry-run
 export UE_ROOT="$fixture/Missing engine"

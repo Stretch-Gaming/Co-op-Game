@@ -79,6 +79,10 @@ The usual host command still opens the current adventure. To host the connected 
 
 ## Playtesting
 
+The six-round candidate opens by default. Host it with `Tools\play-adventure.bat` on Windows or `bash Tools/play-adventure.command` on Mac; the usual host scripts open the same adventure. Join with the existing join scripts. `Tools/play-connected` continues to open the map-only preview.
+
+This candidate has automated Windows client and split-screen evidence. The shared Mac/gamepad playtest, complete physical route timing and visual/audio acceptance remain pending; see [integration status](Tools/unreal/six_round/INTEGRATION_STATUS.md). The adventure currently uses the isolated `L_SixRound_Test` assembly so the original lane-owned maps remain protected.
+
 Playtests run the game straight from each machine's engine install (`-game`), not from a packaged build. That way Macs and Windows can play together.
 
 The launch scripts use `-DisablePython` during game runs because editor toolset startup scripts require editor-only classes. Python and MCP remain enabled when opening the project in Unreal Editor.

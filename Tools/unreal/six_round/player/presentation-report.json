@@ -1,0 +1,8 @@
+{
+  "source_sha256": "a4aab0b791652de51cec77b8df3c639affcfc919e0f10e9dc486acd6484c58a1",
+  "python_syntax": true,
+  "native_dsl_parse": true,
+  "terminal_flow": true,
+  "graphs": 14,
+  "native_node_pin_compile_runtime_visual_gates": false
+}
