@@ -1,17 +1,42 @@
-# Offline validation evidence
+# HC-A2 validation
 
-This delivery stops at the offline tooling gate. No Unreal editor was launched or controlled. No imported Unreal asset, gameplay, map or project-setting changes are included.
+The source/import/collision/assembly gates passed in the isolated Windows Unreal 5.8.3 editor. The main-cave visual acceptance gate has not passed, so #19 is not complete.
 
-The gate uses Unreal 5.8.3's bundled standalone Python 3.11.8. It directly parses all ten hydrated FBX files rather than trusting their names or the rounded PR table. Their triangle counts, effective dimensions and pivots agree with their validation JSON snapshots. Direct FBX inspection also checks raw geometry/node scale, the UV channel, finite normals, slots and material-face assignments. It verifies raw SHA-256/size against committed LFS pointers and checks LFS attributes. Text metadata hashes normalize LF newlines; binary hashes retain raw bytes.
+## Passed
 
-The default dry run validates the source/manifest/project structure and prints exactly ten mesh and three material destinations inside HCA2_Props, with correct assembly offsets, both statue variants and pending collision/visual work. It creates no files or Unreal objects. The gate records protected source/Content file state before/after and checks ownership against Git. Python syntax is compiled in memory without generating pycache.
+- All ten hydrated FBX SHA-256 hashes/sizes match committed LFS pointers. Direct FBX inspection agrees with validation metadata, effective cm dimensions, base-centered pivots and material slots.
+- The current offline gate passed 22 safety tests, Python syntax, source/hash/metadata checks, default read-only dry run and destination isolation. Repeat dry runs report existing destinations; execution still refuses overwrites.
+- Ten meshes and three M_Stylized instances were imported through FbxFactory/editor APIs. The shared parent was never modified.
+- Exported normals are preserved and MikkTSpace tangents are recomputed. Full-fidelity Nanite fallbacks restore the authored bounds; five opaque meshes use Nanite and five plate parts do not.
+- Simple collision is present on all meshes: six single boxes, two boxes on each statue/altar, eight split frame boxes.
+- Five art Blueprints compile without warnings/errors. Both true and false pose branches are inspected, then compiled after inspection because UE 5.8.3's graph reader marks assets dirty.
+- Live physics/pose tests verify all four +9/+2 cm plate endpoints and 7 cm contact-height changes, gate 0/+400 cm endpoints, closed pawn-size blocking/open passage clearance, and altar contact at Z97.
+- Nine art-test placements and eleven main-map placements were saved only in HC-owned maps. The HC test map uses L_StyleTest as a template; the shared map file is unchanged.
 
-The safety suite exercises default offline and simulated-editor read-only behavior, missing execution opt-in/project path, wrong project/version, occupied registry and disk destinations, source/metadata hash changes, LFS pointers, missing Tint/translucent parent, path escapes, assembly changes and Nanite threshold errors. The editor used for these tests is a small fake read-only API surface: **these are safety-unit tests, not live Unreal validation**.
+See `evidence/editor_import.json`, `compound_collision.json`, `pose_graphs.json`, `editor_verification.json`, `nanite_fallback.json` and `tangent_finalize.json`. Historical recovery records are retained separately and are not passing-gate evidence.
 
-See [offline_validation.json](evidence/offline_validation.json), [dry_run.json](evidence/dry_run.json) and [safety_tests.txt](evidence/safety_tests.txt) for the captured results and hashes. The manifest carries the complete per-source records.
+## Visual review
 
-Installed 5.8.3 headers were read offline to check AssetImportTask, FbxImportUI/static-mesh import properties, material parameter APIs, StaticMeshEditorSubsystem collision/UV/Nanite methods and StaticMesh bounds. Installed AssetTools.cpp confirms a specified FbxFactory bypasses the Interchange import route. These checks support the implementation but do not prove the generated editor-Python bindings or actual imports work.
+The renderer captured six actual images; this is not a mockup. In `symbols_and_statues.png` and the actual 800×450 `symbols_half_screen.png`, the four symbols read distinctly and both owl sizes/altar retain the supplied shapes. The test lighting is deliberately strong amber with teal fill; `gate_closed.png` is overlit, so it establishes geometry rather than proving the final cave-light balance.
 
-Supporting public API references: [Epic FBX static-mesh import settings](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/FbxStaticMeshImportData?application_version=4.27) and [Epic ScriptCollisionShapeType](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/ScriptCollisionShapeType?application_version=5.6). Public 5.8 Python API pages were unavailable during this pass; the installed 5.8.3 headers were the version-specific reference.
+The main-map renders show unresolved environment integration: `site_gate_g1.png` is very dark, and `site_altar.png` shows the altar outside a usable enclosing cavern. Gate upper-space probes found no rock across sampled Z525/650/825 at G1/G2/G3. `gate_open.png` shows the leaf's full upward travel in the test gallery; that exposure is intentional for assembly review, not a claimed concealed cave gate.
 
-Actual imports, runtime API execution, material compilation, collision authoring/physics, assembly, cave lighting, other-platform appearance, PIE, split-screen and placement **have not run and remain pending**. The compound props deliberately have no automatic collision. Issue #19 remains open with its original import/test/placement steps pending.
+Consequently, **main-cave placement, lighting and leaf concealment remain pending HZ work/review**. No HZ geometry or lighting was modified, no leaf was hidden, no travel was shortened and no asset was resized to mask the issue. The concrete gate clearance/enclosure requirements are in `enclosure_plan.json`.
+
+## Client scope
+
+`client_checks.json` records 2/3/4 Play As Client asset-presence and initial-pose checks plus the current split-screen result. The 2/3/4-player asset-presence/initial-pose checks and two-local-controller check passed. `split_screen00000.png` confirms two local views, but both players fall at the planned puzzle coordinates, reinforcing the main-map floor/geometry blocker. These checks establish static-art loading and local view creation, not final visual acceptance or gameplay RPC transport. Carrying, pressure-plate counting, GameMode gate/round decisions and altar relic interaction belong to HC-4/5/6 and are not implemented by art fixtures.
+
+Physical gamepad routing, teammate Mac appearance/fallback checks and a final team playtest are not established by this Windows automation. The minimum-kit other-platform requirement in docs/assets.md remains pending.
+
+## Practical editor findings
+
+- Python commandlets lack StaticMeshEditorSubsystem; use a full editor for this importer.
+- UE 5.8.3's material vector setter returns false after successfully setting. The importer verifies the actual override/value.
+- Automatic Nanite fallback simplification distorted fitted bounds; 100% fallback triangles/zero error preserve them.
+- Generic unsaved World duplication followed by load caused a GC crash. The delivery uses LevelEditorSubsystem.new_level_from_template instead.
+- The Blueprint DSL requires an explicit `(else ...)`. Both branches are independently exercised; compile success alone was not accepted as pose correctness.
+
+The original dirty checkout, source art, Core, Player, Hazards, shared materials/maps and project settings are preserved. No hosted subagents were used. #19 must remain open until the remaining art acceptance criteria pass.
+
+Upstream HC-1 integration: the final rebase retained its three test interactables in L_Site01_HC, then added the eleven HC-A2 actors through the editor. See evidence/upstream_integration.json. No older binary map replaced the upstream map.

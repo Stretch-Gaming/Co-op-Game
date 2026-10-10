@@ -21,7 +21,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -43,7 +44,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -65,7 +67,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -87,7 +90,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -109,7 +113,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -132,7 +137,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: plinth box plus owl capsule or box; preserve sling silhouette. Verify carry/placement collision later.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -155,7 +161,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: independently fitted plinth box plus owl capsule or box at 1.1 m; do not reuse 1.8 m hull unscaled.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -177,7 +184,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: two fitted boxes for pedestal and capstone; check 40 cm socket and relic base at Z=97. A capstone box must not block required relic interaction.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -199,7 +207,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: separate post and lintel boxes with 400x400 cm passage clear. Preserve 34 cm X slot; split front/back hulls if the leaf must collide with the frame. Never fit one box/convex hull to the entire frame.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     },
     {
@@ -221,7 +230,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       }
     }
   ],
@@ -295,7 +305,21 @@
       "selection": "pending owner decision"
     }
   },
-  "disk_conflicts": [],
+  "disk_conflicts": [
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone",
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving",
+    "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle",
+    "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Statue_Small",
+    "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+    "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame",
+    "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf"
+  ],
   "editor_checks": "not run (offline)",
   "remaining": [
     "compound collision authoring",
@@ -304,5 +328,6 @@
     "cave light and split-screen checks",
     "statue selection",
     "map placement and gameplay verification"
-  ]
+  ],
+  "execution_ready": false
 }

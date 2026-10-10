@@ -1,0 +1,7 @@
+{
+  "new_partial_asset": "/Game/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond",
+  "untracked": true,
+  "unplaced": true,
+  "reason": "Node lookup ambiguity, before successful assembly validation",
+  "sha256_before_cleanup": "55f8f7b5b1d78c006c33d0d4b040dc072c8aa9684fd4b819192ec213e0f35a73"
+}

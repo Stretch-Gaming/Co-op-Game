@@ -1,43 +1,31 @@
-# HC-A2 puzzle-prop import tooling
+# HC-A2 puzzle props
 
-Offline delivery for Stretch's HC lane, [issue #19](https://github.com/Stretch-Gaming/Co-op-Game/issues/19), using the existing sources from [merged PR #66](https://github.com/Stretch-Gaming/Co-op-Game/pull/66). No source regeneration, Unreal imports, actor placement or in-game checks were performed.
+Stretch's HC lane delivery for [#19](https://github.com/Stretch-Gaming/Co-op-Game/issues/19), from the existing team-authored sources in merged PR #66. The original FBX files and validation metadata are unchanged.
 
-## Files and authority
+## Delivered
 
-- `manifest.json`: ten FBX paths, raw-byte SHA-256 hashes/sizes, complete validation JSON snapshots and hashes, direct FBX inspection, material slots, Nanite choices, collision plans and assembly contracts.
-- `import_hc_a2.py`: read-only by default; asset creation requires `--execute` and an exact absolute `--project-file`.
-- `source_audit.py`: standard-library binary FBX reader and fail-closed manifest checks.
-- `validate_offline.py`, `test_safety.py`: offline acceptance gate and refusal tests.
-- `evidence/`: recorded default dry run, test results and source/LFS/syntax/isolation evidence.
+- Ten imported meshes and three uniquely named M_Stylized instances under `/Game/Puzzles/Art/HCA2_Props/`.
+- Five Blueprint art assemblies in `HCA2_Props/Assemblies/`: diamond/circle/triangle/cross plates and the chamber gate.
+- `/Game/Puzzles/Test/L_HCA2_Props`, created through the editor's level-template API from L_StyleTest. Its copied lighting/reference assets and HC-owned test fixtures support comparison without modifying the shared map.
+- Eleven art-only placements in `L_Site01_HC`: four symbol plates, three 1.8 m statues in the documented alcoves, the altar, and G1/G2/G3. The starting main branch had no HC puzzle greyboxes or gameplay actors to replace.
+- Both statue variants remain available. Alcove placement uses #19's 1.8 m specification; the 1.1 m version appears beside it in the test map. No carry variant is silently selected.
 
-All proposed writes are the ten meshes directly under `/Game/Puzzles/Art/HCA2_Props/` and three uniquely named material instances in its `Materials/` child. The shared parent `/Game/Shared/Style/M_Stylized` is read-only. The tool does not create actors, Blueprints, maps, textures, plugins or project settings.
+These are art assemblies, with cosmetic `SetPressedVisual` and `SetOpenVisual` functions. Gameplay authority, carrying, puzzle counts and round completion belong to HC-4/5/6. The future gameplay owner must drive the cosmetic functions from server-owned replicated state. There are no new input, HUD, GameMode or round-state changes in this delivery.
 
-Read `AGENTS.md`, `docs/assets.md`, `docs/art/style.md` and `docs/mcp.md` before the later editor pass. PG-A0's import presets are still an unfilled section in `docs/assets.md`. These are explicit settings derived from the supplied files and PR #66; they still need editor verification.
+## Importer and repeat runs
 
-## Offline use
+`manifest.json` records source paths, raw SHA-256/sizes, validation JSON snapshots/hashes, direct FBX metadata, material slots, destinations, collision plans and assembly contracts. Binary hashes use raw bytes; text hashes normalize UTF-8/LF to follow the repository's Windows/Mac policy.
 
-From the checkout containing this tooling, with Python 3.11+:
+From the checkout containing this tool:
 
 ```powershell
 python -B Tools/unreal/hc_a2_import/import_hc_a2.py
 python -B Tools/unreal/hc_a2_import/validate_offline.py
 ```
 
-Both commands default to no writes. To refresh reports **inside this tooling folder only**, run:
+Both default to read-only operation. A repeat dry run reports occupied destinations and `execution_ready: false`. It never changes existing assets. `validate_offline.py --write-evidence` explicitly refreshes reports inside this tooling directory.
 
-```powershell
-python -B Tools/unreal/hc_a2_import/validate_offline.py --write-evidence
-```
-
-The tools require hydrated FBX files and the read-only parent material. Existing LFS objects may be hydrated with Git LFS in the chosen checkout; this does not regenerate them. The gate compares all ten binary file hashes and sizes against their committed LFS pointers, checks metadata, parses triangulated geometry, slot assignments, finite UVs/normals, base-centered bounds and the FBX scene/node settings. JSON/text hashes use UTF-8 with LF newlines to follow Git's Mac/Windows normalization; FBX and material hashes use raw bytes.
-
-The default dry run reports offline editor checks as **not run**. It cannot inspect the live asset registry or evaluate shaders, collision, lighting or replication.
-
-## Later opt-in editor use
-
-This is a separate HC editor pass, outside this offline delivery. Save unrelated work first, stop PIE, and open **the same checkout's** `CoopGame.uproject` in Unreal **5.8.3**. Do not run this copy against a different open checkout. PythonScriptPlugin is already enabled in the inspected project; this tooling never changes plugin settings. Hydrate any existing shared style dependencies before loading the parent.
-
-In the editor's Python console:
+Actual asset creation requires the same checkout open in Unreal **5.8.3** and an explicit call:
 
 ```python
 import sys
@@ -47,77 +35,68 @@ project_file = Path(unreal.Paths.convert_relative_path_to_full(
     unreal.Paths.get_project_file_path())).resolve()
 sys.path.insert(0, str(project_file.parent / "Tools/unreal/hc_a2_import"))
 import import_hc_a2
-import_hc_a2.run([])  # read-only: project/version, parent/Tint and destination registry checks
-```
-
-Review the printed plan and empty conflicts. Explicit asset creation is a separate call:
-
-```python
+import_hc_a2.run([])
 import_hc_a2.run(["--execute", "--project-file", str(project_file)])
 ```
 
-Execution verifies the exact project path, Blueprint-only project association, engine patch version, pinned source and parent hashes, opaque parent material, Tint parameter and required editor APIs. It prepares import options before any creation and refuses any planned package already on disk or registered in the editor. It rechecks each destination immediately before creation. A junction/symlink resolving outside the target folder is rejected.
+Execution verifies the exact project, engine patch version, Blueprint-only association, source/parent hashes, opaque M_Stylized/Tint and destination isolation. All thirteen destinations must be unoccupied before creation. There is no force, overwrite, skip-existing or reimport flag. A second execution refuses the whole batch. Partial failures are not atomic; inspect and repair through editor APIs, never .uasset/.umap bytes on disk.
 
-There is **no overwrite, skip-existing, force or reimport flag**. A repeat execution after a successful run refuses the entire batch before creation; it does not retint, reset collision or replace a reviewed asset. An editor dry run also reports/refuses occupied destinations. Later intentional reimports must be performed through editor APIs in a separately reviewed HC pass, preserving materials, assemblies and reviewed collision.
+The `editor_*.py` files are bounded authoring/verification scripts for a full editor. Running an authoring script is an explicit write action; scripts refuse unexpected existing assets or collision. The importer is the safe default entry point. Do not use editor-only StaticMeshEditorSubsystem authoring through a Python commandlet; live testing confirmed that subsystem is unavailable there.
 
-Execution is **not atomic**. A failed import/check/save can leave partial unsaved assets in memory or saved packages. It reports failure without deleting or rolling back assets. Inspect the log and only the named HCA2_Props packages before deciding whether to finish or clean up through editor APIs. No automatic retries. Never edit, remove or fabricate .uasset/.umap bytes on disk.
+## Validated settings
 
-## Import and material settings
+The legacy FbxFactory keeps the explicit FbxImportUI settings effective without changing project/Interchange settings. Import scale is **1.0**, translation/rotation zero, scene/unit conversion enabled, `force_front_x_axis=False`, `transform_vertex_to_absolute=True` and `bake_pivot_in_vertex=False`. The FBX stores meter-sized numeric vertices under its supplied 100x node scale while declaring cm; bake that node transform once and do not add another 100x scale.
 
-Use the legacy `FbxFactory` explicitly, with `AssetImportTask`, to keep `FbxImportUI` settings effective without changing Interchange or project settings. Import static meshes only, combine the single render geometry, disable material/texture/animation/LOD imports, disable automatic collision and generated lightmap UVs, and import the exported normals/tangents to preserve PR #66's flat-face shading fix.
+Material/texture/animation/LOD imports and automatic collision are disabled. The exported normals are preserved; Unreal recomputes tangents with MikkTSpace, resolving the nearly-zero imported-tangent issue. No source shading or geometry is regenerated.
 
-Import scale is **1.0**, translation/rotation zero, scene and scene-unit conversion enabled, `force_front_x_axis=False`, `transform_vertex_to_absolute=True`, `bake_pivot_in_vertex=False`. The supplied FBX declares centimeters/Z-up but stores meter-sized vertex coordinates under a 100x node scale and approximately 180-degree Z rotation. Bake that node transform once; never multiply import scale by 100. The importer checks imported bounds/pivot to 0.5 cm and the one source UV channel before saving. Facing still needs a visual +X check.
+M_Stylized is read-only. Its Tint override is verified by reading the actual value and override flag because UE 5.8.3's vector setter returns false even after setting successfully. Gradient, roughness, edge, mask and world-aligned values inherit the master.
 
-Read-only binary inspection of M_Stylized found `BLEND_Opaque`, `Tint`, gradient, edge, roughness and world-aligned/mask parameter names. The importer confirms the parent and Tint through editor APIs before execution. Proposed instances:
-
-| Imported slot | Instance inside HCA2_Props/Materials | sRGB tint |
+| Imported slot | Instance in HCA2_Props/Materials | sRGB tint |
 | --- | --- | --- |
 | M_Stone | MI_HCA2_Stone | #7A6E68 |
 | M_StoneCarving | MI_HCA2_StoneCarving | #4A4652 |
 | M_Rope | MI_HCA2_Rope | #C9A66B |
 
-Tint values are converted from sRGB to linear for Unreal LinearColor. Gradient, edge, roughness, mask and world-aligned settings inherit the shared master's defaults. Slot assignment uses the imported slot names/order and aborts if these differ. No material is substituted for M_Stylized and the parent is never modified or saved.
+Tint is converted from sRGB to linear. No prop textures were supplied; the procedural painted material is used. Later large-prop textures must follow the documented 2K, sRGB base-color, DirectX Normalmap and linear packed R=AO/G=roughness/B=metallic rules.
 
-No textures were supplied for these props; use the procedural painted material. Any later large-prop textures follow the documented **2K**, sRGB base color, DirectX Normalmap and packed linear R=AO/G=roughness/B=metallic rules. The shared curvature bake remains a PG-A0 follow-up.
+Nanite is enabled for the opaque altar, both statues, frame and leaf (source triangles above 2,000), and disabled for all plate parts. Fallback uses **100% triangles and zero relative error**: automatic simplification expanded the narrow frame's bounds, so the full authored geometry is retained for fit and non-Nanite systems. FBX import first keeps Nanite disabled so fit checks use authored geometry; the final build enables the planned five meshes with the explicit full-fidelity fallback. Source bounds are rechecked after that build.
 
-Nanite is enabled only for the opaque **altar, both statues, gate frame and gate leaf**, each above 2,000 source triangles. It remains disabled on the plate base and all four tops. Settings are applied through StaticMeshEditorSubsystem, including the build/apply step. If a later material becomes translucent, disable Nanite and revalidate; do not reuse this opaque plan unchanged. Check fallback appearance on the other platform, including older Macs where available.
+PG-A0's preset section in docs/assets.md is still unfilled. These explicit settings have now been exercised in the Windows 5.8.3 editor; this does not claim that a Mac preset or Mac appearance check passed.
 
-## Assembly instructions for the later HC pass
+## Assemblies
 
-Use component-relative offsets with actor/component scale **(1,1,1)** and base-centered pivots. Do not resize or recenter the supplied art to force a fit.
+Use actor/component scale (1,1,1), base-centered pivots and component-relative transforms.
 
-| Assembly | Required placement |
+| Assembly | Preserved contract |
 | --- | --- |
-| Plate | Base at actor origin. One selected symbol top at **(0,0,+9 cm)** raised, **(0,0,+2 cm)** pressed. Travel **7 cm down**. All four symbol tops remain available; mapping is an owner decision. |
-| Gate | Frame at actor origin. Leaf **(0,0,0)** closed, **(0,0,+400 cm)** open. Travel **400 cm up**; retain the full travel. |
-| Altar | Front faces +X. Relic base at **(0,0,97 cm)** in the 40 cm diameter, 3 cm deep socket. |
-| Statues | Preserve both 1.8 m SM_Statue and 1.1 m SM_Statue_Small. Front faces +X. Selection, carry attachment and camera clearance remain owner decisions. |
+| Each plate | Base at origin; top raised **Z +9 cm**, pressed **Z +2 cm**, travel **7 cm down**. |
+| Gate | Frame at origin; leaf closed **Z 0**, open **Z +400 cm**, travel **400 cm up**. |
+| Altar | Front +X; relic base **(0,0,97 cm)** in the 40 cm diameter, 3 cm deep socket. |
+| Statues | 1.8 m and 1.1 m variants retained, fronts +X. |
 
-The gate's **400 cm Y opening × 400 cm height is its passage, not its full mesh bounds**. The actual frame is **156 × 708.8224 × 511.2001 cm**, including rubble; the leaf is **30.4 × 430 × 450 cm**. Passage runs along X; the leaf slot is centered at X=0 and 34 cm wide. The leaf top reaches **850 cm** when open. HZ must provide enough enclosing rock above the lintel; flag inadequate cave clearance for coordination. Do not shorten travel, redesign the gate or silently hide the leaf in this tooling.
+The gate's **400 cm Y opening × 400 cm height** is its passage. Full frame bounds are **156 × 708.8224 × 511.2001 cm**, including rubble; the leaf is **30.4 × 430 × 450 cm**. Passage is along X; the centered X slot is 34 cm wide. Open leaf top is **Z 850 cm**. Never resize/recenter the art or shorten travel to force a fit.
 
-Later assembly/greybox replacement belongs in HC-owned Blueprints/test map and `L_Site01_HC`, with that sublevel current. Check both travel extremes and intermediate positions. Never place these into a persistent map during this pass. Do not create saved actor references across lanes.
+Symbol placement is explicit: diamond (32,-8 m), circle (32,+8 m), triangle (48,-8 m), cross (48,+8 m). Gates remain at the documented 25/55/115 m X positions and the altar at X108 m. All new main-map actors belong to L_Site01_HC, with no cross-sublevel actor references.
 
-## Collision and later acceptance
+## Simple collision
 
-The importer adds **one fitted simple box** to the plate base, each top and the gate leaf. These six boxes still require visual/physics verification. It sets simple-and-complex query behavior, never complex-as-simple; use simple collision for gameplay/physics.
+All ten meshes now have simple collision, with simple-and-complex query behavior, never complex-as-simple:
 
-The four compound props are intentionally imported with **zero simple shapes**, marked pending, because automatic whole-mesh hulls would lose the spaces that must stay clear. They are **not ready for gameplay placement** until this editor work is complete:
+- Plate base, each top and leaf: one fitted box.
+- Each statue: separately scaled plinth and owl boxes.
+- Altar: pedestal and capstone boxes; capstone collision stops at Z97 so the socket base remains accessible.
+- Frame: eight split post/core/lintel boxes. The 4×4 m passage and 34 cm X slot stay clear; the cores start at Y ±218 cm, beyond the leaf ends at ±215 cm.
 
-| Prop | Manual simple collision plan |
-| --- | --- |
-| Each statue | Plinth box plus owl capsule or box, fitted independently at the supplied size. Check rope, carrying and seating on the 1.8 m top. |
-| Altar | Two boxes for pedestal and capstone. Check socket/relic interaction at Z=97; fit the capstone collision so it does not obstruct the intended interaction. |
-| Gate frame | Separate post/lintel boxes with the 4×4 m passage clear. Preserve the 34 cm slot; split front/back hulls where the moving leaf needs that slot clear. No whole-frame box or convex hull across the opening. |
+Live checks verified all four 7 cm surface-height changes, closed-gate blocking/open-gate clearance with a pawn-size sweep, and the altar contact surface at Z97. The precise box ranges are in `evidence/compound_collision.json`.
 
-Author these shapes in the Static Mesh Editor/editor APIs; never modify the FBX, regenerate art or add C++ to solve collision. Inspect simple-collision overlays, test a pawn through the open gate along X, and verify the closed leaf blocks correctly. Check plate standing/stepping and both top heights, statue seating/carry clearance and the altar socket. Movement and puzzle state remain server-owned gameplay work, outside this folder.
+## Remaining completion requirements
 
-Remaining checks, all **pending**:
+Read `VALIDATION.md` and the current captured evidence. Do not treat historical offline results as live gameplay proof.
 
-- Inspect materials/shaders and flat faces, scale against the 1.8 m character, +X facing, UVs, each slot and Nanite/fallbacks.
-- In `L_StyleTest`, lock the shared map before adding anything and coordinate its owner; save only authorized packages. Compare against example props under the cave lights. Use HC's test map for HC-only assembly work.
-- Under warm torch pools, cold crystal fill and blue-violet shadows, check all four symbols at half-screen resolution, matte painted stone, rope visibility and reserved colors. Do not tint decorative props relic gold/jade, ghost white or trap red.
-- Check both statue variants in first/third person and split-screen before the owner selects a carry variant. Verify the gate's rock envelope up to Z=850 cm with HZ.
-- Finish HC test-map checks, then replace greyboxes in the HC sublevel. Compile affected Blueprints; check Output Log and Accessed None. Run Play As Client with 2, 3 and 4 players and a second local split-screen player for relevant view/input work.
-- Save only HC-owned/locked assets; verify Git/LFS scope before the later asset push. Leave issue #19's import and placement steps unchecked until those gates actually pass.
+- Gate concealment needs the HZ owner's enclosing-rock review/work up to Z850. The current cave probes found no rock across the sampled upper-leaf space. This delivery preserves the leaf and travel and does not edit HZ's cave or hide it to conceal the problem.
+- Other-platform appearance/fallback checks remain necessary under docs/assets.md. A Windows run cannot establish a Mac result.
+- Carry/view choice and the eventual pressure-plate/statue/altar/gate gameplay hookup remain the consuming HC phases. There were no existing HC gameplay greyboxes to swap.
 
-The sources are team-authored scripted Blender work, with public redistribution/no-credit status recorded on #19 and PR #66. No new third-party assets or credits are introduced.
+Only tick or close #19 when the applicable art acceptance gates have actually passed. Do not claim missing gameplay or external-platform checks passed. Shared materials, shared maps, core assets, source art, project settings and the original dirty checkout are preserved.
+
+Upstream HC-1 integration: the final rebase retained its three test interactables in L_Site01_HC, then added the eleven HC-A2 actors through the editor. See evidence/upstream_integration.json. No older binary map replaced the upstream map.

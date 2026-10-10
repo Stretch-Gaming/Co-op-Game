@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "meshes": [
+    {
+      "name": "SM_PressurePlate_Base",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Circle",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Triangle",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_PressurePlate_Top_Cross",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    },
+    {
+      "name": "SM_Statue",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_Statue_Small",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_Altar",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 2
+    },
+    {
+      "name": "SM_ChamberGate_Frame",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 8
+    },
+    {
+      "name": "SM_ChamberGate_Leaf",
+      "source_normals_preserved": true,
+      "tangents_recomputed": true,
+      "simple_collision_count": 1
+    }
+  ]
+}

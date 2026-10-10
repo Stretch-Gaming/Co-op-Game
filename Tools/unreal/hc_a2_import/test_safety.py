@@ -26,7 +26,8 @@ class SafetyTests(unittest.TestCase):
         subsystem = SimpleNamespace(**{
             name: Mock(side_effect=AssertionError("Mutation or unexpected mesh call in dry run"))
             for name in ("get_nanite_settings", "set_nanite_settings", "add_simple_collisions",
-                         "remove_collisions", "get_simple_collision_count", "get_num_uv_channels")})
+                         "remove_collisions", "get_simple_collision_count", "get_num_uv_channels",
+                         "get_lod_build_settings", "set_lod_build_settings")})
         fake = SimpleNamespace(
             Paths=SimpleNamespace(
                 get_project_file_path=lambda: str(project or importer.PROJECT_ROOT / "CoopGame.uproject"),
@@ -163,6 +164,27 @@ class SafetyTests(unittest.TestCase):
         gate = next(a for a in self.manifest["assets"] if a["name"] == "SM_ChamberGate_Frame")
         self.assertGreater(gate["validation_metadata"]["dimensions_cm"][1], 700)
         self.assertEqual(self.manifest["assemblies"]["chamber_gate"]["opening_yz_cm"], [400, 400])
+
+    def tint_api(self, *, overridden=True, wrong=False):
+        tint = importer.srgb_to_linear("#7A6E68")
+        factory = lambda *v: SimpleNamespace(**dict(zip(("r","g","b","a"),v)))
+        value = factory(*(tint if not wrong else [1,1,1,1]))
+        return SimpleNamespace(LinearColor=factory, MaterialEditingLibrary=SimpleNamespace(
+            set_material_instance_vector_parameter_value=lambda *args: False,
+            get_material_instance_vector_parameter_value=lambda *args: value,
+            is_material_instance_parameter_overridden=lambda *args: overridden,
+            update_material_instance=lambda *args: None))
+
+    def test_false_setter_return_with_correct_override_is_accepted(self):
+        importer.assign_tint(self.tint_api(), object(), "#7A6E68")
+
+    def test_missing_actual_override_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "read-back failed"):
+            importer.assign_tint(self.tint_api(overridden=False), object(), "#7A6E68")
+
+    def test_wrong_tint_readback_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "read-back failed"):
+            importer.assign_tint(self.tint_api(wrong=True), object(), "#7A6E68")
 
     def test_palette_conversion_uses_linear_color(self):
         self.assertEqual(importer.srgb_to_linear("#000000"), [0, 0, 0, 1])

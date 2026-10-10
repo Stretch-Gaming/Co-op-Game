@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "mode": "Play As Client",
+      "players": 2,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 2,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Play As Client",
+      "players": 3,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 3,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Play As Client",
+      "players": 4,
+      "worlds": [
+        {
+          "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 4,
+          "local_controllers": 0
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_3_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        },
+        {
+          "world": "/Game/Maps/UEDPIE_4_L_Site01.L_Site01",
+          "art_actors": 11,
+          "controllers": 1,
+          "local_controllers": 1
+        }
+      ]
+    },
+    {
+      "mode": "Listen server split-screen",
+      "local_players": 2,
+      "world": {
+        "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+        "art_actors": 11,
+        "controllers": 2,
+        "local_controllers": 2
+      }
+    }
+  ],
+  "settings_restored": true,
+  "split_screenshot_saved": true,
+  "scope": "Asset loading, static poses and local views only; gameplay RPC/carry/round logic is not implemented or claimed.",
+  "baseline": "Upstream HC-1 plus preserved HC-A2 art additions after binary-map integration.",
+  "split_screenshot": "split_screen00001.png",
+  "split_visual_result": "Two local views are present; both players fall at planned puzzle coordinates. Main-cave floor/geometry readiness has not passed."
+}

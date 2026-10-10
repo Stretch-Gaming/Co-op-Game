@@ -47,11 +47,14 @@
     "combine_meshes": true,
     "import_materials": false,
     "import_textures": false,
-    "normal_import_method": "FBXNIM_IMPORT_NORMALS_AND_TANGENTS",
+    "normal_import_method": "FBXNIM_IMPORT_NORMALS",
     "generate_lightmap_u_vs": false,
     "auto_generate_collision": false,
     "import_mesh_lo_ds": false,
-    "preset_status": "Explicit PR #66 settings; PG-A0 presets remain unfilled in docs/assets.md. Confirm in later editor pass."
+    "preset_status": "Explicit PR #66 settings; PG-A0 presets remain unfilled in docs/assets.md. Confirm in later editor pass.",
+    "tangent_policy": "Preserve exported normals; recompute tangents with MikkTSpace in Unreal. Live import reported nearly-zero source tangents.",
+    "build_nanite_during_fbx_import": false,
+    "nanite_activation_stage": "After source bounds/slots, tangent build and simple collision, apply planned enabled state plus full-fidelity fallback settings."
   },
   "materials": [
     {
@@ -231,7 +234,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -337,7 +341,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -443,7 +448,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -549,7 +555,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -655,7 +662,8 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -764,7 +772,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: plinth box plus owl capsule or box; preserve sling silhouette. Verify carry/placement collision later.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "+X source front; verify after FBX scene conversion"
     },
@@ -873,7 +882,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: independently fitted plinth box plus owl capsule or box at 1.1 m; do not reuse 1.8 m hull unscaled.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "+X source front; verify after FBX scene conversion"
     },
@@ -979,7 +989,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: two fitted boxes for pedestal and capstone; check 40 cm socket and relic base at Z=97. A capstone box must not block required relic interaction.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "+X source front; verify after FBX scene conversion"
     },
@@ -1085,7 +1096,8 @@
       "collision": {
         "automatic": "none",
         "later_plan": "Editor: separate post and lintel boxes with 400x400 cm passage clear. Preserve 34 cm X slot; split front/back hulls if the leaf must collide with the frame. Never fit one box/convex hull to the entire frame.",
-        "status": "pending manual compound collision"
+        "status": "pending manual compound collision",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     },
@@ -1191,9 +1203,23 @@
       "collision": {
         "automatic": "one_fitted_box",
         "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
-        "status": "pending editor verification"
+        "status": "pending editor verification",
+        "delivered_status": "authored and verified; see evidence/compound_collision.json and editor_verification.json"
       },
       "facing": "see assembly contract"
     }
-  ]
+  ],
+  "nanite_fallback": {
+    "percent_triangles": 1.0,
+    "relative_error": 0.0,
+    "reason": "Full authored geometry retained for predictable fitted bounds and non-Nanite platforms; automatic fallback distorted frame bounds in live validation."
+  },
+  "delivery_validation": {
+    "import": "Windows UE5.8.3 editor passed",
+    "source_files": "unchanged",
+    "collision": "all ten meshes authored and verified",
+    "assemblies": "all five compiled, both endpoints and simple physics verified",
+    "main_cave_visual_acceptance": "failed/pending HZ environment integration",
+    "mac_appearance": "not run"
+  }
 }

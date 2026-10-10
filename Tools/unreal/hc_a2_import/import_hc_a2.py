@@ -20,6 +20,17 @@ def srgb_to_linear(hex_color):
             for v in values] + [1.0]
 
 
+def assign_tint(unreal, instance, hex_color):
+    tint = unreal.LinearColor(*srgb_to_linear(hex_color))
+    # UE 5.8.3 sets this override but its setter returns false unconditionally.
+    unreal.MaterialEditingLibrary.set_material_instance_vector_parameter_value(instance, "Tint", tint)
+    actual = unreal.MaterialEditingLibrary.get_material_instance_vector_parameter_value(instance, "Tint")
+    require(unreal.MaterialEditingLibrary.is_material_instance_parameter_overridden(instance, "Tint")
+            and all(abs(getattr(actual, c) - getattr(tint, c)) < 0.00001
+                    for c in ("r", "g", "b", "a")), "Tint override read-back failed")
+    unreal.MaterialEditingLibrary.update_material_instance(instance)
+
+
 def load_plan():
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8-sig"))
     sources = verify_sources(PROJECT_ROOT, manifest)
@@ -30,7 +41,7 @@ def load_plan():
         "convert_scene": True, "convert_scene_unit": True, "force_front_x_axis": False,
         "transform_vertex_to_absolute": True, "bake_pivot_in_vertex": False,
         "combine_meshes": True, "import_materials": False, "import_textures": False,
-        "normal_import_method": "FBXNIM_IMPORT_NORMALS_AND_TANGENTS",
+        "normal_import_method": "FBXNIM_IMPORT_NORMALS",
         "generate_lightmap_u_vs": False, "auto_generate_collision": False,
         "import_mesh_lo_ds": False,
     }
@@ -38,6 +49,8 @@ def load_plan():
             "Import settings differ from importer contract")
     require(manifest["engine_version"] == "5.8.3"
             and manifest["project"] == "CoopGame.uproject", "Wrong target project/version")
+    require(manifest["nanite_fallback"]["percent_triangles"] == 1.0
+            and manifest["nanite_fallback"]["relative_error"] == 0.0, "Fallback must preserve source geometry")
     return manifest, sources
 
 
@@ -82,7 +95,8 @@ def editor_preflight(unreal, manifest, project_file):
     subsystem = unreal.get_editor_subsystem(unreal.StaticMeshEditorSubsystem)
     require(subsystem is not None, "Require StaticMeshEditorSubsystem")
     for name in ("get_nanite_settings", "set_nanite_settings", "add_simple_collisions",
-                 "remove_collisions", "get_simple_collision_count", "get_num_uv_channels"):
+                 "remove_collisions", "get_simple_collision_count", "get_num_uv_channels",
+                 "get_lod_build_settings", "set_lod_build_settings"):
         require(callable(getattr(subsystem, name, None)), "Missing editor API: " + name)
     for name in ("AssetImportTask", "FbxImportUI", "FbxFactory", "MaterialInstanceConstantFactoryNew",
                  "ScriptCollisionShapeType"):
@@ -117,9 +131,9 @@ def import_options(unreal, asset):
         "convert_scene": True, "convert_scene_unit": True, "force_front_x_axis": False,
         "transform_vertex_to_absolute": True, "bake_pivot_in_vertex": False,
         "combine_meshes": True, "auto_generate_collision": False,
-        "build_nanite": asset["nanite"], "generate_lightmap_u_vs": False,
+        "build_nanite": False, "generate_lightmap_u_vs": False,
         "import_mesh_lo_ds": False,
-        "normal_import_method": unreal.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS_AND_TANGENTS,
+        "normal_import_method": unreal.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS,
     }.items():
         data.set_editor_property(key, value)
     return options
@@ -163,10 +177,7 @@ def execute(unreal, manifest, parent, subsystem):
                     "Material creation returned unexpected path")
             created.append(instance)
             unreal.MaterialEditingLibrary.set_material_instance_parent(instance, parent)
-            require(unreal.MaterialEditingLibrary.set_material_instance_vector_parameter_value(
-                instance, "Tint", unreal.LinearColor(*srgb_to_linear(material["tint_srgb_hex"]))),
-                "Tint override failed")
-            unreal.MaterialEditingLibrary.update_material_instance(instance)
+            assign_tint(unreal, instance, material["tint_srgb_hex"])
             materials[material["slot"]] = instance
         for asset, options in prepared:
             package = asset["destination"]
@@ -189,6 +200,11 @@ def execute(unreal, manifest, parent, subsystem):
             slots = check_imported_mesh(unreal, subsystem, mesh, asset)
             for index, slot_name in enumerate(asset["material_slots"]):
                 mesh.set_material(index, materials[slot_name])
+            build = subsystem.get_lod_build_settings(mesh, 0)
+            build.set_editor_property("recompute_normals", False)
+            build.set_editor_property("recompute_tangents", True)
+            build.set_editor_property("use_mikk_t_space", True)
+            subsystem.set_lod_build_settings(mesh, 0, build)
             # Explicit simple collision only; never complex-as-simple.
             require(subsystem.remove_collisions(mesh), "Could not clear imported collision")
             if asset["collision"]["automatic"] == "one_fitted_box":
@@ -204,9 +220,12 @@ def execute(unreal, manifest, parent, subsystem):
                                      unreal.CollisionTraceFlag.CTF_USE_SIMPLE_AND_COMPLEX)
             settings = subsystem.get_nanite_settings(mesh)
             settings.set_editor_property("enabled", asset["nanite"])
+            settings.set_editor_property("fallback_percent_triangles", 1.0)
+            settings.set_editor_property("fallback_relative_error", 0.0)
             subsystem.set_nanite_settings(mesh, settings, True)
             require(subsystem.get_nanite_settings(mesh).get_editor_property("enabled")
                     == asset["nanite"], "Nanite setting failed")
+            check_imported_mesh(unreal, subsystem, mesh, asset)
         # Save ONLY the freshly created lane assets, after the batch's checks.
         for obj in created:
             require(obj is not None and obj.get_path_name().split(".")[0] in planned_paths(manifest),
@@ -245,13 +264,14 @@ def run(argv=None):
         import unreal
     except ImportError:
         require(not args.execute, "Execution requires a running Unreal 5.8.3 editor Python session")
-        require(not conflicts, "Destinations already occupied: " + repr(conflicts))
+        report["execution_ready"] = not conflicts
     else:
         parent, subsystem, conflicts, engine = editor_preflight(unreal, manifest, args.project_file)
         report.update(editor_checks="read-only preflight passed", engine=engine,
                       editor_conflicts=conflicts)
-        require(not conflicts, "Refusing occupied destinations: " + repr(conflicts))
+        report["execution_ready"] = not conflicts
         if args.execute:
+            require(not conflicts, "Refusing occupied destinations: " + repr(conflicts))
             report["created_assets"] = execute(unreal, manifest, parent, subsystem)
     print(json.dumps(report, indent=2))
     return report

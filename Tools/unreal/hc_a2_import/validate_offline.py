@@ -71,7 +71,9 @@ def main():
     changed_paths += git("diff", "--cached", "--name-only").splitlines()
     untracked = git("ls-files", "--others", "--exclude-standard").splitlines()
     paths = sorted(set(diff_paths + changed_paths + untracked))
-    if any(not p.startswith("Tools/unreal/hc_a2_import/") for p in paths):
+    def owned(path):
+        return path.startswith(("Tools/unreal/hc_a2_import/", "Content/Puzzles/Art/HCA2_Props/")) or path in ("Content/Puzzles/L_Site01_HC.umap", "Content/Puzzles/Test/L_HCA2_Props.umap")
+    if any(not owned(p) for p in paths):
         raise SystemExit("Changes outside ownership: " + repr(paths))
     evidence = {
         "validated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -86,8 +88,8 @@ def main():
         "manifest_sha256": text_sha256(importer.MANIFEST_PATH),
         "text_hash_convention": "UTF-8 LF normalized; binary FBX/M_Stylized hashes use raw bytes",
         "tool_sha256": {f.name: text_sha256(f) for f in sorted(importer.TOOL_DIR.glob("*.py"))},
-        "editor_launched_or_controlled": False, "actual_import": "not run",
-        "assembly_collision_cave_light_pie_split_screen": "not run; pending later editor pass",
+        "editor_scope": "offline gate only; actual editor evidence is recorded separately",
+        "runtime_checks": "see editor_verification.json, visual_capture.json and client evidence",
     }
     if args.write_evidence:
         folder = importer.TOOL_DIR / "evidence"

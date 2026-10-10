@@ -1,0 +1,153 @@
+{
+  "staged_binary_lfs_hashes_verified": [
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.uasset",
+      "sha256": "944903d36bea9eaa65e21e74347b972f7ac223d9c3dbacea1874625918ceaf6d",
+      "bytes": 50131
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle.uasset",
+      "sha256": "9739b6988a417c706408e5ee70d23a60e98ab58bbbe11c0b2f160b7cf532b5a0",
+      "bytes": 49989
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross.uasset",
+      "sha256": "e55672cff038578b58fa76874b291db3d56c163a1b896bea1c3480b6f72e0997",
+      "bytes": 49914
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond.uasset",
+      "sha256": "2c16717107fbb0fce1ce03b1315282f08e0851055a03e123cb99df59bb5922dd",
+      "bytes": 49961
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle.uasset",
+      "sha256": "51fab582f446435753e5c894d7ef7dd3c68ba0d48bdb6259f92b286f3998f98c",
+      "bytes": 50005
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope.uasset",
+      "sha256": "d4798a20602e83012acdfc19b7c3417ffa72a370d029a74b761b777e1d162e42",
+      "bytes": 7207
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.uasset",
+      "sha256": "11bfd66a8f29cfb70528310a4f38fa44bdc1e089b8d5fd482a48adedd9406006",
+      "bytes": 6918
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.uasset",
+      "sha256": "ecdac4f963faacbfb207117d034d3cbf8478a154b69a4de66ec54ebd36f88481",
+      "bytes": 7120
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Altar.uasset",
+      "sha256": "e6e61146e6d5b11567859925008b3a6b97a6cb809793d1331265c1a2b5eaa451",
+      "bytes": 129487
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame.uasset",
+      "sha256": "978ff74f5fb0720c8e8c75ac061d69eee26a4ab35511c4500107b78a2b7b144a",
+      "bytes": 389128
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf.uasset",
+      "sha256": "f638a90331e8146b851035e78debbcd2720b5be6e15838cd891652870f6b7dcd",
+      "bytes": 92989
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base.uasset",
+      "sha256": "32047c1443099ae62eb091fa756a619519b81e9c68e6399e23bbaf7aa369a4b0",
+      "bytes": 99672
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.uasset",
+      "sha256": "db70bfe5cba80e3c2911c7a537874ad4f3248f9f7fd9c7620e26383ca132d6d5",
+      "bytes": 59012
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle.uasset",
+      "sha256": "dedfb6f2edd08a26cdb53216a0d66f475c1a585b759182b7ae48bc32af7230e5",
+      "bytes": 97478
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross.uasset",
+      "sha256": "55bdc105f060269c03e09693256b69e312823ed9a0a439347f8f43280baf9945",
+      "bytes": 57818
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle.uasset",
+      "sha256": "c250dada2d49889e137d63cae950ed31cf181d9483830fd05dacf80f1c58164b",
+      "bytes": 59991
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Statue.uasset",
+      "sha256": "c0df453fa7b048a89377239fadf142f5aadc8f48056c10a04b6087c1d87dd1f9",
+      "bytes": 356901
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Statue_Small.uasset",
+      "sha256": "7d2a0096d9a7436a59a774fccc6c6d9d48a082cafe9464995210d0e9c6f85198",
+      "bytes": 357658
+    },
+    {
+      "path": "Content/Puzzles/L_Site01_HC.umap",
+      "sha256": "b1b4aee7f0fb62ff14f7242cf703abc3c7cb437ce15b45f91e8d0b3f020d5094",
+      "bytes": 45043
+    },
+    {
+      "path": "Content/Puzzles/Test/L_HCA2_Props.umap",
+      "sha256": "17da5617cc88eb8a0af22a9120b11850faa1a3e43ebf122b9df47d4b1d0a0a12",
+      "bytes": 89067
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/gate_closed.png",
+      "sha256": "79a0d6406798ad085d38d606d176c1d70c53692ae45d27fbfe2591f3cf4b5a48",
+      "bytes": 965061
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/gate_open.png",
+      "sha256": "8c9ebd892340f134fa540437beca193823d49a7d9220fb08c0d02b979e94fc22",
+      "bytes": 1111180
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/site_altar.png",
+      "sha256": "32f2862bd0a015f7600868a0fae2703fa98a2e2a4a696848be99d17ad5c59f00",
+      "bytes": 673647
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/site_gate_g1.png",
+      "sha256": "8d3d6469c45aa34441e5c75e978b2fa2528ae261282a9a182994f082c8cf582b",
+      "bytes": 694287
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/split_screen00000.png",
+      "sha256": "d280ee28ffdb7352f5424bb130b5c2ed0ac8f1143663f04b7926b8fed113a779",
+      "bytes": 513606
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/split_screen00001.png",
+      "sha256": "2f349eeea70df78df6a92e136a0064fc15c26284e3640e9b6c0dbcfdd07454a8",
+      "bytes": 511030
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/symbols_and_statues.png",
+      "sha256": "dd5403f153e404f44b902982231b153cbf85484aceee637662818c2170b85856",
+      "bytes": 1103071
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/symbols_half_screen.png",
+      "sha256": "fe12211702123b750e0c92d981e58417a1d5c01f4d09466b81833478c0912d25",
+      "bytes": 350399
+    }
+  ],
+  "tool_manifest_hashes_match_evidence": true,
+  "ownership_isolation": true,
+  "shared_master_unchanged": true,
+  "root_source_art_git_diff": "",
+  "main_cave_visual_acceptance": "not passed",
+  "issue_19_complete": false,
+  "baseline_commit": "dcecbab75999f1cc976d847a24912f4246ddbc8e",
+  "upstream_hc1_actors_preserved": 3,
+  "binary_map_merge": "editor integrated; upstream preserved"
+}

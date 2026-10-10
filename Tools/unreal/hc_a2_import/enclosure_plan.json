@@ -1,0 +1,67 @@
+{
+  "issue": 19,
+  "lane_owner": "HZ for cave geometry/lighting; HC props remain fixed",
+  "status": "proposed requirements; no HZ edits made",
+  "acceptance": {
+    "opening": {
+      "axis": "Y",
+      "width_cm": 400,
+      "height_cm": 400,
+      "passage_axis": "X"
+    },
+    "leaf": {
+      "closed_z_cm": 0,
+      "open_z_cm": 400,
+      "dimensions_cm": [
+        30.4,
+        430,
+        450
+      ],
+      "open_top_z_cm": 850
+    },
+    "slot": {
+      "center_x_cm": 0,
+      "width_x_cm": 34,
+      "minimum_existing_clearance_per_x_side_cm": 1.8
+    },
+    "requirement": "Enclosing opaque rock must conceal the full upper leaf through its preserved travel, with the passage and centered leaf slot unobstructed. No source redesign, shortening or automatic hiding."
+  },
+  "gates": [
+    {
+      "label": "G1",
+      "origin_cm": [
+        2500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "G2",
+      "origin_cm": [
+        5500,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "G3",
+      "origin_cm": [
+        11500,
+        0,
+        0
+      ]
+    }
+  ],
+  "environment_checks": [
+    "Provide usable cave floor/walls/ceiling at the documented plate/statue/altar positions.",
+    "Restore readable warm path light/cold fill and colored shadows at each placed prop.",
+    "Confirm no cave collision blocks the gate passage or moving slot.",
+    "Review concealment at closed, halfway and full +400 cm open positions."
+  ],
+  "authority": "AGENTS.md: only edit own lane folder/sublevel; cross-lane changes need a lock and kickoff heads-up. No authorization to modify HZ is assumed.",
+  "evidence": [
+    "site_gate_g1.png",
+    "site_altar.png",
+    "editor_verification.json"
+  ]
+}

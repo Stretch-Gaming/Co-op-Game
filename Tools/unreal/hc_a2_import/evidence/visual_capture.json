@@ -1,0 +1,83 @@
+{
+  "status": "captured; visual review required",
+  "shots": [
+    {
+      "name": "symbols_and_statues",
+      "path": "symbols_and_statues.png",
+      "pixels": [
+        1600,
+        900
+      ],
+      "bytes": 1103071,
+      "actual_pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "name": "symbols_half_screen",
+      "path": "symbols_half_screen.png",
+      "pixels": [
+        1600,
+        450
+      ],
+      "bytes": 350399,
+      "actual_pixels": [
+        800,
+        450
+      ]
+    },
+    {
+      "name": "gate_closed",
+      "path": "gate_closed.png",
+      "pixels": [
+        1600,
+        900
+      ],
+      "bytes": 965061,
+      "actual_pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "name": "gate_open",
+      "path": "gate_open.png",
+      "pixels": [
+        1600,
+        900
+      ],
+      "bytes": 1111180,
+      "actual_pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "name": "site_gate_g1",
+      "path": "site_gate_g1.png",
+      "pixels": [
+        1600,
+        900
+      ],
+      "bytes": 694287,
+      "actual_pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "name": "site_altar",
+      "path": "site_altar.png",
+      "pixels": [
+        1600,
+        900
+      ],
+      "bytes": 673647,
+      "actual_pixels": [
+        1600,
+        900
+      ]
+    }
+  ]
+}

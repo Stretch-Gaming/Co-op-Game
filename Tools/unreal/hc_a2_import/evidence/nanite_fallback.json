@@ -1,0 +1,52 @@
+[
+  {
+    "name": "SM_Statue",
+    "dimensions_cm": [
+      105.17275619506836,
+      103.48447799682617,
+      180.0
+    ],
+    "fallback_percent_triangles": 1.0,
+    "fallback_relative_error": 0.0
+  },
+  {
+    "name": "SM_Statue_Small",
+    "dimensions_cm": [
+      64.27225112915039,
+      63.240522384643555,
+      110.0
+    ],
+    "fallback_percent_triangles": 1.0,
+    "fallback_relative_error": 0.0
+  },
+  {
+    "name": "SM_Altar",
+    "dimensions_cm": [
+      120.0000228881836,
+      120.0000228881836,
+      100.30500030517578
+    ],
+    "fallback_percent_triangles": 1.0,
+    "fallback_relative_error": 0.0
+  },
+  {
+    "name": "SM_ChamberGate_Frame",
+    "dimensions_cm": [
+      156.00009155273438,
+      708.8223876953125,
+      511.2001037597656
+    ],
+    "fallback_percent_triangles": 1.0,
+    "fallback_relative_error": 0.0
+  },
+  {
+    "name": "SM_ChamberGate_Leaf",
+    "dimensions_cm": [
+      30.399991989135742,
+      430.0000305175781,
+      450.0
+    ],
+    "fallback_percent_triangles": 1.0,
+    "fallback_relative_error": 0.0
+  }
+]
