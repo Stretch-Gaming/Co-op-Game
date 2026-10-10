@@ -2,6 +2,15 @@
 
 Copy the template for each sprint. Newest sprint at the top. The plan is in [docs/sprints.md](docs/sprints.md).
 
+**Design update — 2026-10-10, the maze run:** the cave now plays as six
+rounds: the first room, a maze that splits the team up, a meeting hall, a
+second maze, the relic chamber, and an escape home to a drop-off altar. Dead
+players come back when the team regroups. Sprints 6 to 14 were re-planned, so
+from HC-6, PG-6 and HZ-6 on, a phase code names different work than it did
+before this date; the issues say what each one moved to. See
+[docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md) and
+[docs/sprints.md](docs/sprints.md).
+
 **Design update — 2026-10-10:** lethal damage kills players; there are no
 revives. Dead players stay out until a server-controlled checkpoint or round
 restart. The whole team dying triggers a checkpoint restart. Earlier
