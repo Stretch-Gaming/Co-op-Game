@@ -1,0 +1,39 @@
+{
+  "name": "SM_Ghost_LongReach",
+  "triangles": 4198,
+  "vertices": 2101,
+  "dimensions_cm": [
+    189.03,
+    74.69,
+    205.0
+  ],
+  "bounds_z_cm": [
+    -128.6,
+    76.4
+  ],
+  "volume_m3": 0.33452,
+  "volume_centroid_cm": [
+    3.18e-05,
+    7.4e-06,
+    -8.21e-05
+  ],
+  "non_manifold_edges": 0,
+  "uv_channels": [
+    "UV0_Packed",
+    "UV1_Height"
+  ],
+  "vertex_color": "GhostFade: RGB = height 0..1, A = 1",
+  "forward": "-Y",
+  "up": "+Z",
+  "fbx_unit": "centimeter",
+  "nanite": false,
+  "candidate": "C02",
+  "display_name": "LongReach",
+  "readability_resolution": [
+    1920,
+    540
+  ],
+  "readability_distance_m": 15,
+  "readability_hfov_deg": 90,
+  "estimated_full_height_pixels_at_15m": 131.2
+}
