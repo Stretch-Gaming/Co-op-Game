@@ -16,6 +16,8 @@ This updates [two-to-four-players.md](two-to-four-players.md). Its rules on scal
 - **Split-screen.** For Demo 1, only on the hosting machine: two players share the Windows screen with gamepads while the Macs join online, for up to 4 players. Split-screen on joining machines comes after the demo.
 - **No car.** Maps can end with a themed escape instead, such as a zipline out of the cave or camels in Egypt. These come after the core loop works.
 
+**Death rule (updated Oct 10, 2026).** Lethal damage kills players immediately. There is no downed state, bleed-out or teammate revive. Dead players cannot move, interact, carry items or hold mechanisms, and ghosts ignore them. They remain dead until the server restarts the round or the team at a checkpoint; there is no individual automatic respawn. When the whole team is dead, the GameMode waits 3 seconds and restarts everyone at separate spots at the latest checkpoint, resetting any round in progress.
+
 ## Demo 1
 
 The cave with three puzzle rounds, then a short trip to Map 2, a small Egyptian antechamber. That proves the run can move from map to map.
@@ -30,3 +32,4 @@ The cave with three puzzle rounds, then a short trip to Map 2, a small Egyptian 
 | Third-person camera | First person by default, with a switch to third person |
 | Split-screen after the demo | Split-screen on the host in Demo 1 |
 | Collapse at the end of the heist | Dropped for now; a cave-in could return as a map finale |
+| Knockdown and teammate revive | Lethal damage kills players; no revives. A team wipe triggers a checkpoint restart |

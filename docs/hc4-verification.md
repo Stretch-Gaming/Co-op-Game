@@ -4,13 +4,17 @@ Owner: Stretch. Blueprint-only implementation, confined to the authorized carryi
 
 The attached worktree is `C:\Users\Stretch\.codex\worktrees\hc4-carrying\Co op Game`, branch `codex/hc4-carrying`, created from `origin/main` at `dcecbab75999f1cc976d847a24912f4246ddbc8e`. Its editor uses MCP port **8024** and PIE server port **17774**. Authoring and UI requests verify this exact project. Existing editor sessions and the original repository are preserved.
 
+**Current design:** lethal damage kills players; there are no revives. The
+legacy guards described below record the delivered implementation, not completed
+death integration. The updated handoff requires `AC_Health.OnDied` and `IsDead()`.
+
 ## Runtime API and state
 
 Attach `/Game/Puzzles/Carrying/AC_Carrying` once to each character. Component replication is enabled in the asset. The component has no input or RPC events; it is called by the owning character's server-side interaction and Drop hooks.
 
 | AC_Carrying function | Input / output | Server behavior |
 | --- | --- | --- |
-| `TryPickup(Item)` | Actor → `Success` bool | Rejects invalid/non-carryable items, an occupied carrying slot, a non-character owner, the `Downed` tag, distance over 250 cm and obstructed line of sight. Claims the item synchronously, then records it and applies speed. |
+| `TryPickup(Item)` | Actor → `Success` bool | Rejects invalid/non-carryable items, an occupied carrying slot, a non-character owner, the legacy `Downed` tag, distance over 250 cm and obstructed line of sight. Claims the item synchronously, then records it and applies speed. |
 | `DropCarried()` | No parameters | Detaches the carried item, enables its collision and physics, applies a small forward impulse, clears the slot and restores speed. Empty calls are harmless. |
 | `GetCarried()` | → `Item` Actor | Returns the current item. |
 | `ReleaseCarried()` | → `Item` Actor | Returns the item after its handoff transition. Empty calls return None. |
@@ -41,7 +45,7 @@ The Core integration chat owns all of these production changes; none are include
 2. Retain HC-1's local Interact → owning-character `Server_InteractBegin(Target)` → validated `BPI_Interactable.Interact(Instigator)` path. `BP_Carryable` finds `AC_Carrying` on that instigator and calls `TryPickup(self)`. Interact never calls Drop.
 3. Connect the owning local character's existing `IA_Drop.Started` to a **reliable Run on Server character event** such as `Server_DropCarried()`. The server event validates the character's component and calls `DropCarried()`; it takes no client-supplied carrier argument.
 4. Forward production `BP_CoopCharacter.GetCarried()` and `ReleaseCarried()` to this component on the server: connect the component's `Item` output to each existing Core return pin named **`CarriedActor`**. Consumers can instead call the component directly. The existing Core stubs were read and preserved.
-5. When available, bind `AC_Health.OnDowned` on the server to `DropCarried()` and deny pickup using the authoritative health state. Do not use a client health flag. **Health/downed event integration and its gameplay test are pending.** The current guard understands the `Downed` actor tag; this is not a claim that AC_Health is wired.
+5. When available, bind `AC_Health.OnDied` on the server to `DropCarried()` and deny pickup when the authoritative `IsDead()` is true. Do not use a client health flag. **Health/death event integration and its gameplay test are pending.** The delivered guard understands only the legacy `Downed` actor tag; it must be updated for death, and this is not a claim that AC_Health is wired. Verify lethal damage drops the carrier's item on every peer and denies further pickups until a GameMode-controlled restart.
 
 Production input assets, HUD, Core, imported art, source art, shared materials and cave maps are untouched. Carrying has no player-count-specific allocation; it uses each owner and supports 2/3/4 players and two local owners. Puzzle population remains the consuming scaling/round work.
 
@@ -66,7 +70,7 @@ The final report records:
 - Server plate overlap counts across free, carried and placed states; clients do not compute authoritative counts.
 - Saved class defaults, RepNotify modes, root mobility/overlap/replication, single fixture component, action links, fresh-load checks and content hashes.
 
-See `final_report.json` for exact acceptance results and remaining limitations. Windows PIE and input injection are covered; physical gamepad and teammate Mac checks are not claimed. Production health/downed integration remains pending. #10 stays open for that and the separate Core integration.
+See `final_report.json` for exact acceptance results and remaining limitations. Windows PIE and input injection are covered; physical gamepad and teammate Mac checks are not claimed. Production health/death integration remains pending. #10 stays open for that and the separate Core integration.
 
 ## Reproduction
 

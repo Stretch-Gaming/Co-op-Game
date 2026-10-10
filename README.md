@@ -2,6 +2,8 @@
 
 A 2–4 player online co-op puzzle game by Stretch, PK and Ak47, built in Unreal Engine 5.8 with MCP-driven editors. Players work through rounds of puzzles across a series of maps, collecting relics and getting past traps and ghosts, starting in an underground cave.
 
+Lethal damage kills players; there are no revives. Dead players stay out until a server-controlled restart. When the whole team dies, everyone restarts at the latest checkpoint and any round in progress resets.
+
 We work in 45–60 minute sprints with three people in parallel. The Windows machine merges and hosts, and every few sprints we stop at a playable checkpoint and play it together.
 
 - **Plan:** [docs/sprints.md](docs/sprints.md): the sprints, playable checkpoints, shared contracts and cut list

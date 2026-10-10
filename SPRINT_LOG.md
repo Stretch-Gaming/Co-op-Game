@@ -2,13 +2,18 @@
 
 Copy the template for each sprint. Newest sprint at the top. The plan is in [docs/sprints.md](docs/sprints.md).
 
+**Design update — 2026-10-10:** lethal damage kills players; there are no
+revives. Dead players stay out until a server-controlled checkpoint or round
+restart. The whole team dying triggers a checkpoint restart. Earlier
+blocked-state tests below are historical and do not verify death integration.
+
 ### HC-1: Interaction and round state — Windows implementation checkpoint
 
-**Owner:** Stretch / HC · **Issue:** #7 · **Scope:** interaction and round state; no revive implementation.
+**Owner:** Stretch / HC · **Issue:** #7 · **Scope:** interaction and round state; health/death integration is outside this delivery.
 
 - Built: per-pawn Enhanced Input mapping lifecycle, camera focus checks, owning-player prompts, server-authoritative instant/timed/continuous use, cancellation and host round debug controls.
 - Fixtures: `BP_TestInteractable`, `L_HC_Test`, and three markers in `L_Site01_HC`. The cave/HZ and player/PG sublevels were preserved.
-- Verified: 2/3/4 client acceptance passed with replicated results, short-hold rejection, range/permission cancellation, round-reset cancellation and pawn-end-play cleanup. Two local players interacted independently with separate prompts. Blocked/downed-state cancellation and host-only debug handlers passed.
+- Verified: 2/3/4 client acceptance passed with replicated results, short-hold rejection, range/permission cancellation, round-reset cancellation and pawn-end-play cleanup. Two local players interacted independently with separate prompts. Legacy blocked-state cancellation and host-only debug handlers passed.
 - Build: Win64 Development package succeeded and started the main cave without runtime errors. See [HC-1 verification](docs/hc1-verification.md).
 - Controls: E/A interacts; Space/X jumps. The gamepad jump button changed to avoid sharing A with interaction. V/F/G mappings are ready for their later gameplay integrations. F1–F4 change round state; F4 travel remains HC-2.
 - Timing: editor graph/RPC authoring and verification exceeded one sprint cycle. Strict execution-path checks now reject failed writes that leave empty functions.

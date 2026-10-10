@@ -10,4 +10,4 @@ The explicit one-shot `repair.py` uses Unreal editor APIs and saves only the loc
 
 Evidence is in `evidence/`. The 2/3/4-client tests cover owning contexts/prompts, instant use, short timed cancellation, completed timed use and continuous begin/release. The four-player split test has two local host owners and two remote clients. Site 01 passes a separate two-client startup/ownership/class-load smoke. Win64 Development packaging includes both production maps, the PG test map and all four HC test maps.
 
-These are headless Windows checks. Physical gamepad routing, visual/Mac acceptance and health/downed gameplay remain separate. Issue #23's complete first/third-person acceptance is not closed by this compatibility repair.
+These are headless Windows checks. Physical gamepad routing, visual/Mac acceptance and health/death gameplay remain separate. Lethal damage must kill players with no revives; this repair does not verify that gameplay. Issue #23's complete first/third-person acceptance is not closed by this compatibility repair.
