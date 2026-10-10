@@ -1,0 +1,12 @@
+{
+  "content": [
+    "/Game/Puzzles/Test/BP_TestInteractable",
+    "/Game/Puzzles/Test/HC3/BP_HC3HealthFixture",
+    "/Game/Puzzles/Recovery/BP_HCReviveTarget"
+  ],
+  "maps": [],
+  "quit_methods": [
+    "quit_editor",
+    "quit_game"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "saved_owned_packages": [
+    "/Game/Puzzles/Test/HC3/BP_HC3HealthFixture",
+    "/Game/Puzzles/Recovery/BP_HCReviveTarget"
+  ],
+  "remaining_dirty_content": [
+    "/Game/Puzzles/Test/BP_TestInteractable"
+  ],
+  "remaining_dirty_maps": [],
+  "automation_stopped": true,
+  "editor_closed": false,
+  "reason": "Unowned dirty package retained intact; no discard authorized."
+}
