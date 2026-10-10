@@ -1,0 +1,113 @@
+{
+  "validated_at_utc": "2026-10-10T04:47:54.861956+00:00",
+  "base_commit": "b9ed193fb35458f1c35588362d7a629949313362",
+  "branch": "codex/hc-a2-import-tools",
+  "python_version": "3.11.8",
+  "syntax_passed": [
+    "import_hc_a2.py",
+    "source_audit.py",
+    "test_safety.py",
+    "validate_offline.py"
+  ],
+  "source_count": 10,
+  "lfs_hydration": [
+    {
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+      "lfs_oid_sha256": "badd7ce55aee0a8b747c72867b1a0a75bc924367b6d012516f1c9a1ff2b302da",
+      "lfs_size": 84956,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx",
+      "lfs_oid_sha256": "44eeb13dca2a6780efcd41858226d62e60e6f9ecd5aadfdf8be74fd30aaf20a5",
+      "lfs_size": 58508,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+      "lfs_oid_sha256": "1b7f5523651b57982c46d02bf4ba7ee724dceb19134443bcb42de77867c915a7",
+      "lfs_size": 86588,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx",
+      "lfs_oid_sha256": "192f9a19bbaec2092282c36d3b1328f663aca929b1496fd8989dce245a7ac0e7",
+      "lfs_size": 57228,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+      "lfs_oid_sha256": "2f128a6b878e5cd44e7ec6132d30fb1229117e80850635fdbbc33865436f5283",
+      "lfs_size": 58172,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_Statue.fbx",
+      "lfs_oid_sha256": "92424e3791c856872ea9679128cd6d815332bda246442e4b7e382120daa1eb91",
+      "lfs_size": 339692,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_Statue_Small.fbx",
+      "lfs_oid_sha256": "7c3aad0a65bbc78f513b70cda846178f7acd11b0ef057866a030900608e48d6b",
+      "lfs_size": 339420,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_Altar.fbx",
+      "lfs_oid_sha256": "6ddeec1e0139a1632f2c10a798be7363dd6258f22ab86a91a2693c6ee9549e27",
+      "lfs_size": 114780,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+      "lfs_oid_sha256": "62cfa5d8774cb1126f5db9bcde9a8e90d2ec570a3d99ba2e8a0597c27954b1a5",
+      "lfs_size": 340620,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    },
+    {
+      "source": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+      "lfs_oid_sha256": "0705d0a07e69b91886030a6bf34abee567ef180120b4f7c84b93a4e6aef994db",
+      "lfs_size": 92556,
+      "hydrated_sha256_match": true,
+      "metadata_lf_sha256_matches_git": true
+    }
+  ],
+  "read_only_dry_run": "passed (default invocation)",
+  "protected_files_unchanged": true,
+  "destination_isolation": "13 planned packages under HCA2_Props",
+  "safety_tests_run": 19,
+  "safety_tests_passed": true,
+  "owned_changed_paths": [
+    "Tools/unreal/hc_a2_import/README.md",
+    "Tools/unreal/hc_a2_import/VALIDATION.md",
+    "Tools/unreal/hc_a2_import/evidence/dry_run.json",
+    "Tools/unreal/hc_a2_import/evidence/offline_validation.json",
+    "Tools/unreal/hc_a2_import/evidence/safety_tests.txt",
+    "Tools/unreal/hc_a2_import/import_hc_a2.py",
+    "Tools/unreal/hc_a2_import/manifest.json",
+    "Tools/unreal/hc_a2_import/source_audit.py",
+    "Tools/unreal/hc_a2_import/test_safety.py",
+    "Tools/unreal/hc_a2_import/validate_offline.py"
+  ],
+  "manifest_sha256": "b5b6505042aef54106ea797ee96975730d6b924d607e888ad72e7d2b22bd1413",
+  "text_hash_convention": "UTF-8 LF normalized; binary FBX/M_Stylized hashes use raw bytes",
+  "tool_sha256": {
+    "import_hc_a2.py": "4c19b9fed1d9c25bae6737441489483a4f65eb7afc507f5b00b26dec3f46afc1",
+    "source_audit.py": "2e09f6e08a5cab72ce56afbe7ca85aae6ef1a74dfd8c7958458aa12fa1d4a6ea",
+    "test_safety.py": "3c55978cc4815e98ad48a8f6f37c478ae261c19875bd507ad1c53135847c049a",
+    "validate_offline.py": "0402897eb514c75bf62c32f16c3b7b4b2c42021d67720911f942644cacd8c580"
+  },
+  "editor_launched_or_controlled": false,
+  "actual_import": "not run",
+  "assembly_collision_cave_light_pie_split_screen": "not run; pending later editor pass"
+}

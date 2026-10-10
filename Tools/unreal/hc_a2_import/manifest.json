@@ -1,0 +1,1199 @@
+{
+  "schema_version": 1,
+  "issue": 19,
+  "lane": "HC",
+  "owner": "Stretch",
+  "source_pr": "https://github.com/Stretch-Gaming/Co-op-Game/pull/66",
+  "engine_version": "5.8.3",
+  "project": "CoopGame.uproject",
+  "destination_root": "/Game/Puzzles/Art/HCA2_Props",
+  "source_license": "Team-authored scripted Blender output; own work; public redistribution allowed; no attribution required (issue #19 and merged PR #66).",
+  "parent_material": {
+    "path": "/Game/Shared/Style/M_Stylized",
+    "source": "Content/Shared/Style/M_Stylized.uasset",
+    "sha256": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9",
+    "offline_read": "Hydrated binary inspected for parameter names and BLEND_Opaque; live editor introspection still required.",
+    "observed_parameters": [
+      "Tint",
+      "GradientStrength",
+      "GradientBias",
+      "GradientTopColor",
+      "GradientBottomColor",
+      "EdgeColor",
+      "EdgeStrength",
+      "EdgeThreshold",
+      "RoughnessMultiplier",
+      "UseWorldAligned",
+      "MaskTexture"
+    ]
+  },
+  "import_settings": {
+    "uniform_scale": 1.0,
+    "translation_cm": [
+      0,
+      0,
+      0
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "convert_scene": true,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "transform_vertex_to_absolute": true,
+    "bake_pivot_in_vertex": false,
+    "combine_meshes": true,
+    "import_materials": false,
+    "import_textures": false,
+    "normal_import_method": "FBXNIM_IMPORT_NORMALS_AND_TANGENTS",
+    "generate_lightmap_u_vs": false,
+    "auto_generate_collision": false,
+    "import_mesh_lo_ds": false,
+    "preset_status": "Explicit PR #66 settings; PG-A0 presets remain unfilled in docs/assets.md. Confirm in later editor pass."
+  },
+  "materials": [
+    {
+      "slot": "M_Stone",
+      "name": "MI_HCA2_Stone",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone",
+      "tint_srgb_hex": "#7A6E68",
+      "parameter": "Tint"
+    },
+    {
+      "slot": "M_StoneCarving",
+      "name": "MI_HCA2_StoneCarving",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving",
+      "tint_srgb_hex": "#4A4652",
+      "parameter": "Tint"
+    },
+    {
+      "slot": "M_Rope",
+      "name": "MI_HCA2_Rope",
+      "destination": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope",
+      "tint_srgb_hex": "#C9A66B",
+      "parameter": "Tint"
+    }
+  ],
+  "textures": {
+    "supplied": [],
+    "strategy": "M_Stylized procedural painted defaults; no texture generation/import.",
+    "later_rules": "Any later large-prop textures: 2K, base color sRGB, DirectX normal with Normalmap compression, packed R=AO G=roughness B=metallic with sRGB off. Curvature bake remains pending in PG-A0."
+  },
+  "assemblies": {
+    "pressure_plate": {
+      "top_raised_cm": [
+        0,
+        0,
+        9
+      ],
+      "top_pressed_cm": [
+        0,
+        0,
+        2
+      ]
+    },
+    "chamber_gate": {
+      "leaf_closed_cm": [
+        0,
+        0,
+        0
+      ],
+      "leaf_open_cm": [
+        0,
+        0,
+        400
+      ],
+      "opening_yz_cm": [
+        400,
+        400
+      ],
+      "passage_axis": "X",
+      "slot_width_x_cm": 34,
+      "open_leaf_top_z_cm": 850
+    },
+    "altar": {
+      "relic_base_cm": [
+        0,
+        0,
+        97
+      ]
+    },
+    "statues": {
+      "available": [
+        "SM_Statue",
+        "SM_Statue_Small"
+      ],
+      "selection": "pending owner decision"
+    }
+  },
+  "assets": [
+    {
+      "name": "SM_PressurePlate_Base",
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+      "source_sha256": "badd7ce55aee0a8b747c72867b1a0a75bc924367b6d012516f1c9a1ff2b302da",
+      "source_bytes": 84956,
+      "validation_source": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.validation.json",
+      "validation_sha256": "eb3ba920aeb3c818d05a6b4266f849192ae29e822e2ef7d8a73a160218d80042",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_PressurePlate_Base.glb",
+        "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 1852,
+        "triangles_after": 1852,
+        "dimensions_cm": [
+          200.0,
+          200.0,
+          11.1891
+        ],
+        "bounds_min_cm": [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 1575,
+        "triangles": 1852,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 1840,
+          "M_StoneCarving": 12
+        },
+        "raw_bounds_min": [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        "raw_dimensions": [
+          2.0,
+          2.0,
+          0.11189068108797073
+        ],
+        "uv_channels": 1,
+        "normal_values": 4623,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_PressurePlate_Base": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_PressurePlate_Top",
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx",
+      "source_sha256": "44eeb13dca2a6780efcd41858226d62e60e6f9ecd5aadfdf8be74fd30aaf20a5",
+      "source_bytes": 58508,
+      "validation_source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.validation.json",
+      "validation_sha256": "858e956e20ab0c9fc6643d3f55ac827ac01460dbef1a5573faab4b94e1f59d5f",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_PressurePlate_Top.glb",
+        "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 1024,
+        "triangles_after": 1024,
+        "dimensions_cm": [
+          179.8611,
+          179.7791,
+          14.6829
+        ],
+        "bounds_min_cm": [
+          -89.93055,
+          -89.88954,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 1071,
+        "triangles": 1024,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 840,
+          "M_StoneCarving": 184
+        },
+        "raw_bounds_min": [
+          -0.899305522441864,
+          -0.8988953828811646,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.798611044883728,
+          1.797790765762329,
+          0.1468285620212555
+        ],
+        "uv_channels": 1,
+        "normal_values": 3084,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_PressurePlate_Top": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_PressurePlate_Top_Circle",
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+      "source_sha256": "1b7f5523651b57982c46d02bf4ba7ee724dceb19134443bcb42de77867c915a7",
+      "source_bytes": 86588,
+      "validation_source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.validation.json",
+      "validation_sha256": "0aa5e9c53dd0d9e5026c0d2978f9e3f94d225b5186a086f1f9666ba5cb296a80",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_PressurePlate_Top_Circle.glb",
+        "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 1690,
+        "triangles_after": 1690,
+        "dimensions_cm": [
+          179.9265,
+          179.9107,
+          14.6637
+        ],
+        "bounds_min_cm": [
+          -89.96325,
+          -89.95535,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 1800,
+        "triangles": 1690,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 1114,
+          "M_StoneCarving": 576
+        },
+        "raw_bounds_min": [
+          -0.899632453918457,
+          -0.8995535373687744,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.799264907836914,
+          1.7991070747375488,
+          0.1466369926929474
+        ],
+        "uv_channels": 1,
+        "normal_values": 5193,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_PressurePlate_Top_Circle": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_PressurePlate_Top_Triangle",
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx",
+      "source_sha256": "192f9a19bbaec2092282c36d3b1328f663aca929b1496fd8989dce245a7ac0e7",
+      "source_bytes": 57228,
+      "validation_source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.validation.json",
+      "validation_sha256": "1f94612eedc2756083e5e4f96bb7fc0f498a2c6aba7a45626ddc6d83d6dfdf1b",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_PressurePlate_Top_Triangle.glb",
+        "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 938,
+        "triangles_after": 938,
+        "dimensions_cm": [
+          179.7553,
+          179.4842,
+          14.7334
+        ],
+        "bounds_min_cm": [
+          -89.87767,
+          -89.74208,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 1018,
+        "triangles": 938,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 788,
+          "M_StoneCarving": 150
+        },
+        "raw_bounds_min": [
+          -0.898776650428772,
+          -0.8974207639694214,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.797553300857544,
+          1.7948415279388428,
+          0.14733394980430603
+        ],
+        "uv_channels": 1,
+        "normal_values": 2970,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_PressurePlate_Top_Triangle": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_PressurePlate_Top_Cross",
+      "source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+      "source_sha256": "2f128a6b878e5cd44e7ec6132d30fb1229117e80850635fdbbc33865436f5283",
+      "source_bytes": 58172,
+      "validation_source": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.validation.json",
+      "validation_sha256": "50d243fa53cba36673e1a1c80fb0d043929b37f00969623cf58e15c516cfc304",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_PressurePlate_Top_Cross.glb",
+        "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 1006,
+        "triangles_after": 1006,
+        "dimensions_cm": [
+          179.8039,
+          179.9362,
+          15.2284
+        ],
+        "bounds_min_cm": [
+          -89.90194,
+          -89.9681,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 1059,
+        "triangles": 1006,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 720,
+          "M_StoneCarving": 286
+        },
+        "raw_bounds_min": [
+          -0.8990194201469421,
+          -0.8996809720993042,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.7980388402938843,
+          1.7993619441986084,
+          0.1522839069366455
+        ],
+        "uv_channels": 1,
+        "normal_values": 2973,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_PressurePlate_Top_Cross": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": false,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_Statue",
+      "source": "SourceArt/HC/HC-A2/SM_Statue.fbx",
+      "source_sha256": "92424e3791c856872ea9679128cd6d815332bda246442e4b7e382120daa1eb91",
+      "source_bytes": 339692,
+      "validation_source": "SourceArt/HC/HC-A2/SM_Statue.validation.json",
+      "validation_sha256": "52f21a73dece9256ca87da512cea95e5b95399358c3fe684e5c24435c9f5b3b8",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_Statue.glb",
+        "output": "SourceArt/HC/HC-A2/SM_Statue.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 8138,
+        "triangles_after": 8138,
+        "dimensions_cm": [
+          105.1728,
+          103.4845,
+          180.0
+        ],
+        "bounds_min_cm": [
+          -52.58638,
+          -51.74224,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 7066,
+        "triangles": 8138,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving",
+          "M_Rope"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 5174,
+          "M_StoneCarving": 470,
+          "M_Rope": 2494
+        },
+        "raw_bounds_min": [
+          -0.525863766670227,
+          -0.5174224376678467,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.051727533340454,
+          1.0348448753356934,
+          1.7999999523162842
+        ],
+        "uv_channels": 1,
+        "normal_values": 21615,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_Statue": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Statue",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving",
+        "M_Rope"
+      ],
+      "nanite": true,
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: plinth box plus owl capsule or box; preserve sling silhouette. Verify carry/placement collision later.",
+        "status": "pending manual compound collision"
+      },
+      "facing": "+X source front; verify after FBX scene conversion"
+    },
+    {
+      "name": "SM_Statue_Small",
+      "source": "SourceArt/HC/HC-A2/SM_Statue_Small.fbx",
+      "source_sha256": "7c3aad0a65bbc78f513b70cda846178f7acd11b0ef057866a030900608e48d6b",
+      "source_bytes": 339420,
+      "validation_source": "SourceArt/HC/HC-A2/SM_Statue_Small.validation.json",
+      "validation_sha256": "c78ed0f14ca6e28b5408417e9517f0ca1de9a4a66debeef02945a0b7c55b237d",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_Statue_Small.glb",
+        "output": "SourceArt/HC/HC-A2/SM_Statue_Small.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 8138,
+        "triangles_after": 8138,
+        "dimensions_cm": [
+          64.2722,
+          63.2405,
+          110.0
+        ],
+        "bounds_min_cm": [
+          -32.13612,
+          -31.62026,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 7071,
+        "triangles": 8138,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving",
+          "M_Rope"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 5174,
+          "M_StoneCarving": 470,
+          "M_Rope": 2494
+        },
+        "raw_bounds_min": [
+          -0.321361243724823,
+          -0.31620264053344727,
+          0.0
+        ],
+        "raw_dimensions": [
+          0.642722487449646,
+          0.6324052810668945,
+          1.100000023841858
+        ],
+        "uv_channels": 1,
+        "normal_values": 21612,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_Statue_Small": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Statue_Small",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving",
+        "M_Rope"
+      ],
+      "nanite": true,
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: independently fitted plinth box plus owl capsule or box at 1.1 m; do not reuse 1.8 m hull unscaled.",
+        "status": "pending manual compound collision"
+      },
+      "facing": "+X source front; verify after FBX scene conversion"
+    },
+    {
+      "name": "SM_Altar",
+      "source": "SourceArt/HC/HC-A2/SM_Altar.fbx",
+      "source_sha256": "6ddeec1e0139a1632f2c10a798be7363dd6258f22ab86a91a2693c6ee9549e27",
+      "source_bytes": 114780,
+      "validation_source": "SourceArt/HC/HC-A2/SM_Altar.validation.json",
+      "validation_sha256": "d50677f39caed9ee7d493816eab96b377101df203d823479f5c8d05572010467",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_Altar.glb",
+        "output": "SourceArt/HC/HC-A2/SM_Altar.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 2394,
+        "triangles_after": 2394,
+        "dimensions_cm": [
+          120.0,
+          120.0,
+          100.305
+        ],
+        "bounds_min_cm": [
+          -60.0,
+          -60.0,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 2340,
+        "triangles": 2394,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 1813,
+          "M_StoneCarving": 581
+        },
+        "raw_bounds_min": [
+          -0.6000000238418579,
+          -0.6000000238418579,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.2000000476837158,
+          1.2000000476837158,
+          1.0030499696731567
+        ],
+        "uv_channels": 1,
+        "normal_values": 6846,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_Altar": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_Altar",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: two fitted boxes for pedestal and capstone; check 40 cm socket and relic base at Z=97. A capstone box must not block required relic interaction.",
+        "status": "pending manual compound collision"
+      },
+      "facing": "+X source front; verify after FBX scene conversion"
+    },
+    {
+      "name": "SM_ChamberGate_Frame",
+      "source": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+      "source_sha256": "62cfa5d8774cb1126f5db9bcde9a8e90d2ec570a3d99ba2e8a0597c27954b1a5",
+      "source_bytes": 340620,
+      "validation_source": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.validation.json",
+      "validation_sha256": "1958e885c63384100b783b7b61df26669e6d577997340aa95bd3f05dbb6f4f4e",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_ChamberGate_Frame.glb",
+        "output": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 8594,
+        "triangles_after": 8594,
+        "dimensions_cm": [
+          156.0,
+          708.8224,
+          511.2001
+        ],
+        "bounds_min_cm": [
+          -78.0,
+          -354.4112,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 7582,
+        "triangles": 8594,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 8022,
+          "M_StoneCarving": 572
+        },
+        "raw_bounds_min": [
+          -0.7799999713897705,
+          -3.544111967086792,
+          0.0
+        ],
+        "raw_dimensions": [
+          1.559999942779541,
+          7.088223934173584,
+          5.112000942230225
+        ],
+        "uv_channels": 1,
+        "normal_values": 21864,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_ChamberGate_Frame": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "collision": {
+        "automatic": "none",
+        "later_plan": "Editor: separate post and lintel boxes with 400x400 cm passage clear. Preserve 34 cm X slot; split front/back hulls if the leaf must collide with the frame. Never fit one box/convex hull to the entire frame.",
+        "status": "pending manual compound collision"
+      },
+      "facing": "see assembly contract"
+    },
+    {
+      "name": "SM_ChamberGate_Leaf",
+      "source": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+      "source_sha256": "0705d0a07e69b91886030a6bf34abee567ef180120b4f7c84b93a4e6aef994db",
+      "source_bytes": 92556,
+      "validation_source": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.validation.json",
+      "validation_sha256": "9e04560c37b00aa8f82a2e1f6b0a18bc9d90d81bb699770107af5154e4363293",
+      "validation_hash_convention": "UTF-8 LF normalized",
+      "validation_metadata": {
+        "input": "/tmp/HC-A2/SM_ChamberGate_Leaf.glb",
+        "output": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+        "source_unit": "auto",
+        "explicit_unit_correction_factor": 1.0,
+        "triangles_before": 2222,
+        "triangles_after": 2222,
+        "dimensions_cm": [
+          30.4,
+          430.0,
+          450.0
+        ],
+        "bounds_min_cm": [
+          -15.2,
+          -215.00001,
+          0.0
+        ],
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y",
+        "UV_warning": null
+      },
+      "fbx_inspection": {
+        "fbx_version": 7400,
+        "vertices": 2220,
+        "triangles": 2222,
+        "material_slots": [
+          "M_Stone",
+          "M_StoneCarving"
+        ],
+        "faces_per_slot": {
+          "M_Stone": 1686,
+          "M_StoneCarving": 536
+        },
+        "raw_bounds_min": [
+          -0.15199999511241913,
+          -2.1500000953674316,
+          0.0
+        ],
+        "raw_dimensions": [
+          0.30399999022483826,
+          4.300000190734863,
+          4.5
+        ],
+        "uv_channels": 1,
+        "normal_values": 5151,
+        "global_settings": {
+          "UpAxis": [
+            2
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            1
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            -1
+          ],
+          "UnitScaleFactor": [
+            1.0
+          ]
+        },
+        "model_transforms": {
+          "SM_ChamberGate_Leaf": {
+            "Lcl Rotation": [
+              0.0,
+              -0.0,
+              179.999991348578
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      },
+      "destination": "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf",
+      "material_slots": [
+        "M_Stone",
+        "M_StoneCarving"
+      ],
+      "nanite": true,
+      "collision": {
+        "automatic": "one_fitted_box",
+        "later_plan": "Verify fitted box against visible mesh and travel; keep simple collision.",
+        "status": "pending editor verification"
+      },
+      "facing": "see assembly contract"
+    }
+  ]
+}
