@@ -6,5 +6,33 @@
     4,
     4
   ],
-  "actors": []
+  "actors": [
+    {
+      "label": "HC1_Instant",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "level": "/Game/Puzzles/L_Site01_HC",
+      "tags": [
+        "HC1MainInstant"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube"
+    },
+    {
+      "label": "HC1_Timed",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "level": "/Game/Puzzles/L_Site01_HC",
+      "tags": [
+        "HC1MainTimed"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube"
+    },
+    {
+      "label": "HC1_Continuous",
+      "class": "/Game/Puzzles/Test/BP_TestInteractable.BP_TestInteractable_C",
+      "level": "/Game/Puzzles/L_Site01_HC",
+      "tags": [
+        "HC1MainContinuous"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube"
+    }
+  ]
 }

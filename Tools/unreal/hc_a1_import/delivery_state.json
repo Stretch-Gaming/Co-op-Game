@@ -18,8 +18,9 @@
     "rendered host split-screen review",
     "Mac/Nanite fallback review"
   ],
-  "gameplay_sublevel_current_state": "L_Site01_HC empty; no relic gameplay actor classes on current main",
+  "gameplay_sublevel_current_state": "L_Site01_HC contains HC-1 interaction probes; BP_Relic and BP_KeyRelic are absent on current main.",
   "issue18_in_place_complete": false,
   "shared_material_or_persistent_map_saved": false,
-  "hosted_subagents_used": false
+  "hosted_subagents_used": false,
+  "verified_gameplay_baseline": "dcecbab"
 }

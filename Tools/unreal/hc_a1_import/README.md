@@ -2,7 +2,7 @@
 
 All four supplied relics are imported in UE 5.8.3 under `/Game/Puzzles/Art/HCA1_Relics/`, with five uniquely named instances of the existing read-only `M_Stylized`, Nanite, source normals and simple collision. `Content/Puzzles/Test/L_HCA1_AssetTest.umap` provides an HC inspection scene with a 1.8 m template-character reference. Sources were not regenerated, resized or redesigned.
 
-**Still pending:** gameplay placement/replacement, pickup/carry acceptance, rendered split-screen review and Mac/fallback review. Current main has neither `BP_Relic` (#8) nor `BP_KeyRelic` (#10), and `L_Site01_HC` is empty. This delivery creates no stand-in gameplay logic and does not claim #18's in-place gate. PR #70 remains unmerged.
+**Still pending:** gameplay placement/replacement, pickup/carry acceptance, rendered split-screen review and Mac/fallback review. Current main has neither `BP_Relic` (#8) nor `BP_KeyRelic` (#10), and `L_Site01_HC` contains HC-1 interaction probes. This delivery creates no stand-in gameplay logic and does not claim #18's in-place gate. PR #70 remains unmerged.
 
 ## Delivered evidence
 
@@ -77,6 +77,6 @@ An execution failure can leave partial or unsaved isolated assets. There is no a
 
 ## Remaining integration gate
 
-Assign the three small meshes to HC-2's `BP_Relic` variants after #8 supplies that system. Assign the heart to HC-4's physics-root `BP_KeyRelic` after #10 supplies carrying. Preserve MinPlayers/scaling, server authority and owning-player input/HUD; keep placements in `L_Site01_HC`. This branch does not implement those separate epics or modify Core, persistent maps or the empty gameplay sublevel.
+Assign the three small meshes to HC-2's `BP_Relic` variants after #8 supplies that system. Assign the heart to HC-4's physics-root `BP_KeyRelic` after #10 supplies carrying. Preserve MinPlayers/scaling, server authority and owning-player input/HUD; keep placements in `L_Site01_HC`. This branch does not implement those separate epics or modify Core, persistent maps or the gameplay sublevel.
 
 Then run actual client collection/carry/drop, late join, reset and 2/3/4-player checks, plus host split-screen visibility/input and Mac/fallback/style review. Check source reimport paths, compile any changed Blueprints and scan Output Log. Only then replace greybox and tick #18's in-place acceptance. The current client smoke checks establish static-art loading only. No pickup, carrying, rendered split-screen or Mac checks are claimed.

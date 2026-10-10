@@ -18,7 +18,7 @@ pos=heart.get_actor_location()
 def probe(y):
  result=ue.SystemLibrary.line_trace_single(world,ue.Vector(pos.x+100,pos.y+y,pos.z+19),ue.Vector(pos.x-100,pos.y+y,pos.z+19),ue.TraceTypeQuery.TRACE_TYPE_QUERY1,False,[],ue.DrawDebugTrace.NONE,True)
  return bool(result[0]) if isinstance(result,tuple) else result is not None
-report={'engine':ue.SystemLibrary.get_engine_version(),'collision_probes':{},'sessions':[],'gameplay_pickup_or_carry_tested':False,'test_note':'Static imported-art loading and collider smoke only. BP_Relic/BP_KeyRelic do not exist on current main.'}
+report={'gameplay_baseline':'dcecbab','engine':ue.SystemLibrary.get_engine_version(),'collision_probes':{},'sessions':[],'gameplay_pickup_or_carry_tested':False,'test_note':'Static imported-art loading and collider smoke only. BP_Relic/BP_KeyRelic do not exist on current main.'}
 state={'started':time.monotonic(),'last_control':None,'count':None,'sampled':False,'warmup_done':False,'busy':False}
 ue.EditorPythonScripting.set_keep_python_script_alive(True)
 

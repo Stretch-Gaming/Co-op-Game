@@ -26,7 +26,7 @@ def call(toolset,name,args):
  except ValueError:return text
 
 rpc('initialize',{'protocolVersion':'2025-11-25','capabilities':{},'clientInfo':{'name':'hc-a1-validation','version':'1'}})
-live=call('EditorToolset.LogsToolset','GetLogEntries',{'pattern':'HC-A1_ISOLATED_PROJECT:','maxEntries':1})
+live=call('EditorToolset.LogsToolset','GetLogEntries',{'category':'LogPython','pattern':'HC-A1_ISOLATED_PROJECT:','maxEntries':1})
 assert ROOT.as_posix() in json.dumps(live),'MCP server is not this isolated project'
 parser=argparse.ArgumentParser()
 parser.add_argument('action',choices=('snapshot','configure','start','stop','finish'))
