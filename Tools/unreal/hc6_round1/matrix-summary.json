@@ -1,0 +1,8 @@
+[
+  {
+    "run": "split-4",
+    "passed": true,
+    "checks": 25,
+    "duration_seconds": 20.187
+  }
+]

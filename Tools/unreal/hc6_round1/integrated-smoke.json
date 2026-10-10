@@ -1,0 +1,44 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game",
+  "map": "/Game/Maps/L_Site01",
+  "mode": "Play As Client",
+  "players": 2,
+  "integrated_round1_verified": false,
+  "reason": "Cave placement is exclusively owned by the cave chat; no HC6 actor placements were saved here.",
+  "worlds": [
+    {
+      "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+      "authority": true,
+      "local_controllers": 0,
+      "hc6_actor_counts": {
+        "BP_PressurePlate": 0,
+        "BP_PuzzleSetup": 0,
+        "BP_ChamberGate": 0,
+        "BP_StartPad": 0
+      }
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+      "authority": false,
+      "local_controllers": 1,
+      "hc6_actor_counts": {
+        "BP_PressurePlate": 0,
+        "BP_PuzzleSetup": 0,
+        "BP_ChamberGate": 0,
+        "BP_StartPad": 0
+      }
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+      "authority": false,
+      "local_controllers": 1,
+      "hc6_actor_counts": {
+        "BP_PressurePlate": 0,
+        "BP_PuzzleSetup": 0,
+        "BP_ChamberGate": 0,
+        "BP_StartPad": 0
+      }
+    }
+  ],
+  "baseline_smoke_passed": true
+}

@@ -1,0 +1,8 @@
+{
+  "roster_resets_hold": true,
+  "null_statue_class_fails_closed": true,
+  "compiled": [
+    "BP_StartPad",
+    "BP_PuzzleSetup"
+  ]
+}
