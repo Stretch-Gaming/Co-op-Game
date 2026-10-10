@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "before_clear_count": 2,
+  "destroyed_carried_key": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0",
+  "native_stale_key_and_invalid_instigator_rejected": true,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\altar-challenge\\Co op Game\\Tools\\unreal\\hc6_altar\\test_stale.py\", line 41, in tick\n    assert abs(sp.character_movement.max_walk_speed-600)<.01 and sp.get_component_by_class(AC).get_editor_property('CarriedItem') is None\n                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

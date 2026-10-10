@@ -1,0 +1,2787 @@
+{
+  "checked": 695,
+  "baseline_head": "4be3f85cff446901bbf88bdf918cfb2050d6fa18",
+  "all_lfs_match": true,
+  "files": [
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Back_01.uasset",
+      "sha256": "fdee63c4a4dc23076dda04b32eb8505bcd41fb791e574a264026c43e700bf923"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Front_01.uasset",
+      "sha256": "c9daa694dda4639b106a29401712b03376344b301b6161955a92ba64ea60ae6d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Front_02.uasset",
+      "sha256": "dda4f9d6a4c8fc3bf79458d4d2f490965ff01401256e90fdf98a938a58c61986"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Front_03.uasset",
+      "sha256": "bf3a411d465002756eb1a19cdb2bef63b75a57a9fab7ce121ee71941e010d2cc"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Left_01.uasset",
+      "sha256": "712a25024fe931bd518fff6c935b82bc0ee2070a77caef63edd0d6fc7ff66508"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Death/MM_Death_Right_01.uasset",
+      "sha256": "7968e7e1bc3d8e33c3f0d8479e6753d011ced0e05a831eb7f10e28ceb536b9a4"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Aim/AO_Pistol.uasset",
+      "sha256": "a4f2fca2458488be2d05cb2188bd641293d06bdcc4e598feee59ba1b23156c24"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS1.uasset",
+      "sha256": "4d7113f1799219db01d8394c2984d5afd2957de07d66cfa463c9c33822e11d89"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS_AO_CD.uasset",
+      "sha256": "2898b38d8ef305d1d2e285f519be72cde7e2b0106bb85657fda47e35dc27b15d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS_AO_CU.uasset",
+      "sha256": "e5c5855b58743d51bf1abe11b470749f50ae6074fac734da446d1c4a9b076650"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd.uasset",
+      "sha256": "f93aacabf40a36d906896e5c5998e4a63445749efa25c973092b9ae82ef1477f"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd_Left.uasset",
+      "sha256": "dc8a45c6259a8a51808ff3de4688302a65ce4988a05a5b0f70fbced01001ea6b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd_Right.uasset",
+      "sha256": "e6f80eb946a12e3056a53d67b8134f5e9bd028eb66333a8a665c13d6cf14d1ee"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd.uasset",
+      "sha256": "caba32a2584600031bca7cec76875e50eb80e4c1d6fea3e249f2532388d4f221"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd_Left.uasset",
+      "sha256": "8ed2295bbfbbe7800395b2fc2023e082f6c9b2b7127dd6ceb5c7ec055486c39b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd_Right.uasset",
+      "sha256": "d80c0c9bb0a8fae52095506f7f83c42bdd11b4d62ebfe57b1d9c7f40e8a9478a"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Left.uasset",
+      "sha256": "4d8fcf3a8b6e581f4d06bc4fe2b307e1dcdcc7432cc114173c201a0115cad2c9"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Right.uasset",
+      "sha256": "017f902b0a80b4fff2115c5c39f640b7622ad562a0ec137d25aae61d511d0b53"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_Fall_Loop.uasset",
+      "sha256": "7b01836fa36515fcb523644e82f2f130289a69a14314b6b939d5a580b3c5950e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_RecoveryAdditive.uasset",
+      "sha256": "e9935321b5ee3fe9445cfa2a6c9f0d0391d888fbb9db71b1eaf76b3bc5345d6d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_Start.uasset",
+      "sha256": "58c1e69b2690611740c465f92e3763fd9747b9a6e75fe6a7629b16c5fcc37e7a"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MF_Pistol_Idle_ADS.uasset",
+      "sha256": "766a02544f06604946d8c47c47c6bb877e14208904306188bc1f5b174fd7715b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_DryFire.uasset",
+      "sha256": "64b3c6dc7357f8a1b380057ef76e1cbb984d69e7d0732eaefd70befe2be7b67f"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Equip.uasset",
+      "sha256": "7f5a1ed2c1b72a9bb27b417cb0d5315440af2b22b7b846254fbce50e2fbb3d17"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Fire.uasset",
+      "sha256": "ebd8467dbb3de5ba0e1b2eac0092352e270b37e616bc443872341cde2f5c22d8"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Fire_Montage.uasset",
+      "sha256": "2eabacc1911be6c5b0dff7cf8a5c29c0506a25ffa6f3e7fa5946e76f992e38ee"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Reload.uasset",
+      "sha256": "a821a774302ce5121efff744620da09587752290e35e4413b8e40db8ad9c0391"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd.uasset",
+      "sha256": "704dd7e116a755b086a8d685321f23e332bba6cb77dd6ae95542d38c462feb9b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd_Left.uasset",
+      "sha256": "fff084ed3ca270a8d926f810f078a69347507851744cf399f3142c97e36e2fa6"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd_Right.uasset",
+      "sha256": "26a82255db90c0dc4e8c01d52a55f73b5f5a532ef161812faf63be65869f3504"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd.uasset",
+      "sha256": "7ac6171e3b841b09fff67dc4162b0c70f99f3107f549a20a213d5e05405dc69e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd_Left.uasset",
+      "sha256": "bdd682c2a45cf6a73a34df6499f8bb4ccf8b68a42b8888c47b8532bfecb200d1"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd_Right.uasset",
+      "sha256": "b9b42e230d6fdf9f4f836592507c3f8a17dfd76d7b054b78b633a11722f94100"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Left.uasset",
+      "sha256": "bc5f5b9f355e755023d1aa153070a073156f6d902b08e7cf78463f5e0bc8f629"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Right.uasset",
+      "sha256": "e72f68c9a306ec44f7bc4f37e3533f2918ee19d99a1d8e60986036f2a4405d68"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/AIM/AO_Rifle.uasset",
+      "sha256": "a3cfb9e380d881fa8561df0515f4ff24d96af4d3e1430df829c7ede641a12b1d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CC.uasset",
+      "sha256": "9521c1941980dc784cedb3df736d7c1edf56afaa0201f28b41c5ae9923e88bbb"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CD.uasset",
+      "sha256": "09b2c98aa7778b6a970b0d90882555cf920c03d761f1e50bb3feaf0e3c9a6fef"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CU.uasset",
+      "sha256": "60969c39ff3c1bd1e30e7c728a9dbe49c236857659b1ae8d20ae7605d8152324"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Back_Med_01.uasset",
+      "sha256": "ecb41ae9339d797408a7b9c0270dc1f917b680a21f1c189ac0e3890f41185e0b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Hvy_01.uasset",
+      "sha256": "e5caf5938c73d131c9254c1af09cb7fd4335516c9a406be77c17ad5e1f2cdebe"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_01.uasset",
+      "sha256": "ae8728f698434dd1e63978d5d92c5984d086d7ee39ce618598122b6fa87dc820"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_02.uasset",
+      "sha256": "dcb6c068d81d5be1d84c88895805eb29c2f3f345668a10884836f00759b0647b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_03.uasset",
+      "sha256": "3949df1228e6c14047477538424f9440216915a0637da33cf6c7298400128073"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_04.uasset",
+      "sha256": "e0ed26de9c333968631cc040e82aebac289a2fd655a1f348a3b09ce3b40f1ef5"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Med_01.uasset",
+      "sha256": "cca3c893d68d8270a9eec9eb7572f7ed6bfcfdf6ce6345dc8b2860d6135dbe00"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Med_02.uasset",
+      "sha256": "3acb6956f9eb6512e386b575c4c3e390f7d0280b037ca52e0eef813fb1f729d6"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd.uasset",
+      "sha256": "0fd489f5c8d4d63e84f8a25c2db46c3ae54eae828212b2a32622726e593b5d3c"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd_Left.uasset",
+      "sha256": "c3939c4aa298e6be0834256ef6f642cff0465a40d676ec7e464aaf504b44f729"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd_Right.uasset",
+      "sha256": "907cb106c1c466aac0b38753b7551af73a09c082a652c82c43df5418eb33b089"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd.uasset",
+      "sha256": "287d39883a65ccf6f89d91c7ca13b23184f04ae6eb5cc3867dd7ef7cfb35ec1c"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd_Left.uasset",
+      "sha256": "4103ea6388d484e8f71cd30b955c3c954750d922a0c030bf3d902bdb3e02c13d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd_Right.uasset",
+      "sha256": "2ca8d8ec88d086d4cb6027a2eefdde258142587bca40e98dee021abe9c8824f8"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Left.uasset",
+      "sha256": "4feaf1bd5b370e28f5dce611b28d955bbf84bbeb72b7e22972a0e143022621a7"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Right.uasset",
+      "sha256": "e3c5cae5448dbb8c4e3bda5406202a8e55b08247695082270e1fef3dbdd6e533"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Apex.uasset",
+      "sha256": "39acbd6bcfc5ec2795ee2497bb353fbe954766bda545c3318c3cd6ee5f1ee008"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Fall_Land.uasset",
+      "sha256": "ce74e83b9b88fa3722951c1c6b2cc36ae7159b8141f5347e5b47d760cee41c42"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Fall_Loop.uasset",
+      "sha256": "d17c0a4fe1d9bb970b3208909e1c35b7183568c7968a0d6d0de391cca216b472"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_RecoveryAdditive.uasset",
+      "sha256": "9d663743ac0fd361303751c55688a34053fbed145aaa88a004abd7b02533d5e5"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Start.uasset",
+      "sha256": "925f27182be45054a1bbb5d458cb53d38773b356dd61e18b82fa9a72880dc8e7"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Start_Loop.uasset",
+      "sha256": "c2da3d291df2070e1aaa62a45e445a7979948489b9e811e0d17f94b3e627d14e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/MF_Rifle_Idle_ADS.uasset",
+      "sha256": "cfa32b19207a25546bb5bc2dde8454dc633cc27c3de45747e941756e23da5d4d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_DryFire.uasset",
+      "sha256": "131e01f0a31f999e7fd09ef190b314314c851f39101412161dabdb00d2dda801"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Equip.uasset",
+      "sha256": "136b19498b8bac4119dde48236d22127e8463c0becff775069e0b6399b7939d6"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Fire.uasset",
+      "sha256": "1c5b983bd6c09431c83866f772ccf13871ad9626426c86cc08a0c87c150555f7"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Reload.uasset",
+      "sha256": "ac1e17d2acb7e3cea6e4c9ca967400dc3052d5ec6514e155b33d8e4701e80784"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd.uasset",
+      "sha256": "e1400dc7a7bfca224e0aa7796e5c230236ad634c808b2a1540cbad8903fa897b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd_Left.uasset",
+      "sha256": "8d535eb181e756f56974efae068f34da050747fd8836fe2bb5f0c693f51325c2"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd_Right.uasset",
+      "sha256": "6e0bd9b3ba2e982ac9ffd60a643dab78cf886d194a26af518170a02dc4f3eac0"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd.uasset",
+      "sha256": "540a6a77c48027e13be84d483c6afd18d82fb115b7532334597ebefe2249ecd0"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd_Left.uasset",
+      "sha256": "f7797a7841cb86c3dc9e68dcdf968e538c9a7335abb1b0d9db95e0983b2226d7"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd_Right.uasset",
+      "sha256": "787c7b69a054c6f2850503c016a2ef2fade7ad0941375c8e521c3534bf695d12"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Left.uasset",
+      "sha256": "a99d18722e504801616e1c0c495711c43c2d82c4465f7f388cdae8a45502bd1e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Right.uasset",
+      "sha256": "2c2c12d6a959d69c96962ca340bdfe984942df621ee2ff7e7e955662ddaee52a"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/ABP_Unarmed.uasset",
+      "sha256": "60ae8c970189979d9e070beb0fd8675f4afb2b04d8aaa8d11a0f03c5b7ebf4b2"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01.uasset",
+      "sha256": "f796113f17c91eca7e48ef57bbadc4fc36245a86b127e75a34ca4771500639ed"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_02.uasset",
+      "sha256": "fb3c74b8e32fb5a88c6d659cae8717294af85d4eaa7f684b2a36c36d245559dc"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_03.uasset",
+      "sha256": "1c66016fc3bd386453ac7fb1229a5f0644c6bd5f98ead29f6e6a1be80632ba1f"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_ChargedAttack.uasset",
+      "sha256": "5d9b0fc6892519095cb6930aba5c0dd063acf647612a06e0f2f7e19c463223ee"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/BS_Idle_Walk_Run.uasset",
+      "sha256": "bc71af8768b569695d4bcb69c79867f998e085693f5e8230854d228de359f5bb"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd.uasset",
+      "sha256": "1f6e9448f0e0737f506d9e8f11b8d661d6d65c818f0e3160938f1e24082b16c3"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Left.uasset",
+      "sha256": "e6e68e6cf4175f85c0e16a60f80335a1fab3f8c76a014d02bc0cd18aabe3314a"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Right.uasset",
+      "sha256": "ee3137ff2b7d2cb721c935e2de91d55479e20f030ff230e9f912f6b70658c399"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.uasset",
+      "sha256": "0ccbe851f85a6d4cd7c6438c219cb6af8e281784107b5be8e9b052e4df3069cb"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Left.uasset",
+      "sha256": "12ee5a11f277af90429980f120026f430ae1e438f6eae42c10222e175f9dbe12"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Right.uasset",
+      "sha256": "66a7561d60453794864edd7e0c55487817068b6b66e31e179c98b9f2bab4c76b"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Left.uasset",
+      "sha256": "f7842445f0c2b2f8d3cd9d43b9f58bc3ea888adeb1e161398b492097358431bd"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Right.uasset",
+      "sha256": "208f642310d9627d12a5125889b480e051a1f1fc5397a10b83975903a0c59aea"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Dash.uasset",
+      "sha256": "8a1c964403b7b1d9d9f5e0dd8c20c1ae809606c5e8021b2983edfc65ac0a66f0"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.uasset",
+      "sha256": "408be742c63adffe8c6c1d22442e99ea34a7618cd33c6e78e0eed3d7db877433"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Jump.uasset",
+      "sha256": "252cbf69b07b797d3c3c6177d3ae9df17e9873f4872c4fa040c0d441dc3b3cef"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Land.uasset",
+      "sha256": "a00de25a6beca56ff6d8077081531e5cef238c92825b6c184351d0aa99ef3fcb"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_WallJump.uasset",
+      "sha256": "e29af6dc13219cb813097e596c143d964a18c118caca138015574009e50859c0"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/MM_Idle.uasset",
+      "sha256": "11ee7fdeb84db89c1a66785b43b9bfc1415782122b8ac229517f4c5125d9cb0d"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd.uasset",
+      "sha256": "ae0c2ee1c1178fd1b9493f6c327e52d10a3d6bbde29eae54dcb07c13a27dcf46"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Left.uasset",
+      "sha256": "7c25a8eebb9883085ac8f82de3c83fc34fd19b02567f17fafde9dd60c09cf3e5"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Right.uasset",
+      "sha256": "8c71b9bbf7b15d75cacddbeb8827e22888cfa63a359ecbc0e017aec822d1a522"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.uasset",
+      "sha256": "c74b2fc0cb651c4924804b364e534856a1b44dee818127c408dc055e4bda5ed9"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Left.uasset",
+      "sha256": "a7d8ff5a55eb0c445da2c74b2fd9460b6a3aff0db206be9e99aed319158d5770"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Right.uasset",
+      "sha256": "67d3d4fed066023a14220277f5598db83f19efee97de908b1397b0ae998e5599"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Left.uasset",
+      "sha256": "81500e4fcdd9ae9aa6433e652e67dea8f9dd9fa7b9ef1714e29f6ab0a1bb9d97"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Right.uasset",
+      "sha256": "f5922b4e632351353224b32f719af97e85512ab4f6553b15315cf14ad04f675f"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "sha256": "d7ffe412d906380bd5bd4462f464b2a1fe48fdb79b9077f29bd0f958a782035c"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Materials/Manny/MI_Manny_01_New.uasset",
+      "sha256": "9f1e4ed382304d020b750c81505140fc1de4d339b0909430adb5380a6bb89b65"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Materials/Manny/MI_Manny_02_New.uasset",
+      "sha256": "26389db06f0b7928b487494bef3320d6b0e6bccd58193bccedd67c2c89132a46"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "sha256": "62a3050ef24b823f9fe84ac5d9c477099494982d35dafcc3d8078f32b0d4a865"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "sha256": "6aec77489fdfab0e1ea299de60fbd4f332face4495bbbd20b97fb0308bb9c5b4"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Meshes/SKM_Manny_Simple.uasset",
+      "sha256": "be9f011191ee1887b97cd13bce09886a6066c2fd62c619991070ec142184e1bf"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "sha256": "1ef45d92507a76d74a5e06737f94cad40eb7d5f5769dfbb63f7f74e784a178c6"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset",
+      "sha256": "22029d47455f24471195b26a0e04a1e1389f27d6a924e88c9f46a0f600c9a530"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Rigs/CR_Mannequin_Body.uasset",
+      "sha256": "57f84458a160c35b77f0442d2af41054e41e021ebbb496c2c76dea76d1d89580"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Rigs/CR_Mannequin_FootIK.uasset",
+      "sha256": "aa01be065d2efa2dfd3b258f60b94b09fcd5d351356d16bb52578ef5bcbfb5c5"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Rigs/CR_Mannequin_Procedural.uasset",
+      "sha256": "057818dd3e0e16ff90c147e25a8fc5ab309c49c4c60360477cf4742e767d151e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Rigs/PA_Mannequin.uasset",
+      "sha256": "c0ceaf003947088ff076555b81a46e5ccb11149c94025eb2a9e74263fbaa0d67"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "sha256": "2f623209571ecbd8185b5b463786be033c3284190b4fc7b249e8d1d2ed995fd8"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "sha256": "6ae0f4f9908c30ecc9aedf1ebb442e4983e526a7832ec791542064c7853f9999"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "sha256": "3e42e888aed8aefff68da7d7dda4f177c5647b19473e4e913f61375c1319abd8"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_02_BN.uasset",
+      "sha256": "c9575d21c9e2872b3358c0efb9e202535ce2efce94c338b9d3bd04cb9831e353"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_02_D.uasset",
+      "sha256": "474728713232c6833f55c041548f555bc62c5c49e74082a5d16e68a5ce488cfe"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_02_MRA.uasset",
+      "sha256": "6697972eaf2dfe201923dba6a302f024b0ef4c4e46b4ecf578178717098e8277"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Manny/T_Manny_02_N.uasset",
+      "sha256": "61a9db73f72fe2d7d8821b33a79f57f3f11df9da9455822392b84b199c78e8df"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "sha256": "04e5ed207b7df0d2ad1bbc668916bcf170545fc2a72875e49ec99c6e2667002f"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "sha256": "0988d4d9f25597224910e1043591cb2a089a8607a4fe4a63cbc68f3eb2ab473e"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "sha256": "10fbe9ac3e18e0a890d19756d3470ca372a1aeaffefbe9a22d6b0e6182293551"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "sha256": "f0ccb2f465894c6f9ff4dd142351ed33186c5f861283a75f3e08d1531a253c49"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "sha256": "9f7e495cbe0430aed7084b5508f87186f98346eb04f003734c9b378891da7887"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "sha256": "0bc26466e9fdc954cc276bb6ac1350e22c3dabbe1b54b6bf78ed5ae2e339d9fc"
+    },
+    {
+      "path": "Content/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "sha256": "34e6fa3414c04a86b7a5287e5569ea9d6e53c319d6e7dbfc8b09dab5b70611a6"
+    },
+    {
+      "path": "Content/Core/Audio/SFX_RelicPickup.uasset",
+      "sha256": "d444aead6bfc58507d43a256b63e4ff9c49d1f7fae6010ffa9c972e27715ceb6"
+    },
+    {
+      "path": "Content/Core/BPI_Interactable.uasset",
+      "sha256": "8a65de1af904e530d40e912790199ef41290d617f6398dbb493ebf6862387c5d"
+    },
+    {
+      "path": "Content/Core/BPI_RoundReset.uasset",
+      "sha256": "0078fc4891bf8ae87af6e2307b0f8b75dd325ced8a06ae26c01aebccfed315b4"
+    },
+    {
+      "path": "Content/Core/BP_CoopCharacter.uasset",
+      "sha256": "5c03b05a5074841aece7c69b5435d8ac7863e50c29e75bd042d9b2b2c9163f94"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameInstance.uasset",
+      "sha256": "c3edffffdd0279477d5451813ba3c15b4a895055dc146bba0c9c6c446fe2a2f6"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameMode.uasset",
+      "sha256": "33eace87e28cb9e2481aa16989c1aa2455b1a8e24ddbf7105d10a6930ea4a07b"
+    },
+    {
+      "path": "Content/Core/BP_CoopGameState.uasset",
+      "sha256": "6c1a50e1002221d85951ecb51ddd91f0715d0013fbd50feb1cb0cdd26ee484c6"
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerController.uasset",
+      "sha256": "1a6ba0c54ee6a9484282d13a47644108a0e76e8bae183f10dcd62cc591c6b8af"
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerState.uasset",
+      "sha256": "1b551b37c85e6cd9337a1ff0fb2af5ec3b5cb40f39cd4bc9c065c41b80c57b5f"
+    },
+    {
+      "path": "Content/Core/E_InteractMode.uasset",
+      "sha256": "59c0e1b642c6849d600692b39725fc1a5355c25b886f3eb6f8847cb6c648f20d"
+    },
+    {
+      "path": "Content/Core/E_RoundPhase.uasset",
+      "sha256": "b35b51e3563040273c57eab70ffecf1f54d332fd43e997e256a6007a7ac620cf"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugClear.uasset",
+      "sha256": "65baa912317258404018a316eed8817d6d3b2924d074c17a2ddfe32d3b7e5c54"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugComplete.uasset",
+      "sha256": "4e528a033ce5a62b62981f362f9fc0e41fd1c1edfd87a4571ee87d95b2d02611"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugFail.uasset",
+      "sha256": "08d9d0d0f40c41f93ec06fd85d41ca37c077421ed3590e43e52e3a4544c90d08"
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugStart.uasset",
+      "sha256": "a67579b40bc00c767e9bd7cea8ac101f9a7df0c3b198b9889c284e9408d1d073"
+    },
+    {
+      "path": "Content/Core/Input/IA_Drop.uasset",
+      "sha256": "41e4b1e835382299086ba6ce9ed3891a7c3058cfe1a9e28a6f008b20f7246e0c"
+    },
+    {
+      "path": "Content/Core/Input/IA_Headlamp.uasset",
+      "sha256": "79303bb1fff2e1f7596abd2b0044d60f4c41eb2724fe412e7b723c4619fd546c"
+    },
+    {
+      "path": "Content/Core/Input/IA_Interact.uasset",
+      "sha256": "0739c5856960faaec56e4986b1240feda296abc4c64bf53572fbc521ecfa7d27"
+    },
+    {
+      "path": "Content/Core/Input/IA_ToggleView.uasset",
+      "sha256": "3e032a476b1a42f08cb74e328bd769c860f115c31c4f7cde2ef787f496458557"
+    },
+    {
+      "path": "Content/Core/Input/IMC_Coop.uasset",
+      "sha256": "699f95fbffb647503377eefa057bb5b148910f824323e9a093c388f2cc891959"
+    },
+    {
+      "path": "Content/Core/Input/IMC_CoopMouseLook.uasset",
+      "sha256": "a2e2ae0a450c7d1e734013fd7020188a55aae44b34550a570bca55366eeb0c81"
+    },
+    {
+      "path": "Content/Core/Input/IMC_Debug.uasset",
+      "sha256": "6f18f9b2d9ddcd4d49ee373188a4794032dfd0b1fd0ad2e0f13c294e0a49af48"
+    },
+    {
+      "path": "Content/Core/S_RoundState.uasset",
+      "sha256": "56e1b30cc6e6ffed8f3a35661a2f64964eda3fdbbea04c6a9f9a5696ec96925f"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_005_004_003.uasset",
+      "sha256": "abd4edf1c99e55f6d8fea7d48d5f519723a3d60cec77e239b39320938abe1a8c"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.uasset",
+      "sha256": "4b572d217d6f0afd7a83ee98cd2ed8ee8430dc8b14885d4108c89fe69a3fac36"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_031_018_010.uasset",
+      "sha256": "95b272776989ff68de4e5588ee8b95693fc9938798e51fd5871367b87a2d16f7"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_038_019_008.uasset",
+      "sha256": "613f3c4f9f47bcd65e441b8e70be188c6674fde8454c5bb91d1aa3b3c910efb8"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_038_022_013.uasset",
+      "sha256": "53e74c78e52ff7038f8862a502d843d6929c71cf7e27173244ad0bc4fb72993f"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_043_036_031.uasset",
+      "sha256": "527c3d733663fe3d2f8c150845333e26b22785c9eeeca760bfbaf75112b6a211"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.uasset",
+      "sha256": "ed2b74f5f087a18ffaec91c1db739735f0a8ed8d4236db5b6e72117b87a6b6d1"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_051_043_041.uasset",
+      "sha256": "da1aaeb940185276a691f2397ce14919c56947392b27e629ab47eb36d78a6aee"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_064_054_048.uasset",
+      "sha256": "4df28e6a3d84c3bf116befda1bd961f77c6e538da8a3f35453957fc4921ec380"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_077_038_015.uasset",
+      "sha256": "1d902017581a665e1faf3498f117dd0d34aed9ef9c60989920312644fb692606"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_077_041_022.uasset",
+      "sha256": "9b967d8187d7c32042a8a14a69795e205f3f4f20f8831bdb6e06e66b7b807f00"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_077_056_038.uasset",
+      "sha256": "419a59c791acb14b351fb9613d8885ee3564027c6f6b6185574715bfb104107d"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_087_051_028.uasset",
+      "sha256": "e38ddacc4462b06d419156ae13805be026a91f16aea52a9abe8858ca1ce4d75d"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/MI_Cave_107_061_028.uasset",
+      "sha256": "4099d0bd5c211159b30a2522b4877c8bc5277581efed251499a301082f454d64"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Materials/M_CaveVertexGlow.uasset",
+      "sha256": "bde20cabcf4671df7d6cfdaaa906852144c0defac068c7a2dbaba04e6fcbdc96"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_131.uasset",
+      "sha256": "16a237bedeb11a6d4cfba727581df4ab52e90d378da751d3de57b23c17c994df"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_138.uasset",
+      "sha256": "c5fea77cb438f3e7a37d3253a32112d76b6914437432b3fccc4a95588d6d8877"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_145.uasset",
+      "sha256": "28647d05cdac06e31a4e243b3c2d6b41519fd894177c5393f25f98676edf73b9"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_153.uasset",
+      "sha256": "aa2a97aab0cc601c880b626f1f72b5bb208addffb8c07bba9dca5936a84cc6cd"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_161.uasset",
+      "sha256": "9ebb9c4791a8fbf24b86986938f627ac6d9b0b9456a125d29f2306a34967d843"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_168.uasset",
+      "sha256": "a84cfed45892c29d4486c1bcc7a0a6067fc7663a29aa4f2019b3714e75f56a12"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_175.uasset",
+      "sha256": "e563f97f83abb9881ed85d84b0e2267069bec032c2e63415ca6db26a5204cb5a"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_182.uasset",
+      "sha256": "bd12c6bda33a693c1c7bd02cd12e52a9adea429d9653bd98f59974ab7cadc99e"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_186.uasset",
+      "sha256": "e72ad7bb6384c511875470c5415b2756822cf11795d6638103e2a98e6ebc41eb"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_191.uasset",
+      "sha256": "aa5b0cdd4b84f26cb20ff44be4d089fb5a68228aac1b29caf65fdde5141f423b"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_316.uasset",
+      "sha256": "cdb669b36f60c6f0d3288b0e48e099c2dff267c3997567db868398e2f9f5bf18"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_318.uasset",
+      "sha256": "8455aa8c969904a41bcd08093f5b679a21037f88d6151079d15943fbb95ae8fa"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_319.uasset",
+      "sha256": "323d483943ce1263ab8fd30a5848385b059b091048b8c5fa15d39655e4c94e1f"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_320.uasset",
+      "sha256": "50294cae7ef1f36d3888b6263e5c4ad0c2f82a24de13ea21e00ca4824b2885cd"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_321.uasset",
+      "sha256": "30e9366368d3a7252599e94a82e276f42ef5674018a0860236b3371e9c491dd3"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_322.uasset",
+      "sha256": "1491f755a446787a0cf7c8810d65f10658c5693b13eb5c9cbfdd4364e29566cc"
+    },
+    {
+      "path": "Content/Hazards/Art/CavePrototype/Meshes/SM_Cave_323.uasset",
+      "sha256": "3ba4eae1da151d360c1e04a0cea8f8d206a436b1a8adb0b72f40f2caa4e3a37f"
+    },
+    {
+      "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_CaveSupport.uasset",
+      "sha256": "1952a88a5959a2aa4e745295cb059bd871a8a6f0bec920424808741fd4163509"
+    },
+    {
+      "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastBlocker.uasset",
+      "sha256": "f9400469b84631cbf7e489004c0f482030fc638f5fa4f37e86ff14b20bd6e257"
+    },
+    {
+      "path": "Content/Hazards/Art/HCA2_Integration/SM_HCA2_PrototypeEastWall.uasset",
+      "sha256": "a62a1bb65cd7749612f0320b3a4fd6ec6a2385a10b94298b5e8f5027e6311b10"
+    },
+    {
+      "path": "Content/Hazards/L_Site01_HZ.umap",
+      "sha256": "6e4161c74e704bbb0e5828a8e76643c69671b97cb6608d5eeae5dffcd6ab122f"
+    },
+    {
+      "path": "Content/Hazards/L_Site02_HZ.umap",
+      "sha256": "9c15777f2446139caa7de617182b049d841e0da48fafbd823592f6ee4bece7a0"
+    },
+    {
+      "path": "Content/Input/Actions/IA_Jump.uasset",
+      "sha256": "73c14789fee45a6e1eff57f3304a0bafee23790cc8ea6a6a5bf0056e75d7b3e4"
+    },
+    {
+      "path": "Content/Input/Actions/IA_Look.uasset",
+      "sha256": "0d4a2cb59db11a0a080834e1b292207e530b8df217446afb46e382d9fa12f5a9"
+    },
+    {
+      "path": "Content/Input/Actions/IA_MouseLook.uasset",
+      "sha256": "2901132a04ceb384e2693107b8f5455de48b7c325d6cc5ce07556c6425c19f48"
+    },
+    {
+      "path": "Content/Input/Actions/IA_Move.uasset",
+      "sha256": "85567b9d91ffd9f7106c3062557a6fa864a791233380353f63eb563470985add"
+    },
+    {
+      "path": "Content/Input/IMC_Default.uasset",
+      "sha256": "133bda6567aaeea1aae05c03597345e4b1d9ef24d868a0275203b3203a7aae98"
+    },
+    {
+      "path": "Content/Input/IMC_MouseLook.uasset",
+      "sha256": "6a00157cd520edcf0b037d7091bfe188fa6eb7c48465f695981f7cbe5fb4cc80"
+    },
+    {
+      "path": "Content/Input/Touch/BPI_TouchInterface.uasset",
+      "sha256": "e778ae087305a34cd6957fcf9b29670f0a2a01be96bad89c79b83286496ec45f"
+    },
+    {
+      "path": "Content/Input/Touch/UI_Thumbstick.uasset",
+      "sha256": "49c8c04b2e8c88beb55935b05d9af72c35d89512ea6435f20d5e3123be139f8b"
+    },
+    {
+      "path": "Content/Input/Touch/UI_TouchSimple.uasset",
+      "sha256": "81f45f11e73180f0964ee3f59f77c8c55e61d355e5c69427e1de67e5aa5db77b"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Door/BP_DoorFrame.uasset",
+      "sha256": "4386d7d71b8d5241fd8150aa47900711eb0d8bd069c00de25fce07f011d698fa"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Door/Meshes/SM_Door.uasset",
+      "sha256": "fa98c4fc5083393e085d7b44d0b67a7e830922e2601a439167916616bbc29993"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Door/Meshes/SM_DoorFrame_Corner.uasset",
+      "sha256": "383dea9555e76303d60d0011fae6651a4be07c24033c0aceeecd137c954ee3fc"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Door/Meshes/SM_DoorFrame_Edge.uasset",
+      "sha256": "26eb76a2ce36be334bf0770561475a9e06be928e9ca75b4a31f5df3debb36592"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/MI_GlowNT.uasset",
+      "sha256": "6fd40bc38bfea9418fa54fe365732a1219e615169542a0a4d2e1d518318c864b"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/M_GradientGlow.uasset",
+      "sha256": "c1b29ad29c2eac3dba6dd6a90aed9de8c6147a13b6288a42bd73fe14b78970a8"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/M_SimpleGlow.uasset",
+      "sha256": "e6098242541b34be6aba19ea1fbfa35107f891e8f55d30d4061aa11b065b8bd8"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularBand.uasset",
+      "sha256": "97fbe3da2d907279dcbfbbf285e1b111ceb8d5f4a1c9d6bd48fcb8defc86842b"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularGlow.uasset",
+      "sha256": "6ddb27bf7020f4980d3f8435cb0928fb48b32c1ab3ea24bac7e253435081bf6b"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/Assets/NS_JumpPad.uasset",
+      "sha256": "2e76849cbb139160e5e73c226fe6aaa66a63fbf75cbd1213f871cca65e409817"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/JumpPad/BP_JumpPad.uasset",
+      "sha256": "42ba8262f07355cdf36e33977f3bb415810390cf210b75573d766bd819cf8401"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Target/Assets/SM_TargetBaseMesh.uasset",
+      "sha256": "378ace355b8f5e71a12e459d9f8cf4958626884142fec34be8630db6d8412cad"
+    },
+    {
+      "path": "Content/LevelPrototyping/Interactable/Target/BP_WobbleTarget.uasset",
+      "sha256": "8bd8784bf03cb945d63deb2c4c22261a9a9ea2af1f84766805ca92ec7b521ab3"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MF_ProcGrid.uasset",
+      "sha256": "e5ee13abdb241d9811f6c1bcc0a607d229fa7adc5f46bfd5a9d5fedbfa279683"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MI_DefaultColorway.uasset",
+      "sha256": "786a4dfcaaa6f4daf459c77bda247c2c138140680a8246d521974d0cc4fc8a8e"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray.uasset",
+      "sha256": "084681bf680dad66b8c8ca803d927053cf46756f2f2e62d18fcc439e07de7263"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_02.uasset",
+      "sha256": "fa0f2a06a7d937127d7d737c13bacb3f8fe88c8e0479f5e6b7cda81fd225d077"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_Round.uasset",
+      "sha256": "901ec868e81e7a73c9f3ad4814e1205af27abc772949e5a30550a00f31ce4437"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/MI_PrototypeGrid_TopDark.uasset",
+      "sha256": "838034e5afc7ab3a70bfff6de2e1237aa02337fb423e95c1b536b3e30c61c982"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/M_FlatCol.uasset",
+      "sha256": "41dbbda4b463a224c29ee01765e1f52a8ae63f2f94f1440ee267fe7b1a481585"
+    },
+    {
+      "path": "Content/LevelPrototyping/Materials/M_PrototypeGrid.uasset",
+      "sha256": "bf8625ad5917cee705867038d8a590b25465e6b5d5818a738a584e515d7cbdfc"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_ChamferCube.uasset",
+      "sha256": "b20a3ae9668ec599db519af3f84b67952d0e31ac4427b80ee812232edde91f53"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_Cube.uasset",
+      "sha256": "4680317a8c87f983e077f6c0a6b93ffaa0ba4dbddbc810960d4553e6ad380a89"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_Cylinder.uasset",
+      "sha256": "76aaa3c2b812ff790fb57ae7736b748e4e1556afbb13466fd787d4bacd2c7dfe"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_Plane.uasset",
+      "sha256": "39ab83dc57a9a27a80476711610f72e81c0685a05d4aa95413b3e4e7f6c4a3f2"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_QuarterCylinder.uasset",
+      "sha256": "4087b3f85753d9ccbced7d00d42208dad4d21185f24a97b0c86db31be867b733"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_QuarterCylinderOuter.uasset",
+      "sha256": "ab58a5224da57452f367c9d55ea4976466138fc2cb8ec9e2fa92748c86a07f11"
+    },
+    {
+      "path": "Content/LevelPrototyping/Meshes/SM_Ramp.uasset",
+      "sha256": "e5b472deb37a9956b9112dccee3d09498a456baeacc574db8c5d725463b73597"
+    },
+    {
+      "path": "Content/LevelPrototyping/Textures/T_GridChecker_A.uasset",
+      "sha256": "bb8334767064b107ec4f4407ef1365e8b9e2dfeff5984e66d4a6232254ddd02a"
+    },
+    {
+      "path": "Content/Maps/L_Site01.umap",
+      "sha256": "bb8f27999c77083bdbde21e059d22b6d8e694e5a72d9485f87bc10b18f21ba3f"
+    },
+    {
+      "path": "Content/Maps/L_Site02.umap",
+      "sha256": "f4506c868ed99d2b91a92a6d5bd4c2f13143d6fc9d14c8a63b7f37218ccbf25e"
+    },
+    {
+      "path": "Content/Player/Art/MI_GauntletGate.uasset",
+      "sha256": "d0faf160b84d11801dc7bae902b9b710b35a6bb6cdd2532c6e2b913ca6b34a1c"
+    },
+    {
+      "path": "Content/Player/Art/MI_GauntletGate_Frame.uasset",
+      "sha256": "86712e68fb5afd6dd15ddd546488e8355e8afc2368ce324b5a91c2daf4e62f2c"
+    },
+    {
+      "path": "Content/Player/Art/MI_Lever_Base.uasset",
+      "sha256": "0c49eaffec93c4e311c609b5cebc85efb72988dd680e9f169a54185426fbef7f"
+    },
+    {
+      "path": "Content/Player/Art/MI_Lever_Handle.uasset",
+      "sha256": "7b9a4a45118a15594c11417a0553653e99ae8b1ee88b3c3c0274646f1130788e"
+    },
+    {
+      "path": "Content/Player/Art/MI_ZiplineAnchor_Bottom.uasset",
+      "sha256": "2761cd9f57c97d55e2350e7bcb6cbb03c712643fb1cc5630cdff1c5b82b6fef9"
+    },
+    {
+      "path": "Content/Player/Art/MI_ZiplineAnchor_Top.uasset",
+      "sha256": "44d9fd429bb4b5562039941459497f49afd7c0edf5fd60799281ba7b76c70c9b"
+    },
+    {
+      "path": "Content/Player/Art/MI_ZiplineCable.uasset",
+      "sha256": "98452173cfa9dfce402d949034a9a2cda7e23af2faaa5323727b79c0f0085cde"
+    },
+    {
+      "path": "Content/Player/Art/MI_ZiplineTrolley.uasset",
+      "sha256": "242a2500d2bd85e5311679a953b46ffe7833d544d2ed972ca9d5f0f273af3777"
+    },
+    {
+      "path": "Content/Player/Art/M_Ghost.uasset",
+      "sha256": "729bc3018ea53f597a4210b40bf002cbd71b727a2e16dd693335365bd877802b"
+    },
+    {
+      "path": "Content/Player/Art/SM_GauntletGate.uasset",
+      "sha256": "6630507da9eedc0f00cadccebdf5719ac0a110aa52e4f1ac75af4754c85f47ae"
+    },
+    {
+      "path": "Content/Player/Art/SM_GauntletGate_Frame.uasset",
+      "sha256": "ab4b772caedf8d77393fe55f42ce6a1076dc56ff35988d9a73cf0918d3c1c1e2"
+    },
+    {
+      "path": "Content/Player/Art/SM_Ghost.uasset",
+      "sha256": "1748f400f3669acadacbecf7be8a47b314cf5093ebd671cc42df807186d9d0d3"
+    },
+    {
+      "path": "Content/Player/Art/SM_Lever_Base.uasset",
+      "sha256": "9f7e89e219b1fb4fee94c4243064df79a19e4979363e921d398de900203a0a20"
+    },
+    {
+      "path": "Content/Player/Art/SM_Lever_Handle.uasset",
+      "sha256": "750b3711e234a531a9a4c3a542284ee2a70f6d4ec613a3015c080e6dadbeefe8"
+    },
+    {
+      "path": "Content/Player/Art/SM_ZiplineAnchor_Bottom.uasset",
+      "sha256": "44e5c284f7d042fa3a42b5178a60c2f964fc568e845194f71d872ac2f76cc891"
+    },
+    {
+      "path": "Content/Player/Art/SM_ZiplineAnchor_Top.uasset",
+      "sha256": "50411209676cd7aa503924b93314422182b917939f164ad68c8f9336dc05bdf7"
+    },
+    {
+      "path": "Content/Player/Art/SM_ZiplineCable.uasset",
+      "sha256": "f638e124baf843c0199ad3c2e66d4ebbbf63776488273f242521ed563c5aacbc"
+    },
+    {
+      "path": "Content/Player/Art/SM_ZiplineTrolley.uasset",
+      "sha256": "5e1d5d68f692fe2c46e37b9f7b9bce3c97ef2590a5d7a39028c191ab9b84aaba"
+    },
+    {
+      "path": "Content/Player/Art/T_GauntletGate_BaseColor.uasset",
+      "sha256": "7dbce485b01207866f4bc38080ee3ad7abd808d0bfee21e1ab4284fde8ff4e46"
+    },
+    {
+      "path": "Content/Player/Art/T_GauntletGate_Frame_BaseColor.uasset",
+      "sha256": "bc7adb39580b5d121522f7441e2d4aad6aba40f0647e7a876ee196e85883d7c6"
+    },
+    {
+      "path": "Content/Player/Art/T_GauntletGate_Frame_ORM.uasset",
+      "sha256": "6c8b857c55a6f1a75a4df1ed95104fea2755a849a3653561100cee3780b6cde5"
+    },
+    {
+      "path": "Content/Player/Art/T_GauntletGate_ORM.uasset",
+      "sha256": "8e1367cd214fddd66a29ca41e05ceafe62f0c889fdaa246658d70973476852f2"
+    },
+    {
+      "path": "Content/Player/Art/T_Lever_Base_BaseColor.uasset",
+      "sha256": "4cae8cefce7eb4ed8a4dcdd9e7778718cfd658069f9783af7c6c6127a1fac5b4"
+    },
+    {
+      "path": "Content/Player/Art/T_Lever_Base_ORM.uasset",
+      "sha256": "ccebcdb35848321f90763d43ba3553215544bb4d789b862c27acd3367b8b3b3d"
+    },
+    {
+      "path": "Content/Player/Art/T_Lever_Handle_BaseColor.uasset",
+      "sha256": "a569806ce7cd149378af3feed1553e6ff0f022818a65b2baa23238fdb5e40887"
+    },
+    {
+      "path": "Content/Player/Art/T_Lever_Handle_ORM.uasset",
+      "sha256": "9d3bf9076012383250554fd97e17c306d717275731bb063398672df8ea2ff543"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineAnchor_Bottom_BaseColor.uasset",
+      "sha256": "d5c7a2aa783038c87f05a19f50b033c1743b8916d009829c7f841c6639b707e2"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineAnchor_Bottom_ORM.uasset",
+      "sha256": "fd5c6a5ce31da985c8e21b1e28b5508206f5104d689c1935233d30b3d9685ffd"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineAnchor_Top_BaseColor.uasset",
+      "sha256": "7e204b87558fade679e101396b789e33886e7ca1d55b695063d0e8af0adac479"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineAnchor_Top_ORM.uasset",
+      "sha256": "f0aabdbe4230645480e7092a795d3fb7b4a0009120709ce34b4f0ceebdcca148"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineCable_BaseColor.uasset",
+      "sha256": "59d368bd7ba553e1bfdd8fef2a66f57857ee951655b24d2e4b1325114b4496ad"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineCable_ORM.uasset",
+      "sha256": "e0e7d962df5875d0734544634cca7ce5b6df969d939ab9844a2f89233bdaafd0"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineTrolley_BaseColor.uasset",
+      "sha256": "dceb6d165cdd5a7adff20ca95ad397d0b73b723d8c98846c0a0061ff96f184ae"
+    },
+    {
+      "path": "Content/Player/Art/T_ZiplineTrolley_ORM.uasset",
+      "sha256": "626860f8aa7f085e015ae0b411250b0fc85cce573107a174897d1789a1009433"
+    },
+    {
+      "path": "Content/Player/Ghosts/BP_Ghost.uasset",
+      "sha256": "1dbfb4b26f4a433247512653ab6b30fca930ba3434a95e455bd30df773ba4d0e"
+    },
+    {
+      "path": "Content/Player/L_Site01_PG.umap",
+      "sha256": "934624790ef54572945ac18eb6c72aa3ec43b34a7625050099ff46feb0777e3d"
+    },
+    {
+      "path": "Content/Player/Round3/BP_GauntletGate.uasset",
+      "sha256": "901f5895d48c0b53fd0c705f37a824178f9c3b2c972a16d89c65846436e5b470"
+    },
+    {
+      "path": "Content/Player/Round3/BP_Lever.uasset",
+      "sha256": "d54a918088bf22c6219282e51f93723ced50e2638471b679b22127b99183951e"
+    },
+    {
+      "path": "Content/Player/Test/BP_PG_TestCharacter.uasset",
+      "sha256": "7c0bab78ef813570e8609454f65bbd095639e2c21000e96cc06269692eb2a286"
+    },
+    {
+      "path": "Content/Player/Test/BP_PG_TestGameMode.uasset",
+      "sha256": "b3c9deaa8fbc0378f6602338eef3977937923d954f7f3ef27540dac811eec1e6"
+    },
+    {
+      "path": "Content/Player/Test/IA_PG_Interact.uasset",
+      "sha256": "2981311ced4b76feac0c73543e102ed6c082bd60ccaead31a797d6b3c499344d"
+    },
+    {
+      "path": "Content/Player/Test/IA_PG_SpawnGhost.uasset",
+      "sha256": "74f88008826183503b03914613225ea63a7829a121b6faecf30f23c02ebc5b36"
+    },
+    {
+      "path": "Content/Player/Test/IMC_PG_Test.uasset",
+      "sha256": "52d2e1f35fbcd3f0f6ea0aa6b63be8c97b6b80825e238ad773fc9fd10dbe646a"
+    },
+    {
+      "path": "Content/Player/Test/L_PG_Test.umap",
+      "sha256": "a92e49c72254a4051dadff5851c28697dc8477566b125cf76d194a6e0203d4d6"
+    },
+    {
+      "path": "Content/Player/Zipline/AC_ZiplineRide.uasset",
+      "sha256": "661d72cb6ce2e0e5171d81f105369020e3e2a09d8ae9a3a1d54f59597651d267"
+    },
+    {
+      "path": "Content/Player/Zipline/BP_Zipline.uasset",
+      "sha256": "a078cc88da7256d3e6985b76ab693f43319de73606cd1ff7cf91f2ec2e82172d"
+    },
+    {
+      "path": "Content/Player/Zipline/BP_ZiplineTrolley.uasset",
+      "sha256": "8055d28b273ce299301c00b953241f5c34f8de77542a0c61288da1b58555f8c8"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan.uasset",
+      "sha256": "e7ecf7675653d891e552063267522256bc9a1958964e2a9f2f3ee61561d11908"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone.uasset",
+      "sha256": "e5b38ab38394ecf3eab602b764c91005705ee48548e8c949386292a8a0b6d1ad"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow.uasset",
+      "sha256": "ef2742c7a9e08e486da100f31a5df037b6ed70216cd854eaf5d1079ff3df270d"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.uasset",
+      "sha256": "08df449e83379c82bb99b383f7088a19692940cb3487d1104fb36c0ccdf57e1b"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.uasset",
+      "sha256": "305d4f45a3673d15ba88c3294adc851278f32abd44aa69090498c9a0181c8273"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.uasset",
+      "sha256": "54aee76b8974c47d8b2827832343e6ea9c1afac014e018764212e15d531e60f2"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.uasset",
+      "sha256": "6bd6fc39ed99167b1488ff265d6829222294ecca66eb299d3ad8a105bb3688e5"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.uasset",
+      "sha256": "d3c9ef0a81d1c4588eb0bcb677abddb90769b5bc53b02d52b4fdaa97d0c751f7"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.uasset",
+      "sha256": "e9a6a840e6e85b0e5ea55b2aca8a5d4881067c52c95fc4d7ffbb65c948d256aa"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_ChamberGate.uasset",
+      "sha256": "944903d36bea9eaa65e21e74347b972f7ac223d9c3dbacea1874625918ceaf6d"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Circle.uasset",
+      "sha256": "9739b6988a417c706408e5ee70d23a60e98ab58bbbe11c0b2f160b7cf532b5a0"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Cross.uasset",
+      "sha256": "e55672cff038578b58fa76874b291db3d56c163a1b896bea1c3480b6f72e0997"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Diamond.uasset",
+      "sha256": "2c16717107fbb0fce1ce03b1315282f08e0851055a03e123cb99df59bb5922dd"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Assemblies/BP_HCA2_Plate_Triangle.uasset",
+      "sha256": "51fab582f446435753e5c894d7ef7dd3c68ba0d48bdb6259f92b286f3998f98c"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Rope.uasset",
+      "sha256": "d4798a20602e83012acdfc19b7c3417ffa72a370d029a74b761b777e1d162e42"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.uasset",
+      "sha256": "11bfd66a8f29cfb70528310a4f38fa44bdc1e089b8d5fd482a48adedd9406006"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.uasset",
+      "sha256": "ecdac4f963faacbfb207117d034d3cbf8478a154b69a4de66ec54ebd36f88481"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Altar.uasset",
+      "sha256": "e6e61146e6d5b11567859925008b3a6b97a6cb809793d1331265c1a2b5eaa451"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_ChamberGate_Frame.uasset",
+      "sha256": "978ff74f5fb0720c8e8c75ac061d69eee26a4ab35511c4500107b78a2b7b144a"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf.uasset",
+      "sha256": "f638a90331e8146b851035e78debbcd2720b5be6e15838cd891652870f6b7dcd"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Base.uasset",
+      "sha256": "32047c1443099ae62eb091fa756a619519b81e9c68e6399e23bbaf7aa369a4b0"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.uasset",
+      "sha256": "db70bfe5cba80e3c2911c7a537874ad4f3248f9f7fd9c7620e26383ca132d6d5"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Circle.uasset",
+      "sha256": "dedfb6f2edd08a26cdb53216a0d66f475c1a585b759182b7ae48bc32af7230e5"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Cross.uasset",
+      "sha256": "55bdc105f060269c03e09693256b69e312823ed9a0a439347f8f43280baf9945"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top_Triangle.uasset",
+      "sha256": "c250dada2d49889e137d63cae950ed31cf181d9483830fd05dacf80f1c58164b"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Statue.uasset",
+      "sha256": "c0df453fa7b048a89377239fadf142f5aadc8f48056c10a04b6087c1d87dd1f9"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA2_Props/SM_Statue_Small.uasset",
+      "sha256": "7d2a0096d9a7436a59a774fccc6c6d9d48a082cafe9464995210d0e9c6f85198"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_InteractBrush.uasset",
+      "sha256": "4247f32304b3f1bfc3d64d4ace4e3b2040a50e0335c9649e5083e4fb8b4ce553"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_RelicBrush.uasset",
+      "sha256": "e8fdadb10be280031349c5cef36d6db48e5d571ae11c40cda15ba595c3d9b5c7"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_RoundBrush.uasset",
+      "sha256": "01228c6cce6b0cf877d5b8271228a55755b3c3c79baf71769fb5a0fad706ba7f"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_InteractPromptFrame.uasset",
+      "sha256": "3cdba02c3f0ce1e5d47c5352f04c694f417aa809f9be7c89eafe102fb98f20cf"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_RelicIcon.uasset",
+      "sha256": "fa844d7a11af2b23b0eb68a140e9cdd3ba632c71c1e50abac6b9d8254badf99b"
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_RoundBannerFrame.uasset",
+      "sha256": "217996940b0ed895597de431284d0f50027477ef025582775a712b9cdaa9bf2d"
+    },
+    {
+      "path": "Content/Puzzles/BP_Carryable.uasset",
+      "sha256": "15ba9f8524b61e7f9dcf53b46522496885b3c599b0cd907be594b20d5be89d93"
+    },
+    {
+      "path": "Content/Puzzles/BP_KeyRelic.uasset",
+      "sha256": "53489542110d519a77bf02a59e530d2762651c3c6e0f8a7b94aeb5245ee30b07"
+    },
+    {
+      "path": "Content/Puzzles/BP_Relic.uasset",
+      "sha256": "474a2c66ffaa668f099b569610bc7c44af287c4ccc99e46940fd42fa781df85d"
+    },
+    {
+      "path": "Content/Puzzles/BP_Statue.uasset",
+      "sha256": "48f98da54738fdc6713407bb44ef29fe843867648182f7366fdea54a6d38b647"
+    },
+    {
+      "path": "Content/Puzzles/Carrying/AC_Carrying.uasset",
+      "sha256": "cf36d308b8ef2405ce873ebd673ef9746ab7e73e7048b201cf150b0c2ac2a848"
+    },
+    {
+      "path": "Content/Puzzles/DT_RoundScaling.uasset",
+      "sha256": "5c69ceda9e5d759b0f6f2117bb4f9d1f4009eb45a2f27269d520bfc7d317f676"
+    },
+    {
+      "path": "Content/Puzzles/L_Site01_HC.umap",
+      "sha256": "b1b4aee7f0fb62ff14f7242cf703abc3c7cb437ce15b45f91e8d0b3f020d5094"
+    },
+    {
+      "path": "Content/Puzzles/S_RoundScaling.uasset",
+      "sha256": "f7ee586e14d54fe3ef5412d01e36a2a8031fd98c0b0528cc0dffd501dbf6bdac"
+    },
+    {
+      "path": "Content/Puzzles/Test/BP_HC0ContractProbe.uasset",
+      "sha256": "0fe321d92288f727d8a92d106db640a76751487b1ce630ae881909fb4ebc2015"
+    },
+    {
+      "path": "Content/Puzzles/Test/BP_TestInteractable.uasset",
+      "sha256": "e03f133bc74d6905dce053ad29614a378f8887b0dc89fb74fd8e9343a4ab36b5"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC2/BP_HC2InputProbe.uasset",
+      "sha256": "50c4c975f44db078ed123bccdbdf67f3f224cba387e99bd57e9ecbe99cedd583"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC2/L_HC2_Test.umap",
+      "sha256": "1b52d4e45b539d2c79f58583b4f3740ae8434bc2d90b931ba9cb3e3db95a387e"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/BP_HC4Character.uasset",
+      "sha256": "b64ef58ff6ce5f2ed12534319dc7e4a80bb4a471fbf98222a5ef1a40d631f5b7"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/BP_HC4Controller.uasset",
+      "sha256": "3486e65b64129a9934e51574eed668f34d4bafb28b976914c67c7db9207693c7"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/BP_HC4GameMode.uasset",
+      "sha256": "04b85a3851b25344f3a1bbc76f6dca7971abd2f25cba3ce8adf8cc007d823d5c"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/IA_HC4AddLocal.uasset",
+      "sha256": "41218ecc0e2fd0ffca68f308613f8f7d30d12a0bbe48aa3101665f954b2d945e"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/IA_HC4Release.uasset",
+      "sha256": "573e15fb8f8f98397730cb1868b5422c12a67265b3210095745a1e4dad7e0e51"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/IA_HC4Reset.uasset",
+      "sha256": "4f64e5c27d09b97d77dc0382886b3388eda1567e305fec685321998d212a0d5c"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/IMC_HC4Test.uasset",
+      "sha256": "365ff0ef86fb1f557f36b7f5f633695e8b063906854625eb98d2418f45653912"
+    },
+    {
+      "path": "Content/Puzzles/Test/HC4/L_HC4_Carrying.umap",
+      "sha256": "ca8a3dd907d2441213aeca2732903e7c4925697415e5ccf796030c9ec256dcf2"
+    },
+    {
+      "path": "Content/Puzzles/Test/L_HCA1_AssetTest.umap",
+      "sha256": "3e18d009bdba5586fd28a192fd9249dfbcaa20807ff7ecbd12d1325ac74e9aa1"
+    },
+    {
+      "path": "Content/Puzzles/Test/L_HCA2_Props.umap",
+      "sha256": "17da5617cc88eb8a0af22a9120b11850faa1a3e43ebf122b9df47d4b1d0a0a12"
+    },
+    {
+      "path": "Content/Puzzles/Test/L_HC_Test.umap",
+      "sha256": "0b11b33301c3c7dc5f342dbc9ff16cfd1bc2d1d887d8b779bce26149869b2b59"
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/AC_HCA3HUD.uasset",
+      "sha256": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae"
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset",
+      "sha256": "0f678dbaf22997224a39fb84e78d1fe0f882d24e12dfe96d8aaff10c695cad57"
+    },
+    {
+      "path": "Content/Puzzles/UI/WBP_InteractPrompt.uasset",
+      "sha256": "96422660ff7bc38ae54445294f2d535ff9eddd067ce53cf2521ebba29559f711"
+    },
+    {
+      "path": "Content/Shared/Style/L_StyleTest.umap",
+      "sha256": "5b2bd44283491c8dc2704a16bbc2a165d3ed36553d117608fce48ae2c910b404"
+    },
+    {
+      "path": "Content/Shared/Style/MI_StyleTest_Rock.uasset",
+      "sha256": "0541b0bce1c919eeb7bc81346bd71c80b78f06f05f71366305fc0ac952e4cbbf"
+    },
+    {
+      "path": "Content/Shared/Style/MI_Stylized_Gold.uasset",
+      "sha256": "18ee0b0c6f9f8e485c67d2cc348596937c1598fe04d9597b069a0729b9607619"
+    },
+    {
+      "path": "Content/Shared/Style/MI_Stylized_Rock.uasset",
+      "sha256": "03f48896c4ccfc5e6d31209f9f4b31f2e6cffd0563d3fcdf7ed914f4e1f54be5"
+    },
+    {
+      "path": "Content/Shared/Style/M_Stylized.uasset",
+      "sha256": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9"
+    },
+    {
+      "path": "Content/Shared/Style/SM_StyleTest_Rock.uasset",
+      "sha256": "bf942df655062b6e8ba8afdba1e697edf7de0a64bc160a6b76487c20424896f4"
+    },
+    {
+      "path": "Content/Shared/Style/T_StyleTest_RockNoise.uasset",
+      "sha256": "a70e39cf30f08b28b2a096e9427fcf86ccfef305edf4d0d3ef450e1592bf3e4a"
+    },
+    {
+      "path": "Content/Shared/Style/T_StyleTest_Rock_ARM.uasset",
+      "sha256": "ec5cde0e3d1d0c47eefd2349f3803453b474076b4359f089201c0edf5e9b48de"
+    },
+    {
+      "path": "Content/Shared/Style/T_StyleTest_Rock_BaseColor.uasset",
+      "sha256": "02a66bb338f00d9f2a6791b1505527cf79747c4d6ac852b47b6fcdfa33487e9c"
+    },
+    {
+      "path": "Content/Shared/Style/T_Stylized_MaskDefault.uasset",
+      "sha256": "29ed5366c9c3c5b94dd750f350f00988328be25a9c01886075be88464650b9f7"
+    },
+    {
+      "path": "Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+      "sha256": "5b2f02daf78ea15efc4e83fc78e7e30ccfe73b6540dc213d099ae72458e7d645"
+    },
+    {
+      "path": "Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+      "sha256": "8e4355f6d7c091e0b77c330044b6059cb03637c2439d7ef4de102df2d365d2ee"
+    },
+    {
+      "path": "Content/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController.uasset",
+      "sha256": "1eea710b3f7975732b53dd245e375f39c59c1b8ca468ebacce4e31bc47e88592"
+    },
+    {
+      "path": "Content/ThirdPerson/Lvl_ThirdPerson.umap",
+      "sha256": "3e668a9b3098a76f49ce307759ab00662406c7fa0870eeee6e7a2dbf7f854386"
+    },
+    {
+      "path": "Content/ThirdPerson/MI_ThirdPersonColWay.uasset",
+      "sha256": "aa8b4a4115c11750c57dc94df7fb8ab3c7f0cfef71037b9d11e7639fab15c25e"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/BP_AssetGuideline_Chaos.uasset",
+      "sha256": "4814b0d78c1b897132c098d6af348ffa6455b71105f367a51e1d6cfe0731575e"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/BP_VehicleAdvGameMode.uasset",
+      "sha256": "87e4a260947d02c3abfeeffb19e5ab6c91eeaf73415a28c3c78a3e7e7fbe4d8e"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/BP_VehicleAdvPawnBase.uasset",
+      "sha256": "e306a2150c3ef83f91012fc40fb20580299b8916617ae4d07594ca65e4eeb021"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/BP_VehicleAdvPlayerController.uasset",
+      "sha256": "840d545db354ce4312b47ab1efbdc9545df11d3c596e2c3f0ef0dbf55ebea7fd"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/OffroadCar/BP_VehicleAdvOffroadCar.uasset",
+      "sha256": "d4302178113fd14deabf3f7fcc18363b95cc5248837445275a5e7d07943a8d79"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/OffroadCar/OffroadCar_TorqueCurve.uasset",
+      "sha256": "3126f8c0a57d3cc568a2610f4a8694f3aa0782d6ed9be6cc4965e4818031a16d"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/OffroadCar/OffroadCar_WheelsFront.uasset",
+      "sha256": "e1a437bd97637523cf0ced0ceaae9ce92c2263a4c9cdcaf5f142dde97ab9c22e"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/OffroadCar/OffroadCar_WheelsRear.uasset",
+      "sha256": "08abb22fd37e8dac92ff13d3850600853724d69512906ef394ac7e8a50560677"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/SportsCar/BP_VehicleAdvSportsCar.uasset",
+      "sha256": "678e82f88ec34a052ba545abaaf1d671b1464a4b7bf3cf82e584d41508089600"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/SportsCar/FC_Torque_SportsCar.uasset",
+      "sha256": "283ce9b6f7d845d02e7deae606bb63c9449774dbde135314fb57fa13ded8e06c"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/SportsCar/SportsCar_WheelsFront.uasset",
+      "sha256": "438e2521c845e8511ff97b2f364c373745b83cdb217e5a3cb7cfa9816da5ae2b"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/SportsCar/SportsCar_WheelsRear.uasset",
+      "sha256": "c3e0bb1829cbb561222ae0fe10f403c4144f986e3064e2b8bc3b6a6f744d7355"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/Tools/BP_SplineMesh.uasset",
+      "sha256": "3ec8037467649d0be10ebea02d01cc16c9b81cc5f2aa900b2d3bb9ab5a68bdcd"
+    },
+    {
+      "path": "Content/VehicleTemplate/Blueprints/Tools/BP_SplineSpawn.uasset",
+      "sha256": "1664ba630635b0e327ce943fac3a609b6b77ff154fea4c101351cc608f7e1ec8"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Brake.uasset",
+      "sha256": "032727b04cf87251b0a41a1d115fc4df478aea61a9cb41b4b2132cc8ea030572"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Handbrake.uasset",
+      "sha256": "6911cf6aa57bc5656aeb5b9625fd1ffa8f03ccbdca82dfeeda2e889e73059a72"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Headlights.uasset",
+      "sha256": "1a0043c67f729fb63b13fb91be39b7d9b4ee1829a88c40e7e9196d7c59d0753f"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_LookAround.uasset",
+      "sha256": "89375407a31959803c904f1daddfddf9f4f51e6cad85e34dc356068d87404b12"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Reset.uasset",
+      "sha256": "fa6d49a07b9aabdb2cd5149ab0553be7109e70626503bfd2ded01b290f221597"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Steering.uasset",
+      "sha256": "b87ca3b0a57428046b5fc04b90165b98883bb73ef720247045c55eed3594126f"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_Throttle.uasset",
+      "sha256": "08152f82303e7edaab2c11ca18fe479d801c7ded733014dee0eda96f1ed636a1"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/Actions/IA_ToggleCamera.uasset",
+      "sha256": "fe2f6d91a2eaabc4a5b19fb022fada2c23c1c868dfa7281628e68d379d68b48a"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/BPI_TouchInterface_Vehicle.uasset",
+      "sha256": "42f7648530ff203f1b55e975e679614348b9b17658fde622975ade788c117b10"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/IMC_SteeringWheel.uasset",
+      "sha256": "688e433c468e53d593ed9354d1f9f8c624522d5932a42b2f9ffcc0199715a7dd"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/IMC_Vehicle_Default.uasset",
+      "sha256": "6aace65961b654ddd34216a8eb40c00dde7a51d708f7791fbd0e5a42ec554cfb"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/IMC_Vehicle_MouseLook.uasset",
+      "sha256": "0bc53bbecd82df4821513b9d4e90a588a99d3291b16bb51f1956e30269d6f9ca"
+    },
+    {
+      "path": "Content/VehicleTemplate/Input/UI_Touch_Vehicle.uasset",
+      "sha256": "511adf60803b0c1f9c35ed538123bb189de0280db41e78d0b00b5639ea39d6ec"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/LandscapeInfo/LI_Ground.uasset",
+      "sha256": "4b7780824d80be983eabb4bfcecd093b072a314fff2239bff8a602062bf43c1e"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/LandscapeInfo/LI_Road.uasset",
+      "sha256": "9a84f4ddc577c72ad978043fa2ce6789dd80c0b38e8c7130384f2675c7255f05"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/LandscapeInfo/RVT_VehicleSample_D.uasset",
+      "sha256": "4f7635e2158c9c2d8b41a3580f5c375a593faeec0f60d2f1e31a0bba923791b6"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/LandscapeInfo/SVT_VehicleSample_D.uasset",
+      "sha256": "813573c512fc92526bdf286bd3ef1bae4647447309b32e234e91c40743813d19"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/Lvl_VehicleBasic.umap",
+      "sha256": "5cbef0bcb80789b39e78a319d8c606dbd3ce2435c80105b4fedb61f2eb850816"
+    },
+    {
+      "path": "Content/VehicleTemplate/Maps/VehicleBasic.umap",
+      "sha256": "47c1f1e8b79e4e24f0881beaace4b6b8890140639c38e793846dba8cb4005d7c"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/MI_TrackEdge.uasset",
+      "sha256": "e324bd8401606676377e0e0c155469558bee4ade060b0f6cb135501c2a896e44"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/MI_TrackEdge_Inst.uasset",
+      "sha256": "e324f3c37ee2f109aa5557264b92d13b402585840e778daefd3ca9f13dc4f1e3"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/M_Landscape.uasset",
+      "sha256": "4046466734b3eff3950e386b4ec57ea92a95d5d5645a591e5a92ba3524b4fedb"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/M_Landscape_A.uasset",
+      "sha256": "ded958da6100deb86a448e98766cd677a9a62c5caf0e2c661b73c45d5c8ff080"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/M_TintCol.uasset",
+      "sha256": "0ad8d3e72f507f37404e7ded0261f7b361967fb05980d4eea2ca6dd86574e2fb"
+    },
+    {
+      "path": "Content/VehicleTemplate/Materials/M_Track.uasset",
+      "sha256": "64cd8330432347f94c351887d0db9438a119f9f80f05cf4b54fc168ede881ab1"
+    },
+    {
+      "path": "Content/VehicleTemplate/Meshes/SM_Cone.uasset",
+      "sha256": "b2f6fa1ce4f1bfa7356b56d413def4d09fde5a82987b5533304515b3fbb9f020"
+    },
+    {
+      "path": "Content/VehicleTemplate/Meshes/SM_Track_10M.uasset",
+      "sha256": "312af0e38f12d7063fbd5fb388c11f7ab43d90370ee5f70c89d5ae065ddd73e1"
+    },
+    {
+      "path": "Content/VehicleTemplate/Meshes/SM_Tunnel.uasset",
+      "sha256": "2c07aac5d8b7a63a55674a5459d63c00d17aca0b82d0c8b84eaaf01aaebaf87d"
+    },
+    {
+      "path": "Content/VehicleTemplate/UI/UI_Vehicle.uasset",
+      "sha256": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/0/9R/UKIMD8EYGPZFS8OC6GX24A.uasset",
+      "sha256": "fcc1060527c489fb8e33b8a3752fc86d65f7d3cdb9c4bbb044dfefccad6b124d"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/EU/X5MT1GOX9C5UUGZAKRVC3R.uasset",
+      "sha256": "50d947877d507c95b765d9b3a3abab19739d6d0f41e6c7fa35a67e223d189023"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/K3/79QZQ7KG2RXNWMD6RSPKUM.uasset",
+      "sha256": "c6c82f9d1fc5f5cbfc3e0ff029862e718a80cd9ff9f59e0c495f873f8d815219"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/KL/UYSRPQ5SOYIFVLEQINPH31.uasset",
+      "sha256": "67e1837f62649ac749d1ba75c4431602110aef8a648a4eb5b84f5f5490832d7c"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/MV/2U2IE6JXO1320Q32RJQKSE.uasset",
+      "sha256": "0517da9397218cf46cf5db73305b412848d3325b302ac11c4ecda325e6da6a92"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/X5/JDOWWCJ7DZVSHT4Y29GQ4D.uasset",
+      "sha256": "0041dd5c5f354e58fe0d681490fad5162013ced33e4856a33f86cb3daa0789f5"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/AM/9YGDW7FMEY1CZD31VUYO11.uasset",
+      "sha256": "4228732dd1d3826717b668980a23af543daec697e6b469ad9d0f88aa246324f4"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/AX/QEPSHOMS1K2ANUR3LXWOJM.uasset",
+      "sha256": "4602c5ff270ae3f56633b28275fd4430e9853d8b6d1c1b30f801b55db7df43ef"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/TV/DYUIEBPX2N8UFXT326WX2O.uasset",
+      "sha256": "b5d9e958280ea231d5f413eae02e1d00448f9e979c2715bbee865ba6adf2094b"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/V0/9XTUAMN5S6UUCFB5K0ZGZM.uasset",
+      "sha256": "0740b3c48e2a86ae0e6b8f2a57128b55d9a9150d3020c4cdd451edb69cd9bcd7"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/0N/NTRPN55OWWUSD03K29ZOSH.uasset",
+      "sha256": "7582c3a747bc6768a187ec5d99e000dc7aeb944b0cd0dfe73c203b17e5d84e5f"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/C5/3LNK9WKCBL4YVMWIBXQZ1I.uasset",
+      "sha256": "bad12184219cf6228a6c12dde934b3acd8bdf54ef2c3efd55629097907a9092d"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/D3/XWEMBL7KZTNQP83W1KTMXE.uasset",
+      "sha256": "1cbf22ea1591837bd98cad4630de112d1dd845c5ec17513dee07ae6b884147a7"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/E2/L159AMTR83MORHTF2GEOKE.uasset",
+      "sha256": "ecc364fc3ca8ac6be41fd6678969db9988c321b485fd2e9631fb4accef3a242a"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/L5/790AP8RYBMX9YBLGTW6WE6.uasset",
+      "sha256": "401926d52aa019c3ecf608045ecaf76a25bc3476b91edefe3934ae039ad93fe0"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/4/CQ/I205QOSSXONYWBP69RVMVA.uasset",
+      "sha256": "239c53042288f4b190cd736dd95a09c4d781ff0e6caa278c473b329c04d00869"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/25/3IO0LF8AOO4YLSEAEN2JO1.uasset",
+      "sha256": "fb301f5c7c1357068be1db6ac00e786d09d8d75f48d5247b6e5a8d71c25d005e"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/9M/BJR5SDQDQW7QDFFPNUUMNX.uasset",
+      "sha256": "cf8f07d3823652f9ccaa9a51a90437e459121c2b4bb3ab4f9e068d83c279c992"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/KG/ETKAO35ANVW90XFH3J8GJ2.uasset",
+      "sha256": "c46a9b87b994d4980b31ae98b17c43bdfad88ee012bf86381edcd3b097a9baa8"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/W9/ZAAGYIUQZ2W6WEO3HPXAX7.uasset",
+      "sha256": "9e271778dbd64a2415a3153b7876bd837aa8e8c5162346b566340d3b3851682f"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/3C/KAT90QYQLFOHNMOF9BEDZK.uasset",
+      "sha256": "a280012bb325b7138a87a9972d3a7cd296e86c11a3ac019fb0f2948356dd693f"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/8I/HFL05AWIVBP8M8UXTV4H5K.uasset",
+      "sha256": "13b40bea681cb7072c2b45cd7195a9086efd9feab31d168a47c3b71ce7c1a5fc"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/G9/77SUGCMHUBU5E7FP1DLCVD.uasset",
+      "sha256": "01e9ed1e1a92c8093e7d59b553b7bd63dd852044a4ace54aca2bda83e402ff6f"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/UK/OT5UOZ3WBJ9P30TU3DBDEK.uasset",
+      "sha256": "765234f9cf1fffc1fcf1869cf10020d12a151b44f62011168800d51820853a82"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/XM/SN8KJL01L24VVIYC52MNFR.uasset",
+      "sha256": "4ad373eaffb2ea7902d5490935cf3157178f469af5dae89d727357cd566750ea"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/YB/C5UDZYKFL5M0YW62JXMPIZ.uasset",
+      "sha256": "b045e31b99e0d6e4c161d5df031e778a48379970df98a9d09375336842bce36d"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/GV/W5DNM2FP1ON7VGU0C2BGMV.uasset",
+      "sha256": "990532545c8d3f95f46d757d5e3b213ffeeeec56a8d72faced411ed722e576a7"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/JD/OCW0UZT4ANZZD9YHEAOMAP.uasset",
+      "sha256": "a4e38728841b251774dc04a0cd449732d3658a95b3d878b3b37e038896b3c7f4"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/O7/IHUOIGG1MW1YZY097JJ8O7.uasset",
+      "sha256": "8996f954790c768ba172b9e23d93826ee3527e4510742821a6d5b7347fb13811"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/XU/RW3P9HUUCOCG5TL3TPG6XF.uasset",
+      "sha256": "3c9902b418c6e61ab3208906a24a61759b50b14eddde562be5de934829c0ea3d"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/0N/1OONKTGJMLVBN21M6JE59I.uasset",
+      "sha256": "200009c1fdc32c8dac2957472f868f53fcb9443f322327497ec71018c9f2530a"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/7A/C0UVMH95QVQO1KMTVK7MSB.uasset",
+      "sha256": "bb78f3ea599e5d0192c7dcf0a8e5a17a1201fc07385f45e040550e5d5418846b"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/HN/XXZLD30WH49IXWEHJXSVAR.uasset",
+      "sha256": "7e91d1cf1be0495280cfb1d81ca3ce780e3dda437ba9615e3320874a7b38bdaa"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/VS/XX060WNO6GEZU5BZQCLZPP.uasset",
+      "sha256": "2d46bb9f7cd67ba05478b0253eeca463f1d9c5c91d7a14dd7c31e442cd3c4d4f"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/WI/FHUVUALB8C8XRJ0PY9XXTI.uasset",
+      "sha256": "f2869c44a01b31617b0d4cfad8d6a0c91d67e25b15a33c7e14ce1755efda3fc7"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/XH/SKCKQTQDTE8ZNW6C0FCBRO.uasset",
+      "sha256": "1656426c30aaf8411663649dc131649fa75fe8d8f0fde5b502ff73b74b73d0fd"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/5G/29Z6AXUGZPZ0CXHLK2DICG.uasset",
+      "sha256": "be525ecb970386358b3ff94791f5dbe1a04eb58cbaf4a63ece318a8d0d101d33"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/6V/AV0JKCFBVPU58UEBGB0GC0.uasset",
+      "sha256": "fdd245925ceaf4b4c59d07f1aab5610db0450523e10afb118b3a56cddfa802fd"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/EE/OCR348BHEJWLHO72TR249H.uasset",
+      "sha256": "0de101b829a7fc08e4b66fd830209d2546bce035009bc86fa7077aef9f6f91cb"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/LX/1K6D4FIEJMOF50LSVJKFMP.uasset",
+      "sha256": "c54a64753205d3fdf3f097a72075c75e64bab20424be893332c354e8bec09f32"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/UM/1F7R5WQFM2D9KH7A94JFBU.uasset",
+      "sha256": "936a6f14ece57dd7c3050effb10720f86bab8268edb3b0fa67f780a1e8946cce"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/3J/Q8CQM512VVS7UZZW0KQRSV.uasset",
+      "sha256": "faa6fa198fa4804bf650764113c461a3d83912ad609f1837cc4b77353df96d03"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/8N/4L4W0MLV9WFUGRTMUBLBOP.uasset",
+      "sha256": "f412a0b400434b9cfe73c2f91f74b14db0d2bd7f4d5189bc3c7dae7b8ece10ae"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/BN/LKN4IB4C3UPW62GHBEKTIW.uasset",
+      "sha256": "26ddd5829ac624aef3e6d6e8e60daddb5937591d71b589f1dd96f6728a45c685"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/IP/MGVQPE8M923OBBJLZBI1PC.uasset",
+      "sha256": "9aa9365621fda8c4e6ec4d71896f6f20afc3692845448b121ed9314ce5f66084"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/0L/IL99N1JAI1J4A2DFQBQL53.uasset",
+      "sha256": "95f0f52f115330087f4550c1a75b40a0f89ca820626f040515d19ad10d6c4fa1"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/2F/XTDQUHCYJJV6JCH4OJSVLG.uasset",
+      "sha256": "84b421a0de897e34b06b211f13ba865a822cc34f35596f1f95bd18915d16e900"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/HX/PES0ONLF01PSQTJCC5USD2.uasset",
+      "sha256": "b797b10826ecda36e7e2a5dcd9db2f805eef1aa30ab7155f9994b7e7955399a3"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/P1/LRQT09TOYHOXK9DY22EIKE.uasset",
+      "sha256": "c11effe59153014dd5db0f65c7627309e99b262da486c73758c4c8a1f19a5d7b"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/RX/297QBXCKTP06G7NIHIULK4.uasset",
+      "sha256": "60f28c2a70beb6455f7c9dfb9c657e1ff2222d5d7b1544a0537e757902d10312"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/27/6ZCCZ1F7ZO6DM3C8OLVGTF.uasset",
+      "sha256": "5da67a33b962a06bfc798be0009c01e4cfdf371c1ac3a14e1d6f2e94e4ea4b67"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/EE/HZ5WNBFZRJYQPUA6X8TVVT.uasset",
+      "sha256": "713b84f11124e7aee44b370bd50bc5c0e2a6aa2596dc0a7830491c809310d99e"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/HY/Q7CPP7VHOXBAMAJI90W626.uasset",
+      "sha256": "0ef1995a35ce0f27ff11dc3b93062db63c9d41e8edd03a62870cb22ea4322cc2"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/13/EPTYZCFZWXT7Z7XYKZ88XK.uasset",
+      "sha256": "bf85d87c37ff35dfe1cb8a40c52a061314c44b57d422a472765264e39527cd4c"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/50/395Y4QE4IIEWI3KSE3SB6L.uasset",
+      "sha256": "cd2515bd223d6506801eab781774531dc243870c78562ca08df664aadf8b0c03"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/8U/VKFLMM0CV8ZCC0P3TQGTTM.uasset",
+      "sha256": "d5e84da0ce8e73b66a023e358033a8fd062b96abe1b33ee5b9973926608d2713"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/AY/KLCRMXKI9WR2P0GDY96C36.uasset",
+      "sha256": "5a5cd7edf92dd7d3e60de12fb2a735184096b504b4712ea8d807bc9ea22a2635"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/K5/NQBPXM7AM8N39CBW4ZT57P.uasset",
+      "sha256": "f50b777e76cd2aa8bd7b62c0fd87f812bb76d2953ffbaf51da9a881e8d1158b9"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/M3/6T1XG4EDG4ZEE1U9HMYL4C.uasset",
+      "sha256": "c7757663530e94239db0f4978938e39e2c20b85ecda00be7b00427f7767a9415"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/MG/EDRUPW3EOYDDSI6HNSIVT1.uasset",
+      "sha256": "6cf521a1730e4bf6d5f847271390917aaa219a7bee2ac9671c414e404d702f47"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/RI/R8L7GQXCHQGMMKBPTBJTNA.uasset",
+      "sha256": "bba4c777dd2fcd28b3f0157372f01f7de4f8e00f75a6b91a31bd3a02b33db291"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/96/RFQP83S9K0LC7IW8CXS6C0.uasset",
+      "sha256": "95cc1d9fb2b7bb54552bb44ddd8a8945dd4b30596fe40f3f9cf3d78e16433ad4"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/JR/W7S9610Y7RWELGF93FZYAE.uasset",
+      "sha256": "311c40dc59a935655b52c322a3693bbf826da5344270d3e6988c59973b004772"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/SS/QXUZ4IXFNKHCYFWERA1HQA.uasset",
+      "sha256": "c28022e47f1ba2f85951dac32b7c0e00fff99ec5d78bdc186c1070adcd00647b"
+    },
+    {
+      "path": "Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/F/4G/TYFCMQ9MC435YW6FZBF5FS.uasset",
+      "sha256": "558aafd26e2e204a85d7f4d570df7f8aa1620c135d33c47efbe43bc0256cbf52"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/0/8R/PIKL16S97S3SI8RKPULMX2.uasset",
+      "sha256": "351d63176b41708ab5dea76057bb7ebc119f119c103827a1687b83966ce6b164"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/0/KR/NYLCWHFQIFXAXOEE5OY5PA.uasset",
+      "sha256": "ca4bcb29de58d840093c0937a74f38869530d68e7299111772cbf715327c0e36"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/0/SG/0GTUEBKNO0N0ZC8H4ZFQPL.uasset",
+      "sha256": "6c1604308034b70d4300ba737ad2da3fc8bc48c6548e33867aa1f114da51f52a"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/1/5W/5B0Q3ZSXRQKORFSQMCG0XO.uasset",
+      "sha256": "b82c11a8cfb735c6aece4663132fdd7c2e2ae828f3cac47f0b46f5b0c27586f5"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/1/DV/1EQWO4Y6609Q9VUBPHR405.uasset",
+      "sha256": "350fb83caa14e62422c68bd94e8856407bb75c18b3374b300393f55e50b3088d"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/1/JB/6MFQKMD9JKGY7WR6DZ02W5.uasset",
+      "sha256": "3c1367190fc90f2dec67dc70a402f109e6fb8dee0b3cbb8a91ee0aac8487efd9"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/2/18/RZZIOHSQTQCETVJ38KC1C8.uasset",
+      "sha256": "8c11b13da53703e5a10be797f60b1505c945e6e59bffc5ff7beab84d6deeec83"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/2/2F/JDINZHH24GYJV1GEXTM1OK.uasset",
+      "sha256": "f9ce87ba8a1a723deb414edfb7aac3373f7942f9348bd263152e69dc42f8b59b"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/2/S0/1VDSY8E6JFWVISKVJAMDZ6.uasset",
+      "sha256": "b63a48f2b5033195492435b07374382a903c8b036539a7dff7d7d9d4ae0b9ac0"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/3/54/05DVAYPZ4ATMDO544L93S7.uasset",
+      "sha256": "65e10e46937138b09a2f53f78e5fd73cac24bcc36d455d09e7e1fc3caa401c10"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/3/86/B440T5V5KWE8VJ6BY8BVEJ.uasset",
+      "sha256": "08e5192a2bddfd6a59f70d37619e7e048316fa1f0d3ffb2a6dafd08d851b8569"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/4/AW/9C8I9TFBGJO0WM04UO7ECN.uasset",
+      "sha256": "a8ead911d61228e24e9fcbb1876f74480c595250da8eefcb415d42e665045467"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/4/DQ/MMWI7ERC56SPY4Y58B5ARV.uasset",
+      "sha256": "4c6f45ae6ea39d92485f81acc4e1abd4c9e7d08bf00c43d2b954af616c5e3c20"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/4/PG/07F4AA50WMN15D9XTYCA6V.uasset",
+      "sha256": "87881d8d30ee981a642daa11ef22bcf24b6d3b2500a03ef101e03a0632569a48"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/0P/HUIKZAIEXWDY8KFUTQZHVU.uasset",
+      "sha256": "42eba29f91800a514f4cf98624135428a24a6123ac30be3e5d8a02acc646e68c"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/5M/BLDYZZDUEUV3A4IUTTZODQ.uasset",
+      "sha256": "c0da5ba4d0545625795df2ff5617e40ed541ff2644183624182a9c2f9cb2485e"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/C6/QN6ODQUYS3AG6R21C8NW2W.uasset",
+      "sha256": "c9632457523e58eeaf2195da9515a5e080067708e034e3d1f55c9ede16600e30"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/CE/KS5CO33JBDDWHM1D57FPK3.uasset",
+      "sha256": "32184a06d538ea17fa130b14e5c13b5573f5fcf33d45fcc8f1dbc5f20975e650"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/DY/I00W56WIY0BLG4DV9P4FRF.uasset",
+      "sha256": "6fe999037ca500098c8a00530f7336024f62482a19af58d4187c8e3aee0f7c5a"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/7/UX/SCQUBNQBG02Q8FV6VVWZJJ.uasset",
+      "sha256": "aa80f484c1cb9ab01e3e31d59176ae9006119eadc1c75eebcb4bb936bb3653d8"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/8/C3/ISWWEIFS9U47AY0BDLY51A.uasset",
+      "sha256": "6e20a0e87f34a3bbd4d29f7b95ae86bb62a07757bd6a57afae7146f116bd7944"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/9/E3/URKYL4RK553C9RVTJVBNLP.uasset",
+      "sha256": "0a3a1ad98f67e8e5576e200f5d870cfd2e0e6a806ffc9c6b4749fbffc649401f"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/9/L2/7C3FAMOHSOPU7A57XNKWM5.uasset",
+      "sha256": "ab4a8aaf0410e856b8dac50ca5b9ac0ae6fa91db85ea93bb98c687182ce7c77a"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/9/RC/8CG8U7G4NNUE4AAG7WIYVV.uasset",
+      "sha256": "270d4e42c7abd21a451ac5517ceb52ba97ecc27f8091e9e8b2d7a5a125454acd"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/9/XL/PNIHI0KAWNNNFPY6T9HNCT.uasset",
+      "sha256": "f36f95fc52bf02da66bccb516b447c564a05edc520fa86744d2206476001d7d1"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/A/IB/JI2KZMLJ0NJ0CZ0I4PM06S.uasset",
+      "sha256": "f6fe857cb660b6ee09534e4ef36697ae00e2d1dbeb55190b038cf8025dc9063e"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/B/K6/IGDRXOEZQ3SZUW0HPGT2WN.uasset",
+      "sha256": "0e1d1ce9f4cf550e357ba3c2ad60fc0fde1965aa01acec0bb2dcab66cc6c15cc"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/B/MU/8E26YSRCMYTV2MZQD8R9NA.uasset",
+      "sha256": "ec09d1eb6fafed2ce8a0b5b6d3afda68c1b1fda7e281ed737a7f1d0e3e9c184b"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/B/NP/8PJO80QYCXFNARACEP1F4E.uasset",
+      "sha256": "d84cd76f0bca0cb8e9990fbca777a0a843dde75183482f121c694d2f5e1bdc3e"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/B/TR/JDAS2BYQS8QNOU3GTTKZIQ.uasset",
+      "sha256": "5f5d42837960aca738075c3c05f0a61786ec75a4cd32bdaf512d3180999c7b47"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/B/X3/ZXVNZQKWDIN057XW1723FF.uasset",
+      "sha256": "82acf057dcd85e98438615aa0233698c1cf534f0b897b08e9750bbcba20e0239"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/C/5B/DYF064KI8HGU7KBR6R1BCY.uasset",
+      "sha256": "d961d9521253977b99dc69d3db08f5110a00021e16b951b8e7a8356272331f94"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/C/71/AINYWBIUY35BZDCFQ8NCBE.uasset",
+      "sha256": "829e7cf8f2db4b348a0c856766fd0912f8771cefc1e02886edb45551d309c0ff"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/C/AZ/U92IWEARGLZDHXIT7FFF3N.uasset",
+      "sha256": "5f62743ff2ce7c6941fae931726447e5f5e2d4193a5bde4ca8d215ab4a839147"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/D/LA/MVLADTLWPLDK5UI9E6SM5A.uasset",
+      "sha256": "b3df134efbb56c11746d6410c3fc904a84ae64c406199ea880c35b8d9d57454f"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/E/1M/PRAO8IJHDTP9SRBL8TUTZQ.uasset",
+      "sha256": "3e6c58992c4975b297bb741a55102e5df0f20aecd3bfbe148a28162ee62b0758"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/E/ML/IKPL8TZIPJD28W1PES33RZ.uasset",
+      "sha256": "6dce9de951eac50364ad5507ae28d4ff121b215337485789afa469df55630e87"
+    },
+    {
+      "path": "Content/__ExternalActors__/VehicleTemplate/Maps/Lvl_VehicleBasic/E/MY/E3C0Q09F516J6AJ04ZYDIN.uasset",
+      "sha256": "b5185324252bf6d114890b6c2b0d9a16fafac1ecee5ee13c58d33849069348bc"
+    },
+    {
+      "path": "Content/__ExternalObjects__/ThirdPerson/Lvl_ThirdPerson/0/TQ/1UP2MCOIYXC0GTW985R4K0.uasset",
+      "sha256": "4bb0cff17e56dd734bbcb3f746f387f601ae46cf2e7c1bd2a3660d971590a65e"
+    },
+    {
+      "path": "Content/__ExternalObjects__/ThirdPerson/Lvl_ThirdPerson/5/TX/O6OLZU4WSCI3YRJS922SWL.uasset",
+      "sha256": "80c21c703b7747b2e849b7a39d9e354091d075737892398d581d0eca66c8fbac"
+    },
+    {
+      "path": "Content/__ExternalObjects__/VehicleTemplate/Maps/Lvl_VehicleBasic/4/4R/QD0WQDX4NT49M879U915NN.uasset",
+      "sha256": "21ac4a5ac322d8ac6a155ed827b430cd181eebe6802a0cdab0028d133f672b66"
+    },
+    {
+      "path": "Content/__ExternalObjects__/VehicleTemplate/Maps/Lvl_VehicleBasic/A/BN/Z8DN3O1QPYTD83LMJ1V9T9.uasset",
+      "sha256": "e99f0566a81bb6f1f41a677b61bb67ece4cd5d0d4c9dd19ff9218efe07cb486c"
+    },
+    {
+      "path": "Content/__ExternalObjects__/VehicleTemplate/Maps/Lvl_VehicleBasic/E/FJ/66RQI96LFVK5HO8ECVIF08.uasset",
+      "sha256": "2f3d48dd2fd239bf34e1f9c2244700b924b240cd3730e94b82f443ebf1bd1379"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+      "sha256": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview.png",
+      "sha256": "dbb5844b50ab8db03601724b64461ec390622c4f8d48d720eb0a6b47b3fb4903"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview_closeup.png",
+      "sha256": "3ebe4a5c427459ce886b0cd1870ba4a202e2c5b4b743ff4b3a4429c472948eff"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+      "sha256": "c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview.png",
+      "sha256": "c0f76af0f79cdcb1643bdd416f22b7d7d19fd2f09c454655b767793f786b27a1"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview_closeup.png",
+      "sha256": "a2a08557010b9e7fe953fd1e6b545ac61f3acbe36a195961201397b6653b3c67"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+      "sha256": "00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_compare.png",
+      "sha256": "9d525cc372526c5939cb05d0ab1334b511be6bd81e42b7bb4ad7692e0c6320cb"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview.png",
+      "sha256": "298b44d57b92fb36033f3ff86683f49f1e50c353ef236c2392b08a3d605d1dd1"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview_closeup.png",
+      "sha256": "fce928afa927bc9aadf06e1d8ed9a37564598e7e3f4bece8122833e798b8019c"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+      "sha256": "f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview.png",
+      "sha256": "bc14d136b4673436de4644d9fa17d11e2cbb23f42b7a43297c1f27722a76571a"
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview_closeup.png",
+      "sha256": "afee247dab4c9b701fb067a12e1f3d790e1ba408d517315cb6f3672bd587242f"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Altar.fbx",
+      "sha256": "6ddeec1e0139a1632f2c10a798be7363dd6258f22ab86a91a2693c6ee9549e27"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Altar_preview.png",
+      "sha256": "9b4318375d8b6c55c394ac4fbfbef1d4d0bd2e53fbbacec26aa30535501cc011"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Assembled_preview.png",
+      "sha256": "d4246d78516c05a5912e7f8af1dd2e1773c5f6f04e4066281c49c9a850775838"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+      "sha256": "62cfa5d8774cb1126f5db9bcde9a8e90d2ec570a3d99ba2e8a0597c27954b1a5"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame_preview.png",
+      "sha256": "d78ec415050248173aac2023bfd56bfb0ef7d1a104bbedd479b1c0bcd29748c9"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf.fbx",
+      "sha256": "0705d0a07e69b91886030a6bf34abee567ef180120b4f7c84b93a4e6aef994db"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_ChamberGate_Leaf_preview.png",
+      "sha256": "a3b53862311a43396ecb9a34ee0ef5c9511a58392b7c80ed351432db3a05dc99"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Assembled_preview.png",
+      "sha256": "c2d5ce5909597ba57ff2ba3ef991d5be82f371f0c5a79b8a1387e6c44a93aeba"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+      "sha256": "badd7ce55aee0a8b747c72867b1a0a75bc924367b6d012516f1c9a1ff2b302da"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Base_preview.png",
+      "sha256": "cec3ba18a3ec78ca92fb3c38a401b0008bc48817f8f0f40541fbe3e76b263c24"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top.fbx",
+      "sha256": "44eeb13dca2a6780efcd41858226d62e60e6f9ecd5aadfdf8be74fd30aaf20a5"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle.fbx",
+      "sha256": "1b7f5523651b57982c46d02bf4ba7ee724dceb19134443bcb42de77867c915a7"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Circle_preview.png",
+      "sha256": "2159415bedccb96e296ddbc99f062cad6d46388fbf020fc481f045447d6f5ccf"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross.fbx",
+      "sha256": "2f128a6b878e5cd44e7ec6132d30fb1229117e80850635fdbbc33865436f5283"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Cross_preview.png",
+      "sha256": "31e85581bb1e2cd5ec389ed215411c773875f654dbf79c1290fc2e7a1b3f3ec7"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle.fbx",
+      "sha256": "192f9a19bbaec2092282c36d3b1328f663aca929b1496fd8989dce245a7ac0e7"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_Triangle_preview.png",
+      "sha256": "c9327c55e04d746c22ca8f1ebb16728ce9b0c9c96cd7a30c5f20c83e8ebd4293"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_PressurePlate_Top_preview.png",
+      "sha256": "1ec7d3be27b8d24d3b9d19c4f2221fc4a7956279e473e6792f4949684867037a"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue.fbx",
+      "sha256": "92424e3791c856872ea9679128cd6d815332bda246442e4b7e382120daa1eb91"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small.fbx",
+      "sha256": "7c3aad0a65bbc78f513b70cda846178f7acd11b0ef057866a030900608e48d6b"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue_Small_preview.png",
+      "sha256": "6fd1c93b6ff8eb11f2daca6bc031c8dce7dccc95e5e527bc6dc963e426a29204"
+    },
+    {
+      "path": "SourceArt/HC/HC-A2/SM_Statue_preview.png",
+      "sha256": "2dc5c6426269b199ed67333951020807c95603c2b2fe08a292f9c147b05a25e4"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_InteractPromptFrame.png",
+      "sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RelicIcon.png",
+      "sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RoundBannerFrame.png",
+      "sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-full-1920-playing.png",
+      "sha256": "b1500ea692218050d67814567583ce98f15d4a1c1eed6cd22dece42fcc448c1b"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-cleared.png",
+      "sha256": "94b2ee57dce96f67652090a031d0571d2665fdd1213fc9bab1179b1a766638d6"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-failed.png",
+      "sha256": "cbae7240330875ab8eead8183cb4b5459c0ec365ff2487c39323f5c3f9a6db81"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-playing.png",
+      "sha256": "b555f8e22485d42a6cc5b01682e1b9e54de0726414a8515ea68ddb2e8e04d34b"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1920-playing.png",
+      "sha256": "06b8b520330abdb6cca6f64f494163dd5edd4903771aae5b8131371252055301"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/style-test-1920.png",
+      "sha256": "14a8ef087287af1a47d1ba24f35b7fcef008846af3154d3b7138471ea0e740db"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_cleared.png",
+      "sha256": "2bfce8ba91abfe2000dafe4099ac42e5ce26dabdd117f9cfc7819a6f81ff06d9"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_failed.png",
+      "sha256": "9ad92d439e65e454f889263db18f8feb94447b016e9571ad67704bceb2cdb156"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_playing.png",
+      "sha256": "0b0d72662cc309c3d6d8d04e6a94482d49be1fb39bde8ef8e7e7edb570226e5d"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_timed.png",
+      "sha256": "a9a18de84ea6efc73764c676f7f06fb552d34253aecc175820047e0140520200"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_cleared.png",
+      "sha256": "9ca2b5e8efa9eeb8c69291a9d9b9751b8e30596b2a59a2638c1d92616e5f5c3b"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_failed.png",
+      "sha256": "694f8eb68c20e5b119bc2bede238910475b50a861e7d368887275bb7b398e82a"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_playing.png",
+      "sha256": "f6134f5545442941dd486c628ae825ea3fb77f74491a93a6f89dc3826463ca60"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_timed.png",
+      "sha256": "fc8cf75e76e51196b2e758da58817e0343375edecc544b7af41136b8ecbc3489"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_cleared.png",
+      "sha256": "25d97e3328a222bf407d2700dba5b11151bbbbcf10b03fa9f255fbe38ae6d295"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_failed.png",
+      "sha256": "82219d204480856632f6b99bbdc8d808f8d212affc5cfa0c81c7366c21d3d269"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_playing.png",
+      "sha256": "c78c9d3a01e5484188861a473f279ffb6e257e5055639ba2568c2fc5c8646eb2"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_timed.png",
+      "sha256": "acd6621aea2930b43b5dc76d9351d6c23ab7e413820bbe10161e303cc5203b4f"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_cleared.png",
+      "sha256": "09667a72b800626378cbd7c2b198579ff65776b0b7307d5de10892ee7153ea3d"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_failed.png",
+      "sha256": "b5426c76c07a9aa93454f1451ebfdd9ea9a2941a6688b56a6a0ecbd7f3fe16f1"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_playing.png",
+      "sha256": "afc7acd87b298ba0bbdbd5f4049c6c72a9b18e64afbfcc187e2ab21fa6381dcb"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_timed.png",
+      "sha256": "6f747fc221132350a8a7519cf5b89bc73ec4ee3587a35774a36e3208cd0044f6"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_cleared.png",
+      "sha256": "6f9c93d597a6bba65b58480bfd328858f2f1b2fcd54312c972ff926b655d0484"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_failed.png",
+      "sha256": "3bf5aed5c81b6d386ace9641cf33c97fd32bc49901284c6dc484fcc73e29d58d"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_playing.png",
+      "sha256": "043426e807d34cc346803a188fcce1cc2a78ca6f224489b540cf1d2ce4d0dae1"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_timed.png",
+      "sha256": "19258343900630df3264548a26052e74b23108e3a55834374d7f1ee307a58841"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_cleared.png",
+      "sha256": "ebdf8bc990bbbd016bac824ed7f152be5270ad1d58c8691c155e2da3f7ffc593"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_failed.png",
+      "sha256": "9001fdecb4e857653cda33e44378e54193ddf5ea14d2d07c058dafde88026438"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_playing.png",
+      "sha256": "4d32ebe1fd550a152cb3d58e66e692ab658b59b237f45a38bfdd721f26821afc"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_timed.png",
+      "sha256": "d01af23d8bf7e3c5169f8df48c774c1a04bf74532e7eaae6379c4fd620429cbd"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/review-board-1280x720.png",
+      "sha256": "5f70cfab26e4bac877f02a3625a03f794c126bb01b1472d64dcd6b40387511e6"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/review-board-1920x1080.png",
+      "sha256": "0ebd1a79e75f2ad224eee630f2271b62f38f6fb32170ca41b54a9e393c948704"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/preview.png",
+      "sha256": "f5925a193620255aa8d57d0f819e83b477a91040d03d7dbe4bd7f9534059c519"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_InteractPromptFrame_source.png",
+      "sha256": "10fe3c3a6198476f26212e6f5b39c584a82c7c04aea65fa5a4469f539fba2557"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_RelicIcon_source.png",
+      "sha256": "3dc1f721dac395943825c0dfabe0b75a3c04554d8d182b0b5aa444b9e48ca382"
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_RoundBannerFrame_source.png",
+      "sha256": "5cd96141f383a7d48757b515771db5fc053cfe12c51baea02ea7e1d707dda6b4"
+    },
+    {
+      "path": "SourceArt/HC/HC2/SFX_RelicPickup.wav",
+      "sha256": "13f605b3ed38773ffaf21ac3404108da7ada2a7d34a2c04c72efcc68f6741775"
+    },
+    {
+      "path": "SourceArt/HZ/CaveIntegration/cave.json",
+      "sha256": "a50e5075e557a04a65ea8fe4aec65d80a00657354159fab62a58d75a6c981a40"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_CrystalCluster.fbx",
+      "sha256": "36e8eb44bae1576c14889d6123a30af545d7efa9091203c692c4ac964c095052"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_CrystalCluster_preview.png",
+      "sha256": "48817601d9f350d4f96b6190b118e987123c597108e2489106f97dadab273b9f"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_CrystalCluster_preview_closeup.png",
+      "sha256": "5913975621b357e60d09ff4867096caca5ab29f7597f121199e9e04c394200f0"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_Stalagmite_A.fbx",
+      "sha256": "a3ee9ada5ac22e5be28fbfef694412b3a894249c0b98781dc3f324d35d2ea340"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_Stalagmite_A_preview.png",
+      "sha256": "cd28dfab6ba2bf94b3fd3ec4a1cda71791a46edc9b896ddc7055fd955778abfd"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_Stalagmite_B.fbx",
+      "sha256": "22c0e5cf73230ea6c0f0c88465552e6dd1f2f690021401188fbc426c7b6455a2"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_Stalagmite_B_preview.png",
+      "sha256": "7d747f2b22777554cafd5568a569340cadf07eebd7ca854ff954697e23af0e4d"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_WallTorch.fbx",
+      "sha256": "f8f597be6fd67708de5aea2f05c196c33f7a524089e47e495039765f776fa7d4"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_WallTorch_Flame.fbx",
+      "sha256": "f93d5a8d922caca928e53042bd22921f7f49ec7bbe612836a92eb5568224d5f2"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_WallTorch_preview.png",
+      "sha256": "f15898eb4b230887451482780a752d59d8fcf911bba7709f9ee4c99c0caa9b40"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A2/SM_WallTorch_preview_closeup.png",
+      "sha256": "e0c0264ea98fce81846062ea47623d646f68c13d5cafd76278ff586bc9b17026"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_Dart.fbx",
+      "sha256": "e91bc3c2daee7d3607a60a4bc1273360125f5c453440a24c7237f7de739e24af"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_DartLauncher.fbx",
+      "sha256": "15701e6c1122214fcdf4b4e0bd855bedb4a1d17617737263d66c8ea362adea97"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_DartLauncher_preview.png",
+      "sha256": "789e60ad7d02f51a41522881dc665a4440e706f92580658d1984616a085c0149"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_Dart_preview.png",
+      "sha256": "f239357336cd23c131ffec03e50b795e396e57245756f97b262e61cf8c7ad866"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_SpikePlate_Base.fbx",
+      "sha256": "7f5bb57410e105efd9e77f6ba1a98b20873a753702bed9ffedff402d75fe6e59"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_SpikePlate_Base_preview.png",
+      "sha256": "1ab73c8e65115f976f7be92c7666ae9931a30f00e103ff65f2dc8128c8d8dc8a"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_SpikePlate_Raised_preview.png",
+      "sha256": "1d70a414e97805588c2a6c82f3983fe71d8af4b62500b76324f0963992e9fe55"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_SpikePlate_Spikes.fbx",
+      "sha256": "23cc10bc72a62351325344e124b2897b81a307d008eee037be5805a82d1d923a"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A3/SM_SpikePlate_Spikes_preview.png",
+      "sha256": "494d24137c698c1bd268127263472606dfaaa3c223c1f198b446f48423327f71"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_BonesPile.fbx",
+      "sha256": "89e5b4293a6c7ccbb32b70a2e37a3210351fa7081de67435c7c125e9d4d8d296"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_BonesPile_preview.png",
+      "sha256": "5979dbc20df70eeda4452a8ea49d1a2578a76767651c492361b349cc01edd5ab"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_CarvedPillar.fbx",
+      "sha256": "630117774e5680bdda7e93b7f997714ffb8863fb1b8119f5e335f922c196cb03"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_CarvedPillar_preview.png",
+      "sha256": "1b3222b601e579315c6a2fcb99ec23592f23dcd920db4a124968c155bb5d6a6b"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_RopeCoil.fbx",
+      "sha256": "54ea310cbc5a4063b96afc0963fe933e22a38e1868e59de8512ef1e285ddabb5"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_RopeCoil_preview.png",
+      "sha256": "5a210475f281d97aa9e09d5b646d2f772a388c6e55f5c77feaf4457d1f8fdf33"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_RopeHanging.fbx",
+      "sha256": "ed855eb04d98e9e4fadbee448b15f8c6234fe10f1cd132d76f7fe03a8b2bd4b5"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_RopeHanging_preview.png",
+      "sha256": "3942e5d2541d7fb56f8a252eb8ba5075ea066b3edf0c9fc23049e79398eb4c70"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_SwingLog.fbx",
+      "sha256": "a66a42d72495d66855d4b1ff08f04d487d4c9f587b74e602321f9298548a3835"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A4/SM_SwingLog_preview.png",
+      "sha256": "451fb3cb8f2bff8f1864d7fd26b97dc2e10a232c8a9c535612a210cfe434c76c"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A5/SM_Brazier.fbx",
+      "sha256": "f9370d0336d8e9b5e003982290feae07d90206a7d2527e6a40c6f2cdf7df5d72"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A5/SM_Brazier_Flame.fbx",
+      "sha256": "75fcf42bbe9680e2e565ed306aee49741938de372af1b0eaabd0bef457225700"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A5/SM_Brazier_preview.png",
+      "sha256": "98ef1c61daea3e748464139f658f1dd3cddb1191eb00e3e6551df471ee482041"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A5/SM_EgyptPillar.fbx",
+      "sha256": "22d64faf791991cd5e3acbf91ef87e033bcf614c9321ccab312ad639840b79c0"
+    },
+    {
+      "path": "SourceArt/HZ/HZ-A5/SM_EgyptPillar_preview.png",
+      "sha256": "e50766517715a25f2dacfe524d814fcffe8e429eb8d879880728caf8447fd850"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/PG-6_LeverGate.blend",
+      "sha256": "1bba7742c303cef2a03e1c5b4f3dcf3033976ef2f2364f17a8ca799e9e61b366"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/SM_GauntletGate.fbx",
+      "sha256": "f3353cdbb01db8f5cf344d03471a8102b9b7ea2360922d6571d4c8e5fce826b5"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/SM_GauntletGate_Frame.fbx",
+      "sha256": "e4ebf76b7b8c79a3928e98dc5c041512c74263fcc6a280187bd37082c2a3cc28"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/SM_Lever_Base.fbx",
+      "sha256": "eee35022db37afc1f17314709828416f32bf98a3193f5686550c455274104478"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/SM_Lever_Handle.fbx",
+      "sha256": "850af3d8e5466472e9d5baf5bb7cdc4545a1c03ae8abba8f8760063faa70bb67"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/GauntletGate_InFrame_preview.png",
+      "sha256": "db0ce392562a0da7aa77cfa008171db7c87ef3b730d059aac72450ff0496fe20"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/Lever_Assembled_preview.png",
+      "sha256": "4d5d667fa6386d62658f26d2fd5ec47a7c432d3163b6db5dde003c46f31fb3e6"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/SM_GauntletGate_Frame_preview.png",
+      "sha256": "69dfaf041dea5fe9c2270d64dcaffdfb7f9e350312a8d06707d99c1313b3df87"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/SM_GauntletGate_preview.png",
+      "sha256": "23991b21b40ba5b6a935c03bf5b8f26b00ec25c47d912fba31575f22c9f73fa5"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/SM_Lever_Base_preview.png",
+      "sha256": "5c3106f1115ff96d097928b2bb6471914c031fa3f371705f068bb8adb831f350"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/previews/SM_Lever_Handle_preview.png",
+      "sha256": "ecf6d6227d2340ce531b815c7024f4a61878af58e5eea88f7e53a1392a8d2f81"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_GauntletGate_BaseColor.png",
+      "sha256": "9bcdf96765d234f0b43691cdee001c5cef00b7a953d343c2ac2c69ae1c7c2f32"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_GauntletGate_Frame_BaseColor.png",
+      "sha256": "e60840200244821a373f2e3a69c43c9e533571dc6a434fafd6b72316b8ff7aee"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_GauntletGate_Frame_ORM.png",
+      "sha256": "f4ea128a4f67eb36b419608f9a906724a5ca95e97623baf8a95530bc0dbd2e31"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_GauntletGate_ORM.png",
+      "sha256": "f6f955c88725724eed299c80b582271000eca29199a39ec5c4d0618080f1c49b"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_Lever_Base_BaseColor.png",
+      "sha256": "96d21a132c29e385df7d304e47eba6c6db1709ec0361a8a165acf5c6e765dc9d"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_Lever_Base_ORM.png",
+      "sha256": "6fa1cd2d8e510ecbf63ec872fa9348e999239461a0eaa8673736a798788376f8"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_Lever_Handle_BaseColor.png",
+      "sha256": "3ace7d940d0587cca715387a3e7d11ce1956ab833ce6edd034776a44e2f271b3"
+    },
+    {
+      "path": "SourceArt/PG/PG-6/textures/T_Lever_Handle_ORM.png",
+      "sha256": "60c596d2e7981486b9e8adde131a878b415aeed13d3a27bf7787be5171f8123e"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/concepts/cave-rock-1m.png",
+      "sha256": "1a87a2047c407d256eb522200fea316c4f86287c0f52fdbab56708b596ede2f3"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/concepts/ghost-hunched.png",
+      "sha256": "166778b4c29ff9f1a94d5da6cfdba5dfb44c63e61f60b101391f7ada146df9ee"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/concepts/ghost-sheet.png",
+      "sha256": "320b332f7fac7d3a5690e1d97e7610239c64cadcb1696c3a1b2b6f4015bc2ebd"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/concepts/gold-idol-25cm.png",
+      "sha256": "5b21b7dbbdd9e750c5cada50541489ca38d64640568153cff5ca0b22fbf90f87"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/concepts/zipline-trolley.png",
+      "sha256": "4a7d12ebe3635f6b71bbf1837c2643f60757450d3fc3f5d07ae7ae5b91c264ea"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/contact-sheet.png",
+      "sha256": "ae616e4ae6d7b4330f432efcf1f79f699f329d2648b30a2efd72e6f9fcb78311"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-01-spawn-cavern.png",
+      "sha256": "9b2df722edec581edd5d2bd01aaa31744d31fb0c044bcc92fa6d4f86f85831f2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-02-torch-chamber.png",
+      "sha256": "a35fe66bb29a1b7b78509ef5f48e76a342f29dff0c439c5c747461b19538a2a7"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-03-relic-altar.png",
+      "sha256": "aee471c39730ed69da2e2801dad833353f24aff793bce0c8dbcb7760628044b0"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-04-ghost-corridor.png",
+      "sha256": "d17625eb7f58d37e93f0e8d9b8ed72ddc8e2099297f5ed7f258257e8608b0e0e"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-05-pressure-plates.png",
+      "sha256": "0b84f4b3e9df27be934121f93609f626739800b1efe5972e7fb11f0ec84eb6b2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/frame-06-egyptian-antechamber.png",
+      "sha256": "bdfe6c17d96c784eff368f6bb19489bb122a79c2d7a5e81aa12fe7b1422aed88"
+    },
+    {
+      "path": "SourceArt/PG/PG-A0/style-frames/style-reference.png",
+      "sha256": "e1a33275dbc0f87fef385d4e9b0d753730752f9fab57ed299d17ef4bf5004914"
+    },
+    {
+      "path": "SourceArt/PG/PG-A2/03_neutral_scale_1440x1080.png",
+      "sha256": "28b0d0cf5664de000a76147cac05fbfed297057120685742eb66480c95ebceec"
+    },
+    {
+      "path": "SourceArt/PG/PG-A2/SM_Ghost.fbx",
+      "sha256": "db0710d32ecec081847d640245f9bc60c5d1843375691209018db87343862367"
+    },
+    {
+      "path": "SourceArt/PG/PG-A2/SM_Ghost_LongReach_cave.blend",
+      "sha256": "16f0641c255903437e62690d84f8af025158472353706a55439fc9e928990942"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/PG-A4_ZiplineParts.blend",
+      "sha256": "10e54b8a99538337d1a1b63c1bff508abe13b79e462933ac96ffd73627ba6bdd"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/SM_ZiplineAnchor_Bottom.fbx",
+      "sha256": "001b68ef5eb74edc8eaab72f8173393e515c100e718299a848dbc60037800d42"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/SM_ZiplineAnchor_Top.fbx",
+      "sha256": "9801b3d0c3c885833934e1243ba61edf278c4539ee5c547707c3c4ad5a65d1ad"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/SM_ZiplineCable.fbx",
+      "sha256": "95fbfb01e48753dbd575b87352029a700a0fee3c535927daab9c3bf7c97203b2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/SM_ZiplineTrolley.fbx",
+      "sha256": "f96a787f7a16aef9c6c8f383c9b65e7d858904da1f148a62fb18cd2b3b48a7df"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/previews/SM_ZiplineAnchor_Bottom_preview.png",
+      "sha256": "ab93454497ad9b5b314a9f288ab970d3d1465096f56bb00f120bf926ad6f2de2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/previews/SM_ZiplineAnchor_Top_preview.png",
+      "sha256": "43a9d53b3317f502d14efc20043fd769b51fe32f32ce0d81537c378abaac954f"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineAnchor_Bottom_BaseColor.png",
+      "sha256": "930e4ebc764f66aec6c326a2f2e4bd97fe1160b139f69474e8ae20e2062cbd50"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineAnchor_Bottom_ORM.png",
+      "sha256": "f338e3dc2a0a1235cac1e213b117d34ef2151b83b9d41dad2944f3baba1625d1"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineAnchor_Top_BaseColor.png",
+      "sha256": "e3697113aadb7bd4686413701fd1451190c7716fbd30120cf58730b4c5d21ef2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineAnchor_Top_ORM.png",
+      "sha256": "dd72b895678c700bff7cd1e0eff3014702639ef70d912cdfd42497270954cde9"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineCable_BaseColor.png",
+      "sha256": "7951120d94b3996fff2ac13bdd6c78d02e7d053bbfbe98049154621b13a5f34b"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineCable_ORM.png",
+      "sha256": "57a896d75032afd6c639f72f9c26aa386195d662c80204abed7b9827a2ac61aa"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineTrolley_BaseColor.png",
+      "sha256": "eb68b048bf769990b096cae5732783b0e3079f2d5ff482bc09854e88196efeb2"
+    },
+    {
+      "path": "SourceArt/PG/PG-A4/textures/T_ZiplineTrolley_ORM.png",
+      "sha256": "4fdaa79c7e69773fd4b2b4b17594c73d14af07f41d189704b6538493042da7eb"
+    },
+    {
+      "path": "Tools/unreal/hc2_integration/host-split-view.png",
+      "sha256": "e2e3a0bdd5309f6c227c9ae85952699f96537c3ceaddba8b1ad0929570245ce1"
+    },
+    {
+      "path": "Tools/unreal/hc4_carrying/evidence/split_screen.png",
+      "sha256": "9be213d63eacc48a59e2981fc7dfdd5cb1f4b9128567878b1890bd61caecc2b4"
+    },
+    {
+      "path": "Tools/unreal/hc_a1_import/renders/SM_KeyRelic_StoneHeart.png",
+      "sha256": "9e85963fff5f22eae1808656219f2f1be19a7d47159369452f63f69d8599ea04"
+    },
+    {
+      "path": "Tools/unreal/hc_a1_import/renders/SM_Relic_GemScarab.png",
+      "sha256": "93b3fae1f01dbfa73f219298197eb0e41fa8105dc3588394b122452ab12906a9"
+    },
+    {
+      "path": "Tools/unreal/hc_a1_import/renders/SM_Relic_GoldIdol.png",
+      "sha256": "c02f01feffea0072c6ab3947bfade5f0fb0565758c479d39df9476ef079a1986"
+    },
+    {
+      "path": "Tools/unreal/hc_a1_import/renders/SM_Relic_JadeMask.png",
+      "sha256": "9e03121824174421053e2021f633c255322d4008b686ffaca4c6d4390cd541a6"
+    },
+    {
+      "path": "Tools/unreal/hc_a1_import/renders/overview.png",
+      "sha256": "1566848fdcabb779ea52cb42427df82784089eafb9594bcb63afb5fc508e325b"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_altar.png",
+      "sha256": "f8d14abaaf64537e2374ea608ff32adb2721d342d65b7719c1c9abbbb5e2719b"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_closed.png",
+      "sha256": "70d6b6add152216cf10389cb0af55684a8cb2ff5160ce990691b5dd08b7c6904"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_half.png",
+      "sha256": "ab483e1ec53d10f11a68fd0bd079615d765cbb5e57370ff7ba1f271525661b1b"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G1_open.png",
+      "sha256": "400f0253be073d1ec9d802794f9c47d50b33aa7ad20dc47f316379b71c64f872"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_closed.png",
+      "sha256": "facb0d69559df39f0d4a890ccf451c640649468dc483f2c73f508587e0679b61"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_half.png",
+      "sha256": "3611ceeb0477e184510e9107a9ccbfc202ed0b92ce7c21432d3cbf1a1e3e7618"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G2_open.png",
+      "sha256": "7c1688c2c193887d9a49d11dfda30e4a50d5127e7111a63886540835343b09ed"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_closed.png",
+      "sha256": "28dde9deb30310c40cab78f291937a39a7dfed41500704e20b80c9f56e06f2c7"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_half.png",
+      "sha256": "5f9a35f99687978095dcb52b364037d8ee0acf64d0add360729ffedd32205263"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_gate_G3_open.png",
+      "sha256": "827d4be10d48e7e3e7a8f7911bf2d05829649850b6fbc09b2ae7aeb5ce78d89d"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_half_circle.png",
+      "sha256": "81c3df83cec2d8717e7dd635f7aa1d8396764afa256d05fdcfdf5130dd92fb62"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_half_cross.png",
+      "sha256": "f2079b6a030a97fe569b52220985e2f3cc21062113fe5905cd0a94083ebd5d6e"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_half_diamond.png",
+      "sha256": "8919822cec3f53ff60899d9e1074a5f815839e5c574214ef83f382283cd3c995"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_half_triangle.png",
+      "sha256": "f642a980ba83fc0ecd469c10b010adacfe1857267ef74f9bf06b6842b2fb4bf6"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_plate_hall.png",
+      "sha256": "d1cd09e61a2f508c70589471861c12e31ccb893e3e308f4b7a10fc0629796e99"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_split_screen00000.png",
+      "sha256": "61ccaf3dfa5e76e0635544d5236cb96c6e964bdd708150e689f056a80f35179b"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_split_screen00001.png",
+      "sha256": "483b9c8a0e0980486da162cb7395360e051744529cf5022ed2198089c6b60304"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/cave_split_screen00003.png",
+      "sha256": "1d7f26d253dfa1784aa0a9423db31a98ebace606eb34b1cb728424038626f286"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/gate_closed.png",
+      "sha256": "79a0d6406798ad085d38d606d176c1d70c53692ae45d27fbfe2591f3cf4b5a48"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/gate_open.png",
+      "sha256": "8c9ebd892340f134fa540437beca193823d49a7d9220fb08c0d02b979e94fc22"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/prototype_doorway.png",
+      "sha256": "fc64d785f85adc086e6ec4c63c8162a66bbe3aac3185819d8bf2d6512dda6a5a"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/site_altar.png",
+      "sha256": "32f2862bd0a015f7600868a0fae2703fa98a2e2a4a696848be99d17ad5c59f00"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/site_gate_g1.png",
+      "sha256": "8d3d6469c45aa34441e5c75e978b2fa2528ae261282a9a182994f082c8cf582b"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/split_screen00000.png",
+      "sha256": "d280ee28ffdb7352f5424bb130b5c2ed0ac8f1143663f04b7926b8fed113a779"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/split_screen00001.png",
+      "sha256": "2f349eeea70df78df6a92e136a0064fc15c26284e3640e9b6c0dbcfdd07454a8"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/symbols_and_statues.png",
+      "sha256": "dd5403f153e404f44b902982231b153cbf85484aceee637662818c2170b85856"
+    },
+    {
+      "path": "Tools/unreal/hc_a2_import/evidence/symbols_half_screen.png",
+      "sha256": "fe12211702123b750e0c92d981e58417a1d5c01f4d09466b81833478c0912d25"
+    }
+  ]
+}

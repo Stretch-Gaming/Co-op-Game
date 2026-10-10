@@ -1,0 +1,271 @@
+{
+  "passed": true,
+  "old_player_id": 266,
+  "old_world_identity": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar' (0x0000018C74A0D200) Class 'World'>",
+  "old_pawn_identity": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C93C28C00) Class 'BP_CoopCharacter_C'>",
+  "checks": [
+    "fresh network client reconstructs completed altar, placed key, attachment, physics and collision",
+    "new client uses native input to pick reset key"
+  ],
+  "before": [
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018CD6670C00) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C7E4BDC00) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C775C7800) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D77939C00) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018D2109FA00) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_2' (0x0000018C37536E00) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D77939000) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C690CAA00) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C78257800) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21310000) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C7C8AF500) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_2' (0x0000018C7C059600) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    }
+  ],
+  "new_world_identity": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar' (0x0000018D7B820E00) Class 'World'>",
+  "new_pawn_identity": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7D593200) Class 'BP_CoopCharacter_C'>",
+  "new_player_id": 266,
+  "joined": [
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018CD6670C00) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C7E4BDC00) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C775C7800) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D7BDACC00) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C798EF500) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_1' (0x0000018C74D02800) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D77939000) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C690CAA00) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C78257800) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar",
+      "completed": true,
+      "placed": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0' (0x0000018D21310000) Class 'BP_KeyRelic_C'>",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 2,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_Altar_C_0' (0x0000018C7C8AF500) Class 'BP_Altar_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_2' (0x0000018C7C059600) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        }
+      ]
+    }
+  ],
+  "final": [
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar",
+      "completed": false,
+      "placed": "None",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_3' (0x0000018C7D594600) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 0,
+          "parent": "None",
+          "physics": true,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar",
+      "completed": false,
+      "placed": "None",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_1_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_0' (0x0000018C7D593200) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 0,
+          "parent": "None",
+          "physics": true,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar",
+      "completed": false,
+      "placed": "None",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_2_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_3' (0x0000018C7EE83C00) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 0,
+          "parent": "None",
+          "physics": true,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar",
+      "completed": false,
+      "placed": "None",
+      "keys": [
+        {
+          "tag": "KeyA",
+          "state": 1,
+          "parent": "<Object '/Game/Puzzles/Test/HC6_Altar/UEDPIE_3_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_CoopCharacter_C_3' (0x0000018C93F3D200) Class 'BP_CoopCharacter_C'>",
+          "physics": false,
+          "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+        },
+        {
+          "tag": "KeyB",
+          "state": 0,
+          "parent": "None",
+          "physics": true,
+          "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    }
+  ]
+}

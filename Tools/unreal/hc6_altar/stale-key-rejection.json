@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "before_clear_count": 2,
+  "destroyed_carried_key": "/Game/Puzzles/Test/HC6_Altar/UEDPIE_0_L_HC6_Altar.L_HC6_Altar:PersistentLevel.BP_KeyRelic_C_0",
+  "native_stale_key_and_invalid_instigator_rejected": true
+}

@@ -1,0 +1,36 @@
+# HC-6 altar delivery — #12
+
+Stretch's HC lane; new Round 2 altar only. The isolated worktree is `C:/Users/Stretch/.codex/worktrees/altar-challenge/Co op Game`, branch `codex/altar-challenge-next`, baseline HC-2 PR #81 at `4be3f85cff446901bbf88bdf918cfb2050d6fa18`. Unreal 5.8.3 uses dedicated PID 37752, MCP 8042 and PIE 17792. The unrelated port 8000 editor is untouched. The checkout initially held LFS pointers; local-cache hydration restored 695 assets and every SHA256 matches its baseline OID (`hydrated-baseline.json`).
+
+`BP_Altar` is a replicated StaticMeshActor implementing existing `BPI_Interactable` and `BPI_RoundReset`. The interface-bearing template was duplicated in the editor, and all copied carrying functions/variables were removed from the altar. No carrying/Core/key/statue/art/map-owner files changed. All uasset/umap writes used the editor and owned package saves.
+
+On the server, `CanAccept` requires Round 2 / Playing, a valid owning `BP_CoopCharacter`, normal interaction range, the existing authoritative Downed tag guard, a valid carried `BP_KeyRelic`, CarryState 1 and matching Carrier. Empty hands, wrong objects, stale references, busy/completed altar and other phases reject. Clients receive an active placement prompt without calling the server-only carried getter. The production owning-player interaction/RPC path revalidates on the server immediately before use.
+
+`AcceptKey` performs no latent work: acquire its busy latch; release through the character's existing `ReleaseCarried`; verify the same key; attach it to `AltarSocket`; latch replicated Completed/PlacedKey; then call existing GameMode.ClearRound once. The delivered handoff clears the carrying slot, restores captured walking/crouched speed and leaves physics off. The delivered placed state owns the key's replicated collision/physics. If attachment fails, the existing round-reset interface resets that key and no clear occurs. Diagnostic AcceptCount/ClearCallCount are server-only cumulative values, not gameplay rewards.
+
+Completed/PlacedKey use RepNotify and the altar is always relevant. BeginPlay/RepNotify apply the completion presentation; native attachment and the key's existing placed-state reconciliation handle fresh clients. ResetForRound on the server sends the same interface to its recorded key, clears altar references/latch and forces a replication update. Resetting the key before or after the altar is safe. Only GameMode changes phase.
+
+The imported `SM_Altar` is used without modifying its mesh/materials. Delivered BP_KeyRelic currently retains the 50 cm Engine cube and centered pivot. `AltarSocket` defaults to local `(0,0,125.305)`cm so the cube bottom meets the imported altar's100.305 cm top. Adjust the component transform for a different key pivot/mesh; SocketName defaults None. The carrying/art owner must assign and review the stone-heart separately. No key-art behavior is overwritten here.
+
+Evidence is under `Tools/unreal/hc6_altar/`: native 2/3/4-client matrices, direct-client negative authority, fresh-world reconnect/reset/native pickup, scoped stale-key rejection, saved graphs/targets/defaults, offline snapshot assertions and owned SHA256s. The standalone fixture is `/Game/Puzzles/Test/HC6_Altar/L_HC6_Altar`; it uses production Core character/GameMode and only an owned input-subsystem probe. Input pulses wait for actual owning-client FocusedTarget. Python arranges static fixtures and invokes phase/reset setup contracts; it never calls a positive altar transaction/RPC. Collision/gravity test arrangements are not production movement acceptance.
+
+Earlier failed fixture runs are preserved: a dropped statue blocked the trace; second-client Started fired before focus settled; reconnect retained its PlayerId, so fresh world/pawn identity replaces that incorrect assumption. They are not passes. During an extra negative experiment, native Drop after destroying a held key exposed a separate AC_Carrying pending-kill error and retained heavy speed (`carrying-stale-drop-failure.json`). The altar rejects that stale key cleanly, and normal handoff speed cleanup passes. That carrying defect needs its owner; no carrying repair is included.
+
+Cave placement handoff: make `L_Site01_HC` current, replace the chamber 2 art-only altar at approximately `(10800,0,0)` with BP_Altar, and keep it within normal interaction reach of the route. Do not save a key/carrier reference or any cross-sublevel reference. Keep Completed/PlacedKey at defaults. The runtime character/carrying hooks are already in the validated Core baseline. Current GameMode.StartRound does not yet dispatch BPI_RoundReset; production restart dispatch belongs to HC-5/Core. Fixture reset acceptance explicitly exercises the existing interface. Actual trapped-corridor/cave acceptance, physical gamepad routing, Mac/default-renderer appearance and full two-round Playable 3 remain pending their owners/team. No cave actor is placed and issue #12 is not closed by this scoped delivery.
+
+
+Windows scoped results:
+
+| Check | Evidence | Result |
+| --- | --- | --- |
+| Native Play As Client at 2, 3 and 4 players | `clients-2.json`, `clients-3.json`, `clients-4.json` | Passed: wrong round, empty hands, wrong heavy statue, key pickup/placement, replicated collision/attachment, normal heavy cleanup, repeat use, reset and competing requests |
+| Independent captured-world assertions | `independent-evidence.json` | Passed: all peer phases Cleared, cumulative clear/accept counts 1 then 2, one placed and one still-carried key in competition |
+| Fresh network world and owning pawn | `fresh-client-latejoin.json` | Passed: reconstruction and subsequent native reset-key pickup |
+| Stale key / invalid instigator | `stale-key-rejection.json` | Passed: clean altar rejection; separate carrying Drop failure remains preserved |
+| Direct client accept/reset | `client-authority.json` | Passed on all four client worlds |
+| Saved defaults and interfaces | `saved-contracts.json`, `node-audit.json` | Passed: RepNotify, replication, required interfaces, explicit carried-object validity, correct owning-character and GameMode targets |
+| Successful native runtime intervals | `clients-2-log.json`, `clients-3-log.json`, `clients-4.json`, corresponding runtime logs | No Blueprint Runtime Error, Accessed None or errors in scoped intervals |
+| Native contact render | `altar-contact.png` | Reviewed: the delivered cube key rests on the imported altar; no floating/interpenetration. Non-placed fixture item and characters moved/hidden after gameplay checks to make contact visible |
+| Ownership and source integrity | `hydrated-baseline.json`, `artifact-hashes.json` | All 695 baseline LFS assets unchanged; exact owned artifact hashes recorded |
+
+The premature four-client observation is preserved as `replication-observation-failure.json`; a later read showed reference convergence, then a fresh run passed with bounded waits for all replicated assertions. Native network PlayerStates/ownership must be ready before starting the harness (`begin_matrix.py`). `test_split.py` is prepared but unrun and is not acceptance evidence. PIE is stopped; temporary editor play/performance settings are restored. The dedicated editor remains available for the primary's independent review. No commits, push, PR or issue close occurred in this delivery.

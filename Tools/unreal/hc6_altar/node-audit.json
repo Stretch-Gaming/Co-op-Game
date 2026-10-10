@@ -1,0 +1,2752 @@
+{
+  "CanAccept": [
+    {
+      "type": "|CanAccept",
+      "node_class": "K2Node_FunctionEntry",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ACF50) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_17'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Instigator",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A28D0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_2'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A6A70) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|IsRoundActive",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5860) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionEntry_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Self Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1850) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Active",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1000) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_5'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Networking|HasAuthority",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2CB0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_7'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetCompleted",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Completed",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6250) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_19'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|NOTBoolean",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE2D0) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableGet_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A95C0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_6'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetTransactionBusy",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TransactionBusy",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1000) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_20'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|NOTBoolean",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6E10) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableGet_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8C20) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8610) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_20'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A80B0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_17'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0F00) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_6'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6250) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_19'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A37C0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF480) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_7'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1000) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_18'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A76E0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_6'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1FA0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_3'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A76E0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_17'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1000) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_7'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A09D0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AFED0) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_15'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|IsValid",
+      "node_class": "K2Node_MacroInstance",
+      "inputs": [
+        {
+          "name": "exec",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9D90) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "InputObject",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2180) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionEntry_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Is Valid",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AD300) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Is Not Valid",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0DD0) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_14'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_CoopCharacter",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3660) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5CE0) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionEntry_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF4B0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_4'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6170) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_13'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "AsBP Coop Character",
+          "type": "BP Coop Character Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A56C0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_21'\", index_id: 0, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717ABB40) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_23'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A6800) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_25'\", index_id: 0, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717AB270) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_5'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A5050) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_4'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Actor|ActorHasTag",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE530) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Tag",
+          "type": "Name",
+          "value": "Downed",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADC60) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_22'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|NOTBoolean",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9370) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_21'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0F00) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_8'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Transformation|GetDistanceTo",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": []
+        },
+        {
+          "name": "OtherActor",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA2C0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Float (single-precision)",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ACDA0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Float|float<=float",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Float (double-precision)",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A50D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_23'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Float (double-precision)",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3F10) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_24'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB420) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_8'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Float|MakeLiteralFloat",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "Float (double-precision)",
+          "value": "400.0",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Float (double-precision)",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AD240) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_3'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE780) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_22'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA300) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB500) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_4'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE5B0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A60A0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_8'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A60A0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF0F0) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_12'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetCarried",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "BP Coop Character Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE890) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CarriedActor",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A56C0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_3'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A6800) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|IsValid",
+      "node_class": "K2Node_MacroInstance",
+      "inputs": [
+        {
+          "name": "exec",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AD0E0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "InputObject",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AD8D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_25'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Is Valid",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0DD0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Is Not Valid",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEA80) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_11'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_KeyRelic",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB2F0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A7AA0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_25'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC1C0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_26'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE530) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_10'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "AsBP Key Relic",
+          "type": "BP Key Relic Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6C90) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_26'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A90B0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_5'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetCarryState",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADC30) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "BP Carryable Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2BC0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEA80) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "State",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3D40) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_4'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Who",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF300) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|Equal(Integer)",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8A20) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_26'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA4A0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_27'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A55A0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_9'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|MakeLiteralInt",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "Integer",
+          "value": "1",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5F60) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_4'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Equal(Object)",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A7020) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_26'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6F10) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3D40) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_9'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A95C0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA300) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_PromotableOperator_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A50E0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_5'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE500) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CallFunction_26'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADDA0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_CommutativeAssociativeBinaryOperator_9'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA7D0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_4'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE500) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_9'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetCandidateCharacter",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6F10) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "CandidateCharacter",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA300) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB3D0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Actor Object Reference",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|SetCandidateKey",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8610) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "CandidateKey",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2CB0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8920) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_FunctionResult_8'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Actor Object Reference",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8BF0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_VariableSet_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "true",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA4A0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_5'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8920) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_5'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC3F0) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_3'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9D20) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_4'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9660) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_DynamicCast_4'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6200) {node: \"/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_MacroInstance_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB8D0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:CanAccept.K2Node_IfThenElse_3'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    }
+  ],
+  "AcceptKey": [
+    {
+      "type": "|AcceptKey",
+      "node_class": "K2Node_FunctionEntry",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEA80) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Instigator",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF300) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_0'\", index_id: 2, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|CanAccept",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A20A0) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_FunctionEntry_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Self Object Reference",
+          "value": "",
+          "links": []
+        },
+        {
+          "name": "Instigator",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB5D0) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_FunctionEntry_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADA90) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Allowed",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8D10) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AD590) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC7B0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6A70) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "Game|GetGameMode",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Game Mode Base Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB270) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_CoopGameMode",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE080) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A28D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADD40) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": []
+        },
+        {
+          "name": "AsBP Coop Game Mode",
+          "type": "BP Coop Game Mode Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AFED0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_8'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetTransactionBusy",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF800) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "TransactionBusy",
+          "type": "Boolean",
+          "value": "true",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA200) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Boolean",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|GetCandidateCharacter",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CandidateCharacter",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A67A0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_CoopCharacter",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8180) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF300) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB3D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE080) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_7'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "AsBP Coop Character",
+          "type": "BP Coop Character Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB270) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|ReleaseCarried",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A16B0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "BP Coop Character Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2690) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_1'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA020) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CarriedActor",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AAD40) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_0'\", index_id: 0, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A3D40) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_1'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A7CE0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 1, direction: EGPD_Input}>",
+            "<Struct 'PinID' (0x0000018C717A3210) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_Message_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetCandidateKey",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CandidateKey",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE2C0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Equal(Object)",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ACF60) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A7A20) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9DD0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9750) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9C60) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADE10) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC1C0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_6'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetwithNotifyPlacedKey",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0F00) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "PlacedKey",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AFF30) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A88D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Actor Object Reference",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|GetAltarSocket",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AltarSocket",
+          "type": "Scene Component Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A79B0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 2, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetSocketName",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SocketName",
+          "type": "Name",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A12D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 3, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Transformation|AttachActorToComponent",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8D20) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8600) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Parent",
+          "type": "Scene Component Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ACFD0) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "SocketName",
+          "type": "Name",
+          "value": "None",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB8D0) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "LocationRule",
+          "type": "EAttachmentRule Enum",
+          "value": "SnapToTarget",
+          "links": []
+        },
+        {
+          "name": "RotationRule",
+          "type": "EAttachmentRule Enum",
+          "value": "SnapToTarget",
+          "links": []
+        },
+        {
+          "name": "ScaleRule",
+          "type": "EAttachmentRule Enum",
+          "value": "KeepWorld",
+          "links": []
+        },
+        {
+          "name": "bWeldSimulatedBodies",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9E20) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC1A0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_2'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3210) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5C10) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_3'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A4E50) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9C60) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_Message_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetwithNotifyCompleted",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6A70) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Completed",
+          "type": "Boolean",
+          "value": "true",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2CB0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Boolean",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|GetAcceptCount",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AcceptCount",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8610) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|int+int",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9E20) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB8D0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC2D0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_3'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|MakeLiteralInt",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "Integer",
+          "value": "1",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ACFC0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetAcceptCount",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEA40) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "AcceptCount",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9D90) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ABC40) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Integer",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|ApplyAltarState",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA2C0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_3'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Self Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE5B0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_6'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Networking|ForceNetUpdate",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ABA40) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC430) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_4'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetClearCallCount",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ClearCallCount",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC110) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|int+int",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A64B0) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableGet_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEA40) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_7'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8610) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_4'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|MakeLiteralInt",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "Integer",
+          "value": "1",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A64F0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_2'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetClearCallCount",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8F60) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_6'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "ClearCallCount",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A67A0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_PromotableOperator_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9D20) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_8'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Integer",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|ClearRound",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC1A0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_4'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "BP Coop Game Mode Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA4A0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_0'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5730) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_6'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|ResetForRound",
+      "node_class": "K2Node_Message",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A7990) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A6A70) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_2'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Index",
+          "type": "Integer",
+          "value": "2",
+          "links": []
+        },
+        {
+          "name": "Attempt",
+          "type": "Integer",
+          "value": "0",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3210) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_5'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|SetwithNotifyPlacedKey",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADD40) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_Message_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "PlacedKey",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA9A0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_6'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Actor Object Reference",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|SetTransactionBusy",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE2D0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_IfThenElse_1'\", index_id: 1, direction: EGPD_Output}>",
+            "<Struct 'PinID' (0x0000018C717A81E0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_CallFunction_8'\", index_id: 0, direction: EGPD_Output}>",
+            "<Struct 'PinID' (0x0000018C717AD8D0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_VariableSet_5'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "TransactionBusy",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": []
+        },
+        {
+          "name": "Output_Get",
+          "type": "Boolean",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|SetTransactionBusy",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF0F0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:AcceptKey.K2Node_DynamicCast_1'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "TransactionBusy",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": []
+        },
+        {
+          "name": "Output_Get",
+          "type": "Boolean",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "ResetAltar": [
+    {
+      "type": "|ResetAltar",
+      "node_class": "K2Node_FunctionEntry",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB790) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_IfThenElse_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Index",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A21B0) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_Message_1'\", index_id: 2, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Attempt",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5F60) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_Message_1'\", index_id: 3, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Networking|HasAuthority",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "Actor Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A4EA0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_IfThenElse_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|FlowControl|Branch",
+      "node_class": "K2Node_IfThenElse",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9D90) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_FunctionEntry_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Condition",
+          "type": "Boolean",
+          "value": "true",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AAD40) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_CallFunction_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3A80) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_VariableSet_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "else",
+          "type": "Exec",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|SetTransactionBusy",
+      "node_class": "K2Node_VariableSet",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC2D0) {node: \"/Script/BlueprintGraph.K2Node_IfThenElse'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_IfThenElse_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "TransactionBusy",
+          "type": "Boolean",
+          "value": "true",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A8F60) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Output_Get",
+          "type": "Boolean",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|GetPlacedKey",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "PlacedKey",
+          "type": "Actor Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADD40) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_DynamicCast_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_KeyRelic",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A37C0) {node: \"/Script/BlueprintGraph.K2Node_VariableSet'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_VariableSet_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB260) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_VariableGet_2'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AFF30) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_Message_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9750) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_CallFunction_3'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "AsBP Key Relic",
+          "type": "BP Key Relic Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A2AB0) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_Message_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|ResetForRound",
+      "node_class": "K2Node_Message",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC850) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF480) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_DynamicCast_0'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Index",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AA300) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_FunctionEntry_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Attempt",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5C10) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_FunctionEntry_0'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A1650) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_CallFunction_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|ClearAltar",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A3660) {node: \"/Script/BlueprintGraph.K2Node_Message'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_Message_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Self Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|ClearAltar",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A64F0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:ResetAltar.K2Node_DynamicCast_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "self",
+          "type": "Self Object Reference",
+          "value": "",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "IsRoundActive": [
+    {
+      "type": "|IsRoundActive",
+      "node_class": "K2Node_FunctionEntry",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE7E0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Game|GetGameState",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Game State Base Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A50E0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_DynamicCast_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Casting|CastToBP_CoopGameState",
+      "node_class": "K2Node_DynamicCast",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A16B0) {node: \"/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_FunctionEntry_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Object",
+          "type": "Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE2E0) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_CallFunction_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF480) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_FunctionResult_1'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "CastFailed",
+          "type": "Exec",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A80B0) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_FunctionResult_2'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "AsBP Coop Game State",
+          "type": "BP Coop Game State Object Reference",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AC430) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_VariableGet_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|GetRoundState",
+      "node_class": "K2Node_VariableGet",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "BP Coop Game State Object Reference",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A20A0) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_DynamicCast_0'\", index_id: 2, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "RoundState",
+          "type": "S Round State Structure",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF020) {node: \"/Script/BlueprintGraph.K2Node_BreakStruct'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_BreakStruct_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Struct|BreakSRoundState",
+      "node_class": "K2Node_BreakStruct",
+      "inputs": [
+        {
+          "name": "S_RoundState",
+          "type": "S Round State Structure (by ref)",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ABB50) {node: \"/Script/BlueprintGraph.K2Node_VariableGet'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_VariableGet_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Index_11_91104438409472A6DD374BADC8DC29B1",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A50D0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_PromotableOperator_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Phase_15_0B3D934F45B47D0BD2F25CA01264D4DF",
+          "type": "E_RoundPhase Enum",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A0F00) {node: \"/Script/BlueprintGraph.K2Node_EnumEquality'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_EnumEquality_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        },
+        {
+          "name": "Attempt_12_246832B34F4E147660E8729696BDD44A",
+          "type": "Integer",
+          "links": []
+        },
+        {
+          "name": "PhaseEndsAt_13_75E3D82F49994607AFA23C8B57E08350",
+          "type": "Float (double-precision)",
+          "links": []
+        },
+        {
+          "name": "ScalingRow_14_43C74C304230A92B6620E1A520A230C0",
+          "type": "Name",
+          "links": []
+        }
+      ]
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AB420) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_DynamicCast_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Active",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A50A0) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_CommutativeAssociativeBinaryOperator_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "Math|Integer|Equal(Integer)",
+      "node_class": "K2Node_PromotableOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9660) {node: \"/Script/BlueprintGraph.K2Node_BreakStruct'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_BreakStruct_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Integer",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AE530) {node: \"/Script/BlueprintGraph.K2Node_CallFunction'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_CallFunction_1'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A9E20) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_CommutativeAssociativeBinaryOperator_0'\", index_id: 0, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Integer|MakeLiteralInt",
+      "node_class": "K2Node_CallFunction",
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "Integer",
+          "value": "2",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Integer",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A81E0) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_PromotableOperator_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Enum|LiteralenumE_RoundPhase",
+      "node_class": "K2Node_EnumLiteral",
+      "inputs": [
+        {
+          "name": "Enum",
+          "type": "E_RoundPhase Enum",
+          "value": "NewEnumerator1",
+          "links": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "E_RoundPhase Enum",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A95C0) {node: \"/Script/BlueprintGraph.K2Node_EnumEquality'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_EnumEquality_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Utilities|Enum|Equal(Enum)",
+      "node_class": "K2Node_EnumEquality",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "E_RoundPhase Enum",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AF300) {node: \"/Script/BlueprintGraph.K2Node_BreakStruct'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_BreakStruct_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "E_RoundPhase Enum",
+          "value": "NewEnumerator0",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A76E0) {node: \"/Script/BlueprintGraph.K2Node_EnumLiteral'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_EnumLiteral_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AEC10) {node: \"/Script/BlueprintGraph.K2Node_CommutativeAssociativeBinaryOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_CommutativeAssociativeBinaryOperator_0'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Math|Boolean|ANDBoolean",
+      "node_class": "K2Node_CommutativeAssociativeBinaryOperator",
+      "inputs": [
+        {
+          "name": "A",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717ADD40) {node: \"/Script/BlueprintGraph.K2Node_PromotableOperator'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_PromotableOperator_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "B",
+          "type": "Boolean",
+          "value": "false",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5C10) {node: \"/Script/BlueprintGraph.K2Node_EnumEquality'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_EnumEquality_0'\", index_id: 0, direction: EGPD_Output}>"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Boolean",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717A5BE0) {node: \"/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_FunctionResult_1'\", index_id: 1, direction: EGPD_Input}>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "|ReturnNode",
+      "node_class": "K2Node_FunctionResult",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "value": "",
+          "links": [
+            "<Struct 'PinID' (0x0000018C717AFE30) {node: \"/Script/BlueprintGraph.K2Node_DynamicCast'/Game/Puzzles/BP_Altar.BP_Altar:IsRoundActive.K2Node_DynamicCast_0'\", index_id: 1, direction: EGPD_Output}>"
+          ]
+        },
+        {
+          "name": "Active",
+          "type": "Boolean",
+          "value": "false",
+          "links": []
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}
