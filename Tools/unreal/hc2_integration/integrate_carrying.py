@@ -46,5 +46,3 @@ assert {g.get_name():BP.read_graph_dsl(g) for g in BP.list_graphs(c) if g.get_na
 assert ue.EditorAssetLibrary.save_loaded_asset(c)
 (HERE/'carrying-integration.json').write_text(json.dumps({'passed':True,'component':'AC_Carrying','attachment':'server BeginPlay adds the reviewed replicated component only when absent; existing fixture component is reused','protected_graphs':list(protected),'server_rpc_flag':'requires editor UI configuration before acceptance','signatures_preserved':['GetCarried -> CarriedActor','ReleaseCarried -> CarriedActor']},indent=2))
 ue.get_editor_subsystem(ue.AssetEditorSubsystem).open_editor_for_assets([c])
-
-

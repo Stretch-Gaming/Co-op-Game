@@ -32,4 +32,3 @@ assert ROOT.as_posix() in json.dumps(live),'MCP server is not this isolated proj
 if __name__=='__main__':
  import sys
  print(json.dumps(call(sys.argv[1],sys.argv[2],json.loads(sys.argv[3])),indent=2))
-

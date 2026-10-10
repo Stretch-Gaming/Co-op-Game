@@ -17,4 +17,3 @@ BP.add_object_function_param(graph,'Subsystem',ue.Object.static_class(),False)
 write(bp,'ResolveInput','''(fn ResolveInput (Controller)
  (return (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem :PlayerController Controller)))''')
 assert ue.EditorAssetLibrary.save_loaded_asset(bp)
-

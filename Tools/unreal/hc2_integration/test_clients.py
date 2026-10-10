@@ -108,5 +108,3 @@ def tick(dt):
    finish(True)
  except Exception:finish(False,traceback.format_exc())
 handle=ue.register_slate_post_tick_callback(tick)
-
-

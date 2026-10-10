@@ -76,18 +76,18 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/add_split.py",
-      "bytes": 341,
-      "sha256": "eb1c0b26f7257245664f304d33f3a1874a565c543b206e88d5cd36017556d3ae"
+      "bytes": 344,
+      "sha256": "98060500a6b81a4b068076cb1ad4c48e88513824ea10f1b0a7fcb93b38c14a67"
     },
     {
       "path": "Tools/unreal/hc2_integration/audit.py",
-      "bytes": 444,
-      "sha256": "dc6b9e1fd7ed483a4b0f52bea5b391fa41ad539613a1839ff92a44882580b476"
+      "bytes": 449,
+      "sha256": "74bcaa1df449c8220875385cba5783dfa54eb92b56cb852b8a564e624b482b07"
     },
     {
       "path": "Tools/unreal/hc2_integration/audit_character.py",
-      "bytes": 271,
-      "sha256": "95f648a02aa9606ed127a6234abe0e9df3f767f5b868a942a89b7ee93536515a"
+      "bytes": 274,
+      "sha256": "000e85ae06ede995887d76c499d4ea09a8a6476d69007ea50fa5e169c2d43784"
     },
     {
       "path": "Tools/unreal/hc2_integration/baseline-graphs.json",
@@ -101,8 +101,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/build.py",
-      "bytes": 13708,
-      "sha256": "998d6fabe3813ac7e351de04e741cda14718b686484206ceaa015650d8f0b895"
+      "bytes": 13700,
+      "sha256": "88e049736fbba57341c4c1607e31ebde7ed947a178d38c4548084ee0a5fb87d1"
     },
     {
       "path": "Tools/unreal/hc2_integration/carry-fixtures.json",
@@ -176,8 +176,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/exit_editor.py",
-      "bytes": 200,
-      "sha256": "1d9b34e6e0b433b7d11cbc403dffe4a407a4cf8d2e8bbc127b08216b30aa6af7"
+      "bytes": 202,
+      "sha256": "5ada8a6cfadcbcec1b3b0b75bfa1cd4daf10a328cbeb36bfe3139c8bc1d1b32d"
     },
     {
       "path": "Tools/unreal/hc2_integration/final-graphs.json",
@@ -186,8 +186,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/fix_relevance.py",
-      "bytes": 674,
-      "sha256": "bc45e79e022c4bd2eea8715c4fa34417a92ad76ebeecd6317be51d87789e9f30"
+      "bytes": 682,
+      "sha256": "340c61acc0cb30849b99d720cda396c2901728e3c43c08bf95bd2eb880b100ca"
     },
     {
       "path": "Tools/unreal/hc2_integration/fixtures.json",
@@ -196,13 +196,13 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/fixtures.py",
-      "bytes": 2097,
-      "sha256": "6f627f4d241a4037e19181e5c42423cdc1c690e68366534d2314449dca84e4f9"
+      "bytes": 2124,
+      "sha256": "353f8e2261e7e244d92feba1b2cb272884c7a659b2896154f7fefe2b861cef1f"
     },
     {
       "path": "Tools/unreal/hc2_integration/fixtures_carry.py",
-      "bytes": 854,
-      "sha256": "1af1cd4c10b9153c82a943676f88302257a614dc9927d7a2e1df5eb73ea68c23"
+      "bytes": 862,
+      "sha256": "9f0b90de38d77a16d3da44244768e59896b889b3181c555b0d0e7ef966375bad"
     },
     {
       "path": "Tools/unreal/hc2_integration/fresh-client-latejoin.json",
@@ -262,8 +262,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/import_sound.py",
-      "bytes": 1654,
-      "sha256": "a5125d6f4a597b02260491252dbfde13fd8616e640a773a13017c1c84d7d0981"
+      "bytes": 1674,
+      "sha256": "a01d1a3226ec3e2abba3f37059f338f9bc89ef173dfcad02c9f74e3edc49c1df"
     },
     {
       "path": "Tools/unreal/hc2_integration/independent-character-diff.json",
@@ -272,18 +272,18 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/input_probe.py",
-      "bytes": 1002,
-      "sha256": "9ade025e28ebfa4846d75be21094f09724f1d31366275bf1bd5483da81aefd86"
+      "bytes": 1018,
+      "sha256": "944c37c1f57542c7ea16447bf366fddf94623ce58f04427e9eb5954aa96186f9"
     },
     {
       "path": "Tools/unreal/hc2_integration/inspect.py",
-      "bytes": 600,
-      "sha256": "5ca14d6ba483c1b2fae3bf9977ab388aee9b8d468a411ac1c487dbf6bfecf8f1"
+      "bytes": 608,
+      "sha256": "a74ba45f4ac78ad97efbbb86b28fe83527966c502c11a3c9a50b62bf07b0c4f7"
     },
     {
       "path": "Tools/unreal/hc2_integration/integrate_carrying.py",
-      "bytes": 3378,
-      "sha256": "119d38acec00232a6bbcf12ab972dbddbd63eb49aacf3ec5521f2245817d35c5"
+      "bytes": 3421,
+      "sha256": "58c073791237b880e7491b344d8a80cfe590ef8b4e16a801fa482b299474fc7f"
     },
     {
       "path": "Tools/unreal/hc2_integration/interrupted-regression.json",
@@ -297,8 +297,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/make_sound.py",
-      "bytes": 1575,
-      "sha256": "0cd95ab5f73b07799be14be7948d98e8446d2c0da06aabb503432ad7e1f914e4"
+      "bytes": 1594,
+      "sha256": "61e7fc0b8aa45406a214208de39be53b6f4e518c7429ee46c2f47c9e50fba086"
     },
     {
       "path": "Tools/unreal/hc2_integration/multicast-ui-review.json",
@@ -357,18 +357,18 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/request.py",
-      "bytes": 853,
-      "sha256": "f588ac850c11ffa96e769c0350abed44030ea60d6049cfdb03785ee111a821d6"
+      "bytes": 869,
+      "sha256": "22fa2cbf923267b5bc044e3498fbb344e1e72a6de3041286b2e563c3ed441d65"
     },
     {
       "path": "Tools/unreal/hc2_integration/restore.py",
-      "bytes": 570,
-      "sha256": "98cf94306e144832570e71c00a63d41db3852c59238c4a1ff0511c7e397ac46c"
+      "bytes": 576,
+      "sha256": "b6e1b4a3377fd880993c35a259abc59fffe5ca06f8727b1e4e9cfd2e9e8b3320"
     },
     {
       "path": "Tools/unreal/hc2_integration/rpc.py",
-      "bytes": 1786,
-      "sha256": "ce60f785677521699c41fbbd6fb7149d11581e101e056edc796c69ddd9e9ac39"
+      "bytes": 1788,
+      "sha256": "b382e85d4da68870a520051089287436bb654fb02ec7def9900c0cc09af2f0e1"
     },
     {
       "path": "Tools/unreal/hc2_integration/run_clients.py",
@@ -392,8 +392,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/save_carry_rpc.py",
-      "bytes": 487,
-      "sha256": "77296d1ff3fc7f93da4ce205a8f945645067718c5271b3f15c7cd55177b2c061"
+      "bytes": 492,
+      "sha256": "080d5ded036312c9f6b33cf392e2ff9fff5514ae2d09470896371f6da256c2de"
     },
     {
       "path": "Tools/unreal/hc2_integration/scaffold.json",
@@ -447,8 +447,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/test_clients.py",
-      "bytes": 6419,
-      "sha256": "2e4c54bf2e3238343c4372d6fafd4b9df90e361e20590658c1db5596815cae60"
+      "bytes": 6415,
+      "sha256": "ee8890994d909b36c2dd6dcba6bd01e63b4173f19295312c5baeb5bd00a87219"
     },
     {
       "path": "Tools/unreal/hc2_integration/test_fresh_join.py",
@@ -462,8 +462,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/test_host.py",
-      "bytes": 9489,
-      "sha256": "1b6744f4471d241ca9b7a0c04220401a50354fb888002c385abccbc0c5aacf90"
+      "bytes": 9487,
+      "sha256": "912eb885f23847bee65ac64bb08546c5d9f084d995265c7a9a5e5f93e64c8908"
     },
     {
       "path": "Tools/unreal/hc2_integration/test_production_carry.py",
@@ -472,8 +472,8 @@
     },
     {
       "path": "Tools/unreal/hc2_integration/test_site.py",
-      "bytes": 2962,
-      "sha256": "1f0fef364c374aa4fabf1582ef86be7251d12bbc561beefab6ceb48f6f535380"
+      "bytes": 3004,
+      "sha256": "e7f26550e9c77d604d1452b7903c49b0ec1efe9450722b7031cf42bbd4056161"
     },
     {
       "path": "docs/hc2-verification.md",
@@ -481,5 +481,8 @@
       "sha256": "3c2b9501a97faadd103a8b08a743809c2e8db1315a7ac218c52b46b396a710a9"
     }
   ],
-  "original_probe_sha256": "fbdf1e6a210801f1c542474f7319e2d0b078297c61806930f760ba5e36d58299"
+  "original_probe_sha256": "fbdf1e6a210801f1c542474f7319e2d0b078297c61806930f760ba5e36d58299",
+  "published_base": "91a5195ec6d31060d4e28d02f2e068ac595cd0b1",
+  "rebase_preserved_tested_binaries": true,
+  "text_hash_note": "Working bytes include checkout line endings; binary/LFS OIDs are invariant."
 }
