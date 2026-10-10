@@ -6,7 +6,7 @@ The shared reference removes the glowing animal and red sun glyph. Frame 01 chan
 
 ## File names and scene subjects
 
-The frame filenames intentionally match the previously committed set. The selected v1 scenes have different subjects from some legacy filename labels; the titles below identify what each image actually shows. `ghost-sheet.png` is the requested rounded sheet variant.
+The frame filenames describe the selected v1 scenes. The titles below identify each image's subject. `ghost-sheet.png` is the requested rounded sheet variant.
 
 | File | Actual subject |
 | --- | --- |
@@ -335,7 +335,7 @@ Use case: stylized-concept, surface-detail simplification of the supplied shared
 
 ## Contact sheet
 
-`contact-sheet.png` is a review composite, not a generated concept. Tool: Python 3 and Pillow. Inputs: the twelve PNGs in the table above, in that order. No image-generation prompt. Rebuild with `../.venv/bin/python scripts/build_review.py` from this folder.
+`contact-sheet.png` is a review composite, not a generated concept. Tool: Python 3 and Pillow. Inputs: the twelve PNGs in the table above, in that order. No image-generation prompt. Rebuild with `python3 scripts/build_contact_sheet.py` from this folder, using a Python environment with Pillow installed.
 
 ## Review and next step
 
