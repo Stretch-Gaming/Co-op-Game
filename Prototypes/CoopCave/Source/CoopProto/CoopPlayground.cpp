@@ -2544,13 +2544,13 @@ void ACoopPlayground::BuildMaze()
 			++CrossingCount;
 		}
 	}
-	auto FindLevel = [&Cells](const FIntPoint& At, int32 Owner) -> const FLevel*
+	auto FindLevel = [&Cells](const FIntPoint& At, int32 PathOwner) -> const FLevel*
 	{
 		if (const TArray<FLevel>* Levels = Cells.Find(At))
 		{
 			for (const FLevel& Level : *Levels)
 			{
-				if (Level.Owner == Owner) { return &Level; }
+				if (Level.Owner == PathOwner) { return &Level; }
 			}
 		}
 		return nullptr;
