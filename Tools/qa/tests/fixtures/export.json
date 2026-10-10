@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A1/SM_Relic_Test.glb",
+  "output": "SourceArt/HC/HC-A1/SM_Relic_Test.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1,
+  "triangles_before": 9000,
+  "triangles_after": 9000,
+  "dimensions_cm": [
+    22,
+    24,
+    25
+  ],
+  "bounds_min_cm": [
+    -11,
+    -12,
+    0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

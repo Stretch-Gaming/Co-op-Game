@@ -1,0 +1,240 @@
+{
+  "repository": "<attached worktree>",
+  "task": "HC-A1",
+  "assets_checked": 13,
+  "errors": 13,
+  "warnings": 6,
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "provenance.missing",
+      "path": "SourceArt/HC/HC-A1",
+      "basis": "repository",
+      "message": "No local provenance document; check asset issue offline evidence or supply a manifest. No license inferred."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda, expected 396700 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 dbb5844b50ab8db03601724b64461ec390622c4f8d48d720eb0a6b47b3fb4903, expected 897719 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart_preview_closeup.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 3ebe4a5c427459ce886b0cd1870ba4a202e2c5b4b743ff4b3a4429c472948eff, expected 978767 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 c95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8, expected 318316 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.relic_size",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json",
+      "basis": "recorded",
+      "message": "Recorded longest dimension 18 cm differs from small relic brief (20-30 cm); review size intent in Blender/Unreal."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 c0f76af0f79cdcb1643bdd416f22b7d7d19fd2f09c454655b767793f786b27a1, expected 846934 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab_preview_closeup.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 a2a08557010b9e7fe953fd1e6b545ac61f3acbe36a195961201397b6653b3c67, expected 877612 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b, expected 437676 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_compare.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 9d525cc372526c5939cb05d0ab1334b511be6bd81e42b7bb4ad7692e0c6320cb, expected 1283794 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 298b44d57b92fb36033f3ff86683f49f1e50c353ef236c2392b08a3d605d1dd1, expected 867145 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol_preview_closeup.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 fce928afa927bc9aadf06e1d8ed9a37564598e7e3f4bece8122833e798b8019c, expected 1132423 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 f3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703, expected 316636 bytes)."
+    },
+    {
+      "severity": "warning",
+      "code": "record.unbound",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.validation.json",
+      "basis": "recorded",
+      "message": "No output SHA-256 in export record; measurements cannot be tied to current bytes."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 bc14d136b4673436de4644d9fa17d11e2cbb23f42b7a43297c1f27722a76571a, expected 852482 bytes)."
+    },
+    {
+      "severity": "error",
+      "code": "lfs.unhydrated",
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask_preview_closeup.png",
+      "basis": "repository",
+      "message": "LFS pointer, not asset bytes (sha256 afee247dab4c9b701fb067a12e1f3d790e1ba408d517315cb6f3672bd587242f, expected 938981 bytes)."
+    }
+  ],
+  "facts": [
+    {
+      "path": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          39.2349,
+          74.0457,
+          62.0
+        ],
+        "bounds_min_cm": [
+          -19.61747,
+          -37.02286,
+          0.0
+        ],
+        "triangles_after": 9866,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GemScarab.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          18.0,
+          16.3004,
+          7.0937
+        ],
+        "bounds_min_cm": [
+          -9.0,
+          -8.1502,
+          0.0
+        ],
+        "triangles_after": 8148,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          22.1418,
+          22.7571,
+          25.0
+        ],
+        "bounds_min_cm": [
+          -11.07091,
+          -11.37853,
+          0.0
+        ],
+        "triangles_after": 9406,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    },
+    {
+      "path": "SourceArt/HC/HC-A1/SM_Relic_JadeMask.validation.json",
+      "kind": "export_metrics",
+      "basis": "recorded",
+      "value": {
+        "dimensions_cm": [
+          9.8168,
+          17.7345,
+          22.0
+        ],
+        "bounds_min_cm": [
+          -4.90839,
+          -8.86724,
+          0.0
+        ],
+        "triangles_after": 8224,
+        "pivot": "base center",
+        "fbx_unit": "centimeters",
+        "up_axis": "+Z",
+        "forward_axis": "-Y"
+      }
+    }
+  ],
+  "limitations": [
+    "Blender export dimensions, bounds, triangles, pivots, units and axes are recorded claims; FBX geometry is not measured.",
+    "Gate opening dimensions are not full mesh bounds; no 400 cm full-bounds assertion is made.",
+    "PNG checks inspect IHDR only, not pixels, actual alpha, image decoding or visual readability.",
+    "Unreal import settings, materials, collision, Nanite, client/split-screen behavior and appearance require editor review.",
+    "No network access: issue provenance and licensing terms are not fetched or legally verified."
+  ],
+  "exit_code": 1
+}
