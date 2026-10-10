@@ -61,21 +61,10 @@ cutters = [
     block("MouthCut", (0.058, 0.2, 0.016), (0, 0, Z0 - 0.054), taper=(1.2, 1.0), bevel=0.3, wobble=0),
 ]
 cutters.append(rp.mirror_x(cutters[0], "EyeCut_R"))
-for c in cutters:
-    mod = plate.modifiers.new(c.name, "BOOLEAN")
-    mod.operation = "DIFFERENCE"
-    mod.solver = "EXACT"
-    mod.object = c
-    bpy.context.view_layer.objects.active = plate
-    bpy.ops.object.modifier_apply(modifier=mod.name)
-for c in cutters:
-    bpy.data.objects.remove(c, do_unlink=True)
-kit.chunky_bevel(plate, width=0.012, segments=3, angle_deg=35, smooth_deg=40)
-# The boolean can leave an empty material slot behind; the whole plate is jade.
-plate.data.materials.clear()
 plate.data.materials.append(jade)
-for poly in plate.data.polygons:
-    poly.material_index = 0
+for c in cutters:
+    kit.boolean(plate, c)
+kit.chunky_bevel(plate, width=0.012, segments=3, angle_deg=35, smooth_deg=40)
 parts.append(plate)
 
 # Carved jade features: a heavy brow over each eye, cheekbones and a big wedge nose.

@@ -58,16 +58,6 @@ def lump(name, center, size, seed, facets=36):
     return hull(name, pts)
 
 
-def boolean(target, other, operation):
-    mod = target.modifiers.new(other.name, "BOOLEAN")
-    mod.operation = operation
-    mod.solver = "EXACT"
-    mod.object = other
-    bpy.context.view_layer.objects.active = target
-    bpy.ops.object.modifier_apply(modifier=mod.name)
-    bpy.data.objects.remove(other, do_unlink=True)
-
-
 # The body: a thick, blunt, tapering block of rock, hulled from jittered rings.
 rng = random.Random(7)
 rings = [  # height, half width, half depth
@@ -84,24 +74,21 @@ for z, rx, ry in rings:
         j = rng.uniform(0.92, 1.04)
         body_pts.append((math.cos(t) * rx * j, math.sin(t) * ry * j, z + rng.uniform(-0.012, 0.012) * (z > 0)))
 heart = hull("Heart", body_pts)
+heart.data.materials.append(stone)
 
 # Two lobes on top, leaving a cleft between them.
 for side, seed in ((1, 11), (-1, 12)):
-    boolean(heart, lump(f"Lobe{side}", (side * 0.135, 0.0, 0.44), (0.31, 0.32, 0.3), seed), "UNION")
+    kit.boolean(heart, lump(f"Lobe{side}", (side * 0.135, 0.0, 0.44), (0.31, 0.32, 0.3), seed), "UNION")
 
 # A few chips knocked out of the edges: lived in.
 for i, (direction, height, size) in enumerate((((-1, -0.6), 0.47, 0.09), ((1, 0.5), 0.3, 0.08), ((0.7, -0.7), 0.1, 0.07))):
     d = Vector((direction[0], direction[1], 0)).normalized()
     hit, loc, _, _ = heart.ray_cast(Vector((0, 0, height)) + d * 2, -d)
     if hit:
-        boolean(heart, lump(f"Chip{i}", loc + d * size * 0.18, (size, size, size * 0.8), 30 + i, facets=14),
+        kit.boolean(heart, lump(f"Chip{i}", loc + d * size * 0.18, (size, size, size * 0.8), 30 + i, facets=14),
                 "DIFFERENCE")
 
 kit.chunky_bevel(heart, width=0.024, segments=3, angle_deg=12, smooth_deg=30)
-heart.data.materials.clear()
-heart.data.materials.append(stone)
-for poly in heart.data.polygons:
-    poly.material_index = 0
 parts.append(heart)
 
 

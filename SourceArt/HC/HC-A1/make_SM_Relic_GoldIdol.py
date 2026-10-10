@@ -57,12 +57,6 @@ def apply_modifier(obj, kind, **settings):
     bpy.ops.object.modifier_apply(modifier=mod.name)
 
 
-def cut(obj, cutter):
-    """Boolean the cutter out of `obj`, then delete the cutter."""
-    apply_modifier(obj, "BOOLEAN", operation="DIFFERENCE", solver="EXACT", object=cutter)
-    bpy.data.objects.remove(cutter, do_unlink=True)
-
-
 def mirrored(fn):
     """Call fn(side) for the right side (+1) and the left side (-1)."""
     return [fn(side) for side in (1, -1)]
@@ -118,6 +112,7 @@ body = kit.join(shapes, "Body")
 bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
 apply_modifier(body, "REMESH", mode="VOXEL", voxel_size=VOXEL, adaptivity=0.0)
 apply_modifier(body, "SMOOTH", factor=0.5, iterations=4)
+body.data.materials.append(gold)
 
 
 def hit(origin, target):
@@ -131,7 +126,7 @@ def hit(origin, target):
 
 def sink(name, hits, radius, depth, cyclic):
     pts = [loc + direction * radius * depth for loc, _, direction in hits]
-    cut(body, tube(name, pts, radius, cyclic=cyclic, resolution=3, sides_res=1))
+    kit.boolean(body, tube(name, pts, radius, cyclic=cyclic, resolution=3, sides_res=1))
 
 
 def groove_out(name, origin, targets, radius=0.004, depth=0.4, cyclic=False):
@@ -193,12 +188,12 @@ groove_in("Mouth", [(x, 0, MOUTH_Z) for x in (-0.048, -0.024, 0.0, 0.024, 0.048)
 for s in (1, -1):
     loc, _, direction = hit(head((s * 0.011, -0.3, 0.19)), head((s * 0.011, 0, 0.188)))
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.006, segments=12, ring_count=8, location=loc + direction * 0.0015)
-    cut(body, bpy.context.active_object)
+    kit.boolean(body, bpy.context.active_object)
 # Cupped ears, open to the front.
 for s in (1, -1):
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.012, segments=16, ring_count=8,
                                          location=head((s * 0.056, -0.032, 0.24)))
-    cut(body, bpy.context.active_object)
+    kit.boolean(body, bpy.context.active_object)
 # Three toes on each front paw and each back paw.
 for s in (1, -1):
     for paw, spread, r in (((s * 0.066, -0.084, 0.02), 0.3, 0.0038), ((s * 0.1, -0.028, 0.014), 0.28, 0.003)):
@@ -207,7 +202,7 @@ for s in (1, -1):
                                                          paw[2] + math.sin(math.radians(t)) * 0.1), -20, 60, 6), r)
 # A flat base, so it sits steady on the altar.
 bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, -0.5 + 0.004))
-cut(body, bpy.context.active_object)
+kit.boolean(body, bpy.context.active_object)
 # Decimate last, so the triangle budget holds however many grooves there are.
 apply_modifier(body, "DECIMATE", ratio=BODY_TRIANGLES / kit.triangles([body]), use_collapse_triangulate=True)
 
@@ -215,8 +210,6 @@ bpy.ops.object.select_all(action="DESELECT")
 body.select_set(True)
 bpy.context.view_layer.objects.active = body
 bpy.ops.object.shade_smooth_by_angle(angle=math.radians(40))
-body.data.materials.clear()
-body.data.materials.append(gold)
 parts = [body]
 
 # Square teeth on the jaw slab: big ones at the corners, smaller ones between.
@@ -235,20 +228,6 @@ gem.rotation_euler = facing
 parts += [bezel, gem]
 
 idol = rp.finish(parts, NAME, height=0.25)
-
-# The kit's teal fill turns metallic gold green. For this asset, make the fill neutral.
-_kit_lighting = kit._setup_lighting
-
-
-def _neutral_fill_lighting():
-    lights = _kit_lighting()
-    for light in lights:
-        if light.name.startswith("Fill"):
-            light.data.color = kit.hex_rgba("#E6E9F2")[:3]
-    return lights
-
-
-kit._setup_lighting = _neutral_fill_lighting
 out = rp.out_dir()
 rp.deliver(idol, NAME, out)
 
