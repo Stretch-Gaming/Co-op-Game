@@ -15,7 +15,9 @@ assert ROOT.resolve() == EXPECTED
 assert Path(ue.Paths.project_dir()).resolve() == EXPECTED
 assert ue.SystemLibrary.get_engine_version().startswith('5.8.3-')
 ue.EditorPythonScripting.set_keep_python_script_alive(True)
-last = None
+ue.SystemLibrary.execute_console_command(ue.get_editor_subsystem(ue.UnrealEditorSubsystem).get_editor_world(), 'ModelContextProtocol.StartServer 8060')
+completed = QUEUE / 'command-result.json'
+last = json.loads(completed.read_text(encoding='utf-8-sig')).get('id') if completed.exists() else None
 busy = False
 
 def tick(delta):

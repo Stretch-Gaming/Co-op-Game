@@ -1,0 +1,74 @@
+{
+  "status": "work_in_progress",
+  "compiled_blueprints": 79,
+  "compile_errors": [],
+  "checks": {
+    "client-controls": {
+      "passed": true,
+      "error": null,
+      "checks": [
+        "client view and headlamp input reached server and every peer",
+        "client brace reached server and peers",
+        "client release restores walking"
+      ]
+    },
+    "split-keyboard-recovery": {
+      "passed": true,
+      "error": null,
+      "checks": [
+        "F5 input adds a second local player with independent prompt and input",
+        "arrow input moves only player two",
+        "second-player view, light and brace stay independent",
+        "normal hold interaction revives the teammate at half health"
+      ]
+    },
+    "view-contract-runtime": {
+      "passed": true,
+      "error": null,
+      "players": 2,
+      "checks": [
+        "first person and facing mode applied from scratch on server and clients",
+        "client switch glides fully to third person and every peer uses the correct facing mode"
+      ]
+    },
+    "delivered-critters-runtime": {
+      "passed": true
+    },
+    "official-ghost-schema": {
+      "official_ghost_rows": {
+        "2": {
+          "ghostCount": 1,
+          "leverCount": 1,
+          "ghostSpeed": 250,
+          "ghostDamage": 20
+        },
+        "3": {
+          "ghostCount": 1,
+          "leverCount": 1,
+          "ghostSpeed": 250,
+          "ghostDamage": 20
+        },
+        "4": {
+          "ghostCount": 2,
+          "leverCount": 2,
+          "ghostSpeed": 250,
+          "ghostDamage": 20
+        }
+      },
+      "readers_rebuilt_for_official_schema": true
+    }
+  },
+  "changed_asset_sha256": {
+    "Content/Core/BP_CoopCharacter.uasset": "90c6956f9885974724cca2397e3b40ea465aeee22046910c6521cb138c36a621",
+    "Content/Player/AC_PlayerView.uasset": "ef368f5d65aef189cb2a5b61f7d0d8ebf4d1155d2607b137fecfc3ba06b2cf16",
+    "Content/Player/Critters/BP_CaveBat.uasset": "1e5b6a957a873f0bc3ddfffa534f63b038dc9cb5e646ff01b448970d48503bda",
+    "Content/Player/Critters/BP_CaveRat.uasset": "c9b10376270886e15c8485f3b556f0fb71b3f0270e8e5966d077abf97b54c245",
+    "Content/Player/Ghosts/BP_Ghost.uasset": "0f0186663536a56d72b2e7688b81f4bf2c266932dd8608837945eaeaa946741c",
+    "Content/Player/Ghosts/BP_GhostSpawner.uasset": "f72a17d8d332ff62d92d08ed898b2c4447fd10bfcd1fe68c0cd18526f719e663",
+    "Content/Player/L_Site01_PG.umap": "f5c6f91bccb4d3455950a6d67560a9c670c4dc2095c3dc63ab8f7af77074156f",
+    "Content/Puzzles/BP_ChamberGate.uasset": "477b7e189870d0866b7be5c2946f86dd1ede883b8023796568ad78c8a83d595b",
+    "Content/Puzzles/Gauntlet/BP_HCGauntletCoordinator.uasset": "1baece5d46ae44b4f00d978c0a0e959063a3030b191ea4d42d142416addd0ce3"
+  },
+  "reference_pr": 90,
+  "pending": "User route choice; full mission acceptance has not passed."
+}
