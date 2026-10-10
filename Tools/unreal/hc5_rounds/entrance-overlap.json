@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "input_path": "owning-client native IA_Move -> movement RPC/prediction -> ReceiveActorBeginOverlap -> TryEnter -> RequestStart -> GameMode.StartRound",
+  "checks": [
+    {
+      "outside_trigger_before_input": true
+    },
+    {
+      "native_movement_overlap_started_round_once": true,
+      "client_position": "<Struct 'Vector' (0x000001C6D44D6F40) {x: 3720.193918, y: 0.000000, z: 92.150002}>"
+    }
+  ],
+  "final_states": [
+    {
+      "index": 1,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 1,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 1,
+      "phase": "Playing",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    }
+  ]
+}
