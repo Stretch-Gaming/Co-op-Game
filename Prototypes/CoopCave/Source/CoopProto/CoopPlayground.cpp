@@ -1923,6 +1923,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 	// -----------------------------------------------------------------------
 	// The rooms: the fork, both halls and the relic chamber
 	// -----------------------------------------------------------------------
+	const TArray<FPathSpec> Paths = MakePaths();
 	for (int32 RoomIndex = Fork; RoomIndex < RoomCount; ++RoomIndex)
 	{
 		const FRoomSpec& Room = Rooms[RoomIndex];
@@ -1964,6 +1965,30 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 				}
 			}
 		}
+		// Clear routes: each way in to the middle, and the straight line from where each path comes in to where it goes on
+		// (from the door, in the fork)
+		TArray<TPair<FVector2D, FVector2D>> Routes;
+		for (const FVector2D& M : Mouths)
+		{
+			Routes.Add({ M, Middle2D });
+		}
+		auto Inside = [&Room](int32 Col, int32 Row)
+		{
+			return TileCenter(FIntPoint(FMath::Clamp(Col, Room.C0, Room.C1), FMath::Clamp(Row, Room.R0, Room.R1)));
+		};
+		for (const FPathSpec& Spec : Paths)
+		{
+			for (int32 Seg = 0; Seg < Spec.Segments.Num(); ++Seg)
+			{
+				const FWaypoint& First = Spec.Segments[Seg][0];
+				if (SegmentRooms[Seg] == Id)
+				{
+					const FVector2D From = (Seg > 0) ? Inside(Spec.Segments[Seg - 1].Last().Col, Spec.Segments[Seg - 1].Last().Row)
+						: Inside(Rooms[Door].C0, Rooms[Door].R1);
+					Routes.Add({ From, Inside(First.Col, First.Row) });
+				}
+			}
+		}
 		// Statues stand in the halls' corners and against the middle of their north and south walls (the style pass)
 		auto StatueTile = [&](const FIntPoint& T)
 		{
@@ -1973,7 +1998,14 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		{
 			for (const FVector2D& M : Mouths)
 			{
-				if (DistToSegment(P, M, Middle2D) < RouteClear + Radius || FVector2D::Distance(P, M) < 300.f + Radius)
+				if (FVector2D::Distance(P, M) < 300.f + Radius)
+				{
+					return true;
+				}
+			}
+			for (const TPair<FVector2D, FVector2D>& Route : Routes)
+			{
+				if (DistToSegment(P, Route.Key, Route.Value) < RouteClear + Radius)
 				{
 					return true;
 				}
