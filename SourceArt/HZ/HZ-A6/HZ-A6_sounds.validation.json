@@ -1,0 +1,506 @@
+{
+  "task": "HZ-A6: Cave and trap sounds (#57)",
+  "generator": "make_sounds.py (synthesis + CC0 Kenney sources in raw/, see SOURCES.md)",
+  "spec": "WAV 48 kHz 16-bit PCM, mono except the stereo ambience, peak about -3 dBFS, loops seamless",
+  "checked_with": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1"
+  },
+  "all_ok": true,
+  "files": [
+    {
+      "file": "SFX_CaveAmbience_Loop.wav",
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 16,
+      "frames": 1440000,
+      "duration_s": 30.0,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -19.81,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": true,
+      "loop_seam": [
+        {
+          "seam_step": 0.004913,
+          "interior_step_p99_9": 0.053955,
+          "interior_step_max": 0.141327,
+          "seam_step_percentile": 57.66,
+          "seam_window_rms_ratio": 0.77,
+          "seam_window_hf_ratio": 1.087,
+          "ok": true
+        },
+        {
+          "seam_step": 0.003967,
+          "interior_step_p99_9": 0.054199,
+          "interior_step_max": 0.13858,
+          "seam_step_percentile": 49.9,
+          "seam_window_rms_ratio": 0.963,
+          "seam_window_hf_ratio": 1.167,
+          "ok": true
+        }
+      ],
+      "spec_ok": true,
+      "inputs": [],
+      "processing": "Synthesized: rumble, air, wind moan, distant drips and pebbles, circular cave reverb.",
+      "sha256": "673c9a9dd2b91944fed32abbced43bdc76e4b4dd1a54ecd79a4659d2a9809065"
+    },
+    {
+      "file": "SFX_DartLauncher_Arm.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 23434,
+      "duration_s": 0.488,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.8,
+      "rms_dbfs": -27.3,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/beltHandle2.ogg",
+        "raw/kenney_rpg-audio/creak3.ogg"
+      ],
+      "processing": "beltHandle2 as the ratchet, with a +6 dB resonance at 700 Hz for body; creak3 slowed to 0.9x at -12 dB underneath; small room.",
+      "sha256": "5468624dc38cd8985dcf1e88b41f4a54231b7d7502c83ec63a78afa5f8923ab6"
+    },
+    {
+      "file": "SFX_DartLauncher_Fire_01.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 22599,
+      "duration_s": 0.471,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -23.2,
+      "dc_offset": 3.2e-05,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -90.31,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_impact-sounds/impactWood_medium_000.ogg"
+      ],
+      "processing": "impactWood_medium_000 cut to 0.18 s as the mechanism clack; synthesized air puff (band-pass sweeping 3.5 kHz to 1.1 kHz) and a 200 Hz tube \"thoomp\"; small room.",
+      "sha256": "b4f0102a5a0bc838451f3cff63f36e84a58c393f97b4ea11e16c8e4bc36dd9fd"
+    },
+    {
+      "file": "SFX_DartLauncher_Fire_02.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 23003,
+      "duration_s": 0.479,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.95,
+      "rms_dbfs": -22.92,
+      "dc_offset": 2.8e-05,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_impact-sounds/impactWood_medium_003.ogg"
+      ],
+      "processing": "impactWood_medium_003 cut to 0.18 s as the mechanism clack; synthesized air puff (band-pass sweeping 3.5 kHz to 1.1 kHz) and a 170 Hz tube \"thoomp\"; small room.",
+      "sha256": "b87b66113a70dfd29c44aed41b95fbfca70ffd53302b48b7418d1ccbc8e889b2"
+    },
+    {
+      "file": "SFX_Dart_Impact_01.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 31556,
+      "duration_s": 0.657,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.98,
+      "rms_dbfs": -22.28,
+      "dc_offset": 1e-06,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/chop.ogg"
+      ],
+      "processing": "chop cut to 0.24 s as the hit; synthesized shaft quiver at 165 Hz; small room.",
+      "sha256": "92650988a40e61d77cc1387dce5ad7f7a9ec67186c7e6b937011062bf086f32d"
+    },
+    {
+      "file": "SFX_Dart_Impact_02.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 28181,
+      "duration_s": 0.587,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -19.02,
+      "dc_offset": 2.1e-05,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_impact-sounds/impactPlank_medium_001.ogg"
+      ],
+      "processing": "impactPlank_medium_001 cut to 0.35 s as the hit; synthesized shaft quiver at 215 Hz; small room.",
+      "sha256": "57a213382beecdd82fef985513e36df2db02a4d6f656a80f89c6aa174ecf3bb0"
+    },
+    {
+      "file": "SFX_Dart_Impact_03.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 26032,
+      "duration_s": 0.542,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.96,
+      "rms_dbfs": -23.22,
+      "dc_offset": 1.7e-05,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_impact-sounds/impactMining_002.ogg",
+        "raw/kenney_impact-sounds/impactMetal_medium_004.ogg",
+        "raw/kenney_impact-sounds/impactWood_medium_003.ogg"
+      ],
+      "processing": "impactMining_002 low-passed at 3 kHz and cut to 0.25 s; impactMetal_medium_004 at -6 dB; impactWood_medium_003 sped up 1.5x as two bounces at 0.11 s and 0.19 s; small room.",
+      "sha256": "2f4bc214a4968d2ad59f7efcb25d12d9bced4038de3b7cfc758690a1c3aab916"
+    },
+    {
+      "file": "SFX_Dart_Whoosh.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 22158,
+      "duration_s": 0.462,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -20.54,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/knifeSlice2.ogg"
+      ],
+      "processing": "knifeSlice2 shaped by a bell envelope around its loudest point and high-passed at 900 Hz; synthesized flyby (band-pass sweeping up to 3 kHz and back) under it.",
+      "sha256": "e90cd17a6e1fcad831c26ec5ab64d492b89f44c2db37a56462f2af005dccf8f1"
+    },
+    {
+      "file": "SFX_Drip_01.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 48741,
+      "duration_s": 1.015,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.91,
+      "rms_dbfs": -22.87,
+      "dc_offset": 8e-06,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -90.31,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [],
+      "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb.",
+      "sha256": "59c930ae77a208e63c4d190e3c0937dde55637aa5e642dcc8a487ff327f6fe69"
+    },
+    {
+      "file": "SFX_Drip_02.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 54749,
+      "duration_s": 1.141,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.98,
+      "rms_dbfs": -21.8,
+      "dc_offset": 4e-06,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [],
+      "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb.",
+      "sha256": "00e213d740deb1a04dcb1a7cb494501b4431acd3b492de06753afb7d1fcd063d"
+    },
+    {
+      "file": "SFX_Drip_03.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 51513,
+      "duration_s": 1.073,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -3.0,
+      "rms_dbfs": -23.35,
+      "dc_offset": 9e-06,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [],
+      "processing": "Synthesized: rising-pitch drop with a tick, short cave reverb.",
+      "sha256": "b15829f93f272284325e32e6dc247165b536f0be7a4ff6be524f11f7bce6af37"
+    },
+    {
+      "file": "SFX_Spikes_Arm.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 53761,
+      "duration_s": 1.12,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.49,
+      "rms_dbfs": -19.59,
+      "dc_offset": 2e-06,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/metalLatch.ogg",
+        "raw/kenney_sci-fi-sounds/lowFrequency_explosion_001.ogg"
+      ],
+      "processing": "metalLatch as the click; lowFrequency_explosion_001 low-passed at 250 Hz as a knock; synthesized grinding rumble that swells over 0.3 s; small room.",
+      "sha256": "e7f54c0ccc8027f63a728f4c8ff78fabd792f7481e2bb3e0c37fe8f8cd9376d1"
+    },
+    {
+      "file": "SFX_Spikes_Retract.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 61230,
+      "duration_s": 1.276,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.91,
+      "rms_dbfs": -18.73,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/drawKnife2.ogg",
+        "raw/kenney_impact-sounds/impactMining_002.ogg"
+      ],
+      "processing": "drawKnife2 slowed to 0.7x (lower) and high-passed as the slide; synthesized grind sweeping 1.2 kHz to 500 Hz; impactMining_002 low-passed at 900 Hz plus a synthesized thump as the end clunk at 0.62 s.",
+      "sha256": "5a82aed1e37ca95585f9e479fc3657c26ad992da05ef785f7b5f132060f364a4"
+    },
+    {
+      "file": "SFX_Spikes_Rise.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 37423,
+      "duration_s": 0.78,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -25.02,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/drawKnife3.ogg",
+        "raw/kenney_impact-sounds/impactMetal_heavy_001.ogg",
+        "raw/kenney_impact-sounds/impactMining_003.ogg"
+      ],
+      "processing": "drawKnife3 cut to 60 ms before its peak as the scrape; impactMetal_heavy_001 clang and impactMining_003 (low-passed 1.2 kHz) at the peak; synthesized 85-45 Hz thump; small room.",
+      "sha256": "34cf5513cff58ac17b5157cb69b86c6f2fcc05a18981bdb407b5c8b0e0e64da6"
+    },
+    {
+      "file": "SFX_SwingLog_Creak_01.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 47321,
+      "duration_s": 0.986,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.98,
+      "rms_dbfs": -21.0,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/creak1.ogg"
+      ],
+      "processing": "creak1 slowed to 0.82x (lower, heavier) with a 260 Hz body resonance; small room.",
+      "sha256": "76d9382a717b30ca3bd20b461f47e8eeb0a9af20fceb55b0b958b3256a278af2"
+    },
+    {
+      "file": "SFX_SwingLog_Creak_02.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 55331,
+      "duration_s": 1.153,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -23.35,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -90.31,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/creak2.ogg"
+      ],
+      "processing": "creak2 slowed to 0.82x (lower, heavier) with a 260 Hz body resonance; small room.",
+      "sha256": "e998d9bf94c596403dd027950d289acc64d1fd72a9338d88794bf654ddba8d83"
+    },
+    {
+      "file": "SFX_SwingLog_Creak_03.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 32991,
+      "duration_s": 0.687,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.99,
+      "rms_dbfs": -19.42,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/creak3.ogg"
+      ],
+      "processing": "creak3 slowed to 0.75x (lower, heavier) with a 260 Hz body resonance; small room.",
+      "sha256": "45ccb4b42b8fcd1196c21ededadab55800795a3d75fa9849cd5f89e3715f612d"
+    },
+    {
+      "file": "SFX_SwingLog_Whoosh.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 57883,
+      "duration_s": 1.206,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -2.95,
+      "rms_dbfs": -18.81,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": false,
+      "edges": {
+        "first_sample_dbfs": -240.0,
+        "last_sample_dbfs": -240.0,
+        "ok": true
+      },
+      "spec_ok": true,
+      "inputs": [
+        "raw/kenney_rpg-audio/knifeSlice.ogg"
+      ],
+      "processing": "knifeSlice slowed to 0.4x, shaped by a bell around its loudest point and low-passed at 2.5 kHz; synthesized low band-pass sweep (180-630 Hz) and a 55 Hz sub swell.",
+      "sha256": "6508fb36edc1a8e89c833ce9492fb8dc32de3b3e4e0e234d49a4eddf8c5dd06d"
+    },
+    {
+      "file": "SFX_TorchCrackle_Loop.wav",
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "frames": 576000,
+      "duration_s": 12.0,
+      "peak_dbfs": -3.0,
+      "true_peak_dbtp_4x": -1.84,
+      "rms_dbfs": -19.53,
+      "dc_offset": 0.0,
+      "clipped_samples": 0,
+      "loops": true,
+      "loop_seam": [
+        {
+          "seam_step": 0.000763,
+          "interior_step_p99_9": 0.278473,
+          "interior_step_max": 0.969482,
+          "seam_step_percentile": 6.82,
+          "seam_window_rms_ratio": 0.932,
+          "seam_window_hf_ratio": 1.048,
+          "ok": true
+        }
+      ],
+      "spec_ok": true,
+      "inputs": [],
+      "processing": "Synthesized: flickering low roar, gas hiss, clustered crackles and pops, built circularly.",
+      "sha256": "7c9720ae38e0b64d3ba70ff192caef66327bd69999f429bba690a3a958074df7"
+    }
+  ]
+}
