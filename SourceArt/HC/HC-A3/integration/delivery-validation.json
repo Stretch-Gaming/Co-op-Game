@@ -1,0 +1,734 @@
+{
+  "passed": true,
+  "date": "2026-10-10",
+  "branch": "codex/hc-a3-integration",
+  "base": "dcecbab75999f1cc976d847a24912f4246ddbc8e",
+  "scope_checked_against_main": true,
+  "core_lock": "Content/Core/BP_CoopCharacter.uasset; acquired before editor writes",
+  "source_pngs_unchanged": [
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RelicIcon.png",
+      "sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RoundBannerFrame.png",
+      "sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_InteractPromptFrame.png",
+      "sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "lfs_files_verified": 49,
+  "file_count_excludes_this_report": 95,
+  "files": [
+    {
+      "path": "Content/Core/BP_CoopCharacter.uasset",
+      "sha256": "8e4626b30b57b47ab74b1c0ed22624373f7bc0b93bf6f94810eeb8bca3425764",
+      "bytes": 955523,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_InteractBrush.uasset",
+      "sha256": "4247f32304b3f1bfc3d64d4ace4e3b2040a50e0335c9649e5083e4fb8b4ce553",
+      "bytes": 3548,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_RelicBrush.uasset",
+      "sha256": "e8fdadb10be280031349c5cef36d6db48e5d571ae11c40cda15ba595c3d9b5c7",
+      "bytes": 3513,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/DA_HCA3_RoundBrush.uasset",
+      "sha256": "01228c6cce6b0cf877d5b8271228a55755b3c3c79baf71769fb5a0fad706ba7f",
+      "bytes": 3527,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_InteractPromptFrame.uasset",
+      "sha256": "3cdba02c3f0ce1e5d47c5352f04c694f417aa809f9be7c89eafe102fb98f20cf",
+      "bytes": 103267,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_RelicIcon.uasset",
+      "sha256": "fa844d7a11af2b23b0eb68a140e9cdd3ba632c71c1e50abac6b9d8254badf99b",
+      "bytes": 247532,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/Art/HCA3_UI/T_HUD_RoundBannerFrame.uasset",
+      "sha256": "217996940b0ed895597de431284d0f50027477ef025582775a712b9cdaa9bf2d",
+      "bytes": 107441,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/AC_HCA3HUD.uasset",
+      "sha256": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+      "bytes": 173529,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset",
+      "sha256": "0f678dbaf22997224a39fb84e78d1fe0f882d24e12dfe96d8aaff10c695cad57",
+      "bytes": 258202,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "Content/Puzzles/UI/WBP_InteractPrompt.uasset",
+      "sha256": "96422660ff7bc38ae54445294f2d535ff9eddd067ce53cf2521ebba29559f711",
+      "bytes": 425743,
+      "lfs_pointer_matches": true
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/README.md",
+      "sha256": "afc8ad82f49fa1b80c391019c49cee57270044ec17ea0e837ef7e32c283bfe4e",
+      "bytes": 4136
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_InteractPromptFrame.png",
+      "sha256": "3813050f24a3ce1cb0b57b8f2892842c4f9326074a24f3546d7149c11f64257c",
+      "bytes": 83662,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RelicIcon.png",
+      "sha256": "f951444d51dfac80b3321b1f5be89ed1bfb8f4c9b7381ed7c6c0f424637374b1",
+      "bytes": 223929,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/T_HUD_RoundBannerFrame.png",
+      "sha256": "49dbcfc2cb2940c940cc91ac9719de2ddac48a77a0417da4bf42971d0c05c4fd",
+      "bytes": 86529,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/delivery.md",
+      "sha256": "fbd693c5b8ba0a9217e7c7564be76af3620dc3c3d3b266ebb19ef543eefa3bd4",
+      "bytes": 1743
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/generation.json",
+      "sha256": "28c8746b1f0bad3eac2439644921446cb632564c54e304127cb58b7101c45d8a",
+      "bytes": 1031
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/.gitignore",
+      "sha256": "318d9a16533732a69cda7bb7b174ee392fdd15be3d72a114cd8f2d51f3eab510",
+      "bytes": 6
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/README.md",
+      "sha256": "2bf9d86b4350c72fe803fbde1fe85f74d70648dae7d2338af3d75000906f53e3",
+      "bytes": 7169
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-full-1920-playing.png",
+      "sha256": "b1500ea692218050d67814567583ce98f15d4a1c1eed6cd22dece42fcc448c1b",
+      "bytes": 2214171,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1929,
+        1140
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-cleared.png",
+      "sha256": "94b2ee57dce96f67652090a031d0571d2665fdd1213fc9bab1179b1a766638d6",
+      "bytes": 1200255,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1289,
+        780
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-failed.png",
+      "sha256": "cbae7240330875ab8eead8183cb4b5459c0ec365ff2487c39323f5c3f9a6db81",
+      "bytes": 1199055,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1289,
+        780
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1280-playing.png",
+      "sha256": "b555f8e22485d42a6cc5b01682e1b9e54de0726414a8515ea68ddb2e8e04d34b",
+      "bytes": 1197617,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1289,
+        780
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/cave-split-1920-playing.png",
+      "sha256": "06b8b520330abdb6cca6f64f494163dd5edd4903771aae5b8131371252055301",
+      "bytes": 2514012,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1929,
+        1140
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/client-interaction-2.json",
+      "sha256": "5a96e55a083b311ed8a1ebfa160a430b3575b69c53c391bdf4883421c08f9917",
+      "bytes": 781
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/client-interaction-3.json",
+      "sha256": "7bfba6eedb8ba8800104283625d2e4aca75cb6f35e6965432a0c78d5505ed5e5",
+      "bytes": 781
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/client-interaction-4.json",
+      "sha256": "728c1d1d7ec1a9d5bfc7083d3e65d8b38e69a83bd36095bfa68e8fb7f77f42fd",
+      "bytes": 781
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/component-build.json",
+      "sha256": "5b3ce4690e2c8b83365a31e06bde2d2b49d6e9f9c6019bf33146e5201e95b82f",
+      "bytes": 1535
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/final-engine-audit.json",
+      "sha256": "c5de22c19559077bcaebbc675fac73d9b8cd26c23dae0eef1cae47fcde23d8ea",
+      "bytes": 24611
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/final-reopen-save-audit.json",
+      "sha256": "0387fa2f6df7afa92895ad6787dfe3497b4cf192672402088e43f8bdb92141a3",
+      "bytes": 64
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/final-split-screen.json",
+      "sha256": "aac3af78cd2cc18b5f3973b27c2639e66a53bbddcf3888e8d6abac2a4227562d",
+      "bytes": 962
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/hud-build.json",
+      "sha256": "1ec13c805fdcd24458dfea0f50e65657bc2bb7f7a96c997d328fbb7899d32620",
+      "bytes": 4285
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/integration-build.json",
+      "sha256": "dd53543dd2abeb936c8a9c72903c902bdd11365b0d4ddc2d78632c3c988146e5",
+      "bytes": 2484
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/interrupted-regression-2.json",
+      "sha256": "dd315e9dd2eeba485b7bdebb230f135c0581fedbbd0e4ffee3d6af05b5a6dc41",
+      "bytes": 1469
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/main-map-clients.json",
+      "sha256": "68f780f90ca198b27b565d5ac71b2f13d5b42149251ef6412091221ee444f6ff",
+      "bytes": 1011
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/runtime-log-check.json",
+      "sha256": "b4466ff7f55621986142492bb9966c37406f1dc408c4f1140060a55ba16611d5",
+      "bytes": 928
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/save-audit.json",
+      "sha256": "9f104f1ebb7c7f138028988c9561e06285a778ff6756cc8a213b3b200214b20f",
+      "bytes": 491
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/script-validation.json",
+      "sha256": "8c47ed2ce16c0ff9d23a48bf14086a9da16078699180341f57aea953c93eedfa",
+      "bytes": 739
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/split-screen.json",
+      "sha256": "c4f3f8b77300477b84348c5c4ff6181a0b2316b7fa32127aafaa9d46d01192b3",
+      "bytes": 231
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/style-test-1920.png",
+      "sha256": "14a8ef087287af1a47d1ba24f35b7fcef008846af3154d3b7138471ea0e740db",
+      "bytes": 2168674,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1929,
+        1140
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/integration/texture-import.json",
+      "sha256": "08817b72ac66d2a049817d37e52128addf4692146bd0bed477e6da14cd79f110",
+      "bytes": 3044
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/README.md",
+      "sha256": "edb5393871be17d797e38885e2a079005c7b4441fe8d756dce8d24e009ac9641",
+      "bytes": 2671
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/UMG-handoff.md",
+      "sha256": "a8e585064f408094d54a21a28e93d0eeea3f32e9850ecba41d6ff9c7d6c1ffd2",
+      "bytes": 5963
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/delivery.md",
+      "sha256": "b7089482e3bbd9da5a3b3d782090278b3a106711fdaf97d5542c617cf48766e1",
+      "bytes": 1996
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/dimensions.md",
+      "sha256": "e3231cd3e84c5cdcdb463d83d287109abeba061bbf729b54a94716e34dd01db5",
+      "bytes": 1024
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/geometry-and-validation.json",
+      "sha256": "a548d69f367505ecda33ca176b4da40cc4c4656cc90181af582af4f6bab19e0c",
+      "bytes": 120326
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/independent-checks.json",
+      "sha256": "6c6ae212d742152c12c8dd99aaa578dd682c38b3c2a42f1873f2a168588d7c06",
+      "bytes": 360
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/layout-spec.json",
+      "sha256": "1e1e13b5cbf96ba7937157d6e64551036f21d2983c5098a2463b0d216f77972c",
+      "bytes": 960
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_cleared.png",
+      "sha256": "2bfce8ba91abfe2000dafe4099ac42e5ce26dabdd117f9cfc7819a6f81ff06d9",
+      "bytes": 59700,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_failed.png",
+      "sha256": "9ad92d439e65e454f889263db18f8feb94447b016e9571ad67704bceb2cdb156",
+      "bytes": 59556,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_playing.png",
+      "sha256": "0b0d72662cc309c3d6d8d04e6a94482d49be1fb39bde8ef8e7e7edb570226e5d",
+      "bytes": 84188,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_full_timed.png",
+      "sha256": "a9a18de84ea6efc73764c676f7f06fb552d34253aecc175820047e0140520200",
+      "bytes": 88102,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_cleared.png",
+      "sha256": "9ca2b5e8efa9eeb8c69291a9d9b9751b8e30596b2a59a2638c1d92616e5f5c3b",
+      "bytes": 88784,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_failed.png",
+      "sha256": "694f8eb68c20e5b119bc2bede238910475b50a861e7d368887275bb7b398e82a",
+      "bytes": 88680,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_playing.png",
+      "sha256": "f6134f5545442941dd486c628ae825ea3fb77f74491a93a6f89dc3826463ca60",
+      "bytes": 124787,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-horizontal_timed.png",
+      "sha256": "fc8cf75e76e51196b2e758da58817e0343375edecc544b7af41136b8ecbc3489",
+      "bytes": 132221,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_cleared.png",
+      "sha256": "25d97e3328a222bf407d2700dba5b11151bbbbcf10b03fa9f255fbe38ae6d295",
+      "bytes": 65677,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_failed.png",
+      "sha256": "82219d204480856632f6b99bbdc8d808f8d212affc5cfa0c81c7366c21d3d269",
+      "bytes": 65620,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_playing.png",
+      "sha256": "c78c9d3a01e5484188861a473f279ffb6e257e5055639ba2568c2fc5c8646eb2",
+      "bytes": 89307,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1280x720_split-vertical_timed.png",
+      "sha256": "acd6621aea2930b43b5dc76d9351d6c23ab7e413820bbe10161e303cc5203b4f",
+      "bytes": 94981,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_cleared.png",
+      "sha256": "09667a72b800626378cbd7c2b198579ff65776b0b7307d5de10892ee7153ea3d",
+      "bytes": 88482,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_failed.png",
+      "sha256": "b5426c76c07a9aa93454f1451ebfdd9ea9a2941a6688b56a6a0ecbd7f3fe16f1",
+      "bytes": 88143,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_playing.png",
+      "sha256": "afc7acd87b298ba0bbdbd5f4049c6c72a9b18e64afbfcc187e2ab21fa6381dcb",
+      "bytes": 126131,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_full_timed.png",
+      "sha256": "6f747fc221132350a8a7519cf5b89bc73ec4ee3587a35774a36e3208cd0044f6",
+      "bytes": 131693,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_cleared.png",
+      "sha256": "6f9c93d597a6bba65b58480bfd328858f2f1b2fcd54312c972ff926b655d0484",
+      "bytes": 95201,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_failed.png",
+      "sha256": "3bf5aed5c81b6d386ace9641cf33c97fd32bc49901284c6dc484fcc73e29d58d",
+      "bytes": 95190,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_playing.png",
+      "sha256": "043426e807d34cc346803a188fcce1cc2a78ca6f224489b540cf1d2ce4d0dae1",
+      "bytes": 134671,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-horizontal_timed.png",
+      "sha256": "19258343900630df3264548a26052e74b23108e3a55834374d7f1ee307a58841",
+      "bytes": 142070,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_cleared.png",
+      "sha256": "ebdf8bc990bbbd016bac824ed7f152be5270ad1d58c8691c155e2da3f7ffc593",
+      "bytes": 72593,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_failed.png",
+      "sha256": "9001fdecb4e857653cda33e44378e54193ddf5ea14d2d07c058dafde88026438",
+      "bytes": 72557,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_playing.png",
+      "sha256": "4d32ebe1fd550a152cb3d58e66e692ab658b59b237f45a38bfdd721f26821afc",
+      "bytes": 99066,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/previews/1920x1080_split-vertical_timed.png",
+      "sha256": "d01af23d8bf7e3c5169f8df48c774c1a04bf74532e7eaae6379c4fd620429cbd",
+      "bytes": 105067,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/render_layouts.py",
+      "sha256": "f1c47499d2260a3ea2389e8a74a4afb71dd3db8505c6164b04924b557af17938",
+      "bytes": 10693
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/review-board-1280x720.png",
+      "sha256": "5f70cfab26e4bac877f02a3625a03f794c126bb01b1472d64dcd6b40387511e6",
+      "bytes": 222703,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        2560,
+        1285
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/review-board-1920x1080.png",
+      "sha256": "0ebd1a79e75f2ad224eee630f2271b62f38f6fb32170ca41b54a9e393c948704",
+      "bytes": 166124,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        2560,
+        1285
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/verify_layouts.py",
+      "sha256": "0a395b08abb3b139f9fa2932c6f3a8b716942fe0a5edc2ed49af14df3b4982d8",
+      "bytes": 3654
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/layout/visual-review.md",
+      "sha256": "c73075a9cb9a37d6e80f59c12a05686da5588916cd7fe8af0c74f9ab2c6efa12",
+      "bytes": 1320
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/prepare.py",
+      "sha256": "d51bee2b0f00573bde1e7ccfbe6d055d60a92ea1ab91f4e2cf8967fe5ec06b1a",
+      "bytes": 7136
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/preview.png",
+      "sha256": "f5925a193620255aa8d57d0f819e83b477a91040d03d7dbe4bd7f9534059c519",
+      "bytes": 819561,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1200,
+        1350
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/prompts.md",
+      "sha256": "f6df3e88e9e73c6d1ae537dc1d0d989bd9dc30a04e615183ba542581bd2a350d",
+      "bytes": 4507
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_InteractPromptFrame_source.png",
+      "sha256": "10fe3c3a6198476f26212e6f5b39c584a82c7c04aea65fa5a4469f539fba2557",
+      "bytes": 477122,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_RelicIcon_source.png",
+      "sha256": "3dc1f721dac395943825c0dfabe0b75a3c04554d8d182b0b5aa444b9e48ca382",
+      "bytes": 1239047,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/sources/T_HUD_RoundBannerFrame_source.png",
+      "sha256": "5cd96141f383a7d48757b515771db5fc053cfe12c51baea02ea7e1d707dda6b4",
+      "bytes": 490226,
+      "lfs_pointer_matches": true,
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/validation.json",
+      "sha256": "56c13b8a25c42d8d08ddda8a902bc087054e23b63af735e47ff100fe1665874a",
+      "bytes": 2362
+    },
+    {
+      "path": "SourceArt/HC/HC-A3/visual-review.md",
+      "sha256": "807b3b91e2a36067ddea5c5f3e78b03f6e9a022d8dd7843d73e8c929326f9c38",
+      "bytes": 1068
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/README.md",
+      "sha256": "83b9e1d7b98fc5b35e0e2ded4bb12d2370000db40c3d2dd8a538ad766474a8c2",
+      "bytes": 6031
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/build_component.py",
+      "sha256": "144961c3dcbdc652859ff1fc21b21f7867bc81d24ee0d31501f7e129b25c7716",
+      "bytes": 6484
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/build_hud.py",
+      "sha256": "c1df52809974ae39cd61c4e002550164c299d947290f1d4aabdc5844d9a13b70",
+      "bytes": 6522
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/check_interaction_hud.py",
+      "sha256": "e1b332dd4f4c2de3b5f702461dd4cd2b981473df471ac6bfc8b28c28bfa67f8a",
+      "bytes": 10111
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/dry-run.json",
+      "sha256": "5e8ca7f4f514d95358e707fc503c9a20c80002c6ca023df544a6141c0f2d8056",
+      "bytes": 1948
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/execute_import.py",
+      "sha256": "a416297bdb432315b9e2ede055244919431c9c26e55bc46655c328c895257965",
+      "bytes": 1478
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/import_hud.py",
+      "sha256": "dc863227f6234b8eb4b74cc9173a81c20ccec9dd3eff0720ecd7ade4ff55fc54",
+      "bytes": 9858
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/integrate_hud.py",
+      "sha256": "ab3211a406ef2c4fac34ec011238996b1b721160fe2ef4704629807aa78bafae",
+      "bytes": 7407
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/manifest.json",
+      "sha256": "410db1a6a5f0d4d08ac9230b2300d19ea68c161c3d92a8b38466bb389959c243",
+      "bytes": 1842
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/test-results.json",
+      "sha256": "1a96e86fc4e1122ba9ea2ae7347676a503f4f14c17813be417c213180d9ab142",
+      "bytes": 184
+    },
+    {
+      "path": "Tools/unreal/hc_a3_import/test_import_hud.py",
+      "sha256": "296bd2da8a84f5db5f32a53b6e16ee340648b70d8b25bb0626440af990b21af3",
+      "bytes": 7823
+    }
+  ],
+  "hash_basis": "Hydrated payload for LFS media; canonical Git blob bytes for text (stable across checkout line endings)."
+}

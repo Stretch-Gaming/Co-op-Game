@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "component": "/Game/Puzzles/UI/HCA3/AC_HCA3HUD.AC_HCA3HUD",
+  "compile": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "attached_to_core": false,
+  "owning_pawn_and_controller_only": true,
+  "graphs": {
+    "RefreshHUD": "(fn RefreshHUD ()\n  (bind _aspawn (Utilities|Casting|CastToPawn (Components|GetOwner))\n    (:then\n      (if (Pawn|IsLocallyControlled _aspawn)\n        (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Pawn|GetController _aspawn))\n          (:then\n            (if (Utilities|NotEqual(Object) _asplayer_controller (Variables|Default|GetHUDController))\n              (CallFunction|ClearHUD)\n              (CallFunction|EnsureHUD _asplayer_controller)\n              (else\n                (CallFunction|EnsureHUD _asplayer_controller))))\n          (:CastFailed\n            (CallFunction|ClearHUD)))\n        (else\n          (CallFunction|ClearHUD))))\n    (:CastFailed\n      (CallFunction|ClearHUD))))\n",
+    "ClearHUD": "(fn ClearHUD ()\n  (Utilities|IsValid (Variables|Default|GetHUDWidget)\n    (:\"Is Valid\"\n      (Widget|RemoveFromParent (Variables|Default|GetHUDWidget))\n      (Variables|Default|SetHUDWidget 0)\n      (Variables|Default|SetHUDController 0))\n    (:\"Is Not Valid\"\n      (Variables|Default|SetHUDWidget 0)\n      (Variables|Default|SetHUDController 0))))\n",
+    "EventGraph": "(event EventBeginPlay\n  (CallFunction|StartHUD))\n\n(event EventTick (DeltaSeconds))\n\n(event EventEndPlay (EndPlayReason)\n  (CallFunction|StopHUD))\n"
+  }
+}

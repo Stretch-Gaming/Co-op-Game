@@ -30,4 +30,4 @@ Renderer writes only here. The importer default prints a proposed plan and perfo
 
 Evidence: `geometry-and-validation.json` gives every player's viewport, scale, square brush rect, visible bounds, text bounds and preview hashes; `independent-checks.json` cross-checks native PNGs, source hashes, margins, states and alpha decoding against Pillow; the importer folder has its 15-test guard report.
 
-The offline gate passes. Actual texture import, UMG construction, DPI behavior, client ownership, network timing and in-game split-screen checks remain pending. Issue #20 stays open. The PR must target `codex/hc-a3-hud-art` while #68 is unmerged.
+The offline gate passed in PR #72, targeting `codex/hc-a3-hud-art` while #68 was unmerged. The completed engine delivery and actual runtime layout are recorded in [../integration/README.md](../integration/README.md). Offline geometry remains a handoff reference; the engine implementation uses its own per-player geometry and DPI calculation.

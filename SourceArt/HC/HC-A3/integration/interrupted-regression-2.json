@@ -1,0 +1,34 @@
+{
+  "ok": false,
+  "clients": 2,
+  "checks": [
+    {
+      "hca3_owned_hud_instances": 2,
+      "hca3_controller_binding": true
+    },
+    {
+      "per_player_input_ready": 2,
+      "widgets_have_owning_controller": true,
+      "focus_trace_found_instant": true
+    },
+    {
+      "instant_rpc_and_replication": true
+    },
+    {
+      "short_hold_cannot_complete": true
+    },
+    {
+      "full_server_timed_hold_and_replication": true
+    },
+    {
+      "continuous_begin_end_replicated": true
+    },
+    {
+      "out_of_range_cancels_continuous_use": true
+    },
+    {
+      "can_interact_becoming_false_cancels_use": true
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/Tools/unreal/hc_a3_import/check_interaction_hud.py\", line 140, in tick\n    action('PressInteract');stage=15;next_check=now+1.5\n    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc-a3-layout-prep/Co op Game/Tools/unreal/hc_a3_import/check_interaction_hud.py\", line 18, in action\n    unreal.SystemLibrary.set_timer(pawn,name,0.02,False)\nTypeError: SystemLibrary: Failed to convert parameter 'object' when calling function 'KismetSystemLibrary.K2_SetTimer' on 'Default__KismetSystemLibrary'\n  TypeError: NativizeProperty: Cannot nativize 'Character' as 'Object' (ObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'Character' as 'Object' (allowed Class type: 'Object')\n"
+}

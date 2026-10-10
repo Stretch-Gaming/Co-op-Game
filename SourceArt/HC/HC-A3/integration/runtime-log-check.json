@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "logs": [
+    {
+      "path": "Saved/Logs/CoopGame-backup-2026.10.10-07.07.51.log",
+      "sha256": "9741fad89cd9c704422215f8f567e326370dd1a03dd7fc453b30ee262de9049a",
+      "checks": {
+        "Accessed None": 0,
+        "Blueprint Runtime Error": 0,
+        "HC1_ACCEPTANCE_2_COMPLETE: True": 1,
+        "HC1_ACCEPTANCE_3_COMPLETE: True": 1,
+        "HC1_ACCEPTANCE_4_COMPLETE: True": 1
+      }
+    },
+    {
+      "path": "Saved/Logs/CoopGame.log",
+      "sha256": "463045664f90156db2768775d3569ea98bc1098fb52595af6b7c6ee005537a60",
+      "checks": {
+        "Accessed None": 0,
+        "Blueprint Runtime Error": 0,
+        "HC1_ACCEPTANCE_2_COMPLETE: True": 1,
+        "HC1_ACCEPTANCE_3_COMPLETE: True": 0,
+        "HC1_ACCEPTANCE_4_COMPLETE: True": 0
+      }
+    }
+  ],
+  "scope": "Full isolated integration editor sessions; Python authoring diagnostics are distinct from runtime Blueprint errors."
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "character_compile": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "prompt_compile": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "protected_character_graphs_unchanged": [
+    "UserConstructionScript",
+    "GetCarried",
+    "ReleaseCarried",
+    "UseAllowed",
+    "BeginUse",
+    "CancelUse",
+    "ValidateUse",
+    "CompleteTimedUse",
+    "RefreshFocus",
+    "PressInteract",
+    "ReleaseInteract",
+    "RemoveLocalInput",
+    "ConfirmLocalUse",
+    "EndLocalUse",
+    "ServerNow",
+    "SetInteractionBlocked",
+    "HC1BeginPlay",
+    "HC1ControllerChanged",
+    "HC1EndPlay",
+    "ClearOwnedInputMaps",
+    "ClearOwnedPrompt",
+    "EventGraph"
+  ],
+  "update_prompt_contract_unchanged": true,
+  "component": "/Game/Puzzles/UI/HCA3/AC_HCA3HUD.AC_HCA3HUD",
+  "prompt_paint": "(fn OnPaint (Context)\n  (bind _returnvalue 1.0)\n  (bind _returnvalue_1 (Viewport|GetViewportScale))\n  (bind _returnvalue_2 (Math|Float|Max(Float) _returnvalue_1 0.01))\n  (bind _returnvalue_3 (/ _returnvalue _returnvalue_2))\n  (if (Variables|Default|GetShowPrompt)\n    (Painting|DrawBox Context (Math|Vector2D|MakeVector2D (* 15.0 _returnvalue_3) (* -87.0 _returnvalue_3)) (Math|Vector2D|MakeVector2D (* 300.0 _returnvalue_3) (* 300.0 _returnvalue_3)) \"/Game/Puzzles/Art/HCA3_UI/DA_HCA3_InteractBrush.DA_HCA3_InteractBrush\")\n    (Painting|DrawText Context (Variables|Default|GetPrompt) (Math|Vector2D|MakeVector2D (* 42.0 _returnvalue_3) (* 44.0 _returnvalue_3)) \"/Engine/EngineFonts/Roboto.Roboto\" (* 18.0 _returnvalue_3) \"Regular\" \"(R=0.93,G=0.82,B=0.55,A=1)\")\n    (Painting|DrawText Context (Utilities|Text|ToText(String) (select (Variables|Default|GetShowProgress) \"Hold E / A\" \"E / A\")) (Math|Vector2D|MakeVector2D (* 42.0 _returnvalue_3) (* 73.0 _returnvalue_3)) \"/Engine/EngineFonts/Roboto.Roboto\" (* 16.0 _returnvalue_3) \"Regular\" \"(R=0.93,G=0.82,B=0.55,A=1)\")\n    (if (Variables|Default|GetShowProgress)\n      (Painting|DrawLine Context (Math|Vector2D|MakeVector2D (* 36.0 _returnvalue_3) (* 139.0 _returnvalue_3)) (Math|Vector2D|MakeVector2D (* 294.0 _returnvalue_3) (* 139.0 _returnvalue_3)) \"(R=0.012,G=0.018,B=0.033,A=1)\" true (* 6.0 _returnvalue_3))\n      (Painting|DrawLine Context (Math|Vector2D|MakeVector2D (* 36.0 _returnvalue_3) (* 139.0 _returnvalue_3)) (Math|Vector2D|MakeVector2D (* (+ 36.0 (* 258.0 (Variables|Default|GetProgress))) _returnvalue_3) (* 139.0 _returnvalue_3)) \"(R=0.05,G=0.63,B=0.59,A=1)\" true (* 6.0 _returnvalue_3)))))\n"
+}
