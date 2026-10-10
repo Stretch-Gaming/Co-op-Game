@@ -48,3 +48,5 @@ SourceArt/HC/MazeIntegration/scene.json.gz filter=lfs diff=lfs merge=lfs -text
 SourceArt/HC/EnvironmentConnection/connection.json.gz filter=lfs diff=lfs merge=lfs -text
 
 SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb/*.json.gz filter=lfs diff=lfs merge=lfs -text
+
+Tools/quality/performance/evidence/*.csv text eol=lf

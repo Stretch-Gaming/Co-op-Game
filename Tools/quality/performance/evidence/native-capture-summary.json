@@ -1,0 +1,138 @@
+{
+  "status": "native_capture_completed_with_shared_gpu_limits",
+  "asset_baseline": "9dc0fabd6a467444049cec0ed8ee2763c11acfa6",
+  "method": "Actual UE CSV timers, one-player editor/PIE. Each capture follows30s warmup and recordsabout30s. No GPU/CPU times summed.",
+  "viewport_pixels": [
+    3056,
+    1833
+  ],
+  "rhi": "D3D11",
+  "raytracing": false,
+  "user_preview_left_open": true,
+  "other_adventure_editor_closed": true,
+  "captures": {
+    "room": {
+      "source_filename": "connected-preview-native-20261010-234720.csv",
+      "source_sha256": "3dd78e4514250de399bee7293c00060188f2e2959c68c7d1a98ccb36721c175c",
+      "published_metric_rows_sha256": "c75c396e5f5c0ed48c229fc7bab836d2baf415a2f6f005faad0219766657714d",
+      "source_metadata_published": false,
+      "native_capture_seconds": 29.977961,
+      "samples": 912,
+      "metrics": {
+        "GameThreadTime": {
+          "samples": 912,
+          "avg_ms": 5.173461074561404,
+          "p50_ms": 5.0244,
+          "p95_ms": 6.162424999999997,
+          "max_ms": 30.6986
+        },
+        "RenderThreadTime": {
+          "samples": 912,
+          "avg_ms": 0.0008455043859649123,
+          "p50_ms": 0.0008,
+          "p95_ms": 0.001,
+          "max_ms": 0.0407
+        },
+        "GPUTime": {
+          "samples": 912,
+          "avg_ms": 32.895094078947366,
+          "p50_ms": 32.2673,
+          "p95_ms": 47.90038999999999,
+          "max_ms": 66.6061
+        },
+        "FrameTime": {
+          "samples": 912,
+          "avg_ms": 32.90275010964912,
+          "p50_ms": 32.0084,
+          "p95_ms": 48.76252999999999,
+          "max_ms": 66.6066
+        }
+      },
+      "position_before_warmup": [
+        250.0,
+        600.0,
+        92.15000144738809
+      ],
+      "position_after_capture": [
+        250.0,
+        600.0,
+        92.15000144738809
+      ],
+      "control_rotation_before_warmup": [
+        0.0,
+        89.99999999999999,
+        0.0
+      ],
+      "viewport_size": [
+        3056,
+        1833
+      ],
+      "context": "Single local player, fixed initial spawn view, editor/PIE; user standalone preview stays open; D3D11/raytracing off; no other adventure editor or GPU QA."
+    },
+    "maze": {
+      "source_filename": "connected-preview-native-20261010-234856.csv",
+      "source_sha256": "72c7d0588467bd221dc59218c8d3e5c9af2ceb8effce4cfb42bf69fb72dea363",
+      "published_metric_rows_sha256": "6f3ee79fe75df56b97ab102bf48c88d15db71c1b3bb99b9ba56768dfa17afe50",
+      "source_metadata_published": false,
+      "native_capture_seconds": 29.956746,
+      "samples": 893,
+      "metrics": {
+        "GameThreadTime": {
+          "samples": 893,
+          "avg_ms": 5.046097872340425,
+          "p50_ms": 4.9074,
+          "p95_ms": 5.97136,
+          "max_ms": 30.467
+        },
+        "RenderThreadTime": {
+          "samples": 893,
+          "avg_ms": 0.0009227323628219486,
+          "p50_ms": 0.0008,
+          "p95_ms": 0.001,
+          "max_ms": 0.0588
+        },
+        "GPUTime": {
+          "samples": 893,
+          "avg_ms": 33.586523516237406,
+          "p50_ms": 33.6773,
+          "p95_ms": 49.881099999999996,
+          "max_ms": 72.7419
+        },
+        "FrameTime": {
+          "samples": 893,
+          "avg_ms": 33.59357458006719,
+          "p50_ms": 33.7527,
+          "p95_ms": 48.80067999999999,
+          "max_ms": 67.4221
+        }
+      },
+      "position_before_warmup": [
+        325.0,
+        3600.0,
+        92.27500200271606
+      ],
+      "position_after_capture": [
+        325.0,
+        3600.0,
+        92.27500200271606
+      ],
+      "control_rotation_before_warmup": [
+        0.0,
+        89.99999999999999,
+        0.0
+      ],
+      "viewport_size": [
+        3056,
+        1833
+      ],
+      "context": "Fixed maze-fork test pawn at325,3600,100 facingnorth; single-player editor/PIE with user standalone preview left open; sameD3D11/viewport/settings asroomcapture. Fixtureonly, no interaction or scenery edits."
+    }
+  },
+  "limits": [
+    "Large editor/PIE viewport with another standalone game running: not isolated standalone game performance.",
+    "Near-zero RenderThreadTime is not proof that render submission is free or that a separate render-thread timer is useful in this configuration.",
+    "GPU time/frame pacing/shared load deserves targeted comparison; no light/mesh/collision bottleneck proved."
+  ],
+  "optimizations_applied": false,
+  "assets_or_project_settings_changed": false
+}
