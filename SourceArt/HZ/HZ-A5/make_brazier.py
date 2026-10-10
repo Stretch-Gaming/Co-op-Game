@@ -64,11 +64,7 @@ bm.to_mesh(cut_mesh)
 bm.free()
 cutter = bpy.data.objects.new("Triangles", cut_mesh)
 bpy.context.collection.objects.link(cutter)
-mod = stand.modifiers.new("Carve", "BOOLEAN")
-mod.operation, mod.solver, mod.object = "DIFFERENCE", "EXACT", cutter
-hz.activate(stand)
-bpy.ops.object.modifier_apply(modifier=mod.name)
-bpy.data.objects.remove(cutter, do_unlink=True)
+kit.boolean(stand, cutter)
 for o in (foot, stand):
     o.data.materials.clear()
     o.data.materials.append(stone)

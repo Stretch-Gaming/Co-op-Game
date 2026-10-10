@@ -87,16 +87,6 @@ def chevron_cutter(w, z, depth=0.08, size=0.46, stroke=0.11):
     return obj
 
 
-def carve(target, cutter):
-    mod = target.modifiers.new("Carve", "BOOLEAN")
-    mod.operation = "DIFFERENCE"
-    mod.solver = "EXACT"
-    mod.object = cutter
-    hz.activate(target)
-    bpy.ops.object.modifier_apply(modifier=mod.name)
-    bpy.data.objects.remove(cutter, do_unlink=True)
-
-
 # Heights from the floor up: big shapes first, then the bands and carvings.
 parts = []
 z = 0.0
@@ -114,23 +104,17 @@ for name, w, h, extra in [
 ]:
     b = block(name, w, h, z, **extra)
     if name == "Chevrons":
-        carve(b, chevron_cutter(w, z + h / 2))
+        kit.boolean(b, chevron_cutter(w, z + h / 2))
         hz.smooth(b, 35)
     parts.append(b)
     z += h
 
 for b in parts:
-    b.data.materials.clear()  # the boolean can leave an empty slot behind
+    b.data.materials.clear()
     b.data.materials.append(stone)
 pillar = kit.join(parts, "SM_EgyptPillar")
 kit.sit_on_floor(pillar)
 hz.apply_transforms(pillar)
 
-# The kit's preview lights sit below 4 m, which leaves a 6 m pillar's top unlit. Add a neutral top
-# light above it, like the kit's own, for the preview only.
-top = bpy.data.objects.new("Top_Tall", bpy.data.lights.new("Top_Tall", "AREA"))
-top.data.energy, top.data.size = 250, 4.0
-top.location = (0, 0, 8.5)
-bpy.context.scene.collection.objects.link(top)
 kit.preview_sheet([pillar], os.path.join(HERE, "SM_EgyptPillar_preview.png"), title="SM_EgyptPillar")
 hz.export(pillar, OUT)
