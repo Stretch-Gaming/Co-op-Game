@@ -1,0 +1,117 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol",
+      "reimport_sources": [
+        "C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game/SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx"
+      ],
+      "source_nanite_triangles_match": true,
+      "base_center_pivot_confirmed": true,
+      "box_center_cm": [
+        4.76837158203125e-07,
+        0.0,
+        12.499999046325684
+      ],
+      "box_dimensions_cm": [
+        22.14181137084961,
+        22.757062911987305,
+        24.999998092651367
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask",
+      "reimport_sources": [
+        "C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game/SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx"
+      ],
+      "source_nanite_triangles_match": true,
+      "base_center_pivot_confirmed": true,
+      "box_center_cm": [
+        0.0,
+        0.0,
+        11.0
+      ],
+      "box_dimensions_cm": [
+        9.816781044006348,
+        17.734485626220703,
+        22.0
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab",
+      "reimport_sources": [
+        "C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game/SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx"
+      ],
+      "source_nanite_triangles_match": true,
+      "base_center_pivot_confirmed": true,
+      "box_center_cm": [
+        0.0,
+        -4.76837158203125e-07,
+        3.5468292236328125
+      ],
+      "box_dimensions_cm": [
+        18.0,
+        16.300392150878906,
+        7.093658447265625
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart",
+      "reimport_sources": [
+        "C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game/SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx"
+      ],
+      "source_nanite_triangles_match": true,
+      "base_center_pivot_confirmed": true,
+      "box_center_cm": [
+        0.0,
+        0.0,
+        31.00000023841858
+      ],
+      "box_dimensions_cm": [
+        34.526432037353516,
+        60.5488395690918,
+        62.400001525878906
+      ]
+    }
+  ],
+  "dependencies": {
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol": [
+      "/Script/NavigationSystem",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask": [
+      "/Script/NavigationSystem",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab": [
+      "/Script/NavigationSystem",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart": [
+      "/Script/NavigationSystem",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold",
+      "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan": [
+      "/Game/Shared/Style/M_Stylized"
+    ]
+  },
+  "master_unchanged": true
+}
