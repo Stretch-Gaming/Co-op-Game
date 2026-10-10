@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "reason": "editor Background Worker #4 access violation immediately after BP_CoopCharacter compile during PIE; no completed HC-1 regression claimed",
+  "log_sha256": "ee94de8689b41496ad9c4f964d98b4cd383ce2bc2add5e90c9054a8b753e8c45",
+  "time": "2026-10-10 12:40:33 UTC",
+  "core_assets_previously_saved": true
+}

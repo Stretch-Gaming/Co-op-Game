@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "clients": 4,
+  "checks": [
+    {
+      "preserved_hc1_markers": 3,
+      "reviewed_art_actors": 11,
+      "single_carrying_component": true,
+      "owned_hud_and_colors": 4
+    },
+    {
+      "actual_client_movement_cm": [
+        299.7038124234922,
+        299.7038124234919,
+        254.24824973986114,
+        299.83802254351474
+      ],
+      "floor_support": true
+    }
+  ],
+  "map": "L_Site01",
+  "placements_authored": false
+}

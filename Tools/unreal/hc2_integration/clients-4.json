@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "clients": 4,
+  "checks": [
+    {
+      "initial_available_value": 15,
+      "min_players_replicated": true,
+      "unique_colors": 4,
+      "owning_huds": 4
+    },
+    {
+      "client_pickup_value_2_replicated": true,
+      "hidden_collision_off_every_world": true
+    },
+    {
+      "simultaneous_two_client_pickup_added_value_5_once": true,
+      "unreliable_cosmetic_sound_event_each_world_once": true
+    },
+    {
+      "repeat_press_no_double_collection": true
+    },
+    {
+      "remote_host_debug_input_rejected": true
+    }
+  ],
+  "action_path": "EnhancedInputLocalPlayerSubsystem.inject_input_vector_for_action -> IA_Interact Started/Completed -> reliable character RPC",
+  "final_totals": [
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      15
+    ]
+  ]
+}

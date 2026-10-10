@@ -1,0 +1,1 @@
+{"passed": true, "AlwaysRelevant": true, "reason": "hidden collision-disabled StaticMeshActor otherwise fails relevance for fresh client worlds"}
