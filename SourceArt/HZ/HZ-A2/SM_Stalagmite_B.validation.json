@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A2/SM_Stalagmite_B.glb",
+  "output": "SourceArt/HZ/HZ-A2/SM_Stalagmite_B.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 2876,
+  "triangles_after": 2876,
+  "dimensions_cm": [
+    112.0647,
+    99.8137,
+    226.7733
+  ],
+  "bounds_min_cm": [
+    -56.03234,
+    -49.90685,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

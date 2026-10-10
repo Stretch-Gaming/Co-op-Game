@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HZ-A2/SM_CrystalCluster.glb",
+  "output": "SourceArt/HZ/HZ-A2/SM_CrystalCluster.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1760,
+  "triangles_after": 1760,
+  "dimensions_cm": [
+    62.861,
+    54.8451,
+    78.4549
+  ],
+  "bounds_min_cm": [
+    -31.43049,
+    -27.42256,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
