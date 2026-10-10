@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A2/SM_ChamberGate_Frame.glb",
+  "output": "SourceArt/HC/HC-A2/SM_ChamberGate_Frame.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 8594,
+  "triangles_after": 8594,
+  "dimensions_cm": [
+    156.0,
+    708.8224,
+    511.2001
+  ],
+  "bounds_min_cm": [
+    -78.0,
+    -354.4112,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

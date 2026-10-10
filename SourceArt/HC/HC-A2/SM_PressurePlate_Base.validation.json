@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A2/SM_PressurePlate_Base.glb",
+  "output": "SourceArt/HC/HC-A2/SM_PressurePlate_Base.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1852,
+  "triangles_after": 1852,
+  "dimensions_cm": [
+    200.0,
+    200.0,
+    11.1891
+  ],
+  "bounds_min_cm": [
+    -100.0,
+    -100.0,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
