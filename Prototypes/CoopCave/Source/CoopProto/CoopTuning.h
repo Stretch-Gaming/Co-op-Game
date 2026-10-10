@@ -26,6 +26,10 @@ namespace CoopTuning
 	float BoostForward();     // coop.Boost.Forward   cm/s forward
 	float BoostRange();       // coop.Boost.Range     cm, how close you must be
 
+	// Maze co-op moments
+	float MazeLiftSpeed();    // coop.Maze.LiftSpeed  cm/s, the winch lift on path 2
+	float MazeGateSpeed();    // coop.Maze.GateSpeed  cm/s, the gate in path 4's dip
+
 	// Rope
 	bool  TetherEnabled();    // coop.Tether          1 = tie the players together (takes effect on the next Play)
 	float RopeMaxLength();    // coop.Rope.MaxLength  cm

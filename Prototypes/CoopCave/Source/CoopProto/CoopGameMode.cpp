@@ -155,7 +155,7 @@ void ACoopGameMode::ShowControls() const
 	const float Seconds = 30.f;
 	const FColor Color = FColor::White;
 	GEngine->AddOnScreenDebugMessage(-1, Seconds, FColor::Cyan, TEXT("Tune live: press ` (left of 1), type coop. and press Tab (lighting is coop.Cave.*)"));
-	GEngine->AddOnScreenDebugMessage(-1, Seconds, FColor::Cyan, TEXT("Keys: 1-5 jump to a spot in the cave, 6-9 to the maze, V switch camera, C switch P2's camera"));
+	GEngine->AddOnScreenDebugMessage(-1, Seconds, FColor::Cyan, TEXT("Keys: 1-5 jump to a spot in the cave, 6-9 to the maze, = / - next / previous spot (10-13: the maze's co-op moments), V switch camera, C switch P2's camera"));
 	GEngine->AddOnScreenDebugMessage(-1, Seconds, FColor::Cyan, TEXT("THE CAVE - D-pad: left/right travel, down reset, up switch camera (first person / over-the-shoulder)"));
 	GEngine->AddOnScreenDebugMessage(-1, Seconds, Color, TEXT("Solo test - P2 from keyboard: Arrows move, / jump, Right Shift brace, Comma/Period turn"));
 	GEngine->AddOnScreenDebugMessage(-1, Seconds, Color, TEXT("Gamepad: Left stick move, Right stick look, A/Cross jump, LT brace (your partner jumps beside you to boost)"));
