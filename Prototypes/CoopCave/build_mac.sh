@@ -45,4 +45,4 @@ if ! is_engine "$UE_ROOT"; then
 fi
 
 echo "Using Unreal Engine at: $UE_ROOT"
-bash "$UE_ROOT/Engine/Build/BatchFiles/Mac/Build.sh" CoopProtoEditor Mac Development -project="$PROJECT" -waitmutex
+bash "$UE_ROOT/Engine/Build/BatchFiles/Mac/Build.sh" CoopProtoEditor Mac Development -project="$PROJECT" -waitmutex -NoHotReload

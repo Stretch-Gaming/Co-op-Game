@@ -56,6 +56,7 @@ namespace CoopTuning
 	float CaveAmbient();      // coop.Cave.Ambient       cool fill light in the shadows
 	float CaveExposure();     // coop.Cave.Exposure      camera exposure, in stops (+1 = twice as bright)
 	float CaveFog();          // coop.Cave.Fog           haze density near the floor
+	float LightDrawDistance();// coop.Cave.LightDistance cm from the camera where torch and crystal lights stop drawing, 0 = never
 
 	// Look
 	float StickYawRate();     // coop.Look.StickYaw    degrees/s at full stick
