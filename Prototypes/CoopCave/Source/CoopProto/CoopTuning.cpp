@@ -46,6 +46,7 @@ namespace CoopTuningVars
 	static TAutoConsoleVariable<float> CVarAmbient(TEXT("coop.Cave.Ambient"), 0.55f, TEXT("Cool fill light in the shadows (sky light intensity)."));
 	static TAutoConsoleVariable<float> CVarExposure(TEXT("coop.Cave.Exposure"), 0.f, TEXT("Camera exposure in stops: +1 = twice as bright, -1 = half."));
 	static TAutoConsoleVariable<float> CVarFog(TEXT("coop.Cave.Fog"), 0.08f, TEXT("Haze density near the floor."));
+	static TAutoConsoleVariable<float> CVarLightDistance(TEXT("coop.Cave.LightDistance"), 5000.f, TEXT("Torch and crystal lights farther than this from the camera (cm) stop drawing, fading out over the last quarter. 0 = always draw."));
 
 	// Look
 	static TAutoConsoleVariable<float> CVarStickYaw(TEXT("coop.Look.StickYaw"), 170.f, TEXT("Right-stick turn speed, degrees/s."));
@@ -90,6 +91,7 @@ float CoopTuning::CrystalBrightness(){ return CoopTuningVars::CVarCrystal.GetVal
 float CoopTuning::CaveAmbient()      { return CoopTuningVars::CVarAmbient.GetValueOnGameThread(); }
 float CoopTuning::CaveExposure()     { return CoopTuningVars::CVarExposure.GetValueOnGameThread(); }
 float CoopTuning::CaveFog()          { return CoopTuningVars::CVarFog.GetValueOnGameThread(); }
+float CoopTuning::LightDrawDistance(){ return CoopTuningVars::CVarLightDistance.GetValueOnGameThread(); }
 
 float CoopTuning::StickYawRate()     { return CoopTuningVars::CVarStickYaw.GetValueOnGameThread(); }
 float CoopTuning::StickPitchRate()   { return CoopTuningVars::CVarStickPitch.GetValueOnGameThread(); }
