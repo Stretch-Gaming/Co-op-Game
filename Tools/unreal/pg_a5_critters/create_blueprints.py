@@ -1,6 +1,6 @@
-"""PG-A5: create BP_CaveBat and BP_CaveMouse in /Game/Player/Critters with their components.
+"""PG-A5: create BP_CaveBat and BP_CaveRat in /Game/Player/Critters with their components.
 Their tick graphs and variables are added through Unreal MCP afterwards (see README.md).
-Run in the editor with `py <this file>`. Refuses to overwrite existing Blueprints."""
+Run in the editor with `py <this file>`. Skips a Blueprint that already exists."""
 import json
 import traceback
 from pathlib import Path
@@ -16,7 +16,7 @@ lib = unreal.SubobjectDataBlueprintFunctionLibrary
 def create_bp(name):
     path = f"{FOLDER}/{name}"
     if unreal.EditorAssetLibrary.does_asset_exist(path):
-        raise RuntimeError(f"{path} already exists")
+        return None
     factory = unreal.BlueprintFactory()
     factory.set_editor_property("parent_class", unreal.Actor)
     return unreal.AssetToolsHelpers.get_asset_tools().create_asset(name, FOLDER, unreal.Blueprint, factory)
@@ -43,6 +43,8 @@ def mesh_comp(comp, mesh_path, location=(0, 0, 0), scale=(1, 1, 1)):
 
 def bat():
     bp = create_bp("BP_CaveBat")
+    if bp is None:
+        return None
     root = sub.k2_gather_subobject_data_for_blueprint(bp)[0]
     # Bat: the point that orbits. The body's Blender origin sits on it, 1.5 cm behind and
     # 4.1 cm above the mesh's base-center pivot.
@@ -59,16 +61,18 @@ def bat():
     return bp
 
 
-def mouse():
-    bp = create_bp("BP_CaveMouse")
+def rat():
+    bp = create_bp("BP_CaveRat")
+    if bp is None:
+        return None
     root = sub.k2_gather_subobject_data_for_blueprint(bp)[0]
-    _, m = add(bp, root, unreal.StaticMeshComponent, "Mouse")
-    mesh_comp(m, "/Game/Player/Art/SM_Mouse")
+    _, m = add(bp, root, unreal.StaticMeshComponent, "Rat")
+    mesh_comp(m, "/Game/Player/Art/SM_Rat")
     return bp
 
 
 try:
-    made = [bat(), mouse()]
+    made = [bp for bp in (bat(), rat()) if bp]
     for bp in made:
         cdo = unreal.get_default_object(bp.generated_class())
         cdo.set_editor_property("replicates", False)   # cosmetic: each machine animates its own copy

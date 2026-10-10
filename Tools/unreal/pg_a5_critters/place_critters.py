@@ -1,7 +1,7 @@
-"""PG-A5: set the critter Blueprint defaults and place bats and mice in L_Site01_PG.
+"""PG-A5: set the critter Blueprint defaults and place bats and rats in L_Site01_PG.
 
 Every placement is checked against the cave as it is now: hanging bats are traced up to the
-rock or beam above them, mouse tracks must be flat and clear end to end, and a bat's orbit
+rock or beam above them, rat tracks must be flat and clear end to end, and a bat's orbit
 shrinks until nothing is in its way. Rerunning replaces the actors labelled PG_A5_*. Saves only
 L_Site01_PG and the two Blueprints. Run in the editor with `py <this file>` with L_Site01 open."""
 import json
@@ -18,7 +18,7 @@ FEET_SINK = 1.5       # toes slightly into the rock, so no gap shows
 
 BAT_DEFAULTS = {"OrbitRadius": 250.0, "OrbitSpeed": 55.0, "BobHeight": 35.0, "FlapSpeed": 1500.0,
                 "FlapAngle": 40.0, "WingLift": 10.0, "Phase": 0.0}
-MOUSE_DEFAULTS = {"HalfLength": 90.0, "Speed": 55.0, "Phase": 0.0}
+RAT_DEFAULTS = {"HalfLength": 130.0, "Speed": 60.0, "Phase": 0.0}
 
 # Hanging bats, in small roosts: (x, y, yaw) in cm. Site 1 layout: spawn cavern beams at X -650,
 # 50 and 750; plate hall ceiling 10 m; trap corridor 4 m; altar cavern 12 m.
@@ -26,7 +26,8 @@ HANGING = [
     (-650, 320, 10), (-650, 348, 75), (-650, 377, -30),           # spawn, west beam
     (50, -480, 140), (50, -452, 200),                              # spawn, middle beam
     (750, 610, -60),                                               # spawn, east beam
-    (330, -330, 20), (360, -305, 110), (-420, 640, 170),           # spawn ceiling
+    (750, 575, 200), (-650, -380, 80), (-650, -352, 160),          # spawn, more on the beams: the cavern's
+                                                                   # rock ceiling hangs below its collision
     (3500, 1000, 0), (3530, 1032, 95), (3468, 1040, 210),          # plate hall, north-west
     (4620, -1080, 40), (4652, -1060, 160),                         # plate hall, south-east
     (6560, 120, 30), (6590, 140, 150),                             # trap corridor, before the darts
@@ -39,18 +40,18 @@ FLYING = [
     (4000, 0, 760, 520, 38, 1.1),                                          # plate hall
     (10000, 0, 880, 460, 50, 3.7), (9900, 150, 1000, 300, -36, 0.6),       # altar cavern
 ]
-# Mice: (x, y, yaw, half length, viewpoint x, y). The track runs along the actor's X, and starts
+# Rats: (x, y, yaw, half length, viewpoint x, y). The track runs along the actor's X, and starts
 # near a wall. It moves toward the viewpoint, a spot players stand in, until the floor is flat,
-# nothing is in the way, and both ends can be seen from there (so no mouse runs behind a fence).
-MICE = [
-    (-400, 960, 0, 100, 0, 0), (450, -810, 0, 150, 0, 0),      # spawn cavern: inside the north fence, beside the rails
-    (4000, -1380, 0, 150, 4000, 0),                            # plate hall, south wall
-    (5850, -165, 0, 70, 5850, 0),                              # trap corridor, south wall
-    (9500, -1050, 0, 120, 10000, 0), (10500, 1050, 180, 110, 10000, 0),   # altar cavern
+# nothing is in the way, and both ends can be seen from there (so no rat runs behind a fence).
+RATS = [
+    (-400, 960, 0, 120, 0, 0), (450, -810, 0, 170, 0, 0),      # spawn cavern: inside the north fence, beside the rails
+    (4000, -1360, 0, 170, 4000, 0),                            # plate hall, south wall
+    (5850, -150, 0, 90, 5850, 0),                              # trap corridor, south wall
+    (9500, -1030, 0, 140, 10000, 0), (10500, 1030, 180, 130, 10000, 0),   # altar cavern
 ]
 
 world = unreal.EditorLevelLibrary.get_editor_world()
-log = {"hanging": [], "flying": [], "mice": [], "skipped": []}
+log = {"hanging": [], "flying": [], "rats": [], "skipped": []}
 
 
 def hit(a, b, radius=0.0):
@@ -132,7 +133,7 @@ def seen(view, p):
     return h is None or (h - target).length() < 3
 
 
-def place_mouse(i, mouse_cls, x, y, yaw, half, vx, vy):
+def place_rat(i, rat_cls, x, y, yaw, half, vx, vy):
     d = V(math.cos(math.radians(yaw)), math.sin(math.radians(yaw)), 0)
     # Players stand all over a room, so an end counts as seen if any of five spots sees it.
     views = [V(vx + ox, vy + oy, 160) for ox, oy in ((0, 0), (400, 0), (-400, 0), (0, 400), (0, -400))]
@@ -146,22 +147,22 @@ def place_mouse(i, mouse_cls, x, y, yaw, half, vx, vy):
         if floors[1] is None or any(f is None or abs(f.z - floors[1].z) > 4 for f in floors):
             continue
         fz = floors[1].z
-        if hit(V(ends[0].x, ends[0].y, fz + 9), V(ends[2].x, ends[2].y, fz + 9), 7.0) is not None:
+        if hit(V(ends[0].x, ends[0].y, fz + 13), V(ends[2].x, ends[2].y, fz + 13), 10.0) is not None:
             continue
         if not all(any(seen(v, V(p.x, p.y, fz)) for v in views) for p in ends):
             continue
-        a = unreal.EditorLevelLibrary.spawn_actor_from_class(mouse_cls, V(cx, cy, fz), unreal.Rotator(0, 0, yaw))
+        a = unreal.EditorLevelLibrary.spawn_actor_from_class(rat_cls, V(cx, cy, fz), unreal.Rotator(0, 0, yaw))
         a.set_editor_property("HalfLength", float(half))
         a.set_editor_property("Phase", float(i * 1.7))
-        tag(a, f"PG_A5_Mouse_{i:02d}")
-        log["mice"].append([a.get_actor_label(), round(cx), round(cy), round(fz, 1), yaw, half, step * 40])
+        tag(a, f"PG_A5_Rat_{i:02d}")
+        log["rats"].append([a.get_actor_label(), round(cx), round(cy), round(fz, 1), yaw, half, step * 40])
         return
-    log["skipped"].append(["mouse", x, y, "no flat clear track"])
+    log["skipped"].append(["rat", x, y, "no flat clear track"])
 
 
 def main():
     bat = set_defaults("/Game/Player/Critters/BP_CaveBat", BAT_DEFAULTS)
-    mouse = set_defaults("/Game/Player/Critters/BP_CaveMouse", MOUSE_DEFAULTS)
+    rat = set_defaults("/Game/Player/Critters/BP_CaveRat", RAT_DEFAULTS)
     les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
     if not les.set_current_level_by_name("L_Site01_PG"):
         raise RuntimeError("couldn't make L_Site01_PG current")
@@ -178,8 +179,8 @@ def main():
         place_hanging(i, *h)
     for i, f in enumerate(FLYING, 1):
         place_flying(i, bat.generated_class(), *f)
-    for i, m in enumerate(MICE, 1):
-        place_mouse(i, mouse.generated_class(), *m)
+    for i, r in enumerate(RATS, 1):
+        place_rat(i, rat.generated_class(), *r)
     placed = [a for a in eas.get_all_level_actors() if a.get_actor_label().startswith("PG_A5_")]
     log["outside_pg"] = [a.get_actor_label() for a in placed if a.get_outermost().get_name() != "/Game/Player/L_Site01_PG"]
     if log["outside_pg"]:

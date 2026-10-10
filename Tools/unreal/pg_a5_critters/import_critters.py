@@ -1,4 +1,4 @@
-"""PG-A5: import the bat and mouse meshes from SourceArt/PG/PG-A5 into /Game/Player/Art and give
+"""PG-A5: import the bat and rat meshes from SourceArt/PG/PG-A5 into /Game/Player/Art and give
 each material slot an instance of the shared M_Stylized. Run in the editor with `py <this file>`.
 Safe to rerun: it reimports over the same assets and resets the instances."""
 import json
@@ -11,7 +11,7 @@ REPO = Path(__file__).resolve().parents[3]
 SRC = REPO / "SourceArt" / "PG" / "PG-A5"
 DEST = "/Game/Player/Art"
 OUT = Path("/tmp/pga5_tools/out.json")
-MESHES = ["SM_Bat_Body", "SM_Bat_Wing", "SM_Bat_Hanging", "SM_Mouse"]
+MESHES = ["SM_Bat_Body", "SM_Bat_Wing", "SM_Bat_Hanging", "SM_Rat"]
 
 
 def linear(hex_color):
@@ -23,11 +23,17 @@ def linear(hex_color):
 
 # Slot name in the FBX (the Blender material) -> instance name, tint and scalar overrides.
 # The tints match build_critters.py. Fur stays matte; eyes are glossy so they catch a headlamp.
+# The rat's eyes also glow faintly: M_Stylized has no emissive input, so a rim exponent of 0 makes
+# its rim term constant, and RimColor and RimStrength set the glow (as HC-A1's idol does).
 MATERIALS = {
     "Bat_Fur": ("MI_Bat_Fur", "#5C4B58", {"RoughnessMultiplier": 0.95}),
     "Bat_Membrane": ("MI_Bat_Membrane", "#3B3142", {"RoughnessMultiplier": 0.8}),
-    "Mouse_Fur": ("MI_Mouse_Fur", "#8E7A6B", {"RoughnessMultiplier": 0.95}),
-    "Mouse_Belly": ("MI_Mouse_Belly", "#C7B39C", {"RoughnessMultiplier": 0.95}),
+    "Rat_Fur": ("MI_Rat_Fur", "#1C1920", {"RoughnessMultiplier": 1.0, "EdgeStrength": 0.5}),
+    "Rat_Belly": ("MI_Rat_Belly", "#302B33", {"RoughnessMultiplier": 1.0}),
+    "Rat_Skin": ("MI_Rat_Skin", "#5A4346", {"RoughnessMultiplier": 0.6}),
+    "Rat_Eye": ("MI_Rat_Eye", "#7A1214", {"RoughnessMultiplier": 0.1, "GradientStrength": 0.0, "EdgeStrength": 0.0,
+                                         "RimExponent": 0.0, "RimStrength": 0.35}, {"RimColor": "#7A1214"}),
+    "Rat_Teeth": ("MI_Rat_Teeth", "#CDBB8C", {"RoughnessMultiplier": 0.4, "GradientStrength": 0.0}),
     "Critter_Skin": ("MI_Critter_Skin", "#C98F8C", {"RoughnessMultiplier": 0.65}),
     "Critter_Eye": ("MI_Critter_Eye", "#17121A", {"RoughnessMultiplier": 0.15, "GradientStrength": 0.0, "EdgeStrength": 0.0}),
     "Critter_Fang": ("MI_Critter_Fang", "#E8DCC6", {"RoughnessMultiplier": 0.5, "GradientStrength": 0.0}),
@@ -42,7 +48,7 @@ def make_instances():
     parent = unreal.load_asset("/Game/Shared/Style/M_Stylized")
     mel = unreal.MaterialEditingLibrary
     made = {}
-    for slot, (name, tint, scalars) in MATERIALS.items():
+    for slot, (name, tint, scalars, *vectors) in MATERIALS.items():
         path = f"{DEST}/{name}"
         mi = unreal.load_asset(path) if unreal.EditorAssetLibrary.does_asset_exist(path) else \
             tools.create_asset(name, DEST, unreal.MaterialInstanceConstant, unreal.MaterialInstanceConstantFactoryNew())
@@ -51,6 +57,8 @@ def make_instances():
         mel.set_material_instance_vector_parameter_value(mi, "Tint", linear(tint))
         for k, v in {**COMMON, **scalars}.items():
             mel.set_material_instance_scalar_parameter_value(mi, k, v)
+        for k, v in (vectors[0] if vectors else {}).items():
+            mel.set_material_instance_vector_parameter_value(mi, k, linear(v))
         mel.update_material_instance(mi)
         made[slot] = mi
     return made

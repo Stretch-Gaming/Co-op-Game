@@ -1,4 +1,4 @@
-"""PG-A5: cave bats and mice, ambient life for Site 1.
+"""PG-A5: cave bats and rats, ambient life for Site 1.
 
 Four static meshes, each built from chunky overlapping primitives with one palette material
 per part, so the Unreal import gets a material slot per color:
@@ -7,14 +7,15 @@ per part, so the Unreal import gets a material slot per color:
 - SM_Bat_Wing: one wing, spreading toward +Y from its root at Y 0. The flying Blueprint
   flaps two copies around the shoulder hinge, the left one mirrored with a scale of Y -1.
 - SM_Bat_Hanging: a bat asleep upside down, wrapped in its wings, feet up.
-- SM_Mouse: a mouse facing +X, tail curling behind it.
+- SM_Rat: a black, scary cave rat facing +X: hunched, scruffy, teeth bared, tail trailing.
 
-Run it headless to rebuild the previews, GLBs and committed FBXs:
+Run it headless to rebuild the previews, the committed FBXs, PG-A5_Critters.blend and the
+lineup render:
 
     blender -b --factory-startup --python SourceArt/PG/PG-A5/build_critters.py -- SourceArt/PG/PG-A5
 
 Or, in a live Blender (through Blender MCP), exec the file with `PG_A5_LIVE = True` set, then
-call `build("SM_Mouse")` and so on to look at one mesh at a time.
+call `build("SM_Rat")` and so on to look at one mesh at a time.
 """
 import json
 import math
@@ -31,23 +32,32 @@ sys.path.append(str(REPO / "Tools" / "blender"))
 import asset_kit as kit  # noqa: E402
 
 # Creature colors. None of them is in docs/art/style.md's palette, because each palette color
-# has one job, and the creatures must stay clear of the relic, ghost and trap colors. These are
-# muted, warm browns and greys that read against the blue-violet rock without glowing.
+# has one job, and the creatures must stay clear of the relic, ghost and trap colors. The bats are
+# muted, dark browns and greys that read against the blue-violet rock without glowing.
 FUR_BAT = "#5C4B58"
 MEMBRANE = "#3B3142"
-FUR_MOUSE = "#8E7A6B"
-BELLY = "#C7B39C"
-SKIN = "#C98F8C"     # ears, nose, feet and tail: a dusty pink, well away from trap red
+SKIN = "#C98F8C"     # the bat's nose and legs: a dusty pink, well away from trap red
 EYE = "#17121A"
 FANG = "#E8DCC6"     # warm off-white, not the ghost's cold #D6F0FF
+# The rat is near-black with a cold violet cast, so the stylized edge light still finds its
+# shape. Its eyes are a deep, dark blood red with only a faint glint: far darker than trap red
+# (#FF4A2A), so they read as a creature's eyes, not a trap warning.
+FUR_RAT = "#1C1920"
+BELLY_RAT = "#302B33"
+SKIN_RAT = "#5A4346"   # ears, nose, feet and tail: grey-pink, scaly and dirty
+EYE_RAT = "#7A1214"
+TEETH_RAT = "#CDBB8C"  # yellowed incisors, duller than relic gold
 
 
 def mats():
     return {
         "bat_fur": kit.palette_material("Bat_Fur", FUR_BAT, roughness=0.85),
         "membrane": kit.palette_material("Bat_Membrane", MEMBRANE, roughness=0.7),
-        "mouse_fur": kit.palette_material("Mouse_Fur", FUR_MOUSE, roughness=0.85),
-        "belly": kit.palette_material("Mouse_Belly", BELLY, roughness=0.85),
+        "rat_fur": kit.palette_material("Rat_Fur", FUR_RAT, roughness=0.9),
+        "rat_belly": kit.palette_material("Rat_Belly", BELLY_RAT, roughness=0.9),
+        "rat_skin": kit.palette_material("Rat_Skin", SKIN_RAT, roughness=0.55),
+        "rat_eye": kit.palette_material("Rat_Eye", EYE_RAT, roughness=0.1, emission=EYE_RAT, emission_strength=0.6),
+        "rat_teeth": kit.palette_material("Rat_Teeth", TEETH_RAT, roughness=0.35),
         "skin": kit.palette_material("Critter_Skin", SKIN, roughness=0.6),
         "eye": kit.palette_material("Critter_Eye", EYE, roughness=0.15),
         "fang": kit.palette_material("Critter_Fang", FANG, roughness=0.4),
@@ -240,45 +250,75 @@ def build_bat_hanging(m):
     return kit.join(parts, "SM_Bat_Hanging")
 
 
-# ---------------------------------------------------------------- mouse
+# ---------------------------------------------------------------- rat
 
-def build_mouse(m):
-    f, b, s = m["mouse_fur"], m["belly"], m["skin"]
+def build_rat(m):
+    """Hunched and scruffy: a high, arched back with a ridge of ragged tufts, a long head that
+    drops to a pointed snout, narrow eyes under heavy brows, bared incisors, small torn ears and a
+    long, thick tail dragging behind."""
+    f, b, s, e, t = m["rat_fur"], m["rat_belly"], m["rat_skin"], m["rat_eye"], m["rat_teeth"]
     parts = [
-        blob("rump", 0.052, (-0.025, 0, 0.05), f, scale=(1.3, 1.0, 0.92)),
-        blob("belly", 0.046, (-0.01, 0, 0.034), b, scale=(1.3, 0.85, 0.6)),
-        blob("head", 0.04, (0.055, 0, 0.05), f, scale=(1.15, 0.95, 0.9)),
-        cone("snout", 0.03, 0.008, 0.05, (0.092, 0, 0.044), (0, math.radians(97), 0), f, sides=10),
-        blob("nose", 0.0095, (0.118, 0, 0.041), s, segments=10, rings=6),
+        blob("rump", 0.075, (-0.045, 0, 0.078), f, scale=(1.4, 1.0, 1.0)),
+        blob("shoulders", 0.06, (0.05, 0, 0.07), f, scale=(1.15, 0.95, 0.9)),
+        blob("belly", 0.06, (-0.01, 0, 0.042), b, scale=(1.6, 0.8, 0.55)),
+        blob("head", 0.045, (0.125, 0, 0.058), f, scale=(1.35, 0.88, 0.82), rotation=(0, math.radians(14), 0)),
+        cone("snout", 0.031, 0.007, 0.085, (0.19, 0, 0.044), (0, math.radians(102), 0), f, sides=10),
+        blob("nose", 0.0095, (0.233, 0, 0.039), s, segments=10, rings=6),
     ]
     for side in (-1, 1):
-        # Big round ears, tipped back and out: the silhouette that says "mouse" at a glance.
-        parts.append(disc(f"ear{side}", 0.027, 0.007, (0.04, side * 0.032, 0.093),
-                          (math.radians(90 - 20 * side), 0, math.radians(-15 * side)), f, scale=(1, 1.1, 1)))
-        parts.append(disc(f"inner{side}", 0.019, 0.004, (0.0435, side * 0.0335, 0.094),
-                          (math.radians(90 - 20 * side), 0, math.radians(-15 * side)), s, scale=(1, 1.1, 1)))
-        parts.append(blob(f"eye{side}", 0.009, (0.083, side * 0.022, 0.06), m["eye"], segments=10, rings=6))
-        for k, x in enumerate((0.04, -0.06)):
-            parts.append(blob(f"foot{side}{k}", 0.013, (x, side * 0.03, 0.007), s, scale=(1.5, 0.9, 0.55), segments=10, rings=6))
-    # The tail curls back and to one side along the floor, lifting a little off it.
-    tail = [(-0.085, 0.0, 0.035), (-0.12, 0.012, 0.018), (-0.155, 0.035, 0.01),
-            (-0.18, 0.065, 0.012), (-0.19, 0.1, 0.018)]
-    parts.append(tube("tail", tail, 0.008, 0.0028, s, sides=6))
-    return kit.join(parts, "SM_Mouse")
+        # Narrow, slanted eyes under a heavy brow: the angry look comes from the brow, not size.
+        parts.append(blob(f"eye{side}", 0.0105, (0.158, side * 0.029, 0.07), e, scale=(1.3, 0.8, 0.62),
+                          rotation=(side * math.radians(-18), 0, 0), segments=10, rings=6))
+        parts.append(blob(f"brow{side}", 0.012, (0.153, side * 0.028, 0.08), f, scale=(1.6, 0.75, 0.42),
+                          rotation=(side * math.radians(-22), math.radians(-12), 0), segments=10, rings=6))
+        # Small ears laid back, the left one with a torn notch.
+        ear = disc(f"ear{side}", 0.022, 0.006, (0.105, side * 0.036, 0.098),
+                   (math.radians(90 - 35 * side), math.radians(-25), math.radians(-30 * side)), s)
+        if side < 0:
+            bpy.ops.mesh.primitive_cube_add(size=0.016, location=(0.1, -0.05, 0.115), rotation=(0.6, 0.3, 0.5))
+            kit.boolean(ear, bpy.context.active_object)
+        parts.append(ear)
+        # Long yellowed incisors under the snout tip, and splayed clawed feet.
+        parts.append(cone(f"tooth{side}", 0.0055, 0.0018, 0.024, (0.222, side * 0.0055, 0.022),
+                          (math.pi, 0, 0), t, sides=5))
+        for k, x in enumerate((0.07, -0.08)):
+            parts.append(blob(f"foot{side}{k}", 0.016, (x, side * 0.042, 0.008), s, scale=(1.6, 0.9, 0.5), segments=10, rings=6))
+            for c in (-1, 0, 1):
+                parts.append(cone(f"claw{side}{k}{c}", 0.003, 0.0005, 0.016,
+                                  (x + 0.026, side * 0.042 + c * 0.008, 0.004), (0, math.radians(95), 0), t, sides=4))
+    # A ragged ridge of tufts down the arched spine, leaning back. Each sits on the top of the
+    # rump or shoulders (whichever is higher there), sunk in a little.
+    def back_top(x):
+        top = 0.0
+        for cx, cz, rx, rz in ((-0.045, 0.078, 0.105, 0.075), (0.05, 0.07, 0.069, 0.054)):
+            u = (x - cx) / rx
+            if abs(u) < 1:
+                top = max(top, cz + rz * math.sqrt(1 - u * u))
+        return top
+    for k in range(9):
+        x = 0.075 - k * 0.022
+        parts.append(cone(f"tuft{k}", 0.011 + 0.003 * (k % 2), 0.001, 0.034 + 0.01 * (k % 3),
+                          (x, (k % 3 - 1) * 0.007, back_top(x) + 0.004),
+                          (0, math.radians(-48 - 8 * (k % 2)), 0), f, sides=5))
+    # The tail: thick at the root, dragging on the floor and curling at the tip.
+    tail = [(-0.14, 0.0, 0.07), (-0.19, 0.008, 0.035), (-0.25, 0.025, 0.012), (-0.32, 0.05, 0.008),
+            (-0.38, 0.09, 0.01), (-0.41, 0.14, 0.016)]
+    parts.append(tube("tail", tail, 0.013, 0.003, s, sides=7))
+    return kit.join(parts, "SM_Rat")
 
 
 # ---------------------------------------------------------------- output
 
-# Each mesh is modelled at a convenient size, then scaled to its final size here: a mouse about
-# 22 cm from nose to tail tip, a bat about 55 cm across the wings. That's larger than life, so
+# Each mesh is modelled at a convenient size, then scaled to its final size here: a rat about
+# 50 cm from nose to tail tip, a bat about 55 cm across the wings. That's larger than life, so
 # they read in a split view, but still small next to the 1.8 m player.
-SCALE = {"SM_Bat_Body": 0.8, "SM_Bat_Wing": 0.8, "SM_Bat_Hanging": 0.8, "SM_Mouse": 0.7}
+SCALE = {"SM_Bat_Body": 0.8, "SM_Bat_Wing": 0.8, "SM_Bat_Hanging": 0.8, "SM_Rat": 0.75}
 
 BUILDERS = {
     "SM_Bat_Body": build_bat_body,
     "SM_Bat_Wing": build_bat_wing,
     "SM_Bat_Hanging": build_bat_hanging,
-    "SM_Mouse": build_mouse,
+    "SM_Rat": build_rat,
 }
 
 
@@ -312,6 +352,47 @@ def bounds_cm(obj):
     return lo, hi
 
 
+def save_blend_and_lineup(out):
+    """Save the editable source, PG-A5_Critters.blend, with one collection per mesh, then render
+    PG-A5_lineup.png: every critter side by side, with a flying bat put
+    together the way BP_CaveBat holds it (wings at the shoulders, raised a little)."""
+    reset()
+    scene = bpy.context.scene
+    shown = []
+    for k, name in enumerate(BUILDERS):
+        obj = BUILDERS[name](mats())
+        obj.data.name = name
+        obj.scale = (SCALE[name],) * 3
+        kit._select_only(obj)
+        bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+        coll = bpy.data.collections.new(name)
+        scene.collection.children.link(coll)
+        for c in list(obj.users_collection):
+            c.objects.unlink(obj)
+        coll.objects.link(obj)
+        obj.location.y = 0.35 * k
+        shown.append(obj)
+    body, wing = bpy.data.objects["SM_Bat_Body"], bpy.data.objects["SM_Bat_Wing"]
+    # The body's origin is the bat's center; in Blender's axes the wing spreads toward +Y from
+    # its root at Y 0, so the far wing is a mirrored copy.
+    body.location = (0.0, -0.45, 0.35)
+    wing.location = (0.0, -0.45 + 0.028, 0.35 + 0.012)
+    wing.rotation_euler = (math.radians(15), 0, 0)
+    other = wing.copy()
+    other.name = "SM_Bat_Wing_Mirrored"
+    wing.users_collection[0].objects.link(other)
+    other.location.y = -0.45 - 0.028
+    other.scale.y = -1
+    other.rotation_euler = (math.radians(-15), 0, 0)
+    hanging = bpy.data.objects["SM_Bat_Hanging"]
+    hanging.location = (0.0, 0.05, 0.6)
+    rat = bpy.data.objects["SM_Rat"]
+    rat.location = (0.05, 0.55, 0.0)
+    bpy.ops.wm.save_as_mainfile(filepath=str(out / "PG-A5_Critters.blend"), copy=True, compress=True)
+    kit.preview_sheet(shown + [other], str(out / "PG-A5_lineup.png"), title="PG-A5 lineup", resolution=640,
+                      with_figure=False)
+
+
 def main(out):
     out.mkdir(parents=True, exist_ok=True)
     metrics = {}
@@ -334,6 +415,7 @@ def main(out):
                         str(glb), str(out / f"{name}.fbx"), "--name", name, "--overwrite"], check=True)
         glb.unlink()
     (out / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+    save_blend_and_lineup(out)
     print(json.dumps(metrics, indent=2))
 
 

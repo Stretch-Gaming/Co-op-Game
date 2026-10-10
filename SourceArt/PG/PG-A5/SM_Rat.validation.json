@@ -1,0 +1,23 @@
+{
+  "input": "/Users/peterkim/Projects/Co-op-Game-pga5/SourceArt/PG/PG-A5/SM_Rat.glb",
+  "output": "/Users/peterkim/Projects/Co-op-Game-pga5/SourceArt/PG/PG-A5/SM_Rat.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 2634,
+  "triangles_after": 2634,
+  "dimensions_cm": [
+    49.0816,
+    16.2315,
+    12.9409
+  ],
+  "bounds_min_cm": [
+    -24.5408,
+    -8.11573,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

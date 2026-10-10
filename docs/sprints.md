@@ -78,7 +78,7 @@ PG-A0 sets up the pipeline and the shared style kit in Sprint 1, so other genera
 | PG-A4: zipline | PG | Sprint 6 | Sprint 7 |
 | HZ-A5: Map 2 kit | HZ | Sprint 6 | Sprint 7 |
 | HC-A3: HUD art | HC | Sprint 7 | Sprint 8 |
-| PG-A5: bats and mice | PG | Sprint 8 | Sprint 8 |
+| PG-A5: bats and rats | PG | Sprint 8 | Sprint 8 |
 | HZ-A6: cave and trap sounds | HZ | Sprint 8 | Sprint 9 |
 
 **Minimum presentation kit.** These can't be cut, because checkpoints depend on them. If one isn't ready, use a free library asset from Fab that the repo's license rules allow, rather than greybox.

@@ -45,18 +45,19 @@
       "Critter_Skin"
     ]
   },
-  "SM_Mouse": {
-    "triangles": 2410,
+  "SM_Rat": {
+    "triangles": 2634,
     "size_cm": [
-      22.4,
-      10.8,
-      8.5
+      49.1,
+      16.2,
+      12.9
     ],
     "materials": [
-      "Mouse_Fur",
-      "Mouse_Belly",
-      "Critter_Skin",
-      "Critter_Eye"
+      "Rat_Fur",
+      "Rat_Belly",
+      "Rat_Skin",
+      "Rat_Eye",
+      "Rat_Teeth"
     ]
   }
 }
