@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A1/SM_KeyRelic_StoneHeart.glb",
+  "output": "SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 9866,
+  "triangles_after": 9866,
+  "dimensions_cm": [
+    39.2349,
+    74.0457,
+    62.0
+  ],
+  "bounds_min_cm": [
+    -19.61747,
+    -37.02286,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

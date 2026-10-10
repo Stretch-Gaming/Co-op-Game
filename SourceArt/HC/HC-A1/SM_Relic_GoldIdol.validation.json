@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/HC-A1/SM_Relic_GoldIdol.glb",
+  "output": "SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 9406,
+  "triangles_after": 9406,
+  "dimensions_cm": [
+    22.1418,
+    22.7571,
+    25.0
+  ],
+  "bounds_min_cm": [
+    -11.07091,
+    -11.37853,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}
