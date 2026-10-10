@@ -78,4 +78,3 @@ def tick(delta):
    h.check('prefix releases restore secondary walking/view/light without changing primary',{'first_layer_owner':primary,'resolved_secondary_owner':secondary,'prefix_actions':paths,'route':'primary subsystem -> controller keyboard handler -> secondary subsystem -> pawn input -> serverRPC'})
    h.finish(True)
 RESULT=h.register(tick)
-

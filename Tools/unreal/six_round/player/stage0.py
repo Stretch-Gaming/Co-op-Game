@@ -75,4 +75,3 @@ for name in ('RefreshSpectator','CycleSpectator'):fn(view,name)
 fn(view,'GetHeadlampOn',outputs=[('On','bool')])
 for bp in [*assets.values(),view]:save(bp)
 RESULT={'stage':'PG declarations','assets':paths,'runtime_acceptance_pending':True}
-

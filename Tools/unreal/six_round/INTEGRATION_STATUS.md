@@ -1,6 +1,6 @@
 # Six-round integration status
 
-Branch codex/six-round-adventure includes merged PR119, PR124 and PR125; base main9dc0fab. Integration changes remain local and unaccepted; no task commit or PR yet.
+Branch codex/six-round-adventure includes merged PR119, PR124 and PR125; base main9dc0fab. The integrated playtest candidate is committed. Team acceptance remains pending; issue #93 stays open.
 
 Native compile/save gates passed: immediate death/no revive and spectator; six server rounds, regroup/wipe/resource recovery; caged relic, death drop, lost/missing-key retry and altar; traversal, headlamp/flares, reliable server inputs and Forward float; solid HUD with licensed Averia fonts; resettable traps/seal/sprint/chasm; test GameMode/sole puzzle door; streamed test-map placements; round1-5 ghost threats; Taker taking visuals and mixed ghost/creature waves. Hooks use published PR123 Art/Audio. Five unused duplicate wave residues remain only in the local worktree after editor deletion failed to remove their files; they are explicitly excluded from staging and publication. Final saved-asset audit passes306candidate assets and46Blueprint/widget compiles with no graph policy violations.
 

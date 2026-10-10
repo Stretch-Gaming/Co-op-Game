@@ -62,4 +62,3 @@ def tick(delta):
    h.check('exactlyN-1 scheduled victims are immune then moved to their own paths; the real remaining slot stays open',{'victims':state['victims'],'remaining_id':remaining_id})
    h.finish(True)
 RESULT=h.register(tick)
-

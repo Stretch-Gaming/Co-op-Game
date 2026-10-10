@@ -51,4 +51,3 @@ def tick(delta):
    assert not h.prop(pawn,'traversal','bMantling')
    h.check('native Jump lets go of marked climbing without affecting another owner');h.finish(True)
 RESULT=h.register(tick)
-

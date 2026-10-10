@@ -57,4 +57,3 @@ for name in ('OnRep_bRaised','OnRep_bLatched'):write(cage,name,'(CallFunction|Ap
 write(cage,'BeginCage','(Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName "RefreshCage" :Time 0.05 :bLooping true)')
 event(cage,'ResetForRound','ResetCage',['Index','Attempt']);event(cage,'ReceiveBeginPlay','BeginCage');save(cage)
 RESULT={'stage':'continuous cage','scaling_fallback':'GetScalingRow -> 4 requires 2, other valid rows require 1','runtime_acceptance_pending':True}
-

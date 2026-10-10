@@ -72,4 +72,3 @@ def tick(delta):
   h.check('native first pickup alone starts escape; cage latches after every holder releases',{'carrier_id':carrier})
   h.finish(True)
 RESULT=h.register(tick)
-

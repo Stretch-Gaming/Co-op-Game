@@ -144,4 +144,3 @@ class Harness:
   self.handle=ue.register_slate_post_tick_callback(guarded_tick)
   _ACTIVE_HARNESSES.add(self)
   return {'queued':str(self.report),'runtime_acceptance_pending':True}
-

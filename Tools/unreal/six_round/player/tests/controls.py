@@ -78,4 +78,3 @@ def tick(delta):
    else:
     baseline.clear();baseline.update(capture());h.transition('warmup')
 RESULT=h.register(tick)
-

@@ -66,4 +66,3 @@ fn(bp,'ResetChase',[('Index','int'),('Attempt','int')]);write(bp,'ResetChase','(
 write(bp,'BeginChase','(if (Networking|HasAuthority) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName "RefreshChase" :Time 0.2 :bLooping true))')
 event(bp,'ResetForRound','ResetChase',['Index','Attempt']);event(bp,'ReceiveBeginPlay','BeginChase');save(bp)
 RESULT={'stage':'carrier chase','runtime_acceptance_pending':True,'cave_beings':'same replicated ghost family, distinct art/speed pending','scaling_fallback':'GetScalingRow -> waves2/3/4,20 seconds'}
-

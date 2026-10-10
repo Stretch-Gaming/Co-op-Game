@@ -11,4 +11,3 @@ for actor in ue.GameplayStatics.get_all_actors_with_tag(server,'Climbable'):
  center=box.get_world_location();extent=box.get_scaled_box_extent()
  records.append({'label':actor.get_actor_label(),'center':[center.x,center.y,center.z],'extent':[extent.x,extent.y,extent.z]})
 RESULT={'climbs':records};(QUEUE/'qa-climb-fixtures.json').write_text(json.dumps(RESULT,indent=2))
-

@@ -86,4 +86,3 @@ def tick(delta):
    h.check('dead owning input cannot move/throw/revive; Interact cycles one living camera without affecting another owner',{'victim':pid,'first_target':state['first_target'],'next_target':target.player_state.player_id})
    h.finish(True)
 RESULT=h.register(tick)
-
