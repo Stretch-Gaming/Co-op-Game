@@ -1336,9 +1336,19 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 	const FIntPoint Dirs[4] = { FIntPoint(1, 0), FIntPoint(-1, 0), FIntPoint(0, 1), FIntPoint(0, -1) };
 	const FVector Up(0.f, 0.f, 1.f);
 
-	// Everything you see goes into a few shared meshes (one draw each) and casts no shadow. Everything you can bump
-	// into also gets a convex shape in one hidden collision mesh.
-	FCoopRockGroup DWall, DCeiling, DBoulders, DSmall, DPebbles, DStones, DPuddles;
+	// Everything you see goes into a few shared meshes per 40 m square of the maze (one draw each, and off-screen squares
+	// aren't drawn), with no shadows. Everything you can bump into also gets a convex shape in one hidden collision mesh.
+	struct FKind
+	{
+		FLinearColor Color;
+		TMap<FIntPoint, FCoopMeshData> Chunks;
+		FCoopMeshData& At(const FVector& Where)
+		{
+			constexpr float ChunkSize = 4000.f;
+			return Chunks.FindOrAdd(FIntPoint(FMath::FloorToInt(Where.X / ChunkSize), FMath::FloorToInt(Where.Y / ChunkSize)));
+		}
+	};
+	FKind DWall, DCeiling, DBoulders, DSmall, DPebbles, DStones, DPuddles;
 	DWall.Color = MazeWallRocks.Color;
 	DCeiling.Color = MazeCeilingRocks.Color;
 	DBoulders.Color = Shade(MazeWallRocks.Color, 1.15f);
@@ -1346,7 +1356,9 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 	DPebbles.Color = Shade(MazeWallRocks.Color, 0.55f);
 	DStones.Color = Shade(MazeWallRocks.Color, 0.75f);
 	DPuddles.Color = FLinearColor(0.006f, 0.008f, 0.011f);
-	FCoopMeshData Wood, WoodDark;
+	FKind Wood, WoodDark;
+	Wood.Color = CoopCave::Wood;
+	WoodDark.Color = CoopCave::WoodDark;
 	FCoopMeshData BlockerMesh;
 	TArray<TArray<FVector>> BlockerHulls;
 	TArray<FTransform> RepoRocks;
@@ -1361,12 +1373,12 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		++Colliders;
 	};
 	// A rock standing on (or, Hanging, hanging from) Base. Large rocks use the repo rock mesh when it's in the project.
-	auto Rock = [&](FCoopRockGroup& Group, const FVector& Base, const FVector& Size, const FQuat& Rotation, bool bCollides,
+	auto Rock = [&](FKind& Kind, const FVector& Base, const FVector& Size, const FQuat& Rotation, bool bCollides,
 		bool bLarge = false, float TopFlat = 0.3f, int32 Detail = 0)
 	{
 		const bool bRepo = bLarge && RepoRockMesh;
 		FCoopMeshData Unseen;
-		TArray<FVector> Hull = CoopMeshKit::AddRock(bRepo ? Unseen : Group.Mesh, Rand, FTransform(Rotation, Base), Size, Detail, 0.22f, TopFlat);
+		TArray<FVector> Hull = CoopMeshKit::AddRock(bRepo ? Unseen : Kind.At(Base), Rand, FTransform(Rotation, Base), Size, Detail, 0.22f, TopFlat);
 		if (bRepo)
 		{
 			// As AddMazeRock: scale the mesh to the size and put its middle where the code-built rock's would be
@@ -1381,13 +1393,32 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		}
 	};
 	// A stalactite or stalagmite: a six-sided spike from Base along Dir
-	auto Spike = [&](FCoopRockGroup& Group, const FVector& Base, const FVector& Dir, float Radius, float Length, bool bCollides)
+	auto Spike = [&](FKind& Kind, const FVector& Base, const FVector& Dir, float Radius, float Length, bool bCollides)
 	{
-		TArray<FVector> Hull = CoopMeshKit::AddCrystal(Group.Mesh, FTransform(FRotationMatrix::MakeFromZ(Dir).Rotator(), Base),
+		TArray<FVector> Hull = CoopMeshKit::AddCrystal(Kind.At(Base), FTransform(FRotationMatrix::MakeFromZ(Dir).Rotator(), Base),
 			Radius, Length, FColor::White, FColor::White);
 		if (bCollides)
 		{
 			Collide(MoveTemp(Hull));
+		}
+	};
+	// A pebble: a low four-sided pyramid (4 faces; there are thousands, so they stay cheaper than a rock)
+	auto Pebble = [&](const FVector& Base, float Width)
+	{
+		FCoopMeshData& Mesh = DPebbles.At(Base);
+		const float Turn = Rand.FRandRange(0.f, 0.5f * PI);
+		FVector Corners[4];
+		for (int32 c = 0; c < 4; ++c)
+		{
+			const float Angle = Turn + c * 0.5f * PI + Rand.FRandRange(-0.3f, 0.3f);
+			Corners[c] = Base + FVector(FMath::Cos(Angle), FMath::Sin(Angle), 0.f) * Width * 0.5f * Rand.FRandRange(0.6f, 1.f);
+		}
+		const FVector Top = Base + FVector(Rand.FRandRange(-0.15f, 0.15f) * Width, Rand.FRandRange(-0.15f, 0.15f) * Width, Width * Rand.FRandRange(0.35f, 0.6f));
+		for (int32 c = 0; c < 4; ++c)
+		{
+			const FVector& A = Corners[c];
+			const FVector& B = Corners[(c + 1) % 4];
+			Mesh.AddTriangle(A, B, Top, (A + B) * 0.5f - Base + FVector(0.f, 0.f, Width * 0.2f));
 		}
 	};
 	// Glowing teal crystals growing from Base, leaning along Axis
@@ -1406,11 +1437,11 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		}
 	};
 	// Old mine timber: a square beam from A to B
-	auto Timber = [&](FCoopMeshData& Mesh, const FVector& A, const FVector& B, float Width, bool bCollides)
+	auto Timber = [&](FKind& Kind, const FVector& A, const FVector& B, float Width, bool bCollides)
 	{
 		const FVector Span = B - A;
 		TArray<TArray<FVector>> Hull;
-		AddBlock(Mesh, Hull, FTransform(Span.Rotation(), (A + B) * 0.5f), FVector(Span.Size() * 0.5f, Width * 0.5f, Width * 0.5f));
+		AddBlock(Kind.At(A), Hull, FTransform(Span.Rotation(), (A + B) * 0.5f), FVector(Span.Size() * 0.5f, Width * 0.5f, Width * 0.5f));
 		if (bCollides)
 		{
 			Collide(MoveTemp(Hull[0]));
@@ -1507,9 +1538,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		for (int32 i = 0; i < Count; ++i)
 		{
 			const FVector2D P = E.At(Rand.FRandRange(NearN, FarN), Rand.FRandRange(-235.f, 235.f));
-			const float Width = Rand.FRandRange(5.f, 15.f);
-			Rock(DPebbles, FVector(P, FloorAt(At, Level, P) - 1.f), FVector(Width, Width * Rand.FRandRange(0.6f, 1.f), Width * Rand.FRandRange(0.4f, 0.7f)),
-				Upright(Rand.FRandRange(0.f, 360.f)), false);
+			Pebble(FVector(P, FloorAt(At, Level, P) - 1.f), Rand.FRandRange(5.f, 15.f));
 		}
 	};
 	auto SmallRock = [&](const FVector2D& P, const FIntPoint& At, const FLevel& Level)
@@ -2069,6 +2098,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			}
 			Placed.Add(P);
 			++Count;
+			UE_LOG(LogTemp, Verbose, TEXT("CoopPlayground: %s gets a %s at (%.0f, %.0f)"), Room.Name, bPillar ? TEXT("pillar") : TEXT("boulder heap"), P.X, P.Y);
 			if (bPillar)
 			{
 				const float Base = Rand.FRandRange(320.f, 420.f);
@@ -2113,7 +2143,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 			const float Width = Rand.FRandRange(5.f, 15.f);
 			if (Id != Goal || FVector2D::Distance(P, Middle2D) > 250.f)
 			{
-				Rock(DPebbles, FVector(P, Z - 1.f), FVector(Width, Width * Rand.FRandRange(0.6f, 1.f), Width * Rand.FRandRange(0.4f, 0.7f)), Upright(Rand.FRandRange(0.f, 360.f)), false);
+				Pebble(FVector(P, Z - 1.f), Width);
 			}
 		}
 		for (int32 k = Tiles / 2; k > 0; --k)
@@ -2153,16 +2183,17 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		}
 	}
 
-	// Into meshes: one draw for each group, no shadows
+	// Into meshes: one per kind per square, no shadows
 	int32 Triangles = 0;
-	for (FCoopRockGroup* Group : { &DWall, &DCeiling, &DBoulders, &DSmall, &DPebbles, &DStones, &DPuddles })
+	int32 Meshes = 0;
+	for (FKind* Kind : { &DWall, &DCeiling, &DBoulders, &DSmall, &DPebbles, &DStones, &DPuddles, &Wood, &WoodDark })
 	{
-		Triangles += Group->Mesh.Triangles.Num() / 3;
-		AddProcMesh(Group->Mesh, MaterialFor(Group->Color), {}, false);
+		for (const TPair<FIntPoint, FCoopMeshData>& Chunk : Kind->Chunks)
+		{
+			Triangles += Chunk.Value.Triangles.Num() / 3;
+			Meshes += AddProcMesh(Chunk.Value, MaterialFor(Kind->Color), {}, false) ? 1 : 0;
+		}
 	}
-	Triangles += (Wood.Triangles.Num() + WoodDark.Triangles.Num()) / 3;
-	AddProcMesh(Wood, MaterialFor(CoopCave::Wood), {}, false);
-	AddProcMesh(WoodDark, MaterialFor(CoopCave::WoodDark), {}, false);
 	if (UProceduralMeshComponent* Collision = AddProcMesh(BlockerMesh, nullptr, BlockerHulls, false))
 	{
 		Collision->SetHiddenInGame(true);
@@ -2182,7 +2213,7 @@ void ACoopPlayground::BuildMazeDetail(const TMap<FIntPoint, TArray<CoopMaze::FLe
 		Rocks->RegisterComponent();
 		Rocks->AddInstances(RepoRocks, false);
 	}
-	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze detail built, %d triangles, %d colliders, %d repo rocks"), Triangles, Colliders, RepoRocks.Num());
+	UE_LOG(LogTemp, Display, TEXT("CoopPlayground: maze detail built, %d triangles in %d meshes, %d colliders, %d repo rocks"), Triangles, Meshes, Colliders, RepoRocks.Num());
 }
 
 void ACoopPlayground::BuildMaze()
