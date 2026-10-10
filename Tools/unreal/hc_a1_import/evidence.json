@@ -3,11 +3,19 @@
   "base_origin_main": "b9ed193fb35458f1c35588362d7a629949313362",
   "branch": "codex/hc-a1-import-tools",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
-  "offline_tests_passed": 16,
-  "test_output": "test_binary_inspection_mismatch_refused (__main__.SafetyChecks.test_binary_inspection_mismatch_refused) ... ok\ntest_default_dry_run_does_not_import_unreal_or_execute (__main__.SafetyChecks.test_default_dry_run_does_not_import_unreal_or_execute) ... ok\ntest_destination_isolation (__main__.SafetyChecks.test_destination_isolation) ... ok\ntest_execute_missing_bindings_refused_before_editor (__main__.SafetyChecks.test_execute_missing_bindings_refused_before_editor) ... ok\ntest_hash_mismatch_refused (__main__.SafetyChecks.test_hash_mismatch_refused) ... ok\ntest_missing_source_refused (__main__.SafetyChecks.test_missing_source_refused) ... ok\ntest_pointer_source_refused (__main__.SafetyChecks.test_pointer_source_refused) ... ok\ntest_repeat_run_existing_package_refused_before_factory (__main__.SafetyChecks.test_repeat_run_existing_package_refused_before_factory) ... ok\ntest_source_gate (__main__.SafetyChecks.test_source_gate) ... ok\ntest_source_path_traversal_refused (__main__.SafetyChecks.test_source_path_traversal_refused) ... ok\ntest_unknown_material_parameter_refused (__main__.SafetyChecks.test_unknown_material_parameter_refused) ... ok\ntest_unregistered_disk_content_refused (__main__.SafetyChecks.test_unregistered_disk_content_refused) ... ok\ntest_unverified_material_example_refused (__main__.SafetyChecks.test_unverified_material_example_refused) ... ok\ntest_wrong_active_editor_project_refused (__main__.SafetyChecks.test_wrong_active_editor_project_refused) ... ok\ntest_wrong_checkout_refused (__main__.SafetyChecks.test_wrong_checkout_refused) ... ok\ntest_wrong_engine_patch_refused (__main__.SafetyChecks.test_wrong_engine_patch_refused) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.144s\n\nOK\n",
+  "offline_tests_passed": 19,
+  "test_output": "test_binary_inspection_mismatch_refused (__main__.SafetyChecks.test_binary_inspection_mismatch_refused) ... ok\ntest_default_dry_run_does_not_import_unreal_or_execute (__main__.SafetyChecks.test_default_dry_run_does_not_import_unreal_or_execute) ... ok\ntest_destination_isolation (__main__.SafetyChecks.test_destination_isolation) ... ok\ntest_execute_missing_bindings_refused_before_editor (__main__.SafetyChecks.test_execute_missing_bindings_refused_before_editor) ... ok\ntest_extended_delivery_scope_rejects_unrelated_files (__main__.SafetyChecks.test_extended_delivery_scope_rejects_unrelated_files) ... ok\ntest_false_setter_return_uses_actual_readback (__main__.SafetyChecks.test_false_setter_return_uses_actual_readback) ... ok\ntest_hash_mismatch_refused (__main__.SafetyChecks.test_hash_mismatch_refused) ... ok\ntest_material_readback_mismatch_refused (__main__.SafetyChecks.test_material_readback_mismatch_refused) ... ok\ntest_missing_source_refused (__main__.SafetyChecks.test_missing_source_refused) ... ok\ntest_pointer_source_refused (__main__.SafetyChecks.test_pointer_source_refused) ... ok\ntest_repeat_run_existing_package_refused_before_factory (__main__.SafetyChecks.test_repeat_run_existing_package_refused_before_factory) ... ok\ntest_source_gate (__main__.SafetyChecks.test_source_gate) ... ok\ntest_source_path_traversal_refused (__main__.SafetyChecks.test_source_path_traversal_refused) ... ok\ntest_unknown_material_parameter_refused (__main__.SafetyChecks.test_unknown_material_parameter_refused) ... ok\ntest_unregistered_disk_content_refused (__main__.SafetyChecks.test_unregistered_disk_content_refused) ... ok\ntest_unverified_material_example_refused (__main__.SafetyChecks.test_unverified_material_example_refused) ... ok\ntest_wrong_active_editor_project_refused (__main__.SafetyChecks.test_wrong_active_editor_project_refused) ... ok\ntest_wrong_checkout_refused (__main__.SafetyChecks.test_wrong_checkout_refused) ... ok\ntest_wrong_engine_patch_refused (__main__.SafetyChecks.test_wrong_engine_patch_refused) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.205s\n\nOK\n",
   "python_syntax_passed": [
+    "build_preview.py",
+    "editor_smoke.py",
     "fbx_inspect.py",
+    "finish_assets.py",
     "import_relics.py",
+    "inspect_editor.py",
+    "inspect_placement.py",
+    "reopen_checks.py",
+    "run_editor.py",
+    "smoke_rpc.py",
     "validate_offline.py"
   ],
   "source_validation": {
@@ -31,7 +39,7 @@
         "collision": {
           "automatic": "box",
           "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-          "engine_acceptance_pending": true
+          "engine_acceptance_pending": false
         },
         "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol"
       },
@@ -52,7 +60,7 @@
         "collision": {
           "automatic": "box",
           "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-          "engine_acceptance_pending": true
+          "engine_acceptance_pending": false
         },
         "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask"
       },
@@ -73,7 +81,7 @@
         "collision": {
           "automatic": "box",
           "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-          "engine_acceptance_pending": true
+          "engine_acceptance_pending": false
         },
         "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab"
       },
@@ -95,8 +103,8 @@
         ],
         "collision": {
           "automatic": "none",
-          "plan": "Manually add and fit one box around stone only in Static Mesh Editor, excluding rope loops; approximately 39 cm depth, 55 cm stone width, 62 cm height. Bounds are a guide, not a measured stone-only hull.",
-          "engine_acceptance_pending": true
+          "plan": "After import, explicit finish_assets.py fits a stone-only simple box from measured M_Stone vertex bounds with 0.2 cm margin, symmetric XY fit and simple-as-complex queries. The raw importer creates no heart collider; outer rope loops remain clear.",
+          "engine_acceptance_pending": false
         },
         "destination": "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart"
       }
@@ -118,19 +126,53 @@
     ]
   },
   "lfs_hydration": "ac660245cfa29ce93cf12a14e1104306295d2ac4e89e6d8d892d34cdb8842dda * SourceArt/HC/HC-A1/SM_KeyRelic_StoneHeart.fbx\nc95c444417696bb2572648707664767088ad27219e793db54d703f801d134ea8 * SourceArt/HC/HC-A1/SM_Relic_GemScarab.fbx\n00a83fdd183c40b5bdd45ebb9568698594acfc4a8b1a9fb5130ec768ebfb4f7b * SourceArt/HC/HC-A1/SM_Relic_GoldIdol.fbx\nf3646b98573d1d013c657be78893119420e7e045559873c2d3ba7f6d71ad9703 * SourceArt/HC/HC-A1/SM_Relic_JadeMask.fbx",
-  "working_tree_scope_check": "Only Tools/unreal/hc_a1_import/ is changed",
+  "working_tree_scope_check": "Only HC-A1 tooling, isolated relic art and dedicated HC inspection map are changed",
   "default_dry_run_no_tooling_file_changes": true,
   "tooling_hashes": {
-    "fbx_inspect.py": "63eef57729ad5a9225adaaaddb661dda8945492a4e8f4b93e83755920ce644fc",
-    "import_relics.py": "f6ea58d2eb4bcbf6e15b1c9d7150ca4f87c2f691b79c433b2770058383339c98",
-    "manifest.json": "09970199b5ac0741cf5a74eb6b6f5af06176e536b68a319d5aa3ebc6a0520d05",
+    "build_preview.py": "0bdeb07b6ceee53504a31953d1f058105f75857c55cb8809efd449125088329b",
+    "delivery_state.json": "0c085fda9e582089832dcac08ba6461705e04f59b772ded2ad7143c3484a0110",
+    "editor_smoke.py": "cfc0009a1cb6fe142820dacf46039308a15d00989b797bf521f797ad526f94ca",
+    "engine_asset_validation.json": "63271b833430d5a7f21ef1f5645ca96641c09ad31d0b960018ff26a160634727",
+    "engine_import.json": "534d73025551c52994e133c19de5de333562a832acf080e497b86dcac13d6e5f",
+    "engine_import_preflight.json": "7a1b9b4d7d0a6e0eb8e6779584f30dce1e1e457bd964129e3a7a7d872c0d7e45",
+    "engine_persistence_validation.json": "2690d5dca034ce167fb8bd1d16c1a215250bc61ea85bb3e451799c89dae44a57",
+    "engine_preflight.json": "3368058ac89a3e9472e4be4da89d4950b8406cb14c8b6d309ec5e589a0c9f43b",
+    "engine_render_validation.json": "e2c7bda4c79ca59739fed73a4727661f9d82aa2b44250d5e347ab92e60013457",
+    "engine_smoke_validation.json": "160104ba72ad32f9ffb030eb9c625364e38263fb74ef128ccc8c3f45b56abaeb",
+    "fbx_inspect.py": "6003304d889ef303186971277f589afe0a52d6edee6c74be8fe99d08e5024d8d",
+    "finish_assets.py": "5c22ec010ffe4e5fe6999f61368b716c184c1341c6324ffe534f737eb9996efc",
+    "import_relics.py": "587190a10fb2fe69bbd2365fc19bc94ada530f74403eb61c3777b43f741772be",
+    "inspect_editor.py": "fef2d7ef0ed697b4a9ec852191df41e18e192cee7d46e5e43664b41257a8c9f7",
+    "inspect_placement.py": "3090125f73c2ea6413470ec5425c8ba43468d9a56408ce6b40cfc35406805fcf",
+    "manifest.json": "7e04e0814576d31adacfd9b1a3211a0c12be014c0e0e3a22c151415a722efb48",
     "material_bindings.example.json": "956fe67f2f0d647cde964e24da006caadadc356a5d6a377035a3372e45bf4d9f",
-    "README.md": "11a79ae9435236dc11f9720c7f48476d9285eb9e7b20067696f1ab0a91f301f2",
-    "validate_offline.py": "6231e6ca95c27cd323137365af58f08b5db65e13f043e1448f7393b8d0372c7f"
+    "material_bindings.reviewed.json": "d2ce8361e199da578b296ef67d0f6750ac5fefd66d730a5c81e2cb6da2ca4a04",
+    "placement_preflight.json": "d1bef67879d5e3f5e1ce26f14e6dae46f6b9cc1c2530bbe1f6063eca5bd4236c",
+    "README.md": "54fbc4e08168a9ed400eb44d09496766c79a63aded1749d3455172d07d819a2e",
+    "reopen_checks.py": "b4dc4d5477726c873269c751b5c8cdbb4612a3d60f1397843edff6d39b57b00e",
+    "run_editor.py": "186329bbc5a08d42fbfe67786215815acfc9d264486f753555728c9c81fce9a7",
+    "smoke_rpc.py": "4061111dae469cd7f422ff1071c758cd0e91c42651d1eeefb09bf9edb1984510",
+    "validate_offline.py": "2207fb3068503a8c4f16967b576838d86ecf0f7e08bac1b88d6779e23e9b767e",
+    "renders/overview.png": "1566848fdcabb779ea52cb42427df82784089eafb9594bcb63afb5fc508e325b",
+    "renders/SM_KeyRelic_StoneHeart.png": "9e85963fff5f22eae1808656219f2f1be19a7d47159369452f63f69d8599ea04",
+    "renders/SM_Relic_GemScarab.png": "93b3fae1f01dbfa73f219298197eb0e41fa8105dc3588394b122452ab12906a9",
+    "renders/SM_Relic_GoldIdol.png": "c02f01feffea0072c6ab3947bfade5f0fb0565758c479d39df9476ef079a1986",
+    "renders/SM_Relic_JadeMask.png": "9e03121824174421053e2021f633c255322d4008b686ffaca4c6d4390cd541a6"
   },
-  "editor_launched_or_controlled": false,
-  "engine_import_tested": false,
-  "gameplay_tested": false,
+  "asset_hashes": {
+    "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan.uasset": "e7ecf7675653d891e552063267522256bc9a1958964e2a9f2f3ee61561d11908",
+    "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone.uasset": "e5b38ab38394ecf3eab602b764c91005705ee48548e8c949386292a8a0b6d1ad",
+    "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow.uasset": "ef2742c7a9e08e486da100f31a5df037b6ed70216cd854eaf5d1079ff3df270d",
+    "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.uasset": "08df449e83379c82bb99b383f7088a19692940cb3487d1104fb36c0ccdf57e1b",
+    "Content/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.uasset": "305d4f45a3673d15ba88c3294adc851278f32abd44aa69090498c9a0181c8273",
+    "Content/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.uasset": "54aee76b8974c47d8b2827832343e6ea9c1afac014e018764212e15d531e60f2",
+    "Content/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.uasset": "6bd6fc39ed99167b1488ff265d6829222294ecca66eb299d3ad8a105bb3688e5",
+    "Content/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.uasset": "d3c9ef0a81d1c4588eb0bcb677abddb90769b5bc53b02d52b4fdaa97d0c751f7",
+    "Content/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.uasset": "e9a6a840e6e85b0e5ea55b2aca8a5d4881067c52c95fc4d7ffbb65c948d256aa"
+  },
+  "offline_validation_uses_editor": false,
+  "engine_import_tested": true,
+  "gameplay_pickup_or_carry_tested": false,
   "mock_tests_note": "Editor refusal cases use a fake API only; these are not Unreal validation.",
   "installed_api_reference": {
     "engine": "5.8.3",

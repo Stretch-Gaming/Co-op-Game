@@ -1,0 +1,10 @@
+{
+  "mask_source": "/Game/Shared/Style/T_Stylized_MaskDefault.T_Stylized_MaskDefault",
+  "mask_srgb": false,
+  "mask_compression": "<TextureCompressionSettings.TC_MASKS: 2>",
+  "mask_size": [
+    4,
+    4
+  ],
+  "actors": []
+}

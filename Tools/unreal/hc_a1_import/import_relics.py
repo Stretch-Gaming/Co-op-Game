@@ -136,6 +136,8 @@ def editor_preflight(root, manifest, bindings):
     require(not disk_folder.exists() or not any(disk_folder.rglob("*")), "Destination folder has disk content (including unregistered packages)")
     planned = [a["destination"] for a in manifest["assets"]] + [m["destination"] for m in manifest["material_proposals"]]
     require(not any(ue.EditorAssetLibrary.does_asset_exist(p) for p in planned), "A planned package already exists")
+    require(ue.get_editor_subsystem(ue.StaticMeshEditorSubsystem) is not None,
+            "StaticMeshEditorSubsystem unavailable; use the full editor, not PythonScript commandlet execution")
     # Construct options before mutations so unsupported API properties fail early.
     ui = ue.FbxImportUI()
     for key, value in {"import_mesh": True, "import_as_skeletal": False, "import_materials": False,
@@ -159,6 +161,22 @@ def editor_preflight(root, manifest, bindings):
                                     "destination_empty": True, "execution_ready": bindings is not None}
 
 
+def apply_instance_bindings(ue, instance, values):
+    # UE 5.8.3's setter implementations return false even after applying values.
+    # Verify the actual instance values rather than treating that bool as success.
+    library = ue.MaterialEditingLibrary
+    for name, value in values["scalars"].items():
+        library.set_material_instance_scalar_parameter_value(instance, name, value)
+        actual = library.get_material_instance_scalar_parameter_value(instance, name)
+        require(math.isclose(actual, value, abs_tol=0.00001), "Scalar readback mismatch: " + name)
+    for name, value in values["vectors"].items():
+        library.set_material_instance_vector_parameter_value(instance, name, ue.LinearColor(*value))
+        actual = library.get_material_instance_vector_parameter_value(instance, name)
+        require(all(math.isclose(a, b, abs_tol=0.00001) for a, b in zip((actual.r, actual.g, actual.b, actual.a), value)),
+                "Vector readback mismatch: " + name)
+    library.update_material_instance(instance)
+
+
 def execute(root, manifest, bindings, context):
     ue, parent, ui, factory, _ = context
     tools = ue.AssetToolsHelpers.get_asset_tools()
@@ -174,12 +192,9 @@ def execute(root, manifest, bindings, context):
             require(instance is not None, "Could not create " + path)
             created.append(instance)
             ue.MaterialEditingLibrary.set_material_instance_parent(instance, parent)
+            require(instance.get_editor_property("parent") == parent, "Material parent readback mismatch")
             values = bindings["profiles"][proposal["id"]]
-            for name, value in values["scalars"].items():
-                require(ue.MaterialEditingLibrary.set_material_instance_scalar_parameter_value(instance, name, value), "Scalar binding failed: " + name)
-            for name, value in values["vectors"].items():
-                require(ue.MaterialEditingLibrary.set_material_instance_vector_parameter_value(instance, name, ue.LinearColor(*value)), "Vector binding failed: " + name)
-            ue.MaterialEditingLibrary.update_material_instance(instance)
+            apply_instance_bindings(ue, instance, values)
             material_paths[proposal["id"]] = instance
         for asset in manifest["assets"]:
             path = isolated(asset["destination"])

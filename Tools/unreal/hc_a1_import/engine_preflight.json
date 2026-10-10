@@ -1,0 +1,692 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "parent_path": "/Game/Shared/Style/M_Stylized.M_Stylized",
+  "parent_sha256_before": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9",
+  "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+  "scalars": {
+    "UVTiling": 1.0,
+    "WorldTileSize": 200.0,
+    "WorldBlendSharpness": 4.0,
+    "GradientBias": 0.0,
+    "GradientStrength": 1.0,
+    "CavityThreshold": 0.4000000059604645,
+    "CavityStrength": 0.5,
+    "EdgeThreshold": 0.6000000238418579,
+    "EdgeStrength": 0.3499999940395355,
+    "RoughnessMultiplier": 0.8999999761581421,
+    "MetallicMultiplier": 1.0,
+    "MetallicOffset": 0.0,
+    "RimExponent": 3.0,
+    "RimStrength": 0.0
+  },
+  "vectors": {
+    "Tint": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "GradientBottomColor": [
+      0.3499999940395355,
+      0.36000001430511475,
+      0.47999998927116394,
+      1.0
+    ],
+    "GradientTopColor": [
+      1.0,
+      0.9700000286102295,
+      0.9200000166893005,
+      1.0
+    ],
+    "EdgeColor": [
+      1.0,
+      0.7605245113372803,
+      0.4793201684951782,
+      1.0
+    ],
+    "RimColor": [
+      1.0,
+      0.7605245113372803,
+      0.4793201684951782,
+      1.0
+    ]
+  },
+  "textures": {
+    "BaseColorTexture": "/Engine/EngineResources/WhiteSquareTexture.WhiteSquareTexture",
+    "MaskTexture": "/Game/Shared/Style/T_Stylized_MaskDefault.T_Stylized_MaskDefault"
+  },
+  "static_switches": {
+    "UseWorldAligned": false
+  },
+  "roughness_graph": {
+    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionSaturate_3",
+    "class": "MaterialExpressionSaturate",
+    "inputs": [
+      {
+        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_12",
+        "class": "MaterialExpressionMultiply",
+        "const_a": "0.0",
+        "const_b": "1.0",
+        "inputs": [
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_10",
+            "class": "MaterialExpressionComponentMask",
+            "r": "False",
+            "g": "True",
+            "b": "False",
+            "inputs": [
+              {
+                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionStaticSwitchParameter_1",
+                "class": "MaterialExpressionStaticSwitchParameter",
+                "parameter_name": "UseWorldAligned",
+                "default_value": "False",
+                "inputs": [
+                  {
+                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAdd_3",
+                    "class": "MaterialExpressionAdd",
+                    "const_a": "0.0",
+                    "const_b": "1.0",
+                    "inputs": [
+                      {
+                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAdd_2",
+                        "class": "MaterialExpressionAdd",
+                        "const_a": "0.0",
+                        "const_b": "1.0",
+                        "inputs": [
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_4",
+                            "class": "MaterialExpressionMultiply",
+                            "const_a": "0.0",
+                            "const_b": "1.0",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_5",
+                                "class": "MaterialExpressionTextureSample",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_0",
+                                    "class": "MaterialExpressionComponentMask",
+                                    "r": "False",
+                                    "g": "True",
+                                    "b": "True",
+                                    "inputs": [
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0",
+                                        "class": "MaterialExpressionDivide",
+                                        "const_a": "1.0",
+                                        "const_b": "2.0",
+                                        "inputs": [
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionWorldPosition_0",
+                                            "class": "MaterialExpressionWorldPosition",
+                                            "inputs": []
+                                          },
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_1",
+                                            "class": "MaterialExpressionScalarParameter",
+                                            "parameter_name": "WorldTileSize",
+                                            "default_value": "200.0",
+                                            "inputs": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1",
+                                    "class": "MaterialExpressionTextureObjectParameter",
+                                    "parameter_name": "MaskTexture",
+                                    "inputs": [
+                                      null,
+                                      null
+                                    ]
+                                  },
+                                  null
+                                ]
+                              },
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_3",
+                                "class": "MaterialExpressionComponentMask",
+                                "r": "True",
+                                "g": "False",
+                                "b": "False",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1",
+                                    "class": "MaterialExpressionDivide",
+                                    "const_a": "1.0",
+                                    "const_b": "2.0",
+                                    "inputs": [
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionPower_0",
+                                        "class": "MaterialExpressionPower",
+                                        "inputs": [
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAbs_0",
+                                            "class": "MaterialExpressionAbs",
+                                            "inputs": [
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionVertexNormalWS_0",
+                                                "class": "MaterialExpressionVertexNormalWS",
+                                                "inputs": []
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_2",
+                                            "class": "MaterialExpressionScalarParameter",
+                                            "parameter_name": "WorldBlendSharpness",
+                                            "default_value": "4.0",
+                                            "inputs": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDotProduct_0",
+                                        "class": "MaterialExpressionDotProduct",
+                                        "inputs": [
+                                          {
+                                            "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionPower_0"
+                                          },
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionConstant3Vector_0",
+                                            "class": "MaterialExpressionConstant3Vector",
+                                            "constant": [
+                                              1.0,
+                                              1.0,
+                                              1.0,
+                                              1.0
+                                            ],
+                                            "inputs": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_5",
+                            "class": "MaterialExpressionMultiply",
+                            "const_a": "0.0",
+                            "const_b": "1.0",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_6",
+                                "class": "MaterialExpressionTextureSample",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_1",
+                                    "class": "MaterialExpressionComponentMask",
+                                    "r": "True",
+                                    "g": "False",
+                                    "b": "True",
+                                    "inputs": [
+                                      {
+                                        "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                                  },
+                                  null
+                                ]
+                              },
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_4",
+                                "class": "MaterialExpressionComponentMask",
+                                "r": "False",
+                                "g": "True",
+                                "b": "False",
+                                "inputs": [
+                                  {
+                                    "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_6",
+                        "class": "MaterialExpressionMultiply",
+                        "const_a": "0.0",
+                        "const_b": "1.0",
+                        "inputs": [
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_7",
+                            "class": "MaterialExpressionTextureSample",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_2",
+                                "class": "MaterialExpressionComponentMask",
+                                "r": "True",
+                                "g": "True",
+                                "b": "False",
+                                "inputs": [
+                                  {
+                                    "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0"
+                                  }
+                                ]
+                              },
+                              {
+                                "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                              },
+                              null
+                            ]
+                          },
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_5",
+                            "class": "MaterialExpressionComponentMask",
+                            "r": "False",
+                            "g": "False",
+                            "b": "True",
+                            "inputs": [
+                              {
+                                "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_4",
+                    "class": "MaterialExpressionTextureSample",
+                    "inputs": [
+                      {
+                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_0",
+                        "class": "MaterialExpressionMultiply",
+                        "const_a": "0.0",
+                        "const_b": "1.0",
+                        "inputs": [
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureCoordinate_0",
+                            "class": "MaterialExpressionTextureCoordinate",
+                            "inputs": []
+                          },
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_0",
+                            "class": "MaterialExpressionScalarParameter",
+                            "parameter_name": "UVTiling",
+                            "default_value": "1.0",
+                            "inputs": []
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                      },
+                      null
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_9",
+            "class": "MaterialExpressionScalarParameter",
+            "parameter_name": "RoughnessMultiplier",
+            "default_value": "0.8999999761581421",
+            "inputs": []
+          }
+        ]
+      }
+    ]
+  },
+  "metallic_graph": {
+    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionSaturate_4",
+    "class": "MaterialExpressionSaturate",
+    "inputs": [
+      {
+        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAdd_6",
+        "class": "MaterialExpressionAdd",
+        "const_a": "0.0",
+        "const_b": "1.0",
+        "inputs": [
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_13",
+            "class": "MaterialExpressionMultiply",
+            "const_a": "0.0",
+            "const_b": "1.0",
+            "inputs": [
+              {
+                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_11",
+                "class": "MaterialExpressionComponentMask",
+                "r": "False",
+                "g": "False",
+                "b": "True",
+                "inputs": [
+                  {
+                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionStaticSwitchParameter_1",
+                    "class": "MaterialExpressionStaticSwitchParameter",
+                    "parameter_name": "UseWorldAligned",
+                    "default_value": "False",
+                    "inputs": [
+                      {
+                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAdd_3",
+                        "class": "MaterialExpressionAdd",
+                        "const_a": "0.0",
+                        "const_b": "1.0",
+                        "inputs": [
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAdd_2",
+                            "class": "MaterialExpressionAdd",
+                            "const_a": "0.0",
+                            "const_b": "1.0",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_4",
+                                "class": "MaterialExpressionMultiply",
+                                "const_a": "0.0",
+                                "const_b": "1.0",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_5",
+                                    "class": "MaterialExpressionTextureSample",
+                                    "inputs": [
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_0",
+                                        "class": "MaterialExpressionComponentMask",
+                                        "r": "False",
+                                        "g": "True",
+                                        "b": "True",
+                                        "inputs": [
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0",
+                                            "class": "MaterialExpressionDivide",
+                                            "const_a": "1.0",
+                                            "const_b": "2.0",
+                                            "inputs": [
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionWorldPosition_0",
+                                                "class": "MaterialExpressionWorldPosition",
+                                                "inputs": []
+                                              },
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_1",
+                                                "class": "MaterialExpressionScalarParameter",
+                                                "parameter_name": "WorldTileSize",
+                                                "default_value": "200.0",
+                                                "inputs": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1",
+                                        "class": "MaterialExpressionTextureObjectParameter",
+                                        "parameter_name": "MaskTexture",
+                                        "inputs": [
+                                          null,
+                                          null
+                                        ]
+                                      },
+                                      null
+                                    ]
+                                  },
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_3",
+                                    "class": "MaterialExpressionComponentMask",
+                                    "r": "True",
+                                    "g": "False",
+                                    "b": "False",
+                                    "inputs": [
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1",
+                                        "class": "MaterialExpressionDivide",
+                                        "const_a": "1.0",
+                                        "const_b": "2.0",
+                                        "inputs": [
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionPower_0",
+                                            "class": "MaterialExpressionPower",
+                                            "inputs": [
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionAbs_0",
+                                                "class": "MaterialExpressionAbs",
+                                                "inputs": [
+                                                  {
+                                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionVertexNormalWS_0",
+                                                    "class": "MaterialExpressionVertexNormalWS",
+                                                    "inputs": []
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_2",
+                                                "class": "MaterialExpressionScalarParameter",
+                                                "parameter_name": "WorldBlendSharpness",
+                                                "default_value": "4.0",
+                                                "inputs": []
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDotProduct_0",
+                                            "class": "MaterialExpressionDotProduct",
+                                            "inputs": [
+                                              {
+                                                "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionPower_0"
+                                              },
+                                              {
+                                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionConstant3Vector_0",
+                                                "class": "MaterialExpressionConstant3Vector",
+                                                "constant": [
+                                                  1.0,
+                                                  1.0,
+                                                  1.0,
+                                                  1.0
+                                                ],
+                                                "inputs": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_5",
+                                "class": "MaterialExpressionMultiply",
+                                "const_a": "0.0",
+                                "const_b": "1.0",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_6",
+                                    "class": "MaterialExpressionTextureSample",
+                                    "inputs": [
+                                      {
+                                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_1",
+                                        "class": "MaterialExpressionComponentMask",
+                                        "r": "True",
+                                        "g": "False",
+                                        "b": "True",
+                                        "inputs": [
+                                          {
+                                            "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                                      },
+                                      null
+                                    ]
+                                  },
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_4",
+                                    "class": "MaterialExpressionComponentMask",
+                                    "r": "False",
+                                    "g": "True",
+                                    "b": "False",
+                                    "inputs": [
+                                      {
+                                        "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_6",
+                            "class": "MaterialExpressionMultiply",
+                            "const_a": "0.0",
+                            "const_b": "1.0",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_7",
+                                "class": "MaterialExpressionTextureSample",
+                                "inputs": [
+                                  {
+                                    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_2",
+                                    "class": "MaterialExpressionComponentMask",
+                                    "r": "True",
+                                    "g": "True",
+                                    "b": "False",
+                                    "inputs": [
+                                      {
+                                        "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_0"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                                  },
+                                  null
+                                ]
+                              },
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionComponentMask_5",
+                                "class": "MaterialExpressionComponentMask",
+                                "r": "False",
+                                "g": "False",
+                                "b": "True",
+                                "inputs": [
+                                  {
+                                    "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionDivide_1"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureSample_4",
+                        "class": "MaterialExpressionTextureSample",
+                        "inputs": [
+                          {
+                            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_0",
+                            "class": "MaterialExpressionMultiply",
+                            "const_a": "0.0",
+                            "const_b": "1.0",
+                            "inputs": [
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureCoordinate_0",
+                                "class": "MaterialExpressionTextureCoordinate",
+                                "inputs": []
+                              },
+                              {
+                                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_0",
+                                "class": "MaterialExpressionScalarParameter",
+                                "parameter_name": "UVTiling",
+                                "default_value": "1.0",
+                                "inputs": []
+                              }
+                            ]
+                          },
+                          {
+                            "ref": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionTextureObjectParameter_1"
+                          },
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_10",
+                "class": "MaterialExpressionScalarParameter",
+                "parameter_name": "MetallicMultiplier",
+                "default_value": "1.0",
+                "inputs": []
+              }
+            ]
+          },
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_11",
+            "class": "MaterialExpressionScalarParameter",
+            "parameter_name": "MetallicOffset",
+            "default_value": "0.0",
+            "inputs": []
+          }
+        ]
+      }
+    ]
+  },
+  "emissive_graph": {
+    "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_15",
+    "class": "MaterialExpressionMultiply",
+    "const_a": "0.0",
+    "const_b": "1.0",
+    "inputs": [
+      {
+        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionMultiply_14",
+        "class": "MaterialExpressionMultiply",
+        "const_a": "0.0",
+        "const_b": "1.0",
+        "inputs": [
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionFresnel_0",
+            "class": "MaterialExpressionFresnel",
+            "inputs": [
+              {
+                "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_12",
+                "class": "MaterialExpressionScalarParameter",
+                "parameter_name": "RimExponent",
+                "default_value": "3.0",
+                "inputs": []
+              },
+              null,
+              null
+            ]
+          },
+          {
+            "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionVectorParameter_4",
+            "class": "MaterialExpressionVectorParameter",
+            "parameter_name": "RimColor",
+            "default_value": [
+              1.0,
+              0.7605245113372803,
+              0.4793201684951782,
+              1.0
+            ],
+            "inputs": []
+          }
+        ]
+      },
+      {
+        "path": "/Game/Shared/Style/M_Stylized.M_Stylized:MaterialExpressionScalarParameter_13",
+        "class": "MaterialExpressionScalarParameter",
+        "parameter_name": "RimStrength",
+        "default_value": "0.0",
+        "inputs": []
+      }
+    ]
+  },
+  "parent_sha256_after": "ed0865b6345022cdf19fde9bf660756f0ea17b2bedece13a1e860ecd4e20e1d9"
+}

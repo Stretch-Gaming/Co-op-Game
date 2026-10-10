@@ -19,6 +19,11 @@ import import_relics as importer
 ROOT = importer.ROOT
 MANIFEST = json.loads((HERE / "manifest.json").read_text())
 
+def owned_path(path):
+    return (path.startswith("Tools/unreal/hc_a1_import/")
+            or path.startswith("Content/Puzzles/Art/HCA1_Relics/")
+            or path == "Content/Puzzles/Test/L_HCA1_AssetTest.umap")
+
 
 def fake_editor(project=ROOT, version="5.8.3-58210709+++UE5+Release-5.8", existing=()):
     class Material:
@@ -36,6 +41,30 @@ def fake_editor(project=ROOT, version="5.8.3-58210709+++UE5+Release-5.8", existi
 
 
 class SafetyChecks(unittest.TestCase):
+    def test_extended_delivery_scope_rejects_unrelated_files(self):
+        self.assertTrue(owned_path("Content/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.uasset"))
+        self.assertTrue(owned_path("Content/Puzzles/Test/L_HCA1_AssetTest.umap"))
+        for path in ("Content/Core/BP_CoopGameMode.uasset", "Content/Puzzles/L_Site01_HC.umap", "Content/Shared/Style/M_Stylized.uasset", "Tools/unreal/hc1_build.py"):
+            self.assertFalse(owned_path(path))
+    def test_false_setter_return_uses_actual_readback(self):
+        values = {"scalars": {"RoughnessMultiplier": 0.3}, "vectors": {"Tint": [0.2, 0.3, 0.4, 1.0]}}
+        library = types.SimpleNamespace(
+            set_material_instance_scalar_parameter_value=lambda *a: False,
+            get_material_instance_scalar_parameter_value=lambda *a: 0.3,
+            set_material_instance_vector_parameter_value=lambda *a: False,
+            get_material_instance_vector_parameter_value=lambda *a: types.SimpleNamespace(r=0.2,g=0.3,b=0.4,a=1.0),
+            update_material_instance=Mock())
+        ue = types.SimpleNamespace(MaterialEditingLibrary=library, LinearColor=lambda *a: a)
+        importer.apply_instance_bindings(ue, object(), values)
+        library.update_material_instance.assert_called_once()
+
+    def test_material_readback_mismatch_refused(self):
+        library = types.SimpleNamespace(set_material_instance_scalar_parameter_value=lambda *a: False,
+            get_material_instance_scalar_parameter_value=lambda *a: 0.9)
+        with self.assertRaisesRegex(ValueError, "Scalar readback mismatch"):
+            importer.apply_instance_bindings(types.SimpleNamespace(MaterialEditingLibrary=library), object(),
+                {"scalars": {"RoughnessMultiplier": 0.3}, "vectors": {}})
+
     def test_source_gate(self):
         manifest, report = importer.validate()
         self.assertEqual(len(report["assets"]), 4)
@@ -139,7 +168,7 @@ def main():
     lfs = git("lfs", "ls-files", "-l", "--include=SourceArt/HC/HC-A1/*.fbx")
     importer.require(len(lfs.splitlines()) == 4 and all(" * " in line for line in lfs.splitlines()), "Expected four hydrated LFS FBXs")
     dirty = git("status", "--porcelain", "--untracked-files=all")
-    importer.require(all(line[3:].strip('"').replace('\\', '/').startswith("Tools/unreal/hc_a1_import/") for line in dirty.splitlines()), "Writes outside tooling scope")
+    importer.require(all(owned_path(line[3:].strip('"').replace('\\', '/')) for line in dirty.splitlines()), "Writes outside authorized HC-A1 scope")
     before = {p: importer.digest(p) for p in HERE.rglob("*") if p.is_file()}
     dry = subprocess.run([sys.executable, str(HERE / "import_relics.py")], cwd=ROOT, capture_output=True, text=True, check=True)
     importer.require(json.loads(dry.stdout)["writes_performed"] is False, "Dry-run write flag")
@@ -148,9 +177,10 @@ def main():
                 "branch": git("branch", "--show-current"), "python": sys.version,
                 "offline_tests_passed": result.testsRun, "test_output": stream.getvalue(), "python_syntax_passed": syntax,
                 "source_validation": json.loads(dry.stdout), "lfs_hydration": lfs,
-                "working_tree_scope_check": "Only Tools/unreal/hc_a1_import/ is changed", "default_dry_run_no_tooling_file_changes": True,
-                "tooling_hashes": {p.name: value for p, value in before.items() if p.name not in ("evidence.json", "dry_run.txt")},
-                "editor_launched_or_controlled": False, "engine_import_tested": False, "gameplay_tested": False,
+                "working_tree_scope_check": "Only HC-A1 tooling, isolated relic art and dedicated HC inspection map are changed", "default_dry_run_no_tooling_file_changes": True,
+                "tooling_hashes": {p.relative_to(HERE).as_posix(): value for p, value in before.items() if p.name not in ("evidence.json", "dry_run.txt")},
+                "asset_hashes": {p.relative_to(ROOT).as_posix(): importer.digest(p) for p in (ROOT / "Content/Puzzles/Art/HCA1_Relics").glob("*.uasset")},
+                "offline_validation_uses_editor": False, "engine_import_tested": (HERE / "engine_asset_validation.json").is_file(), "gameplay_pickup_or_carry_tested": False,
                 "mock_tests_note": "Editor refusal cases use a fake API only; these are not Unreal validation.",
                 "installed_api_reference": {"engine": "5.8.3", "changelist": 58210709,
                     "headers_read": ["Engine/Build/Build.version", "AssetImportTask.h", "FbxStaticMeshImportData.h", "FbxMeshImportData.h", "StaticMesh.h", "MaterialEditingLibrary.h", "StaticMeshEditorSubsystem.h", "UnrealEditorSubsystem.h"]}}

@@ -1,0 +1,42 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "saved_test_level": "/Game/Puzzles/Test/L_HCA1_AssetTest",
+  "style_map_loaded_read_only": "/Game/Shared/Style/L_StyleTest",
+  "shared_map_saved": false,
+  "reference_character_height_cm": 180.0,
+  "actors_created_in_owned_test_level": [
+    "HCA1_TestFloor",
+    "HCA1_Plinth_SM_Relic_GoldIdol",
+    "HCA1_SM_Relic_GoldIdol",
+    "HCA1_Headlamp_0",
+    "HCA1_CaveFill_0",
+    "HCA1_Camera_SM_Relic_GoldIdol",
+    "HCA1_Plinth_SM_Relic_JadeMask",
+    "HCA1_SM_Relic_JadeMask",
+    "HCA1_Headlamp_1",
+    "HCA1_CaveFill_1",
+    "HCA1_Camera_SM_Relic_JadeMask",
+    "HCA1_Plinth_SM_Relic_GemScarab",
+    "HCA1_SM_Relic_GemScarab",
+    "HCA1_Headlamp_2",
+    "HCA1_CaveFill_2",
+    "HCA1_Camera_SM_Relic_GemScarab",
+    "HCA1_Plinth_SM_KeyRelic_StoneHeart",
+    "HCA1_SM_KeyRelic_StoneHeart",
+    "HCA1_Headlamp_3",
+    "HCA1_CaveFill_3",
+    "HCA1_Camera_SM_KeyRelic_StoneHeart",
+    "HCA1_Reference_TemplateCharacter_180cm",
+    "HCA1_FixedCaveExposure",
+    "HCA1_Camera_Overview"
+  ],
+  "renders": [
+    "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game\\Tools\\unreal\\hc_a1_import\\renders\\overview.png",
+    "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game\\Tools\\unreal\\hc_a1_import\\renders\\SM_Relic_GoldIdol.png",
+    "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game\\Tools\\unreal\\hc_a1_import\\renders\\SM_Relic_JadeMask.png",
+    "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game\\Tools\\unreal\\hc_a1_import\\renders\\SM_Relic_GemScarab.png",
+    "C:\\Users\\Stretch\\.codex\\worktrees\\hc-a1-import-tools\\Co op Game\\Tools\\unreal\\hc_a1_import\\renders\\SM_KeyRelic_StoneHeart.png"
+  ],
+  "gameplay_acceptance": false
+}

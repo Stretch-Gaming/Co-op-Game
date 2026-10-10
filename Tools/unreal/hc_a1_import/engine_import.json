@@ -1,0 +1,16 @@
+{
+  "mode": "executed",
+  "created": [
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicGold.MI_HCA1_RelicGold",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_RelicJade.MI_HCA1_RelicJade",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_IdolJadeGlow.MI_HCA1_IdolJadeGlow",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartStone.MI_HCA1_HeartStone",
+    "/Game/Puzzles/Art/HCA1_Relics/MI_HCA1_HeartRopeTan.MI_HCA1_HeartRopeTan",
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GoldIdol.SM_Relic_GoldIdol",
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_JadeMask.SM_Relic_JadeMask",
+    "/Game/Puzzles/Art/HCA1_Relics/SM_Relic_GemScarab.SM_Relic_GemScarab",
+    "/Game/Puzzles/Art/HCA1_Relics/SM_KeyRelic_StoneHeart.SM_KeyRelic_StoneHeart"
+  ],
+  "acceptance_pending": true,
+  "heart_collision_pending": true
+}

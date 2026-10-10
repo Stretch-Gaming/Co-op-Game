@@ -1,0 +1,25 @@
+{
+  "engine": "5.8.3",
+  "complete": [
+    "source verification and unchanged-source fingerprints",
+    "four mesh/five material imports",
+    "source dimensions, slots, normals, UVs and Nanite source triangle counts",
+    "material parameter readback and idol emission",
+    "simple collision with outer heart handles excluded",
+    "HC-owned inspection level and Windows rendered review",
+    "Play As Client static-art loading with 2, 3 and 4 clients",
+    "successful engine logs contain no errors or Accessed None",
+    "fresh-load persistence, reimport source paths and isolated dependency checks"
+  ],
+  "pending": [
+    "BP_Relic placement/pickup integration from #8",
+    "BP_KeyRelic placement/carry integration from #10",
+    "gameplay in-place acceptance",
+    "rendered host split-screen review",
+    "Mac/Nanite fallback review"
+  ],
+  "gameplay_sublevel_current_state": "L_Site01_HC empty; no relic gameplay actor classes on current main",
+  "issue18_in_place_complete": false,
+  "shared_material_or_persistent_map_saved": false,
+  "hosted_subagents_used": false
+}

@@ -4,7 +4,7 @@ import zlib
 from pathlib import Path
 
 
-def inspect_fbx(path):
+def inspect_fbx(path, include_material_bounds=False):
     data = Path(path).read_bytes()
     if not data.startswith(b"Kaydara FBX Binary  \x00\x1a\x00"):
         raise ValueError("Not a hydrated binary FBX: " + str(path))
@@ -106,7 +106,7 @@ def inspect_fbx(path):
     material_properties = {m["props"][1].split("\x00")[0]:
                            {p["props"][0]: p["props"][4:] for p in children(children(m, "Properties70")[0], "P")}
                            for m in materials}
-    return {"fbx_version": version, "mesh_count": len(meshes), "vertex_count": len(vertices) // 3,
+    result = {"fbx_version": version, "mesh_count": len(meshes), "vertex_count": len(vertices) // 3,
             "polygon_count": len(faces), "triangles": sum(n - 2 for n in faces),
             "all_triangles": all(n == 3 for n in faces), "material_slots": slots,
             "has_normals": bool(children(mesh, "LayerElementNormal")),
@@ -115,3 +115,22 @@ def inspect_fbx(path):
             "raw_vertex_dimensions": [b - a for a, b in zip(bounds_min, bounds_max)],
             "global_settings": axis_units, "model_transforms": transforms,
             "material_properties": material_properties}
+    if include_material_bounds:
+        layer = children(mesh, "LayerElementMaterial")[0]
+        if children(layer, "MappingInformationType")[0]["props"][0] != "ByPolygon":
+            raise ValueError("Expected ByPolygon material mapping")
+        assignments = children(layer, "Materials")[0]["props"][0]
+        if len(assignments) != len(faces):
+            raise ValueError("Material assignment count mismatch")
+        grouped = {slot: [] for slot in slots}
+        pos = 0
+        for size, slot_index in zip(faces, assignments):
+            for index in indices[pos:pos + size]:
+                vertex = index if index >= 0 else -index - 1
+                grouped[slots[slot_index]].append(vertices[vertex * 3:vertex * 3 + 3])
+            pos += size
+        result["material_vertex_bounds_cm"] = {
+            slot: {"min": [min(v[i] for v in points) * 100 for i in range(3)],
+                   "max": [max(v[i] for v in points) * 100 for i in range(3)]}
+            for slot, points in grouped.items() if points}
+    return result

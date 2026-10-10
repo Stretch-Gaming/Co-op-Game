@@ -1,107 +1,82 @@
-# HC-A1 relic import tooling (#18)
+# HC-A1 relic import and validation (#18)
 
-This delivery prepares Stretch's HC lane for a later Unreal 5.8.3 editor import. It does not import assets, launch/control Unreal, replace greybox, or pass in-place acceptance. The only authored files are in `Tools/unreal/hc_a1_import/`.
+All four supplied relics are imported in UE 5.8.3 under `/Game/Puzzles/Art/HCA1_Relics/`, with five uniquely named instances of the existing read-only `M_Stylized`, Nanite, source normals and simple collision. `Content/Puzzles/Test/L_HCA1_AssetTest.umap` provides an HC inspection scene with a 1.8 m template-character reference. Sources were not regenerated, resized or redesigned.
 
-Context read: `AGENTS.md`, `docs/assets.md`, `docs/art/style.md`, `docs/mcp.md`, [issue #18 and all three comments](https://github.com/Stretch-Gaming/Co-op-Game/issues/18), and [merged PR #65](https://github.com/Stretch-Gaming/Co-op-Game/pull/65). PR #65 merged at `f2d0800b0c552b9da8819d60f4fc2a35fb3a1afb`. The checkout started at fetched `origin/main` `b9ed193fb35458f1c35588362d7a629949313362`. Source license/provenance is already recorded on #18: team-authored Blender outputs, own work, no attribution required. No source was regenerated or redesigned. LFS hydration restores the existing four FBX objects without changing their tracked contents.
+**Still pending:** gameplay placement/replacement, pickup/carry acceptance, rendered split-screen review and Mac/fallback review. Current main has neither `BP_Relic` (#8) nor `BP_KeyRelic` (#10), and `L_Site01_HC` is empty. This delivery creates no stand-in gameplay logic and does not claim #18's in-place gate. PR #70 remains unmerged.
 
-## Files
+## Delivered evidence
 
-- `manifest.json`: exact repository-relative source paths, byte sizes and SHA-256 hashes for FBXs, validation reports and generating scripts; shared HC-A1 helper fingerprint; full source reports and independent binary FBX inspection; nominal dimensions, slots, preserved choices, materials, collision plans and destinations.
-- `import_relics.py`: default read-only dry run; opt-in editor preflight and execution.
-- `fbx_inspect.py`: standard-library binary FBX inspection (one reviewed mesh per file; not a general FBX SDK).
-- `material_bindings.example.json`: **unverified proposal**, deliberately disabled for execution. Five uniquely named material instances inside the relic folder.
-- `validate_offline.py`, `evidence.json`, `dry_run.txt`: reproducible offline checks and captured results. Evidence hashes exclude the evidence file and dry-run capture themselves.
+- `manifest.json`: exact source paths, byte sizes and SHA-256/LFS fingerprints; complete source validation reports; independent binary FBX topology, transforms, UVs, normals, materials and nominal/source dimension distinction.
+- `material_bindings.reviewed.json`, `engine_preflight.json`, `placement_preflight.json`: actual UE 5.8.3 parent parameters, graph response and source-mask inspection. The original example remains deliberately unverified.
+- `engine_import.json`: successful creation of four meshes and five instances. Its heart-collision-pending flag describes that initial stage; `engine_asset_validation.json` records the finished collision and saved asset checks.
+- `engine_asset_validation.json`: source dimensions, ordered slots, material values, UVs, original Nanite triangle counts, reduced render-fallback counts and simple collision.
+- `engine_render_validation.json`, `renders/`: Windows renders in a transient `L_StyleTest` session, with only the owned HC test level saved. Shared map/material bytes are unchanged. The primary agent visually reviewed all five final images.
+- `engine_smoke_validation.json`: stone/handle collision probes and 2-, 3- and 4-client asset-loading checks in `L_Site01`, with the HC inspection level mounted only in memory. This proves asset loading, not collection/carrying behavior.
+- `evidence.json`, `dry_run.txt`: reproducible offline safety checks and fingerprints. `delivery_state.json` identifies completed and pending gates.
 
-## Source dimensions and geometry
+Source and license were recorded on [#18](https://github.com/Stretch-Gaming/Co-op-Game/issues/18) and [merged #65](https://github.com/Stretch-Gaming/Co-op-Game/pull/65): team-authored scripted Blender outputs, own work, no attribution required. No new third-party assets were downloaded. Existing project template assets are referenced only.
 
-| Mesh | Source report X x Y x Z (cm) | Triangles | Ordered source slots |
+## Source dimensions and preserved choices
+
+| Mesh | Reported X x Y x Z (cm) | Original/Nanite triangles | Ordered material slots |
 | --- | --- | --- | --- |
-| `SM_Relic_GoldIdol` | 22.1418 x 22.7571 x 25 | 9,406 | `M_Gold`, `M_Jade` |
-| `SM_Relic_JadeMask` | 9.8168 x 17.7345 x 22 | 8,224 | `M_Jade`, `M_Gold` |
-| `SM_Relic_GemScarab` | 18 x 16.3004 x 7.0937 | 8,148 | `M_Gold`, `M_Jade` |
-| `SM_KeyRelic_StoneHeart` | 39.2349 x 74.0457 x 62 | 9,866 | `M_Stone`, `M_Gold`, `M_Jade`, `M_Rope` |
+| `SM_Relic_GoldIdol` | 22.1418 x 22.7571 x 25 | 9,406 | Gold, idol jade glow |
+| `SM_Relic_JadeMask` | 9.8168 x 17.7345 x 22 | 8,224 | Jade, gold |
+| `SM_Relic_GemScarab` | 18 x 16.3004 x 7.0937 | 8,148 | Gold, jade |
+| `SM_KeyRelic_StoneHeart` | 39.2349 x 74.0457 x 62 | 9,866 | Stone, gold, jade, tan rope |
 
-These are the cleanup export's **reported dimensions**, independently checked against FBX raw vertex extents and model scale. The nominal issue brief is 20-30 cm for small relics and about 60 cm for the key relic. PR #65's rounded dimensions are separately recorded. Keep the scarab at 18 cm and the heart at 62 cm. The heart's 74.0457 cm width includes rope loops; PR #65 describes the stone alone as approximately 55 cm wide. That is a design note, not independently measured collision bounds.
+The nominal brief is 20-30 cm for small relics and about 60 cm for the key relic. These source-reported dimensions are separately recorded from PR #65's rounded design dimensions. Keep the 18 cm scarab, 62 cm heart, mask plinth, heart wraps/loops, tan rope and idol gem emission. The 74.0457 cm heart width includes its loops; the actual stone-only vertex bounds measured by this tooling differ from PR #65's approximate 55 cm stone-width note.
 
-The FBXs have `UnitScaleFactor=1` (centimeters) but meter-sized raw vertex coordinates with model `Lcl Scaling=[100,100,100]` and a roughly 180-degree Z rotation. Import scene/unit conversion and `transform_vertex_to_absolute=True` apply the supplied model transform. Additional import scale is **1.0**, with no corrective rotation. Source metadata says export forward axis `-Y`; PR #65 says the default Unreal import faces `+X`. Preserve both statements and verify actual facing/pivot in the editor. If bounds differ by more than 0.1 cm, execution stops without automatic rescaling.
-
-Keep the seated lion and its jade chest gem, mask plinth and through-cut openings, scarab gold rim/seam and jade shell, heart runes, all three tan rope wraps and both carry loops. Preserve supplied normals with Import Normals (Unreal generates tangents). No decimation, generated UV layer, pivot bake, degenerate removal or nominal-size normalization is requested. Nanite is enabled for all four opaque meshes. Check source LOD geometry and Nanite/fallback behavior independently in the editor; offline inspection cannot confirm import fidelity.
+FBX raw vertices are meter-sized, with model scale 100 and `UnitScaleFactor=1` (cm). Scene conversion and `transform_vertex_to_absolute=True` apply that supplied transform. Import scale remains 1.0, with no added rotation, decimation, generated UVs or pivot bake. Engine checks confirmed +X-facing geometry and base-center pivots; Nanite triangle counts exactly match the sources. Render-fallback meshes are simplified and require Mac review.
 
 ## Materials and collision
 
-The only parent is existing `/Game/Shared/Style/M_Stylized`, loaded read-only. The script never saves or edits the parent or existing shared instances. FBX material/texture creation is disabled. It proposes and, after verified bindings, creates only:
+All instances live in the flat relic folder: `MI_HCA1_RelicGold`, `MI_HCA1_RelicJade`, `MI_HCA1_IdolJadeGlow`, `MI_HCA1_HeartStone`, `MI_HCA1_HeartRopeTan`. Gold uses metallic 1/roughness 0.3; jade uses 0/0.25, stone 0/0.85, rope 0/0.9. Palette tints are converted from sRGB to linear. The shared mask is non-sRGB RGBA `(128,255,0,255)`, so its green channel is 1 and the roughness multiplier directly produces the intended roughness.
 
-| Profile | Destination name (all in `/Game/Puzzles/Art/HCA1_Relics/`) | Source intent |
-| --- | --- | --- |
-| gold | `MI_HCA1_RelicGold` | #E8B33A, metallic 1, roughness 0.3 |
-| jade | `MI_HCA1_RelicJade` | #3FA672, metallic 0, roughness 0.25 |
-| idol_jade | `MI_HCA1_IdolJadeGlow` | Jade plus source emission strength 0.6 |
-| stone | `MI_HCA1_HeartStone` | #7A6E68, metallic 0, roughness 0.85 |
-| rope | `MI_HCA1_HeartRopeTan` | #A88457, metallic 0, roughness 0.9 |
+The master has no `EmissiveColor` parameter. Its existing emission path is `Fresnel(RimExponent) * RimColor * RimStrength`. Setting exponent 0 yields constant Fresnel 1 per the installed engine implementation; idol jade uses jade `RimColor` and `RimStrength=0.6`. Thus its source glow is preserved without a new or modified parent. UE 5.8.3's scalar/vector setters return false even when applying changes; the importer verifies actual parameter readback instead.
 
-The example converts sRGB palette colors to linear `Tint`. It proposes `RoughnessMultiplier`, `MetallicMultiplier`, `MetallicOffset` and idol `EmissiveColor`. These names and multiplier responses are **not verified material bindings**. `EmissiveColor` appearing in an asset's name table does not prove it is an exposed parameter. The editor preflight lists actual scalar/vector names and refuses unknown bindings. Review the master graph and default mask response read-only, then adjust the proposed bindings to reproduce source roughness, metallic and emission. A multiplier is not necessarily an absolute roughness value. If the master has no suitable emission parameter, stop material execution and resolve that with the owner; do not silently remove the glow or edit the shared master in this pass. Marking the review flag true is a human assertion, not automatic shader/visual validation.
+Small relics each have one box. The heart has a stone-fitted box centered at `(0,0,31)` cm, approximately `34.5264 x 60.5488 x 62.4` cm, with a 0.2 cm margin. Symmetric XY bounds accommodate FBX axis reflections while excluding outer handles. Simple-as-complex queries use that same box. Persisted-asset collision probes hit the stone center and miss both outer handles at Y +/-35 cm. Source render geometry stays intact.
 
-The small relics receive one simple box each. Inspect the fit, including the mask plinth and scarab legs. The heart is imported with **no automatic collision**: a whole-mesh box would include its rope loops. Before use, add and fit a box around the stone only in Static Mesh Editor, excluding the loops. Approximately 39 cm depth, 55 cm stone width and 62 cm height are starting guides, not final collision dimensions. Keep simple collision for physics; do not substitute complex-as-simple. Collision and visual fit remain acceptance gates.
+No texture images were supplied or generated. The Smart UV layer and constant PBR intent are preserved. Any future textures must follow the existing 1K budget, sRGB base color, DirectX/Normalmap normals and non-sRGB ORM conventions. `docs/assets.md` still marks PG-A0's import presets as unfinished; this tooling uses explicit source-derived settings verified in 5.8.3.
 
-No texture images are supplied or created. Preserve the Smart UV layer and constant material intent. Future texture work must use 1K textures, sRGB base color, DirectX normals/Normalmap compression, and non-sRGB ORM (R=AO, G=roughness, B=metallic). Full PBR texture and curvature-bake requirements remain an owner review item; this tooling does not claim a complete textured delivery.
+## Safe offline use
 
-## Offline use now
-
-From the isolated worktree in PowerShell (use a real installed Python 3.10+; the Windows Store alias is not a runtime):
+From this checkout in PowerShell:
 
 ```powershell
-Set-Location -LiteralPath 'C:\Users\Stretch\.codex\worktrees\hc-a1-import-tools\Co op Game'
 $hcPython = 'C:\Users\Stretch\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
 & $hcPython -B Tools/unreal/hc_a1_import/import_relics.py
 & $hcPython -B Tools/unreal/hc_a1_import/validate_offline.py
 ```
 
-No execution flag means no Unreal import, asset load, folder creation or save. The importer disables bytecode caching before loading its helper. `validate_offline.py --write-evidence` explicitly refreshes the two evidence files inside this folder. Validation checks hydrated FBX hashes against Git's committed LFS pointer OIDs and sizes; `git lfs ls-files -l` must show `*` for all four.
+The default importer is read-only and never loads Unreal, creates directories or saves assets. It verifies the project, sources, fingerprints, metadata and isolated destinations. Bytecode caching is disabled. `--write-evidence` on the offline validator explicitly refreshes its evidence files. Git LFS source hashes and sizes are compared to committed pointer OIDs, and all four FBXs must be hydrated.
 
-If sources are pointers in a future checkout, hydrate **only the existing FBXs**, without regeneration:
+## Exact future execution steps
 
-```powershell
-git lfs pull --include='SourceArt/HC/HC-A1/*.fbx' --exclude=''
-```
+The assets already exist in this branch: **do not rerun creation here**. Execution/preflight deliberately refuses any existing asset, redirector or disk content in HCA1_Relics. There is no overwrite, reuse, reimport or force option, so manual collision/material work is preserved.
 
-## Exact later editor steps (not run in this delivery)
-
-1. After review/merge or in a separately authorized import checkout, hydrate its existing shared style kit and any project assets needed by the editor. Open **that checkout's** `CoopGame.uproject` in UE **5.8.3**. PythonScriptPlugin is already enabled in the descriptor; do not change project settings. Stop PIE. Save your unrelated work yourself first. Coordinate the import with the HC owner and other chats before changing content.
-2. Confirm `Content/Puzzles/Art/HCA1_Relics/` and its Asset Registry namespace are empty. The importer refuses any existing assets, redirectors or disk content there. Inspect `/Game/Shared/Style/M_Stylized` read-only. Do not lock/change the master for this workflow.
-3. In Unreal's bottom command console, run the following **single line**. This is read-only. It verifies the active project path and engine, lists material parameters, and constructs transient import options to check API/property availability. If using a post-merge checkout, replace `hc_root` with its exact absolute path; the script itself must live in that same checkout.
+For a fresh, separately authorized checkout, hydrate existing content/sources with Git LFS, verify UE 5.8.3 and PythonScriptPlugin, and open that exact checkout's `CoopGame.uproject`. Do not change plugins/settings. Stop PIE and keep other chats' editors separate. Replace the path below with that checkout's absolute path; the tooling and active editor must be in the same checkout.
 
 ```python
-py import sys; from pathlib import Path; hc_root=Path(r'C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game'); sys.dont_write_bytecode=True; sys.path.insert(0,str(hc_root/'Tools/unreal/hc_a1_import')); import import_relics; import_relics.main(['--project-root',str(hc_root),'--editor-check'])
+py import sys; from pathlib import Path; hc_root=Path(r'C:/Users/Stretch/.codex/worktrees/hc-a1-import-tools/Co op Game'); sys.dont_write_bytecode=True; sys.path.insert(0,str(hc_root/'Tools/unreal/hc_a1_import')); import import_relics; import_relics.main(['--project-root',str(hc_root),'--editor-check','--material-bindings',str(hc_root/'Tools/unreal/hc_a1_import/material_bindings.reviewed.json')])
 ```
 
-4. Copy the example into the owned tooling directory as `material_bindings.reviewed.json`. Review all five profiles against actual exposed parameters and master response. Preserve idol emission, tan rope, shiny gold and jade. Adjust names/values as needed; only after that review set `verified_in_ue_5_8_3` to `true`. No new parent materials, textures or static-switch changes are made by this importer. Keep the file for the later import's evidence.
-5. Run read-only preflight with the reviewed bindings. Any refusal must be resolved before execution; a missing emissive control is a real outstanding material constraint.
-
-```python
-py import_relics.main(['--project-root',str(hc_root),'--editor-check','--material-bindings',str(hc_root/'Tools/unreal/hc_a1_import/material_bindings.reviewed.json')])
-```
-
-6. When the separate import work is authorized and preflight passes, explicitly execute:
+Only after preflight succeeds, explicitly execute in the full editor:
 
 ```python
 py import_relics.main(['--project-root',str(hc_root),'--execute','--material-bindings',str(hc_root/'Tools/unreal/hc_a1_import/material_bindings.reviewed.json')])
 ```
 
-Execution uses `AssetTools`, `AssetImportTask`, a pinned `FbxFactory`/`FbxImportUI`, material-instance APIs and `StaticMeshEditorSubsystem`. It does not write `.uasset` bytes directly. It creates five instances and four static meshes only inside the flat isolated folder, assigns by checked imported slot names, checks imported bounds, builds Nanite and saves only assets created in that call. It never places actors, changes levels, modifies gameplay or calls Save All. The supplied source data stays unchanged.
+The script uses `AssetImportTask`, a pinned `FbxFactory/FbxImportUI`, material APIs and `StaticMeshEditorSubsystem`; it saves only newly created isolated assets. A PythonScript commandlet lacks that subsystem and is refused before creation. Full-editor automation is also available through `-ExecutePythonScript="<forward/slash/path>/run_editor.py" -HCA1Execute`; absent `-HCA1Execute`, that wrapper performs only editor preflight. Use forward slashes because Unreal's script parser interprets backslash escapes.
 
-## Repeat runs and failures
+Creation leaves the heart collision unfinished. For newly imported, untouched assets only, run `finish_assets.py` with a full-editor `-ExecutePythonScript` session and explicit `-HCA1FinishAssets`; it refuses an existing heart collider. It builds the source-fitted box, saves only the heart and verifies all assets. Check the success JSON/marker and Output Log, not just process exit code: full-editor Python can report script errors while returning process exit 0.
 
-Offline dry runs are repeatable and read-only. Editor preflight is also read-only, apart from transient options and loading the parent into memory. There is no overwrite, reuse, reimport or force flag. A successful execute makes the destination nonempty, so every later execute/preflight refuses that destination. This preserves manual collision/material tuning. Changing even one source byte or metadata value fails fingerprints before engine access.
+`build_preview.py -HCA1BuildPreview` creates only the dedicated HC test map and captures renders. `-HCA1RepairPreview` explicitly rebuilds this script's tagged fixtures in that map, preserving untagged actors. `editor_smoke.py -HCA1Smoke` and `smoke_rpc.py` coordinate isolated client-load checks on localhost port 8002 and restore Play settings. The RPC helper verifies the live editor's project marker before changing any Play settings. Follow repository locks/coordination before mounting levels in shared/persistent test worlds; never save those worlds as part of asset inspection.
 
-Execution is not an atomic editor transaction. An import, material binding, collision, Nanite or save error can leave partial/unsaved assets, or some already saved packages in the isolated folder. The script stops and never deletes or rolls back automatically. Inspect assets and Output Log in the editor. If a retry is needed, coordinate an explicit cleanup of only newly created HCA1_Relics assets through editor APIs/UI and check for references; do not delete `.uasset` files on disk. If extra assets appear unexpectedly, stop and inspect. Verify the destination and existing package checks again before rerunning.
+An execution failure can leave partial or unsaved isolated assets. There is no automatic rollback/deletion. Inspect the editor and Output Log before a retry; cleanup must use editor APIs/UI and check references. Never edit or remove `.uasset` files on disk. No script places gameplay actors or edits other chats' files.
 
-## Engine acceptance still required
+## Remaining integration gate
 
-- Validate actual UE 5.8.3 Python API execution, FBX factory routing, intended source transforms, approximately +X facing, base-center pivot and centimeter size next to the 1.8 m character. Compare source geometry, normals/bevel shading, UVs, slots and triangle counts; the Nanite fallback count may differ from source geometry.
-- Verify Nanite build, opaque materials, Windows render and supported Mac fallback; no shader/import errors in Output Log. Check material instance parameter values and cave-light response, particularly the idol's glow, gold/jade headlamp highlights, stone and tan rope.
-- Fit the heart's stone-only collision in Static Mesh Editor and test it; review the three box colliders. Save only the owned relic assets. Reopen assets and verify persistence, import source paths and dependencies; all new assets must resolve inside HCA1_Relics except the read-only M_Stylized parent/dependencies.
-- Check in `L_StyleTest` only under its required lock and coordination, then HC's own test map/sublevel. No map is changed by this delivery. Swap greybox only after visual/collision acceptance.
-- For the later integration push, compile any changed gameplay Blueprints, run Play As Client with at least two players, check 2/3/4-player scaling, second local split-screen readability/input where relevant, and inspect errors/Accessed None. This delivery ran no imports, editor, PIE, gameplay, split-screen or platform tests.
-- Check Git status and LFS tracking before the later asset commit. Keep #18's import and in-place checkboxes unchecked until those actual gates pass.
+Assign the three small meshes to HC-2's `BP_Relic` variants after #8 supplies that system. Assign the heart to HC-4's physics-root `BP_KeyRelic` after #10 supplies carrying. Preserve MinPlayers/scaling, server authority and owning-player input/HUD; keep placements in `L_Site01_HC`. This branch does not implement those separate epics or modify Core, persistent maps or the empty gameplay sublevel.
 
-API evidence uses the installed 5.8.3 headers (see `evidence.json`). Public reference pages: [FBX options](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/FbxStaticMeshImportData?application_version=5.0), [StaticMeshEditorSubsystem](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/StaticMeshEditorSubsystem?application_version=5.7), and [MaterialEditingLibrary](https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/MaterialEditingLibrary?application_version=5.7). Those older-version public pages are API context; they do not establish a tested 5.8.3 import.
+Then run actual client collection/carry/drop, late join, reset and 2/3/4-player checks, plus host split-screen visibility/input and Mac/fallback/style review. Check source reimport paths, compile any changed Blueprints and scan Output Log. Only then replace greybox and tick #18's in-place acceptance. The current client smoke checks establish static-art loading only. No pickup, carrying, rendered split-screen or Mac checks are claimed.

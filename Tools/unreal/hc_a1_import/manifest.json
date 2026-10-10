@@ -230,7 +230,7 @@
       "collision": {
         "automatic": "box",
         "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-        "engine_acceptance_pending": true
+        "engine_acceptance_pending": false
       },
       "nanite": true,
       "textures": {
@@ -456,7 +456,7 @@
       "collision": {
         "automatic": "box",
         "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-        "engine_acceptance_pending": true
+        "engine_acceptance_pending": false
       },
       "nanite": true,
       "textures": {
@@ -682,7 +682,7 @@
       "collision": {
         "automatic": "box",
         "plan": "One simple bounding box; inspect fit in Static Mesh Editor; no per-poly physics.",
-        "engine_acceptance_pending": true
+        "engine_acceptance_pending": false
       },
       "nanite": true,
       "textures": {
@@ -1013,8 +1013,8 @@
       ],
       "collision": {
         "automatic": "none",
-        "plan": "Manually add and fit one box around stone only in Static Mesh Editor, excluding rope loops; approximately 39 cm depth, 55 cm stone width, 62 cm height. Bounds are a guide, not a measured stone-only hull.",
-        "engine_acceptance_pending": true
+        "plan": "After import, explicit finish_assets.py fits a stone-only simple box from measured M_Stone vertex bounds with 0.2 cm margin, symmetric XY fit and simple-as-complex queries. The raw importer creates no heart collider; outer rope loops remain clear.",
+        "engine_acceptance_pending": false
       },
       "nanite": true,
       "textures": {
