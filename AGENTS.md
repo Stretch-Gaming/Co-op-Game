@@ -98,20 +98,39 @@ Work for this project is tracked in this repo's [GitHub Issues](https://github.c
 
 ## Open a pull request every turn
 
-When an agent's turn ends with changes, it commits them, pushes the branch and opens a pull request against `main` before handing back. If the branch already has an open pull request, push to it instead of opening another.
+When an agent's turn ends with changes, it commits them, runs one fresh Codex review pass, pushes the branch and opens a pull request against `main` before handing back. If the branch already has an open pull request, push to it instead of opening another.
 
 - Never commit straight to `main`. Work on a branch named for the lane and phase, like `pg/pg6-taking`.
 - Title the pull request like a commit message, such as `PG-2: split-screen on the host (#24)`, and link the issue in the body.
 - If the work isn't finished or hasn't passed [Before you push](#before-you-push) yet, open it as a draft and say in the body what's left.
 - Leave out files that aren't ready, such as assets still waiting on a lock. Say in the body what was held back and why.
 
+## Codex review pass
+
+Every turn that opens or updates a pull request runs exactly one Codex review, after the commit and before the push. Codex reads the branch with fresh context; the agent that wrote the change checks what it finds.
+
+1. Fetch `origin`, then review the branch against `main`:
+
+   ```sh
+   codex exec --color never -c model_reasoning_effort="high" -o <scratch>/codex-review.md review --base origin/main
+   ```
+
+   To give Codex extra instructions, drop `--base` and say the scope in the prompt instead, such as `review "Review this branch against origin/main. <extra>"`. The two can't be combined.
+2. Check every finding against the code as it is now. Mark it **confirmed** (name what triggers it and quote the line), **plausible** (the mechanism is real but the trigger is uncertain) or **refuted** (quote the line that disproves it).
+3. Fix confirmed findings that are low-risk and commit the fixes. Leave plausible and risky ones for the author to decide.
+4. Put the result in the pull request body: the confirmed and plausible findings, what was fixed, and a count like `5 raw -> 2 confirmed / 1 plausible / 2 refuted`.
+
+Don't rerun Codex after a one-line or mechanical fix. If a fix added new design, such as a new function, event or replicated variable, run one more pass on that commit only (`review --commit <sha>`) and stop there. Never run a third pass.
+
+If `codex` fails or finds nothing, still open the pull request and say so in the body. A Codex error or an open question never blocks the pull request.
+
 ## Review guidelines
 
-Codex reviews every pull request automatically. When reviewing, flag these as P1:
+Codex reads this section during the review pass. Report only P0 and P1 findings. Flag these as P1:
 
 - Anything that breaks a [hard rule](#hard-rules).
 - Files changed outside the author's lane folder or sublevel, unless the pull request says they were locked.
 - A new asset without its source and license recorded, as [docs/assets.md](docs/assets.md#licenses-this-repo-is-public) describes.
 - A commit message with an AI co-author or "Generated with" line.
 
-`.uasset` and `.umap` files are binary, so review them by name, folder and the pull request's description, and say what you couldn't check.
+`.uasset` and `.umap` files are binary, and Git LFS stores them as pointers, so review them by name, folder and commit message, and say what you couldn't check.
