@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "clients": 4,
+  "checks": [
+    {
+      "hca3_owned_hud_instances": 4,
+      "hca3_controller_binding": true
+    },
+    {
+      "per_player_input_ready": 4,
+      "widgets_have_owning_controller": true,
+      "focus_trace_found_instant": true
+    },
+    {
+      "instant_rpc_and_replication": true
+    },
+    {
+      "short_hold_cannot_complete": true
+    },
+    {
+      "full_server_timed_hold_and_replication": true
+    },
+    {
+      "continuous_begin_end_replicated": true
+    },
+    {
+      "out_of_range_cancels_continuous_use": true
+    },
+    {
+      "can_interact_becoming_false_cancels_use": true
+    },
+    {
+      "round_start_cancels_active_use_and_replicates_struct": true
+    },
+    {
+      "pawn_end_play_releases_continuous_use": true
+    }
+  ]
+}

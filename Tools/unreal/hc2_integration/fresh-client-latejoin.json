@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "actual_client_pickup_before_reconnect": 2
+    },
+    {
+      "distinct_fresh_client_world": true,
+      "collected_initial_replication": true,
+      "hidden_and_collision_off": true,
+      "totals": [
+        2,
+        8
+      ],
+      "colors": [
+        0,
+        1
+      ],
+      "owned_hud": true
+    },
+    {
+      "fresh_client_actual_pickup_after_join": true,
+      "final_collected": 3
+    }
+  ],
+  "fixture_travel": "client console open 127.0.0.1:17777",
+  "input_path": "owning Enhanced Input -> character server RPC"
+}

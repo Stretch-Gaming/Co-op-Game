@@ -1,0 +1,1 @@
+(fn SupportsLatch () (return false))

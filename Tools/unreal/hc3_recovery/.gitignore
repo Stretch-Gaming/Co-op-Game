@@ -1,0 +1,6 @@
+__pycache__/
+mcp-session.txt
+mcp-result.json
+command.json
+command-result.json
+ready.json

@@ -1,0 +1,4 @@
+import pathlib,json,unreal as ue
+ROOT=pathlib.Path(__file__).resolve().parents[3];HERE=pathlib.Path(__file__).parent
+ws=list(ue.EditorLevelLibrary.get_pie_worlds(True));s=next(w for w in ws if ue.GameplayStatics.get_game_mode(w));C=ue.load_asset('/Game/Core/BP_CoopCharacter').generated_class()
+RESULT={'worlds':[{'world':w.get_path_name(),'server':w==s,'phase':ue.GameplayStatics.get_game_state(w).get_editor_property('RoundState').export_text(),'completed':ue.GameplayStatics.get_all_actors_with_tag(w,'Altar')[0].get_editor_property('Completed'),'counts':ue.GameplayStatics.get_all_actors_with_tag(w,'Altar')[0].get_editor_property('ClearCallCount'),'focused':[str(p.get_editor_property('FocusedTarget')) for p in ue.GameplayStatics.get_all_actors_of_class(w,C) if p.is_locally_controlled()]} for w in ws]}

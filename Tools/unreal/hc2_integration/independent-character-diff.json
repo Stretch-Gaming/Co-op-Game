@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "changed_existing_graphs": [
+    "GetCarried",
+    "ReleaseCarried",
+    "HC1BeginPlay",
+    "EventGraph"
+  ],
+  "new_graphs": [
+    "DropFromServer",
+    "EnsureCarrying",
+    "RequestDropCarried"
+  ],
+  "interaction_graphs_unchanged": true,
+  "owning_input_setup_unchanged": true
+}

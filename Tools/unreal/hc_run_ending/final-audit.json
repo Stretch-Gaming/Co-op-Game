@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "identity": {
+    "project": "C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game",
+    "engine": "5.8.3-58210709+++UE5+Release-5.8",
+    "pid": 43812,
+    "port": 8017,
+    "requested_renderer": "D3D11; ray tracing disabled only by launch args",
+    "blueprint_only": true
+  },
+  "blueprints": {
+    "/Game/Puzzles/BP_MapExit": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "ResolveCoordinator": "(fn ResolveCoordinator ()\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (for _array_element _outactors\n      (bind _asbp_run_coordinator (Utilities|Casting|CastToBP_RunCoordinator _array_element))\n      (return _asbp_run_coordinator)))\n  (return 0))\n",
+        "IsRosterPawnInside": "(fn IsRosterPawnInside (State)\n  (bind _returnvalue (PlayerState|GetPawn State))\n  (Utilities|IsValid State\n    (:\"Is Valid\"\n      (Utilities|IsValid _returnvalue\n        (:\"Is Valid\"\n          (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Pawn|GetController _returnvalue))\n            (:then\n              (if (and (Utilities|Equal(Object) (Game|GetPlayerState _asplayer_controller) State) (Utilities|Equal(Object) (Game|GetPlayerState _returnvalue) State))\n                (bind _asbox_collision (Utilities|Casting|CastToBoxComponent (Variables|TriggerBase|GetCollisionComponent))\n                  (:then\n                    (return (Math|Geometry|IsPointInBoxWithTransform (Transformation|GetActorLocation _returnvalue) (Transformation|GetWorldTransform _asbox_collision) (Components|Box|GetUnscaledBoxExtent _asbox_collision))))\n                  (:CastFailed\n                    (return false)))\n                (else\n                  (return false))))\n            (:CastFailed\n              (return false))))\n        (:\"Is Not Valid\"\n          (return false))))\n    (:\"Is Not Valid\"\n      (return false))))\n",
+        "ReevaluateExit": "(fn ReevaluateExit ()\n  (if (and (Networking|HasAuthority) (not (Variables|Default|GetExitCommitted)))\n    (Variables|Default|SetRequiredPlayers 0)\n    (Variables|Default|SetReadyPlayers 0)\n    (Utilities|Array|Clear (Variables|Default|GetSeenStates))\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n      (:then\n        (for _array_element (Class|GameStateBase|GetPlayerArray _asbp_coop_game_state)\n          (if (not (Utilities|Array|ContainsItem (Variables|Default|GetSeenStates) _array_element))\n            (Utilities|Array|AddUnique (Variables|Default|GetSeenStates) _array_element)\n            (Variables|Default|SetRequiredPlayers (+ (Variables|Default|GetRequiredPlayers) 1))\n            (bind _ready (CallFunction|IsRosterPawnInside _array_element))\n            (if _ready\n              (Variables|Default|SetReadyPlayers (+ (Variables|Default|GetReadyPlayers) 1)))))\n        (Variables|Default|SetAllReady (and (> (Variables|Default|GetRequiredPlayers) 0) (== (Variables|Default|GetRequiredPlayers) (Variables|Default|GetReadyPlayers))))\n        (if (Variables|Default|GetAllReady)\n          (bind _coordinator (CallFunction|ResolveCoordinator))\n          (Utilities|IsValid _coordinator\n            (:\"Is Valid\"\n              (Variables|Default|SetExitCommitted true)\n              (bind _accepted (Class|BPRunCoordinator|TryCommitExtraction _coordinator))\n              (if (not _accepted)\n                (Variables|Default|SetExitCommitted false))))))\n      (:CastFailed\n        (Variables|Default|SetAllReady false)))))\n",
+        "StartExit": "(fn StartExit ()\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"ReevaluateExit\" 0.2 true)))\n",
+        "StopExit": "(fn StopExit ()\n  (Utilities|Time|ClearTimerbyFunctionName self \"ReevaluateExit\"))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|StartExit))\n\n(event EventEndPlay (EndPlayReason)\n  (CallFunction|StopExit))\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    },
+    "/Game/Puzzles/Run/BP_RunCoordinator": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "CaptureSnapshot": "(fn CaptureSnapshot ()\n  (bind _ready (CallFunction|IsSingleton))\n  (if (and (and (Networking|HasAuthority) _ready) (not (Variables|Default|GetSnapshotCommitted)))\n    (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)\n      (:then\n        (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n          (:then\n            (bind _asbp_coop_game_instance (Utilities|Casting|CastToBP_CoopGameInstance (Game|GetGameInstance))\n              (:then\n                (Variables|Default|SetSnapshotCommitted true)\n                (Variables|Default|SetCapturedCollected (Class|BPCoopGameState|GetRelicsCollected _asbp_coop_game_state))\n                (Variables|Default|SetCapturedAvailable (Class|BPCoopGameState|GetRelicsAvailable _asbp_coop_game_state))\n                (Class|BPCoopGameState|SetRelicsCollected (Variables|Default|GetCapturedCollected) _asbp_coop_game_instance)\n                (Class|BPCoopGameState|SetRelicsAvailable (Variables|Default|GetCapturedAvailable) _asbp_coop_game_instance)\n                (return true))\n              (:CastFailed\n                (return false))))\n          (:CastFailed\n            (return false))))\n      (:CastFailed\n        (return false)))\n    (else\n      (return false))))\n",
+        "TryCommitExtraction": "(fn TryCommitExtraction ()\n  (bind _accepted (CallFunction|CaptureSnapshot))\n  (if _accepted\n    (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode))\n      (:then\n        (Variables|Default|SetCompletionCount (+ (Variables|Default|GetCompletionCount) 1))\n        (Class|BPCoopGameMode|CompleteMap _asbp_coop_game_mode)\n        (return true))\n      (:CastFailed\n        (return false)))\n    (else\n      (return false))))\n",
+        "RestoreResults": "(fn RestoreResults ()\n  (bind _ready (CallFunction|IsSingleton))\n  (bind _returnvalue (Game|GetCurrentLevelName true))\n  (if (and (and (and (Networking|HasAuthority) _ready) (Utilities|String|EqualExactly(String) _returnvalue \"L_Site02\")) (not (Variables|Default|GetSnapshotCommitted)))\n    (bind _asbp_coop_game_instance (Utilities|Casting|CastToBP_CoopGameInstance (Game|GetGameInstance))\n      (:then\n        (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n          (:then\n            (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode))\n              (:then\n                (Variables|Default|SetCapturedCollected (Class|BPCoopGameState|GetRelicsCollected _asbp_coop_game_instance))\n                (Variables|Default|SetCapturedAvailable (Class|BPCoopGameState|GetRelicsAvailable _asbp_coop_game_instance))\n                (Class|BPCoopGameState|SetRelicsCollected (Variables|Default|GetCapturedCollected) _asbp_coop_game_state)\n                (Class|BPCoopGameState|SetRelicsAvailable (Variables|Default|GetCapturedAvailable) _asbp_coop_game_state)\n                (Variables|Default|SetSnapshotCommitted true)\n                (Variables|Default|SetResultsActive true)\n                (Class|BPCoopGameMode|SetRoundPhase _asbp_coop_game_mode \"NewEnumerator4\")\n                (return true))\n              (:CastFailed\n                (return false))))\n          (:CastFailed\n            (return false))))\n      (:CastFailed\n        (return false)))\n    (else\n      (return false))))\n",
+        "RequestRestart": "(fn RequestRestart (RequestingController)\n  (bind _ready (CallFunction|IsSingleton))\n  (if (and (and (Networking|HasAuthority) _ready) (and (and (Variables|Default|GetSnapshotCommitted) (Variables|Default|GetResultsActive)) (not (Variables|Default|GetRestartinProgress))))\n    (Utilities|IsValid RequestingController\n      (:\"Is Valid\"\n        (if (and (Pawn|IsLocalController RequestingController) (Game|Player|IsPrimaryPlayer RequestingController))\n          (bind _outactors (Actor|GetAllActorsOfClass \"/Script/Engine.PlayerController\"))\n          (if (Utilities|Array|ContainsItem _outactors RequestingController)\n            (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n              (:then\n                (if (Utilities|Array|ContainsItem (Class|GameStateBase|GetPlayerArray _asbp_coop_game_state) (Game|GetPlayerState RequestingController))\n                  (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode))\n                    (:then\n                      (bind _asbp_coop_game_instance (Utilities|Casting|CastToBP_CoopGameInstance (Game|GetGameInstance))\n                        (:then\n                          (Variables|Default|SetRestartinProgress true)\n                          (Class|BPCoopGameState|SetRelicsCollected 0 _asbp_coop_game_instance)\n                          (Class|BPCoopGameState|SetRelicsAvailable 0 _asbp_coop_game_instance)\n                          (Class|BPCoopGameMode|CompleteMap _asbp_coop_game_mode)\n                          (return true))\n                        (:CastFailed\n                          (return false))))\n                    (:CastFailed\n                      (return false)))\n                  (else\n                    (return false))))\n              (:CastFailed\n                (return false)))\n            (else\n              (return false)))\n          (else\n            (return false))))\n      (:\"Is Not Valid\"\n        (return false)))\n    (else\n      (return false))))\n",
+        "IsSingleton": "(fn IsSingleton ()\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C\"))\n  (return (== (Utilities|Array|Length _outactors) 1)))\n",
+        "EventGraph": "(event EventBeginPlay)\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    },
+    "/Game/Puzzles/UI/Results/AC_RunResults": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "RefreshResults": "(fn RefreshResults ()\n  (Variables|Default|SetCoordinator 0)\n  (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Components|GetOwner))\n    (:then\n      (if (Pawn|IsLocalPlayerController _asplayer_controller)\n        (Utilities|IsValid (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem _asplayer_controller)\n          (:\"Is Valid\"\n            (CallFunction|RefreshforOwner _asplayer_controller))\n          (:\"Is Not Valid\"\n            (CallFunction|ClearResults)))\n        (else\n          (CallFunction|ClearResults))))\n    (:CastFailed\n      (CallFunction|ClearResults))))\n",
+        "ClearResults": "(fn ClearResults ()\n  (Utilities|IsValid (Variables|Default|GetResultsWidget)\n    (:\"Is Valid\"\n      (Widget|RemoveFromParent (Variables|Default|GetResultsWidget))\n      (Variables|Default|SetResultsWidget 0)\n      (Variables|Default|SetResultsOwner 0)\n      (Variables|Default|SetCoordinator 0))\n    (:\"Is Not Valid\"\n      (Variables|Default|SetResultsWidget 0)\n      (Variables|Default|SetResultsOwner 0)\n      (Variables|Default|SetCoordinator 0))))\n",
+        "StartResults": "(fn StartResults ()\n  (CallFunction|RefreshResults)\n  (Utilities|Time|SetTimerbyFunctionName self \"RefreshResults\" 0.2 true))\n",
+        "StopResults": "(fn StopResults ()\n  (Utilities|Time|ClearTimerbyFunctionName self \"RefreshResults\")\n  (CallFunction|ClearResults))\n",
+        "RequestLocalRestart": "(fn RequestLocalRestart ()\n  (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Components|GetOwner)))\n  (Utilities|IsValid (Variables|Default|GetCoordinator)\n    (:\"Is Valid\"\n      (Class|BPRunCoordinator|RequestRestart (Variables|Default|GetCoordinator) _asplayer_controller))))\n",
+        "RebindWidget": "(fn RebindWidget ()\n  (bind _aswbp_run_results (Utilities|Casting|CastToWBP_RunResults (Variables|Default|GetResultsWidget))\n    (:then\n      (Variables|Default|SetCoordinator (Variables|Default|GetCoordinator) _aswbp_run_results))\n    (:CastFailed\n      (CallFunction|ClearResults))))\n",
+        "RefreshForOwner": "(fn RefreshForOwner (PC)\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (for _array_element _outactors\n      (bind _asbp_run_coordinator (Utilities|Casting|CastToBP_RunCoordinator _array_element)\n        (:then\n          (if (Class|BPRunCoordinator|GetResultsActive _asbp_run_coordinator)\n            (if (Utilities|NotEqual(Object) PC (Variables|Default|GetResultsOwner))\n              (CallFunction|ClearResults))\n            (Variables|Default|SetCoordinator _asbp_run_coordinator)\n            (Utilities|IsValid (Variables|Default|GetResultsWidget)\n              (:\"Is Valid\"\n                (CallFunction|RebindWidget))\n              (:\"Is Not Valid\"\n                (CallFunction|CreateResults PC)))\n            (else\n              (CallFunction|ClearResults))))\n        (:CastFailed\n          (CallFunction|ClearResults))))\n    (else\n      (CallFunction|ClearResults))))\n",
+        "CreateResults": "(fn CreateResults (PC)\n  (bind _returnvalue (UserInterface|CreateWidget \"/Game/Puzzles/UI/Results/WBP_RunResults.WBP_RunResults_C\" PC))\n  (Utilities|IsValid _returnvalue\n    (:\"Is Valid\"\n      (Variables|Default|SetResultsWidget _returnvalue)\n      (Variables|Default|SetResultsOwner PC)\n      (bind _returnvalue_1 (UserInterface|Viewport|AddToPlayerScreen _returnvalue 20))\n      (if _returnvalue_1\n        (UserInterface|Viewport|SetDesiredSizeInViewport _returnvalue \"(X=0.000000,Y=0.000000)\")\n        (UserInterface|Viewport|SetAnchorsInViewport _returnvalue \"(Minimum=(X=0.000000,Y=0.000000),Maximum=(X=1.000000,Y=1.000000))\")\n        (UserInterface|Viewport|SetAlignmentInViewport _returnvalue \"(X=0.000000,Y=0.000000)\")\n        (CallFunction|RebindWidget)\n        (else\n          (CallFunction|ClearResults))))\n    (:\"Is Not Valid\"\n      (CallFunction|ClearResults))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|StartResults))\n\n(event EventEndPlay (EndPlayReason)\n  (CallFunction|StopResults))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    },
+    "/Game/Puzzles/UI/Results/WBP_RunResults": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "OnPaint": "(fn OnPaint (Context)\n  (bind _returnvalue (Widget|GetCachedGeometry))\n  (bind _returnvalue_1 (UserInterface|Geometry|GetLocalSize _returnvalue))\n  (bind _y (Math|Vector2D|BreakVector2D _returnvalue_1))\n  (bind _x (Math|Vector2D|BreakVector2D _returnvalue_1))\n  (bind _returnvalue_2 2.0)\n  (bind _returnvalue_3 (/ _x _returnvalue_2))\n  (bind _coordinator (Variables|Default|GetCoordinator))\n  (Utilities|IsValid (Variables|Default|GetCoordinator)\n    (:\"Is Valid\"\n      (Painting|DrawText Context (Utilities|Text|ToText(String) \"RUN COMPLETE\") (Math|Vector2D|MakeVector2D (- _returnvalue_3 130.0) (* _y 0.3)) \"/Engine/EngineFonts/Roboto.Roboto\" 32 \"Regular\" \"(R=0.93,G=0.82,B=0.55,A=1)\")\n      (Painting|DrawText Context (Utilities|Text|ToText(String) (Utilities|String|BuildString(Integer) (Utilities|String|BuildString(Integer) \"\" \"RELICS  \" (Class|BPRunCoordinator|GetCapturedCollected _coordinator) \" / \") \"\" (Class|BPRunCoordinator|GetCapturedAvailable _coordinator))) (Math|Vector2D|MakeVector2D (- _returnvalue_3 105.0) (* _y 0.4)) \"/Engine/EngineFonts/Roboto.Roboto\" 26 \"Regular\" \"(R=0.93,G=0.82,B=0.55,A=1)\")\n      (Painting|DrawText Context (Utilities|Text|ToText(String) (select (Class|BPRunCoordinator|GetRestartinProgress _coordinator) \"RESTARTING...\" (select (and (Networking|HasAuthority (Widget|GetOwningPlayer)) (Game|Player|IsPrimaryPlayer (Widget|GetOwningPlayer))) \"PRESS R TO START A NEW RUN\" \"WAITING FOR HOST\"))) (Math|Vector2D|MakeVector2D (- _returnvalue_3 150.0) (* _y 0.5)) \"/Engine/EngineFonts/Roboto.Roboto\" 18 \"Regular\" \"(R=0.93,G=0.82,B=0.55,A=1)\"))))\n",
+        "EventGraph": "(event UserInterface|EventPreConstruct (IsDesignTime))\n\n(event UserInterface|EventConstruct)\n\n(event UserInterface|EventTick (MyGeometry InDeltaTime))\n"
+      }
+    },
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "FixtureComplete": "(fn FixtureComplete ()\n  (if (Networking|HasAuthority)\n    (Variables|Default|SetFixtureCompleteCalls (+ (Variables|Default|GetFixtureCompleteCalls) 1))\n    (CallFunction|SetRoundPhase \"NewEnumerator4\")))\n",
+        "FixtureSpawnCoordinator": "(fn FixtureSpawnCoordinator ()\n  (bind _returnvalue (Game|SpawnActorBPRunCoordinator \"/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator_C\" (Math|Transform|MakeTransform \"(X=0,Y=0,Z=300)\") \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n",
+        "FixtureClearTotals": "(fn FixtureClearTotals ()\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (Class|BPCoopGameState|SetRelicsCollected 0 _asbp_coop_game_state)\n    (Class|BPCoopGameState|SetRelicsAvailable 0 _asbp_coop_game_state)))\n",
+        "EventGraph": "(event EventBeginPlay\n  (|Parent:BeginPlay))\n\n(event EventCompleteMap\n  (CallFunction|FixtureComplete))\n\n(event EventTick (DeltaSeconds)\n  (|Parent:Tick DeltaSeconds))\n"
+      }
+    },
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC": {
+      "compile": "up to date; warnings_as_errors true",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "FixtureBegin": "(fn FixtureBegin ()\n  (bind _self self)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem _self))\n  (CallFunction|HC1SetupDebugInput _self)\n  (if (and (Pawn|IsLocalController) (not (Variables|Default|GetTestInputAdded)))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (Input|AddMappingContext _returnvalue \"/Game/Puzzles/Test/HC_RunEnding/IMC_FixtureRestart.IMC_FixtureRestart\" 20 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n        (Variables|Default|SetTestInputAdded true)))))\n",
+        "FixtureRestart": "(fn FixtureRestart ()\n  (Variables|Default|SetRestartInputEvents (+ (Variables|Default|GetRestartInputEvents) 1))\n  (Class|ACRunResults|RequestLocalRestart (Variables|Default|GetRunResults)))\n",
+        "EventGraph": "(event EventBeginPlay\n  (|Parent:BeginPlay)\n  (CallFunction|FixtureBegin))\n\n(event EventTick (DeltaSeconds)\n  (|Parent:Tick DeltaSeconds))\n\n(event EnhancedInputActionIA_FixtureRestart (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n"
+      }
+    }
+  },
+  "gi_gs_native_links": {
+    "CaptureSnapshot": [
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:CaptureSnapshot.K2Node_VariableSet_28' (0x0000024682B99F00) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsCollected",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetCapturedAvailable"
+            ]
+          },
+          {
+            "name": "RelicsCollected",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": [
+              "|GetCapturedCollected"
+            ]
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game Instance Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameInstance"
+            ]
+          }
+        ]
+      },
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:CaptureSnapshot.K2Node_VariableSet_29' (0x0000024682B9A980) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsAvailable",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetRelicsCollected"
+            ]
+          },
+          {
+            "name": "RelicsAvailable",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": [
+              "|GetCapturedAvailable"
+            ]
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game Instance Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameInstance"
+            ]
+          }
+        ]
+      }
+    ],
+    "RestoreResults": [
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:RestoreResults.K2Node_VariableSet_18' (0x0000024683A56000) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsCollected",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetCapturedAvailable"
+            ]
+          },
+          {
+            "name": "RelicsCollected",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": [
+              "|GetCapturedCollected"
+            ]
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game State Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameState"
+            ]
+          }
+        ]
+      },
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:RestoreResults.K2Node_VariableSet_19' (0x0000024683A57C80) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsAvailable",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetRelicsCollected"
+            ]
+          },
+          {
+            "name": "RelicsAvailable",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": [
+              "|GetCapturedAvailable"
+            ]
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game State Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameState"
+            ]
+          }
+        ]
+      }
+    ],
+    "RequestRestart": [
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:RequestRestart.K2Node_VariableSet_10' (0x00000246AB6E4500) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsCollected",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetRestartInProgress"
+            ]
+          },
+          {
+            "name": "RelicsCollected",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": []
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game Instance Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameInstance"
+            ]
+          }
+        ]
+      },
+      {
+        "node": "<Object '/Game/Puzzles/Run/BP_RunCoordinator.BP_RunCoordinator:RequestRestart.K2Node_VariableSet_11' (0x00000246AB6E1200) Class 'K2Node_VariableSet'>",
+        "type_id": "|SetRelicsAvailable",
+        "inputs": [
+          {
+            "name": "execute",
+            "native_type": "Exec",
+            "value": "",
+            "linked_nodes": [
+              "|SetRelicsCollected"
+            ]
+          },
+          {
+            "name": "RelicsAvailable",
+            "native_type": "Integer",
+            "value": "0",
+            "linked_nodes": []
+          },
+          {
+            "name": "self",
+            "native_type": "BP Coop Game Instance Object Reference",
+            "value": "",
+            "linked_nodes": [
+              "Utilities|Casting|CastToBP_CoopGameInstance"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

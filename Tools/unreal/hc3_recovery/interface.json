@@ -1,0 +1,9 @@
+{
+  "path": "/Game/Puzzles/Recovery/BPI_HCHealthBridge",
+  "functions": [
+    "<Struct 'BlueprintFunctionInfo' (0x00000292554C88B0) {name: \"IsDowned\", description: \"\", is_implemented: True}>",
+    "<Struct 'BlueprintFunctionInfo' (0x00000292554C87C0) {name: \"GetReviveSeconds\", description: \"\", is_implemented: True}>",
+    "<Struct 'BlueprintFunctionInfo' (0x00000292554C8730) {name: \"Revive\", description: \"\", is_implemented: True}>",
+    "<Struct 'BlueprintFunctionInfo' (0x00000292554C86D0) {name: \"ResetHealth\", description: \"\", is_implemented: True}>"
+  ]
+}

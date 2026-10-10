@@ -1,0 +1,28 @@
+{
+  "BP_CoopGameMode": {
+    "graphs": {
+      "StartRound": "(fn StartRound (Index)\n  (if (and (Networking|HasAuthority) (> Index 0))\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (CallFunction|CancelAllUses)\n    (bind _row (CallFunction|ScalingRowforRoster))\n    (|SetwithNotifyRoundState (Utilities|Struct|MakeSRoundState Index (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\") (select (== Index (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state))) (+ (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 1) 1) 0.000000 _row) _asbp_coop_game_state)\n    (CallFunction|RefreshRelicTotals)))\n",
+      "ClearRound": "(fn ClearRound ()\n  (if (Networking|HasAuthority)\n    (CallFunction|CancelAllUses)\n    (CallFunction|SetRoundPhase (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\"))))\n",
+      "FailRound": "(fn FailRound ()\n  (if (Networking|HasAuthority)\n    (CallFunction|CancelAllUses)\n    (CallFunction|SetRoundPhase (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator3\"))))\n"
+    }
+  },
+  "BPI_RoundReset": {
+    "graphs": {
+      "ResetForRound": "(fn ResetForRound (Index Attempt))\n"
+    }
+  },
+  "nodes": {
+    "GetAllActorsWithInterface": "[\"Actor|GetAllActorswithInterface\"]",
+    "ResetForRound": "[\"Class|BPGauntletGate|ResetforRound\", \"Class|BPLever|ResetforRound\", \"Class|BPIRoundReset|ResetforRound\", \"Class|BPIRoundReset|ResetforRound(Message)\", \"Class|BPCarryable|ResetforRound\"]",
+    "SetTimer": "[\"Utilities|Time|SetTimerforNextTickbyEvent\", \"Utilities|Time|SetTimerforNextTickbyFunctionName\", \"Utilities|Time|SetTimerbyEvent\", \"Utilities|Time|SetTimerbyFunctionName\"]",
+    "ClearTimer": "[\"Utilities|Time|ClearTimerbyFunctionName\"]",
+    "GetPawn": "[\"Animation|TryGetPawnOwner\", \"Pawn|Components|PawnMovement|GetPawnOwner\", \"PlayerState|GetPawn\", \"Class|PlayerState|GetPawnPrivate\"]",
+    "GetPlayerArray": "[\"Class|GameStateBase|GetPlayerArray\"]",
+    "SetActorTransform": "[\"Transformation|SetActorTransform\"]",
+    "GetActorTransform": "[\"Transformation|GetActorTransform\"]",
+    "GetOverlapping": "[\"Collision|GetOverlappingComponents\", \"Collision|GetOverlappingActors\", \"Collision|GetOverlappingComponents\", \"Collision|GetOverlappingActors\"]",
+    "GetPlayerCount": "[\"Class|BPCoopGameState|GetPlayerCount\"]",
+    "DoesImplement": "[]"
+  },
+  "methods": []
+}

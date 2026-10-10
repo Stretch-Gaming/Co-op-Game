@@ -1,0 +1,51 @@
+[
+  {
+    "file": "clients-2-initial.json",
+    "passed": false,
+    "checks": 0,
+    "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 229, in tick\n    if validate:validate()\n                ^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 93, in initialize\n    check(phase_is(server,0),'Fixture must start in Lobby')\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 70, in check\n    if not ok:raise AssertionError(message)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Fixture must start in Lobby\n",
+    "fixture_only": true
+  },
+  {
+    "file": "clients-2-prehardening.json",
+    "passed": true,
+    "checks": 18,
+    "error": null,
+    "fixture_only": true
+  },
+  {
+    "file": "clients-2-roster-harness-attempt.json",
+    "passed": false,
+    "checks": 4,
+    "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 254, in tick\n    if next_enter:next_enter()\n                  ^^^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 118, in add_fixture_participant\n    a=unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(server,cls,unreal.Transform(),unreal.SpawnActorCollisionHandlingMethod.ALWAYS_SPAWN,None)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'\n",
+    "fixture_only": true
+  },
+  {
+    "file": "clients-3-timing-attempt.json",
+    "passed": false,
+    "checks": 3,
+    "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 229, in tick\n    if validate:validate()\n                ^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 112, in verify_departure\n    check(prop(pad(server),'InsideCount')==N-1,'Departure did not remove the player')\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 70, in check\n    if not ok:raise AssertionError(message)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Departure did not remove the player\n",
+    "fixture_only": true
+  },
+  {
+    "file": "clients-4-entry-timing-attempt.json",
+    "passed": false,
+    "checks": 3,
+    "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 256, in tick\n    if validate:validate()\n                ^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 108, in verify_pad_present\n    check(prop(pad(server),'InsideCount')==N,'Not every player entered the pad')\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 70, in check\n    if not ok:raise AssertionError(message)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Not every player entered the pad\n",
+    "fixture_only": true
+  },
+  {
+    "file": "clients-4-return-timing-attempt.json",
+    "passed": false,
+    "checks": 9,
+    "error": "Traceback (most recent call last):\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 248, in tick\n    if validate:validate()\n                ^^^^^^^^^^\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 133, in verify_started\n    check(phase_is(w,1) and round_state(w)['index']==1,'Round 1 did not replicate')\n  File \"C:/Users/Stretch/.codex/worktrees/hc6-round1/Co op Game/Tools/unreal/hc6_round1/test_round1.py\", line 70, in check\n    if not ok:raise AssertionError(message)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Round 1 did not replicate\n",
+    "fixture_only": true
+  },
+  {
+    "file": "split-4-playerstate-attempt.json",
+    "passed": false,
+    "checks": 0,
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game\\Tools\\unreal\\hc6_round1\\test_round1.py\", line 268, in tick\n    if validate:validate()\n                ^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game\\Tools\\unreal\\hc6_round1\\test_round1.py\", line 83, in initialize\n    inputs.sort(key=lambda pair:player_id(pair[1]))\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game\\Tools\\unreal\\hc6_round1\\test_round1.py\", line 83, in <lambda>\n    inputs.sort(key=lambda pair:player_id(pair[1]))\n                                ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game\\Tools\\unreal\\hc6_round1\\test_round1.py\", line 31, in player_id\n    def player_id(a):return prop(prop(a,'player_state'),'player_id')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game\\Tools\\unreal\\hc6_round1\\test_round1.py\", line 30, in prop\n    def prop(a,n):return a.get_editor_property(n)\n                         ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get_editor_property'\n",
+    "fixture_only": true
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "passed": true,
+  "graph": "(event EventBeginPlay\n  (|Parent:BeginPlay))\n\n(event EventCompleteMap\n  (CallFunction|FixtureComplete))\n\n(event EventTick (DeltaSeconds)\n  (|Parent:Tick DeltaSeconds))\n"
+}

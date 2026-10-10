@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "clients": 2,
+      "independent_snapshot_assertions": "passed",
+      "per_attempt_exactly_once": true,
+      "replicated_phase_cleared": true,
+      "competition_one_placed_one_still_carried": true
+    },
+    {
+      "clients": 3,
+      "independent_snapshot_assertions": "passed",
+      "per_attempt_exactly_once": true,
+      "replicated_phase_cleared": true,
+      "competition_one_placed_one_still_carried": true
+    },
+    {
+      "clients": 4,
+      "independent_snapshot_assertions": "passed",
+      "per_attempt_exactly_once": true,
+      "replicated_phase_cleared": true,
+      "competition_one_placed_one_still_carried": true
+    }
+  ],
+  "artifact_sha256": {
+    "Content\\Puzzles\\BP_Altar.uasset": "9a6ac68f67d842cda5e92397f6f18042935eaed9a42beac6aebd7210e2b8cb32",
+    "Content\\Puzzles\\Test\\HC6_Altar\\BP_HC6InputProbe.uasset": "a822c4d61e5aec8959c8596f555db0a09a8d7f91b2923e87b78947fd657fd0f0",
+    "Content\\Puzzles\\Test\\HC6_Altar\\L_HC6_Altar.umap": "30047e8e2e0cda3aa47a5fd6c8651ffc033e223aa013858648367666970cf368"
+  }
+}

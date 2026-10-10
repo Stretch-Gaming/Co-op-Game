@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "host_split_join_scales_lobby_to_3": true,
+      "distinct_owned_widgets": [
+        "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+        "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_1",
+        "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0"
+      ],
+      "new_color_slot": 2
+    },
+    {
+      "second_local_host_controls_rejected": true
+    },
+    {
+      "second_local_actual_pickup_value_3": true
+    },
+    {
+      "lobby_leave_rescales_to_2": true,
+      "collected_value_keeps_denominator": 11,
+      "first_free_color_reused": 2
+    },
+    {
+      "remote_late_join_observes_collected_and_totals": true,
+      "late_join_color": 3,
+      "four_player_scaling": true
+    },
+    {
+      "row_locked_during_playing_after_leave": true
+    },
+    {
+      "new_round_start_refreshes_scaling_to_3": true,
+      "collected_survives_round_restart": true
+    },
+    {
+      "host_clear_via_actual_input": true
+    },
+    {
+      "second_local_travel_input_rejected": true
+    },
+    {
+      "F4_server_travel_to_site02_with_host_split_and_remote": true,
+      "after_travel_owned_huds": 4
+    },
+    {
+      "F4_returns_every_player_to_site01": true,
+      "after_return_owned_huds": 4
+    }
+  ],
+  "production_pg_split_contract_present": false,
+  "join_fixture": "native GameplayStatics.create_player/remove_player",
+  "input_path": "owning Enhanced Input action injection",
+  "final_snapshot": [
+    {
+      "world": "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+      "count": 4,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "state": {
+        "RoundState": {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "4"
+        },
+        "RelicsCollected": 0,
+        "RelicsAvailable": 0
+      }
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+      "count": 4,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "state": {
+        "RoundState": {
+          "index": 0,
+          "phase": "Lobby",
+          "attempt": 0,
+          "phaseEndsAt": 0,
+          "scalingRow": "4"
+        },
+        "RelicsCollected": 0,
+        "RelicsAvailable": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "clients": 2,
+  "checks": [
+    {
+      "single_replicated_runtime_component_every_pawn": true
+    },
+    {
+      "client_pickup_production_hook": true,
+      "server_GetCarried_forwarding": true
+    },
+    {
+      "client_G_reliable_server_drop": true
+    },
+    {
+      "production_repickup": true
+    },
+    {
+      "heavy_speed_uses_production_baseline_on_server_and_clients": true
+    },
+    {
+      "drop_restores_baseline_speed": true
+    }
+  ],
+  "production_character": true,
+  "input_path": "IA_Interact / IA_Drop -> production character -> reliable server RPC -> delivered AC_Carrying"
+}

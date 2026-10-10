@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "actual_client_pickup_before_reconnect": 2
+    }
+  ],
+  "fixture_travel": "client console open 127.0.0.1:17778",
+  "input_path": "owning Enhanced Input -> character server RPC",
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\hc2-core-integration\\Co op Game\\Tools\\unreal\\hc2_integration\\test_fresh_join.py\", line 33, in tick\n    now=time.monotonic();assert now<state['deadline'],'Fresh-world reconnect timed out'\n                                ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Fresh-world reconnect timed out\n"
+}

@@ -1,0 +1,124 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "session": "14e8fe08-4e19-4019-89c8-df6111f61852",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "passed": true,
+  "assets": [
+    {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": true,
+        "BPI_RoundReset": true
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ()\n  (if (Networking|HasAuthority)\n    (CallFunction|RefreshState)\n    (Utilities|Time|SetTimerbyFunctionName self \"UpdateProgress\" 0.1 true)))\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|Clear (Variables|Default|GetEnteredPawns))\n    (Utilities|Array|Clear (Variables|Default|GetCrossedPawns))\n    (Variables|Default|SetCompleted false)\n    (Variables|Default|SetRoundPlaying false)\n    (Variables|Default|SetCurrentAttempt Attempt)))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "RefreshState": "(fn RefreshState ()\n  (bind _roundstate (Class|BPCoopGameState|GetRoundState (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))))\n  (bind _index_11_91104438409472a6dd374badc8dc29b1 (Utilities|Struct|BreakSRoundState _roundstate))\n  (bind _attempt_12_246832b34f4e147660e8729696bdd44a (Utilities|Struct|BreakSRoundState _roundstate))\n  (bind _phase_15_0b3d934f45b47d0bd2f25ca01264d4df (Utilities|Struct|BreakSRoundState _roundstate))\n  (if (Networking|HasAuthority)\n    (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\"))\n    (Variables|Default|SetSingletonValid (== (Utilities|Array|Length _outactors) 1))\n    (CallFunction|RefreshDependencies)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n      (:then\n        (if (and (== _index_11_91104438409472a6dd374badc8dc29b1 3) (Utilities|Enum|Equal(Enum) _phase_15_0b3d934f45b47d0bd2f25ca01264d4df (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")))\n          (if (or (!= _attempt_12_246832b34f4e147660e8729696bdd44a (Variables|Default|GetCurrentAttempt)) (not (Variables|Default|GetRoundPlaying)))\n            (Utilities|Array|Clear (Variables|Default|GetEnteredPawns))\n            (Utilities|Array|Clear (Variables|Default|GetCrossedPawns))\n            (Variables|Default|SetCompleted false)\n            (Variables|Default|SetCurrentAttempt _attempt_12_246832b34f4e147660e8729696bdd44a))\n          (Variables|Default|SetRoundPlaying true)\n          (else\n            (Variables|Default|SetRoundPlaying false)\n            (Utilities|Array|Clear (Variables|Default|GetEnteredPawns))\n            (Utilities|Array|Clear (Variables|Default|GetCrossedPawns))\n            (if (not (and (and (== _index_11_91104438409472a6dd374badc8dc29b1 3) (== _attempt_12_246832b34f4e147660e8729696bdd44a (Variables|Default|GetCurrentAttempt))) (Utilities|Enum|Equal(Enum) _phase_15_0b3d934f45b47d0bd2f25ca01264d4df (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\"))))\n              (Variables|Default|SetCompleted false)))))\n      (:CastFailed\n        (Variables|Default|SetRoundPlaying false)\n        (Variables|Default|SetCompleted false)\n        (Utilities|Array|Clear (Variables|Default|GetEnteredPawns))\n        (Utilities|Array|Clear (Variables|Default|GetCrossedPawns))))))\n",
+        "UpdateProgress": "(fn UpdateProgress ()\n  (bind _returnvalue (Transformation|GetActorTransform))\n  (bind _returnvalue_1 (Transformation|GetActorLocation (Utilities|Array|ForEachLoop (Actor|GetAllActorsOfClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\"))))\n  (bind _returnvalue_2 (Math|Transform|InverseTransformLocation _returnvalue _returnvalue_1))\n  (bind _x (.x _returnvalue_2))\n  (if (Networking|HasAuthority)\n    (CallFunction|RefreshState)\n    (bind _held (CallFunction|GateHeld))\n    (if (and (Variables|Default|GetRoundPlaying) (Variables|Default|GetSingletonValid))\n      (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\"))\n      (for _array_element _outactors\n        (bind _allowed (CallFunction|ValidatePawn _array_element))\n        (if _allowed\n          (if (and (and (<= (.y _returnvalue_2) (Variables|Default|GetHalfWidth)) (>= (.y _returnvalue_2) (- 0.0 (Variables|Default|GetHalfWidth)))) (and (<= (.z _returnvalue_2) (Variables|Default|GetHalfHeight)) (>= (.z _returnvalue_2) (- 0.0 (Variables|Default|GetHalfHeight)))))\n            (if (and (<= _x (Variables|Default|GetEntryX)) (>= _x (- (Variables|Default|GetEntryX) 300.0)))\n              (Utilities|Array|AddUnique (Variables|Default|GetEnteredPawns) _array_element))\n            (if (and (and (>= _x (Variables|Default|GetCrossX)) (<= _x (+ (Variables|Default|GetCrossX) 600.0))) (and (Utilities|Array|ContainsItem (Variables|Default|GetEnteredPawns) _array_element) _held))\n              (Utilities|Array|AddUnique (Variables|Default|GetCrossedPawns) _array_element))))))))\n",
+        "ValidatePawn": "(fn ValidatePawn (Pawn)\n  (Utilities|IsValid Pawn\n    (:\"Is Valid\"\n      (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Pawn)\n        (:then\n          (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Pawn|GetController _asbp_coop_character))\n            (:then\n              (Utilities|IsValid (Game|GetPlayerState _asbp_coop_character)\n                (:\"Is Valid\"\n                  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n                    (:then\n                      (return (and (and (Utilities|Equal(Object) (Pawn|GetControlledPawn _asplayer_controller) _asbp_coop_character) (Utilities|Equal(Object) (Game|GetPlayerState _asplayer_controller) (Game|GetPlayerState _asbp_coop_character))) (and (Utilities|Array|ContainsItem (Class|GameStateBase|GetPlayerArray _asbp_coop_game_state) (Game|GetPlayerState _asbp_coop_character)) (and (not (Actor|ActorHasTag _asbp_coop_character \"Downed\")) (not (Class|BPCoopCharacter|GetInteractionBlocked _asbp_coop_character)))))))\n                    (:CastFailed\n                      (return false))))\n                (:\"Is Not Valid\"\n                  (return false))))\n            (:CastFailed\n              (return false))))\n        (:CastFailed\n          (return false))))\n    (:\"Is Not Valid\"\n      (return false))))\n",
+        "FindGate": "(fn FindGate ()\n  (bind _outactors (Actor|GetAllActorsWithTag \"HC_GauntletGate\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (bind _asbp_gauntlet_gate (Utilities|Casting|CastToBP_GauntletGate (Utilities|Array|Get(acopy) _outactors))\n      (:then\n        (return _asbp_gauntlet_gate))\n      (:CastFailed\n        (return 0)))\n    (else\n      (return 0))))\n",
+        "FindBridge": "(fn FindBridge ()\n  (bind _outactors (Actor|GetAllActorsWithTag \"HC_GauntletBridge\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (bind _asbp_hcgauntlet_gate_bridge (Utilities|Casting|CastToBP_HCGauntletGateBridge (Utilities|Array|Get(acopy) _outactors))\n      (:then\n        (return _asbp_hcgauntlet_gate_bridge))\n      (:CastFailed\n        (return 0)))\n    (else\n      (return 0))))\n",
+        "GateHeld": "(fn GateHeld ()\n  (bind _gate (CallFunction|FindGate))\n  (bind _asbp_gauntlet_gate (Utilities|Casting|CastToBP_GauntletGate _gate)\n    (:then\n      (bind _result (Class|BPGauntletGate|AreLeversHeld _asbp_gauntlet_gate))\n      (return (and _result (and (|GetbOpen _asbp_gauntlet_gate) (> (Class|BPGauntletGate|GetCurrentLift _asbp_gauntlet_gate) 220.0)))))\n    (:CastFailed\n      (return false))))\n",
+        "HasProgress": "(fn HasProgress (Pawn)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (bind _allowed (CallFunction|ValidatePawn Pawn))\n      (return (and _allowed (and (and (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 3) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\"))) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetCurrentAttempt))) (and (Utilities|Array|ContainsItem (Variables|Default|GetCrossedPawns) Pawn) (and (Variables|Default|GetSingletonValid) (and (Variables|Default|GetRoundPlaying) (not (Variables|Default|GetCompleted)))))))))\n    (:CastFailed\n      (return false))))\n",
+        "CompleteFor": "(fn CompleteFor (Pawn)\n  (if (Networking|HasAuthority)\n    (CallFunction|RefreshState)\n    (bind _allowed (CallFunction|HasProgress Pawn))\n    (if (and _allowed (Variables|Default|GetDependencyReady))\n      (bind _bridge (CallFunction|FindBridge))\n      (bind _asbp_hcgauntlet_gate_bridge (Utilities|Casting|CastToBP_HCGauntletGateBridge _bridge)\n        (:then\n          (bind _accepted (Class|BPHCGauntletGateBridge|RequestLatch _asbp_hcgauntlet_gate_bridge 3 (Variables|Default|GetCurrentAttempt)))\n          (if _accepted\n            (bind _latched (Class|BPHCGauntletGateBridge|QueryLatch _asbp_hcgauntlet_gate_bridge 3 (Variables|Default|GetCurrentAttempt)))\n            (if _latched\n              (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode))\n                (:then\n                  (Variables|Default|SetCompleted true)\n                  (Variables|Default|SetCompletionCount (+ (Variables|Default|GetCompletionCount) 1))\n                  (Class|BPCoopGameMode|ClearRound _asbp_coop_game_mode)\n                  (return true))\n                (:CastFailed\n                  (return false)))\n              (else\n                (return false)))\n            (else\n              (return false))))\n        (:CastFailed\n          (return false)))\n      (else\n        (return false)))\n    (else\n      (return false))))\n",
+        "RefreshDependencies": "(fn RefreshDependencies ()\n  (Variables|Default|SetDependencyReady false)\n  (bind _bridge (CallFunction|FindBridge))\n  (bind _asbp_hcgauntlet_gate_bridge (Utilities|Casting|CastToBP_HCGauntletGateBridge _bridge))\n  (bind _supported (Class|BPHCGauntletGateBridge|SupportsLatch _asbp_hcgauntlet_gate_bridge))\n  (bind _gate (CallFunction|FindGate))\n  (Utilities|IsValid _gate\n    (:\"Is Valid\"\n      (Variables|Default|SetDependencyReady (and _supported (or (not (Class|BPHCGauntletGateBridge|GetFixtureOnly _asbp_hcgauntlet_gate_bridge)) (Variables|Default|GetAllowFixtureBridge)))))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (Class|BPHCGauntletGateBridge|BeginGauntlet))\n\n(event EventResetForRound (Index Attempt)\n  (Class|BPHCGauntletGateBridge|ResetGauntlet Index Attempt))\n\n(event EventInteract (Instigator)\n  (Class|BPHCGauntletGateBridge|OnInteraction Instigator))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (return false))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"227E91594AADBD9936C728B85F24CE5B\\\", \\\"Gauntlet coordinator\\\")\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\")))\n"
+      }
+    },
+    {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": true,
+        "BPI_RoundReset": true
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "RequestLatch": "(fn RequestLatch (Index Attempt)\n  (return false))\n",
+        "QueryLatch": "(fn QueryLatch (Index Attempt)\n  (return false))\n",
+        "SupportsLatch": "(fn SupportsLatch ()\n  (return false))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|BeginGauntlet))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ResetGauntlet Index Attempt))\n\n(event EventInteract (Instigator)\n  (CallFunction|OnInteraction Instigator))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (return false))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"54A768A247C3198BED15D18A02DC3774\\\", \\\"Gate adapter\\\")\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\")))\n"
+      }
+    },
+    {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletObjective.BP_HCGauntletObjective",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": true,
+        "BPI_RoundReset": true
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator)\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Instigator))\n    (bind _allowed (Class|BPCoopCharacter|UseAllowed _asbp_coop_character self))\n    (if _allowed\n      (bind _coordinator (Class|BPHCGauntletStart|FindCoordinator))\n      (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator))\n      (Class|BPHCGauntletCoordinator|CompleteFor _asbp_hcgauntlet_coordinator _asbp_coop_character))))\n",
+        "FindCoordinator": "(fn FindCoordinator ()\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (return (Utilities|Array|Get(acopy) _outactors))\n    (else\n      (return 0))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (Class|BPHCGauntletGateBridge|BeginGauntlet))\n\n(event EventResetForRound (Index Attempt)\n  (Class|BPHCGauntletGateBridge|ResetGauntlet Index Attempt))\n\n(event EventInteract (Instigator)\n  (Class|BPHCGauntletGateBridge|OnInteraction Instigator))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (bind _coordinator (Class|BPHCGauntletStart|FindCoordinator))\n  (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator)\n    (:then\n      (bind _allowed (Class|BPHCGauntletCoordinator|HasProgress _asbp_hcgauntlet_coordinator Instigator))\n      (return _allowed))\n    (:CastFailed\n      (return false))))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"482A4A3C4ADA45FA4E7C51A1B47C8168\\\", \\\"Latch far-side gate\\\")\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\")))\n"
+      }
+    },
+    {
+      "asset": "/Game/Puzzles/Gauntlet/BP_HCGauntletStart.BP_HCGauntletStart",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": true,
+        "BPI_RoundReset": true
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator)\n  (if (Networking|HasAuthority)\n    (bind _coordinator (CallFunction|FindCoordinator))\n    (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator))\n    (Class|BPHCGauntletCoordinator|RefreshState _asbp_hcgauntlet_coordinator)\n    (if (Class|BPIInteractable|CanInteract Instigator)\n      (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Instigator))\n      (bind _allowed (Class|BPCoopCharacter|UseAllowed _asbp_coop_character self))\n      (if _allowed\n        (bind _asbp_coop_game_mode (Utilities|Casting|CastToBP_CoopGameMode (Game|GetGameMode)))\n        (Class|BPCoopGameMode|StartRound _asbp_coop_game_mode 3)))))\n",
+        "FindCoordinator": "(fn FindCoordinator ()\n  (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\"))\n  (if (== (Utilities|Array|Length _outactors) 1)\n    (return (Utilities|Array|Get(acopy) _outactors))\n    (else\n      (return 0))))\n",
+        "EventGraph": "(event EventBeginPlay\n  (Class|BPHCGauntletGateBridge|BeginGauntlet))\n\n(event EventResetForRound (Index Attempt)\n  (Class|BPHCGauntletGateBridge|ResetGauntlet Index Attempt))\n\n(event EventInteract (Instigator)\n  (Class|BPHCGauntletGateBridge|OnInteraction Instigator))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (if (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 2) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\")))\n        (bind _coordinator (CallFunction|FindCoordinator))\n        (bind _asbp_hcgauntlet_coordinator (Utilities|Casting|CastToBP_HCGauntletCoordinator _coordinator)\n          (:then\n            (bind _allowed (Class|BPHCGauntletCoordinator|ValidatePawn _asbp_hcgauntlet_coordinator Instigator))\n            (return (and _allowed (and (Class|BPHCGauntletCoordinator|GetSingletonValid _asbp_hcgauntlet_coordinator) (Class|BPHCGauntletCoordinator|GetDependencyReady _asbp_hcgauntlet_coordinator)))))\n          (:CastFailed\n            (return false)))\n        (else\n          (return false))))\n    (:CastFailed\n      (return false))))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"A145C3444C83534A89170EBDF8DC972E\\\", \\\"Start haunted gauntlet\\\")\" 0.0 (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\")))\n"
+      }
+    },
+    {
+      "asset": "/Game/Puzzles/Test/HC_Gauntlet/BP_FixtureLatchBridge.BP_FixtureLatchBridge",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": true,
+        "BPI_RoundReset": true
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "RequestLatch": "(fn RequestLatch (Index Attempt)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (if (and (Networking|HasAuthority) (and (and (== Index 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Index)) (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Attempt) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")))))\n        (Variables|Default|SetLatched true)\n        (Variables|Default|SetLatchedAttempt Attempt)\n        (return true)\n        (else\n          (return false))))\n    (:CastFailed\n      (return false))))\n",
+        "QueryLatch": "(fn QueryLatch (Index Attempt)\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n    (:then\n      (return (and (and (Variables|Default|GetLatched) (== (Variables|Default|GetLatchedAttempt) Attempt)) (and (and (== Index 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Index)) (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) Attempt) (or (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\"))))))))\n    (:CastFailed\n      (return false))))\n",
+        "PollFixture": "(fn PollFixture ()\n  (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n  (if (Networking|HasAuthority)\n    (if (not (and (and (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) 3) (== (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetLatchedAttempt))) (or (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator1\")) (Utilities|Enum|Equal(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Utilities|Enum|LiteralenumE_RoundPhase \"NewEnumerator2\")))))\n      (CallFunction|ClearFixture))))\n",
+        "SupportsLatch": "(fn SupportsLatch ()\n  (return true))\n",
+        "StartFixture": "(fn StartFixture ()\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"PollFixture\" 0.1 true)))\n",
+        "ClearFixture": "(fn ClearFixture ()\n  (if (Networking|HasAuthority)\n    (Variables|Default|SetLatched false)\n    (Variables|Default|SetLatchedAttempt 0)))\n",
+        "SpawnPrimaryCoordinator": "(fn SpawnPrimaryCoordinator ()\n  (bind _returnvalue (Game|SpawnActorBPHCGauntletCoordinator \"/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator_C\" (Transformation|GetActorTransform) \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n",
+        "SpawnPrimaryBridge": "(fn SpawnPrimaryBridge ()\n  (bind _returnvalue (Game|SpawnActorBPHCGauntletGateBridge \"/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge_C\" (Transformation|GetActorTransform) \"Undefined\" \"MultiplyWithRoot\" 0 0))\n  (return _returnvalue))\n",
+        "EventGraph": "(event EventBeginPlay\n  (CallFunction|StartFixture))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ClearFixture))\n"
+      }
+    },
+    {
+      "asset": "/Game/Puzzles/Test/HC_Gauntlet/BP_GauntletInputProbe.BP_GauntletInputProbe",
+      "status": "<BlueprintStatus.BS_DIRTY: 1>",
+      "interfaces": {
+        "BPI_Interactable": false,
+        "BPI_RoundReset": false
+      },
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "ResolveInput": "(fn ResolveInput (Controller)\n  (return (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem Controller)))\n",
+        "DispatchFixtureReset": "(fn DispatchFixtureReset (TargetActor Index Attempt)\n  (Class|BPIRoundReset|ResetforRound TargetActor Index Attempt))\n",
+        "EventGraph": "(event EventBeginPlay)\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    }
+  ]
+}

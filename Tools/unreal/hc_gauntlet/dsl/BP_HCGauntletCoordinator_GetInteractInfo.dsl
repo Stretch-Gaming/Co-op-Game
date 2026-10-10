@@ -1,0 +1,1 @@
+(fn GetInteractInfo (Instigator) (return "Gauntlet coordinator" 0.0 (Utilities|Enum|LiteralenumE_InteractMode :Enum "NewEnumerator0")))

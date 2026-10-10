@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [
+    {
+      "one_missing_blocks": true,
+      "required": 3,
+      "ready": 2
+    },
+    {
+      "departure_cancels_readiness": true
+    },
+    {
+      "pawnless_connected_player_blocks": true
+    },
+    {
+      "all_distinct_possessed_pawns_commit_once": true,
+      "two_exit_volumes": true,
+      "captured": {
+        "collected": 7,
+        "available": 19
+      },
+      "duplicate_commit_rejected": true,
+      "outbound_results_hidden": true
+    },
+    {
+      "restart_rejected_until_restored_results": true
+    },
+    {
+      "restored_results_owning_widgets": {
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_19.WBP_RunResults_C_0",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_20.WBP_RunResults_C_0",
+        "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_3_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_21.WBP_RunResults_C_0"
+      },
+      "late_snapshot_replicates": true,
+      "restore_idempotent": true
+    },
+    {
+      "remote_actual_input_event_rejected": true
+    },
+    {
+      "destroyed_coordinator_clears_only_results": true
+    }
+  ],
+  "started_at": "2026-10-10 10:34:09.308064",
+  "ended_at": "2026-10-10 10:34:30.257804",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": []
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": []
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": []
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_3_L_Site02.L_Site02",
+        "roster": 3,
+        "coordinators": []
+      }
+    ],
+    "complete_calls": 1
+  }
+}

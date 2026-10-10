@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "saved": [
+    "/Game/Puzzles/Test/HC5/BP_HC5InputProbe",
+    "/Game/Puzzles/Test/HC5/BP_HC5Command",
+    "/Game/Puzzles/BP_RoundStart",
+    "/Game/Puzzles/BP_Checkpoint",
+    "/Game/Puzzles/Rounds/BP_RoundDirector"
+  ],
+  "unowned_dirty_left_unsaved": [
+    "/Game/Core/BP_CoopGameMode"
+  ]
+}

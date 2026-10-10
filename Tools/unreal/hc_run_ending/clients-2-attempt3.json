@@ -1,0 +1,66 @@
+{
+  "passed": false,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [
+    {
+      "one_missing_blocks": true,
+      "required": 2,
+      "ready": 1
+    },
+    {
+      "departure_cancels_readiness": true
+    }
+  ],
+  "started_at": "2026-10-10 10:31:17.095605",
+  "ended_at": "2026-10-10 10:31:25.118316",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      }
+    ],
+    "complete_calls": 0
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 89, in tick\n    ps=roster[0];pc=ps.get_pawn().get_controller();state['pawnless_pc']=pc;state['pawnless_pawn']=ps.get_pawn();pc.unpossess();step(6,2)\n                                                                                                                ^^^^^^^^^^^^\nAttributeError: 'PlayerController' object has no attribute 'unpossess'\n"
+}

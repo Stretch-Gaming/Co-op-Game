@@ -1,0 +1,42 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game",
+  "fixture_only": true,
+  "replicated_spawns": [
+    {
+      "world": "/Game/Puzzles/Test/HC6/UEDPIE_0_L_HC6_Round1.L_HC6_Round1",
+      "count": 1,
+      "locations": [
+        [
+          500.0,
+          900.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6/UEDPIE_1_L_HC6_Round1.L_HC6_Round1",
+      "count": 1,
+      "locations": [
+        [
+          500.0,
+          900.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/HC6/UEDPIE_2_L_HC6_Round1.L_HC6_Round1",
+      "count": 1,
+      "locations": [
+        [
+          500.0,
+          900.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "null_class_fails_closed": true,
+  "restored_class_respawns": true,
+  "passed": true
+}

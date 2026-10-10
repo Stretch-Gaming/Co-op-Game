@@ -1,0 +1,57 @@
+{
+  "passed": false,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [],
+  "started_at": "2026-10-10 10:31:00.949421",
+  "ended_at": "2026-10-10 10:31:03.949273",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": false,
+            "results_active": false,
+            "restart": false,
+            "collected": 0,
+            "available": 0
+          }
+        ]
+      }
+    ],
+    "complete_calls": 0
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 71, in tick\n    for ps in roster[:-1]:move(ps,True)\n                          ^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 21, in move\n    if isinstance(pawn,ue.Character):pawn.get_character_movement().disable_movement()\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Character' object has no attribute 'get_character_movement'\n"
+}

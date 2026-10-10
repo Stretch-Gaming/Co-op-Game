@@ -1,0 +1,1 @@
+(fn GetInteractInfo (Instigator) (return "Latch far-side gate" 0.0 (Utilities|Enum|LiteralenumE_InteractMode :Enum "NewEnumerator0")))

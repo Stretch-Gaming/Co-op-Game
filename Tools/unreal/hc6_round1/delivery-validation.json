@@ -1,0 +1,256 @@
+{
+  "baseline": "91a5195ec6d31060d4e28d02f2e068ac595cd0b1",
+  "branch": "codex/hc6-round1",
+  "protected_assets": [
+    {
+      "path": "Content/Core/BPI_Interactable.uasset",
+      "sha256": "8a65de1af904e530d40e912790199ef41290d617f6398dbb493ebf6862387c5d",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BPI_RoundReset.uasset",
+      "sha256": "0078fc4891bf8ae87af6e2307b0f8b75dd325ced8a06ae26c01aebccfed315b4",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopCharacter.uasset",
+      "sha256": "8e4626b30b57b47ab74b1c0ed22624373f7bc0b93bf6f94810eeb8bca3425764",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopGameInstance.uasset",
+      "sha256": "c3edffffdd0279477d5451813ba3c15b4a895055dc146bba0c9c6c446fe2a2f6",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopGameMode.uasset",
+      "sha256": "f3561b936771fdc9d799b7a7c9340fb96f8a0530731b99c598fd137a150a0b42",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopGameState.uasset",
+      "sha256": "6c1a50e1002221d85951ecb51ddd91f0715d0013fbd50feb1cb0cdd26ee484c6",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerController.uasset",
+      "sha256": "1a6ba0c54ee6a9484282d13a47644108a0e76e8bae183f10dcd62cc591c6b8af",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerState.uasset",
+      "sha256": "b9c6e82e9c53b4698f8eba7ee9a4bfee4b703dbf2eccc23ceb0a526d08c5b14e",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/E_InteractMode.uasset",
+      "sha256": "59c0e1b642c6849d600692b39725fc1a5355c25b886f3eb6f8847cb6c648f20d",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/E_RoundPhase.uasset",
+      "sha256": "b35b51e3563040273c57eab70ffecf1f54d332fd43e997e256a6007a7ac620cf",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugClear.uasset",
+      "sha256": "65baa912317258404018a316eed8817d6d3b2924d074c17a2ddfe32d3b7e5c54",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugComplete.uasset",
+      "sha256": "4e528a033ce5a62b62981f362f9fc0e41fd1c1edfd87a4571ee87d95b2d02611",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugFail.uasset",
+      "sha256": "08d9d0d0f40c41f93ec06fd85d41ca37c077421ed3590e43e52e3a4544c90d08",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_DebugStart.uasset",
+      "sha256": "a67579b40bc00c767e9bd7cea8ac101f9a7df0c3b198b9889c284e9408d1d073",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_Drop.uasset",
+      "sha256": "41e4b1e835382299086ba6ce9ed3891a7c3058cfe1a9e28a6f008b20f7246e0c",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_Headlamp.uasset",
+      "sha256": "79303bb1fff2e1f7596abd2b0044d60f4c41eb2724fe412e7b723c4619fd546c",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_Interact.uasset",
+      "sha256": "0739c5856960faaec56e4986b1240feda296abc4c64bf53572fbc521ecfa7d27",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IA_ToggleView.uasset",
+      "sha256": "3e032a476b1a42f08cb74e328bd769c860f115c31c4f7cde2ef787f496458557",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IMC_Coop.uasset",
+      "sha256": "699f95fbffb647503377eefa057bb5b148910f824323e9a093c388f2cc891959",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IMC_CoopMouseLook.uasset",
+      "sha256": "a2e2ae0a450c7d1e734013fd7020188a55aae44b34550a570bca55366eeb0c81",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/Input/IMC_Debug.uasset",
+      "sha256": "6f18f9b2d9ddcd4d49ee373188a4794032dfd0b1fd0ad2e0f13c294e0a49af48",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Core/S_RoundState.uasset",
+      "sha256": "56e1b30cc6e6ffed8f3a35661a2f64964eda3fdbbea04c6a9f9a5696ec96925f",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Maps/L_Site01.umap",
+      "sha256": "bb8f27999c77083bdbde21e059d22b6d8e694e5a72d9485f87bc10b18f21ba3f",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Maps/L_Site02.umap",
+      "sha256": "f4506c868ed99d2b91a92a6d5bd4c2f13143d6fc9d14c8a63b7f37218ccbf25e",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Puzzles/DT_RoundScaling.uasset",
+      "sha256": "5c69ceda9e5d759b0f6f2117bb4f9d1f4009eb45a2f27269d520bfc7d317f676",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Puzzles/L_Site01_HC.umap",
+      "sha256": "b1b4aee7f0fb62ff14f7242cf703abc3c7cb437ce15b45f91e8d0b3f020d5094",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/AC_HCA3HUD.uasset",
+      "sha256": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset",
+      "sha256": "0f678dbaf22997224a39fb84e78d1fe0f882d24e12dfe96d8aaff10c695cad57",
+      "matches_origin_main": true
+    },
+    {
+      "path": "Content/Puzzles/UI/WBP_InteractPrompt.uasset",
+      "sha256": "96422660ff7bc38ae54445294f2d535ff9eddd067ce53cf2521ebba29559f711",
+      "matches_origin_main": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "Content/Puzzles/BP_PressurePlate.uasset",
+      "sha256": "814b46b30f0feb3dc2ce58fc87ad32a4b374b260dc2df17a52d0a81c4667c5b5",
+      "size": 204168
+    },
+    {
+      "path": "Content/Puzzles/BP_PuzzleSetup.uasset",
+      "sha256": "1d6ebe852c3b93a2e5ee0466805e096e2f1039f4c9e9f5afb0bd9443f5594ff0",
+      "size": 405776
+    },
+    {
+      "path": "Content/Puzzles/BP_ChamberGate.uasset",
+      "sha256": "69463c6fdef1e5cca2ddcd9812777f998c0f9036f413d881ec245f73850fa7ed",
+      "size": 183159
+    },
+    {
+      "path": "Content/Puzzles/BP_StartPad.uasset",
+      "sha256": "ab82c98c79b756138b5f762559d0b57dc64d304649cc169b1db64006f3cd98d7",
+      "size": 325825
+    },
+    {
+      "path": "Content/Puzzles/Test/HC6/BP_HC6FixtureGameMode.uasset",
+      "sha256": "2cad73abda3ecf7cd6d7ab60542b69fd9ed6367f6ab9878d1ed2ff43ed1173e8",
+      "size": 83167
+    },
+    {
+      "path": "Content/Puzzles/Test/HC6/BP_HC6TestWeight.uasset",
+      "sha256": "4bf1dd6fb46eb85ff914067249f518bf82f72f0579a7897f72babc9fbd9eab05",
+      "size": 31307
+    },
+    {
+      "path": "Content/Puzzles/Test/HC6/L_HC6_Round1.umap",
+      "sha256": "d9ad9e2f5fe4a439f2e6745547d76afb71a3c3bcefe6df056f2f2e785c323a6e",
+      "size": 46782
+    },
+    {
+      "path": "Content/Puzzles/Test/HC6/M_HC6Pressed.uasset",
+      "sha256": "ba9916b3b91b19d881d36c41679351c0fae210e4cf311b5bee4b73194249c439",
+      "size": 9359
+    },
+    {
+      "path": "Content/Puzzles/Test/HC6/M_HC6Released.uasset",
+      "sha256": "27da8578dcaa2bcc3192fccc3aa14f621195567c0ce1f4e84a3d53b5c9189d37",
+      "size": 8653
+    }
+  ],
+  "matrix": [
+    {
+      "run": "clients-2",
+      "players": 2,
+      "split": false,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.0931278988718987,
+      "duration_seconds": 20.094
+    },
+    {
+      "run": "clients-3",
+      "players": 3,
+      "split": false,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.0011682994663715,
+      "duration_seconds": 20.109
+    },
+    {
+      "run": "clients-4",
+      "players": 4,
+      "split": false,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.0928478986024857,
+      "duration_seconds": 20.094
+    },
+    {
+      "run": "split-2",
+      "players": 2,
+      "split": true,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.0043542981147766,
+      "duration_seconds": 20.188
+    },
+    {
+      "run": "split-3",
+      "players": 3,
+      "split": true,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.000475000590086,
+      "duration_seconds": 20.203
+    },
+    {
+      "run": "split-4",
+      "players": 4,
+      "split": true,
+      "checks": 25,
+      "passed": true,
+      "hold_elapsed_seconds": 3.001123897731304,
+      "duration_seconds": 20.187
+    }
+  ],
+  "fixture_only": true,
+  "passed": true
+}

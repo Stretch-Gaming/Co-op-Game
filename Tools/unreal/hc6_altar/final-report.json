@@ -1,0 +1,32 @@
+{
+  "scoped_altar_gate": "passed",
+  "native_client_counts": [
+    2,
+    3,
+    4
+  ],
+  "fresh_network_client": "passed",
+  "native_stale_key_rejection": "passed",
+  "client_authority": "passed",
+  "four_client_runtime_errors": [],
+  "saved_interfaces": "BPI_Interactable/BPI_RoundReset",
+  "render": "altar-contact.png; contact reviewed, delivered cube key remains owner art handoff",
+  "blueprint_sha256": "9a6ac68f67d842cda5e92397f6f18042935eaed9a42beac6aebd7210e2b8cb32",
+  "map_sha256": "30047e8e2e0cda3aa47a5fd6c8651ffc033e223aa013858648367666970cf368",
+  "baseline_unchanged_lfs_assets": 695,
+  "process_id": 37752,
+  "mcp_port": 8042,
+  "pie_port": 17792,
+  "pie_stopped": true,
+  "temporary_settings_restored": true,
+  "commits": 0,
+  "pending": [
+    "Primary independent review",
+    "Cave/trap placement and playtest",
+    "Core HC5 restart dispatcher",
+    "Stone-heart mesh/pivot owner integration",
+    "Physical gamepad and Mac/default-renderer tests",
+    "Unrelated AC_Carrying pending-kill Drop defect"
+  ],
+  "unrun_optional_test": "test_split.py; not claimed"
+}

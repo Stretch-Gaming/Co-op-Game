@@ -1,0 +1,76 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "blueprints": {
+    "/Game/Puzzles/Gauntlet/BP_HCGauntletGateBridge.BP_HCGauntletGateBridge": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "RequestLatch": "(fn RequestLatch (Index Attempt))\n",
+        "QueryLatch": "(fn QueryLatch (Index Attempt))\n",
+        "EventGraph": "",
+        "CanInteract": "(fn CanInteract (Instigator))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"B38EA5BC41E40AEA295876937B9CDAD5\\\", \\\"Pick up\\\")\" 0.0 \"NewEnumerator0\"))\n"
+      }
+    },
+    "/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator.BP_HCGauntletCoordinator": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "RefreshState": "(fn RefreshState ())\n",
+        "UpdateProgress": "(fn UpdateProgress ())\n",
+        "ValidatePawn": "(fn ValidatePawn (Pawn))\n",
+        "FindGate": "(fn FindGate ())\n",
+        "FindBridge": "(fn FindBridge ())\n",
+        "GateHeld": "(fn GateHeld ())\n",
+        "HasProgress": "(fn HasProgress (Pawn))\n",
+        "CompleteFor": "(fn CompleteFor (Pawn))\n",
+        "EventGraph": "",
+        "CanInteract": "(fn CanInteract (Instigator))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"B38EA5BC41E40AEA295876937B9CDAD5\\\", \\\"Pick up\\\")\" 0.0 \"NewEnumerator0\"))\n"
+      }
+    },
+    "/Game/Puzzles/Gauntlet/BP_HCGauntletStart.BP_HCGauntletStart": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "FindCoordinator": "(fn FindCoordinator ())\n",
+        "EventGraph": "",
+        "CanInteract": "(fn CanInteract (Instigator))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"B38EA5BC41E40AEA295876937B9CDAD5\\\", \\\"Pick up\\\")\" 0.0 \"NewEnumerator0\"))\n"
+      }
+    },
+    "/Game/Puzzles/Gauntlet/BP_HCGauntletObjective.BP_HCGauntletObjective": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ())\n",
+        "BeginGauntlet": "(fn BeginGauntlet ())\n",
+        "ResetGauntlet": "(fn ResetGauntlet (Index Attempt))\n",
+        "OnInteraction": "(fn OnInteraction (Instigator))\n",
+        "FindCoordinator": "(fn FindCoordinator ())\n",
+        "EventGraph": "",
+        "CanInteract": "(fn CanInteract (Instigator))\n",
+        "GetInteractInfo": "(fn GetInteractInfo (Instigator)\n  (return \"NSLOCTEXT(\\\"\\\", \\\"B38EA5BC41E40AEA295876937B9CDAD5\\\", \\\"Pick up\\\")\" 0.0 \"NewEnumerator0\"))\n"
+      }
+    },
+    "/Game/Puzzles/Test/HC_Gauntlet/BP_FixtureLatchBridge.BP_FixtureLatchBridge": {
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+      "graphs": {
+        "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+        "RequestLatch": "(fn RequestLatch (Index Attempt)\n  (bind _accepted (|Parent:RequestLatch Index Attempt))\n  (return _accepted))\n",
+        "QueryLatch": "(fn QueryLatch (Index Attempt)\n  (bind _latched (|Parent:QueryLatch Index Attempt))\n  (return _latched))\n",
+        "PollFixture": "(fn PollFixture ())\n",
+        "EventGraph": "(event EventBeginPlay)\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+      }
+    }
+  }
+}

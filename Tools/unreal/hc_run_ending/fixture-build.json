@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "no_travel": true,
+  "map": "/Game/Puzzles/Test/HC_RunEnding/L_Site02",
+  "graphs": {
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixtureGM.BP_RunEndingFixtureGM": {
+      "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+      "FixtureComplete": "(fn FixtureComplete ()\n  (if (Networking|HasAuthority)\n    (Variables|Default|SetFixtureCompleteCalls (+ (Variables|Default|GetFixtureCompleteCalls) 1))\n    (CallFunction|SetRoundPhase \"NewEnumerator4\")))\n",
+      "EventGraph": "(event EventBeginPlay\n  (|Parent:BeginPlay))\n\n(event EventCompleteMap\n  (CallFunction|FixtureComplete))\n\n(event EventTick (DeltaSeconds)\n  (|Parent:Tick DeltaSeconds))\n"
+    },
+    "/Game/Puzzles/Test/HC_RunEnding/BP_RunEndingFixturePC.BP_RunEndingFixturePC": {
+      "UserConstructionScript": "(fn ConstructionScript ()\n  (|Parent:ConstructionScript))\n",
+      "FixtureBegin": "(fn FixtureBegin ()\n  (bind _self self)\n  (bind _returnvalue (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem _self))\n  (CallFunction|HC1SetupDebugInput _self)\n  (if (and (Pawn|IsLocalController) (not (Variables|Default|GetTestInputAdded)))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (Input|AddMappingContext _returnvalue \"/Game/Puzzles/Test/HC_RunEnding/IMC_FixtureRestart.IMC_FixtureRestart\" 20 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n        (Variables|Default|SetTestInputAdded true)))))\n",
+      "FixtureRestart": "(fn FixtureRestart ()\n  (Variables|Default|SetRestartInputEvents (+ (Variables|Default|GetRestartInputEvents) 1))\n  (Class|ACRunResults|RequestLocalRestart (Variables|Default|GetRunResults)))\n",
+      "EventGraph": "(event EventBeginPlay\n  (|Parent:BeginPlay)\n  (CallFunction|FixtureBegin))\n\n(event EventTick (DeltaSeconds)\n  (|Parent:Tick DeltaSeconds))\n\n(event EnhancedInputActionIA_FixtureRestart (ActionValue ElapsedSeconds TriggeredSeconds InputAction))\n"
+    }
+  }
+}

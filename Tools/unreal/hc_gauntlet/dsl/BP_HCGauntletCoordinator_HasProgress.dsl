@@ -1,0 +1,7 @@
+(fn HasProgress (Pawn) (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))
+ (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs))) (bind valid (CallFunction|ValidatePawn :Pawn Pawn))
+ (bind current (and (and (== index 3) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator1"))) (== attempt (Variables|Default|GetCurrentAttempt))))
+ (bind token (Utilities|Array|ContainsItem :TargetArray (Variables|Default|GetCrossedPawns) :ItemToFind Pawn))
+ (bind snapshot (and (Variables|Default|GetSingletonValid) (and (Variables|Default|GetRoundPlaying) (not (Variables|Default|GetCompleted)))))
+ (return (and valid (and current (and token snapshot)))))
+ (:CastFailed (return false))))

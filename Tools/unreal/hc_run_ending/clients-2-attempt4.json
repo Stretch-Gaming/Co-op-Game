@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "fixture_only": true,
+  "actual_travel_tested": false,
+  "input_path": "owning Enhanced Input action injection; no Python RPC calls",
+  "checks": [
+    {
+      "one_missing_blocks": true,
+      "required": 2,
+      "ready": 1
+    },
+    {
+      "departure_cancels_readiness": true
+    },
+    {
+      "pawnless_connected_player_blocks": true
+    },
+    {
+      "all_distinct_possessed_pawns_commit_once": true,
+      "two_exit_volumes": true,
+      "captured": {
+        "collected": 7,
+        "available": 19
+      },
+      "duplicate_commit_rejected": true,
+      "outbound_results_hidden": true
+    },
+    {
+      "restart_rejected_until_restored_results": true
+    }
+  ],
+  "started_at": "2026-10-10 10:31:56.053449",
+  "ended_at": "2026-10-10 10:32:08.069885",
+  "final": {
+    "worlds": [
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": []
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": true,
+            "results_active": false,
+            "restart": false,
+            "collected": 7,
+            "available": 19
+          }
+        ]
+      },
+      {
+        "world": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02",
+        "roster": 2,
+        "coordinators": [
+          {
+            "path": "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_2_L_Site02.L_Site02:PersistentLevel.BP_RunCoordinator_C_0",
+            "committed": true,
+            "results_active": false,
+            "restart": false,
+            "collected": 7,
+            "available": 19
+          }
+        ]
+      }
+    ],
+    "complete_calls": 1
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 102, in tick\n    report['checks'].append({'restart_rejected_until_restored_results':True});spawn_restore();step(8,3)\n                                                                              ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\extraction-results-restart\\Co op Game\\Tools\\unreal\\hc_run_ending\\test_run.py\", line 51, in spawn_restore\n    new=ue.GameplayStatics.begin_deferred_actor_spawn_from_class(server(),coordcls,ue.Transform());new=ue.GameplayStatics.finish_spawning_actor(new,ue.Transform())\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'\n"
+}

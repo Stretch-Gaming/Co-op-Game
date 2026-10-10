@@ -1,0 +1,9 @@
+{
+  "owning_widgets": {
+    "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_RunResults_C_0",
+    "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_3": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_RunResults_C_1",
+    "/Game/Puzzles/Test/HC_RunEnding/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_RunEndingFixturePC_C_0": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_28.WBP_RunResults_C_0"
+  },
+  "stage": "before restart",
+  "time": "2026-10-10 10:36:11.374088"
+}

@@ -1,0 +1,11 @@
+{
+  "plate": {
+    "PlateMesh": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top",
+    "ReleasedMaterial": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone",
+    "PressedMaterial": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+  },
+  "gate_mesh": "/Game/Puzzles/Art/HCA2_Props/SM_ChamberGate_Leaf.SM_ChamberGate_Leaf",
+  "statue_class": "/Game/Puzzles/BP_Statue.BP_Statue_C",
+  "imported_art_edited": false,
+  "carrying_assets_edited": false
+}

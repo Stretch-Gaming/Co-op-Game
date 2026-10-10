@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "checks": [
+    "default production fixture prohibition disables startup readiness",
+    "actual client input cannot start with a forbidden fixture bridge"
+  ],
+  "setup": "transient server fixture flags/spawns and GameMode bootstrap; requests use owning client Enhanced Input",
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game\\Tools\\unreal\\hc_gauntlet\\primary_edges.py\", line 64, in tick\n    state['duplicate']=spawn('/Game/Puzzles/Gauntlet/BP_HCGauntletCoordinator')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\.codex\\worktrees\\haunted-gauntlet-integration\\Co op Game\\Tools\\unreal\\hc_gauntlet\\primary_edges.py\", line 37, in spawn\n    actor=ue.GameplayStatics.begin_deferred_actor_spawn_from_class(server,ue.load_asset(path).generated_class(),transform,ue.SpawnActorCollisionHandlingMethod.ALWAYS_SPAWN)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'\n",
+  "rounds": [
+    {
+      "index": 2,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 2,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    },
+    {
+      "index": 2,
+      "phase": "Cleared",
+      "attempt": 1,
+      "phaseEndsAt": 0,
+      "scalingRow": "2"
+    }
+  ]
+}

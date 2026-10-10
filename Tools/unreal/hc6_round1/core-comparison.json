@@ -1,0 +1,16 @@
+{
+  "project": "C:\\Users\\Stretch\\.codex\\worktrees\\hc6-round1\\Co op Game",
+  "core_saved": false,
+  "comparisons": {
+    "BP_CoopGameMode": {
+      "unchanged": true
+    },
+    "BP_CoopGameState": {
+      "unchanged": true
+    },
+    "BPI_RoundReset": {
+      "unchanged": true
+    }
+  },
+  "passed": true
+}

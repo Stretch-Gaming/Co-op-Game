@@ -1,0 +1,1 @@
+(fn StartFixture () (if (Networking|HasAuthority) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName "PollFixture" :Time 0.1 :bLooping true)))

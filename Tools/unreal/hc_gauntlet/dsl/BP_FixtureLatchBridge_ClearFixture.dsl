@@ -1,0 +1,1 @@
+(fn ClearFixture () (if (Networking|HasAuthority) (Variables|Default|SetLatched false) (Variables|Default|SetLatchedAttempt 0)))

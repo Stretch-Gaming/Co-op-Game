@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "2",
+      "checks": 64,
+      "passed": true
+    },
+    {
+      "case": "3",
+      "checks": 103,
+      "passed": true
+    },
+    {
+      "case": "4",
+      "checks": 150,
+      "passed": true
+    },
+    {
+      "case": "split",
+      "checks": 102,
+      "passed": true
+    }
+  ],
+  "log": "Saved/Logs/HC2-completion.log",
+  "start_byte": 401114,
+  "end_byte": 593981,
+  "errors": []
+}

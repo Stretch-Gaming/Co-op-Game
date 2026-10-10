@@ -1,0 +1,1 @@
+(fn ResetGauntlet (Index Attempt) )
