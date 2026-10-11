@@ -1,0 +1,145 @@
+{
+  "baseline": "fea4e5115b1e6ceffa142cd696adfb2c4b977bb9",
+  "thread": "thr_47qsqyxjpw",
+  "scope": "offline fingerprint/source audit only; no native compile/readback/runtime/visual acceptance",
+  "asset_writes": [],
+  "locks_acquired": [],
+  "native_editor_launched": false,
+  "issue_30_full_acceptance": false,
+  "read_only_inputs": [
+    {
+      "path": "Content/Player/AC_PlayerView.uasset",
+      "bytes": 916204,
+      "sha256": "139322dfee0003bee4c433c5b2435fba2063dad27895cca6a60b91ab7d45fc73",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:139322dfee0003bee4c433c5b2435fba2063dad27895cca6a60b91ab7d45fc73\nsize 916204\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Player/Taking/BP_TakingDirector.uasset",
+      "bytes": 1346332,
+      "sha256": "ce5d9f9063d41a8d53dc865affeea01e87d08c47b9752318a8022bcc916529f3",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:ce5d9f9063d41a8d53dc865affeea01e87d08c47b9752318a8022bcc916529f3\nsize 1346332\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Player/BPFL_SplitScreen.uasset",
+      "bytes": 24173,
+      "sha256": "e3ce5d51ff9bb925d7bc36a5a9b6ddf99b21c3c18e429bd7e8864988ebb45e15",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:e3ce5d51ff9bb925d7bc36a5a9b6ddf99b21c3c18e429bd7e8864988ebb45e15\nsize 24173\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Core/BP_CoopCharacter.uasset",
+      "bytes": 1942468,
+      "sha256": "1d0fcd028c33c8c584081f811d46128cbcb40c4039c60a43335e943b350ad018",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:1d0fcd028c33c8c584081f811d46128cbcb40c4039c60a43335e943b350ad018\nsize 1942468\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Core/BP_CoopPlayerController.uasset",
+      "bytes": 1150933,
+      "sha256": "b64b67bbfbb0330ba41aaf0c6f80bc7fbac25a1b67b1e63e79c7dbe9f8a3909d",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:b64b67bbfbb0330ba41aaf0c6f80bc7fbac25a1b67b1e63e79c7dbe9f8a3909d\nsize 1150933\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Puzzles/Test/SixRound/L_SixRound_Test.umap",
+      "bytes": 19901,
+      "sha256": "f46e7a6a0f9362a4a9c39c3dc3e94618aa160c747627ef13da7bcd6c412ee72c",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:f46e7a6a0f9362a4a9c39c3dc3e94618aa160c747627ef13da7bcd6c412ee72c\nsize 19901\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset",
+      "bytes": 1679174,
+      "sha256": "43a7c519388b5e27490583fff748a3ea5b25aacc01f32dec5e5220c5941a082e",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:43a7c519388b5e27490583fff748a3ea5b25aacc01f32dec5e5220c5941a082e\nsize 1679174\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Puzzles/UI/Results/WBP_RunResults.uasset",
+      "bytes": 500564,
+      "sha256": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858\nsize 500564\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Content/Puzzles/UI/WBP_InteractPrompt.uasset",
+      "bytes": 462438,
+      "sha256": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+      "mode": "read-only",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425\nsize 462438\n",
+      "hydrated_matches_baseline": true
+    },
+    {
+      "path": "Tools/unreal/six_round/player/spectator.py",
+      "bytes": 5769,
+      "sha256": "f61cab111bb0a403bc6295f0b9fed10cef84c6e1881a21f84d5bc6c861e3cbe7",
+      "mode": "read-only"
+    },
+    {
+      "path": "Tools/unreal/six_round/player/presentation_hooks.py",
+      "bytes": 14559,
+      "sha256": "858504688a0a30d98e8b7b2b0f326ad6b955f02b91284bdc85fd598c8fc86219",
+      "mode": "read-only"
+    },
+    {
+      "path": "Tools/unreal/six_round/player/fade_cleanup/VALIDATION.md",
+      "bytes": 8085,
+      "sha256": "1dc23988d740d978a972042ecf8a6eb211928cbea13ea8152efda9547d908e56",
+      "mode": "read-only"
+    },
+    {
+      "path": "Tools/unreal/playable_game/align_delivered_view_contract.py",
+      "bytes": 2352,
+      "sha256": "87a081aa282ccc7bb40e69d766bc0f55907e5cb0fdee36e2e821b337448433e7",
+      "mode": "read-only"
+    },
+    {
+      "path": "Tools/unreal/six_round/VALIDATION.md",
+      "bytes": 3165,
+      "sha256": "2dedd529442c217da1d9b52146a5bcd3ab2065cf4698dddb91edf7392f060ab8",
+      "mode": "read-only"
+    },
+    {
+      "path": "docs/design/direction-2026-10-10.md",
+      "bytes": 9554,
+      "sha256": "8c0a3a311e2f1df907f8290f1d88765b1f4fff77f3054eb6415321f3e348b6ac",
+      "mode": "read-only"
+    },
+    {
+      "path": "docs/sprints.md",
+      "bytes": 31599,
+      "sha256": "19274b38d418e9fd62878921fab100aa25e8a819d8bc2f4dd9e8d2e49ab152fc",
+      "mode": "read-only"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 11752,
+      "sha256": "0ad08e0d5d1d3899312dc238025a2b2e841ba9c59fdfee661f618ece4dd86499",
+      "mode": "read-only"
+    }
+  ],
+  "historical_local_reports": [
+    {
+      "path": "/tmp/pg127-batch/post-merge-validation.md",
+      "sha256": "fdfcad6358bb3bd369bf779874b81d614d2c06c05524044eadea97041a1370ed"
+    },
+    {
+      "path": "/tmp/pg127-batch/mac-smoke.md",
+      "sha256": "80d8c68bd1983ecd888d45a8ebeee9c3df1148cc07dfd217e4df3f71f8328f3b"
+    },
+    {
+      "path": "/tmp/pg127-batch/functional-count-acceptance.md",
+      "sha256": "0c732d68cb641125b55701067a55ad122944e67610636cfedd71c9b4c4c3c1da"
+    }
+  ]
+}
