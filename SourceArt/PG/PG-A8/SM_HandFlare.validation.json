@@ -1,0 +1,24 @@
+{
+  "input": "candidate A/raw.fbx",
+  "output": "SM_HandFlare.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 736,
+  "triangles_after": 736,
+  "dimensions_cm": [
+    6.0,
+    6.0,
+    22.0
+  ],
+  "bounds_min_cm": [
+    -3.0,
+    -3.0,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null,
+  "scope": "Cleanup visual mesh only, before adding separately validated UCX collision."
+}

@@ -1,0 +1,13 @@
+{
+  "sample_rate_hz": 48000,
+  "channels": 1,
+  "bits_per_sample": 16,
+  "frames": 192000,
+  "duration_seconds": 4.0,
+  "seed": 111,
+  "synthesis": "NumPy PCG64 complex periodic FFT noise; 650 Hz high-pass / 6.5 kHz low-pass shaping; cyclic 1.25/3 Hz amplitude modulation",
+  "seam_envelope_samples_per_end": 96,
+  "endpoint_zero_samples_per_end": 4,
+  "peak_dbfs": -8.404914036757983,
+  "rms_dbfs": -21.602953826616424
+}

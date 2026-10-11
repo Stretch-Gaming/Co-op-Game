@@ -1,0 +1,108 @@
+{
+  "blend_fresh_reopen": "pass",
+  "blender_version": "5.2.2 LTS",
+  "fbx_centimeter_UnitScaleFactor": 1.0,
+  "fresh_process_reimport": "pass",
+  "mesh": {
+    "name": "SM_HandFlare",
+    "triangles": 736,
+    "vertices": 384,
+    "bounds_min_cm": [
+      -2.9999999329447746,
+      -2.9999999329447746,
+      0.0
+    ],
+    "bounds_max_cm": [
+      2.9999999329447746,
+      2.9999999329447746,
+      21.99999988079071
+    ],
+    "dimensions_cm": [
+      5.999999865889549,
+      5.999999865889549,
+      21.99999988079071
+    ],
+    "origin_cm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "material_slots": [
+      "M_FlareMetal",
+      "M_FlareGrip",
+      "M_FlareBody",
+      "M_FlareAmber"
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "signed_volume_cm3": 413.2892898335018,
+    "uv_layer": "UVMap",
+    "finite_uvs": true
+  },
+  "collision": {
+    "name": "UCX_SM_HandFlare_00",
+    "triangles": 44,
+    "vertices": 24,
+    "bounds_min_cm": [
+      -2.9999999329447746,
+      -2.9999999329447746,
+      0.0
+    ],
+    "bounds_max_cm": [
+      2.9999999329447746,
+      2.9999999329447746,
+      21.99999988079071
+    ],
+    "dimensions_cm": [
+      5.999999865889549,
+      5.999999865889549,
+      21.99999988079071
+    ],
+    "origin_cm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "material_slots": [
+      "M_FlareMetal"
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "signed_volume_cm3": 593.9999643260081,
+    "uv_layer": "UVMap",
+    "finite_uvs": true,
+    "convex": true,
+    "contains_visual": true
+  },
+  "audio": {
+    "channels": 1,
+    "sample_rate_hz": 48000,
+    "bits_per_sample": 16,
+    "frames": 192000,
+    "compression": "NONE",
+    "duration_seconds": 4.0,
+    "loop_value_delta_lsb": 0.0,
+    "loop_adjacent_slopes_lsb": [
+      0.0,
+      0.0
+    ],
+    "clipped_samples": 0,
+    "dc_mean_lsb": 0.0068125,
+    "peak_dbfs": -8.404914036757983,
+    "rms_dbfs": -21.602953826616424,
+    "seam_10ms_rms_to_next_10ms_ratio": 0.8383196234502736,
+    "audition": "Not performed in Unreal; source waveform/format/continuity verified only."
+  },
+  "unreal_import": "not run",
+  "style_map_split_screen_windows": "not run"
+}
