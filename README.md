@@ -13,6 +13,8 @@ We work in 45–60 minute sprints with three people in parallel. The Windows mac
 - **Asset generation:** [docs/assets.md](docs/assets.md), with credits in [CREDITS.md](CREDITS.md)
 - **Rules for agents (and people):** [AGENTS.md](AGENTS.md)
 - **Editor agent setup:** [docs/mcp.md](docs/mcp.md)
+- **Packaged app workflow:** [build and play with `/package-play`](Tools/packaged-play.md)
+- **Team PR format:** [HC, PG and HZ handoffs with `/team-pr`](docs/pull-requests.md)
 - **Design:** [docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md), the maze run, which updates [direction-2026-10-09.md](docs/design/direction-2026-10-09.md) and [two-to-four-players.md](docs/design/two-to-four-players.md)
 
 ## Lanes
@@ -83,7 +85,7 @@ The six-round candidate opens by default. Host it with `Tools\play-adventure.bat
 
 This candidate has automated Windows client and split-screen evidence. The shared Mac/gamepad playtest, complete physical route timing and visual/audio acceptance remain pending; see [integration status](Tools/unreal/six_round/INTEGRATION_STATUS.md). The adventure currently uses the isolated `L_SixRound_Test` assembly so the original lane-owned maps remain protected.
 
-Playtests run the game straight from each machine's engine install (`-game`), not from a packaged build. That way Macs and Windows can play together.
+The host/join scripts below run from each machine's engine install (`-game`). For a native packaged Development app, use `/package-play` in BB or the [packaged launchers](Tools/packaged-play.md). Mac and Windows can play together when every peer uses its platform's package from the same commit and settings.
 
 The launch scripts use `-DisablePython` during game runs because editor toolset startup scripts require editor-only classes. Python and MCP remain enabled when opening the project in Unreal Editor.
 
