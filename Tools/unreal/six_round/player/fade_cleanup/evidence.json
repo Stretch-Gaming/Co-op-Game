@@ -1,0 +1,830 @@
+{
+  "baseline": "42762fcaa07a396f06098131dc1184c468556794",
+  "parent_branch": "codex/six-round-adventure",
+  "branch": "pg/pg6-taking-fade-cleanup",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "package": "Content/Player/Taking/BP_TakingDirector.uasset",
+  "changed_original_graphs": [
+    "PlayTakingVisual",
+    "FinishTaking",
+    "HideTakingPresentation"
+  ],
+  "added_helpers": [
+    "CanPresentTakingLocally",
+    "ClearPresentedTakingFade",
+    "ReconcilePresentedTakingFade",
+    "ApplyOwnedTakingFade"
+  ],
+  "nonreplicated_cache_members": [
+    "PresentedTakingController",
+    "PresentedTakingPawn",
+    "PresentedTakingStarted",
+    "bPresentedTakingFadeOwned"
+  ],
+  "compile_warnings_as_errors": true,
+  "native_final_audit": {
+    "ok": true,
+    "sha256": "7d1d557caaca7895af92056a339a7370c19ba30bd80310f84369f3a94435dbcd",
+    "helper_readback": {
+      "CanPresentTakingLocally": "(fn CanPresentTakingLocally (PresentedPawn PresentedController)\n  (Utilities|IsValid PresentedPawn\n    (:\"Is Valid\"\n      (Utilities|IsValid PresentedController\n        (:\"Is Valid\"\n          (Utilities|IsValid (Variables|Default|GetVictim)\n            (:\"Is Valid\"\n              (return (and (Pawn|IsLocallyControlled PresentedPawn) (and (Pawn|IsLocalController PresentedController) (and (Utilities|Equal(Object) PresentedPawn (Variables|Default|GetVictim)) (and (Utilities|Equal(Object) (Pawn|GetController PresentedPawn) PresentedController) (>= (Variables|Default|GetTakingStarted) 0.0)))))))\n            (:\"Is Not Valid\"\n              (return false))))\n        (:\"Is Not Valid\"\n          (return false))))\n    (:\"Is Not Valid\"\n      (return false))))\n",
+      "ClearPresentedTakingFade": "(fn ClearPresentedTakingFade ()\n  (bind _presentedtakingcontroller (Variables|Default|GetPresentedTakingController))\n  (bind _playercameramanager (Game|GetPlayerCameraManager _presentedtakingcontroller))\n  (if (|GetbPresentedTakingFadeOwned)\n    (Utilities|IsValid (Variables|Default|GetPresentedTakingController)\n      (:\"Is Valid\"\n        (if (Pawn|IsLocalController (Variables|Default|GetPresentedTakingController))\n          (Utilities|IsValid _playercameramanager\n            (:\"Is Valid\"\n              (CameraFades|SetManualCameraFade _playercameramanager 0.0 (Utilities|Struct|MakeLinearColor 0.0 0.0 0.0 0.0) true)))))))\n  (|SetbPresentedTakingFadeOwned false)\n  (Variables|Default|SetPresentedTakingController 0)\n  (Variables|Default|SetPresentedTakingPawn 0)\n  (Variables|Default|SetPresentedTakingStarted -1.0))\n",
+      "ReconcilePresentedTakingFade": "(fn ReconcilePresentedTakingFade ()\n  (bind _returnvalue (Game|GetGameState))\n  (bind _allowed (CallFunction|CanPresentTakingLocally (Variables|Default|GetPresentedTakingPawn) (Variables|Default|GetPresentedTakingController)))\n  (if (and _allowed (== (Variables|Default|GetPresentedTakingStarted) (Variables|Default|GetTakingStarted)))\n    (Utilities|IsValid _returnvalue\n      (:\"Is Valid\"\n        (if (not (and (>= (- (GameState|GetServerWorldTimeSeconds _returnvalue) (Variables|Default|GetPresentedTakingStarted)) 0.35) (< (- (GameState|GetServerWorldTimeSeconds _returnvalue) (Variables|Default|GetPresentedTakingStarted)) 1.15)))\n          (CallFunction|ClearPresentedTakingFade)))\n      (:\"Is Not Valid\"\n        (CallFunction|ClearPresentedTakingFade)))\n    (else\n      (CallFunction|ClearPresentedTakingFade))))\n",
+      "ApplyOwnedTakingFade": "(fn ApplyOwnedTakingFade (PresentedPawn PresentedController FadeAmount FadeColor FadeAudio)\n  (bind _playercameramanager (Game|GetPlayerCameraManager PresentedController))\n  (bind _allowed (CallFunction|CanPresentTakingLocally PresentedPawn PresentedController))\n  (if _allowed\n    (if (or (Utilities|NotEqual(Object) (Variables|Default|GetPresentedTakingController) PresentedController) (or (Utilities|NotEqual(Object) (Variables|Default|GetPresentedTakingPawn) PresentedPawn) (!= (Variables|Default|GetPresentedTakingStarted) (Variables|Default|GetTakingStarted))))\n      (CallFunction|ClearPresentedTakingFade))\n    (Variables|Default|SetPresentedTakingController PresentedController)\n    (Variables|Default|SetPresentedTakingPawn PresentedPawn)\n    (Variables|Default|SetPresentedTakingStarted (Variables|Default|GetTakingStarted))\n    (Utilities|IsValid _playercameramanager\n      (:\"Is Valid\"\n        (CameraFades|SetManualCameraFade _playercameramanager FadeAmount FadeColor FadeAudio)\n        (|SetbPresentedTakingFadeOwned (> FadeAmount 0.0)))\n      (:\"Is Not Valid\"\n        (CallFunction|ClearPresentedTakingFade)))\n    (else\n      (CallFunction|ClearPresentedTakingFade))))\n"
+    },
+    "graph_hashes": {
+      "UserConstructionScript": "0f237e5aeddc6d498c1d181247ced4a25441c72ffc880dfbe55166474d0c0e03",
+      "OnRep_Victim": "b71711d54b6f6f9f3773428b159a7a67b89ab8b9f608d5e76b6db76f2ebf3987",
+      "OnRep_TakingStarted": "4484972d054ecbcd0fe1a224bbbdbb42d879065089c9d7989b462350b2e577d6",
+      "OnRep_ScareStyle": "9be16ca55d652f2ecc0b9159b4e94320518323842b7b8f75c9cdf6299b2e6e61",
+      "OnRep_RemainingSlot": "4a19d39ac2a8c9a0ed83d55d32f8fcb4aaa34fe23f0a5e3bd7a33fc115bfc8a5",
+      "BeginTaking": "9ebefba6510232335ef64018896d9eabf3920e9d124bbf7bac67a2f2d8c8af05",
+      "RefreshTaking": "7db4f9254da45daf7659a60d74921da26b196929ce9b558ded838495e1c1f0bb",
+      "ScheduleNext": "c8c5d1ff4c6fde5f209c7a1b7219cc0d80c5d75e7ac8997fbfecca62e7167a60",
+      "FinishTaking": "7edb9e0d2e7b9f34ef6e2cb8113a518253e3dae0b7dc3c2aeb8f7be14453a2d4",
+      "PlayTakingVisual": "eac3063f8ccb16ecc8260df693b420c836dc336a377340e5731d5cc440395394",
+      "TakePlayer": "4ceabacb995c54d8973475a3afd932041a64480944f87dc882238d9fc6ca928a",
+      "MoveVictimToPath": "ff7dd0539c99b1f76b80f98e9aba702b40cb0481862f591c3bb38931ffd3a76a",
+      "ResetTaking": "a2ff6005867e754936b8483e5f5ffa0d368b2faff45476bc139a59e46b0f4b46",
+      "ChooseRemainingPlayer": "756b9ee89f0cef2258623bf402c782d1dcbff7e5d6ad23c55c3988f13e958a31",
+      "UnprotectVictim": "7b72ff3190770ba116571631d9de5d63185f8b91202f9b897a02f518ab5debae",
+      "CanTake": "06da79c6cd119f14d31107e11f24b885df610dcfe34c5f91d68b76d3520aa10e",
+      "HasActiveVictim": "7bc22d5d8360435a09de15ed9164cb268f618305e90cf2fe647f7d4e12a72d3a",
+      "ProcessTakingPlayer": "05510e236fe9de3a394ac0883e2d42cfd694d7001c54ded6686a34304a388ce1",
+      "TakingAuthorityTick": "63626b323a3f511eda8d2b502666ce64b57e0384f9aad5b4b421c00f9a7a0181",
+      "PlayTakingAudio": "ac7cbebfa3239d953260db7cf726efe9157008fe2f9fb25d5b5b172b0dc57256",
+      "BeginTakingAudio": "77c86897009f3d2ed481364cb34f6724a55d1e907078d0dfac78e26dc0261a32",
+      "NextPresentationStyle": "cc75e3a4ab0861784357d1b930e8078be23c9c88cf9f5c18b4b3e1d1ba73af6c",
+      "RefreshTakingPresentation": "fa061479791351def9193fb3584322a1d1886cdb0d1b3edc8055f6c6dabcdec4",
+      "BeginTakingPresentation": "5c2b5eeec2c32736c0fd6ada856affc43e3db88c98b4ddab10317dd535c18ec1",
+      "HideTakingPresentation": "1494b98218e574ddd8d1fd1fa678b19c19c2891266096a508dd2c65ee6016a0e",
+      "CanPresentTakingLocally": "c82f8b3898f0870f1ef11f8e28bace525ae0263a3b2dc1051f43e0eb52631b90",
+      "ClearPresentedTakingFade": "bb4f393eea2972d8bb5312b5036301d20a0f68bea5e3096c689dbd9f920c3be4",
+      "ReconcilePresentedTakingFade": "bd1133917e0152d81086d5e447b038085a3a5785d4e15eb4c8a728ac1d9193d1",
+      "ApplyOwnedTakingFade": "f24b6c644e1be2bdd153bdcc5877d1bb65435cca5bef82600db101c0c265f450",
+      "EventGraph": "4abf081f84db017f57004c6bdb2b4b7dc106c6aeb1b71ff7b9ed9033046555d4"
+    }
+  },
+  "idempotent_apply": {
+    "action": "apply",
+    "unchanged": true,
+    "saved": false
+  },
+  "candidate_cases": [
+    {
+      "report": "fade-fixed-cancel-pre-joining-2.json",
+      "sha256": "5a0d9b0c23e248f86120f9bcebbaed79de3fafc82444d47778d20d11220c709b",
+      "state_passed": false,
+      "rendered_review": "Harness setup failed before taking; no candidate acceptance result",
+      "profile": "joining",
+      "players": 2,
+      "victim": null,
+      "victim_slot": null,
+      "taking_age": null,
+      "style": null,
+      "teleported_at_cancel": null,
+      "begin_epoch": 1791678663.5164428,
+      "end_epoch": 1791678663.566667,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        }
+      ],
+      "checks": []
+    },
+    {
+      "report": "fade-fixed-natural-cancel-pre-joining-2.json",
+      "sha256": "b36bc8585ae64e10c6a3f1bf0db681b110353d04ec0c2417ad4ae66432234763",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "joining",
+      "players": 2,
+      "victim": 260,
+      "victim_slot": 0,
+      "taking_age": 0.47772495821118355,
+      "style": 0,
+      "teleported_at_cancel": false,
+      "begin_epoch": 1791678711.780332,
+      "end_epoch": 1791678723.8954408,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 260,
+          "taking_age": 0.47772495821118355,
+          "style": 0,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    },
+    {
+      "report": "fade-fixed2-cancel-post-joining-2.json",
+      "sha256": "2596e85f22ca04cdbc71d02030b17447565ca330b9c73e06f99cdefaafcdc143",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "joining",
+      "players": 2,
+      "victim": 266,
+      "victim_slot": 0,
+      "taking_age": 0.8896915838122368,
+      "style": 0,
+      "teleported_at_cancel": true,
+      "begin_epoch": 1791678791.030335,
+      "end_epoch": 1791678803.4825149,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 266,
+          "taking_age": 0.8896915838122368,
+          "style": 0,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    },
+    {
+      "report": "fade-normal-style1-normal-host_split-2.json",
+      "sha256": "d1275625f9ff3836915dbbc1592d69a2223d6f0d1bf156c12210072959b0aa4a",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 281,
+      "victim_slot": 1,
+      "taking_age": 0.42294804006814957,
+      "style": 1,
+      "teleported_at_cancel": null,
+      "begin_epoch": 1791679087.715635,
+      "end_epoch": 1791679092.005575,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "disclosed bounded server survivor selection fixture before unchanged native taking",
+          "victim_slot": 1,
+          "player_id": 281,
+          "calls": [
+            "ApplyDamage(target,9999)",
+            "ChooseRemainingPlayer()",
+            "target.AC_Health.ResetHealth()"
+          ],
+          "remaining_slot": 0,
+          "natural_survivor_transaction_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "PIE-only server style-sequence fixture before unchanged native taking",
+          "desired_next_style": 1,
+          "calls": "NextPresentationStyle()",
+          "returned_styles": [
+            0
+          ],
+          "natural_style_sequence_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "owning presentation Hide fixture during valid black interval; not network input proof",
+          "victim": 281,
+          "age": 0.42294804006814957
+        }
+      ],
+      "checks": [
+        "normal taking telemetry: teleport occurred; cached owning fade preserved through active Hide and cleared after completion; rendered screenshots require review"
+      ]
+    },
+    {
+      "report": "fade-normal-style2-normal-host_split-2.json",
+      "sha256": "2afb4871f1effa624fbd88640b5e4510b3e8d3d4aeabac627bb8fdaa8faaaa98",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 278,
+      "victim_slot": 0,
+      "taking_age": 0.43149979040026665,
+      "style": 2,
+      "teleported_at_cancel": null,
+      "begin_epoch": 1791679060.405196,
+      "end_epoch": 1791679064.717155,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "disclosed bounded server survivor selection fixture before unchanged native taking",
+          "victim_slot": 0,
+          "player_id": 278,
+          "calls": [
+            "ApplyDamage(target,9999)",
+            "ChooseRemainingPlayer()",
+            "target.AC_Health.ResetHealth()"
+          ],
+          "remaining_slot": 1,
+          "natural_survivor_transaction_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "PIE-only server style-sequence fixture before unchanged native taking",
+          "desired_next_style": 2,
+          "calls": "NextPresentationStyle()",
+          "returned_styles": [
+            2,
+            0,
+            1
+          ],
+          "natural_style_sequence_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "owning presentation Hide fixture during valid black interval; not network input proof",
+          "victim": 278,
+          "age": 0.43149979040026665
+        }
+      ],
+      "checks": [
+        "normal taking telemetry: teleport occurred; cached owning fade preserved through active Hide and cleared after completion; rendered screenshots require review"
+      ]
+    },
+    {
+      "report": "fade-normal1-normal-host_split-2.json",
+      "sha256": "7f718e280b675ac388dda51b40d727ce1eea45712bace73b4cd12d298306b1b7",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 272,
+      "victim_slot": 0,
+      "taking_age": 0.4301086664199829,
+      "style": 0,
+      "teleported_at_cancel": null,
+      "begin_epoch": 1791678907.214615,
+      "end_epoch": 1791678911.514255,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "owning presentation Hide fixture during valid black interval; not network input proof",
+          "victim": 272,
+          "age": 0.4301086664199829
+        }
+      ],
+      "checks": [
+        "normal taking telemetry: teleport occurred; cached owning fade preserved through active Hide and cleared after completion; rendered screenshots require review"
+      ]
+    },
+    {
+      "report": "fade-original-cancel-pre-joining-2.json",
+      "sha256": "bfe86c6d386e74222aac042bdf74167436e340645e4edf897a44bbb3c631afef",
+      "state_passed": true,
+      "rendered_review": "original defect reproduced: victim remains black after retry",
+      "profile": "joining",
+      "players": 2,
+      "victim": 257,
+      "victim_slot": 1,
+      "taking_age": 0.47283512353897095,
+      "style": 1,
+      "teleported_at_cancel": false,
+      "begin_epoch": 1791678521.26388,
+      "end_epoch": 1791678533.679716,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 257,
+          "taking_age": 0.47283512353897095,
+          "style": 1,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    },
+    {
+      "report": "fade-primary-late-cancel-post-host_split-2.json",
+      "sha256": "731bbb216365cf9e29f75f4260fe63477d9c910fe4539868819263461f3185a5",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 282,
+      "victim_slot": 0,
+      "taking_age": 0.8558603748679161,
+      "style": 1,
+      "teleported_at_cancel": true,
+      "begin_epoch": 1791679106.155308,
+      "end_epoch": 1791679119.9162838,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "disclosed bounded server survivor selection fixture before unchanged native taking",
+          "victim_slot": 0,
+          "player_id": 282,
+          "calls": [
+            "ApplyDamage(target,9999)",
+            "ChooseRemainingPlayer()",
+            "target.AC_Health.ResetHealth()"
+          ],
+          "remaining_slot": 1,
+          "natural_survivor_transaction_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "PIE-only server style-sequence fixture before unchanged native taking",
+          "desired_next_style": 1,
+          "calls": "NextPresentationStyle()",
+          "returned_styles": [
+            2,
+            0
+          ],
+          "natural_style_sequence_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 282,
+          "taking_age": 0.8558603748679161,
+          "style": 1,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "late repeated presentation/reset fixture after completed retry, not network delay proof",
+          "calls": [
+            "server.ResetTaking(2,2)",
+            "server.FinishTaking()",
+            "each owner world.HideTakingPresentation()"
+          ]
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)",
+        "late repeated ResetTaking/FinishTaking/Hide remains idempotent with cleared Victim/cache; no packet emulation claim"
+      ]
+    },
+    {
+      "report": "fade-primary-style2-normal-host_split-2.json",
+      "sha256": "33277afddcad23541c2be7f190e088e5f795835194f8549be5769cb04a7cc49d",
+      "state_passed": false,
+      "rendered_review": "Harness setup failed before taking; no candidate acceptance result",
+      "profile": "host_split",
+      "players": 2,
+      "victim": null,
+      "victim_slot": null,
+      "taking_age": null,
+      "style": null,
+      "teleported_at_cancel": null,
+      "begin_epoch": 1791678964.8025699,
+      "end_epoch": 1791678964.841432,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        }
+      ],
+      "checks": []
+    },
+    {
+      "report": "fade-primary-survivor-cancel-pre-host_split-2.json",
+      "sha256": "6b19f29c3172783d871a7161d4a44596ed191920ce7b999620b4d654336d3cab",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 276,
+      "victim_slot": 0,
+      "taking_age": 0.47083866968750954,
+      "style": 2,
+      "teleported_at_cancel": false,
+      "begin_epoch": 1791679024.8316429,
+      "end_epoch": 1791679036.9936142,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "disclosed bounded server survivor selection fixture before unchanged native taking",
+          "victim_slot": 0,
+          "player_id": 276,
+          "calls": [
+            "ApplyDamage(target,9999)",
+            "ChooseRemainingPlayer()",
+            "target.AC_Health.ResetHealth()"
+          ],
+          "remaining_slot": 1,
+          "natural_survivor_transaction_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "PIE-only server style-sequence fixture before unchanged native taking",
+          "desired_next_style": 2,
+          "calls": "NextPresentationStyle()",
+          "returned_styles": [
+            2,
+            0,
+            1
+          ],
+          "natural_style_sequence_proven": false,
+          "owning_network_input_proof": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 276,
+          "taking_age": 0.47083866968750954,
+          "style": 2,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    },
+    {
+      "report": "fade-split1-cancel-pre-host_split-2.json",
+      "sha256": "84fbddf2f8e17c3bbbd84130ebaeb83bd4028600a4201bbb55fb7e60a5a9a92a",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 269,
+      "victim_slot": 1,
+      "taking_age": 0.47523416578769684,
+      "style": 0,
+      "teleported_at_cancel": false,
+      "begin_epoch": 1791678820.4037492,
+      "end_epoch": 1791678832.543243,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 269,
+          "taking_age": 0.47523416578769684,
+          "style": 0,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    },
+    {
+      "report": "fade-split2-cancel-post-host_split-2.json",
+      "sha256": "a4e95dfaad228c9f3a1ab653b6f64478676a95209cef1cc72e4df1bc0e3d9783",
+      "state_passed": true,
+      "rendered_review": "reviewed: expected black interval and restored scene, no witness camera fade",
+      "profile": "host_split",
+      "players": 2,
+      "victim": 271,
+      "victim_slot": 1,
+      "taking_age": 0.8866558335721493,
+      "style": 0,
+      "teleported_at_cancel": true,
+      "begin_epoch": 1791678862.7587788,
+      "end_epoch": 1791678875.2822988,
+      "fixtures": [
+        {
+          "kind": "server round setup fixture",
+          "calls": [
+            "StartRound(1)",
+            "ClearRound()",
+            "StartRound(2)"
+          ],
+          "natural_route_proven": false
+        },
+        {
+          "kind": "server FailRound interruption fixture",
+          "victim": 271,
+          "taking_age": 0.8866558335721493,
+          "style": 0,
+          "owning_network_input_proof": false
+        }
+      ],
+      "checks": [
+        "interruption clears Victim/protection without death across peers",
+        "R2 attempt2 no taking replay; owners retain own view targets (rendered fade needs screenshot review)"
+      ]
+    }
+  ],
+  "legacy_smoke": [
+    {
+      "report": "pg-owner-controls-site01-client-joining-2.json",
+      "sha256": "6c28f62cbdadc8a402d7a7eed00471fe011a1f0120757b0c3925a345181fe980",
+      "passed": true,
+      "worlds": [
+        {
+          "world": "L_Site01",
+          "authoritative_game_mode": true,
+          "net_mode_from_public_network_queries": "NM_DedicatedServer",
+          "local_player_ids": []
+        },
+        {
+          "world": "L_Site01",
+          "authoritative_game_mode": false,
+          "net_mode_from_public_network_queries": "NM_Client",
+          "local_player_ids": [
+            284
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "authoritative_game_mode": false,
+          "net_mode_from_public_network_queries": "NM_Client",
+          "local_player_ids": [
+            285
+          ]
+        }
+      ],
+      "checks": [
+        "owner viewV and headlampF actions reached server and every peer without changing another owner",
+        "held sprint and move input changed only the owner, with replicated sprint speed",
+        "sprint release restored walking on every peer",
+        "one Q action spent exactly one owner flare and spawned its replicated flare",
+        "owner viewV and headlampF actions reached server and every peer without changing another owner",
+        "held sprint and move input changed only the owner, with replicated sprint speed",
+        "sprint release restored walking on every peer",
+        "one Q action spent exactly one owner flare and spawned its replicated flare"
+      ],
+      "fixtures": []
+    },
+    {
+      "report": "pg-owner-controls-site01-split-host_split-2.json",
+      "sha256": "d70d98e127094608fc1e2d4b9dbfa4b62c4d685cc8c48be2beed00a40fab0b8f",
+      "passed": true,
+      "worlds": [
+        {
+          "world": "L_Site01",
+          "authoritative_game_mode": true,
+          "net_mode_from_public_network_queries": "NM_ListenServer",
+          "local_player_ids": [
+            286,
+            287
+          ]
+        }
+      ],
+      "checks": [
+        "owner viewV and headlampF actions reached server and every peer without changing another owner",
+        "held sprint and move input changed only the owner, with replicated sprint speed",
+        "sprint release restored walking on every peer",
+        "one Q action spent exactly one owner flare and spawned its replicated flare",
+        "owner viewV and headlampF actions reached server and every peer without changing another owner",
+        "held sprint and move input changed only the owner, with replicated sprint speed",
+        "sprint release restored walking on every peer",
+        "one Q action spent exactly one owner flare and spawned its replicated flare"
+      ],
+      "fixtures": []
+    }
+  ],
+  "resources": {
+    "samples": 65,
+    "free_percent_min": 15,
+    "free_percent_max": 29,
+    "swap_used_mib_max": 7100.25,
+    "pressure2_sample_count": 35,
+    "first_pressure2": {
+      "epoch": 1791678791.212325,
+      "profile": "joining",
+      "args": {
+        "case": "cancel-post",
+        "run": "fixed2",
+        "profile": "joining",
+        "players": 2,
+        "timeout": 25,
+        "cancel_age": 0.85,
+        "patched": true
+      },
+      "process": "  PID    RSS  %CPU ELAPSED\n77354 1856224 228.6   05:53\n",
+      "memory": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 20%\n",
+      "swap": "vm.swapusage: total = 7168.00M  used = 6588.69M  free = 579.31M  (encrypted)\n",
+      "pressure": "kern.memorystatus_vm_pressure_level: 2\n"
+    },
+    "larger_rosters": "not run: two-client elevated pressure; bounded host-pair prioritized"
+  },
+  "logs": {
+    "log_sha256": "450d02aee6271a81338c7414551540e462b748ac8f66be1ec68ffdb576d1a7ff",
+    "total_lines": 12307,
+    "accessed_none": [],
+    "error_lines": 7163,
+    "non_python_errors": [],
+    "python_error_lines": 7163,
+    "fatal_assertions": [],
+    "normal_shutdown": true,
+    "successful_run_errors": {
+      "fade-fixed-natural-cancel-pre-joining-2.json": [],
+      "fade-primary-survivor-cancel-pre-host_split-2.json": [],
+      "fade-normal-style2-normal-host_split-2.json": [],
+      "fade-normal1-normal-host_split-2.json": [],
+      "fade-fixed2-cancel-post-joining-2.json": [],
+      "fade-normal-style1-normal-host_split-2.json": [],
+      "fade-primary-late-cancel-post-host_split-2.json": [],
+      "fade-original-cancel-pre-joining-2.json": [],
+      "fade-split2-cancel-post-host_split-2.json": [],
+      "fade-split1-cancel-pre-host_split-2.json": []
+    }
+  },
+  "closure": {
+    "pid": 77354,
+    "pid_absent": true,
+    "port8001_free": true,
+    "epoch": 1791679235.622538,
+    "native_zero_pie": {
+      "action": "restore",
+      "worlds": [],
+      "play": {
+        "PlayNetMode": "PIE_Standalone",
+        "PlayNumberOfClients": 1,
+        "RunUnderOneProcess": true
+      },
+      "performance": {
+        "bThrottleCPUWhenNotForeground": true
+      },
+      "dirty_content": [],
+      "dirty_maps": []
+    },
+    "inis_verified": 7,
+    "restored_inis": [
+      "/Users/peterkim/Library/Application Support/Epic/UnrealEngine/5.8/Saved/Config/MacEditor/EditorSettings.ini"
+    ],
+    "generated_inis_archived_removed": [
+      "/Users/peterkim/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_cq6upikcbf-1/Co-op-Game/Saved/Config/MacEditor/GameUserSettings.ini",
+      "/Users/peterkim/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_cq6upikcbf-1/Co-op-Game/Saved/Config/MacEditor/Editor.ini",
+      "/Users/peterkim/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_cq6upikcbf-1/Co-op-Game/Saved/Config/MacEditor/EditorPerProjectUserSettings.ini",
+      "/Users/peterkim/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_cq6upikcbf-1/Co-op-Game/Saved/Config/MacEditor/Engine.ini",
+      "/Users/peterkim/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_cq6upikcbf-1/Co-op-Game/Saved/Config/CrashReportClient/UECC-Mac-3E53FCF80B45ED7F8F61E38F4CAB086E/CrashReportClient.ini"
+    ],
+    "tracked_hashes": 3075,
+    "changed_tracked": {
+      "Content/Player/Taking/BP_TakingDirector.uasset": {
+        "before": "b5ac05e0a0276b2aab46e0c5764941bb22773409123077b28aaa1fbcb4e0b8ad",
+        "after": "ce5d9f9063d41a8d53dc865affeea01e87d08c47b9752318a8022bcc916529f3"
+      }
+    },
+    "unchanged_tracked": 3074,
+    "locks": [
+      {
+        "id": "56118904",
+        "path": "Content/Player/Taking/BP_TakingDirector.uasset",
+        "owner": {
+          "name": "peterkimpk1"
+        },
+        "locked_at": "2026-10-11T00:20:04Z"
+      }
+    ],
+    "pressure": "kern.memorystatus_vm_pressure_level: 1\n",
+    "memory": "The system has 25769803776 (1572864 pages with a page size of 16384).\nSystem-wide memory free percentage: 76%\n",
+    "swap": "vm.swapusage: total = 8192.00M  used = 6646.81M  free = 1545.19M  (encrypted)\n"
+  },
+  "screenshots_sha256": {
+    "cancel-pre-joining-auto-auto-cancelled-w3.png": "922f76ad91219d1728abc905dfdda5e8a05c1ca846a56122c6f111f0e52beafa",
+    "cancel-pre-joining-auto-auto-cancelled-w1.png": "01dcdd3a87ac58849d7f0903bfa6ace35bfc27d12e7affd4d936778dadd49aa0",
+    "site01-split-w1.png": "8e9a8b2fe5d031911cee6c4ee66fefd1b9756282b1274e738cb30fa274e85077",
+    "fixed-natural-cancel-post-joining-auto-auto-before-cancel-w1.png": "e00dcf8914e50b93fde1a51cb51124eb75e019a162b0a9304e9b13a46c482690",
+    "normal-style1-normal-host_split-1-1-normal-black-w1.png": "e9ae798df0e93ee490b3883f5842aa1c85855e748ace83dc3aeae6ed1c6afbb0",
+    "fixed2-cancel-post-joining-auto-auto-before-cancel-w10.png": "bc3e0e4844c32fbeaab8b4faa96791b971fa6b6fc39d3aa6c1ee04b289caef72",
+    "normal-style1-normal-host_split-1-1-normal-restored-w1.png": "0ec92a1c09fc9a132a800c3378096ff5fa597e4cf2ffa9d42c8b783750c68569",
+    "normal-style2-normal-host_split-0-2-normal-black-w1.png": "8d14ae3ba266aa8e07af98647d4247f8c1c90ea74900ddffb67f9e60dea699d8",
+    "fixed-natural-cancel-pre-joining-auto-auto-cancelled-w7.png": "2f49d44372f264d12de71968325b3fa128665a60e9de04ea2c9afbe76ed8a313",
+    "fixed-natural-cancel-pre-joining-auto-auto-retry-w1.png": "48f17e194f95b7c8b44207270d1a6f653bd6ed39849794e30eea72a7724d6e83",
+    "primary-survivor-cancel-pre-host_split-0-2-retry-w1.png": "43ba814a3c42d96f1430510a90df9d5b5619afcb4562bdb2f25ff0b2d87dc552",
+    "primary-late-cancel-post-host_split-0-1-late-cleanup-w1.png": "0166bb8ae75372bbaa6954cbb867c9ec3607fe4323cba66dc3a1e843635848d6",
+    "fixed2-cancel-post-joining-auto-auto-retry-w10.png": "1df6f29d51b108140bba7203855ee4bed224c5e3caea4c8a80264ff3c7bd0a79",
+    "normal-style1-normal-host_split-1-1-normal-post-teleport-w1.png": "d0619f0ec5b9d1aecff66178b91df31abb8c884a2a6abada4fd911e97d33dd2e",
+    "split1-cancel-pre-host_split-auto-auto-before-cancel-w1.png": "319bf8e40f415398c5dcf13fbe3afbfbea6f25d29e44266db0abb5e660202f8a",
+    "primary-survivor-cancel-pre-host_split-0-2-before-cancel-w1.png": "58b33595be7624e6411fc070d19cdacad25b1c0eea89d8b04a222880ddbf1768",
+    "fixed-natural-cancel-pre-joining-auto-auto-cancelled-w1.png": "084bb085d7542ac50162c5c0d1bb14d7b9c3231a4a2973f78266659ed7337f6e",
+    "fixed-natural-cancel-pre-joining-auto-auto-retry-w7.png": "4d9f339639b2311e813f949263ebe16717d69f275d7108263cf0d43370435ae9",
+    "fixed-natural-cancel-post-joining-auto-auto-cancelled-w8.png": "9fdbd717c278357ff681bcecd470a1d3b168b14e78e06541a11c4af1da186351",
+    "split1-cancel-pre-host_split-auto-auto-cancelled-w1.png": "09bd526e1001d88f0b4d8f1f0c71c606ca27a176ddb8f7354d3371d682ea088b",
+    "primary-late-cancel-post-host_split-0-1-retry-w1.png": "2ebca377677f5779751e088278337565514da20cea62e4491bba137e4f33050d",
+    "fixed-natural-cancel-post-joining-auto-auto-retry-w8.png": "add2d9d942d629cec52e11c288ee2e90c5632f0f43e9668e2969cc71afaa7196",
+    "cancel-pre-joining-auto-auto-retry-w3.png": "774456dc8b766ae6a26a9a91539fff79b5e8dfa878f3cfdc7ac712bc867e4475",
+    "fixed2-cancel-post-joining-auto-auto-cancelled-w1.png": "9c60f55f136821a0bdd8eecb7ff40313ae76503e2a9f295ce51fd7bfbcf9fa07",
+    "cancel-pre-joining-auto-auto-before-cancel-w3.png": "1b45eb97833543d2f9e9d4a7acb3cbd3631e6fed8b53f30fa580d1e036b298e0",
+    "cancel-pre-joining-auto-auto-before-cancel-w1.png": "134bdceae3deb5d58c616dc62f5266c67e95e7780a30fdbe82aca392307390c1",
+    "fixed2-cancel-post-joining-auto-auto-before-cancel-w1.png": "9464cf4eb7b71e2aa7b7ae4a636d472e84a1c96d9dce41d025167f22e2207f85",
+    "cancel-pre-joining-auto-auto-retry-w1.png": "68df25d9fd0a42e26a6a5b1aa3c06b2fddffa7b3f3b883a89611bad60f44d4df",
+    "primary-survivor-cancel-pre-host_split-0-2-cancelled-w1.png": "8a6435fdd0a0bb1eeb05bdb2c546dcaf8a299cbd0cf30b6ed5619beeae86f517",
+    "primary-late-cancel-post-host_split-0-1-before-cancel-w1.png": "eeb4b794011caaa35d432208c885a91e2d36c263691b26bcc364a0722da2db5e",
+    "normal1-normal-host_split-auto-auto-normal-post-teleport-w1.png": "4c708247d6f478c8d8c09ba5b45b318ae1bec107a67e193f10b316053dba8e7d",
+    "normal1-normal-host_split-auto-auto-normal-restored-w1.png": "06e61d8531051d239d4b67d0a0c5d9f9d3d075775d4d8001f7da3fb7034afc0e",
+    "normal1-normal-host_split-auto-auto-normal-black-w1.png": "e8a3815e8e3a2e5331d3ca67c1a0c306beb953de9808d82448ddc725ca5d2842",
+    "fixed-natural-cancel-post-joining-auto-auto-cancelled-w1.png": "24c645bf9cc50890c31d78dbd704f0fb844eb76e940803ec1d14141a19aafbc2",
+    "split2-cancel-post-host_split-auto-auto-retry-w1.png": "744c1c3cbe1e57bee15fae0ce4ceea412f527b1406b632343079075ff06f13fd",
+    "fixed2-cancel-post-joining-auto-auto-retry-w1.png": "3300667e3a6c4b58f3e735783727778e62a58c1b9b013ef94aa572c2198ef1e7",
+    "fixed-natural-cancel-post-joining-auto-auto-retry-w1.png": "100079ae17eadceb93f9661af3f542b1c90ebf6073c7bb0101863f4fb310a6cd",
+    "fixed-natural-cancel-pre-joining-auto-auto-before-cancel-w1.png": "9464cf4eb7b71e2aa7b7ae4a636d472e84a1c96d9dce41d025167f22e2207f85",
+    "normal-style2-normal-host_split-0-2-normal-post-teleport-w1.png": "135aa514517137d1d0369a1c56197167832207240dd8de224d130bbb1202e3ff",
+    "split2-cancel-post-host_split-auto-auto-before-cancel-w1.png": "9b8f64771767831d1a68da1dc67847b8a4e3b4e32db5aa5285b6334f45adaee7",
+    "split2-cancel-post-host_split-auto-auto-cancelled-w1.png": "b19b6b07d4b7b081664ba2b991b210e09120dcac44614b3264752aac03664ea5",
+    "fixed2-cancel-post-joining-auto-auto-cancelled-w10.png": "42387d5dfba9452a27a9eccb1c7d40e3329f8cd83be726d5740689ffa77822a6",
+    "fixed-natural-cancel-post-joining-auto-auto-before-cancel-w8.png": "7b7dbef45f9b65668afac0c6f280cdf9e7bad4b3181d7c68d8fb282cdd7256b8",
+    "normal-style2-normal-host_split-0-2-normal-restored-w1.png": "0e84f2603cc630a12e7e7010fe1b892c06df8f02458a0bd140a6a90299e0eadf",
+    "fixed-natural-cancel-pre-joining-auto-auto-before-cancel-w7.png": "00cdbdadbf42077e2db6356e69fa8abc915ff179c27d116e6d8f0c5e3c64f5b7",
+    "split1-cancel-pre-host_split-auto-auto-retry-w1.png": "f1ca3fe52c1285e55058640c8cc3393c6e94e90708feb9346c04462666fb9316",
+    "primary-late-cancel-post-host_split-0-1-cancelled-w1.png": "ea73b9d66a3e58da405b673f1e7808f870fb29a770dbea75bbab2e6af918bea2"
+  },
+  "pending": [
+    "3/4-player fade regression",
+    "real packet-delay/reordering",
+    "disconnect/invalid-controller expiry",
+    "physical keyboard/gamepad",
+    "audible sound/one-shot counts",
+    "full physical route and complete team acceptance",
+    "Joining-client uninterrupted styles 1/2"
+  ],
+  "harness_failures": [
+    "Unreal null pin wrappers were truthy; preflight corrected without asset mutation",
+    "NodeComment reflection not exposed and Unreal Array not JSON-serializable; inspection corrected",
+    "First apply set null object defaults on templates; transaction undone and verified, no save",
+    "First cleanup graph reset only false branch; transaction undone, corrected explicit Sequence, recompiled/audited before any save",
+    "Instance-edit-disabled selection/style variable fixture rejected; removed",
+    "One post-cancel run stopped before asynchronous completion; callback referenced destroyed world and generated Python error storm. Explicit callback aborted, guarded driver waits for report; repeated post-cancel case passed",
+    "Console instance setter fixture rejected by editor; removed. Authorized existing survivor/style function fixtures succeeded"
+  ]
+}
