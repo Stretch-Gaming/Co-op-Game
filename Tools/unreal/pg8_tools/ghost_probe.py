@@ -38,7 +38,19 @@ def tick(_delta):
             h.transition('lamp_off')
     elif h.phase=='lamp_off':
         if elapsed>.2:h.release(pid,'lamp')
-        if elapsed>1:h.hold(pid,'flare');h.transition('throw')
+        if elapsed>1:
+            for other in h.ids:
+                if other!=pid:h.fixture_place(other,[-2500,-1000,95])
+            ghost=spawn_ghost(pawn.get_actor_location()+ue.Vector(900,0,20))
+            state['normal_ghost']=ghost;state['normal_position']=ghost.get_actor_location()
+            h.transition('normal_chase')
+    elif h.phase=='normal_chase' and elapsed>1:
+        ghost=state['normal_ghost'];travel=(ghost.get_actor_location()-state['normal_position']).length()
+        assert travel>100,('Normal ghost movement too slow',travel,ghost.get_editor_property('GhostSpeed'))
+        peer=h.actor_peer(owner.get_world(),ghost)
+        assert (peer.get_actor_location()-ghost.get_actor_location()).length()<100,'Owning peer ghost movement did not replicate'
+        h.check('normal unlit ghost chases at scaled speed and movement reaches owner peer',{'distance_cm':travel,'speed':ghost.get_editor_property('GhostSpeed'),'damage':ghost.get_editor_property('GhostDamage')})
+        ghost.destroy_actor();h.hold(pid,'flare');h.transition('throw')
     elif h.phase=='throw':
         if elapsed>.2:h.release(pid,'flare')
         if elapsed>2:

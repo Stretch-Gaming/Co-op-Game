@@ -19,12 +19,13 @@ row_field='ScalingRow_14_43C74C304230A92B6620E1A520A230C0'
 rows=json.loads(DT.get_rows(ue.load_asset('/Game/Player/DT_GhostScaling'),['2','3','4']))
 ghost_class=ue.load_asset('/Game/Player/Ghosts/BP_Ghost').generated_class()
 library=ue.load_object(None,'/Script/Engine.Default__GameplayStatics')
+fixture=ue.get_default_object(ue.load_asset('/Game/Player/Test/ToolsAcceptance/BP_PG8_RowFixture_r48gb6azg9').generated_class())
 actors=[];checks=[]
 try:
     for row in ('2','3','4'):
         current=gs.get_editor_property('RoundState')
         current.set_editor_property(row_field,ue.Name(row))
-        gs.set_editor_property('RoundState',current)
+        fixture.call_method('SetFixtureState',args=(gs,current))
         assert str(gs.call_method('GetScalingRow'))==row
         transform=ue.Transform(location=ue.Vector(0,2000,120))
         actor=library.call_method('BeginDeferredActorSpawnFromClass',args=(server,ghost_class,transform,ue.SpawnActorCollisionHandlingMethod.ALWAYS_SPAWN,None,ue.SpawnActorScaleMethod.MULTIPLY_WITH_ROOT))
@@ -38,7 +39,7 @@ try:
 except Exception:
     RESULT={'passed':False,'rows':checks,'error':traceback.format_exc()}
 finally:
-    gs.set_editor_property('RoundState',original)
+    fixture.call_method('SetFixtureState',args=(gs,original))
     for actor in actors:
         if ue.SystemLibrary.is_valid(actor):actor.destroy_actor()
     RESULT['original_row_restored']=str(gs.call_method('GetScalingRow'))==str(original.get_editor_property(row_field))
