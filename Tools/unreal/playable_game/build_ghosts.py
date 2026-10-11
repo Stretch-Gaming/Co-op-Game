@@ -16,6 +16,11 @@ write(ghost,'ApplyScaling','''
    (:then (bind data (Utilities|GetDataTableRow :DataTable "/Game/Player/DT_GhostScaling.DT_GhostScaling" :RowName (Class|BPCoopGameState|GetScalingRow :self gs))
     (:then (bind (count speed damage levers) (Utilities|Struct|BreakSGhostScaling :S_GhostScaling data))
      (Variables|Ghost|SetGhostSpeed speed) (Variables|Ghost|SetGhostDamage damage)) (:RowNotFound))) (:CastFailed)))''')
+# S_GhostScaling stores LeverCount before the two floats. Positional bindings
+# above are legacy; always connect the two setters by their actual field names.
+sys.path.insert(0,str(ROOT/'Tools/unreal/pg8_tools'))
+from fix_scaling import connect_named_scaling_fields
+connect_named_scaling_fields(ghost)
 write(ghost,'IsPlayerDowned','''
  (bind health (Utilities|Casting|CastToAC_Health :Object (Components|GetComponentbyClass :self Player :ComponentClass "/Game/Hazards/AC_Health.AC_Health_C"))
   (:then (bind downed (Class|ACHealth|IsDowned :self health)) (return downed)) (:CastFailed (return true)))''','Player')
