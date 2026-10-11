@@ -14,7 +14,7 @@ We work in 45–60 minute sprints with three people in parallel. The Windows mac
 - **Rules for agents (and people):** [AGENTS.md](AGENTS.md)
 - **Editor agent setup:** [docs/mcp.md](docs/mcp.md)
 - **Packaged app workflow:** [build and play with `/package-play`](Tools/packaged-play.md)
-- **Team PR format:** [HC, PG and HZ handoffs with `/team-pr`](docs/pull-requests.md)
+- **Team PR format:** [repo template](.github/pull_request_template.md) and [HC, PG and HZ handoff guide](docs/pull-requests.md)
 - **Design:** [docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md), the maze run, which updates [direction-2026-10-09.md](docs/design/direction-2026-10-09.md) and [two-to-four-players.md](docs/design/two-to-four-players.md)
 
 ## Lanes
@@ -57,7 +57,7 @@ Unreal assets (`.uasset`, `.umap`) are binary and can't be merged. If two people
 2. **Shared folders are lockable:** `Content/Core/`, `Content/Maps/` and `Content/Shared/`. Their files are read-only until you lock them with `git lfs lock <path>`. See who holds what with `git lfs locks`, and unlock after you push with `git lfs unlock <path>`.
 3. **If the save dialog lists a file you don't own, uncheck it.** The editor sometimes marks `L_Site01` or another lane's sublevel as changed.
 4. **Project settings, plugins and `Config/` belong to Windows (HC).** Ask before changing them.
-5. **Commit small and often.** Start each commit message with your phase code and end it with the issue number, like `PG-2: split-screen on the host (#24)`. Push with `git pull --rebase && git push`. Everyone works on `main`.
+5. **Commit small and often.** Start each commit message with your phase code and end it with the issue number, like `PG-2: split-screen on the host (#24)`. Work on a lane-and-phase branch, run `git pull --rebase` before pushing, and open or update a pull request against `main` using the [repo template](.github/pull_request_template.md).
 6. **Keep `main` playable.** Never push a Blueprint that doesn't compile. Keep unfinished work in your lane's test map until it works.
 7. **Prefer data over graphs.** Tunable numbers go in your lane's scaling data table, where they're easy to tune and easy for an agent to edit.
 

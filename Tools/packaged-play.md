@@ -1,7 +1,8 @@
 # Packaged play
 
 In BB, use **`/package-play`** to rebuild and play the current Blueprint game as
-a native Development app. **`/team-pr`** prepares its team PR description.
+a native Development app. Use the [repo PR template](../.github/pull_request_template.md)
+and [team handoff guide](../docs/pull-requests.md) to describe the delivery.
 Project skills live in `.bb/skills/`; fresh BB threads discover them after pull.
 These workflows are shared by HC, PG and HZ and do not change lane ownership.
 The default map follows `GameDefaultMap` in `Config/DefaultEngine.ini`. Main
