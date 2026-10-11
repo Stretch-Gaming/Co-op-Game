@@ -29,8 +29,11 @@ Potential new fixtures belong only under
 Core owns `BP_CoopCharacter`, `BP_CoopPlayerController`, GameMode, GameState,
 GameInstance, input contexts and travel/restart. HUD packages are HC-owned under
 `Content/Puzzles/UI/`. `BPFL_SplitScreen` is PG-owned but outside this task's
-binary write scope. All are read-only for this worker. No locks are required for
-the two narrow evidence files. No Tools, Config, maps, shared assets, traversal,
+binary write scope. All are read-only for this worker. The explicit child task
+authorizes "your assigned PG packages plus your narrow text/evidence files" and
+asks to publish a "source audit or read-only evidence report first". These two
+PG-11 evidence files use that narrow authorization; no cross-lane binary edits
+or locks are included. No Tools, Config, maps, shared assets, traversal,
 ghosts, tools or TakingDirector edits are included.
 
 The black-screen cancellation repair is already saved in main's
