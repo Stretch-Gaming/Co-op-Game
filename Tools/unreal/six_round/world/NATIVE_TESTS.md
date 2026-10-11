@@ -1,0 +1,19 @@
+Native world tests: primary execution only
+
+The world-owned native_support.Harness uses documented actor, controller, roster and Enhanced Input APIs. It does not reflect NetDriver/client_connections and does not modify Player's harness. Every report records initial approach placements and controller-yaw aim fixtures. No gameplay movement/health/carry state setter replaces native input. Queued callbacks are never marked passed; only completed reports set passed=true.
+
+Run one gate at a time in the core composite test PIE map, with real2/3/4 rosters and either joining clients or exactly two host local owners plus remaining joining clients. Primary must install SixInputReady and genuinely start the relevant Playing round. Reports are in Saved/SixRound. All scripts remain staging until actual native receipts pass.
+
+Full distinct paths: probe_parallel_paths.py args players, profile, stage first/second, timeout240. Each actual owner starts once at their ColorSlot path start, then uses their own movement/jump/sprint/climb/mantle input to reach the regroup center. First paths require a walking jump; second require observed sprint. Native shaft mantle exits use the thin lips; downward shafts use actual gravity. Live spike bait/backoff, dart and swing wait logic follows server schedules; hazards still damage normally. A death, stalled movement, round restart or missing real jump/landing fails. For2/3 owners, explicit path_slots mapping permits coverage of empty built paths but is disclosed as a physical coverage fixture and does not prove the normal assignment contract. Four-player normal slots cover all four paths without overrides.
+
+Focused probes: probe_native_route.py requires players, profile, player_id and probe. gap and pit_recovery also need stage first/second and ColorSlot0..3; climb needs ColorSlot1..3. Run each slot per roster/profile as practical, and all slots at least in four-player joining and host_split scenarios.
+
+- gap:2m first uses no authoritative sprint;3.5m second observes sprint; both require actual falling movement and a Walking landing beyond the gap. One initial approach is the only placement fixture.
+- pit_recovery: starts once in the pit, walks the nine39cm steps and arrives on the upper route with matching floor height and Walking state.
+- climb: native forward/climb ascends each shaft, releases climb, native Jump requests mantle, then walks the actual upper lip. No per-frame position updates are allowed.
+- mantle: uses the existing test-only150cm ledge; requires bMantling observed then real Walking on top.
+- carrier: requires an already-picked-up genuine heavy relic in PlayingRound6. Walks entire guarded return, waits at live trap rhythms, keeps heavy ownership and denies sprint/climb. Use timeout450. This does not prove the pickup/cage puzzle or final altar transaction; core gates cover those.
+- zipline: genuine heavy relic in PlayingRound6; verifies native local EndPoint resolves to(18000,0,0), moves into the actual BoardVolume, observes attachment to BP_ZiplineTrolley, monotonic travel, detachment and Walking near the exit in every peer. BoardVolume overlap, not a direct BeginRide call, boards the player. Use timeout90.
+- chasm: empty-handed living faller and at least one living teammate in Playing. Initial airborne placement is explicitly a fixture; natural gravity and the real new chasm overlap cause authoritative death, then every peer must replicate it. It does not prove walking off the guardrails or heavy-key-loss restart ordering.
+
+Snapshot limitations: these are synthetic owning-input gates with steering aims, not physical keyboard/gamepad, visual/audio, Mac or packet-emulation acceptance. Geometry repair must follow primary's actual failed report; no test silently changes collision, phases, health, carry flags or authoritative callbacks to pass.

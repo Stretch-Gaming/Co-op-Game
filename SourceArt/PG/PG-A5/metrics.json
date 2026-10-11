@@ -1,0 +1,63 @@
+{
+  "SM_Bat_Body": {
+    "triangles": 1120,
+    "size_cm": [
+      20.5,
+      8.5,
+      11.3
+    ],
+    "materials": [
+      "Bat_Fur",
+      "Critter_Eye",
+      "Critter_Fang",
+      "Critter_Skin"
+    ]
+  },
+  "SM_Bat_Wing": {
+    "triangles": 276,
+    "size_cm": [
+      14.6,
+      23.6,
+      3.6
+    ],
+    "materials": [
+      "Bat_Membrane",
+      "Bat_Fur"
+    ],
+    "hinge_from_pivot_cm": [
+      1.94,
+      -11.66,
+      0.32
+    ]
+  },
+  "SM_Bat_Hanging": {
+    "triangles": 1636,
+    "size_cm": [
+      10.8,
+      9.5,
+      23.9
+    ],
+    "materials": [
+      "Bat_Membrane",
+      "Bat_Fur",
+      "Critter_Eye",
+      "Critter_Fang",
+      "Critter_Skin"
+    ]
+  },
+  "SM_Rat": {
+    "triangles": 2634,
+    "size_cm": [
+      49.1,
+      16.2,
+      12.9
+    ],
+    "materials": [
+      "Rat_Fur",
+      "Rat_Belly",
+      "Rat_Skin",
+      "Rat_Eye",
+      "Rat_Teeth"
+    ]
+  }
+}

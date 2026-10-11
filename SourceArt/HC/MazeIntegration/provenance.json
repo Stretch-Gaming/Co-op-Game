@@ -1,0 +1,23 @@
+{
+  "source_commit": "f883727a33344ab601b4af2eaa57f897464246f5",
+  "reference_pr": 90,
+  "exporter_version": 2,
+  "export": "Prototypes/CoopCave built with build_mac.sh, run headless on /Engine/Maps/Entry with -game -nullrhi, console command coop.ExportCave; Saved/CaveTransfer/cave.json re-serialized as compact JSON and gzipped (level 9, mtime 0)",
+  "exported_on": "Mac (Apple silicon), Unreal Engine 5.8.3-58210709, 2026-10-10",
+  "previous_source_commit": "66a8dd272ceacf224696ceaa9790a8327a852d0f",
+  "components": {
+    "blocker": 7,
+    "instanced": 10,
+    "point": 81,
+    "procedural": 246,
+    "static": 575
+  },
+  "instances": 5915,
+  "convex_hulls": 3057,
+  "stations": 13,
+  "moving_pieces": 2,
+  "scene_sha256": "fd40cdeb47f2233c31125e16a2b62636734eb543ebd4f3ff4ae63a7ca6495b2a",
+  "uncompressed_bytes": 58350450,
+  "compressed_bytes": 7962350,
+  "license": "Team-authored project geometry and art; public redistribution permitted; no third-party assets added"
+}

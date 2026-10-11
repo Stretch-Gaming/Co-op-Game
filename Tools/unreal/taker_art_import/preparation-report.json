@@ -1,0 +1,27 @@
+{
+  "sound_hash_match": 11,
+  "outstanding": [
+    "primary native verification/finalize",
+    "primary dark cave/split-screen render and Mac fallback look",
+    "coordinator canonical audio reference adoption/old duplicate cleanup",
+    "listen to audio"
+  ],
+  "source_sound_formats": "9 mono48kHz24-bit PCM/extensible WAV",
+  "gameplay_changes": 0,
+  "source_files": 17,
+  "sound_pr": 123,
+  "source_warning": "Body2 boundary edges and one3-face edge near top of head; documented; original FBX unchanged",
+  "commits": 0,
+  "source_binary_audit": "13,199/5,500 triangles; UV0/normals/sockets/1K textures match",
+  "own_editor_calls": 0,
+  "native_progress_from_primary": "Native preflight passed; tenassetscreated; bounds/sockets/slots/triangles/textures passed before Material.shading_model access error; accessor fixed; primary to rerun verifier/finalizer",
+  "source_hydrated": true,
+  "assets_planned": 10,
+  "source_commit": "60ae5e0250e790f943064f54e400574e8285463c",
+  "own_audio_changes": 0,
+  "paths_root": "/Game/Player/Art/Taker",
+  "native_audio_pending": true,
+  "verification": "8 Python AST syntax checks; JSON manifests parse; offline FBX topology/sourcehash/texture and PR123 LFS/WAV checks",
+  "status": "ready_for_primary_native_verification_and_finalize",
+  "approvals": "Primary owns import review/execution; no behavior changes"
+}

@@ -1,0 +1,42 @@
+{
+  "assets": [
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1200_700_400_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_130_180_330_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1500_750_300_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1946_1559_1384_Style",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1950_1560_1380_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1950_1560_1380_Style",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_249_2920_2397_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_3386_2360_7842_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_3727_2544_298_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_4035_956_342_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_447_5257_4314_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_450_450_500_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_497_3813_1683_Style",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_690_610_840_Style",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_7263_1721_616_Flat",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_8070_4508_423_Style",
+    "/Game/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_8500_6200_1200_Flat"
+  ],
+  "files": [
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1200_700_400_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_130_180_330_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1500_750_300_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1946_1559_1384_Style.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1950_1560_1380_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_1950_1560_1380_Style.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_249_2920_2397_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_3386_2360_7842_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_3727_2544_298_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_4035_956_342_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_447_5257_4314_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_450_450_500_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_497_3813_1683_Style.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_690_610_840_Style.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_7263_1721_616_Flat.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_8070_4508_423_Style.uasset",
+    "Content/Hazards/Art/SixRoundConnection/Materials/MI_MazeTint_8500_6200_1200_Flat.uasset"
+  ],
+  "unresolved_source_materials": [],
+  "method": "Exact place_preserved suffix logic for eligible static/HISM records; source material presence checked against local Game assets or Engine namespace."
+}

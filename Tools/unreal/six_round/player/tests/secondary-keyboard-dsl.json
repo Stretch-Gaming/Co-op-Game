@@ -1,0 +1,62 @@
+[
+  {
+    "function": "KeyboardFlareOn",
+    "dsl": "(fn KeyboardFlareOn () (if (and (Networking|HasAuthority) (and (Pawn|IsLocalPlayerController) (Game|Player|IsPrimaryPlayer))) (Variables|Default|SetP2Flare true)))"
+  },
+  {
+    "function": "KeyboardFlareOff",
+    "dsl": "(fn KeyboardFlareOff () (if (and (Networking|HasAuthority) (and (Pawn|IsLocalPlayerController) (Game|Player|IsPrimaryPlayer))) (Variables|Default|SetP2Flare false)))"
+  },
+  {
+    "function": "KeyboardClimbOn",
+    "dsl": "(fn KeyboardClimbOn () (if (and (Networking|HasAuthority) (and (Pawn|IsLocalPlayerController) (Game|Player|IsPrimaryPlayer))) (Variables|Default|SetP2Climb true)))"
+  },
+  {
+    "function": "KeyboardClimbOff",
+    "dsl": "(fn KeyboardClimbOff () (if (and (Networking|HasAuthority) (and (Pawn|IsLocalPlayerController) (Game|Player|IsPrimaryPlayer))) (Variables|Default|SetP2Climb false)))"
+  },
+  {
+    "function": "RefreshSplitKeyboard",
+    "dsl": "(fn RefreshSplitKeyboard () \n (if (and (Networking|HasAuthority) (and (Pawn|IsLocalPlayerController) (Game|Player|IsPrimaryPlayer)))\n  (bind player (CallFunction|ResolveSecondaryLocalPawn))\n  (Utilities|IsValid :InputObject player\n   (:\"Is Valid\" (bind controller (Utilities|Casting|CastToPlayerController :Object (Pawn|GetController :self player))\n    (:then (bind subsystem (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem :PlayerController controller))\n     (Utilities|IsValid :InputObject subsystem (:\"Is Valid\" (Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Input/Actions/IA_Move.IA_Move\" :Value (Math|Vector|MakeVector :X (- (select (Variables|Default|GetP2Right) 1.0 0.0) (select (Variables|Default|GetP2Left) 1.0 0.0)) :Y (- (select (Variables|Default|GetP2Forward) 1.0 0.0) (select (Variables|Default|GetP2Back) 1.0 0.0))))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Input/Actions/IA_Look.IA_Look\" :Value (Math|Vector|MakeVector :X (* (- (select (Variables|Default|GetP2TurnRight) 1.0 0.0) (select (Variables|Default|GetP2TurnLeft) 1.0 0.0)) 2.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Input/Actions/IA_Jump.IA_Jump\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Jump) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_Sprint.IA_Sprint\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Brace) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_ThrowFlare.IA_ThrowFlare\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Flare) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_Climb.IA_Climb\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Climb) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_Interact.IA_Interact\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Use) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_ToggleView.IA_ToggleView\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2View) 1.0 0.0)))\n(Input|InjectInputVectorforAction :self subsystem :Action \"/Game/Core/Input/IA_Headlamp.IA_Headlamp\" :Value (Math|Vector|MakeVector :X (select (Variables|Default|GetP2Lamp) 1.0 0.0)))\n(Variables|Default|SetP2View false) (Variables|Default|SetP2Lamp false) (Variables|Default|SetP2Flare false)) (:\"Is Not Valid\"))) (:CastFailed))) (:\"Is Not Valid\"))))"
+  },
+  {
+    "function": "GetRoomThreatCount",
+    "dsl": "(fn GetRoomThreatCount () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (bind data (Utilities|GetDataTableRow :DataTable \"/Game/Player/DT_GhostScaling.DT_GhostScaling\" :RowName (Class|BPCoopGameState|GetScalingRow :self gs))\n   (:then (bind (count speed damage levers) (Utilities|Struct|BreakSGhostScaling :S_GhostScaling data))\n    (return (Math|Integer|Clamp(Integer) :Value (Math|Float|Truncate :A count) :Min 0 :Max 2))) (:RowNotFound (return 0)))) (:CastFailed (return 0))))"
+  },
+  {
+    "function": "ClearRoundThreats",
+    "dsl": "(fn ClearRoundThreats () \n (if (Networking|HasAuthority)\n  (for actor (Variables|Default|GetOwnedThreats) (Utilities|IsValid :InputObject actor (:\"Is Valid\" (Actor|DestroyActor :self actor)) (:\"Is Not Valid\")))\n  (Utilities|Array|Clear :TargetArray (Variables|Default|GetOwnedThreats)) (Utilities|Array|Clear :TargetArray (Variables|Default|GetSpawnedSlots))\n  (Variables|Default|SetSpawnedCount 0)))"
+  },
+  {
+    "function": "SpawnThreatAt",
+    "dsl": "(fn SpawnThreatAt (Location) \n (if (Networking|HasAuthority)\n  (bind spawned (Game|SpawnActorfromClass :Class \"/Game/Player/Ghosts/BP_Ghost.BP_Ghost_C\" :SpawnTransform (Math|Transform|MakeTransform :Location Location) :CollisionHandlingOverride \"AlwaysSpawn\")\n   (:then (Utilities|IsValid :InputObject spawned (:\"Is Valid\" (Utilities|Array|Add :TargetArray (Variables|Default|GetOwnedThreats) :NewItem spawned) (Variables|Default|SetSpawnedCount (+ (Variables|Default|GetSpawnedCount) 1))) (:\"Is Not Valid\"))))))"
+  },
+  {
+    "function": "SpawnRoomThreats",
+    "dsl": "(fn SpawnRoomThreats () \n (bind count (CallFunction|GetRoomThreatCount))\n (for i (range count)\n  (if (== (Variables|Default|GetActiveRound) 1) (CallFunction|SpawnThreatAt :Location (select (== i 0) (Variables|Default|GetRoom1Threat0) (Variables|Default|GetRoom1Threat1))))\n  (if (== (Variables|Default|GetActiveRound) 3) (CallFunction|SpawnThreatAt :Location (select (== i 0) (Variables|Default|GetRoom3Threat0) (Variables|Default|GetRoom3Threat1))))\n  (if (== (Variables|Default|GetActiveRound) 5) (CallFunction|SpawnThreatAt :Location (select (== i 0) (Variables|Default|GetRoom5Threat0) (Variables|Default|GetRoom5Threat1))))))"
+  },
+  {
+    "function": "SpawnPathThreat",
+    "dsl": "(fn SpawnPathThreat (Participant) \n (if (Networking|HasAuthority)\n  (bind pawn (Utilities|Casting|CastToBP_CoopCharacter :Object Participant)\n   (:then (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n    (:then (bind dead (Class|ACHealth|IsDead :self health))\n     (if (not dead) (bind ps (Utilities|Casting|CastToBP_CoopPlayerState :Object (Class|Pawn|GetPlayerState :self pawn))\n      (:then (bind slot (Class|BPCoopPlayerState|GetColorSlot :self ps))\n       (if (and (>= slot 0) (and (<= slot 3) (not (Utilities|Array|ContainsItem :TargetArray (Variables|Default|GetSpawnedSlots) :ItemToFind slot))))\n        (CallFunction|SpawnThreatAt :Location (select (== (Variables|Default|GetActiveRound) 2) (select (== slot 0) (Variables|Default|GetFirstThreat0) (select (== slot 1) (Variables|Default|GetFirstThreat1) (select (== slot 2) (Variables|Default|GetFirstThreat2) (Variables|Default|GetFirstThreat3)))) (select (== slot 0) (Variables|Default|GetSecondThreat0) (select (== slot 1) (Variables|Default|GetSecondThreat1) (select (== slot 2) (Variables|Default|GetSecondThreat2) (Variables|Default|GetSecondThreat3))))))\n        (Utilities|Array|Add :TargetArray (Variables|Default|GetSpawnedSlots) :NewItem slot))) (:CastFailed)))) (:CastFailed))) (:CastFailed))))"
+  },
+  {
+    "function": "SpawnRoundThreats",
+    "dsl": "(fn SpawnRoundThreats () \n (if (Networking|HasAuthority)\n  (bind count (CallFunction|GetRoomThreatCount))\n  (if (> count 0)\n   (if (or (== (Variables|Default|GetActiveRound) 2) (== (Variables|Default|GetActiveRound) 4))\n    (for pawn (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\") (CallFunction|SpawnPathThreat :Participant pawn))\n    (else (CallFunction|SpawnRoomThreats))))))"
+  },
+  {
+    "function": "RefreshRoundThreats",
+    "dsl": "(fn RefreshRoundThreats () \n (if (Networking|HasAuthority)\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n    (if (and (>= index 1) (and (<= index 5) (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum \"NewEnumerator1\"))))\n     (if (or (!= index (Variables|Default|GetActiveRound)) (!= attempt (Variables|Default|GetSpawnedAttempt)))\n      (CallFunction|ClearRoundThreats) (Variables|Default|SetActiveRound index) (Variables|Default|SetSpawnedAttempt attempt) (CallFunction|SpawnRoundThreats))\n     (else (CallFunction|ClearRoundThreats) (Variables|Default|SetActiveRound 0) (Variables|Default|SetSpawnedAttempt -1)))) (:CastFailed (CallFunction|ClearRoundThreats)))))"
+  },
+  {
+    "function": "ResetRoundThreats",
+    "dsl": "(fn ResetRoundThreats (Index Attempt) (if (Networking|HasAuthority) (CallFunction|ClearRoundThreats) (Variables|Default|SetActiveRound 0) (Variables|Default|SetSpawnedAttempt -1)))"
+  },
+  {
+    "function": "BeginRoundThreats",
+    "dsl": "(fn BeginRoundThreats () (if (Networking|HasAuthority) (CallFunction|RefreshRoundThreats) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshRoundThreats\" :Time 0.2 :bLooping true)))"
+  },
+  {
+    "function": "EndRoundThreats",
+    "dsl": "(fn EndRoundThreats () (Utilities|Time|ClearTimerbyFunctionName :Object self :FunctionName \"RefreshRoundThreats\") (CallFunction|ClearRoundThreats))"
+  }
+]

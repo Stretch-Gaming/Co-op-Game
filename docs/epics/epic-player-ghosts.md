@@ -217,3 +217,5 @@ Follow [docs/assets.md](../assets.md) for specs, licensing, imports and reviews.
 - Should the third-person view be available everywhere, or only outside tight passages where the camera would clip? The plan allows it everywhere and relies on the spring arm's collision.
 - Should the taking pick the player who stays at random, or let the last player into the maze be the one left? The plan picks at random.
 - In the chase, should ghosts go only for the carrier, or for whoever is nearest the carrier? The plan sends them at the carrier first.
+
+PG-A5 delivery: the bats and black rats, their cosmetic movement Blueprints, and the team-authored Blender/FBX sources are combined in HC-INT2. Final map placement and the Windows look check remain part of integration (#93).

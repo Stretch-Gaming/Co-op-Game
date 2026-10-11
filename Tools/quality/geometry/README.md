@@ -1,0 +1,19 @@
+# Connected preview geometry audit
+
+This slice checks scenery in `/Game/Maps/L_ConnectedRoomMaze`. It does not own the six-round adventure, change scenery, open maps, move actors, invoke interactions, or repeat the already-passing entrance/return walking check.
+
+`prepare.py` reads the hash-pinned corrected source and writes `Saved/QualityGeometry/probe-plan.json`. It transforms triangle vertices and normals (including nonuniform scaling), selects large upward-facing collision triangles beyond Y4000, and spreads64 samples across the retained environment. Six authored landmarks are added with their descriptions; the lift/gate positions are recorded as deliberate mechanics. Samples are proposals, not proof that a whole triangle or path is walkable. Separate bridges/floors at different heights retain distinct cells.
+
+Offline findings:4856 candidate floor triangles across2622 cells. Only two retained records explicitly combine invisible presentation with collision: `Connected_Maze_324` and `Connected_Maze_890`. That combination alone is not a bug: invisible support collision may be deliberate. The old grading box is absent. No unsupported floor, invisible wall or narrow passage has been proved by native collision yet; no safe geometry fix is justified from this source scan.
+
+The primary can run `collect_native.py` through its guarded `run_quality.py` dispatcher with `folder=geometry`, `script=collect_native.py`, and a start/end range of at most12 samples. The default range is0–10. Run with `segments=true` once to collect the two nearest local sample segments; this records five ground points and ground-following capsule sweeps per segment. Every call checks exact project/map/loaded-level identity, source hash, actor transform/tag preservation and unchanged saved-map hashes. It never clears dirty flags or saves any package. Evidence goes only to `Saved/QualityGeometry/native-START-END.json`.
+
+The collector reads the actual character capsule, step height, floor slope and collision profile from the Blueprint defaults. It uses complex Pawn-profile traces, floor footprint rays, a standing capsule sweep and four side rays. Side clearance is an axis-aligned lower bound, not a corridor width or route proof; diagonal paths may remain viable. A short local grounded segment is not a physical walking test or a mission route. A native hit contains coordinates, actor/component identity, normal and the original hit result text.
+
+The editor must already have the connected preview open with PIE stopped. A NullRHI editor may lack a usable physics scene. If all expected source-floor probes return no support, treat the collector as unvalidated/unavailable rather than reporting holes. A rendered/physics-enabled editor read-only collection may then be needed. Complex geometry queries can differ from CharacterMovement's actual simple collision, so suspected issues require movement-specific corroboration before a fix.
+
+Review findings with the source station/mover descriptions. Pits, jumps, boosts and closed gates are deliberate possibilities. Return ambiguous obstacles to Stretch before changing geometry. No candidate fix script is included because no unintended blocking has yet been proved and no geometry correction has been approved.
+
+Six focused synthetic tests cover horizontal floor area/normals, yaw/pitch rotation, translation/scaling, inverse-scale normal transformation, capsule-width margin and degenerate triangles. They pass. Collector syntax passes; native execution belongs to the primary.
+
+Primary verification: `prepare.py --visible-surfaces` excludes hidden support/rock tops when choosing visible surface proposals. Native queries use registered Pawn and verify the actual capsule/component response pair; the capsule's Custom profile is recorded separately. The current74-point results and remaining movement limits are in evidence/native-summary.json and findings.md. No fixes are justified.

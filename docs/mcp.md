@@ -100,6 +100,26 @@ Material building (PG-A0 style kit): `M_Stylized` has 92 expressions and was bui
 - The `EnhancedInputLocalPlayerSubsystem` objects in PIE live under `/Engine/Transient`, not under a `PIE` path. Find them with `ObjectIterator` and skip `Default__`. An injected `IA_Move` follows each client's control rotation, so the same input can send different players in different directions.
 - A `BoxComponent` with `OverlapOnlyPawn` still blocks `Visibility` line traces. Trace for `WorldStatic` objects when you want floors only.
 
+### PG-1: structs, components and server events, 2026-10-10
+
+- Nothing in MCP or editor Python adds members to a user-defined struct (`S_`). `EditorData` is protected. `S_GhostScaling` started as a duplicate of `S_RoundScaling`, and the struct editor did the rest. **Add Variable** works through `SlateInspectorToolset.Click`. Slate's `Type` and `PressKey` only append to a member's name; they can't select the old name. A real double-click on the name (a CGEvent, as in the PG-3 notes above) selects it all, and typing replaces it. The type dropdown needs real clicks too: open it, type `Float`, click the top row.
+- `BlueprintTools.create` fails for a `BlueprintFunctionLibrary`. Use editor Python: `AssetTools.create_asset(name, folder, None, unreal.BlueprintFunctionLibraryFactory())`.
+- `find_node_types` doesn't list a Blueprint that was just created, or a component just added to another Blueprint. `create_node` still makes the node if you pass `declaring_class`, such as `Class|ACPlayerView|ToggleView` with `/Game/Player/AC_PlayerView.AC_PlayerView_C`, or `Variables|Default|GetPlayerView` with the owning Blueprint's `_C` class.
+- In `write_graph_dsl`, an engine property setter such as `Class|Pawn|SetUseControllerRotationYaw` sends a positional argument to the value pin, not to `self`. Pass `:self` by name.
+- A pure node whose output feeds two places runs once for each, even after a `bind`. A tick that set `ViewBlend` from `FInterp To Constant`, then compared the same node's output with the target, stepped twice and stopped early. Compare against the Set node's `Output_Get` instead.
+- `get_node_type_pins` returns pin names without adding a node to the graph.
+- To bind a delegate, use `create_node` with `Pawn|AssignReceiveControllerChangedDelegate`. It adds the bind node and a matching custom event; connect its exec and target with `connect_pins`.
+- With a Blueprint or struct editor open in its own window, that window has its own Cmd box. Type `py` commands into the main window's box, or close the other windows first.
+- A second editor can run at the same time on another port: `open -n -a UnrealEditor.app --args <project> -ExecCmds="ModelContextProtocol.StartServer 8001"`. `open -a` without `-n` only brings the running editor to the front, even for a different project. Real clicks and `osascript ... activate` can land in either window, so use only Slate tools while two editors are open.
+### HZ-1: struct members, pure functions and lighting, 2026-10-10
+
+- No MCP tool or editor Python call edits a user-defined struct's members. Create the struct with `StructureFactory`, open it, and drive the struct editor with `SlateInspectorToolset`. Synthetic clicks on the type picker's rows don't commit. Open the picker, `Type` the type name into its focused Search box, then `PressKey` `Down` and `Enter`. To rename a member, `Type` an empty string into its name box to focus it, `PressKey` `Ctrl+A` and `BackSpace`, then `Type` the name into the inner focused textbox with `submit: true`. `Add Variable` reuses the last type picked.
+- A Blueprint function's Pure flag isn't reachable from Python or `ObjectTools` (`ExtraFlags` is hidden). Double-click the function in My Blueprint with `SlateInspectorToolset`, then `Click` the Pure checkbox in Details.
+- The cave prototype's sun had every lighting channel off, and its enclosure didn't cast shadows, so the sun lit nothing. Check `lighting_channels` and `cast_shadow` before blaming a light.
+- `CaptureViewport` in the editor still draws actors that are only hidden in game, and their shadows. Turn on game view, or run Simulate, before judging light.
+- `EditorLevelLibrary.get_pie_worlds(True)` includes the dedicated server's world. A test change made only in the client worlds is undone by server corrections.
+- Python can't read which `PlayerController` owns an `EnhancedInputLocalPlayerSubsystem`. Nudge `IA_Move` through each subsystem in turn and see whose pawn moves.
+
 ## Working with the agent
 
 - **Good agent work:** blocking out rooms from the layout doc, placing and labeling actors, setting properties and defaults, material instances, data table rows, and scaffolding Blueprints (assets, components, variables, empty functions).

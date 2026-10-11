@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "error": null,
+  "checks": [
+    "9 traps and the fall volume exist on the server; every client has every trap with the same replicated schedule",
+    "3 players; every trap reads DT_HazardScaling row 3",
+    "server applies dart and spike damage; a client shows the spike warning before the hit",
+    "damaged health replicates to all 3 clients"
+  ],
+  "data": {
+    "schedule_replicated_after_s": 5.5,
+    "scaling_row": "3",
+    "schedule": {
+      "200000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "620000000": {
+        "Kind": 1,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "700001200": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "720000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "800000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "1400000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "1480000000": {
+        "Kind": 0,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "1550000000": {
+        "Kind": 2,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      },
+      "1600000000": {
+        "Kind": 1,
+        "StartTime": 3.0,
+        "Interval": 2.5,
+        "SpikeDelay": 0.5,
+        "SwingSpeed": 1.0
+      }
+    },
+    "spike_health_when_client_warned": 100.0,
+    "server_health_after": {
+      "darts": 65.0,
+      "spikes": 65.0
+    },
+    "server_health_final": {
+      "darts": 65.0,
+      "spikes": 65.0
+    }
+  },
+  "phase": 2
+}

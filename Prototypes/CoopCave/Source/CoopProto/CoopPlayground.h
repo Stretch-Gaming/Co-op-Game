@@ -99,6 +99,8 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	const TArray<FCoopStation>& GetStations() const { return Stations; }
+	const TArray<FCoopMover>& GetTransferMovers() const { return Movers; }
+	UStaticMeshComponent* GetTransferMoverPiece(int32 Index) const { return MoverPieces.IsValidIndex(Index) ? MoverPieces[Index].Get() : nullptr; }
 
 protected:
 	virtual void BeginPlay() override;

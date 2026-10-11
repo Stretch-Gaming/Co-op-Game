@@ -1,0 +1,95 @@
+{
+  "status": "connected_environment_verified",
+  "scope": "room+maze joined; moving door only; no puzzle work",
+  "map": "/Game/Maps/L_ConnectedRoomMaze",
+  "checks": {
+    "client-walkthrough": {
+      "passed": true,
+      "error": null,
+      "phase": "second",
+      "checks": [
+        "closed door physically blocks walking from the room",
+        "normal E opens the moving door on server and both clients",
+        "client walks from room through open doorway and joined passage into maze fork",
+        "same client walks back into original room",
+        "second joining client walks into maze; both players keep same world/roster; no puzzle actors active"
+      ],
+      "players": [
+        {
+          "id": 260,
+          "position": "<Struct 'Vector' (0x0000025714E151E0) {x: 275.000000, y: 898.944916, z: 92.150001}>"
+        },
+        {
+          "id": 261,
+          "position": "<Struct 'Vector' (0x0000025714E151E0) {x: 375.000000, y: 3600.061852, z: 92.150002}>"
+        }
+      ],
+      "door_position": "<Struct 'Vector' (0x0000025714E151E0) {x: 325.000000, y: 1400.000000, z: 650.000000}>",
+      "worlds": [
+        "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+        "/Game/Maps/UEDPIE_1_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+        "/Game/Maps/UEDPIE_2_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+      ],
+      "method": "Two joining clients use native movement and E interaction; only initial approach positions are fixtures. No map travel and no puzzle calls."
+    },
+    "split-walkthrough": {
+      "passed": true,
+      "error": null,
+      "phase": "second",
+      "checks": [
+        "closed door physically blocks walking from the room",
+        "normal E opens the moving door on server and both local players",
+        "local player walks from room through open doorway and joined passage into maze fork",
+        "same local player walks back into original room",
+        "second local player walks into maze; both players keep same world/roster; no puzzle actors active"
+      ],
+      "players": [
+        {
+          "id": 262,
+          "position": "<Struct 'Vector' (0x000002574DEC0BF0) {x: 275.000000, y: 906.369969, z: 92.149999}>"
+        },
+        {
+          "id": 263,
+          "position": "<Struct 'Vector' (0x000002574DEC0BF0) {x: 375.000000, y: 3602.544961, z: 92.150002}>"
+        }
+      ],
+      "door_position": "<Struct 'Vector' (0x000002574DEC0BF0) {x: 325.000000, y: 1400.000000, z: 650.000000}>",
+      "worlds": [
+        "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+      ],
+      "method": "Two local host players use native movement/E and the existing shared-keyboard routing. Only initial approach positions are fixtures; no map travel or puzzle calls.",
+      "scenario": "two local host players"
+    }
+  },
+  "source_sha256": "353e1c2ae3d6a7b820c12b6a5bf95e378d1a072478d68f0da5b5f6a0ce6170ab",
+  "asset_sha256": {
+    "Content/Puzzles/EnvironmentConnection/BP_EnvironmentDoor.uasset": "80d0f90e6c962bef4f09f6e80fe234d9666ac112cd1cbd7f152051c710e8c0b0",
+    "Content/Puzzles/EnvironmentConnection/BP_EnvironmentPreview.uasset": "73027ec62a675b1ef07899441f22ef4a2f8d4e741cedae9241d1940a9302cb99",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_ConnectionDoor.uasset": "bcba46aa65bd596f982daeb3b7c65bfa2701a4c01343bc2bd3a11b1e6f4c54ef",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_322.uasset": "b1e35b37600065d8306e9ff00ac3cac1cc2820c673cbf0027535a06123c522a5",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_324.uasset": "e591dbce489ab94c2b871b38fa7e063dffc17fc2f8c6cff539e2b799548f0083",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_730.uasset": "df47fbf082f4e3f4aa11c6d3b256c3fd521b6bd14006b59e40f7275a78349a2e",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_737.uasset": "959243fbc1b0bebe276738f3637cd86e82cd670c87b5c3539dbd7e4f61f63962",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_759.uasset": "68a0b22a8ae1ae1ad080d2a84fcf3ce2e78be1c7a2a6c19434d932de75eb585f",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_762.uasset": "190d3a61f6145f36b6ee71ee1161208faae4a88295dac854acaf31415d36935c",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_789.uasset": "acd46af614d1b1e8fef970d74145ad546089b9a660b959ac2cb343a3f7ef3967",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_796.uasset": "f969e74a641e282c7cce5e52f16860085eed3623484f1e1ad148efcf9bf37767",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_820.uasset": "968fa54b27bb0a843d2ab665b57d77310a1c4c380adc63aaa3fe0f683f83cdfc",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_827.uasset": "69758d1e766d2ef907bb9e7e9a4adba951ae31d5042a58a7dff5536120427a2b",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_851.uasset": "da477d492fa652ac3eb234803588f30986db91dd91f5649bebe27ea005de9ae6",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_856.uasset": "fc89b6de31e42994a9e34c3991395b78320beac54eb998d7a81d05d084d5c9cb",
+    "Content/Puzzles/EnvironmentConnection/Art/SM_Connection_884.uasset": "25f666b064479e88d8a8d50f3938d1215ba4204cc42be25a550da7e346f59e35",
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": "778aba5349f49b97af7e5abb0f2abf1896661540bafb4536348f9b827ac65306",
+    "Content/Maps/L_ConnectedRoomMaze.umap": "c080863c451c0c71880e6f372d72c47352dff231b66885abe3d6b3d8223eacfe"
+  },
+  "protected_sha256": {
+    "Content/Hazards/L_Site01_HZ.umap": "ddcb5759bad4337e829cc548dd7367bbfa52b6b0b4df9713461528a983b7cdb5",
+    "Content/Hazards/L_Maze_HZ.umap": "f70e8ce5606492dcbc0e56711980e2b9b8ddc342795190b09c5753e2c32a5bee",
+    "SourceArt/HC/MazeIntegration/scene.json.gz": "7c738a4c7dddfd9723073f32bedea197927dbe7999c3c62f4a456e5868535fce",
+    "Content/Core/BP_CoopCharacter.uasset": "90c6956f9885974724cca2397e3b40ea465aeee22046910c6521cb138c36a621",
+    "Content/Core/BP_CoopGameMode.uasset": "a729032960a716d0ab5a8ed6d4848f60e2ed6d0d379503235e8ebf5dbf0341df"
+  },
+  "accessed_none_count": 0,
+  "visual_review": "D3D11 rendered player view reviewed for closed stone door and opened continuous passage, puzzle overlay hidden only in preview",
+  "limits": "Tested two joining clients and two local host players. No full adventure/puzzle/maze-path acceptance claimed."
+}

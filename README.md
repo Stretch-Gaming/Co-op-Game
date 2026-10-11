@@ -71,7 +71,17 @@ Unreal assets (`.uasset`, `.umap`) are binary and can't be merged. If two people
 
 The full timing and what each checkpoint should play like are in [docs/sprints.md](docs/sprints.md).
 
+## Play the connected room and maze
+
+On Windows, double-click `Tools/play-connected.bat`. On Mac, run `bash Tools/play-connected.command`. This opens the connected cave room and maze with the moving door. It is an environment preview, without the six-round puzzles or chase.
+
+The usual host command still opens the current adventure. To host the connected preview instead, run `Tools\host.bat /Game/Maps/L_ConnectedRoomMaze` or `bash Tools/host.command /Game/Maps/L_ConnectedRoomMaze`. The launchers check Unreal 5.8.3 and the selected map before starting. See [launch details](Tools/launch_preview/README.md).
+
 ## Playtesting
+
+The six-round candidate opens by default. Host it with `Tools\play-adventure.bat` on Windows or `bash Tools/play-adventure.command` on Mac; the usual host scripts open the same adventure. Join with the existing join scripts. `Tools/play-connected` continues to open the map-only preview.
+
+This candidate has automated Windows client and split-screen evidence. The shared Mac/gamepad playtest, complete physical route timing and visual/audio acceptance remain pending; see [integration status](Tools/unreal/six_round/INTEGRATION_STATUS.md). The adventure currently uses the isolated `L_SixRound_Test` assembly so the original lane-owned maps remain protected.
 
 Playtests run the game straight from each machine's engine install (`-game`), not from a packaged build. That way Macs and Windows can play together.
 

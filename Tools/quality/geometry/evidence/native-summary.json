@@ -1,0 +1,975 @@
+{
+  "status": "bounded_native_floor_and_clearance_inspection",
+  "baseline": "9dc0fabd6a467444049cec0ed8ee2763c11acfa6",
+  "source_sha256": "2008b7a684ba0f82d34b97fe259c20ec7abc46e09d00ead5f9c1dd8c6fcbf0ed",
+  "method": "64 visible surface proposals,6 authored landmarks,4 rock-clearance offsets; registered Pawn queries with checked actual response pairs. Read-only complex rays/sweeps, not a full walking or mission test.",
+  "character_defaults": {
+    "capsule_radius_cm": 35.0,
+    "capsule_half_height_cm": 90.0,
+    "max_step_cm": 45.0,
+    "max_floor_angle_degrees": 44.76508331298828,
+    "actual_capsule_profile": "Custom",
+    "query_profile": "Pawn",
+    "query_note": "The capsule uses unregistered Custom responses. Geometry queries use registered Pawn; Pawn object type, solid responses and both sides of each component response pair are checked. Complex probes remain observations rather than movement proof."
+  },
+  "samples": 74,
+  "supported": 74,
+  "standing_clear": 73,
+  "queries": 821,
+  "rows": [
+    {
+      "id": "floor_320_167",
+      "point": [
+        7741.666666666667,
+        4166.000068016717,
+        -59.51428850828788
+      ],
+      "floor_z": -59.514289,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_23",
+      "point": [
+        1241.6666666666667,
+        4666.0,
+        0.0
+      ],
+      "floor_z": 0.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1354",
+      "point": [
+        8908.333333333334,
+        4916.666666666667,
+        -64.28571319580078
+      ],
+      "floor_z": -64.285713,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_203",
+      "point": [
+        7741.666666666667,
+        5166.0,
+        -64.28571319580078
+      ],
+      "floor_z": -64.285713,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_82",
+      "point": [
+        2658.9870537837937,
+        5416.666666666667,
+        166.7974107567588
+      ],
+      "floor_z": 166.797405,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_106",
+      "point": [
+        -4008.9994673060173,
+        5583.333333333333,
+        -73.35997995872425
+      ],
+      "floor_z": -73.359979,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_95",
+      "point": [
+        2991.012946216206,
+        5583.333333333333,
+        233.20258924324125
+      ],
+      "floor_z": 233.202597,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_154",
+      "point": [
+        -5091.666666666667,
+        5834.0,
+        -100.0
+      ],
+      "floor_z": -100.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_166",
+      "point": [
+        -5091.666666666667,
+        6334.0,
+        -100.0
+      ],
+      "floor_z": -100.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_346",
+      "point": [
+        -5841.001026432947,
+        6416.666666666667,
+        490.77771287335963
+      ],
+      "floor_z": 490.777707,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_454",
+      "point": [
+        -1841.0167609931568,
+        6416.666666666667,
+        -147.767609101689
+      ],
+      "floor_z": -147.767609,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_394",
+      "point": [
+        1991.0010857768855,
+        6583.333333333333,
+        -233.37137161039644
+      ],
+      "floor_z": -233.371377,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_298",
+      "point": [
+        5491.000068016863,
+        6583.333333333333,
+        -97.62856937134768
+      ],
+      "floor_z": -97.62857,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_190",
+      "point": [
+        -5091.666666666667,
+        6834.0,
+        -100.0
+      ],
+      "floor_z": -100.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_202",
+      "point": [
+        4908.333333333333,
+        7333.977489956472,
+        410.9393292168182
+      ],
+      "floor_z": 410.939344,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_215",
+      "point": [
+        4741.666666666667,
+        7666.022510043528,
+        322.39398377146307
+      ],
+      "floor_z": 322.393969,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_527",
+      "point": [
+        -1258.3333333333333,
+        8083.333333333333,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_250",
+      "point": [
+        -5091.666666666667,
+        8834.0,
+        -150.0
+      ],
+      "floor_z": -150.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_322_24",
+      "point": [
+        575.0,
+        8916.666666666666,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_274",
+      "point": [
+        3991.022510053317,
+        9083.333333333334,
+        10.939308835060118
+      ],
+      "floor_z": 10.93928,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_538",
+      "point": [
+        -2591.6666666666665,
+        9916.666666666666,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_574",
+      "point": [
+        5658.993152236629,
+        9916.666666666666,
+        109.35457435509392
+      ],
+      "floor_z": 109.354571,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_491",
+      "point": [
+        2241.6666666666665,
+        10083.333333333334,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_347",
+      "point": [
+        741.6666666666666,
+        10666.0,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_371",
+      "point": [
+        -2258.3333333333335,
+        11166.0,
+        -300.0
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_406",
+      "point": [
+        -1341.0281158098526,
+        11416.666666666666,
+        -199.8084347429558
+      ],
+      "floor_z": -199.808441,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_514",
+      "point": [
+        2658.9996299384375,
+        11416.666666666666,
+        344.4666577085674
+      ],
+      "floor_z": 344.466656,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_443",
+      "point": [
+        -8.97188419014744,
+        11583.333333333334,
+        199.80843474295577
+      ],
+      "floor_z": 199.808441,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_1426",
+      "point": [
+        -6591.666666666667,
+        11916.666666666666,
+        -243.75
+      ],
+      "floor_z": -243.75,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_395",
+      "point": [
+        741.6666666666666,
+        12166.009979688562,
+        -270.9482535545015
+      ],
+      "floor_z": -270.948272,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_575",
+      "point": [
+        3241.6666666666665,
+        12666.000370060208,
+        372.20001917124773
+      ],
+      "floor_z": 372.200024,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_526",
+      "point": [
+        -3509.0,
+        13083.333333333334,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_551",
+      "point": [
+        -3758.3333333333335,
+        13166.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_767",
+      "point": [
+        -7258.333333333333,
+        13666.0,
+        -231.25
+      ],
+      "floor_z": -231.25,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_706",
+      "point": [
+        6908.333333333333,
+        13834.0,
+        638.8888549804688
+      ],
+      "floor_z": 638.888855,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_898",
+      "point": [
+        -2841.047682206077,
+        13916.666666666666,
+        -66.4190728824306
+      ],
+      "floor_z": -66.419071,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_743",
+      "point": [
+        6158.993152225234,
+        13916.666666666666,
+        662.8676443973882
+      ],
+      "floor_z": 662.867637,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_802",
+      "point": [
+        3491.0,
+        14083.333333333334,
+        1000.0
+      ],
+      "floor_z": 1000.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_958",
+      "point": [
+        -1091.6666666666667,
+        14334.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_319_634",
+      "point": [
+        3408.3333333333335,
+        14834.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_322_36",
+      "point": [
+        575.0,
+        15250.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_671",
+      "point": [
+        241.66666666666666,
+        16666.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_947",
+      "point": [
+        1741.6666666666667,
+        17166.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_982",
+      "point": [
+        2658.9870537837937,
+        17416.666666666668,
+        466.7974107567588
+      ],
+      "floor_z": 466.797413,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_1114",
+      "point": [
+        -6009.0,
+        17583.333333333332,
+        181.81817626953125
+      ],
+      "floor_z": 181.818176,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_959",
+      "point": [
+        1741.6666666666667,
+        17583.333333333332,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": "Connected_Maze_890",
+      "findings": [
+        "Pawn capsule blocked on source-proposed standing point; obstacle intention unresolved."
+      ]
+    },
+    {
+      "id": "floor_321_1139",
+      "point": [
+        -6258.333333333333,
+        17666.0,
+        181.81817626953125
+      ],
+      "floor_z": 181.818176,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1091",
+      "point": [
+        5741.666666666667,
+        18166.001258753004,
+        989.784539481648
+      ],
+      "floor_z": 989.784549,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_719",
+      "point": [
+        241.66666666666666,
+        18666.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_1006",
+      "point": [
+        -4091.6666666666665,
+        18916.666666666668,
+        466.66668701171875
+      ],
+      "floor_z": 466.666687,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1115",
+      "point": [
+        5741.666666666667,
+        19166.001258753004,
+        928.2460873332105
+      ],
+      "floor_z": 928.246096,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_755",
+      "point": [
+        241.66666666666666,
+        19666.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_754",
+      "point": [
+        408.3333333333333,
+        19834.0,
+        400.0
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_1199",
+      "point": [
+        -6258.333333333333,
+        20166.001756120157,
+        24.290768400402516
+      ],
+      "floor_z": 24.290784,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1402",
+      "point": [
+        7408.333333333333,
+        20416.666666666668,
+        876.923095703125
+      ],
+      "floor_z": 876.923096,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_851",
+      "point": [
+        -1258.3333333333333,
+        20666.0,
+        466.66668701171875
+      ],
+      "floor_z": 466.666687,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1162",
+      "point": [
+        5908.333333333333,
+        20834.0,
+        876.923095703125
+      ],
+      "floor_z": 876.923096,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1174",
+      "point": [
+        5908.333333333333,
+        21333.99874124202,
+        856.369289376234
+      ],
+      "floor_z": 856.36928,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1186",
+      "point": [
+        5908.333333333333,
+        21833.99874125198,
+        825.6000838089075
+      ],
+      "floor_z": 825.600075,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_318_886",
+      "point": [
+        -1091.6666666666667,
+        22334.0,
+        600.0
+      ],
+      "floor_z": 600.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_1271",
+      "point": [
+        -6258.333333333333,
+        23166.0,
+        300.0
+      ],
+      "floor_z": 300.0,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_321_1354",
+      "point": [
+        -3341.004748774342,
+        23416.666666666668,
+        580.0794301470788
+      ],
+      "floor_z": 580.079424,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_320_1331",
+      "point": [
+        2241.6666666666665,
+        23583.333333333332,
+        600.0
+      ],
+      "floor_z": 600.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "floor_322_49",
+      "point": [
+        -925.0,
+        24083.333333333332,
+        600.0
+      ],
+      "floor_z": 600.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Meeting point A",
+      "point": [
+        -175,
+        9250,
+        -300
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Meeting point B",
+      "point": [
+        -175,
+        15500,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Relic chamber",
+      "point": [
+        -175,
+        23000,
+        600
+      ],
+      "floor_z": 600.0,
+      "floor_actor": "Connected_Maze_322",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Boost wall",
+      "point": [
+        825,
+        10650,
+        -300
+      ],
+      "floor_z": -300.0,
+      "floor_actor": "Connected_Maze_318",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Winch lift",
+      "point": [
+        -675,
+        16600,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_319",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "station_Dip gate",
+      "point": [
+        -6175,
+        19900,
+        43.636348724365234
+      ],
+      "floor_z": 43.63632,
+      "floor_actor": "Connected_Maze_321",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "clearance_offset_15",
+      "point": [
+        1753.9490866666667,
+        17574.722748333334,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "clearance_offset_30",
+      "point": [
+        1766.2315066666667,
+        17566.11216333333,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "clearance_offset_60",
+      "point": [
+        1790.7963466666668,
+        17548.89099333333,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    },
+    {
+      "id": "clearance_offset_90",
+      "point": [
+        1815.3611866666668,
+        17531.669823333334,
+        400
+      ],
+      "floor_z": 400.0,
+      "floor_actor": "Connected_Maze_320",
+      "standing_blocker": null,
+      "findings": []
+    }
+  ],
+  "local_segments": [
+    {
+      "from": "floor_319_154",
+      "to": "floor_319_166",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_319_166",
+      "to": "floor_319_190",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_318_526",
+      "to": "floor_318_551",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_320_947",
+      "to": "floor_320_959",
+      "observation": "needs review",
+      "issues": [
+        "Ground-following capsule sweep blocked"
+      ]
+    },
+    {
+      "from": "floor_321_1114",
+      "to": "floor_321_1139",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_318_754",
+      "to": "floor_318_755",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_320_1162",
+      "to": "floor_320_1174",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_320_1174",
+      "to": "floor_320_1186",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    },
+    {
+      "from": "floor_320_947",
+      "to": "clearance_offset_90",
+      "observation": "sampled grounded segment clear",
+      "issues": []
+    }
+  ],
+  "actor_transforms_tags_unchanged": true,
+  "protected_hashes_unchanged": true,
+  "packages_saved": false,
+  "geometry_changed": false,
+  "bugs_proven": [],
+  "note": "One source floor centroid overlaps an existing rock by11.84cm; offsets15/30/60/90cm and a grounded detour are clear. No removal is justified without visible/movement proof. Hidden-collision-top sampling is retained only as historical candidate analysis."
+}

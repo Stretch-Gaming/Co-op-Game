@@ -1,0 +1,58 @@
+[
+  {
+    "function": "SetVisualBlackout",
+    "dsl": "(fn SetVisualBlackout (EndAt) (Variables|Default|SetVisualBlackoutUntil (Math|Float|Max(Float) :A (Variables|Default|GetVisualBlackoutUntil) :B EndAt)))"
+  },
+  {
+    "function": "IsVisualBlackout",
+    "dsl": "(fn IsVisualBlackout () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (return (< (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetVisualBlackoutUntil)))) (:CastFailed (return false))))"
+  },
+  {
+    "function": "ShouldRenderHeadlamp",
+    "dsl": "(fn ShouldRenderHeadlamp () \n (bind health (Utilities|Casting|CastToAC_Health :Object (Actor|GetComponentbyClass :self (Components|GetOwner) :ComponentClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n  (:then (bind dead (Class|ACHealth|IsDead :self health)) (bind blackout (CallFunction|IsVisualBlackout))\n   (return (and (Variables|Default|GetHeadlampOn) (and (not dead) (not blackout))))) (:CastFailed (return false))))"
+  },
+  {
+    "function": "ApplyHeadlamp",
+    "dsl": "(fn ApplyHeadlamp () \n (bind pawn (Utilities|Casting|CastToPawn :Object (Components|GetOwner))\n  (:then (bind light (Utilities|Casting|CastToSpotLightComponent :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Script/Engine.SpotLightComponent\"))\n   (:then (bind visible (CallFunction|ShouldRenderHeadlamp))\n    (Rendering|Components|Light|SetIntensity :self light :NewIntensity (select visible 2500.0 0.0))\n    (Transformation|SetWorldRotation :self light :NewRotation (Pawn|GetBaseAimRotation :self pawn))) (:CastFailed))) (:CastFailed)))"
+  },
+  {
+    "function": "NextPresentationStyle",
+    "dsl": "(fn NextPresentationStyle () \n (if (Networking|HasAuthority)\n  (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind (index phase attempt ends row) (Utilities|Struct|BreakSRoundState :S_RoundState (Class|BPCoopGameState|GetRoundState :self gs)))\n    (if (!= attempt (Variables|Default|GetPresentationAttempt)) (Variables|Default|SetPresentationAttempt attempt) (Variables|Default|SetPresentationStyleNumber 0) (Variables|Default|SetPresentationStyleOffset (Math|Random|RandomInteger :Max 3)))\n    (bind style (% (+ (Variables|Default|GetPresentationStyleOffset) (Variables|Default|GetPresentationStyleNumber)) 3))\n    (Variables|Default|SetPresentationStyleNumber (+ (Variables|Default|GetPresentationStyleNumber) 1))\n    (return style)) (:CastFailed (return 0))) (else (return 0))))"
+  },
+  {
+    "function": "HideTakingPresentation",
+    "dsl": "(fn HideTakingPresentation () (Rendering|SetVisibility :self (Variables|Default|GetTakingArm) :bNewVisibility false) (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorLeft) :bNewVisibility false) (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorRight) :bNewVisibility false) (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorVoid) :bNewVisibility false) (Rendering|SetVisibility :self (Variables|Default|GetTakingShadowBody) :bNewVisibility false))"
+  },
+  {
+    "function": "RefreshTakingPresentation",
+    "dsl": "(fn RefreshTakingPresentation () \n (Utilities|IsValid :InputObject (Variables|Default|GetVictim)\n  (:\"Is Valid\" (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n   (:then (bind age (- (GameState|GetServerWorldTimeSeconds :self gs) (Variables|Default|GetTakingStarted)))\n    (bind active (and (>= age 0.0) (< age 0.65)))\n    (bind outward (Math|Float|Clamp(Float) :Value (/ age 0.35) :Min 0.0 :Max 1.0))\n    (bind inward (Math|Float|Clamp(Float) :Value (/ (- age 0.35) 0.3) :Min 0.0 :Max 1.0))\n    (Transformation|SetActorRotation :NewRotation (Math|Rotator|MakeRotator :Yaw (+ (.yaw (Transformation|GetActorRotation :self (Variables|Default|GetVictim))) 180.0)))\n    (Rendering|SetVisibility :self (Variables|Default|GetTakingArm) :bNewVisibility (and active (== (Variables|Default|GetScareStyle) 0)))\n    (Transformation|SetRelativeLocation :self (Variables|Default|GetTakingArm) :NewLocation (Utilities|Struct|MakeVector :X (- (+ -350.0 (* outward 101.0)) (* inward 180.0)) :Z -45.0) :bSweep false)\n    (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorLeft) :bNewVisibility (and active (== (Variables|Default|GetScareStyle) 1)))\n    (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorRight) :bNewVisibility (and active (== (Variables|Default|GetScareStyle) 1)))\n    (Rendering|SetVisibility :self (Variables|Default|GetTakingFloorVoid) :bNewVisibility (and active (== (Variables|Default|GetScareStyle) 1)))\n    (Transformation|SetRelativeLocation :self (Variables|Default|GetTakingFloorLeft) :NewLocation (Utilities|Struct|MakeVector :Y (- 0.0 (+ 38.0 (* outward 95.0))) :Z 4.0) :bSweep false)\n    (Transformation|SetRelativeLocation :self (Variables|Default|GetTakingFloorRight) :NewLocation (Utilities|Struct|MakeVector :Y (+ 38.0 (* outward 95.0)) :Z 4.0) :bSweep false)\n    (Transformation|SetRelativeLocation :self (Variables|Default|GetTakingFloorVoid) :NewLocation (Utilities|Struct|MakeVector :Z 5.0) :bSweep false)\n    (Rendering|SetVisibility :self (Variables|Default|GetTakingShadowBody) :bNewVisibility (and active (== (Variables|Default|GetScareStyle) 2)))\n    (Transformation|SetRelativeLocation :self (Variables|Default|GetTakingShadowBody) :NewLocation (Utilities|Struct|MakeVector :X (+ -210.0 (* outward 95.0)) :Z -176.0) :bSweep false)\n    (Transformation|SetRelativeRotation :self (Variables|Default|GetTakingShadowBody) :NewRotation (Math|Rotator|MakeRotator :Pitch (* outward -24.0)) :bSweep false)\n    (if (and active (and (== (Variables|Default|GetScareStyle) 2) (>= age 0.2)))\n     (for pawn (Actor|GetAllActorsOfClass :ActorClass \"/Game/Core/BP_CoopCharacter.BP_CoopCharacter_C\")\n      (if (<= (Math|Vector|Distance(Vector) :V1 (Transformation|GetActorLocation :self pawn) :V2 (Variables|Default|GetVictimOrigin)) 1200.0)\n       (bind playerView (Utilities|Casting|CastToAC_PlayerView :Object (Actor|GetComponentbyClass :self pawn :ComponentClass \"/Game/Player/AC_PlayerView.AC_PlayerView_C\"))\n        (:then (Class|ACPlayerView|SetVisualBlackout :self playerView :EndAt (+ (Variables|Default|GetTakingStarted) 1.1))) (:CastFailed)))))) (:CastFailed (CallFunction|HideTakingPresentation))))\n  (:\"Is Not Valid\" (CallFunction|HideTakingPresentation))))"
+  },
+  {
+    "function": "BeginTakingPresentation",
+    "dsl": "(fn BeginTakingPresentation () (CallFunction|HideTakingPresentation) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshTakingPresentation\" :Time 0.016 :bLooping true))"
+  },
+  {
+    "function": "ApplyChaseSpeed",
+    "dsl": "(fn ApplyChaseSpeed () (if (Networking|HasAuthority) (Variables|Default|SetGhostSpeed (* (Variables|Default|GetGhostSpeed) 1.12))))"
+  },
+  {
+    "function": "HideParentGhostVisual",
+    "dsl": "(fn HideParentGhostVisual () \n (for item (Actor|GetComponentsbyClass :self (Components|GetOwner) :ComponentClass \"/Script/Engine.StaticMeshComponent\")\n  (bind mesh (Utilities|Casting|CastToStaticMeshComponent :Object item) (:then (Rendering|SetVisibility :self mesh :bNewVisibility false)) (:CastFailed)))\n (for item (Actor|GetComponentsbyTag :self (Components|GetOwner) :ComponentClass \"/Script/Engine.StaticMeshComponent\" :Tag \"CaveBeingBody\")\n  (bind mesh (Utilities|Casting|CastToStaticMeshComponent :Object item) (:then (Rendering|SetVisibility :self mesh :bNewVisibility true)) (:CastFailed))))"
+  },
+  {
+    "function": "RefreshCaveBody",
+    "dsl": "(fn RefreshCaveBody () \n (bind gs (Utilities|Casting|CastToBP_CoopGameState :Object (Game|GetGameState))\n  (:then (for item (Actor|GetComponentsbyTag :self (Components|GetOwner) :ComponentClass \"/Script/Engine.StaticMeshComponent\" :Tag \"CaveBeingBody\")\n   (bind mesh (Utilities|Casting|CastToStaticMeshComponent :Object item)\n    (:then (Transformation|SetRelativeLocation :self mesh :NewLocation (Utilities|Struct|MakeVector :Z (+ -96.0 (* (Math|Trig|Sin(Radians) :A (* (GameState|GetServerWorldTimeSeconds :self gs) 2.0)) 8.0))) :bSweep false)) (:CastFailed)))) (:CastFailed)))"
+  },
+  {
+    "function": "ApplyCaveSpeed",
+    "dsl": "(fn ApplyCaveSpeed () \n (if (and (Networking|HasAuthority :self (Components|GetOwner)) (not (Variables|Default|GetSpeedApplied)))\n  (bind pawn (Utilities|Casting|CastToBP_CaveBeing :Object (Components|GetOwner))\n   (:then (Class|BPCaveBeing|ApplyChaseSpeed :self pawn) (Variables|Default|SetSpeedApplied true)) (:CastFailed))))"
+  },
+  {
+    "function": "BeginCavePresentation",
+    "dsl": "(fn BeginCavePresentation () (CallFunction|HideParentGhostVisual) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"ApplyCaveSpeed\" :Time 0.05 :bLooping false) (Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName \"RefreshCaveBody\" :Time 0.05 :bLooping true))"
+  },
+  {
+    "function": "SpawnCaveBeingWaveMember",
+    "dsl": "(fn SpawnCaveBeingWaveMember (Location) \n (if (Networking|HasAuthority)\n  (bind spawned (Game|SpawnActorfromClass :Class \"/Game/Player/Ghosts/BP_CaveBeing.BP_CaveBeing_C\" :SpawnTransform (Math|Transform|MakeTransform :Location Location) :CollisionHandlingOverride \"AlwaysSpawn\")\n   (:then (Actor|SetLifeSpan :self spawned :InLifespan 45.0) (Utilities|Array|Add :TargetArray (Variables|Default|GetWaveGhosts) :NewItem spawned)))))"
+  }
+]

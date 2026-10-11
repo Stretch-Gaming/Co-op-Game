@@ -1,0 +1,208 @@
+{
+  "worlds": 3,
+  "players": [
+    {
+      "loc": [
+        -700,
+        450,
+        92
+      ],
+      "on_ground": true,
+      "floor": "BP_HCReviveTarget0"
+    },
+    {
+      "loc": [
+        -700,
+        150,
+        92
+      ],
+      "on_ground": true,
+      "floor": "BP_HCReviveTarget1"
+    }
+  ],
+  "stations": {
+    "Entrance": {
+      "server": [
+        0,
+        "MazeScene_0"
+      ],
+      "client1": [
+        0,
+        "MazeScene_0"
+      ],
+      "client2": [
+        0,
+        "MazeScene_0"
+      ]
+    },
+    "Workbench": {
+      "server": [
+        95,
+        "Maze_Relic_0"
+      ],
+      "client1": [
+        95,
+        "Maze_Relic_0"
+      ],
+      "client2": [
+        95,
+        "Maze_Relic_0"
+      ]
+    },
+    "Mine cart": {
+      "server": [
+        0,
+        "MazeScene_0"
+      ],
+      "client1": [
+        0,
+        "MazeScene_0"
+      ],
+      "client2": [
+        0,
+        "MazeScene_0"
+      ]
+    },
+    "Scaffold": {
+      "server": [
+        0,
+        "MazeScene_0"
+      ],
+      "client1": [
+        0,
+        "MazeScene_0"
+      ],
+      "client2": [
+        0,
+        "MazeScene_0"
+      ]
+    },
+    "Crystals": {
+      "server": [
+        95,
+        "Maze_Relic_1"
+      ],
+      "client1": [
+        95,
+        "Maze_Relic_1"
+      ],
+      "client2": [
+        95,
+        "Maze_Relic_1"
+      ]
+    },
+    "Maze fork": {
+      "server": [
+        0,
+        "MazeScene_322"
+      ],
+      "client1": [
+        0,
+        "MazeScene_322"
+      ],
+      "client2": [
+        0,
+        "MazeScene_322"
+      ]
+    },
+    "Meeting point A": {
+      "server": [
+        -300,
+        "MazeScene_322"
+      ],
+      "client1": [
+        -300,
+        "MazeScene_322"
+      ],
+      "client2": [
+        -300,
+        "MazeScene_322"
+      ]
+    },
+    "Meeting point B": {
+      "server": [
+        400,
+        "MazeScene_322"
+      ],
+      "client1": [
+        400,
+        "MazeScene_322"
+      ],
+      "client2": [
+        400,
+        "MazeScene_322"
+      ]
+    },
+    "Relic chamber": {
+      "server": [
+        600,
+        "MazeScene_322"
+      ],
+      "client1": [
+        600,
+        "MazeScene_322"
+      ],
+      "client2": [
+        600,
+        "MazeScene_322"
+      ]
+    },
+    "Boost wall": {
+      "server": [
+        -300,
+        "MazeScene_318"
+      ],
+      "client1": [
+        -300,
+        "MazeScene_318"
+      ],
+      "client2": [
+        -300,
+        "MazeScene_318"
+      ]
+    },
+    "Winch lift": {
+      "server": [
+        400,
+        "MazeScene_319"
+      ],
+      "client1": [
+        400,
+        "MazeScene_319"
+      ],
+      "client2": [
+        400,
+        "MazeScene_319"
+      ]
+    },
+    "Split tunnels": {
+      "server": [
+        -17,
+        "MazeScene_320"
+      ],
+      "client1": [
+        -17,
+        "MazeScene_320"
+      ],
+      "client2": [
+        -17,
+        "MazeScene_320"
+      ]
+    },
+    "Dip gate": {
+      "server": [
+        44,
+        "MazeScene_321"
+      ],
+      "client1": [
+        44,
+        "MazeScene_321"
+      ],
+      "client2": [
+        44,
+        "MazeScene_321"
+      ]
+    }
+  },
+  "failures": []
+}
