@@ -30,7 +30,8 @@ Work for this project is tracked in this repo's [GitHub Issues](https://github.c
 - Each lane has an epic issue: [#1](https://github.com/StretchGaming/Co-op-Game/issues/1) for HC, [#2](https://github.com/StretchGaming/Co-op-Game/issues/2) for PG and [#3](https://github.com/StretchGaming/Co-op-Game/issues/3) for HZ. [#4](https://github.com/StretchGaming/Co-op-Game/issues/4) holds the playable checkpoints. Every phase, asset task and ready check is a sub-issue of its lane's epic, with its sprint as the [milestone](https://github.com/StretchGaming/Co-op-Game/milestones).
 - Start each commit message with the phase code and end it with the issue number, like `PG-2: split-screen on the host (#24)`. Close the issue when its "Done when" passes, with `Closes #24` in the last commit or by hand.
 - Commit as yourself, with your own Git name and email, even when the work is for another lane. An agent commits as the person who ran it. Never put a teammate's name on work they didn't do, and never add a `Co-Authored-By: Claude` trailer, or any other AI co-author or "Generated with" line, to a commit message, pull request or issue.
-- Tick off the issue's steps as you go. Comment on it with anything the next sprint needs to know, such as a blocker, or an asset's source and license.
+- Always update the issue whenever you can, not just when the work is done. Tick off its steps as you go, and comment on it with what changed, the pull request, and anything the next sprint needs to know, such as a blocker, a decision, or an asset's source and license. If a turn touched an issue's work, the issue should say so before the turn ends.
+- Other threads and teammates edit the same issues. Fetch an issue's body right before you edit it, and change only the lines you mean to.
 - When the plan changes, update the matching issues in the same push. The docs say what to build; the issues say who's on it and how far along it is.
 
 ## Hard rules
@@ -95,3 +96,43 @@ Work for this project is tracked in this repo's [GitHub Issues](https://github.c
 - Open `L_Site01` and run Play In Editor with **Net Mode: Play As Client** and at least 2 players. Check your feature as a client; the host view hides most network bugs. Anything with a view, HUD or input also needs a check with a second local player in split-screen.
 - Check the Output Log for errors and "Accessed None" warnings.
 - Commit only your lane's files plus any you locked. Run `git pull --rebase`, push, then unlock what you locked.
+
+## Open a pull request every turn
+
+When an agent's turn ends with changes, it commits them, runs one fresh Codex review pass, pushes the branch, opens a pull request against `main` and updates the matching issues before handing back. If the branch already has an open pull request, push to it instead of opening another.
+
+- Never commit straight to `main`. Work on a branch named for the lane and phase, like `pg/pg6-taking`.
+- Title the pull request like a commit message, such as `PG-2: split-screen on the host (#24)`, and link the issue in the body.
+- If the work isn't finished or hasn't passed [Before you push](#before-you-push) yet, open it as a draft and say in the body what's left.
+- Link the pull request on its issue, and tick off the steps it completes.
+- Leave out files that aren't ready, such as assets still waiting on a lock. Say in the body what was held back and why.
+
+## Codex review pass
+
+Every turn that opens or updates a pull request runs exactly one Codex review, after the commit and before the push. Codex reads the branch with fresh context; the agent that wrote the change checks what it finds.
+
+1. Fetch `origin`, then review the branch against `main`:
+
+   ```sh
+   codex exec --color never -m gpt-6.1-sol -c model_reasoning_effort="high" -o <scratch>/codex-review.md review --base origin/main
+   ```
+
+   Always pin `gpt-6.1-sol` at high effort, whatever `~/.codex/config.toml` says. To give Codex extra instructions, drop `--base` and say the scope in the prompt instead, such as `review "Review this branch against origin/main. <extra>"`. The two can't be combined.
+2. Check every finding against the code as it is now. Mark it **confirmed** (name what triggers it and quote the line), **plausible** (the mechanism is real but the trigger is uncertain) or **refuted** (quote the line that disproves it).
+3. Fix confirmed findings that are low-risk and commit the fixes. Leave plausible and risky ones for the author to decide.
+4. Put the result in the pull request body: the confirmed and plausible findings, what was fixed, and a count like `5 raw -> 2 confirmed / 1 plausible / 2 refuted`.
+
+Don't rerun Codex after a one-line or mechanical fix. If a fix added new design, such as a new function, event or replicated variable, run one more pass on that commit only (`review --commit <sha>`) and stop there. Never run a third pass.
+
+If `codex` fails or finds nothing, still open the pull request and say so in the body. A Codex error or an open question never blocks the pull request.
+
+## Review guidelines
+
+Codex reads this section during the review pass. Report only P0 and P1 findings. Flag these as P1:
+
+- Anything that breaks a [hard rule](#hard-rules).
+- Files changed outside the author's lane folder or sublevel, unless the pull request says they were locked.
+- A new asset without its source and license recorded, as [docs/assets.md](docs/assets.md#licenses-this-repo-is-public) describes.
+- A commit message with an AI co-author or "Generated with" line.
+
+`.uasset` and `.umap` files are binary, and Git LFS stores them as pointers, so review them by name, folder and commit message, and say what you couldn't check.
