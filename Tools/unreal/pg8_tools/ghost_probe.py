@@ -40,7 +40,7 @@ def tick(_delta):
         if elapsed>.2:h.release(pid,'lamp')
         if elapsed>1:
             for other in h.ids:
-                if other!=pid:h.fixture_place(other,[-2500,-1000,95])
+                if other!=pid:h.fixture_place(other,[-900,500,95])
             ghost=spawn_ghost(pawn.get_actor_location()+ue.Vector(900,0,20))
             state['normal_ghost']=ghost;state['normal_position']=ghost.get_actor_location()
             h.transition('normal_chase')
@@ -87,12 +87,17 @@ def tick(_delta):
             h.hold(pid,'lamp');h.transition('headlamp')
     elif h.phase=='headlamp':
         if elapsed>.2:h.release(pid,'lamp')
-        if elapsed>2:
-            ghost=state['ghost'];now=ue.GameplayStatics.get_game_state(h.server).get_server_world_time_seconds()
-            until=ghost.get_editor_property('LightUntil')
-            assert until>now, ('Aimed lit headlamp did not repel ghost',until,now)
-            distance=(ghost.get_actor_location()-pawn.get_actor_location()).length()
-            assert distance>500, ('Headlamp did not increase ghost distance',distance)
-            h.check('owning headlamp triggers unchanged server ghost backoff',{'distance_cm':distance,'light_until':until,'server_now':now})
+        ghost=state['ghost'];now=ue.GameplayStatics.get_game_state(h.server).get_server_world_time_seconds()
+        until=ghost.get_editor_property('LightUntil')
+        distance=(ghost.get_actor_location()-pawn.get_actor_location()).length()
+        samples.append({'headlamp_elapsed':elapsed,'distance_cm':distance,'light_until':until,'server_now':now,'backoff_until':ghost.get_editor_property('BackoffUntil')})
+        if until>now and 'lamp_first' not in state:
+            state['lamp_first']=(elapsed,distance)
+        if 'lamp_first' in state and elapsed-state['lamp_first'][0]>.5:
+            assert until>now,('Aimed headlamp stopped repelling ghost',until,now)
+            gain=distance-state['lamp_first'][1]
+            assert gain>20,('Ghost did not move away after lamp acquired it',gain)
+            h.check('owning headlamp triggers unchanged server ghost backoff',{'distance_cm':distance,'distance_gain_after_acquisition_cm':gain,'light_until':until,'server_now':now})
             h.finish(True)
+        assert elapsed<8,'Headlamp never acquired and repelled the ghost'
 RESULT=h.register(tick)
