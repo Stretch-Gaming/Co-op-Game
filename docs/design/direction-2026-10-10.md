@@ -49,8 +49,8 @@ Each round has a checkpoint. In Rounds 2 and 4, each player's spot is the start 
 
 The puzzle uses things a mine would have: a pickaxe, boulders, a mine cart on rails and a gate.
 
-1. **Find the pickaxe.** It lies on a crate in the corner by the barrels, away from the player starts. Anyone can pick it up. While you hold it, your hands are full, so someone else carries the rocks.
-2. **Break the boulders.** The dark boulders are the ones you can break. Three swings break one into three rocks. Light-colored rocks are scenery.
+1. **Find the pickaxe.** It lies on a crate in the corner by the barrels, away from the player starts. Anyone can pick it up with Interact (E). While you hold it, your hands are full, so someone else carries the rocks. Drop it with G.
+2. **Break the boulders.** The dark boulders are the ones you can break. Look at one while holding the pickaxe and swing with the left mouse button (or the right trigger). Three swings break it into three rocks. Interact does nothing on a boulder; its prompt says to left-click, or that you need a pickaxe. Light-colored rocks are scenery.
 3. **Uncover the plates.** Each boulder hides a pressure plate under its rocks. The plate appears once every rock has been lifted off it.
 4. **Fill the cart.** Carry a rock to the cart and use it to drop the rock in. The count on the cart shows how many rocks it has and how many it needs, and turns green when it has enough. It holds up to three more than it needs.
 5. **Push the cart.** Once the cart has enough rocks, hold interact behind it to push it along the rails. Two players push it twice as fast. A lamp lights when it reaches the end of the track.
