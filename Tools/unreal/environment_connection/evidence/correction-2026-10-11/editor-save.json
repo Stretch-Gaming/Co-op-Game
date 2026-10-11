@@ -1,0 +1,34 @@
+{
+  "protected_before": {
+    "Content/Hazards/L_Site01_HZ.umap": "630adb8963480408229dc2f36ba635f2b2a30590dacea3b2326ee33cf84ab65a",
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": "f9783965e505168fcd94a742363014c314ca178683783220483236c937fc1aff",
+    "Content/Puzzles/EnvironmentConnection/BP_EnvironmentDoor.uasset": "80d0f90e6c962bef4f09f6e80fe234d9666ac112cd1cbd7f152051c710e8c0b0"
+  },
+  "saved": [
+    "/Game/Puzzles/EnvironmentConnection/L_ConnectedCave",
+    "/Game/Maps/L_ConnectedRoomMaze"
+  ],
+  "removed_from_copy_only": [
+    "HZ1_Crystal_GhostRoom_A",
+    "HZ1_Crystal_GhostRoom_B",
+    "HZ1_Crystal_GhostRoom_Light",
+    "HZ1_GhostRoom_Floor",
+    "HZ1_GhostRoom_Roof",
+    "HZ1_GhostRoom_WallE",
+    "HZ1_GhostRoom_WallN",
+    "HZ1_GhostRoom_WallSE",
+    "HZ1_GhostRoom_WallSW",
+    "HZ1_GhostRoom_WallW"
+  ],
+  "levels": [
+    "/Game/Maps/L_ConnectedRoomMaze",
+    "/Game/Puzzles/EnvironmentConnection/L_ConnectedCave",
+    "/Game/Puzzles/EnvironmentConnection/L_ConnectedMaze"
+  ],
+  "protected_after": {
+    "Content/Hazards/L_Site01_HZ.umap": "630adb8963480408229dc2f36ba635f2b2a30590dacea3b2326ee33cf84ab65a",
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": "f9783965e505168fcd94a742363014c314ca178683783220483236c937fc1aff",
+    "Content/Puzzles/EnvironmentConnection/BP_EnvironmentDoor.uasset": "80d0f90e6c962bef4f09f6e80fe234d9666ac112cd1cbd7f152051c710e8c0b0"
+  },
+  "passed": true
+}

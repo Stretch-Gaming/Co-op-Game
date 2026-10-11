@@ -2,9 +2,9 @@
 
 Open `/Game/Maps/L_ConnectedRoomMaze` to walk the existing cave room directly into the maze. Both environments are loaded together. The north passage is300cm wide, joins the maze fork atY3200, and never changes maps.
 
-Walk withWASD, look withthe mouse, and pressE near the closed stone door to raise it. The door is the sole entrance barrier. F5adds a second local player; the existing arrow-key controls work for that player. This map excludes puzzle/round levels and places no puzzle actors.
+Start in the cave room. Walk with WASD, look with the mouse, and press E near the closed stone door to raise it. Follow the north passage into the team's maze. F5 adds a second local player; the existing arrow-key controls work for that player. This map excludes puzzle/round levels and places no puzzle actors.
 
-The room references the existing `L_Site01_HZ` without editing it. The new HC-owned `L_ConnectedMaze` references the existing PR90 scenery, trimmed atY3200 and shiftedX-175 to line up with the room's north passage.13crossing meshes are newly clipped through the editor. The giant exported volume909is excluded from geometry because treating it as a solid cube blocks the entire maze. The existing HC stone-door artwork is copied and centered for correct interaction/collision.
+The room now uses HC-owned `L_ConnectedCave`, copied from `L_Site01_HZ` through the editor. Ten legacy ghost-room actors were removed only from that copy because their walls and roof occupied the maze fork. The original HZ map is unchanged. See [the connection correction](CONNECTION_CORRECTION.md). The HC-owned `L_ConnectedMaze` contains the exported team scenery, trimmed atY3200 and shiftedX-175 to line up with the room's north passage. The existing HC stone-door artwork is copied and centered for correct interaction/collision.
 
 Door API: `/Game/Puzzles/EnvironmentConnection/BP_EnvironmentDoor`; actor tag`ConnectionDoor`; `OpenFromPlayer(Instigator)` validates native interaction and runs on the server; replicated`Open` plus actor movement raises the panel450cm. Closed bounds center(325,1400,200), extent(150,17.5,200). It is independent of plates, rounds and puzzle state. A later adventure adapter can use this environment without adding another doorway barrier.
 

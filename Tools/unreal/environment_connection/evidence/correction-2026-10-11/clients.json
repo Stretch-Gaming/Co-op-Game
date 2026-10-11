@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "players": 2,
+  "profile": "joining",
+  "approach_teleports": false,
+  "checks": [
+    "Owning E input opened the replicated doorway",
+    "Client 0 walked from its start through the door into the open fork, west across the fork, and back to the cave",
+    "Client 1 walked from its start through the door into the open fork, west across the fork, and back to the cave"
+  ],
+  "walked": [
+    {
+      "owner": 0,
+      "waypoint": 0,
+      "position": [
+        347.13115477997525,
+        1050.8196501396046,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 1,
+      "position": [
+        327.8975526176437,
+        1205.6164754366812,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 2,
+      "position": [
+        325.05678327864314,
+        2695.253157659461,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 3,
+      "position": [
+        325.00136317895226,
+        3245.176191317861,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 4,
+      "position": [
+        -1246.1283040617986,
+        3492.6328387646126,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 5,
+      "position": [
+        270.80760342535103,
+        3306.663439969774,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 6,
+      "position": [
+        322.9680492592852,
+        2803.8325449559857,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 7,
+      "position": [
+        324.96976405502625,
+        954.0497627501613,
+        92.2
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 8,
+      "position": [
+        134.15688165939972,
+        691.730154883303,
+        92.1500040689315
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 0,
+      "position": [
+        317.2104306491594,
+        1048.0841467354535,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 1,
+      "position": [
+        324.03336296104567,
+        1207.179563006595,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 2,
+      "position": [
+        324.9824518090156,
+        2695.0576048590247,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 3,
+      "position": [
+        324.9988170692981,
+        3245.107982752763,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 4,
+      "position": [
+        -1246.7449259131995,
+        3492.7059568373347,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 5,
+      "position": [
+        271.0965158399738,
+        3306.627991478756,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 6,
+      "position": [
+        322.9947590245206,
+        2803.421107251621,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 7,
+      "position": [
+        324.9711151319105,
+        952.445850875353,
+        92.2
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 8,
+      "position": [
+        129.19592819522137,
+        603.49632652747,
+        92.1499984283756
+      ]
+    }
+  ],
+  "starts": [
+    "<Struct 'Vector' (0x000001DF8A59F120) {x: 550.000000, y: 600.000000, z: 92.200000}>",
+    "<Struct 'Vector' (0x000001DF8A59F120) {x: 250.000000, y: 600.000000, z: 92.200000}>"
+  ],
+  "worlds": [
+    "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+    "/Game/Maps/UEDPIE_1_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+    "/Game/Maps/UEDPIE_2_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+  ],
+  "error": null
+}

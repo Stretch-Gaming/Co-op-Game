@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "profile": "host_split_two_locals_plus_client",
+  "approach_teleports": false,
+  "checks": [
+    "L_Site01 two joining clients: roster, health, owning input and movement regression passed",
+    "Owning F5 action created second host local; both prompt widgets retain their distinct owning controller",
+    "Owning E input opened the replicated doorway",
+    "Host local 0 walked from its normal start through the door into the open fork, west across the fork, and back to the cave",
+    "Host local 1 walked from its normal start through the door into the open fork, west across the fork, and back to the cave"
+  ],
+  "walked": [
+    {
+      "owner": 0,
+      "waypoint": 0,
+      "position": [
+        317.0256302757022,
+        1046.8373364424558,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 1,
+      "position": [
+        324.05499571153985,
+        1205.9221756622928,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 2,
+      "position": [
+        324.9832808931749,
+        2695.677250205056,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 3,
+      "position": [
+        324.99993639324384,
+        3245.5572337997573,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 4,
+      "position": [
+        -1247.443897392063,
+        3492.894732778914,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 5,
+      "position": [
+        272.52500753837114,
+        3306.454266132401,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 6,
+      "position": [
+        323.33709540581407,
+        2804.863998949103,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 7,
+      "position": [
+        324.9766980654357,
+        954.2049485204747,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 0,
+      "waypoint": 8,
+      "position": [
+        262.2881773429814,
+        653.1610019542204,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 0,
+      "position": [
+        332.9726364394784,
+        1046.8488916694234,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 1,
+      "position": [
+        325.9442632174617,
+        1205.9368670835222,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 2,
+      "position": [
+        325.0141592888566,
+        2696.3183124432285,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 3,
+      "position": [
+        324.9998399229573,
+        3246.235189105196,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 4,
+      "position": [
+        -1247.5533794237558,
+        3492.9308283322953,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 5,
+      "position": [
+        272.4698148195889,
+        3306.4611460710826,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 6,
+      "position": [
+        323.32842301333244,
+        2804.966514168108,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 7,
+      "position": [
+        324.976449274097,
+        954.364004781198,
+        92.15000200271606
+      ]
+    },
+    {
+      "owner": 1,
+      "waypoint": 8,
+      "position": [
+        387.67812519452696,
+        653.3186861422503,
+        92.15000200271606
+      ]
+    }
+  ],
+  "starts": [
+    "<Struct 'Vector' (0x00000111B331FE90) {x: 250.000000, y: 600.000000, z: 92.150002}>",
+    "<Struct 'Vector' (0x00000111B331FDF0) {x: 400.000000, y: 600.000000, z: 92.150002}>"
+  ],
+  "worlds": [
+    "/Game/Maps/UEDPIE_0_L_ConnectedRoomMaze.L_ConnectedRoomMaze",
+    "/Game/Maps/UEDPIE_1_L_ConnectedRoomMaze.L_ConnectedRoomMaze"
+  ],
+  "error": null
+}
