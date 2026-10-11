@@ -1,0 +1,32 @@
+{
+  "status": "read_only_census_and_native_timing_complete",
+  "baseline": "9dc0fabd6a467444049cec0ed8ee2763c11acfa6",
+  "map": "/Game/Maps/L_ConnectedRoomMaze",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "census": {
+    "actors": 1015,
+    "component:CapsuleComponent": 4,
+    "component:BillboardComponent": 150,
+    "component:ArrowComponent": 6,
+    "component:StaticMeshComponent": 869,
+    "component:SceneComponent": 5,
+    "component:PointLightComponent": 111,
+    "component:HierarchicalInstancedStaticMeshComponent": 4,
+    "component:DirectionalLightComponent": 1,
+    "component:SkyAtmosphereComponent": 1,
+    "component:SkyLightComponent": 1,
+    "component:ExponentialHeightFogComponent": 1,
+    "component:BrushComponent": 1,
+    "component:AudioComponent": 21
+  },
+  "lights": 113,
+  "shadow_lights": 37,
+  "instances": 5642,
+  "frame_time_measured": true,
+  "optimizations_applied": false,
+  "pending": "Isolated standalone/targeted-cost comparison before optimizing; native timings completed with shared-GPU limits in native-capture-summary.json.",
+  "measurement_tools": [
+    "collect.py observer context only",
+    "native_csv.py actual GPU/game/render CSV parser"
+  ]
+}
