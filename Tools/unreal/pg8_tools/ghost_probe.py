@@ -52,6 +52,8 @@ def tick(_delta):
         peer=peers[0]
         assert (peer.get_actor_location()-ghost.get_actor_location()).length()<100,'Owning peer ghost movement did not replicate'
         h.check('normal unlit ghost chases at scaled speed and movement reaches owner peer',{'distance_cm':travel,'speed':ghost.get_editor_property('GhostSpeed'),'damage':ghost.get_editor_property('GhostDamage')})
+        assert len(h.cleanup)==1
+        h.cleanup.clear() # Remove the normal fixture callback before destroying its UObject.
         ghost.destroy_actor();h.hold(pid,'flare');h.transition('throw')
     elif h.phase=='throw':
         if elapsed>.2:h.release(pid,'flare')
