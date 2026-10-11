@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "players": [
+    {
+      "moved_cm": 965,
+      "z": 92,
+      "on_ground": true
+    },
+    {
+      "moved_cm": 1047,
+      "z": 92,
+      "on_ground": true
+    }
+  ],
+  "subsystems": 2
+}
