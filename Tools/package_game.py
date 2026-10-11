@@ -107,7 +107,11 @@ def git_identity(root):
 
 def build_command(uat, target, project, selected_map, archive, staging):
     launcher = ["/bin/bash", str(uat)] if target == "Mac" else [str(uat)]
-    return launcher + ["BuildCookRun", f"-project={project}", f"-platform={target}",
+    # Runtime plugins cause UAT to synthesize project targets even for Blueprint-only
+    # games. Cook with the installed commandlet rather than a missing project Editor target.
+    commandlet = uat.parents[2] / "Binaries" / target / (
+        "UnrealEditor-Cmd" if target == "Mac" else "UnrealEditor-Cmd.exe")
+    return launcher + ["BuildCookRun", f"-unrealexe={commandlet}", f"-project={project}", f"-platform={target}",
                        "-clientconfig=Development", "-unattended", "-nop4", "-utf8output",
                        "-nocompileeditor", "-build", "-cook", "-cookall",
                        f"-map={selected_map}", "-stage", "-pak", "-iostore", "-package",

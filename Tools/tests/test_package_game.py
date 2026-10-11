@@ -108,10 +108,11 @@ class PackageTests(unittest.TestCase):
 
     def test_windows_plan_keeps_spaced_paths_and_selects_bootstrap(self):
         project = Path("C:/Team Work/CoopGame.uproject")
-        command = package.build_command(Path("C:/Epic Games/RunUAT.bat"), "Win64",
+        command = package.build_command(Path("C:/Epic Games/Engine/Build/BatchFiles/RunUAT.bat"), "Win64",
                                         project, "/Game/Maps/L_Site01", Path("archive"), Path("stage"))
         self.assertIn("-project=C:/Team Work/CoopGame.uproject", command)
         self.assertIn("-cookall", command)
+        self.assertIn("-unrealexe=C:/Epic Games/Engine/Binaries/Win64/UnrealEditor-Cmd.exe", command)
         self.assertFalse(any("-target=" in part or "Editor.exe" in part for part in command))
         archive = self.root / "Builds/PackagedPlay/Win64/test"
         native = archive / "CoopGame/Binaries/Win64/CoopGame.exe"
