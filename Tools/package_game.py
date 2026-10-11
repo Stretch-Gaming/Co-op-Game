@@ -155,7 +155,7 @@ def game_command(executable, selected_map, mode, address, log):
             raise ValueError("--address is only used with --mode join.")
         destination = selected_map + ("?listen" if mode == "host" else "")
     return [str(executable), destination, "-windowed", "-ResX=1280", "-ResY=720",
-            "-log", f"-abslog={log}"]
+            "-log", "-stdout", "-FullStdOutLogOutput", f"-abslog={log}"]
 
 
 def stop_build(process):
@@ -300,7 +300,7 @@ def main(argv=None):
     launch_receipt = {"build_receipt": str(receipt_file), "git": receipt["git"],
                       "launch_argv": command, "game_log": str(run_dir / "game.log")}
     print(f"Launching packaged app; close its window to exit. Log: {run_dir / 'game.log'}")
-    launch_receipt["exit_code"] = subprocess.call(command, cwd=executable.parent)
+    launch_receipt["exit_code"] = stream_build(command, executable.parent, run_dir / "game.log")
     write_receipt(run_dir / "launch-receipt.json", launch_receipt)
     return launch_receipt["exit_code"]
 

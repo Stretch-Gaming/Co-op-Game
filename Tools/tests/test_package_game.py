@@ -146,13 +146,15 @@ class PackageTests(unittest.TestCase):
 
     def test_successful_build_launches_only_new_archive_and_records_exit(self):
         def fake_build(command, root, log):
+            if command[0].endswith("/CoopGame"):
+                log.write_text("Runtime log fixture\n")
+                return 7
             archive = Path(next(arg.split("=", 1)[1] for arg in command
                                 if arg.startswith("-archivedirectory=")))
             self.app(archive)
             log.write_text("Fake UAT finished\n")
             return 0
-        with self.contexts(), patch.object(package, "stream_build", side_effect=fake_build), \
-                patch.object(package.subprocess, "call", return_value=7) as launch:
+        with self.contexts(), patch.object(package, "stream_build", side_effect=fake_build) as launch:
             self.assertEqual(package.main(["--mode", "host"]), 7)
         binary = launch.call_args.args[0][0]
         self.assertIn("Builds/PackagedPlay/Mac/", binary)
@@ -161,6 +163,8 @@ class PackageTests(unittest.TestCase):
         receipt = json.loads(next((self.root / "Saved").rglob("launch-receipt.json")).read_text())
         self.assertEqual(receipt["git"], self.identity)
         self.assertEqual(receipt["exit_code"], 7)
+        self.assertEqual(Path(receipt["game_log"]).read_text(), "Runtime log fixture\n")
+        self.assertIn("-FullStdOutLogOutput", receipt["launch_argv"])
 
     def test_interrupted_build_retains_receipt_and_never_launches(self):
         with self.contexts(), patch.object(package, "stream_build", side_effect=KeyboardInterrupt), \
@@ -192,11 +196,11 @@ class PackageTests(unittest.TestCase):
                    "git": self.identity}
         receipt_file.write_text(json.dumps(receipt))
         with self.contexts(free_gib=0), patch.object(package, "engine_root") as engine, \
-                patch.object(package.subprocess, "call", return_value=0):
+                patch.object(package, "stream_build", return_value=0):
             self.assertEqual(package.main(["--launch-only", str(receipt_file),
                                            "--mode", "join", "--address", "host.local"]), 0)
             engine.assert_not_called()
-        with self.contexts(), patch.object(package.subprocess, "call", return_value=0) as launch:
+        with self.contexts(), patch.object(package, "stream_build", return_value=0) as launch:
             self.assertEqual(package.main(["--launch-only", str(receipt_file)]), 0)
             self.assertEqual(launch.call_args.args[0][1], "/Game/Maps/L_Site01")
         receipt["status"] = "failed"
