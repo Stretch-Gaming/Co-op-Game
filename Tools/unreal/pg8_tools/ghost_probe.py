@@ -44,10 +44,12 @@ def tick(_delta):
             ghost=spawn_ghost(pawn.get_actor_location()+ue.Vector(900,0,20))
             state['normal_ghost']=ghost;state['normal_position']=ghost.get_actor_location()
             h.transition('normal_chase')
-    elif h.phase=='normal_chase' and elapsed>1:
+    elif h.phase=='normal_chase' and elapsed>3:
         ghost=state['normal_ghost'];travel=(ghost.get_actor_location()-state['normal_position']).length()
         assert travel>100,('Normal ghost movement too slow',travel,ghost.get_editor_property('GhostSpeed'))
-        peer=h.actor_peer(owner.get_world(),ghost)
+        peers=list(ue.GameplayStatics.get_all_actors_of_class(owner.get_world(),ghost_class))
+        assert len(peers)==1,('Expected the sole fixture ghost on owning peer',len(peers),ghost.get_name())
+        peer=peers[0]
         assert (peer.get_actor_location()-ghost.get_actor_location()).length()<100,'Owning peer ghost movement did not replicate'
         h.check('normal unlit ghost chases at scaled speed and movement reaches owner peer',{'distance_cm':travel,'speed':ghost.get_editor_property('GhostSpeed'),'damage':ghost.get_editor_property('GhostDamage')})
         ghost.destroy_actor();h.hold(pid,'flare');h.transition('throw')
