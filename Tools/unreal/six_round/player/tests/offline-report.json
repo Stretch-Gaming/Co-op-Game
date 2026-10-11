@@ -1,0 +1,25 @@
+{
+  "python_syntax": true,
+  "native_epic_dsl_parse": true,
+  "terminal_flow": true,
+  "no_gameplay_function_shortcuts_in_input_tests": true,
+  "secondary_keyboard_and_round_ghost_graphs": 15,
+  "official_rows_for_offline_capture_only": "stub1/1/2; editor script reads and validates actual readonly official table",
+  "runtime_input_or_transpiler_validated": false,
+  "hashes": {
+    "tests\\cage.py": "33f213ec98e26685f9b404fa70effb732f4d127411c1026921de17f9a12d39d2",
+    "tests\\climb_and_jump.py": "f74b9c46b9c64761ef3b847dd63bf20bf17250eb5b8e36cef26774db23a767fa",
+    "tests\\common.py": "aa03b0109b8b4e05234c7dccbdc26ae7896f7a9b88af533fe027cb3f676a9550",
+    "tests\\controls.py": "7e2788e2d33861c4fb1efe5adb5750f2c8e97b4dc022646fb56ffa3fedf5ae88",
+    "tests\\heavy_and_dead.py": "46f44b20415756ba5ad2d0e97bd32ffa678eba0fe0b51654aeed9c2a4120f003",
+    "tests\\keyboard_two.py": "8ec61fe090ff4755dc382f7c669ad8a55858c40e2e46a71151838486d510b1cb",
+    "tests\\offline_validate.py": "24ff4f8dc15a3392e0cf5a2a5a4edbdcf82ad8762e373eeae68d1567e1c833f9",
+    "tests\\pg_harness.py": "aacfaf28a09c07220d8960b806a8c8201e4b3ae2e10a895ede2f005cb5b0b006",
+    "tests\\preflight.py": "dd2bdd888a1b5570009d424ae4c7ef9de1b8cb12e18ee72ee309e1b02eb50b8a",
+    "tests\\round_threats_snapshot.py": "942bca2c2acacce1b6ede1adf338d0823a898e92a2456be206fd016942e13e94",
+    "tests\\taking.py": "0ca61649ba8e11317586c2e287298fa6799c8f7ed905a38def9ee75e35670d68",
+    "build_secondary_keyboard.py": "f215435c1d73b3f001c375fd1d0aad3c6d997683a747f1c616a3f450625fce15",
+    "place_test.py": "dc4633b8d8723d9f8a92f892121f10ef245ed48efc32727beb881e4caa44f2e4",
+    "round_ghosts.py": "21653c143c5e8ded13987deaad78a98a9a33de545a044515097595e6440f8a2f"
+  }
+}

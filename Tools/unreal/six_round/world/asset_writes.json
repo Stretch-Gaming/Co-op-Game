@@ -1,0 +1,61 @@
+{
+  "test_map": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test",
+  "test_map_file": "Content/Hazards/Test/SixRound/L_WorldRoute_Test.umap",
+  "blueprints": [
+    "/Game/Hazards/Traps/SixRound/BP_SixRoundTrap",
+    "/Game/Hazards/Traps/SixRound/BP_SixRoundSpikes",
+    "/Game/Hazards/Traps/SixRound/BP_SixRoundDarts",
+    "/Game/Hazards/Traps/SixRound/BP_SixRoundSwing",
+    "/Game/Hazards/Maze/BP_MouthSeal",
+    "/Game/Hazards/Maze/BP_ClimbVolume",
+    "/Game/Hazards/Traps/BP_SprintSequence",
+    "/Game/Hazards/Traps/BP_CollapsingBridge",
+    "/Game/Hazards/Traps/BP_Boulder",
+    "/Game/Hazards/Traps/BP_FallingRocks",
+    "/Game/Hazards/Maze/BP_BatBurst",
+    "/Game/Hazards/Traps/SixRound/BP_SixRoundChasmVolume"
+  ],
+  "materials": [
+    "/Game/Hazards/Art/SixRoundMaze/Materials/MI_SixRound_TrapWarning",
+    "/Game/Hazards/Art/SixRoundMaze/Materials/MI_SixRound_ClimbAmber"
+  ],
+  "generated_meshes": "mesh_writes.json",
+  "generated_tints": "material_writes.json exact paths",
+  "forbidden_writes": [
+    "/Game/Hazards/L_Site01_HZ",
+    "/Game/Hazards/L_Maze_HZ",
+    "/Game/Hazards/Traps/BP_AdventureTrap",
+    "/Game/Hazards/Traps/BP_Trap_Spikes",
+    "/Game/Hazards/Traps/BP_Trap_Darts",
+    "/Game/Hazards/Traps/BP_Trap_Swing",
+    "SourceArt/HC/MazeIntegration/scene.json.gz",
+    "SourceArt/HC/EnvironmentConnection/connection.json.gz",
+    "/Game/Puzzles/EnvironmentConnection/L_ConnectedMaze",
+    "/Game/Maps/L_ConnectedRoomMaze"
+  ],
+  "public_reset_entry_points": {
+    "BP_SixRoundTrap": "SRTrapResetSchedule",
+    "BP_SprintSequence": "SRSequenceResetSchedule (primary installs BPI event after build)",
+    "BP_MouthSeal": "ResetSeal"
+  },
+  "production_acceptance": false,
+  "blueprint_files": [
+    "Content/Hazards/Traps/SixRound/BP_SixRoundTrap.uasset",
+    "Content/Hazards/Traps/SixRound/BP_SixRoundSpikes.uasset",
+    "Content/Hazards/Traps/SixRound/BP_SixRoundDarts.uasset",
+    "Content/Hazards/Traps/SixRound/BP_SixRoundSwing.uasset",
+    "Content/Hazards/Maze/BP_MouthSeal.uasset",
+    "Content/Hazards/Maze/BP_ClimbVolume.uasset",
+    "Content/Hazards/Traps/BP_SprintSequence.uasset",
+    "Content/Hazards/Traps/BP_CollapsingBridge.uasset",
+    "Content/Hazards/Traps/BP_Boulder.uasset",
+    "Content/Hazards/Traps/BP_FallingRocks.uasset",
+    "Content/Hazards/Maze/BP_BatBurst.uasset",
+    "Content/Hazards/Traps/SixRound/BP_SixRoundChasmVolume.uasset"
+  ],
+  "material_files": [
+    "Content/Hazards/Art/SixRoundMaze/Materials/MI_SixRound_TrapWarning.uasset",
+    "Content/Hazards/Art/SixRoundMaze/Materials/MI_SixRound_ClimbAmber.uasset"
+  ],
+  "generated_mesh_namespace": "/Game/Hazards/Art/SixRoundConnection/Meshes"
+}

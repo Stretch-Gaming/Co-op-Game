@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 mode="${1:-}"
 shift || fail 'Missing launcher mode.'
 case "$mode" in
- host) map=/Game/Maps/L_Site01 ;;
+ host) map=/Game/Puzzles/Test/SixRound/L_SixRound_Test ;;
  preview) map=/Game/Maps/L_ConnectedRoomMaze ;;
  *) fail 'Unknown launcher mode.' ;;
 esac
