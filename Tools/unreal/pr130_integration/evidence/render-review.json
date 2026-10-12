@@ -1,0 +1,18 @@
+{
+  "method": "Native D3D11 engine screenshots using transient inspection cameras and one flare-art fixture; no asset saves. Separate from normal packaged startup and human play.",
+  "images": [
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\PR130Integration\\renders\\maze_entry.png",
+      "sha256": "e06af628eb607b74e2e4fb99f6b490c7ae1fcb3d6e3241b3a42da31b82a70855"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\PR130Integration\\renders\\meeting_hall.png",
+      "sha256": "543d962dd751f3bf7b72c5e2f4c3fb37660a3af2a924955927d733dbc1f38f99"
+    },
+    {
+      "path": "C:\\Users\\Stretch\\Development\\Co op Game\\Saved\\PR130Integration\\renders\\flare_art.png",
+      "sha256": "4c02ceefa175e0a47c118a9639ad186554ff5e0b6a8caaac2ee3259444f594a8"
+    }
+  ],
+  "passed": true
+}

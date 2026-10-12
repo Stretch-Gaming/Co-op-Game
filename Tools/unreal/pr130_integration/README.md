@@ -1,0 +1,20 @@
+# PR130 six-round integration
+
+HC-INT4, issue #93. Base: `b2677ea`, the main commit that merged PR130. This slice keeps `L_SixRound_Test` as the one adventure entry map and imports the remaining PG-A8 flare delivery. It does not redesign rounds, puzzles, checkpoints, player input or the escape.
+
+Two existing assets change:
+
+- Reserved `Content/Hazards/Test/SixRound/L_WorldRoute_Test.umap`: only scenery is refreshed from PK's PR122 capture. All 703 existing gameplay/addition actors retain their transforms, classes and tags. The five streamed adventure levels and the sole puzzle-controlled connection door stay in place.
+- Reserved `Content/Player/Tools/BP_Flare.uasset`: a new visual and looping spatial hiss use the existing replicated burn clock. The cylinder remains the invisible swept collision root. Only `RefreshFlare` and `EndFlare` receive a presentation helper call; other original graphs are preserved.
+
+New maze meshes are HC-owned derivatives in `Content/Puzzles/Art/PR130Maze/`. The original team capture is `SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb/connection.json.gz`, SHA-256 `2008b7a684ba0f82d34b97fe259c20ec7abc46e09d00ead5f9c1dd8c6fcbf0ed`. Its source is the team-authored CoopCave prototype at `f883727a33344ab601b4af2eaa57f897464246f5`, exported by PK in PR122. Public redistribution is permitted as recorded in that source folder. No downloaded/Fab assets are added. Existing six-round gap, solo-hall and doorway cuts are retained. A small collision-only opening in derivative mesh 890 keeps the existing meeting-hall exit approach clear; original visuals and source geometry remain untouched.
+
+New flare imports are under `Content/Player/Art/Flares/`, with exact PG-path reservations. Sources: `SourceArt/PG/PG-A8/SM_HandFlare.fbx` and `SFX_Flare_Hiss_Loop.wav`, original Blender/Python work by PK under CC0 1.0. See that folder's README for provenance and public-redistribution permission. No attribution is required. The four material slots, 6 × 6 × 22 cm dimensions and base pivot are preserved. An absolute-scale visual compensates for the existing scaled collision root; the light moves to the amber tip. Audio start/stop and emissive state follow the existing burn timer, without a second lifecycle.
+
+The original HZ cave, standalone connected-preview maze/maps, shared art and gameplay Core assets are protected. No root `Source/`, plugin or packaging Config changes are part of this integration.
+
+The supplied UCX hull is imported with the native legacy FBX factory. Unreal 5.8's automatic Interchange conversion treats Generate Collision off as all collision off; the importer selection is temporary and restored immediately. Saved readback confirms one convex hull. The visual component still has collision disabled and the original swept root remains responsible for movement.
+
+Validation: all touched Blueprints compile; only two original flare graphs change. 3,723 native geometry samples pass. Owning Enhanced Input movement and flare presentation/lifetime pass for 2, 3 and 4 joining players plus host split-screen. Two successive focused puzzle transactions pass through all six phases, regroup, relic drop/re-pick, delivery, results travel and host restart. These use explicitly recorded approach, damage, physics-settling and ghost-separation fixtures. The obsolete west-rim lamp approach was changed only in this slice's test wrapper to the authored south perch landing. Continuous human walking, climbing and chase acceptance remain separate. Native D3D11 inspection renders show the saved maze and new flare; packaged default rendering is a separate gate.
+
+Scripts run serially through a primary-owned Unreal editor queue. Never run the old full builders over this slice. Native results and diagnostic logs are under ignored `Saved/PR130Integration/`; reviewer evidence is copied here only after its gate passes. Static geometry, owning-input tests, rendered review, package startup and full human mission acceptance are distinct gates. A working package is a playtest candidate; it does not establish Mac/gamepad or full human-route acceptance.
