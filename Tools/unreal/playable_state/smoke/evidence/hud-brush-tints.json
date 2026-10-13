@@ -1,0 +1,38 @@
+{
+  "Shadow": {
+    "color": [
+      0.11800000071525574,
+      0.14100000262260437,
+      0.20000000298023224,
+      0.699999988079071
+    ],
+    "rule": "<SlateColorStylingMode.USE_COLOR_SPECIFIED: 0>"
+  },
+  "Frame": {
+    "color": [
+      0.28999999165534973,
+      0.2750000059604645,
+      0.32199999690055847,
+      1.0
+    ],
+    "rule": "<SlateColorStylingMode.USE_COLOR_SPECIFIED: 0>"
+  },
+  "Plate": {
+    "color": [
+      0.0860000029206276,
+      0.10599999874830246,
+      0.15299999713897705,
+      1.0
+    ],
+    "rule": "<SlateColorStylingMode.USE_COLOR_SPECIFIED: 0>"
+  },
+  "Inner": {
+    "color": [
+      0.16500000655651093,
+      0.18799999356269836,
+      0.2590000033378601,
+      1.0
+    ],
+    "rule": "<SlateColorStylingMode.USE_COLOR_SPECIFIED: 0>"
+  }
+}

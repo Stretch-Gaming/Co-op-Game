@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "packages_saved": [
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+    "/Game/Puzzles/UI/Results/WBP_RunResults",
+    "/Game/Puzzles/UI/WBP_InteractPrompt"
+  ],
+  "stage": "complete",
+  "manifest": [
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+    "/Game/Puzzles/UI/Results/WBP_RunResults",
+    "/Game/Puzzles/UI/WBP_InteractPrompt"
+  ],
+  "scope": "HC three existing OnPaint graphs only; no variables, owner/input/gameplay/other graphs/designer/assets/settings edits",
+  "source_sha256": "5b04f60c71c04eb88072e39fe587f978ac5583f0a76f6e3532477e4ec1d6a50a",
+  "packet_sha256": "a91b65a8d7f402a2571c29794a9b8050ee60354dd00562d4f63ccbd58467d14c",
+  "baseline_sha256": "6caae6012303ef1883a1071a35c1092a0d56e5b302ad44230b7bbcf9b51d253a",
+  "before_disk_hashes": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425"
+  },
+  "results": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+      "compile_warnings_as_errors_passed": true,
+      "other_graphs_preserved": 4,
+      "terminators_preserved": true,
+      "paint_contract": {
+        "scale_node": "K2Node_PromotableOperator_4",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 165,
+        "expected_scale_fanouts": 165,
+        "zero_multiply_inputs": [],
+        "font_nodes": 14,
+        "node_count": 586
+      }
+    },
+    "/Game/Puzzles/UI/Results/WBP_RunResults": {
+      "compile_warnings_as_errors_passed": true,
+      "other_graphs_preserved": 1,
+      "terminators_preserved": true,
+      "paint_contract": {
+        "scale_node": "K2Node_PromotableOperator_54",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 48,
+        "expected_scale_fanouts": 48,
+        "zero_multiply_inputs": [],
+        "font_nodes": 6,
+        "node_count": 218
+      }
+    },
+    "/Game/Puzzles/UI/WBP_InteractPrompt": {
+      "compile_warnings_as_errors_passed": true,
+      "other_graphs_preserved": 2,
+      "terminators_preserved": true,
+      "paint_contract": {
+        "scale_node": "K2Node_PromotableOperator_0",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 55,
+        "expected_scale_fanouts": 55,
+        "zero_multiply_inputs": [],
+        "font_nodes": 4,
+        "node_count": 186
+      }
+    }
+  },
+  "after_disk_hashes": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "d3abe6afe18325baf1fab5de1e9f0f451fb3f1a0e6ebd4c316a71b5f44c2031e",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "c4fd21b49f7b79d19ceb52d8c045f6f52efbb20b696a158a49dcc0923edb5fa9",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "8f972037a8065859197021088940e75efd369c088e81b31c3a6fd03ce219f345"
+  }
+}

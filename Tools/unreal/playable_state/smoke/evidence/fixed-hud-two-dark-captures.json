@@ -1,0 +1,18 @@
+[
+  {
+    "title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w49",
+    "path": "/tmp/coop-runtime/fixed-hud-two-dark-0.png",
+    "sha256": "579255573c5e2ea3da8e9ffecf42c7d5f3a8653906603546f8a2c9c9bfd6eae7",
+    "bytes": 2432954,
+    "native_slate_window_capture": true
+  },
+  {
+    "title": "CoopGame Preview [NetMode: Client 2]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w50",
+    "path": "/tmp/coop-runtime/fixed-hud-two-dark-1.png",
+    "sha256": "4966a492a23c6c541af00e4c5f54f3f085e4663d201f48a0387e114e48cb89ad",
+    "bytes": 432829,
+    "native_slate_window_capture": true
+  }
+]

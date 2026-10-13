@@ -1,0 +1,812 @@
+{
+  "passed": false,
+  "error": null,
+  "cleanup_errors": [],
+  "stage": "toggle",
+  "profile": "joining",
+  "players": 2,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": []
+    },
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        305
+      ]
+    },
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        306
+      ]
+    }
+  ],
+  "actions": {
+    "move": "/Game/Input/Actions/IA_Move",
+    "look": "/Game/Input/Actions/IA_Look",
+    "jump": "/Game/Input/Actions/IA_Jump",
+    "sprint": "/Game/Core/Input/IA_Sprint",
+    "flare": "/Game/Core/Input/IA_ThrowFlare",
+    "climb": "/Game/Core/Input/IA_Climb",
+    "lamp": "/Game/Core/Input/IA_Headlamp",
+    "view": "/Game/Core/Input/IA_ToggleView",
+    "interact": "/Game/Core/Input/IA_Interact",
+    "drop": "/Game/Core/Input/IA_Drop"
+  },
+  "checks": [
+    {
+      "name": "Two joining owners have distinct single active HUD/prompt instances and normal-spawn floor support",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                200.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.14999628067017
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 306,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                200.0,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Owning client movement reaches server/peers and leaves other pawn stationary",
+      "details": {
+        "id": 305,
+        "distance_cm": 118.45076418184988
+      },
+      "snapshot": [
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.5492358181501,
+                200.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.14999628067017
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.549236167773,
+                200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 306,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.5500000000001,
+                200.0,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Owning client movement reaches server/peers and leaves other pawn stationary",
+      "details": {
+        "id": 306,
+        "distance_cm": 110.95346945712754
+      },
+      "snapshot": [
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.5492358181501,
+                200.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.0465305428725,
+                -200.0,
+                92.14999628067017
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.549236167773,
+                200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.0500000000001,
+                -200.0,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 306,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.046609147256,
+                -200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -881.5500000000001,
+                200.0,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Owning V/F reaches every peer and updates only the selected owner camera/tool HUD",
+      "details": {
+        "id": 305
+      },
+      "snapshot": [
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.5492358181501,
+                200.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.0465305428725,
+                -200.0,
+                92.14999628067017
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.549236167773,
+                200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.0500000000001,
+                -200.0,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 306,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -889.046609147256,
+                -200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.5500000000001,
+                200.0,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Owning V/F reaches every peer and updates only the selected owner camera/tool HUD",
+      "details": {
+        "id": 306
+      },
+      "snapshot": [
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.5492358181501,
+                200.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -889.0465305428725,
+                -200.0,
+                92.14999628067017
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 305,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.549236167773,
+                200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 306,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -889.0500000000001,
+                -200.0,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_Site01",
+          "players": [
+            {
+              "id": 306,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -889.046609147256,
+                -200.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 305,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 1,
+              "lamp": true,
+              "position": [
+                -881.5500000000001,
+                200.0,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixture_actions": [],
+  "input_method": "Synthetic Enhanced Input through each actual owning local-player subsystem; real Blueprint input/RPC path.",
+  "physical_keyboard_gamepad_tested": false,
+  "platform": "Darwin",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "packet_emulation_tested": false,
+  "visual_audio_acceptance": false,
+  "map": "L_Site01",
+  "method": "Normal spawning; owning movement and V/F input; no gameplay-state fixtures.",
+  "movements": [
+    {
+      "id": 305,
+      "distance_cm": 118.45076418184988,
+      "on_ground": true
+    },
+    {
+      "id": 306,
+      "distance_cm": 110.95346945712754,
+      "on_ground": true
+    }
+  ],
+  "ui_observations": [
+    [
+      {
+        "id": 305,
+        "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3"
+      },
+      {
+        "id": 306,
+        "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3"
+      }
+    ],
+    [
+      {
+        "id": 305,
+        "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3"
+      },
+      {
+        "id": 306,
+        "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3"
+      }
+    ],
+    [
+      {
+        "id": 305,
+        "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_59.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3"
+      },
+      {
+        "id": 306,
+        "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+        "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_HCA3RoundHUD_C_0",
+        "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_60.WBP_InteractPrompt_C_0",
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "objective": "Stand together on the start pad.",
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3"
+      }
+    ]
+  ],
+  "native_log_scan_pending": true,
+  "full_mission_acceptance": false,
+  "rendered_pixel_acceptance": false,
+  "exception": "Traceback (most recent call last):\n  File \"/tmp/coop-runtime/run_site_smoke_hud_final.py\", line 15, in <module>\n    ui=json.loads(c.runpy(str(D/'read_fixed_hud.py'),str(D/'fixed-hud-site01-final.json'),30));assert ui['passed'],ui\n                  ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/coop-ue.py\", line 103, in runpy\n    raise TimeoutError(result)\nTimeoutError: /tmp/coop-runtime/fixed-hud-site01-final.json\n",
+  "native_log_errors": []
+}

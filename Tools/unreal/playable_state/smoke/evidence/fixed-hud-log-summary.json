@@ -1,0 +1,23 @@
+{
+  "two": {
+    "log_path": "/tmp/coop-runtime/fixed-hud-two-log.txt",
+    "sha256": "2ab448c5aa1673173a553557bb85095a51d94b9d668b8c008defd5aabb391e21",
+    "native_errors": [],
+    "error_count": 0,
+    "bytes": 34655
+  },
+  "three": {
+    "log_path": "/tmp/coop-runtime/fixed-hud-three-log.txt",
+    "sha256": "2ab82782d9297574fc1b26bd56edc1c6862ea31a04092b9269b92064d3380ec9",
+    "native_errors": [],
+    "error_count": 0,
+    "bytes": 50111
+  },
+  "host-four": {
+    "log_path": "/tmp/coop-runtime/fixed-hud-host-four-log.txt",
+    "sha256": "473d6f41db77ff83d03f34da219479a844b1af1cc7e154e187edc7d79920fb7c",
+    "native_errors": [],
+    "error_count": 0,
+    "bytes": 50758
+  }
+}

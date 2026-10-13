@@ -1,0 +1,359 @@
+{
+  "schema": 1,
+  "read_only": true,
+  "collection_complete": true,
+  "assets": [
+    {
+      "asset": "/Game/VehicleTemplate/UI/UI_Vehicle",
+      "generated_class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+      "parent_class": "/Script/UMG.UserWidget",
+      "root_widget_class": "/Script/UMG.Overlay",
+      "widget_count": 9,
+      "named_slot_count": 0,
+      "widgets": [
+        {
+          "name": "Overlay_67",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.Overlay_67",
+          "class": "/Script/UMG.Overlay",
+          "parent": null,
+          "named_slot_host": null,
+          "slot": null,
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "HorizontalBox_0",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.HorizontalBox_0",
+          "class": "/Script/UMG.HorizontalBox",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.Overlay_67",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.Overlay_67.OverlaySlot_0",
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "VerticalBox",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox",
+          "class": "/Script/UMG.VerticalBox",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.HorizontalBox_0",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2",
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "GearLabel",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.GearLabel",
+          "class": "/Script/UMG.TextBlock",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox.VerticalBoxSlot_0",
+          "is_variable": true,
+          "inherited": false,
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "text",
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [],
+            "values": {
+              "text": "5",
+              "visibility": "Visible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "TextBlock_1",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.TextBlock_1",
+          "class": "/Script/UMG.TextBlock",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox.VerticalBoxSlot_1",
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "text",
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [],
+            "values": {
+              "text": "Gear",
+              "visibility": "Visible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "SizeBox_0",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.SizeBox_0",
+          "class": "/Script/UMG.SizeBox",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.HorizontalBox_0",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "VerticalBox_76",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox_76",
+          "class": "/Script/UMG.VerticalBox",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.SizeBox_0",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "SpeedLabel",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.SpeedLabel",
+          "class": "/Script/UMG.TextBlock",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox_76",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox_76.VerticalBoxSlot_0",
+          "is_variable": true,
+          "inherited": false,
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "text",
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [],
+            "values": {
+              "text": "99",
+              "visibility": "Visible",
+              "renderOpacity": 1
+            }
+          }
+        },
+        {
+          "name": "UnitLabel",
+          "path": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.UnitLabel",
+          "class": "/Script/UMG.TextBlock",
+          "parent": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox_76",
+          "named_slot_host": null,
+          "slot": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle:WidgetTree.VerticalBox_76.VerticalBoxSlot_1",
+          "is_variable": true,
+          "inherited": false,
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "text",
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [],
+            "values": {
+              "text": "Km/h",
+              "visibility": "Visible",
+              "renderOpacity": 1
+            }
+          }
+        }
+      ],
+      "saved_asset_sha256": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+      "saved_bytes_unchanged": true
+    },
+    {
+      "asset": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+      "generated_class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+      "parent_class": "/Script/UMG.UserWidget",
+      "root_widget_class": "/Script/UMG.CanvasPanel",
+      "widget_count": 1,
+      "named_slot_count": 0,
+      "widgets": [
+        {
+          "name": "HCA3Canvas",
+          "path": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD:WidgetTree.HCA3Canvas",
+          "class": "/Script/UMG.CanvasPanel",
+          "parent": null,
+          "named_slot_host": null,
+          "slot": null,
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.HIT_TEST_INVISIBLE: 3>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "HitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        }
+      ],
+      "saved_asset_sha256": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+      "saved_bytes_unchanged": true
+    },
+    {
+      "asset": "/Game/Puzzles/UI/WBP_InteractPrompt",
+      "generated_class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+      "parent_class": "/Script/UMG.UserWidget",
+      "root_widget_class": "/Script/UMG.VerticalBox",
+      "widget_count": 1,
+      "named_slot_count": 0,
+      "widgets": [
+        {
+          "name": "VerticalBox_4",
+          "path": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt:WidgetTree.VerticalBox_4",
+          "class": "/Script/UMG.VerticalBox",
+          "parent": null,
+          "named_slot_host": null,
+          "slot": null,
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "SelfHitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        }
+      ],
+      "saved_asset_sha256": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+      "saved_bytes_unchanged": true
+    },
+    {
+      "asset": "/Game/Puzzles/UI/Results/WBP_RunResults",
+      "generated_class": "/Game/Puzzles/UI/Results/WBP_RunResults.WBP_RunResults_C",
+      "parent_class": "/Script/UMG.UserWidget",
+      "root_widget_class": "/Script/UMG.CanvasPanel",
+      "widget_count": 1,
+      "named_slot_count": 0,
+      "widgets": [
+        {
+          "name": "HCA3Canvas",
+          "path": "/Game/Puzzles/UI/Results/WBP_RunResults.WBP_RunResults:WidgetTree.HCA3Canvas",
+          "class": "/Script/UMG.CanvasPanel",
+          "parent": null,
+          "named_slot_host": null,
+          "slot": null,
+          "is_variable": false,
+          "inherited": false,
+          "visibility": "<SlateVisibility.HIT_TEST_INVISIBLE: 3>",
+          "opacity": 1.0,
+          "stored_properties": {
+            "listed": [
+              "visibility",
+              "renderOpacity"
+            ],
+            "unavailable": [
+              "Text"
+            ],
+            "values": {
+              "visibility": "HitTestInvisible",
+              "renderOpacity": 1
+            }
+          }
+        }
+      ],
+      "saved_asset_sha256": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+      "saved_bytes_unchanged": true
+    }
+  ],
+  "packages_saved": [],
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "elapsed_seconds": 0.612714
+}

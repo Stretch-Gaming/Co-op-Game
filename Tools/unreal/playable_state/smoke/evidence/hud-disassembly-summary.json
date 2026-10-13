@@ -1,0 +1,63 @@
+{
+  "actual_class": "WBP_HCA3RoundHUD_C",
+  "functions": [
+    [
+      "StopSixHUD",
+      "32"
+    ],
+    [
+      "StartSixHUD",
+      "83"
+    ],
+    [
+      "UpdateSixHUD",
+      "8409"
+    ],
+    [
+      "OnPaint",
+      "36261"
+    ],
+    [
+      "Construct",
+      "22"
+    ],
+    [
+      "Destruct",
+      "22"
+    ],
+    [
+      "ExecuteUbergraph_WBP_HCA3RoundHUD",
+      "64"
+    ]
+  ],
+  "OnPaint_stack_targets": [
+    "KismetArrayLibrary::Array_Get",
+    "KismetArrayLibrary::Array_Length",
+    "KismetMathLibrary::Add_DoubleDouble",
+    "KismetMathLibrary::Add_IntInt",
+    "KismetMathLibrary::BreakVector2D",
+    "KismetMathLibrary::Conv_IntToDouble",
+    "KismetMathLibrary::Divide_DoubleDouble",
+    "KismetMathLibrary::EqualEqual_IntInt",
+    "KismetMathLibrary::FClamp",
+    "KismetMathLibrary::FMax",
+    "KismetMathLibrary::FMin",
+    "KismetMathLibrary::FTrunc",
+    "KismetMathLibrary::LessEqual_IntInt",
+    "KismetMathLibrary::MakeVector2D",
+    "KismetMathLibrary::Multiply_DoubleDouble",
+    "KismetMathLibrary::Multiply_IntInt",
+    "KismetMathLibrary::Subtract_DoubleDouble",
+    "KismetMathLibrary::Subtract_IntInt",
+    "KismetSystemLibrary::MakeLiteralDouble",
+    "KismetSystemLibrary::MakeLiteralInt",
+    "KismetTextLibrary::Conv_StringToText",
+    "SlateBlueprintLibrary::GetLocalSize",
+    "Widget::GetCachedGeometry",
+    "WidgetBlueprintLibrary::DrawBox",
+    "WidgetBlueprintLibrary::DrawTextFormatted",
+    "WidgetLayoutLibrary::GetViewportScale"
+  ],
+  "flag_or_dispatch_proof": false,
+  "raw_log_sha256": "9f32cea49cc57ddbaf32a9b3c94bf5846c511a5ab7aab0d6be39817f12d877e5"
+}

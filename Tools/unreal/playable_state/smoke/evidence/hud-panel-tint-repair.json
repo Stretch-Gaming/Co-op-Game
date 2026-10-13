@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "stage": "complete",
+  "packages_saved": [
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+    "/Game/Puzzles/UI/WBP_InteractPrompt",
+    "/Game/Puzzles/UI/Results/WBP_RunResults"
+  ],
+  "scope": "24 existing DrawBox Tint literals across HC three OnPaint graphs only",
+  "source_sha256": "1d8d1681571210cb340043f94b109c063fcf2027520647c4979cfffb5ef1df8a",
+  "results": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+      "edits": [
+        {
+          "node": "K2Node_CallFunction_17",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_22",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_36",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_45",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_86",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_93",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_111",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_121",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_162",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_170",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_190",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_199",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_229",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_235",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_533",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_542",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        }
+      ],
+      "strict_compile_and_only_tint_default_changes": true
+    },
+    "/Game/Puzzles/UI/WBP_InteractPrompt": {
+      "edits": [
+        {
+          "node": "K2Node_CallFunction_10",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_17",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_35",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_45",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        }
+      ],
+      "strict_compile_and_only_tint_default_changes": true
+    },
+    "/Game/Puzzles/UI/Results/WBP_RunResults": {
+      "edits": [
+        {
+          "node": "K2Node_CallFunction_124",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.118,G=0.141,B=0.2,A=0.7)"
+        },
+        {
+          "node": "K2Node_CallFunction_131",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.29,G=0.275,B=0.322,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_149",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.086,G=0.106,B=0.153,A=1)"
+        },
+        {
+          "node": "K2Node_CallFunction_159",
+          "before": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+          "after": "(R=0.165,G=0.188,B=0.259,A=1)"
+        }
+      ],
+      "strict_compile_and_only_tint_default_changes": true
+    }
+  },
+  "final_widget_sha256": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7"
+  }
+}

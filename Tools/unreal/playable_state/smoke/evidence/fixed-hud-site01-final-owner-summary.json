@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "rendered_pixel_acceptance": false,
+  "packages_saved": [],
+  "profile": "joining",
+  "players": 2,
+  "fixture": "CreatePlayer only for host secondary when profile=host_split; snapshot injects no input/gameplay changes",
+  "owners": [
+    {
+      "owner_id": 307,
+      "world": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+      "pawn": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_0",
+      "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "primary": true,
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_62.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_62.WBP_InteractPrompt_C_0",
+      "hud_local_size": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "ShowSixHUD": true,
+      "DisplayRoundName": "THE CAVE",
+      "DisplayObjective": "Stand together on the start pad.",
+      "DisplayTools": "LAMP OFF  FLARES 3",
+      "DisplayTeam": "P2  ALIVE;P1  ALIVE;",
+      "DisplayedDead": false,
+      "DisplayedFlares": 3
+    },
+    {
+      "owner_id": 308,
+      "world": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01",
+      "pawn": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopCharacter_C_0",
+      "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "primary": true,
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_63.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_63.WBP_InteractPrompt_C_0",
+      "hud_local_size": [
+        1383.78369140625,
+        1081.0810546875
+      ],
+      "ShowSixHUD": true,
+      "DisplayRoundName": "THE CAVE",
+      "DisplayObjective": "Stand together on the start pad.",
+      "DisplayTools": "LAMP OFF  FLARES 3",
+      "DisplayTeam": "P1  ALIVE;P2  ALIVE;",
+      "DisplayedDead": false,
+      "DisplayedFlares": 3
+    }
+  ],
+  "worlds": [
+    "/Game/Maps/UEDPIE_0_L_Site01.L_Site01",
+    "/Game/Maps/UEDPIE_1_L_Site01.L_Site01",
+    "/Game/Maps/UEDPIE_2_L_Site01.L_Site01"
+  ],
+  "native_log_scan_pending": true,
+  "current_widget_sha256": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966"
+  },
+  "native_log_errors": []
+}

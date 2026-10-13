@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "action": "build",
+  "passed": true,
+  "collection_complete": true,
+  "packages_saved": [],
+  "editor_pid": 81093,
+  "script_file": "/tmp/coop-audit/probe_internal_widget_geometry_v3.py",
+  "script_sha256": "7e95d7957bc836c6994d6842da1d08c2bb02f6b64009d469b3253bc23bc44925",
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "scope": "one unsaved /Temp ActorComponent Blueprint; CDO only; no actors/component attachment/HUD/template/settings edits",
+  "protected_disk_hashes_before": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "dirty_packages_before": [
+    "/Game/VehicleTemplate/UI/UI_Vehicle"
+  ],
+  "package": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378",
+  "not_rf_transient": true,
+  "package_must_be_discarded_without_save": true,
+  "continuation_of_failed_receipt": "/tmp/coop-audit/runtime-evidence/internal-widget-geometry-build.json",
+  "failed_receipt_sha256": "00d1656c152191fe0e1f160516a8574f7b9d72310d87eb18f49241554d0f41f2",
+  "creation_apis_called": 0,
+  "initial_two_terminators": [
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_FunctionEntry_0",
+      "class": "K2Node_FunctionEntry",
+      "type_id": "|ReadWidgetCachedLocalSize",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "connections": 0
+        },
+        {
+          "name": "WidgetTarget",
+          "type": "Widget Object Reference",
+          "connections": 0
+        }
+      ]
+    },
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_FunctionResult_0",
+      "class": "K2Node_FunctionResult",
+      "type_id": "|ReturnNode",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "connections": 0
+        },
+        {
+          "name": "LocalSize",
+          "type": "Vector 2D Structure",
+          "connections": 0
+        }
+      ],
+      "outputs": []
+    }
+  ],
+  "blueprint_path": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378",
+  "generated_class": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378_C",
+  "cdo": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.Default__BP_InternalGeometry_81093_1f13b18378_C",
+  "function": "ReadWidgetCachedLocalSize",
+  "graph_dsl": "(fn ReadWidgetCachedLocalSize (WidgetTarget)\n  (return (UserInterface|Geometry|GetLocalSize (Widget|GetCachedGeometry WidgetTarget))))\n",
+  "graph_nodes": [
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_FunctionEntry_0",
+      "class": "K2Node_FunctionEntry",
+      "type_id": "|ReadWidgetCachedLocalSize",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "then",
+          "type": "Exec",
+          "connections": 1
+        },
+        {
+          "name": "WidgetTarget",
+          "type": "Widget Object Reference",
+          "connections": 1
+        }
+      ]
+    },
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_FunctionResult_0",
+      "class": "K2Node_FunctionResult",
+      "type_id": "|ReturnNode",
+      "inputs": [
+        {
+          "name": "execute",
+          "type": "Exec",
+          "connections": 1
+        },
+        {
+          "name": "LocalSize",
+          "type": "Vector 2D Structure",
+          "connections": 1
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_CallFunction_0",
+      "class": "K2Node_CallFunction",
+      "type_id": "Widget|GetCachedGeometry",
+      "inputs": [
+        {
+          "name": "self",
+          "type": "Widget Object Reference",
+          "connections": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Geometry Structure (by ref)",
+          "connections": 1
+        }
+      ]
+    },
+    {
+      "node": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378:ReadWidgetCachedLocalSize.K2Node_CallFunction_1",
+      "class": "K2Node_CallFunction",
+      "type_id": "UserInterface|Geometry|GetLocalSize",
+      "inputs": [
+        {
+          "name": "Geometry",
+          "type": "Geometry Structure (by ref)",
+          "connections": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ReturnValue",
+          "type": "Vector 2D Structure",
+          "connections": 1
+        }
+      ]
+    }
+  ],
+  "compile_status": "<BlueprintStatus.BS_DIRTY: 1>",
+  "actor_or_component_instances_created": 0,
+  "dirty_packages_after": [
+    "/Game/VehicleTemplate/UI/UI_Vehicle"
+  ],
+  "unexpected_new_dirty_packages": [],
+  "protected_disk_hashes_after": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "saved_bytes_preserved": true,
+  "status": "compiled_unsaved_temp_cdo_ready"
+}

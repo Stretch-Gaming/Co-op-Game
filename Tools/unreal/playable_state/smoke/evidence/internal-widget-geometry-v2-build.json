@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "action": "build",
+  "passed": false,
+  "collection_complete": false,
+  "packages_saved": [],
+  "editor_pid": 81093,
+  "script_file": "/tmp/coop-audit/probe_internal_widget_geometry_v2.py",
+  "script_sha256": "49e6d0288e9648efff9d856c0b43b2d281fe2ace3b850db8348f4d520af45896",
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "scope": "one unsaved /Temp ActorComponent Blueprint; CDO only; no actors/component attachment/HUD/template/settings edits",
+  "protected_disk_hashes_before": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "dirty_packages_before": [
+    "/Game/VehicleTemplate/UI/UI_Vehicle"
+  ],
+  "package": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378",
+  "not_rf_transient": true,
+  "package_must_be_discarded_without_save": true,
+  "continuation_of_failed_receipt": "/tmp/coop-audit/runtime-evidence/internal-widget-geometry-build.json",
+  "failed_receipt_sha256": "00d1656c152191fe0e1f160516a8574f7b9d72310d87eb18f49241554d0f41f2",
+  "creation_apis_called": 0,
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-audit/probe_internal_widget_geometry_v2.py\", line 102, in <module>\n    assert bp.get_editor_property('ParentClass')==ue.ActorComponent.static_class()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Blueprint: Property 'ParentClass' for attribute 'ParentClass' on 'Blueprint' is protected and cannot be read\n",
+  "status": "build_or_measure_failed",
+  "protected_disk_hashes_after": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "saved_bytes_preserved": true
+}

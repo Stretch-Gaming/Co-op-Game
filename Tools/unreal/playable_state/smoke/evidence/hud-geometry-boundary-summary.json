@@ -1,0 +1,314 @@
+{
+  "schema": 1,
+  "status": "internal_geometry_positive_python_roundtrip_zero_hud_pixels_unqualified",
+  "native_execution_by_child": false,
+  "parent_native_editor_pid": 81093,
+  "paired_row_count": 14,
+  "internal_positive_count": 14,
+  "python_positive_count": 0,
+  "paired_rows": [
+    {
+      "kind": "control",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        371.3140563964844,
+        181.6356201171875
+      ]
+    },
+    {
+      "kind": "control-designer-Overlay_67",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        371.3140563964844,
+        181.6356201171875
+      ]
+    },
+    {
+      "kind": "control-designer-HorizontalBox_0",
+      "internal_vector2d": [
+        307.3140563964844,
+        117.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        307.3140563964844,
+        117.63561248779297
+      ]
+    },
+    {
+      "kind": "control-designer-VerticalBox",
+      "internal_vector2d": [
+        43.314064025878906,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        43.314064025878906,
+        85.63561248779297
+      ]
+    },
+    {
+      "kind": "control-designer-GearLabel",
+      "internal_vector2d": [
+        43.314064025878906,
+        62.463623046875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        31.224332809448242,
+        62.463623046875
+      ]
+    },
+    {
+      "kind": "control-designer-TextBlock_1",
+      "internal_vector2d": [
+        43.314064025878906,
+        23.17198944091797
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        43.314064025878906,
+        23.17198944091797
+      ]
+    },
+    {
+      "kind": "control-designer-SizeBox_0",
+      "internal_vector2d": [
+        200.0,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        200.0,
+        85.63561248779297
+      ]
+    },
+    {
+      "kind": "control-designer-VerticalBox_76",
+      "internal_vector2d": [
+        200.0,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        61.448665618896484,
+        85.63561248779297
+      ]
+    },
+    {
+      "kind": "control-designer-SpeedLabel",
+      "internal_vector2d": [
+        200.0,
+        62.463623046875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        61.448665618896484,
+        62.463623046875
+      ]
+    },
+    {
+      "kind": "control-designer-UnitLabel",
+      "internal_vector2d": [
+        200.0,
+        23.17198944091797
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        51.37388610839844,
+        23.17198944091797
+      ]
+    },
+    {
+      "kind": "HUD-292",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "prompt-292",
+      "internal_vector2d": [
+        332.4676513671875,
+        171.27120971679688
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "HUD-293",
+      "internal_vector2d": [
+        1383.78369140625,
+        1081.0810546875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "prompt-293",
+      "internal_vector2d": [
+        713.5134887695312,
+        367.56756591796875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "conclusions": {
+    "zero_widget_layout_interpretation_refuted": true,
+    "owning_player_layer_can_render_control": true,
+    "actual_round_hud_visibly_absent": true,
+    "actual_round_hud_pixel_acceptance": false,
+    "geometry_marshalling_cause_proven": false,
+    "paint_dispatch_root_cause_proven": false,
+    "global_viewport_slot_container_geometry_is_player_layer_proof": false
+  },
+  "source_interpretation": {
+    "FGeometry_POD_trait": "Geometry.h643: template <> struct TIsPODType<FGeometry> { enum { Value = true }; };",
+    "earlier_nonPOD_inference": "refuted by explicit specialization",
+    "copy_bug": "not proven; CopyScriptStruct includes STRUCT_IsPlainOldData memcpy path",
+    "measurement_boundary": "Same exact Widget input, GetCachedGeometry -> Slate GetLocalSize entirely inside Blueprint; only reflected Vector2D returned to Python"
+  },
+  "temporary_build": {
+    "package": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378",
+    "new_packages_created": 1,
+    "four_node_function": "ReadWidgetCachedLocalSize(WidgetTarget)->LocalSize",
+    "actor_or_component_instances_created": 0,
+    "packages_saved": [],
+    "rf_transient": false,
+    "reported_status_after_graph_readback": "<BlueprintStatus.BS_DIRTY: 1>",
+    "compile_guard": "Strict compile helper returned successfully before readback; post-readback BS_DIRTY retained without reinterpretation",
+    "failure_v1": "GetLocalSize leaf also matches PointData; failed before the two measurement nodes",
+    "failure_v2": "Protected ParentClass read rejected; failed before measurement-node mutation",
+    "v3": "Same temporary package, public BP.get_parent, exact UMG catalog IDs; 14 native paired CDO calls succeeded"
+  },
+  "protected_saved_asset_hashes": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "protected_saved_bytes_unchanged": true,
+  "visible_control_capture": {
+    "path": "/tmp/coop-runtime/designer-control-client1.png",
+    "sha256": "11409412e75c6b162c7e61c8087a1f07c86c878d2ca66d93c296dbd52735e395",
+    "bytes": 2599641,
+    "window_ref": "w34",
+    "window_title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+    "owning_player_id": 290,
+    "native_slate_window_capture": true,
+    "root_CUA_observation": "Gear5/Speed99/Km/h visibly render bottom right; existing round HUD overlay absent",
+    "geometry_copy_cause_proven": false,
+    "png_copied_to_repository": false,
+    "observation_source": "parent native CUA observation; child did not operate UI"
+  },
+  "before_cleanup_raw_receipts": [
+    {
+      "file": "designer-control-before-cleanup-native.json",
+      "sha256": "99a8fa5526dbab65a847dca6f77b86c9732b55f8a23d8d711dafd85ca016b563",
+      "bytes": 171494
+    },
+    {
+      "file": "designer-control-internal-before-cleanup-native.json",
+      "sha256": "1120850e95abb69342eafeef293ad59b3fbb2f994abaec79b6a75d94bfd709d0",
+      "bytes": 162046
+    }
+  ],
+  "cleanup": {
+    "initial_control_exact_cleanup_passed": true,
+    "internal_control_exact_cleanup_passed": true,
+    "initial_cleanup_raw_source": "/tmp/coop-audit/runtime-evidence/designer-control-runtime.json",
+    "initial_cleanup_raw_sha256": "87567ded7f9553723ffd6b9a823710dbcbd34665a202afbcdeeb1e96cf12ba78",
+    "internal_cleanup_raw_source": "/tmp/coop-audit/runtime-evidence/designer-control-internal.json",
+    "internal_cleanup_raw_sha256": "b3b3751bd91f8505fa4bd00549ccc19223b9fc47c6359e432645e690a1267067"
+  },
+  "native_logs": {
+    "initial_control": {
+      "file": "designer-control-log.txt",
+      "bytes": 39771,
+      "sha256": "e13020dc1e4c57d49ce14adb405d159e2a1d11e0706a4941115d18740f5c3a55",
+      "native_error_count": 0,
+      "scan_source": "parent finalized native scan communicated after exact cleanup"
+    },
+    "internal_measurement": {
+      "file": "internal-widget-geometry-log.txt",
+      "bytes": 35793,
+      "sha256": "f69d5b7b254e6888a40005d865664c551fd6945e61efc2d4f07c114020c47b16",
+      "native_error_count": 0,
+      "scan_receipt": "internal-geometry-owner-summary.json"
+    }
+  },
+  "reconciliation": "Historical raw Python zero-geometry failures remain unchanged; they do not establish absent widget layout or failed owning-player attachment.",
+  "limits": [
+    "Two real joining clients on L_SixRound_Test; this is not a replacement for L_Site01 smoke or 4-owner rendered acceptance.",
+    "The screenshot is parent observed and hash bound; PNG intentionally remains outside the repository.",
+    "Only cached widget bounds were measured internally. No inference about global viewport or player-screen getter materialization is required.",
+    "No HUD/template/gameplay asset patch, geometry-copy fix, scale fix or startup-race fix is established."
+  ]
+}

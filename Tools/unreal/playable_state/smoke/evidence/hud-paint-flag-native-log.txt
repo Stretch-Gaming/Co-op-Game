@@ -1,0 +1,28 @@
+[2026.10.13-10.00.38:954][150]LogModelContextProtocol: Display: Client requested protocol version '2024-11-05', negotiated '2024-11-05'
+[2026.10.13-10.00.38:954][151]LogModelContextProtocol: Initializing new session: 466bd8a50b4d7d3deb552da4a9b3c5bf
+[2026.10.13-10.00.38:989][151]LogModelContextProtocol: Session initialized: 466bd8a50b4d7d3deb552da4a9b3c5bf
+[2026.10.13-10.00.39:037][153]Cmd: OBJ DUMP CLASS=/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C NAME=/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.Default__WBP_HCA3RoundHUD_C SHOW=UserWidget
+[2026.10.13-10.00.39:044][153]
+[2026.10.13-10.00.39:044][153]*** Property dump for object 'WBP_HCA3RoundHUD_C /Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.Default__WBP_HCA3RoundHUD_C' ***
+[2026.10.13-10.00.39:046][153]=== UserWidget properties ===
+[2026.10.13-10.00.39:047][153]  ColorAndOpacity=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)
+[2026.10.13-10.00.39:047][153]  ColorAndOpacityDelegate=(null).None
+[2026.10.13-10.00.39:052][153]  ForegroundColor=(SpecifiedColor=(R=1.000000,G=0.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Foreground)
+[2026.10.13-10.00.39:052][153]  ForegroundColorDelegate=(null).None
+[2026.10.13-10.00.39:053][153]  OnVisibilityChanged=()
+[2026.10.13-10.00.39:053][153]  Padding=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)
+[2026.10.13-10.00.39:053][153]  Priority=0
+[2026.10.13-10.00.39:053][153]  bIsFocusable=False
+[2026.10.13-10.00.39:053][153]  bStopAction=False
+[2026.10.13-10.00.39:053][153]  bAutomaticallyRegisterInputOnConstruction=False
+[2026.10.13-10.00.39:053][153]  AnimationTickManager=None
+[2026.10.13-10.00.39:053][153]  WidgetTree=None
+[2026.10.13-10.00.39:053][153]  DesignTimeSize=(X=100.000000,Y=100.000000)
+[2026.10.13-10.00.39:053][153]  DesignSizeMode=FillScreen
+[2026.10.13-10.00.39:055][153]  PaletteCategory=NSLOCTEXT("UMG", "UserCreated", "User Created")
+[2026.10.13-10.00.39:057][153]  PreviewBackground=None
+[2026.10.13-10.00.39:057][153]  bHasScriptImplementedTick=False
+[2026.10.13-10.00.39:057][153]  bHasScriptImplementedPaint=True
+[2026.10.13-10.00.39:057][153]  TickFrequency=Auto
+[2026.10.13-10.00.39:058][153]  DesiredFocusWidget=(WidgetName="",WidgetPtr=None)
+[2026.10.13-10.00.39:058][153]  InputComponent=None

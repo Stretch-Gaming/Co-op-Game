@@ -1,0 +1,205 @@
+{
+  "schema": 1,
+  "status": "three_paint_graphs_and_tints_fixed_owning_HUD_visible_native_acceptance_passed",
+  "rendered_round_HUD_acceptance": {
+    "joining_client": true,
+    "host_primary_and_secondary": true,
+    "dead_secondary_owning_stock": true
+  },
+  "pending": [
+    "continuous full route",
+    "results rendering and results/travel integration",
+    "prompt pixels/progress interaction",
+    "Windows",
+    "physical keyboards/gamepads",
+    "packet emulation",
+    "performance qualification"
+  ],
+  "float_repair": {
+    "exact_packages_saved": [
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+      "/Game/Puzzles/UI/Results/WBP_RunResults",
+      "/Game/Puzzles/UI/WBP_InteractPrompt"
+    ],
+    "other_graphs_preserved": {
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": 4,
+      "/Game/Puzzles/UI/Results/WBP_RunResults": 1,
+      "/Game/Puzzles/UI/WBP_InteractPrompt": 2
+    },
+    "terminators_preserved": true,
+    "paint_contracts": {
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+        "scale_node": "K2Node_PromotableOperator_4",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 165,
+        "expected_scale_fanouts": 165,
+        "zero_multiply_inputs": [],
+        "font_nodes": 14,
+        "node_count": 586
+      },
+      "/Game/Puzzles/UI/Results/WBP_RunResults": {
+        "scale_node": "K2Node_PromotableOperator_54",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 48,
+        "expected_scale_fanouts": 48,
+        "zero_multiply_inputs": [],
+        "font_nodes": 6,
+        "node_count": 218
+      },
+      "/Game/Puzzles/UI/WBP_InteractPrompt": {
+        "scale_node": "K2Node_PromotableOperator_0",
+        "scale_return_type": "Float (double-precision)",
+        "scale_fanouts": 55,
+        "expected_scale_fanouts": 55,
+        "zero_multiply_inputs": [],
+        "font_nodes": 4,
+        "node_count": 186
+      }
+    },
+    "receipt": "hud-paint-float-repair.json",
+    "builder_source_sha256": "5b04f60c71c04eb88072e39fe587f978ac5583f0a76f6e3532477e4ec1d6a50a"
+  },
+  "tint_repair": {
+    "literal_edit_count": 24,
+    "strict_compile_and_only_tint_default_changes": true,
+    "receipt": "hud-panel-tint-repair.json",
+    "builder_source_sha256": "1d8d1681571210cb340043f94b109c063fcf2027520647c4979cfffb5ef1df8a",
+    "brush_assets_edited": false
+  },
+  "final_builder_source_sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7",
+  "final_widget_sha256": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7"
+  },
+  "builder_literal_note": "Final source R1 objective literal now says MineRocks, matching already-saved native data; no additional native changes. Final three generated paint bodies equal tested panel-tint source bodies.",
+  "owner_snapshots": {
+    "three_joining": {
+      "file": "fixed-hud-joining-3.json",
+      "owner_ids": [
+        298,
+        299,
+        300
+      ]
+    },
+    "four_host_split": {
+      "file": "fixed-hud-host_split-4.json",
+      "primary_id": 301,
+      "secondary_id": 304,
+      "joining_ids": [
+        302,
+        303
+      ],
+      "primary_flares": 3,
+      "secondary_flares": 2,
+      "fixture": "Native CreatePlayer establishes the second host local owner; no physical F5 or devices claimed"
+    },
+    "final_two_site01": {
+      "file": "fixed-hud-site01-final-owner-summary.json",
+      "owner_ids": [
+        307,
+        308
+      ],
+      "same_session_as_input_smoke": false
+    }
+  },
+  "secondary_input_acceptance": {
+    "passed": true,
+    "check_count": 5,
+    "primary_id": 301,
+    "secondary_id": 304,
+    "baseline_secondary_stock": 2,
+    "final_secondary_stock": 1,
+    "primary_stock_stayed": 3,
+    "spectator": "DEAD - watching P2. Interact switches view.",
+    "target_after_cycle": 302,
+    "fixture_actions": [
+      {
+        "kind": "secondary host aim down",
+        "owner_id": 304
+      },
+      {
+        "kind": "server lethal ApplyDamage only on secondary host",
+        "owner_id": 304
+      }
+    ],
+    "input_method": "Synthetic Enhanced Input through each actual owning local-player subsystem; real Blueprint input/RPC path.",
+    "physical_devices_tested": false,
+    "receipt": "owned-hud-secondary.json"
+  },
+  "site01_input_smoke": {
+    "native_passed": true,
+    "check_count": 5,
+    "owner_ids": [
+      305,
+      306
+    ],
+    "movements": [
+      {
+        "id": 305,
+        "distance_cm": 118.45076418184988,
+        "on_ground": true
+      },
+      {
+        "id": 306,
+        "distance_cm": 110.95346945712754,
+        "on_ground": true
+      }
+    ],
+    "fixture_actions": [],
+    "receipt": "site01-client2-smoke-hud-final-native.json",
+    "native_log_error_count": 0,
+    "native_log_scan_source": "Parent finalized scan and driver native_log_errors=[]",
+    "source_sha256": "f979f359583e984bb27cb7a24b6416100d47b1cb601e042300932c218406e15d",
+    "driver_overall_passed": false,
+    "driver_failure": "Extra HUD readback output-name timeout after native five-check smoke completed",
+    "driver_receipt": "site-smoke-hud-final-driver-timeout.json"
+  },
+  "legacy_two_default_snapshot_lost": {
+    "file_not_copied": "fixed-hud-joining-2.json",
+    "reason": "Default output was overwritten by later Site01 snapshot; historical two-client dark capture metadata retained. Fresh Site01307/308 owner receipt provides final two-owner native UI evidence."
+  },
+  "native_log_acceptance": {
+    "profile_error_counts": {
+      "two": 0,
+      "three": 0,
+      "host-four": 0
+    },
+    "site01_owner_native_errors": [],
+    "root_profile_scan": "fixed-hud-log-summary.json"
+  },
+  "images": [
+    {
+      "file": "fixed-hud-host-four-dark-0.png",
+      "sha256": "ba85a601e307825ceec898641158d21bd9a096349c054030a9df67009d2b3b54",
+      "bytes": 2539384,
+      "title": "CoopGame Preview [NetMode: Server 0]  (64-bit/Mac Metal SM6)",
+      "metadata": "fixed-hud-host-four-dark-captures.json",
+      "child_review": "Read-only local image inspection; no editor/UI control"
+    },
+    {
+      "file": "fixed-hud-host-four-dead-0.png",
+      "sha256": "db1134a43900a335982bc98def18d5f092ae5403a2890b7ee101dfef65dc5500",
+      "bytes": 2707808,
+      "title": "CoopGame Preview [NetMode: Server 0]  (64-bit/Mac Metal SM6)",
+      "metadata": "fixed-hud-host-four-dead-captures.json",
+      "child_review": "Read-only local image inspection; no editor/UI control"
+    },
+    {
+      "file": "fixed-hud-site01-final-0.png",
+      "sha256": "6e3b6b7fe6b0b91b7a73238e3e76cf2d11d7b393f303dd90e403ba935c0f1e7d",
+      "bytes": 2145177,
+      "title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+      "metadata": "fixed-hud-site01-final-captures.json",
+      "child_review": "Read-only local image inspection; no editor/UI control"
+    }
+  ],
+  "historical_evidence_superseded": {
+    "raw_zero_geometry_failures_unchanged": true,
+    "zero_layout_inference_refuted": true,
+    "HUD_absent_before_repair_was_actual": true,
+    "HUD_visible_after_bounded_repairs": true,
+    "python_geometry_boundary_cause": "Unresolved; not patched. Internal Vector2D measurements are used for layout."
+  },
+  "child_actions": "Offline source/evidence copying and local image inspection only; no editor/Git/binary edits. Root owns restoration, commits, review and publication."
+}

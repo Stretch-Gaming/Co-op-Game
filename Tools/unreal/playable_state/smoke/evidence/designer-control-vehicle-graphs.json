@@ -1,0 +1,7 @@
+{
+  "read_only": true,
+  "asset": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle",
+  "graphs": {
+    "EventGraph": "(event UserInterface|EventPreConstruct (IsDesignTime)\n  (Widget|SetText(Text) (Variables|UI_Vehicle|GetUnitLabel) (select (|GetbIsMPH) \"NSLOCTEXT(\\\"[9E0E43924D09D3EEDC90159E87F88F10]\\\", \\\"C0D94AF0436365E130BF428C2BABB354\\\", \\\"MPH\\\")\" \"NSLOCTEXT(\\\"[9E0E43924D09D3EEDC90159E87F88F10]\\\", \\\"963E0668494965569FF3078190452496\\\", \\\"Km/h\\\")\")))\n\n(event Custom|UpdateSpeed (NewSpeed)\n  (Widget|SetText(Text) (Variables|UI_Vehicle|GetSpeedLabel) (Utilities|Text|ToText(Float) (* (Math|Float|Absolute(Float) NewSpeed) (Math|Float|SelectFloat 0.022000 0.036000 (|GetbIsMPH))) \"HalfToEven\" false true 3 3 0 0)))\n\n(event Custom|UpdateGear (NewGear)\n  (bind _gearlabel (Variables|UI_Vehicle|GetGearLabel))\n  (switch Utilities|FlowControl|Switch|SwitchonInt NewGear\n    (:Default\n      (Widget|SetText(Text) _gearlabel (Utilities|Text|ToText(Integer) NewGear false true 1 1)))\n    (:-1\n      (Widget|SetText(Text) _gearlabel \"NSLOCTEXT(\\\"[9E0E43924D09D3EEDC90159E87F88F10]\\\", \\\"D7B02B5B441B6E53AEC7329820AF997E\\\", \\\"R\\\")\"))\n    (:0\n      (Widget|SetText(Text) _gearlabel \"NSLOCTEXT(\\\"[9E0E43924D09D3EEDC90159E87F88F10]\\\", \\\"8C90B9314ED4512EBA3575BC96180A5B\\\", \\\"N\\\")\"))))\n"
+  }
+}

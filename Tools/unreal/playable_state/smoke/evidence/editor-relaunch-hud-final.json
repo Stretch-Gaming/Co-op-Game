@@ -1,0 +1,29 @@
+{
+  "packages_saved": [],
+  "original_editor_pid": 81093,
+  "editor_pid": 94963,
+  "project_dir": "/Volumes/CoopBuild/Repositories/Co-op-Game-primary",
+  "pie_stopped": true,
+  "editor_map": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+  "dirty_content": [],
+  "dirty_maps": [],
+  "temporary_diagnostic_loaded": false,
+  "final_binding_manifest": {
+    "character_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "ghost_sha256": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+    "graph_proof_sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810",
+    "hud_widget_sha256": {
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+      "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966",
+      "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7"
+    },
+    "hud_builder_source_sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7"
+  },
+  "template_sha256": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+  "final_widget_sha256": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7"
+  },
+  "passed": true
+}

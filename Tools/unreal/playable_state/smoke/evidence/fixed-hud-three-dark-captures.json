@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w51",
+    "path": "/tmp/coop-runtime/fixed-hud-three-dark-0.png",
+    "sha256": "a5ddb91896f389aadfc438dda3f4b47b37a949822b86114360babf31bd3662f9",
+    "bytes": 2583688,
+    "native_slate_window_capture": true
+  },
+  {
+    "title": "CoopGame Preview [NetMode: Client 2]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w52",
+    "path": "/tmp/coop-runtime/fixed-hud-three-dark-1.png",
+    "sha256": "daded242b4f54838e56d72c4a5e612e657351fd97c3b8ecb58969c9611f603f8",
+    "bytes": 435612,
+    "native_slate_window_capture": true
+  },
+  {
+    "title": "CoopGame Preview [NetMode: Client 3]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w53",
+    "path": "/tmp/coop-runtime/fixed-hud-three-dark-2.png",
+    "sha256": "e2d86822200453fe35e30f184c54629ef71e3d3145cb7754f96db49d276c6ae1",
+    "bytes": 469080,
+    "native_slate_window_capture": true
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "source_only": true,
+  "original_builder_executed": false,
+  "contracts": [
+    {
+      "scratch_report": "hud-float-scale-contract.json",
+      "scratch_report_sha256": "34a3439befb501689785c67372868ea9b6d918e3b257155db923ab611097244d",
+      "builder_source_sha256": "5b04f60c71c04eb88072e39fe587f978ac5583f0a76f6e3532477e4ec1d6a50a",
+      "all_float_source_contracts_passed": true,
+      "explicit_solid_tint_count": null,
+      "widgets": {
+        "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+          "expected_scale_output_links": 165,
+          "baseline_missing_scale_B_links": 164,
+          "font_product_count": 14,
+          "geometry_integer_to_float_cast_count": 7,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/WBP_InteractPrompt": {
+          "expected_scale_output_links": 55,
+          "baseline_missing_scale_B_links": 45,
+          "font_product_count": 4,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/Results/WBP_RunResults": {
+          "expected_scale_output_links": 48,
+          "baseline_missing_scale_B_links": 47,
+          "font_product_count": 6,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        }
+      }
+    },
+    {
+      "scratch_report": "hud-float-scale-contract-panel-tint.json",
+      "scratch_report_sha256": "abaf8946ea16b50ebd6c3ffbeb3c8b41e0fd42bb9d65d895c220212685e2e874",
+      "builder_source_sha256": "1d8d1681571210cb340043f94b109c063fcf2027520647c4979cfffb5ef1df8a",
+      "all_float_source_contracts_passed": true,
+      "explicit_solid_tint_count": 24,
+      "widgets": {
+        "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+          "expected_scale_output_links": 165,
+          "baseline_missing_scale_B_links": 164,
+          "font_product_count": 14,
+          "geometry_integer_to_float_cast_count": 7,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/WBP_InteractPrompt": {
+          "expected_scale_output_links": 55,
+          "baseline_missing_scale_B_links": 45,
+          "font_product_count": 4,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/Results/WBP_RunResults": {
+          "expected_scale_output_links": 48,
+          "baseline_missing_scale_B_links": 47,
+          "font_product_count": 6,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        }
+      }
+    },
+    {
+      "scratch_report": "hud-float-scale-contract-final.json",
+      "scratch_report_sha256": "2bba5c74bec7eadf4ac9cf60a05bf3a0b104f42908f32dd0cf81820a1ab19ce0",
+      "builder_source_sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7",
+      "all_float_source_contracts_passed": true,
+      "explicit_solid_tint_count": 24,
+      "widgets": {
+        "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+          "expected_scale_output_links": 165,
+          "baseline_missing_scale_B_links": 164,
+          "font_product_count": 14,
+          "geometry_integer_to_float_cast_count": 7,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/WBP_InteractPrompt": {
+          "expected_scale_output_links": 55,
+          "baseline_missing_scale_B_links": 45,
+          "font_product_count": 4,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        },
+        "/Game/Puzzles/UI/Results/WBP_RunResults": {
+          "expected_scale_output_links": 48,
+          "baseline_missing_scale_B_links": 47,
+          "font_product_count": 6,
+          "geometry_integer_to_float_cast_count": 0,
+          "arithmetic_integer_violations": [],
+          "float_source_contract_passed": true
+        }
+      }
+    }
+  ],
+  "final_source_sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7",
+  "final_generated_paint_bodies_unchanged_after_R1_source_literal_correction": true,
+  "refuted_recommendation": "FontSize=Integer was incorrect; actual DrawTextFormatted FontSize is Float(single-precision). No Truncate/explicit deprecated DoubleToFloat was added."
+}

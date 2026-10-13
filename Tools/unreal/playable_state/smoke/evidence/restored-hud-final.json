@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "stopped": true,
+  "packages_saved": [],
+  "play": {
+    "PlayNetMode": "PIE_ListenServer",
+    "PlayNumberOfClients": 3,
+    "RunUnderOneProcess": true
+  },
+  "performance": {
+    "bThrottleCPUWhenNotForeground": true
+  },
+  "screen_percentage": 0.0,
+  "occlusion_queries": 1,
+  "editor_map": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+  "slate_game_layer_visibility": {
+    "Slate.GameLayer.ViewportSlotVisible": 1,
+    "Slate.GameLayer.DebugCanvasVisible": 1,
+    "Slate.GameLayer.PlayerCanvasVisible": 1,
+    "Slate.GameLayer.AllCanvasesVisible": 1
+  },
+  "bridge_callbacks_removed": 1
+}
