@@ -1,0 +1,11 @@
+{
+  "path": "/tmp/coop-runtime/designer-control-client1.png",
+  "sha256": "11409412e75c6b162c7e61c8087a1f07c86c878d2ca66d93c296dbd52735e395",
+  "bytes": 2599641,
+  "window_ref": "w34",
+  "window_title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+  "owning_player_id": 290,
+  "native_slate_window_capture": true,
+  "root_CUA_observation": "Gear5/Speed99/Km/h visibly render bottom right; existing round HUD overlay absent",
+  "geometry_copy_cause_proven": false
+}

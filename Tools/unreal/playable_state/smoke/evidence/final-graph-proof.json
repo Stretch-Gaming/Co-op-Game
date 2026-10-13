@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "read_only": true,
+  "packages_saved": [],
+  "ghost": {
+    "all_graphs_match_native_patch": true,
+    "graph_count": 12,
+    "historical_saved_sha256": "d7e23d948bea3787f85bad72c6a6d5c5f52f471d1d439c6f0deaf7d8b6ebdc7e",
+    "final_sha256": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0"
+  },
+  "character": {
+    "use_allowed_matches_native_patch": true,
+    "other_graph_count": 69,
+    "other_graphs_match_original": true,
+    "historical_saved_sha256": "791c1d401ce19112b031ec291d25eb22213912c9e2fe531e490411165394498f",
+    "final_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "final_asset_sha256": {
+    "Content/Core/BP_CoopCharacter.uasset": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "Content/Core/BP_CoopGameMode.uasset": "de2893af9673fa32033b27b4bd32859aeeccb97f15344f289e998e528f6cdc07",
+    "Content/Player/Ghosts/BP_Ghost.uasset": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+    "Content/Puzzles/BP_CrystalLock.uasset": "372bc9dea1a5b580a1d569845fbbf5367abadf78781e4947dd63d8747e7ecf0a",
+    "Content/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor.uasset": "7c98d5dea91275ca92ac005c83ca8063098861a69510229d6a39e1df4b742590",
+    "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000"
+  },
+  "protected_package_count": 55,
+  "chronology": "Historical native patch receipts preserved. Final warning-free compile/save rewrote package bytes; read-only topology proof binds final files to tested graphs."
+}

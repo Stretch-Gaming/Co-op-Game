@@ -1,0 +1,53 @@
+{
+  "source": "Root editor owner message; child did not inspect native UI/images",
+  "native_state_run_passed": true,
+  "native_platform": "Mac",
+  "native_image_files_external": [
+    {
+      "path": "/tmp/hc-a4-crystal-lock/runtime-evidence/screenshots/joining-2-2026-10-13T0611483092900000-owner278-BP_CrystalLock_C_0-lit.png",
+      "bytes": 4091359,
+      "sha256": "11f6572902da9790bd512deb9b5b75e0ccbeb67a9d632f7e1877a9e775c235e2",
+      "requested_owner": 278,
+      "requested_gate": "headlamp begin",
+      "requested_viewport_identity_verified": false
+    },
+    {
+      "path": "/tmp/hc-a4-crystal-lock/runtime-evidence/screenshots/joining-2-2026-10-13T0611483092900000-owner278-BP_CrystalLock_C_0-unlit.png",
+      "bytes": 3921760,
+      "sha256": "c336f4147bc49c87bbf7828ef8a11f18ac6f5df5ea38f018b8b0366b83ce0869",
+      "requested_owner": 278,
+      "requested_gate": "headlamp end",
+      "requested_viewport_identity_verified": false
+    },
+    {
+      "path": "/tmp/hc-a4-crystal-lock/runtime-evidence/screenshots/joining-2-2026-10-13T0611483092900000-owner279-BP_CrystalLock_C_0-lit.png",
+      "bytes": 4303675,
+      "sha256": "d4f44dcc7d1f89e76589f3d7fa6204b21138ccfa12dd8c70ccdfb1adc7c9dc67",
+      "requested_owner": 279,
+      "requested_gate": "headlamp begin",
+      "requested_viewport_identity_verified": false
+    },
+    {
+      "path": "/tmp/hc-a4-crystal-lock/runtime-evidence/screenshots/joining-2-2026-10-13T0611483092900000-owner279-BP_CrystalLock_C_0-unlit.png",
+      "bytes": 4474746,
+      "sha256": "410e742a5634874b8bf58ab7e4196239ba4ec88010b507068d9d4f1a8b472120",
+      "requested_owner": 279,
+      "requested_gate": "headlamp end",
+      "requested_viewport_identity_verified": false
+    }
+  ],
+  "total_image_bytes": 16791540,
+  "current_raw_helper_sha256": "d22f17a2df5fad68f4c89aec9db85c331ff0423b2d3b06c1d8222a03f1ccc57e",
+  "per_run_script_byte_snapshot_captured_by_driver": false,
+  "root_qualitative_review": {
+    "reviewed_owner": 278,
+    "lit": "Visible teal crystal under headlamp; near-fixture headlamp oversaturates background",
+    "unlit": "Captured spawn-cave pose after asynchronous request and fixture pose restoration; not a comparable lock view",
+    "valid_lit_unlit_pixel_pair": false,
+    "captured_viewport_identity_fully_verified": false
+  },
+  "pixel_acceptance": false,
+  "native_15m_readability_acceptance": false,
+  "multi_pane_readability_acceptance": false,
+  "windows_acceptance": false
+}

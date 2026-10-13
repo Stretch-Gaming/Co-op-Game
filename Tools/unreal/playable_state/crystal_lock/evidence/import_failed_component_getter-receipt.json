@@ -1,0 +1,89 @@
+{
+  "run_started_utc": "2026-10-13T05:12:56.382598+00:00",
+  "status": "failed",
+  "stage": "add_local_mid_and_presentation_helper",
+  "mutation_started": true,
+  "first_mutation_stage": "create_stone_material",
+  "stage_history": [
+    {
+      "stage": "preflight",
+      "utc": "2026-10-13T05:12:56.383123+00:00",
+      "mutation": false,
+      "detail": null
+    },
+    {
+      "stage": "create_stone_material",
+      "utc": "2026-10-13T05:13:03.604489+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone"
+    },
+    {
+      "stage": "create_crystal_material",
+      "utc": "2026-10-13T05:13:04.048544+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal"
+    },
+    {
+      "stage": "import_static_mesh",
+      "utc": "2026-10-13T05:13:19.981174+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock"
+    },
+    {
+      "stage": "validate_imported_mesh",
+      "utc": "2026-10-13T05:13:20.985844+00:00",
+      "mutation": false,
+      "detail": null
+    },
+    {
+      "stage": "add_blueprint_visual_child",
+      "utc": "2026-10-13T05:13:21.033910+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/BP_CrystalLock"
+    },
+    {
+      "stage": "add_local_mid_and_presentation_helper",
+      "utc": "2026-10-13T05:13:21.330910+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/BP_CrystalLock"
+    }
+  ],
+  "created_assets": [
+    "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone",
+    "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal",
+    "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock"
+  ],
+  "saved_packages": [],
+  "manifest": {
+    "new_assets": [
+      "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock",
+      "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone",
+      "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal"
+    ],
+    "existing_blueprints": [
+      "/Game/Puzzles/BP_CrystalLock"
+    ],
+    "maps": [
+      "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    ],
+    "shared_material_reads": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "shared_material_writes": [],
+    "project_setting_writes": [],
+    "new_helpers": [
+      "RefreshCrystalLockPresentation"
+    ],
+    "new_variables": [
+      "CrystalLockMID"
+    ],
+    "new_components": [
+      "HC_CrystalLockVisual"
+    ]
+  },
+  "fbx_flag_restored": true,
+  "exception_type": "RuntimeError",
+  "error": "AssertionError: The node could not be created / Variables|Default|GetHC_CrystalLockVisual does not exist\n  in: (Rendering|SetVisibility :self (Variables|Default|GetHC_CrystalLockVisual) :b...\n  in: (fn RefreshCrystalLockPresentation)",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/hc-a4-crystal-lock/import_crystal_lock.py\", line 262, in <module>\n    RESULT=run_import()\n           ^^^^^^^^^^^^\n  File \"/private/tmp/hc-a4-crystal-lock/import_crystal_lock.py\", line 200, in run_import\n    auth.write(bp,'RefreshCrystalLockPresentation',f'''\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/authoring.py\", line 136, in write\n    ).transpile(code)\n      ^^^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/UnrealEngine/UE_5.8/Engine/Plugins/Experimental/Toolsets/EditorToolset/Content/Python/editor_toolset/toolsets/blueprint_dsl.py\", line 1708, in transpile\n    raise RuntimeError(f'{msg}\\n  in: {context}') from None\nRuntimeError: AssertionError: The node could not be created / Variables|Default|GetHC_CrystalLockVisual does not exist\n  in: (Rendering|SetVisibility :self (Variables|Default|GetHC_CrystalLockVisual) :b...\n  in: (fn RefreshCrystalLockPresentation)\n",
+  "run_finished_utc": "2026-10-13T05:13:22.246630+00:00"
+}

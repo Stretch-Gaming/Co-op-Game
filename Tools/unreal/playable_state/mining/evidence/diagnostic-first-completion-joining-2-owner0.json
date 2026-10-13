@@ -1,0 +1,102 @@
+{
+  "phase": "rock_pickup",
+  "at": 17.74123916402459,
+  "deadline": 757409.120905875,
+  "case": "completion",
+  "players": 2,
+  "profile": "joining",
+  "owner": 0,
+  "rock_owner": 1,
+  "checks": [
+    {
+      "check": "Pickaxe carried by actual input owner only; quotas configured",
+      "quota": 6,
+      "active": 3
+    },
+    {
+      "check": "Interact on intact boulder does not mine",
+      "slot": 0
+    },
+    {
+      "check": "Exactly three owning swings break boulder on every peer",
+      "slot": 0
+    }
+  ],
+  "fixtures": [
+    "Server approach teleports and controller aim for owning input actions",
+    "After native rock Drop only, server settles that free rock away from deposits or on a plate",
+    "No direct Interact/LoadRock/TrySwing/PushTick/round/recovery RPC or plate-state setter"
+  ],
+  "warnings": [
+    "Synthetic owning input does not establish physical keyboard/gamepad or Mac visual/audio acceptance",
+    "Focused mining transaction does not certify continuous maze/chase or results/restart"
+  ],
+  "runtime_source_sha256": "88d507d771edf658d6021b3d2f0a076a61e59fc34caea10d78d527a543b5823c",
+  "adapted_runtime_sha256": "98f85482b3665f5d054d26ee67f906d2b9814e9666a304778abbf121c1ed25cb",
+  "inventory_sha256": "633addf730e17d4437b8b4c1f5f79059cc46426e51e7f001df8335dd718f7d49",
+  "owner_network_evidence": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_DedicatedServer",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        256,
+        257
+      ],
+      "local_player_ids": [],
+      "controllers": []
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        256,
+        257
+      ],
+      "local_player_ids": [
+        256
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        257,
+        256
+      ],
+      "local_player_ids": [
+        257
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "attempt": 1,
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_completion.py\", line 183, in tick\n    holding_replicated(mover,target)\n  File \"/tmp/coop-mining/acceptance_completion.py\", line 96, in holding_replicated\n    assert int(prop(replica,'CarryState'))==1 and carrier and carrier.player_state.player_id==pid\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "cleanup_errors": [],
+  "ending_round": {
+    "index": 1,
+    "phase": 1,
+    "attempt": 1,
+    "ends": 0.0,
+    "row": "2"
+  },
+  "method": "Real owning Enhanced Input actions with disclosed approach/settling fixtures",
+  "full_mission_acceptance_pending": true
+}

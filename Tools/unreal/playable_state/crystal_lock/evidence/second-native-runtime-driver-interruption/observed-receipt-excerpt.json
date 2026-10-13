@@ -1,0 +1,16 @@
+{
+  "evidence_kind": "Selected fields observed in read-only tool output before root retry; not the original raw receipt",
+  "original_raw_receipt_preserved": false,
+  "started_utc": "2026-10-13T05:57:15.267823+00:00",
+  "finished_utc": "2026-10-13T05:57:16.599154+00:00",
+  "status": "failed",
+  "stage": "warmup",
+  "native_test_executed": false,
+  "reported_error": "GameplayStatics.GetGameState could not nativize held World context after StopPIE",
+  "stage_history": [
+    {
+      "stage": "registered_native_tick_gate",
+      "utc": "2026-10-13T05:57:15.280737+00:00"
+    }
+  ]
+}

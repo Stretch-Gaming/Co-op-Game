@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "rendered_pixel_acceptance": false,
+  "packages_saved": [],
+  "profile": "joining",
+  "players": 3,
+  "fixture": "CreatePlayer only for host secondary when profile=host_split; snapshot injects no input/gameplay changes",
+  "owners": [
+    {
+      "owner_id": 298,
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "pawn": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "primary": true,
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_52.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_52.WBP_InteractPrompt_C_0",
+      "hud_local_size": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "ShowSixHUD": true,
+      "DisplayRoundName": "THE CAVE",
+      "DisplayObjective": "Stand together on the start pad.",
+      "DisplayTools": "LAMP OFF  FLARES 3",
+      "DisplayTeam": "P3  ALIVE;P2  ALIVE;P1  ALIVE;",
+      "DisplayedDead": false,
+      "DisplayedFlares": 3
+    },
+    {
+      "owner_id": 299,
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "pawn": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "primary": true,
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_53.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_53.WBP_InteractPrompt_C_0",
+      "hud_local_size": [
+        1383.78369140625,
+        1081.0810546875
+      ],
+      "ShowSixHUD": true,
+      "DisplayRoundName": "THE CAVE",
+      "DisplayObjective": "Stand together on the start pad.",
+      "DisplayTools": "LAMP OFF  FLARES 3",
+      "DisplayTeam": "P3  ALIVE;P2  ALIVE;P1  ALIVE;",
+      "DisplayedDead": false,
+      "DisplayedFlares": 3
+    },
+    {
+      "owner_id": 300,
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+      "pawn": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "primary": true,
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_54.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_54.WBP_InteractPrompt_C_0",
+      "hud_local_size": [
+        1383.78369140625,
+        1081.0810546875
+      ],
+      "ShowSixHUD": true,
+      "DisplayRoundName": "THE CAVE",
+      "DisplayObjective": "Stand together on the start pad.",
+      "DisplayTools": "LAMP OFF  FLARES 3",
+      "DisplayTeam": "P2  ALIVE;P3  ALIVE;P1  ALIVE;",
+      "DisplayedDead": false,
+      "DisplayedFlares": 3
+    }
+  ],
+  "worlds": [
+    "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+    "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+    "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+    "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test"
+  ],
+  "native_log_scan_pending": true,
+  "current_widget_sha256": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+    "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7",
+    "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966"
+  }
+}

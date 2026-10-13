@@ -1,0 +1,8 @@
+{
+  "classification": "interrupted by parent runtime-driver StopPIE before callback completion; not Lit/input failure",
+  "native_test_executed": false,
+  "reported_cause": "Driver treated starting report passed=False as terminal; fixed to wait for terminal JSON",
+  "registered_utc": "2026-10-13T05:57:15.280737+00:00",
+  "StopPIE_dispatched_utc": "2026-10-13 05:57:15.870",
+  "original_report_preserved": false
+}

@@ -1,0 +1,10 @@
+{
+  "classification": "editor stalled before readiness/test callback",
+  "native_gameplay_qualified": false,
+  "utc": "2026-10-13T08:19:40.638968+00:00",
+  "editor_pid": 40361,
+  "driver_pid": 47979,
+  "sample": "Metal query wait during console autocomplete native popup resize",
+  "log_path": "/Volumes/CoopBuild/Logs/CoopGameEditor/CoopGame_2.log",
+  "prior_gameplay_failure_preserved": true
+}

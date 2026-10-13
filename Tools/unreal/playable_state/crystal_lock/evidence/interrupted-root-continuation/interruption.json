@@ -1,0 +1,6 @@
+{
+  "classification": "interrupted; not a completed or qualifying import",
+  "reported_cause": "Host daemon restart killed Unreal before owned asset saves",
+  "saved_packages": [],
+  "original_receipt_preserved": true
+}

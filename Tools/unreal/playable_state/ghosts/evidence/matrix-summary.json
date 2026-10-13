@@ -1,0 +1,130 @@
+{
+  "cases": [
+    {
+      "players": 2,
+      "profile": "joining",
+      "case": "retarget_death",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "case": "all_dead",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "case": "flare_all_safe",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "case": "destroyed_target",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "case": "flare_backoff",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "case": "retarget_death",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "case": "all_dead",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "case": "flare_all_safe",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "case": "destroyed_target",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "case": "flare_backoff",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "case": "retarget_death",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "case": "all_dead",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "case": "flare_all_safe",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "case": "destroyed_target",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "case": "flare_backoff",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "case": "retarget_death",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "case": "flare_all_safe",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "case": "flare_backoff",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

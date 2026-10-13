@@ -1,0 +1,22 @@
+{
+  "source_receipt": {
+    "path": "/tmp/coop-runtime/crystal-matrix-summary.json",
+    "sha256": "bd95008c4e3e468330e4aa7f809e4febdfc234289227e2fadc464e37c970485a"
+  },
+  "runs": [
+    {
+      "profile": "joining",
+      "players": 2,
+      "passed": true,
+      "native_log_errors": [],
+      "checks": 4
+    },
+    {
+      "profile": "host_split",
+      "players": 4,
+      "passed": true,
+      "native_log_errors": [],
+      "checks": 16
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "compiled": [
+    "/Game/Core/BP_CoopCharacter",
+    "/Game/Core/BP_CoopGameMode",
+    "/Game/Player/Ghosts/BP_Ghost",
+    "/Game/Puzzles/BP_CrystalLock",
+    "/Game/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD"
+  ],
+  "saved": [
+    "/Game/Core/BP_CoopCharacter",
+    "/Game/Core/BP_CoopGameMode",
+    "/Game/Player/Ghosts/BP_Ghost",
+    "/Game/Puzzles/BP_CrystalLock",
+    "/Game/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD"
+  ],
+  "protected_package_hash_count": 55,
+  "unowned_packages_saved": false
+}

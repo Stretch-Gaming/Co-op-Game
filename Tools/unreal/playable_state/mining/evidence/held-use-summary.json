@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "native_saved": true,
+  "stage": "complete",
+  "saved": [
+    "/Game/Core/BP_CoopCharacter"
+  ],
+  "original_nodes_preserved": 51,
+  "other_graphs_preserved": 69,
+  "new_pure_nodes": 4,
+  "new_exec_edges": 0,
+  "new_variables": 0,
+  "new_functions": 0,
+  "restored_baseline_target_edges": 4,
+  "protected_fingerprints_preserved": true,
+  "saved_asset_sha256": "791c1d401ce19112b031ec291d25eb22213912c9e2fe531e490411165394498f",
+  "runtime_pending": true,
+  "scope": "Authoritative carried item only bypasses final line-of-sight; original validity/state/distance/interface gates preserved",
+  "historical_stage_notes": [
+    "v2 native contextual factory removed four original Target fan-outs; preservation audit prevented save",
+    "bounded continuation restores exactly those four baseline edges, proves all originals before/after compile and saves only Character"
+  ]
+}

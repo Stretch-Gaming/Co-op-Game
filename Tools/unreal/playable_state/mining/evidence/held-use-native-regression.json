@@ -1,0 +1,2861 @@
+[
+  {
+    "players": 2,
+    "profile": "joining",
+    "owner": 0,
+    "case": "swing_probe",
+    "trigger": {
+      "phase": "drop",
+      "at": 10.38990644365549,
+      "deadline": 764216.177230041,
+      "checks": [
+        "All-owner start pad waits for final owner and starts R1 with correct scaling row via owning movement",
+        "Natural R1 start publishes mining/cart/plate instruction to all GameStates and every owning HUD",
+        "Selected owner picks up near pickaxe while looking away; swing context belongs only to that owner",
+        "Owning Drop event releases pickaxe and removes only its swing mapping context"
+      ],
+      "mode": "trigger_and_injected_pickup",
+      "players": 2,
+      "owner": 0,
+      "phase_generation": 6,
+      "input_pulses": [
+        {
+          "phase": "pickup_ready",
+          "generation": 4,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Pickup.IA_HZ_Pickup",
+          "delay": 0.35,
+          "duration": 0.3,
+          "pressed_at": 9.300660859793425,
+          "released_at": 9.60691710934043,
+          "positive_callbacks": 11,
+          "pressed_wall_at": 764102.416869125,
+          "released_wall_at": 764102.724570916,
+          "phase_cleanup_zero_at": 9.662564653903246
+        },
+        {
+          "phase": "drop",
+          "generation": 6,
+          "owner_index": 0,
+          "action": "IA_Drop",
+          "delay": 0,
+          "duration": 0.25,
+          "pressed_at": 10.41699019446969,
+          "released_at": 10.670919444411993,
+          "positive_callbacks": 9,
+          "pressed_wall_at": 764103.5337265,
+          "released_wall_at": 764103.786192291
+        }
+      ],
+      "fixtures": [
+        "server places all living pawns before start pad; owning movement enters trigger",
+        "server places selected owner within near-pickup distance, looking away"
+      ],
+      "owner_network_evidence": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_DedicatedServer",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            296,
+            297
+          ],
+          "local_player_ids": [],
+          "controllers": []
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            296,
+            297
+          ],
+          "local_player_ids": [
+            296
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            297,
+            296
+          ],
+          "local_player_ids": [
+            297
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ],
+      "source_runtime_sha256": "88d507d771edf658d6021b3d2f0a076a61e59fc34caea10d78d527a543b5823c",
+      "objective_wall_at": 764102.040707208,
+      "objective_first": {
+        "game_states": [
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          },
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          },
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          }
+        ],
+        "owning_huds": [
+          {
+            "player_id": 296,
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_49.WBP_HCA3RoundHUD_C_0",
+            "owned_by_controller": true,
+            "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+          },
+          {
+            "player_id": 297,
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_50.WBP_HCA3RoundHUD_C_0",
+            "owned_by_controller": true,
+            "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+          }
+        ]
+      },
+      "objective_latest": {
+        "game_states": [
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          },
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          },
+          {
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+          }
+        ],
+        "owning_huds": [
+          {
+            "player_id": 296,
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_49.WBP_HCA3RoundHUD_C_0",
+            "owned_by_controller": true,
+            "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+          },
+          {
+            "player_id": 297,
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_50.WBP_HCA3RoundHUD_C_0",
+            "owned_by_controller": true,
+            "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+          }
+        ]
+      },
+      "replicas": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+          "location": "<Struct 'Vector' (0x46195cc40) {x: -702.828954, y: 982.823543, z: 164.093983}>"
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+          "location": "<Struct 'Vector' (0x46195cc40) {x: -702.956510, y: 982.639781, z: 175.431261}>"
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+          "location": "<Struct 'Vector' (0x46195cc40) {x: -701.100258, y: 974.435861, z: 202.209919}>"
+        }
+      ],
+      "swing_context_ownership": [
+        true,
+        false
+      ],
+      "passed": true,
+      "error": null,
+      "cleanup_errors": [],
+      "method": "Owning Enhanced Input action injection",
+      "full_mission_acceptance_pending": true
+    },
+    "completion": {
+      "phase": "swing",
+      "at": 19.57794262468815,
+      "deadline": 764225.253407,
+      "case": "swing_probe",
+      "players": 2,
+      "profile": "joining",
+      "owner": 0,
+      "rock_owner": 1,
+      "checks": [
+        {
+          "check": "Pickaxe carried by actual input owner only; quotas configured",
+          "quota": 6,
+          "active": 3
+        },
+        {
+          "check": "Interact on intact boulder does not mine",
+          "slot": 0
+        },
+        {
+          "check": "Exactly three owning swings break boulder on every peer",
+          "slot": 0
+        },
+        {
+          "check": "Interact on intact boulder does not mine",
+          "slot": 1
+        },
+        {
+          "check": "Focused two-deposit probe: first boulder broken, no rock interactions, one owning swing hits second boulder"
+        }
+      ],
+      "fixtures": [
+        "Server approach teleports and controller aim for owning input actions",
+        "After native rock Drop only, server settles that free rock away from deposits or on a plate",
+        "No direct Interact/LoadRock/TrySwing/PushTick/round/recovery RPC or plate-state setter",
+        "Focused diagnostic skips all rock pickup/loading; rover remains parked"
+      ],
+      "warnings": [
+        "Synthetic owning input does not establish physical keyboard/gamepad or Mac visual/audio acceptance",
+        "Focused mining transaction does not certify continuous maze/chase or results/restart"
+      ],
+      "runtime_source_sha256": "88d507d771edf658d6021b3d2f0a076a61e59fc34caea10d78d527a543b5823c",
+      "test_environment": "Wall readiness budget 60s for observed host stalls; unchanged 3s server deadline; r.ScreenPercentage25; no pixel/performance qualification",
+      "adapted_runtime_sha256": "98f85482b3665f5d054d26ee67f906d2b9814e9666a304778abbf121c1ed25cb",
+      "inventory_sha256": "633addf730e17d4437b8b4c1f5f79059cc46426e51e7f001df8335dd718f7d49",
+      "owner_network_evidence": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_DedicatedServer",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            296,
+            297
+          ],
+          "local_player_ids": [],
+          "controllers": []
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            296,
+            297
+          ],
+          "local_player_ids": [
+            296
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            296,
+            297
+          ],
+          "visible_player_ids": [
+            297,
+            296
+          ],
+          "local_player_ids": [
+            297
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ],
+      "attempt": 1,
+      "replication_budget": {
+        "server_seconds": 3.0,
+        "wall_seconds": 60.0
+      },
+      "replication_observations": [
+        {
+          "phase": "pickaxe_pickup",
+          "label": "holding:BP_MinePickaxe_C_0",
+          "at": 12.784478608518839,
+          "wall_at": 764105.901450416,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "attached_to_carrier": true
+                }
+              ]
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "attached_to_carrier": true
+                }
+              ]
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 0.00010229204781353474
+        },
+        {
+          "phase": "held_ready",
+          "label": "Cart:RocksNeeded:6",
+          "at": 13.406479358673096,
+          "wall_at": 764106.526475416,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+              ],
+              "field": "RocksNeeded",
+              "observed": [
+                6
+              ],
+              "expected": 6
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 4.0839659050107e-06
+        },
+        {
+          "phase": "held_ready",
+          "label": "holding:BP_MinePickaxe_C_0",
+          "at": 13.406479358673096,
+          "wall_at": 764106.526705916,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "attached_to_carrier": true
+                }
+              ]
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                  "attached_to_carrier": true
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "server_target": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "expected_player_id": 296,
+              "owner_pawn_count": 1,
+              "owner_component_carried_item": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "candidates": [
+                {
+                  "actor": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                  "carry_state": 1,
+                  "carrier": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "carrier_player_id": 296,
+                  "attach_parent": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                  "attached_to_carrier": true
+                }
+              ]
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 3.0419323593378067e-06
+        },
+        {
+          "phase": "swing",
+          "label": "Deposit:0:Hits:1",
+          "at": 15.757609654217958,
+          "wall_at": 764109.036147833,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 1.1999974958598614e-05
+        },
+        {
+          "phase": "swing",
+          "label": "Deposit:0:Hits:2",
+          "at": 17.148781333118677,
+          "wall_at": 764110.293788041,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                2
+              ],
+              "expected": 2
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 3.2499665394425392e-06
+        },
+        {
+          "phase": "swing",
+          "label": "Deposit:0:Hits:3",
+          "at": 18.473143618553877,
+          "wall_at": 764111.617804291,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Hits",
+              "observed": [
+                3
+              ],
+              "expected": 3
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 6.500049494206905e-06
+        },
+        {
+          "phase": "swing",
+          "label": "Deposit:0:Broken:True",
+          "at": 18.473143618553877,
+          "wall_at": 764111.617896666,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+              ],
+              "field": "Broken",
+              "observed": [
+                true
+              ],
+              "expected": true
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 2.7919886633753777e-06
+        },
+        {
+          "phase": "swing",
+          "label": "Deposit:1:Hits:1",
+          "at": 20.65549970790744,
+          "wall_at": 764113.78689025,
+          "first": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            }
+          ],
+          "latest": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "matches": [
+                "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+              ],
+              "field": "Hits",
+              "observed": [
+                1
+              ],
+              "expected": 1
+            }
+          ],
+          "polls": 1,
+          "converged": true,
+          "server_elapsed": 0.0,
+          "wall_elapsed": 4.582921974360943e-06
+        }
+      ],
+      "phase_generation": 8,
+      "input_pulses": [
+        {
+          "phase": "pickaxe_pickup",
+          "generation": 1,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Pickup.IA_HZ_Pickup",
+          "delay": 0.5,
+          "duration": 0.25,
+          "pressed_at": 12.463128857314587,
+          "released_at": 12.73093844205141,
+          "positive_callbacks": 10,
+          "pressed_wall_at": 764105.579108208,
+          "released_wall_at": 764105.844444875,
+          "phase_cleanup_zero_at": 12.784478608518839
+        },
+        {
+          "phase": "interact_no_hit",
+          "generation": 3,
+          "owner_index": 0,
+          "action": "IA_Interact",
+          "delay": 0.5,
+          "duration": 0.2,
+          "pressed_at": 13.908331647515297,
+          "released_at": 14.112335857003927,
+          "positive_callbacks": 7,
+          "pressed_wall_at": 764107.024017041,
+          "released_wall_at": 764107.231714791,
+          "phase_cleanup_zero_at": 14.426733814179897
+        },
+        {
+          "phase": "swing",
+          "generation": 4,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+          "delay": 0.3,
+          "duration": 0.18,
+          "pressed_at": 14.742000732570887,
+          "released_at": 14.941900316625834,
+          "positive_callbacks": 7,
+          "pressed_wall_at": 764107.854907458,
+          "released_wall_at": 764108.056549458,
+          "phase_cleanup_zero_at": 15.757609654217958
+        },
+        {
+          "phase": "swing",
+          "generation": 5,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+          "delay": 0.3,
+          "duration": 0.18,
+          "pressed_at": 16.238679755479097,
+          "released_at": 16.446981836110353,
+          "positive_callbacks": 1,
+          "pressed_wall_at": 764109.550938875,
+          "released_wall_at": 764109.694497291,
+          "phase_cleanup_zero_at": 17.148781333118677
+        },
+        {
+          "phase": "swing",
+          "generation": 6,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+          "delay": 0.3,
+          "duration": 0.18,
+          "pressed_at": 17.640546325594187,
+          "released_at": 17.864298168569803,
+          "positive_callbacks": 2,
+          "pressed_wall_at": 764110.806778041,
+          "released_wall_at": 764111.057657875,
+          "phase_cleanup_zero_at": 18.473143618553877
+        },
+        {
+          "phase": "interact_no_hit",
+          "generation": 7,
+          "owner_index": 0,
+          "action": "IA_Interact",
+          "delay": 0.5,
+          "duration": 0.2,
+          "pressed_at": 18.99620670452714,
+          "released_at": 19.222678620368242,
+          "positive_callbacks": 6,
+          "pressed_wall_at": 764112.141166708,
+          "released_wall_at": 764112.36299825,
+          "phase_cleanup_zero_at": 19.57794262468815
+        },
+        {
+          "phase": "swing",
+          "generation": 8,
+          "owner_index": 0,
+          "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+          "delay": 0.3,
+          "duration": 0.18,
+          "pressed_at": 19.900466080754995,
+          "released_at": 20.097762621939182,
+          "positive_callbacks": 5,
+          "pressed_wall_at": 764113.034914,
+          "released_wall_at": 764113.23452
+        }
+      ],
+      "swing_diagnostics": [
+        {
+          "stage": "second_slot_first_positive_injection",
+          "at": 19.900466080754995,
+          "goal": 1,
+          "pulse_generation": 8,
+          "target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "label": "Six_HZ_FR_Boulder_1"
+          },
+          "target_location": [
+            400.0,
+            -550.0,
+            0.0
+          ],
+          "slot": 1,
+          "target_state": {
+            "Active": true,
+            "Broken": false,
+            "Hits": 0,
+            "HitsNeeded": 3
+          },
+          "server_pawn": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "server_position": [
+            170.0,
+            -550.0,
+            100.0
+          ],
+          "server_eye": [
+            170.0,
+            -550.0,
+            164.0
+          ],
+          "server_eye_rotation": {
+            "pitch": 336.6485595703125,
+            "yaw": 0.0,
+            "roll": 0.0
+          },
+          "server_control_rotation": {
+            "pitch": 336.6485595703125,
+            "yaw": 0.0,
+            "roll": 0.0
+          },
+          "trace": {
+            "start": [
+              211.31408998498068,
+              -550.0,
+              146.1633532099523
+            ],
+            "end": [
+              472.96999322319164,
+              -550.0,
+              33.19792353965016
+            ],
+            "radius": 25.0,
+            "channel": "TraceTypeQuery1",
+            "trace_complex": false,
+            "ignore_self": "pickaxe",
+            "actors_to_ignore": [],
+            "hit_actor": {
+              "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+              "class": "BP_MineDeposit_C",
+              "label": "Six_HZ_FR_Boulder_1"
+            },
+            "hit_component": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2.Boulder",
+            "contact": {
+              "blocking_hit": true,
+              "initial_overlap": false,
+              "time": 0.39049655199050903,
+              "distance": 111.29151916503906,
+              "location": [
+                313.48981800746435,
+                -550.0,
+                102.05074242957298
+              ],
+              "impact_point": [
+                333.7340085887914,
+                -549.293056111495,
+                87.39903259277344
+              ],
+              "normal": [
+                -0.8097678071947616,
+                -0.028277740591639646,
+                0.5860686545260881
+              ],
+              "impact_normal": [
+                -0.9993908503478082,
+                -0.034899461084826555,
+                0.0
+              ],
+              "trace_start": [
+                211.31408998498068,
+                -550.0,
+                146.1633532099523
+              ],
+              "trace_end": [
+                472.96999322319164,
+                -550.0,
+                33.19792353965016
+              ]
+            }
+          },
+          "owning_position": [
+            170.0,
+            -550.0,
+            100.0
+          ],
+          "owning_eye": [
+            170.0,
+            -550.0,
+            164.0
+          ],
+          "owning_eye_rotation": {
+            "pitch": -23.349741606891712,
+            "yaw": 0.00014486420599128593,
+            "roll": 0.0
+          },
+          "owning_control_rotation": {
+            "pitch": -23.349741606891712,
+            "yaw": 0.00014486420599128593,
+            "roll": 0.0
+          },
+          "camera_location": [
+            195.76227595827518,
+            -549.9999348637599,
+            168.1689354290611
+          ],
+          "camera_rotation": {
+            "pitch": -23.349741606891726,
+            "yaw": 0.000144864205991286,
+            "roll": -0.0
+          },
+          "aimed_point": [
+            400.0,
+            -550.0,
+            80.0
+          ],
+          "owning_focus": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "label": "Six_HZ_FR_Boulder_1"
+          },
+          "server_focus": null,
+          "pickaxe": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+            "class": "BP_MinePickaxe_C",
+            "label": "Six_HZ_FR_Pickaxe"
+          },
+          "pickaxe_state": {
+            "CarryState": 1,
+            "LastSwingTime": 17.74998253956437,
+            "LocalSwingTime": 0.0
+          },
+          "pickaxe_carrier": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "pickaxe_attach_parent": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "owning_carried_item": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+            "class": "BP_MinePickaxe_C",
+            "label": "Six_HZ_FR_Pickaxe"
+          },
+          "owning_pickaxe_state": {
+            "CarryState": 1,
+            "LastSwingTime": 17.74998253956437,
+            "LocalSwingTime": 17.77071564644575
+          },
+          "swing_context_ownership": [
+            true,
+            false
+          ],
+          "input_pulses": [
+            {
+              "phase": "swing",
+              "generation": 8,
+              "owner_index": 0,
+              "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+              "delay": 0.3,
+              "duration": 0.18,
+              "pressed_at": 19.900466080754995,
+              "released_at": null,
+              "positive_callbacks": 1,
+              "pressed_wall_at": 764113.034914
+            }
+          ],
+          "attached_pickaxes": [
+            {
+              "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "class": "BP_MinePickaxe_C",
+              "label": "Six_HZ_FR_Pickaxe"
+            }
+          ],
+          "character_use_validation": {
+            "pickaxe_location": [
+              183.45811221119334,
+              -528.8668735233962,
+              108.0939704856001
+            ],
+            "pawn_to_pickaxe_distance": 26.329492535690278,
+            "interaction_blocked": false,
+            "downed_tag": false,
+            "can_interact_derived_from_saved_graph": true,
+            "use_allowed_return": true,
+            "pickaxe_can_interact_return": true,
+            "eye_to_pickaxe_los": {
+              "start": [
+                170.0,
+                -550.0,
+                164.0
+              ],
+              "end": [
+                183.45811221119334,
+                -528.8668735233962,
+                108.0939704856001
+              ],
+              "channel": "TraceTypeQuery1",
+              "trace_complex": false,
+              "ignore_self": "character",
+              "actors_to_ignore": [],
+              "blocking_hit": true,
+              "hit_actor": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_615",
+                "class": "StaticMeshActor",
+                "label": "Cave_procedural_320"
+              },
+              "hit_component": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_615.StaticMeshComponent0",
+              "impact_point": [
+                183.29308882583334,
+                -529.1260079413355,
+                108.77949027527973
+              ]
+            }
+          },
+          "network_ownership": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "bound_controller": null,
+                  "carry_state": 1,
+                  "last_swing_time": 17.74998253956437,
+                  "local_swing_time": 0.0
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "owner_chain": [
+                    {
+                      "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                      "class": "BP_CoopPlayerController_C",
+                      "label": "BP_CoopPlayerController0"
+                    }
+                  ],
+                  "controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "locally_controlled": false,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "bound_controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "carry_state": 1,
+                  "last_swing_time": 17.74998253956437,
+                  "local_swing_time": 17.77071564644575
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "owner_chain": [
+                    {
+                      "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                      "class": "BP_CoopPlayerController_C",
+                      "label": "BP_CoopPlayerController0"
+                    }
+                  ],
+                  "controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "locally_controlled": true,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "bound_controller": null,
+                  "carry_state": 1,
+                  "last_swing_time": 17.74998253956437,
+                  "local_swing_time": 0.0
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "owner_chain": [],
+                  "controller": null,
+                  "locally_controlled": false,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "focused_second_deposit_one_hit_success",
+          "at": 20.65549970790744,
+          "goal": 1,
+          "pulse_generation": 8,
+          "target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "label": "Six_HZ_FR_Boulder_1"
+          },
+          "target_location": [
+            400.0,
+            -550.0,
+            0.0
+          ],
+          "slot": 1,
+          "target_state": {
+            "Active": true,
+            "Broken": false,
+            "Hits": 1,
+            "HitsNeeded": 3
+          },
+          "server_pawn": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "server_position": [
+            170.0,
+            -550.0,
+            100.0
+          ],
+          "server_eye": [
+            170.0,
+            -550.0,
+            164.0
+          ],
+          "server_eye_rotation": {
+            "pitch": 336.6485595703125,
+            "yaw": 0.0,
+            "roll": 0.0
+          },
+          "server_control_rotation": {
+            "pitch": 336.6485595703125,
+            "yaw": 0.0,
+            "roll": 0.0
+          },
+          "trace": {
+            "start": [
+              211.31408998498068,
+              -550.0,
+              146.1633532099523
+            ],
+            "end": [
+              472.96999322319164,
+              -550.0,
+              33.19792353965016
+            ],
+            "radius": 25.0,
+            "channel": "TraceTypeQuery1",
+            "trace_complex": false,
+            "ignore_self": "pickaxe",
+            "actors_to_ignore": [],
+            "hit_actor": {
+              "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+              "class": "BP_MineDeposit_C",
+              "label": "Six_HZ_FR_Boulder_1"
+            },
+            "hit_component": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2.Boulder",
+            "contact": {
+              "blocking_hit": true,
+              "initial_overlap": false,
+              "time": 0.4151986241340637,
+              "distance": 118.33160400390625,
+              "location": [
+                319.95326100604154,
+                -550.0,
+                99.2602622361295
+              ],
+              "impact_point": [
+                337.70993655567815,
+                -549.3799231639346,
+                81.67288208007812
+              ],
+              "normal": [
+                -0.7102670300310242,
+                -0.024803047825261222,
+                0.7034952415400448
+              ],
+              "impact_normal": [
+                -0.9993908503478082,
+                -0.034899461084826555,
+                0.0
+              ],
+              "trace_start": [
+                211.31408998498068,
+                -550.0,
+                146.1633532099523
+              ],
+              "trace_end": [
+                472.96999322319164,
+                -550.0,
+                33.19792353965016
+              ]
+            }
+          },
+          "owning_position": [
+            170.0,
+            -550.0,
+            100.0
+          ],
+          "owning_eye": [
+            170.0,
+            -550.0,
+            164.0
+          ],
+          "owning_eye_rotation": {
+            "pitch": -23.349741606891712,
+            "yaw": 0.00014486420599128593,
+            "roll": 0.0
+          },
+          "owning_control_rotation": {
+            "pitch": -23.349741606891712,
+            "yaw": 0.00014486420599128593,
+            "roll": 0.0
+          },
+          "camera_location": [
+            195.76227595827518,
+            -549.9999348637599,
+            168.1689354290611
+          ],
+          "camera_rotation": {
+            "pitch": -23.349741606891726,
+            "yaw": 0.000144864205991286,
+            "roll": -0.0
+          },
+          "aimed_point": [
+            400.0,
+            -550.0,
+            80.0
+          ],
+          "owning_focus": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "label": "Six_HZ_FR_Boulder_1"
+          },
+          "server_focus": null,
+          "pickaxe": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+            "class": "BP_MinePickaxe_C",
+            "label": "Six_HZ_FR_Pickaxe"
+          },
+          "pickaxe_state": {
+            "CarryState": 1,
+            "LastSwingTime": 19.95663720369339,
+            "LocalSwingTime": 0.0
+          },
+          "pickaxe_carrier": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "pickaxe_attach_parent": {
+            "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+            "class": "BP_CoopCharacter_C",
+            "label": "BP_CoopCharacter0"
+          },
+          "owning_carried_item": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+            "class": "BP_MinePickaxe_C",
+            "label": "Six_HZ_FR_Pickaxe"
+          },
+          "owning_pickaxe_state": {
+            "CarryState": 1,
+            "LastSwingTime": 19.95663720369339,
+            "LocalSwingTime": 19.98302387073636
+          },
+          "swing_context_ownership": [
+            true,
+            false
+          ],
+          "input_pulses": [
+            {
+              "phase": "swing",
+              "generation": 8,
+              "owner_index": 0,
+              "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Swing.IA_HZ_Swing",
+              "delay": 0.3,
+              "duration": 0.18,
+              "pressed_at": 19.900466080754995,
+              "released_at": 20.097762621939182,
+              "positive_callbacks": 5,
+              "pressed_wall_at": 764113.034914,
+              "released_wall_at": 764113.23452
+            }
+          ],
+          "attached_pickaxes": [
+            {
+              "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+              "class": "BP_MinePickaxe_C",
+              "label": "Six_HZ_FR_Pickaxe"
+            }
+          ],
+          "character_use_validation": {
+            "pickaxe_location": [
+              183.45811221119334,
+              -528.8668735233962,
+              108.0939704856001
+            ],
+            "pawn_to_pickaxe_distance": 26.329492535690278,
+            "interaction_blocked": false,
+            "downed_tag": false,
+            "can_interact_derived_from_saved_graph": true,
+            "use_allowed_return": true,
+            "pickaxe_can_interact_return": true,
+            "eye_to_pickaxe_los": {
+              "start": [
+                170.0,
+                -550.0,
+                164.0
+              ],
+              "end": [
+                183.45811221119334,
+                -528.8668735233962,
+                108.0939704856001
+              ],
+              "channel": "TraceTypeQuery1",
+              "trace_complex": false,
+              "ignore_self": "character",
+              "actors_to_ignore": [],
+              "blocking_hit": true,
+              "hit_actor": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_615",
+                "class": "StaticMeshActor",
+                "label": "Cave_procedural_320"
+              },
+              "hit_component": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_615.StaticMeshComponent0",
+              "impact_point": [
+                183.29308882583334,
+                -529.1260079413355,
+                108.77949027527973
+              ]
+            }
+          },
+          "network_ownership": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "bound_controller": null,
+                  "carry_state": 1,
+                  "last_swing_time": 19.95663720369339,
+                  "local_swing_time": 0.0
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "owner_chain": [
+                    {
+                      "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                      "class": "BP_CoopPlayerController_C",
+                      "label": "BP_CoopPlayerController0"
+                    }
+                  ],
+                  "controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "locally_controlled": false,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "bound_controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "carry_state": 1,
+                  "last_swing_time": 19.95663720369339,
+                  "local_swing_time": 19.98302387073636
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter0"
+                  },
+                  "owner_chain": [
+                    {
+                      "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                      "class": "BP_CoopPlayerController_C",
+                      "label": "BP_CoopPlayerController0"
+                    }
+                  ],
+                  "controller": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+                    "class": "BP_CoopPlayerController_C",
+                    "label": "BP_CoopPlayerController0"
+                  },
+                  "locally_controlled": true,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "pickaxes": [
+                {
+                  "actor": {
+                    "path": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                    "class": "BP_MinePickaxe_C",
+                    "label": "Six_HZ_FR_Pickaxe"
+                  },
+                  "net_owner": null,
+                  "owner_chain": [],
+                  "carrier": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "attach_parent": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "bound_controller": null,
+                  "carry_state": 1,
+                  "last_swing_time": 19.95663720369339,
+                  "local_swing_time": 0.0
+                }
+              ],
+              "carrier_pawns": [
+                {
+                  "actor": {
+                    "path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                    "class": "BP_CoopCharacter_C",
+                    "label": "BP_CoopCharacter1"
+                  },
+                  "owner_chain": [],
+                  "controller": null,
+                  "locally_controlled": false,
+                  "taken_protected": false,
+                  "interaction_blocked": false,
+                  "dead": false,
+                  "active_target": null,
+                  "active_use": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pawn_observations": [
+        {
+          "at": 20.352666329592466,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.39330653846264,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.4280007481575,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.51126116514206,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.544400583952665,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.57941349968314,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.616301376372576,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "at": 20.65549970790744,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  183.45811221119334,
+                  -528.8668735233962,
+                  108.0939704856001
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  170.0,
+                  -550.0,
+                  100.0
+                ]
+              },
+              "owning_position": [
+                170.0,
+                -550.0,
+                100.0
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              400.0,
+              -550.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "first_health_loss": {
+        "before": {
+          "at": 15.357609648257494,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -680.0,
+                  850.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  -666.5418877888067,
+                  871.1331264766038,
+                  100.24396676627026
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -680.0,
+                  850.0,
+                  92.14999628067017
+                ]
+              },
+              "owning_position": [
+                -680.0,
+                850.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 100.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              -450.0,
+              850.0,
+              0.0
+            ]
+          }
+        },
+        "after": {
+          "at": 15.757609654217958,
+          "phase": "swing",
+          "owners": [
+            {
+              "index": 0,
+              "player_id": 296,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -680.0,
+                  850.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": {
+                "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+                "class": "BP_MinePickaxe_C",
+                "location": [
+                  -666.5418877888067,
+                  871.1331264766038,
+                  100.24396676627026
+                ]
+              },
+              "carried_carrier": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -680.0,
+                  850.0,
+                  92.14999628067017
+                ]
+              },
+              "owning_position": [
+                -680.0,
+                850.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "index": 1,
+              "player_id": 297,
+              "pawn": {
+                "path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1",
+                "class": "BP_CoopCharacter_C",
+                "location": [
+                  -850.0,
+                  -210.0,
+                  92.14999628067017
+                ]
+              },
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+              "health": 80.0,
+              "max_health": 100.0,
+              "dead": false,
+              "is_dead_query": false,
+              "carried_item": null,
+              "carried_carrier": null,
+              "owning_position": [
+                -850.0,
+                -210.0,
+                92.14999628067017
+              ]
+            }
+          ],
+          "last_target": {
+            "path": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3",
+            "class": "BP_MineDeposit_C",
+            "location": [
+              -450.0,
+              850.0,
+              0.0
+            ]
+          }
+        },
+        "changed_player_ids": [
+          297
+        ]
+      },
+      "passed": true,
+      "error": null,
+      "cleanup_errors": [],
+      "ending_round": {
+        "index": 1,
+        "phase": 1,
+        "attempt": 1,
+        "ends": 0.0,
+        "row": "2"
+      },
+      "method": "Real owning Enhanced Input actions with disclosed approach/settling fixtures",
+      "full_mission_acceptance_pending": true
+    },
+    "passed": true,
+    "native_log_errors": []
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "native_editor_execution": false,
+  "python_version_target": "3.11",
+  "python_syntax": "pass",
+  "path_adapted_snapshots_parsed": [
+    "inspect_crystal_lock.py",
+    "import_crystal_lock_fresh.py",
+    "test_crystal_lock_lit.py"
+  ],
+  "fresh_import_getter_dsl_three_exact_corrections": "pass",
+  "raw_source_manifest_validation": "pass",
+  "native_import_runtime": "pending"
+}

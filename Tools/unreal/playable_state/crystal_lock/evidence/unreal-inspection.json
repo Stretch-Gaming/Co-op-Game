@@ -1,0 +1,329 @@
+{
+  "project": "/Volumes/CoopBuild/Repositories/Co-op-Game-primary",
+  "editor_world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test",
+  "actors": [
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+      "label": "Six_headlamp_locks_0",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": false,
+      "Lit": false,
+      "Enabled": false,
+      "LockSlot": 0,
+      "tags": [
+        "SixRoundHC",
+        "HeadlampLock"
+      ],
+      "actor_location": [
+        -1275.0,
+        9250.0,
+        50.0
+      ],
+      "actor_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "actor_rotation": "<Struct 'Rotator' (0x439073f80) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "root_mesh": "/Engine/BasicShapes/Sphere.Sphere",
+      "mesh_local_bounds": {
+        "origin": [
+          0.0,
+          3.814697265625e-06,
+          0.0
+        ],
+        "extent": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "dimensions": [
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "world_origin": [
+        -1275.0,
+        9250.000003051759,
+        50.0
+      ],
+      "world_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root_relative_location": [
+        -1275.0,
+        9250.0,
+        50.0
+      ],
+      "root_relative_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "root_visible": true,
+      "root_collision_profile": "BlockAllDynamic",
+      "root_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "root_materials": [
+        "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+      ],
+      "root_overrides": []
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+      "label": "Six_headlamp_locks_1",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": false,
+      "Lit": false,
+      "Enabled": false,
+      "LockSlot": 1,
+      "tags": [
+        "SixRoundHC",
+        "HeadlampLock"
+      ],
+      "actor_location": [
+        925.0,
+        9250.0,
+        50.0
+      ],
+      "actor_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "actor_rotation": "<Struct 'Rotator' (0x439073ee0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "root_mesh": "/Engine/BasicShapes/Sphere.Sphere",
+      "mesh_local_bounds": {
+        "origin": [
+          0.0,
+          3.814697265625e-06,
+          0.0
+        ],
+        "extent": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "dimensions": [
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "world_origin": [
+        925.0,
+        9250.000003051759,
+        50.0
+      ],
+      "world_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root_relative_location": [
+        925.0,
+        9250.0,
+        50.0
+      ],
+      "root_relative_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "root_visible": true,
+      "root_collision_profile": "BlockAllDynamic",
+      "root_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "root_materials": [
+        "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+      ],
+      "root_overrides": []
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+      "label": "Six_braziers_0",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": true,
+      "Lit": false,
+      "Enabled": false,
+      "LockSlot": 0,
+      "tags": [
+        "SixRoundHC",
+        "FlareLock"
+      ],
+      "actor_location": [
+        -725.0,
+        8750.0,
+        -300.0
+      ],
+      "actor_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "actor_rotation": "<Struct 'Rotator' (0x439073fd0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "root_mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "mesh_local_bounds": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "extent": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "dimensions": [
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "world_origin": [
+        -725.0,
+        8750.0,
+        -300.0
+      ],
+      "world_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root_relative_location": [
+        -725.0,
+        8750.0,
+        -300.0
+      ],
+      "root_relative_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "root_visible": true,
+      "root_collision_profile": "BlockAllDynamic",
+      "root_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "root_materials": [
+        "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+      ],
+      "root_overrides": []
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+      "label": "Six_braziers_1",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": true,
+      "Lit": false,
+      "Enabled": false,
+      "LockSlot": 1,
+      "tags": [
+        "SixRoundHC",
+        "FlareLock"
+      ],
+      "actor_location": [
+        375.0,
+        8750.0,
+        -300.0
+      ],
+      "actor_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "actor_rotation": "<Struct 'Rotator' (0x439073f30) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "root_mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "mesh_local_bounds": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "extent": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "dimensions": [
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "world_origin": [
+        375.0,
+        8750.0,
+        -300.0
+      ],
+      "world_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root_relative_location": [
+        375.0,
+        8750.0,
+        -300.0
+      ],
+      "root_relative_scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "root_visible": true,
+      "root_collision_profile": "BlockAllDynamic",
+      "root_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "root_materials": [
+        "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+      ],
+      "root_overrides": []
+    }
+  ],
+  "blueprint_components": [
+    {
+      "variable": "None",
+      "object": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+      "class": "BP_CrystalLock_C",
+      "root_actor": true
+    },
+    {
+      "variable": "StaticMeshComponent",
+      "object": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C:StaticMeshComponent0",
+      "class": "StaticMeshComponent",
+      "root_actor": false
+    }
+  ],
+  "graphs": {
+    "UserConstructionScript": "(fn ConstructionScript ())\n",
+    "OnRep_Lit": "(fn OnRep_Lit ()\n  (CallFunction|ApplyLock))\n",
+    "OnRep_Enabled": "(fn OnRep_Enabled ()\n  (CallFunction|ApplyLock))\n",
+    "RefreshLock": "(fn RefreshLock ()\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (|SetwithNotifyEnabled (< (Variables|Default|GetLockSlot) (select (Variables|Default|GetBrazier) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"4\") 2 1) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"2\") 1 2))))\n    (Variables|Default|SetSourceCount 0)\n    (for _array_element (Variables|Default|GetLightSources)\n      (Utilities|IsValid _array_element\n        (:\"Is Valid\"\n          (if (Variables|Default|GetBrazier)\n            (bind _asbp_flare (Utilities|Casting|CastToBP_Flare _array_element))\n            (bind _active (Components|Activation|IsActive _asbp_flare))\n            (if _active\n              (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1)))\n            (else\n              (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _array_element \"/Game/Hazards/AC_Health.AC_Health_C\")))\n              (bind _dead (Class|ACHealth|IsDead _asac_health))\n              (if (not _dead)\n                (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1))))))))\n    (|SetwithNotifyLit (and (Variables|Default|GetEnabled) (> (Variables|Default|GetSourceCount) 0)))\n    (CallFunction|ApplyLock)))\n",
+    "BeginLock": "(fn BeginLock ()\n  (CallFunction|ApplyLock)\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"RefreshLock\" 0.1 true)))\n",
+    "ApplyLock": "(fn ApplyLock ()\n  (Rendering|SetActorHiddenInGame (not (Variables|Default|GetEnabled)))\n  (Collision|SetActorEnableCollision (Variables|Default|GetEnabled))\n  (Rendering|SetRenderCustomDepth (Variables|StaticMeshActor|GetStaticMeshComponent) (Variables|Default|GetLit)))\n",
+    "BeginLight": "(fn BeginLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|IsValid Source\n      (:\"Is Valid\"\n        (if (Variables|Default|GetBrazier)\n          (bind _asbp_flare (Utilities|Casting|CastToBP_Flare Source))\n          (bind _active (Components|Activation|IsActive _asbp_flare))\n          (if _active\n            (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))\n          (else\n            (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Source))\n            (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _asbp_coop_character \"/Game/Hazards/AC_Health.AC_Health_C\")))\n            (bind _dead (Class|ACHealth|IsDead _asac_health))\n            (if (not _dead)\n              (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))))))))\n",
+    "EndLight": "(fn EndLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|RemoveItem (Variables|Default|GetLightSources) Source)))\n",
+    "ResetLock": "(fn ResetLock (Index Attempt)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|Clear (Variables|Default|GetLightSources))\n    (|SetwithNotifyLit false)\n    (CallFunction|ApplyLock)))\n",
+    "EventGraph": "(event EventBeginPlay\n  (CallFunction|BeginLock))\n\n(event EventLightBegin (Source)\n  (CallFunction|BeginLight Source))\n\n(event EventLightEnd (Source)\n  (CallFunction|EndLight Source))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ResetLock Index Attempt))\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+  },
+  "apply_graph_sha256": "bd86f80b748639d3613001df7b10ae508da6eb24fc0c4911cca92fd84a40cf42",
+  "presentation_node_types": {
+    "CreateDynamicMaterialInstance": [
+      "Rendering|Material|CreateDynamicMaterialInstance",
+      "Rendering|Material|CreateDynamicMaterialInstance",
+      "Rendering|Components|Decal|CreateDynamicMaterialInstance"
+    ],
+    "SetScalarParameterValue": [
+      "Rendering|Material|SetScalarParameterValueonMaterials",
+      "Rendering|Material|SetScalarParameterValue",
+      "Rendering|Material|SetScalarParameterValuebyInfo",
+      "Rendering|Material|SetScalarParameterValue"
+    ],
+    "SetVisibility": [
+      "Rendering|SetVisibility",
+      "Sequencer|Section|SetVisibility",
+      "Class|SkinnedMeshComponent|SetVisibilityBasedAnimTickOption",
+      "Widget|SetVisibility",
+      "Class|Widget|SetVisibility"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CoopGame Preview [NetMode: Server 0]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w54",
+    "path": "/tmp/coop-runtime/fixed-hud-host-four-dark-0.png",
+    "sha256": "ba85a601e307825ceec898641158d21bd9a096349c054030a9df67009d2b3b54",
+    "bytes": 2539384,
+    "native_slate_window_capture": true
+  },
+  {
+    "title": "CoopGame Preview [NetMode: Client 1]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w55",
+    "path": "/tmp/coop-runtime/fixed-hud-host-four-dark-1.png",
+    "sha256": "428c629dd5dccedfc708c239f2f11c52f70f6e0e7dd4561dcfa9a59cab4d85b8",
+    "bytes": 441596,
+    "native_slate_window_capture": true
+  },
+  {
+    "title": "CoopGame Preview [NetMode: Client 2]  (64-bit/Mac Metal SM6)",
+    "window_ref": "w56",
+    "path": "/tmp/coop-runtime/fixed-hud-host-four-dark-2.png",
+    "sha256": "8fdb3ecb1c9cf3a4d5baba6a7261845cc4bbb36467cd7aa85c2c18551478833e",
+    "bytes": 451760,
+    "native_slate_window_capture": true
+  }
+]

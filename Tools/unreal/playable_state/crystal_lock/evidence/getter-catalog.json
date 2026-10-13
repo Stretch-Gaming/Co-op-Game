@@ -1,0 +1,14 @@
+{
+  "HCCrystalLockVisual": [
+    "Variables|Default|GetHCCrystalLockVisual",
+    "Variables|Default|SetHCCrystalLockVisual"
+  ],
+  "CrystalLockVisual": [
+    "Variables|Default|GetHCCrystalLockVisual",
+    "Variables|Default|SetHCCrystalLockVisual"
+  ],
+  "CrystalLockMID": [
+    "Variables|Default|GetCrystalLockMID",
+    "Variables|Default|SetCrystalLockMID"
+  ]
+}

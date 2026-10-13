@@ -1,0 +1,689 @@
+{
+  "schema": 1,
+  "status": "native_round_HUD_rendered_client_and_hostsplit_site01_smoke_passed_fullroute_pending",
+  "native_execution_by_child": false,
+  "path_adaptation": "New portable copies derive their root from __file__; existing Windows helpers/guards remain untouched.",
+  "files": {
+    "context.py": {
+      "file": "context.py",
+      "sha256": "3cff8de84330ebd24284ef639da76e1db609a593cc1293688dbf1c2d41b80325",
+      "ast_validated": true
+    },
+    "test_site01_smoke.py": {
+      "file": "test_site01_smoke.py",
+      "sha256": "4a6eacd32860e2ceb05b665eea9cc2c407a4e6a67578592a52dc91ccaaf15777",
+      "ast_validated": true,
+      "scratch_source": {
+        "file": "test_site01_smoke.py",
+        "sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+        "native_status": "passed_5_checks"
+      },
+      "native_status": "not_executed_portable_copy"
+    },
+    "inspect_owned_hud.py": {
+      "file": "inspect_owned_hud.py",
+      "sha256": "09c61d319e473be5c13f26301d582432c4f6e0883b863c92d6dcece569ad7dc0",
+      "ast_validated": true,
+      "scratch_source": {
+        "file": "inspect_owned_hud.py",
+        "sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832",
+        "native_status": "ownership_data_passed_strict_geometry_failed"
+      },
+      "native_status": "not_executed_portable_copy",
+      "prior_api_failure": {
+        "scratch_sha256": "b4591e762af54dc63ff46342c9b47d36a610171ad75eb9776459dac511d6a44b",
+        "portable_sha256": "befccb8600004bad1c9736629b3730418fbb6b2acd281ef5272eb33dfade8aa9",
+        "evidence": "evidence/hud-owned-api-failure.json"
+      }
+    },
+    "executed/inspect_hud_viewport.py": {
+      "file": "executed/inspect_hud_viewport.py",
+      "sha256": "771d9763b3dd085b3f901787776bd9f3c6466c2447f5b5baeaca382c75bf921a",
+      "ast_validated": true,
+      "native_status": "partial_native_collection_failed_helper_api",
+      "portability": "Exact historical scratch source with fixed primary guard; not a portable reproducer."
+    },
+    "executed/inspect_hud_viewport_v2.py": {
+      "file": "executed/inspect_hud_viewport_v2.py",
+      "sha256": "aef84ba24330b0477729498745b3dcde513e59fbd789b384e9f14389475dcec4",
+      "ast_validated": true,
+      "native_status": "native_collection_complete_geometry_zero",
+      "portability": "Exact historical scratch source with fixed primary guard; not a portable reproducer."
+    },
+    "executed/test_site01_smoke.py": {
+      "file": "executed/test_site01_smoke.py",
+      "sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "ast_validated": true,
+      "native_status": "passed_final_current_character_smoke_5_checks",
+      "portability": "Exact executed scratch source with fixed primary guard; archived evidence, not a portable successor."
+    },
+    "executed/probe_hud_reattach.py": {
+      "file": "executed/probe_hud_reattach.py",
+      "sha256": "589ed43cb0ff3faffaefb2a5ce392b5c9515b4a2d9292227fee0cf344527725d",
+      "ast_validated": true,
+      "native_status": "native_reattachment_still_unqualified",
+      "portability": "Exact executed scratch source with fixed primary guard; archived evidence, not a portable successor."
+    },
+    "executed/inventory_designer_control.py": {
+      "file": "executed/inventory_designer_control.py",
+      "sha256": "48ac1cf9757e129c76f0c5b756dd08ae72c5547a75279a4cd69d8ecc060a75e7",
+      "ast_validated": true,
+      "native_status": "native_designer_tree_inventory_complete",
+      "portability": "Exact parent-executed scratch source with fixed primary/PID/receipt guards; historical evidence, not a portable successor."
+    },
+    "executed/probe_designer_control.py": {
+      "file": "executed/probe_designer_control.py",
+      "sha256": "f75dcef06b7877027233ffbb7af3c23021b9528f8ce8a34122fa8d8fb88151bb",
+      "ast_validated": true,
+      "native_status": "owning_control_visible_python_geometry_zero_exact_cleanup_passed",
+      "portability": "Exact parent-executed scratch source with fixed primary/PID/receipt guards; historical evidence, not a portable successor."
+    },
+    "executed/probe_internal_widget_geometry.py": {
+      "file": "executed/probe_internal_widget_geometry.py",
+      "sha256": "cd9619d41279d64983fed8b1c979120f20be6e20951429f80e1d577930acd4bf",
+      "ast_validated": true,
+      "native_status": "native_build_failed_ambiguous_local_size_catalog_before_measurement_nodes",
+      "portability": "Exact parent-executed scratch source with fixed primary/PID/receipt guards; historical evidence, not a portable successor."
+    },
+    "executed/probe_internal_widget_geometry_v2.py": {
+      "file": "executed/probe_internal_widget_geometry_v2.py",
+      "sha256": "49e6d0288e9648efff9d856c0b43b2d281fe2ace3b850db8348f4d520af45896",
+      "ast_validated": true,
+      "native_status": "native_build_failed_protected_parent_class_before_measurement_nodes",
+      "portability": "Exact parent-executed scratch source with fixed primary/PID/receipt guards; historical evidence, not a portable successor."
+    },
+    "executed/probe_internal_widget_geometry_v3.py": {
+      "file": "executed/probe_internal_widget_geometry_v3.py",
+      "sha256": "7e95d7957bc836c6994d6842da1d08c2bb02f6b64009d469b3253bc23bc44925",
+      "ast_validated": true,
+      "native_status": "native_build_and_14_paired_measurements_passed",
+      "portability": "Exact parent-executed scratch source with fixed primary/PID/receipt guards; historical evidence, not a portable successor."
+    },
+    "executed/repair_hud_paint_float.py": {
+      "file": "executed/repair_hud_paint_float.py",
+      "sha256": "3c32a6012b0232f8f4fb64059f4e8cd2a7bdc687f63fd9240e6b43221b92b848",
+      "ast_validated": true,
+      "native_status": "native_three_paint_graph_repair_passed",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/repair_hud_panel_tint.py": {
+      "file": "executed/repair_hud_panel_tint.py",
+      "sha256": "45adcffee705100d66d589e328964a7d309de1686e0cb7413676bd030cdfca10",
+      "ast_validated": true,
+      "native_status": "native_24_tint_literal_repair_passed",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/read_fixed_hud.py": {
+      "file": "executed/read_fixed_hud.py",
+      "sha256": "bcd1484b4facd0d74281ae0a0116c57260c50e734b2e738435c4246e1f136365",
+      "ast_validated": true,
+      "native_status": "native_default_profile_readbacks_passed_output_name_collision_preserved",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/read_fixed_hud_v2.py": {
+      "file": "executed/read_fixed_hud_v2.py",
+      "sha256": "ddce8e42320255e973773709692c4ca039fcefd02e6b3a13469758165b1980e0",
+      "ast_validated": true,
+      "native_status": "native_explicit_report_name_site01_snapshot_passed",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/test_secondary_owned_hud.py": {
+      "file": "executed/test_secondary_owned_hud.py",
+      "sha256": "ff3f45d31425b4811ee1ab263cd0d19ff8b158a1fda9df86254caef2e854b390",
+      "ast_validated": true,
+      "native_status": "native_secondary_host_five_checks_passed",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/test_site01_smoke_hud_final.py": {
+      "file": "executed/test_site01_smoke_hud_final.py",
+      "sha256": "f979f359583e984bb27cb7a24b6416100d47b1cb601e042300932c218406e15d",
+      "ast_validated": true,
+      "native_status": "native_final_hud_site01_five_checks_passed",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/run_site_smoke_hud_final.py": {
+      "file": "executed/run_site_smoke_hud_final.py",
+      "sha256": "82090c3d82ac5e0d7968e873e3449359516ac6acd2eb790812438d4700d6d596",
+      "ast_validated": true,
+      "native_status": "driver_extra_output_name_timeout_after_native_five_checks",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/capture_fixed_hud_windows.py": {
+      "file": "executed/capture_fixed_hud_windows.py",
+      "sha256": "de0471706bb63f8a9106a123ca30da3ddb7a867ed2bae16c057a06015a8f460c",
+      "ast_validated": true,
+      "native_status": "parent_native_slate_window_captures",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/capture_site01_hud_final.py": {
+      "file": "executed/capture_site01_hud_final.py",
+      "sha256": "c1e11c2bb8f6fdd4df476ac50a5777e33fb71308b2afb3bd09bf3dacd839dd2e",
+      "ast_validated": true,
+      "native_status": "parent_native_site01_slate_window_captures",
+      "portability": "Exact parent-provided scratch source with original fixed primary/receipt guards; archived evidence, not a portable successor."
+    },
+    "executed/analyze_hud_scale_source.py": {
+      "file": "executed/analyze_hud_scale_source.py",
+      "sha256": "2380edaf4805b4dd0b3905b264f80218abcf7a7e3ba3e381211e1ccafc84b95d",
+      "ast_validated": true,
+      "native_status": "offline_source_analysis_only",
+      "portability": "Offline-only source analysis; imports no Unreal module or original builder."
+    },
+    "executed/check_hud_float_scale_contract.py": {
+      "file": "executed/check_hud_float_scale_contract.py",
+      "sha256": "84f7d261003a1dc08fbde6fee01b5df02f3175c00ed64d03d15eb8fe0aab8ed9",
+      "ast_validated": true,
+      "native_status": "offline_float_source_contract_only",
+      "portability": "Offline-only source analysis; imports no Unreal module or original builder."
+    },
+    "executed/check_hud_float_scale_contract_panel_tint.py": {
+      "file": "executed/check_hud_float_scale_contract_panel_tint.py",
+      "sha256": "024eee42181a535906f21a539183416a1088e1eb82cf0998262c64aea34fccae",
+      "ast_validated": true,
+      "native_status": "offline_panel_tint_contract_only",
+      "portability": "Offline-only source analysis; imports no Unreal module or original builder."
+    },
+    "executed/check_hud_float_scale_contract_final.py": {
+      "file": "executed/check_hud_float_scale_contract_final.py",
+      "sha256": "f51635f838d56aa0f0a2a23286a57611f26e0b98594a8c87c718addba5d6dece",
+      "ast_validated": true,
+      "native_status": "offline_final_builder_contract_only",
+      "portability": "Offline-only source analysis; imports no Unreal module or original builder."
+    },
+    "executed/build_hud_source_final.py": {
+      "file": "executed/build_hud_source_final.py",
+      "sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7",
+      "ast_validated": true,
+      "native_status": "source_only_final_builder_snapshot_whole_builder_not_executed",
+      "portability": "Exact original builder copy with its original guards; do not execute as a final repair reproducer."
+    },
+    "executed/verify_hud_editor_relaunch.py": {
+      "file": "executed/verify_hud_editor_relaunch.py",
+      "sha256": "b0fb807e37cbc75c7d593c396795a9e7d892723368d3caf3c676082db8642195",
+      "ast_validated": true,
+      "native_status": "executed_read_only_relaunch_verification",
+      "portability": "Exact parent scratch source with primary guard; no package saves."
+    }
+  },
+  "dependencies": {
+    "Tools/unreal/playable_state/ghosts/context.py": "622b773534e37b8db9b67042f20048dfc9eb30f05effef6bfa3feded1207fbdc",
+    "Tools/unreal/playable_state/ghosts/ghost_runtime_support.py": "773cade5408b184b0b59d0b5b2830e74f6c3ec0181676c50a697ddfec23cc00f",
+    "Tools/unreal/six_round/authoring.py": "34253d8bf6caa3e82937231c945c7a859b8cc21e4f766c13662d27e5683a0385"
+  },
+  "runtime_results": {
+    "site01_client2": {
+      "status": "historical_pass_pre_character_fix",
+      "script_variant": "scratch",
+      "check_count": 5,
+      "native_log_error_count": 0,
+      "evidence": "evidence/site01-client2.json",
+      "executed_script_sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "historical_snapshot_only": true,
+      "before_push_required_map_gate_passed_for_recorded_snapshot": true,
+      "current_before_push_required_map_gate_passed": false,
+      "scope_limit": "Predates current Character fixes; final saved snapshot requires separate native two-client smoke receipt.",
+      "superseded_by": "site01_client2_final"
+    },
+    "host_owned_hud": {
+      "status": "ownership_data_passed_strict_geometry_failed",
+      "evidence": "evidence/hud-owned-geometry-failure.json",
+      "ownership_data_passed": true,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "executed_script_sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832"
+    },
+    "hud_viewport_diagnostic": {
+      "status": "partial_native_collection_failed_helper_api",
+      "evidence": "evidence/hud-viewport-summary.json",
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "771d9763b3dd085b3f901787776bd9f3c6466c2447f5b5baeaca382c75bf921a"
+    },
+    "hud_viewport_v2": {
+      "status": "native_collection_complete_geometry_zero",
+      "evidence": "evidence/hud-viewport-v2-summary.json",
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "optional_read_error_count": 3,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "aef84ba24330b0477729498745b3dcde513e59fbd789b384e9f14389475dcec4"
+    },
+    "site01_client2_final": {
+      "status": "passed",
+      "before_push_required_map_gate_passed": true,
+      "evidence": "evidence/site01-client2-final.json",
+      "script_variant": "scratch",
+      "check_count": 5,
+      "native_log_error_count": 0,
+      "current_character_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+      "executed_script_sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "full_mission_acceptance": false,
+      "rendered_pixel_acceptance": false
+    },
+    "hud_reattach_final": {
+      "status": "reattachment_still_unqualified",
+      "evidence": "evidence/hud-reattach-final.json",
+      "passed": false,
+      "owner_and_widget_identity_preserved": true,
+      "original_slots_and_style_preserved": true,
+      "owner_data_preserved": false,
+      "geometry_qualified": false,
+      "nonzero_widget_paint_proof": false,
+      "actual_callbacks": 8,
+      "native_log_error_count": 0,
+      "race_claim": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "589ed43cb0ff3faffaefb2a5ce392b5c9515b4a2d9292227fee0cf344527725d"
+    },
+    "final_compile_and_graph_proof": {
+      "compiled_saved_count": 6,
+      "graph_proof_passed": true,
+      "ghost_graph_count": 12,
+      "other_character_graph_count": 69,
+      "compile_receipt": "evidence/final-compile.json",
+      "graph_receipt": "evidence/final-graph-proof.json",
+      "restored_receipt": "evidence/restored-final.json"
+    },
+    "hud_geometry_boundary": {
+      "status": "internal_geometry_positive_python_roundtrip_zero_hud_pixels_unqualified",
+      "evidence": "evidence/hud-geometry-boundary-summary.json",
+      "exact_measurement": "evidence/internal-widget-geometry-v3-measure.json",
+      "paired_row_count": 14,
+      "internal_positive_count": 14,
+      "python_positive_count": 0,
+      "native_log_error_count": 0,
+      "exact_control_cleanup_passed": true,
+      "geometry_copy_cause_proven": false,
+      "actual_round_hud_pixel_acceptance": false,
+      "corrective_document": "HUD-GEOMETRY-BOUNDARY.md",
+      "executed_script_sha256": "7e95d7957bc836c6994d6842da1d08c2bb02f6b64009d469b3253bc23bc44925"
+    },
+    "hud_paint_final": {
+      "status": "three_paint_graphs_and_tints_fixed_owning_HUD_visible_native_acceptance_passed",
+      "evidence": "evidence/hud-paint-final-summary.json",
+      "readme": "HUD-PAINT-README.md",
+      "native_float_fanouts": [
+        165,
+        55,
+        48
+      ],
+      "native_tint_edits": 24,
+      "secondary_check_count": 5,
+      "site01_check_count": 5,
+      "native_log_error_count": 0,
+      "driver_timeout_preserved": true,
+      "full_mission_acceptance": false
+    }
+  },
+  "evidence_receipts": [
+    {
+      "file": "designer-control-before-cleanup-native.json",
+      "bytes": 171494,
+      "sha256": "99a8fa5526dbab65a847dca6f77b86c9732b55f8a23d8d711dafd85ca016b563"
+    },
+    {
+      "file": "designer-control-capture-metadata.json",
+      "bytes": 483,
+      "sha256": "2df9afcf821d78acfd3dfdfdd846cd24c22a076f2cc2840d835f19965244932a"
+    },
+    {
+      "file": "designer-control-internal-before-cleanup-native.json",
+      "bytes": 162046,
+      "sha256": "1120850e95abb69342eafeef293ad59b3fbb2f994abaec79b6a75d94bfd709d0"
+    },
+    {
+      "file": "designer-control-inventory.json",
+      "bytes": 12444,
+      "sha256": "5717fb1a64b6058f9405142ff58b4b880a0ca55d2a2361e9d5613c1ed6e015f4"
+    },
+    {
+      "file": "designer-control-log.txt",
+      "bytes": 39771,
+      "sha256": "e13020dc1e4c57d49ce14adb405d159e2a1d11e0706a4941115d18740f5c3a55"
+    },
+    {
+      "file": "designer-control-vehicle-graphs.json",
+      "bytes": 1353,
+      "sha256": "60d5c9d13cb7d80590cae587ebc518566fd89cf2ec0756926bdd983e4045cccf"
+    },
+    {
+      "file": "final-compile.json",
+      "bytes": 622,
+      "sha256": "8a2bc2927fc55dc40616ae1343483d770804fb3ba473ada2984cbbd1f6f2e2bd"
+    },
+    {
+      "file": "final-graph-proof.json",
+      "bytes": 1609,
+      "sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810"
+    },
+    {
+      "file": "fixed-hud-host-four-dark-0.png",
+      "bytes": 2539384,
+      "sha256": "ba85a601e307825ceec898641158d21bd9a096349c054030a9df67009d2b3b54"
+    },
+    {
+      "file": "fixed-hud-host-four-dark-captures.json",
+      "bytes": 957,
+      "sha256": "5535a93be4aa83bdaa0628ad638b5d46d3f1255540145fa2276b3cc46eaa5059"
+    },
+    {
+      "file": "fixed-hud-host-four-dead-0.png",
+      "bytes": 2707808,
+      "sha256": "db1134a43900a335982bc98def18d5f092ae5403a2890b7ee101dfef65dc5500"
+    },
+    {
+      "file": "fixed-hud-host-four-dead-captures.json",
+      "bytes": 957,
+      "sha256": "45f3ec5f7b6dd1c6d1fae07e99cb7e7201c80d9b03e0e645a5cf96ad8e11e00b"
+    },
+    {
+      "file": "fixed-hud-host-four-log.txt",
+      "bytes": 50758,
+      "sha256": "473d6f41db77ff83d03f34da219479a844b1af1cc7e154e187edc7d79920fb7c"
+    },
+    {
+      "file": "fixed-hud-host_split-4.json",
+      "bytes": 4849,
+      "sha256": "9060dcb5872880dd6d5265dd7c4fce071d76ac9f262b08582b029c20d95c0630"
+    },
+    {
+      "file": "fixed-hud-joining-3.json",
+      "bytes": 3907,
+      "sha256": "6dd75433ac597b644ec4f2af6dc50984999ee31000c91681eb57a06924794ee2"
+    },
+    {
+      "file": "fixed-hud-log-summary.json",
+      "bytes": 687,
+      "sha256": "f9850bd98ae597fff1f0813607ef6bd910dcc459591d14930e8dc03f0c3fc002"
+    },
+    {
+      "file": "fixed-hud-site01-final-0.png",
+      "bytes": 2145177,
+      "sha256": "6e3b6b7fe6b0b91b7a73238e3e76cf2d11d7b393f303dd90e403ba935c0f1e7d"
+    },
+    {
+      "file": "fixed-hud-site01-final-captures.json",
+      "bytes": 635,
+      "sha256": "37ee73500ab99edee3b7af6bb4f35113ee32b2820e34e6ca54903fa5ebca19e9"
+    },
+    {
+      "file": "fixed-hud-site01-final-log.txt",
+      "bytes": 35164,
+      "sha256": "f631cd3a3232407e696fa729763c44f9aecf15b847f3090a48840bc4b79354d4"
+    },
+    {
+      "file": "fixed-hud-site01-final-owner-summary.json",
+      "bytes": 2588,
+      "sha256": "168de48a10838610bf9680d68a181c04688bfae8e5fa7abdf198b255abbfd03f"
+    },
+    {
+      "file": "fixed-hud-site01-final.json",
+      "bytes": 2561,
+      "sha256": "95c14309c39eded439482a886cc09e25509ee23b49911dfe5ae592f1cab2e7f4"
+    },
+    {
+      "file": "fixed-hud-three-dark-captures.json",
+      "bytes": 945,
+      "sha256": "029d2a3c337e570e53aa1d3f43e7f02b1d125b5be47a2b1d1414ef43b447e1ad"
+    },
+    {
+      "file": "fixed-hud-three-log.txt",
+      "bytes": 50111,
+      "sha256": "2ab82782d9297574fc1b26bd56edc1c6862ea31a04092b9269b92064d3380ec9"
+    },
+    {
+      "file": "fixed-hud-two-dark-captures.json",
+      "bytes": 627,
+      "sha256": "6153f80f97c5b46c18cea17d069d1e06a879c9e459dde4022a3f5c99cc93dcbd"
+    },
+    {
+      "file": "fixed-hud-two-log.txt",
+      "bytes": 34655,
+      "sha256": "2ab448c5aa1673173a553557bb85095a51d94b9d668b8c008defd5aabb391e21"
+    },
+    {
+      "file": "hud-brush-tints.json",
+      "bytes": 782,
+      "sha256": "a241726c6096510bef855dbc1286a4d803e96ef66cca787095ea073e592dcf83"
+    },
+    {
+      "file": "hud-disassembly-summary.json",
+      "bytes": 1614,
+      "sha256": "2ad179fc2184f105520e2e36c29dcbae4327d2732f39f16ffe6436b59f67acf7"
+    },
+    {
+      "file": "hud-geometry-boundary-summary.json",
+      "bytes": 9533,
+      "sha256": "5302c34079b689ae9d0148bce0bdbf12cb77715e5cd245bce4528a89f62cd79c"
+    },
+    {
+      "file": "hud-owned-api-failure.json",
+      "bytes": 1216,
+      "sha256": "eb4c798a6af0bfe23e2fc725afb93412726b733869e2e1ebd6facc3d25c1c2af"
+    },
+    {
+      "file": "hud-owned-geometry-failure.json",
+      "bytes": 5714,
+      "sha256": "a9e56e865b41e9bdee30d9ab2cf9d4837d5b28a2d53841836feabe41fb5aec5c"
+    },
+    {
+      "file": "hud-owned-log.txt",
+      "bytes": 40313,
+      "sha256": "45634d629241f00496838a382ae1c158a04d42112227b9b6d447353cf6839e7b"
+    },
+    {
+      "file": "hud-paint-before-pin-summary.json",
+      "bytes": 93682,
+      "sha256": "3ab79d2f62f733ee3738a4df8723a6679ef2ad61987cea9e3fe43cc3c14d11a8"
+    },
+    {
+      "file": "hud-paint-final-summary.json",
+      "bytes": 7615,
+      "sha256": "7e2b903ac37ce088c891da6e2adcf449c504f817cd9108155d51f3f422f64550"
+    },
+    {
+      "file": "hud-paint-flag-native-log.txt",
+      "bytes": 2253,
+      "sha256": "32696007d6a86911e2511eaa531cf112c604672f255ff62847e13b7796daed7f"
+    },
+    {
+      "file": "hud-paint-float-packet.json",
+      "bytes": 22076,
+      "sha256": "a91b65a8d7f402a2571c29794a9b8050ee60354dd00562d4f63ccbd58467d14c"
+    },
+    {
+      "file": "hud-paint-float-repair.json",
+      "bytes": 2938,
+      "sha256": "a90ae5230a44c59ede437cb92e55c9a11fb54f66245e054cb68491de7e3206a7"
+    },
+    {
+      "file": "hud-paint-source-contracts-summary.json",
+      "bytes": 4670,
+      "sha256": "b937a51633a763636127797e42443af929dc5cfbda966c1e3736cdebcef2545c"
+    },
+    {
+      "file": "hud-panel-tint-repair.json",
+      "bytes": 5629,
+      "sha256": "f7d993895a51b1495c93914b7081395575cc5dde2b5717579795afb125bc4e40"
+    },
+    {
+      "file": "hud-reattach-final-log.txt",
+      "bytes": 36666,
+      "sha256": "7eeace0545c1e59701dfffc1f93925eb754769f8f30449cae063777444026373"
+    },
+    {
+      "file": "hud-reattach-final-native.json",
+      "bytes": 184590,
+      "sha256": "adcadff96d70acaa7750c2c56a4b274a2d23002cec122b3d2cd5f3bc695d45ba"
+    },
+    {
+      "file": "hud-reattach-final.json",
+      "bytes": 31758,
+      "sha256": "562008ab9dc14b2b01c91e767b0aa2c7e4158dd183e53bbb26189908f2235bfa"
+    },
+    {
+      "file": "hud-viewport-diagnostic.json",
+      "bytes": 31937,
+      "sha256": "db82ec18ffa7b2dcc7867af333003b0755bf461e272c6415d6cb869ca924d91b"
+    },
+    {
+      "file": "hud-viewport-log.txt",
+      "bytes": 43158,
+      "sha256": "5fdec33346b47607365c0f0a83fbbbbd3c56fe730c022d76a6a27c2d6e470384"
+    },
+    {
+      "file": "hud-viewport-summary.json",
+      "bytes": 4864,
+      "sha256": "701b6ed98fa40327dfaf867c44864a67bdd1588dc64ec3674291d93c0a834e18"
+    },
+    {
+      "file": "hud-viewport-v2-log.txt",
+      "bytes": 45729,
+      "sha256": "604fdae11425aecfff1057a2a445854b2acf1ef20f2f1abd43dec96de58aaf78"
+    },
+    {
+      "file": "hud-viewport-v2-summary.json",
+      "bytes": 10072,
+      "sha256": "2319d901a1eca96334d53d0bf65ecc58be587016ee0b8d1d0588ceabdc0cdf2d"
+    },
+    {
+      "file": "hud-viewport-v2.json",
+      "bytes": 34892,
+      "sha256": "a10ff404a9a0bebbebfc4b1ea6b3b5922a902f63582d65206fe0e252b3f8fed8"
+    },
+    {
+      "file": "internal-geometry-owner-summary.json",
+      "bytes": 479,
+      "sha256": "0a9a056dcd242677e2cd3b2d2876e012c68e1149c8ffe298304cfe082cfc6a1f"
+    },
+    {
+      "file": "internal-widget-geometry-build.json",
+      "bytes": 2749,
+      "sha256": "00d1656c152191fe0e1f160516a8574f7b9d72310d87eb18f49241554d0f41f2"
+    },
+    {
+      "file": "internal-widget-geometry-log.txt",
+      "bytes": 35793,
+      "sha256": "f69d5b7b254e6888a40005d865664c551fd6945e61efc2d4f07c114020c47b16"
+    },
+    {
+      "file": "internal-widget-geometry-original-two-nodes.json",
+      "bytes": 320,
+      "sha256": "2154246a68246cbbca72416194c0843aff1a1423a2401d2151e7dc21ae5264c9"
+    },
+    {
+      "file": "internal-widget-geometry-v2-build.json",
+      "bytes": 2748,
+      "sha256": "9b2db9e3e58800d016ce13ec5fc08488f3d91bf46149a54e01f9a13974ef2af8"
+    },
+    {
+      "file": "internal-widget-geometry-v3-build.json",
+      "bytes": 6364,
+      "sha256": "8d0460a23a7631f1b2e59f252951682403f98c15e233eb4abbe2770288ec6756"
+    },
+    {
+      "file": "internal-widget-geometry-v3-measure.json",
+      "bytes": 11404,
+      "sha256": "e3603de8e0341432208ec9f7748ee1279abdcc4aff6875b7751a2027b0a8350f"
+    },
+    {
+      "file": "owned-hud-secondary.json",
+      "bytes": 36377,
+      "sha256": "e22203ce9f05fa454fa306cbdf1469da6294484bea690e5bbee60ddb908558dd"
+    },
+    {
+      "file": "restored-final.json",
+      "bytes": 633,
+      "sha256": "53fa1f4937392bcf534999de9337ba06f6d0b0d79bbd84f0fa6e0b6f1c7b504e"
+    },
+    {
+      "file": "site-smoke-hud-final-driver-timeout.json",
+      "bytes": 22795,
+      "sha256": "0e94a7dec851293a2b20e01ee5fc46695962e34631abf739c059162c8f3df1fd"
+    },
+    {
+      "file": "site01-client2-final-log.txt",
+      "bytes": 37384,
+      "sha256": "70ed08f74cf370a6781d356c9937acebbc798aa4de93ed9052db91f0edb8981d"
+    },
+    {
+      "file": "site01-client2-final-native.json",
+      "bytes": 22195,
+      "sha256": "80843927ad3dcdbeab0e833b1f27d065787c5d0a8d71c7fe949d3176e67b51df"
+    },
+    {
+      "file": "site01-client2-final.json",
+      "bytes": 6939,
+      "sha256": "884d52dbc4a113ad1187957cadb28fc13fcfb9541631c76a4dc18bc8442e1b13"
+    },
+    {
+      "file": "site01-client2-log.txt",
+      "bytes": 35701,
+      "sha256": "d72dce9dd6a2ab2c6ce1c822fd5d226265e4edddfb06efdb57ea7bbd48886b0d"
+    },
+    {
+      "file": "site01-client2-smoke-hud-final-log.txt",
+      "bytes": 34648,
+      "sha256": "30bce1b54c82954349dcb22ba9add41add83fbdad41fe6ebe93f83c0e8183873"
+    },
+    {
+      "file": "site01-client2-smoke-hud-final-native.json",
+      "bytes": 22277,
+      "sha256": "20b99a16667bce838eb682229d1d30d1d21e91239ef1d6bbc9f6211b5ed26b0a"
+    },
+    {
+      "file": "site01-client2.json",
+      "bytes": 6983,
+      "sha256": "ed9d5b508dd332bce41781ba7f780c5936affe7aff261bbd676aae483dcec12d"
+    },
+    {
+      "file": "restored-hud-final.json",
+      "bytes": 633,
+      "sha256": "53fa1f4937392bcf534999de9337ba06f6d0b0d79bbd84f0fa6e0b6f1c7b504e",
+      "classification": "final_editor_restoration"
+    },
+    {
+      "file": "editor-relaunch-hud-final.json",
+      "bytes": 1603,
+      "sha256": "65e725a2c5691afa04344a4af378746315e6091d74b19db799ead1b34b2e4574",
+      "classification": "clean_relaunch_no_dirty_packages_no_temporary_diagnostic"
+    }
+  ],
+  "documentation": {
+    "README.md": {
+      "sha256": "67ffd670d9e49e836460bf35a8bb288b6ef01574a893a954b8e38c0573e95450"
+    },
+    "HUD-GEOMETRY-BOUNDARY.md": {
+      "sha256": "39946268c5a38c2601aae14eb4618f948880ef876f41f641ff78fccab6bcc4ee"
+    },
+    "HUD-PAINT-README.md": {
+      "sha256": "3cc4ca72a7f3fb0f357a8615020a45d1b0ad9d3f810439ecd2179ed86e76cbef"
+    }
+  },
+  "final_asset_binding": {
+    "character_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "ghost_sha256": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+    "graph_proof_sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810",
+    "hud_widget_sha256": {
+      "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "baefc8933da155f93e60285ad8d5d681b4b48cb0a8f1cd943d7fa26c78241ff3",
+      "/Game/Puzzles/UI/WBP_InteractPrompt": "e32a9fffcb67b36cf2f5177cc89b42d8599902935d62b7c9b273d525e1993966",
+      "/Game/Puzzles/UI/Results/WBP_RunResults": "34bb0fa09f64b312603d9c2015b341909be1c89882878c6d62fcd6d02c373bf7"
+    },
+    "hud_builder_source_sha256": "6bc101781b23f2facdb6b07c2bb973ff47f6e9ccb1a11ec9fa4380520f6449e7"
+  },
+  "interpretation_correction": {
+    "document": "HUD-GEOMETRY-BOUNDARY.md",
+    "historical_README_and_zero_geometry_receipts_retained": true,
+    "superseded_claim": "Python zero geometry demonstrates zero widget layout or failed owning-player attachment",
+    "latest_rendered_fix": "HUD-PAINT-README.md",
+    "previous_geometry_note_is_historical": true,
+    "historical_fact_before_paint_repair": "All 14 Blueprint-internal cached measurements are positive; own-player template control visibly renders; actual round HUD remains absent.",
+    "current_fact": "Rendered round HUD passes on joining clients and both host split panes; Blueprint-internal geometry is positive while Python geometry divergence remains unresolved."
+  },
+  "primary_readme": "HUD-PAINT-README.md"
+}

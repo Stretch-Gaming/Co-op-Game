@@ -33,7 +33,7 @@ write(ghost,'RefreshFlareRepulsion',f'''
   (for actor (Actor|GetAllActorsOfClass :ActorClass "/Game/Player/Tools/BP_Flare.BP_Flare_C")
    (bind active (Class|BPFlare|IsActive :self actor))
    (if (and active (< (Transformation|GetDistanceTo :OtherActor actor) 450.0))
-    {S('BackoffUntil','(+ (Utilities|Time|GetGameTimeinSeconds) 0.2)')}
+    {S('BackoffUntil',f'(Math|Float|Max(Float) :A {V("BackoffUntil")} :B (+ (Utilities|Time|GetGameTimeinSeconds) 0.2))')}
     (Transformation|SetActorLocation :NewLocation (+ (Transformation|GetActorLocation) (* (Math|Vector|Normalize :A (- (Transformation|GetActorLocation) (Transformation|GetActorLocation :self actor))) 25.0)) :bSweep false))))''')
 fn(ghost,'BeginFlareRepulsion');write(ghost,'BeginFlareRepulsion','(Utilities|Time|SetTimerbyFunctionName :Object self :FunctionName "RefreshFlareRepulsion" :Time 0.05 :bLooping true)')
 event(ghost,'ReceiveBeginPlay','BeginFlareRepulsion');save(ghost)

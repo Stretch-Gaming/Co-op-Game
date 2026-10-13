@@ -1,0 +1,226 @@
+{
+  "scope": "HC-A4 source/native import, map repair and bounded Mac Lit presentation evidence with parent-only replay",
+  "historical_snapshots": "Historical exact executed scripts are separate from corrected recipes and explicitly labelled reconstruction; per-profile execution hashes were not captured",
+  "files": {
+    "README.md": {
+      "sha256": "983ded7200e86fcebdeaaf3e5d4f055c7797ff7457f0a7d93a207559d7489623",
+      "bytes": 12440
+    },
+    "collect_evidence.py": {
+      "sha256": "01f4f3499428e9eba70b3d128f74ef4b559303c098bc021addb6a73f6c18d3e5",
+      "bytes": 11323
+    },
+    "context.py": {
+      "sha256": "b7a6b2fc8155f6e09d2ce603f5e929813cc27923892afa539e837e6bcfe357a6",
+      "bytes": 639
+    },
+    "evidence/crystal-visual-binding-inspection.json": {
+      "sha256": "47137623504f38cd0d152cc1d5c5651f5d073fa8e17fd98ae3da47bdcd1e2b66",
+      "bytes": 38877
+    },
+    "evidence/first-native-runtime-startup/crystal-lock-lit-joining-2.json": {
+      "sha256": "56a0c9bd7728e85dc07dd5c37c6a0ab0c704b04062a399425b3ee2264362d173",
+      "bytes": 2797
+    },
+    "evidence/first-native-runtime-startup/startup-receipt-joining-2.json": {
+      "sha256": "1b67f9d200570f0bd95f56d757c6c823594a91a53f86ec8cd7ced348a031395b",
+      "bytes": 2261
+    },
+    "evidence/first-native-runtime-startup/test_crystal_lock_lit.py": {
+      "sha256": "b73b3afb04c448cd7f7eb34df46b798ac22bee203e20994d78ea1235a78475ba",
+      "bytes": 36970
+    },
+    "evidence/getter-catalog.json": {
+      "sha256": "d6a57c3ebb02e68a900f071cb46082e257a4bf95cf7f0528a7101ffeccc431ce",
+      "bytes": 366
+    },
+    "evidence/import_failed_component_getter-receipt.json": {
+      "sha256": "d4bf8ad9f8b89bc04cb5c67dce5ec4c84c986fcf4a85dc6b60a9fd52554615f9",
+      "bytes": 3754
+    },
+    "evidence/import_failed_component_getter.py": {
+      "sha256": "8179d9c06ed3ea843b71938ad22acddbb4f87aebe8b9654c537b0c26f4560336",
+      "bytes": 18916
+    },
+    "evidence/interrupted-root-continuation/continue_crystal_lock_root.py": {
+      "sha256": "ab2d63e92111c6053e3bb3da409a9d919db0940b42333b64c9d2f2e719216e46",
+      "bytes": 15418
+    },
+    "evidence/interrupted-root-continuation/interruption.json": {
+      "sha256": "84917b269d7e361b22b7d7d2b2da80a5fe53a7ff9ae3a84e40e572a381d72cf9",
+      "bytes": 220
+    },
+    "evidence/interrupted-root-continuation/unreal-root-continuation-receipt.json": {
+      "sha256": "9907e12669f94a2aceb37864629bda21414bc0e0be880c8669cb713ac40eb060",
+      "bytes": 1968
+    },
+    "evidence/map-repair-preflight-failed.json": {
+      "sha256": "e5c0bef2e5975d4394521f5c69e088d2572e33306ccc8af2a6f9d813f2a2ff0c",
+      "bytes": 470
+    },
+    "evidence/map-repair-preflight-script.py": {
+      "sha256": "f4958e9b4a9acebe2f6653f2778b807f6cd36570c3f2bcf6c16280420601a410",
+      "bytes": 3445
+    },
+    "evidence/offline-validation.json": {
+      "sha256": "aed57d4918ce3a4dc61277aa25c62db6c5c9898834b6799c074f57a3b2bc4537",
+      "bytes": 384
+    },
+    "evidence/optional-shot-run/crystal-lock-lit-joining-2.json": {
+      "sha256": "85ba712e47141b0bfb351e992eaa63701647151767deba04a9632aef30203d14",
+      "bytes": 442408
+    },
+    "evidence/optional-shot-run/initial-startup-receipt-joining-2.json": {
+      "sha256": "a3b788f54e443353b54ca5b803385ebf34f20e27aa3d23e004aaff62125d54b8",
+      "bytes": 4255
+    },
+    "evidence/optional-shot-run/root-qualitative-preview.json": {
+      "sha256": "1596ee57c75bfbd52e77ab9e3b426160432a22a4c3436aaab05cb6d2fa725372",
+      "bytes": 2468
+    },
+    "evidence/optional-shot-run/startup-receipt-joining-2.json": {
+      "sha256": "a40cad7ce3b60313d1dbc8f90c9a77c38e9a8396cb1fcbff40949f894d920013",
+      "bytes": 5153
+    },
+    "evidence/optional-shot-run/test_crystal_lock_lit.py": {
+      "sha256": "d22f17a2df5fad68f4c89aec9db85c331ff0423b2d3b06c1d8222a03f1ccc57e",
+      "bytes": 41525
+    },
+    "evidence/placed-visual-repair-v2.json": {
+      "sha256": "fb382b0eb2f2a902436dc40cd852c5b206f06cc3c5cc263c296a59cb4cbba210",
+      "bytes": 468
+    },
+    "evidence/placed-visual-repair.json": {
+      "sha256": "e5c0bef2e5975d4394521f5c69e088d2572e33306ccc8af2a6f9d813f2a2ff0c",
+      "bytes": 470
+    },
+    "evidence/root-matrix-summary.json": {
+      "sha256": "cac984070694efc1d6b906c465ed00d74a1b7b22f3d9cf2a5898116e30214364",
+      "bytes": 456
+    },
+    "evidence/runtime/crystal-lock-lit-host_split-4.json": {
+      "sha256": "d44f444641975d66e441dd35e7c0a934825f5143599cb31c52a54787c4b38537",
+      "bytes": 1274011
+    },
+    "evidence/runtime/crystal-lock-lit-joining-2.json": {
+      "sha256": "31d67b766c99a80639946424b4e54e3d1651377517536bd504755576c092fc31",
+      "bytes": 437652
+    },
+    "evidence/runtime/lit-host_split-4-log.txt": {
+      "sha256": "0133c4e426cbad84878e7259f8ff094810b3e66f6b9491c0ca8b62f41dbde1a2",
+      "bytes": 40946
+    },
+    "evidence/runtime/lit-joining-2-log.txt": {
+      "sha256": "879b060ea38d7df92585b18a7ed4b43b34b86e6221c12cbe01b4e2c7edd26634",
+      "bytes": 34461
+    },
+    "evidence/runtime/receipt-collection-note.json": {
+      "sha256": "804eb4c5b9d82ddb6c3aef0ade38a58a539309238a1a27f4fac8229c620dfaa1",
+      "bytes": 554
+    },
+    "evidence/runtime/startup-receipt-host_split-4.json": {
+      "sha256": "9f9e7d817c9a1095eb51b48804c22e5d72170c8ec699a77ca0f66af38db7419b",
+      "bytes": 8384
+    },
+    "evidence/script-version-evidence.json": {
+      "sha256": "a92296744a646489dae3f71cf810125dcd7537ada4964846eab5cd5b0aa42832",
+      "bytes": 1573
+    },
+    "evidence/second-native-runtime-driver-interruption/classification.json": {
+      "sha256": "9e2dff320e39c34fbd5830e4ed0b1c6a86dc00219fa5061841d659c67d4a26bf",
+      "bytes": 415
+    },
+    "evidence/second-native-runtime-driver-interruption/observed-receipt-excerpt.json": {
+      "sha256": "140c5222d61dc07c2c43b2a682b39205e8338f6155cb63edfc818b78c95649c7",
+      "bytes": 585
+    },
+    "evidence/summary.json": {
+      "sha256": "006e9f905092f44e7638fa9abd2cd35f6f26fbb5b82188c92ee8b02d48cad9a7",
+      "bytes": 5897
+    },
+    "evidence/third-native-runtime-start-round-gate/classification.json": {
+      "sha256": "65a784df59f3703cab63adaad7b2c62c26c307e2e195bfb7b08d5e5a0078bc32",
+      "bytes": 436
+    },
+    "evidence/third-native-runtime-start-round-gate/crystal-lock-lit-joining-2.json": {
+      "sha256": "7ca4c9aac568bc15bff31082acf5150207345aef1b3bc96bceadf3beec3e9300",
+      "bytes": 96367
+    },
+    "evidence/third-native-runtime-start-round-gate/lit-joining-2-log.txt": {
+      "sha256": "7d4345cce900e1a3c2c2756daca5d4e72678993f26f4b1d8615cdddea81d8e88",
+      "bytes": 33971
+    },
+    "evidence/third-native-runtime-start-round-gate/startup-receipt-joining-2.json": {
+      "sha256": "91bd839b8a160ff00889eae9ede50c250f04e4461ba7fba3edf624cca9bc2404",
+      "bytes": 2675
+    },
+    "evidence/third-native-runtime-start-round-gate/test_crystal_lock_lit.py": {
+      "sha256": "d1ffa60a09217a37ef1620ad92e9ce3be30ae405b1b6f485b6fb2fbf9332af2d",
+      "bytes": 37417
+    },
+    "evidence/unreal-fresh-import-receipt.json": {
+      "sha256": "52e45af2bf729a905dba6e026df500f1ac7d2eeb9ca039a67307327c30731c50",
+      "bytes": 4858
+    },
+    "evidence/unreal-import.json": {
+      "sha256": "ed3bfad5fe38830fed0af98c7bc4cc16f8d9753ea3e845728317ddc332c85c2b",
+      "bytes": 1329
+    },
+    "evidence/unreal-inspection.json": {
+      "sha256": "5fda5d2129c5594c9e101e27b360161249a5d51062b9be48619c941b8f941c8c",
+      "bytes": 11727
+    },
+    "evidence/visual-binding-root.json": {
+      "sha256": "94720efef8803e376a43bff57fa84b83062dbfefc490363ea8563782561fa378",
+      "bytes": 12427
+    },
+    "executed/ghost_runtime_support.py": {
+      "sha256": "e550eff516ab4da53ffe878a1b1f124e1ae94a19f764433df3ede60d58fb30a8",
+      "bytes": 11654
+    },
+    "executed/import_crystal_lock_first_saved.py": {
+      "sha256": "1962f4785a8f0a16ea614a5d602e61161baa61e44f2722b0315d272f81c3d874",
+      "bytes": 18979
+    },
+    "executed/import_crystal_lock_fresh.py": {
+      "sha256": "5ca58ae46c22ed05ba03d0a1a62f1e8a49b5b77d2cd5d0e3e5037b032d09f155",
+      "bytes": 19472
+    },
+    "executed/inspect_crystal_lock.py": {
+      "sha256": "03a678a2d9c86f6f151ba956f03b61ab93a70274a9c65269ebbe024abcbd66a8",
+      "bytes": 3953
+    },
+    "executed/inspect_crystal_visual_binding.py": {
+      "sha256": "68c9618e35be85849e26755d38a0f7b71d46ab01fef4ab98f19e00715eedd55f",
+      "bytes": 8433
+    },
+    "executed/inspect_visual_binding_root.py": {
+      "sha256": "eb7853241b4a5eb07df201dd916f64d8736b655a8dbbeec8f894dc0cce7d3f19",
+      "bytes": 1694
+    },
+    "executed/repair_placed_visuals_root.py": {
+      "sha256": "f4958e9b4a9acebe2f6653f2778b807f6cd36570c3f2bcf6c16280420601a410",
+      "bytes": 3445
+    },
+    "executed/repair_placed_visuals_v2.py": {
+      "sha256": "e9c8b8428ade05a5544f00f356d979005ad45cc67b7b78aecd197d194fc2c58e",
+      "bytes": 3700
+    },
+    "executed/run_crystal_cases_root.py": {
+      "sha256": "8b4a7b16c58a0b883950b6ca13d77c66e461ab8021c39419ce259aa00ab5b0fd",
+      "bytes": 2908
+    },
+    "executed/test_crystal_lock_lit.py": {
+      "sha256": "d22f17a2df5fad68f4c89aec9db85c331ff0423b2d3b06c1d8222a03f1ccc57e",
+      "bytes": 41525
+    },
+    "executed/test_crystal_lock_lit_state_only_reconstructed.py": {
+      "sha256": "e904d472cc1cd6b8ccf8377ef3d654348ad5205765bd9709d74fefcf48f99e9e",
+      "bytes": 38870
+    },
+    "replay.py": {
+      "sha256": "43cbf7a1f5069001b8b42b52c6fa04935e83e8006a46d6f92fb31d15e6d4ccda",
+      "bytes": 3678
+    }
+  }
+}

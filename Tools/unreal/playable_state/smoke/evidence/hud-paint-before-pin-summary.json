@@ -1,0 +1,3105 @@
+{
+  "schema": 1,
+  "full_native_inventory_copied": false,
+  "full_native_inventory_bytes": 2192763,
+  "full_native_inventory_sha256": "6caae6012303ef1883a1071a35c1092a0d56e5b302ad44230b7bbcf9b51d253a",
+  "missing_scale_B_count": 256,
+  "widgets": {
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD": {
+      "saved_asset_sha256": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+      "scale_node": {
+        "name": "K2Node_PromotableOperator_193",
+        "class": "K2Node_PromotableOperator",
+        "type": "Math|Float|float/float",
+        "inputs": [
+          {
+            "name": "A",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_193",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CallFunction_249",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          },
+          {
+            "name": "B",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_193",
+              "index": 1,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CommutativeAssociativeBinaryOperator_3",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "ReturnValue",
+            "type": "Integer",
+            "id": {
+              "node": "K2Node_PromotableOperator_193",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+            },
+            "default": null,
+            "links": [
+              {
+                "node": "K2Node_PromotableOperator_446",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_scale_fanout": 165,
+      "existing_fanout": 1,
+      "missing_scale_B_count": 164,
+      "missing_scale_B_consumers": [
+        {
+          "node": "K2Node_PromotableOperator_194",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_250",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "98.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_195",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_251",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "62.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_196",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_252",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "640.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_197",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_253",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "48.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_199",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_254",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_200",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_255",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_202",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_256",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_203",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_257",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_205",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_261",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_206",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_262",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_207",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_266",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_208",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_267",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_209",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_271",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_210",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_272",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_212",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_273",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_213",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_274",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_215",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_276",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_217",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_277",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_219",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_280",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_220",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_281",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_222",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_282",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_223",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_283",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_225",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_285",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_227",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_286",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_228",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_290",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_229",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_291",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_231",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_292",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "31.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_232",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_293",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_234",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_Select_6",
+          "A_type": "Utilities|Select",
+          "A_defaults": {}
+        },
+        {
+          "node": "K2Node_PromotableOperator_235",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_299",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_236",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_300",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "31.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_237",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_Select_7",
+          "A_type": "Utilities|Select",
+          "A_defaults": {}
+        },
+        {
+          "node": "K2Node_PromotableOperator_238",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_306",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_239",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_307",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_241",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_308",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "67.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_242",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_309",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "58.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_243",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_310",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_245",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_312",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_246",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_315",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_247",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_316",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "67.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_248",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_317",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "58.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_249",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_319",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_250",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_321",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_251",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_322",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_253",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_323",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "124.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_255",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_324",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_257",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_326",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_258",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_327",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "96.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_259",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_330",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_260",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_331",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "124.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_262",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_333",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_263",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_334",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "96.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_264",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_337",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_265",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_338",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "124.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_267",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_340",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_268",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_341",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "96.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_269",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_344",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_270",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_345",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_272",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_346",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "124.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_274",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_347",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_276",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_349",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_277",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_350",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_279",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_351",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "96.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_280",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_352",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_282",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_355",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_283",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_356",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_285",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_357",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "124.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_287",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_358",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_289",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_360",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_290",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_361",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_292",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_362",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_293",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_366",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_294",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_367",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_296",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_368",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "118.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_298",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_369",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_300",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_371",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "22"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_301",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_374",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_302",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_375",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "118.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_304",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_377",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "22"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_305",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_380",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_306",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_381",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_308",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_382",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "85.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_310",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_383",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_312",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_385",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_313",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_388",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_314",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_389",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "85.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_316",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_391",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_317",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_393",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "50.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_319",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_394",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_322",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_395",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_324",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_396",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_326",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_397",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_328",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_399",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "226.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_329",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_400",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_330",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_401",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_333",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_404",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_335",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_406",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "226.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_336",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_407",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_337",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_408",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_340",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_411",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_342",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_413",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "226.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_343",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_414",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_344",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_415",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_347",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_418",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_349",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_419",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_351",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_420",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_353",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_422",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "226.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_354",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_423",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_356",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_424",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_357",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_425",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "30.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_360",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_426",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_362",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_429",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_364",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_430",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_366",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_431",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_368",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_433",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "226.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_369",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_434",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_371",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_435",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_373",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_440",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "238.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_375",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_441",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_379",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_PromotableOperator_378",
+          "A_type": "Math|Float|float+float",
+          "A_defaults": {}
+        },
+        {
+          "node": "K2Node_PromotableOperator_381",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_444",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_383",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_446",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_384",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_449",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "238.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_388",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_PromotableOperator_387",
+          "A_type": "Math|Float|float+float",
+          "A_defaults": {}
+        },
+        {
+          "node": "K2Node_PromotableOperator_390",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_453",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_394",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_458",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_395",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_459",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_397",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_460",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "137.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_398",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_461",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_400",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_463",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "80.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_401",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_466",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_402",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_467",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "137.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_403",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_469",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "80.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_404",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_472",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_405",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_473",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "137.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_406",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_475",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "80.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_407",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_478",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_408",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_479",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_410",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_480",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "137.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_411",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_481",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_413",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_483",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_415",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_484",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "80.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_416",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_485",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_418",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_488",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "24.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_419",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_489",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_421",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_490",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "137.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_422",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_491",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_424",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_493",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_426",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_494",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_427",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_498",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_428",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_499",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_430",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_500",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "145.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_431",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_501",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_433",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_503",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_434",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_506",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_435",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_507",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "145.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_436",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_509",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_437",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_512",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_438",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_513",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_440",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_514",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "178.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_441",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_515",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_443",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_517",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_444",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_520",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_445",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_521",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "178.0"
+          }
+        }
+      ],
+      "other_graph_before_hashes": {
+        "UpdateSixHUD": {
+          "node_count": 164,
+          "canonical_sha256": "2a8d9ac1421e880491ca09e4d830c390f81e5311ea81d583f55f5f68b20dccc5"
+        },
+        "StartSixHUD": {
+          "node_count": 4,
+          "canonical_sha256": "9e418604b876569f42c01a09c582e12e21455868cf6fdd79ff1400a49887a702"
+        },
+        "StopSixHUD": {
+          "node_count": 3,
+          "canonical_sha256": "5c923b29bb7a45738de9f6114c5a7665ee33bfd49f10666134c40d97472a48b1"
+        },
+        "EventGraph": {
+          "node_count": 6,
+          "canonical_sha256": "5c371b415617698afe7e1f7d0259fb10f8139bcf73c256c14fc3250f2fe49ad2"
+        }
+      },
+      "other_graph_hash_method": "sort nodes by name and each link list by node/index/direction; JSON sort_keys=True,separators=(comma,colon); SHA256"
+    },
+    "/Game/Puzzles/UI/WBP_InteractPrompt": {
+      "saved_asset_sha256": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+      "scale_node": {
+        "name": "K2Node_PromotableOperator_25",
+        "class": "K2Node_PromotableOperator",
+        "type": "Math|Float|float/float",
+        "inputs": [
+          {
+            "name": "A",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_25",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CallFunction_49",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          },
+          {
+            "name": "B",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_25",
+              "index": 1,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CommutativeAssociativeBinaryOperator_1",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "ReturnValue",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_25",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+            },
+            "default": null,
+            "links": [
+              {
+                "node": "K2Node_PromotableOperator_109",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_110",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_111",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_112",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_113",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_114",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_115",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_118",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_119",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              },
+              {
+                "node": "K2Node_PromotableOperator_120",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_scale_fanout": 55,
+      "existing_fanout": 10,
+      "missing_scale_B_count": 45,
+      "missing_scale_B_consumers": [
+        {
+          "node": "K2Node_PromotableOperator_26",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_50",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "15.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_27",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_51",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_29",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_52",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "26.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_54",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_53",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_56",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_55",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_57",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_56",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "106.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_58",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_103",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "15.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_59",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_104",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "26.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_60",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_106",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_61",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_107",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "106.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_62",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_110",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "15.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_63",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_111",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "26.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_64",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_113",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_65",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_114",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "106.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_66",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_117",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "15.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_67",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_118",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_69",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_119",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "26.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_70",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_120",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_72",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_122",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_73",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_123",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_75",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_124",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "106.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_76",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_125",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_78",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_128",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "15.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_79",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_129",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_81",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_130",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "26.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_82",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_131",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_84",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_133",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "300.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_85",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_134",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_87",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_135",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_89",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_143",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "29.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_90",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_144",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_92",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_145",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_93",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_146",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_95",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_148",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_96",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_151",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "29.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_97",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_152",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "38.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_98",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_154",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_99",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_159",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "29.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_100",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_160",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_102",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_161",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "68.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_103",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_162",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_105",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_164",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_106",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_169",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "29.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_107",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_170",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "68.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_108",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_172",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        }
+      ],
+      "other_graph_before_hashes": {
+        "UpdatePrompt": {
+          "node_count": 9,
+          "canonical_sha256": "78ff2a1862146ba39a6be1f38fe7926332a26539c371717af2f9113be958e347"
+        },
+        "EventGraph": {
+          "node_count": 3,
+          "canonical_sha256": "007fed4f22fcc58fc6a33f15602e765fa55105ef8eab59167a79a88b934e5979"
+        }
+      },
+      "other_graph_hash_method": "sort nodes by name and each link list by node/index/direction; JSON sort_keys=True,separators=(comma,colon); SHA256"
+    },
+    "/Game/Puzzles/UI/Results/WBP_RunResults": {
+      "saved_asset_sha256": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+      "scale_node": {
+        "name": "K2Node_PromotableOperator_4",
+        "class": "K2Node_PromotableOperator",
+        "type": "Math|Float|float/float",
+        "inputs": [
+          {
+            "name": "A",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_4",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CallFunction_6",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          },
+          {
+            "name": "B",
+            "type": "Float (double-precision)",
+            "id": {
+              "node": "K2Node_PromotableOperator_4",
+              "index": 1,
+              "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+            },
+            "default": "",
+            "links": [
+              {
+                "node": "K2Node_CommutativeAssociativeBinaryOperator_0",
+                "index": 0,
+                "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+              }
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "ReturnValue",
+            "type": "Integer",
+            "id": {
+              "node": "K2Node_PromotableOperator_4",
+              "index": 0,
+              "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+            },
+            "default": null,
+            "links": [
+              {
+                "node": "K2Node_PromotableOperator_103",
+                "index": 1,
+                "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_scale_fanout": 48,
+      "existing_fanout": 1,
+      "missing_scale_B_count": 47,
+      "missing_scale_B_consumers": [
+        {
+          "node": "K2Node_PromotableOperator_6",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_8",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_8",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_9",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_11",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_11",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "4.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_13",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_13",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "500.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_14",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_14",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "212.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_15",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_17",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_18",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_20",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "500.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_19",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_21",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "212.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_20",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_24",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_23",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_27",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "500.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_24",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_28",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "212.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_25",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_31",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_27",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_32",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "5.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_30",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_34",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "7.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_32",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_36",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "500.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_33",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_37",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "10.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_35",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_38",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "212.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_36",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_39",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "12.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_38",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_42",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "250.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_40",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_43",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "8.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_43",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_45",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "9.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_45",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_47",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "500.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_46",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_48",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "16.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_48",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_49",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "2.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_49",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_55",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_58",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_56",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_61",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_58",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "18.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_63",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_59",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_65",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_61",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "30"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_66",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_64",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_69",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_66",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "18.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_71",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_68",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "30"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_72",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_71",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_74",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_72",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_77",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_74",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "73.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_79",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_75",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_81",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_77",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "26"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_82",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_80",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_85",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_82",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "73.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_87",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_84",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "26"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_88",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_93",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_90",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_94",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "1.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_93",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_96",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "143.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_95",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_97",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "3.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_97",
+          "pin": "B",
+          "type": "Integer",
+          "default": "",
+          "A_node": "K2Node_CallFunction_99",
+          "A_type": "Math|Integer|MakeLiteralInt",
+          "A_defaults": {
+            "Value": "20"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_98",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_102",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "220.0"
+          }
+        },
+        {
+          "node": "K2Node_PromotableOperator_101",
+          "pin": "B",
+          "type": "Float (double-precision)",
+          "default": "",
+          "A_node": "K2Node_CallFunction_104",
+          "A_type": "Math|Float|MakeLiteralFloat",
+          "A_defaults": {
+            "Value": "143.0"
+          }
+        }
+      ],
+      "other_graph_before_hashes": {
+        "EventGraph": {
+          "node_count": 3,
+          "canonical_sha256": "007fed4f22fcc58fc6a33f15602e765fa55105ef8eab59167a79a88b934e5979"
+        }
+      },
+      "other_graph_hash_method": "sort nodes by name and each link list by node/index/direction; JSON sort_keys=True,separators=(comma,colon); SHA256"
+    }
+  },
+  "paint_flag_true_evidence": "hud-paint-flag-native-log.txt",
+  "interpretation": "Unlinked empty numeric B is compiled zero; source expects scale. No intentional zero multiply coefficients are included."
+}

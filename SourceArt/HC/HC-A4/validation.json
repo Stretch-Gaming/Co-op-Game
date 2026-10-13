@@ -1,0 +1,90 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "fbx_unit_centimeters": 1.0,
+  "fbx_reimport": "pass",
+  "isolated_blend_reload": "pass",
+  "mesh": {
+    "name": "SM_CrystalLock",
+    "triangles": 1580,
+    "vertices": 808,
+    "dimensions_cm": [
+      80.00001,
+      80.00001,
+      100.0
+    ],
+    "bounds_min_cm": [
+      -40.0,
+      -40.0,
+      0.0
+    ],
+    "bounds_max_cm": [
+      40.00001,
+      40.00001,
+      100.0
+    ],
+    "origin_cm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "slots": [
+      "M_CrystalLockStone",
+      "M_CrystalLockCrystal"
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "signed_volume_cm3": 304559.1793549571,
+    "uv_layers": [
+      "UVMap"
+    ],
+    "finite_uvs": true
+  },
+  "collision": {
+    "name": "UCX_SM_CrystalLock_00",
+    "triangles": 44,
+    "vertices": 24,
+    "dimensions_cm": [
+      80.00001,
+      80.00001,
+      100.0
+    ],
+    "bounds_min_cm": [
+      -40.00001,
+      -40.00001,
+      0.0
+    ],
+    "bounds_max_cm": [
+      40.00001,
+      40.00001,
+      100.0
+    ],
+    "origin_cm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "slots": [],
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "signed_volume_cm3": 483505.8445637428,
+    "uv_layers": [],
+    "finite_uvs": true,
+    "convex": true,
+    "contains_visual": true
+  },
+  "unreal_import": "pending",
+  "native_client_and_split_screen_15m_check": "pending",
+  "editable_blend_mainfile_saved": "pass",
+  "editable_blend_mainfile_reopen": "pass",
+  "unlit_default_emission": 0.0
+}

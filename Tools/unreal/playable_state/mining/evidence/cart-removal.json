@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "stage": "complete",
+  "removed": [
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_601",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_602",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_603",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_604",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_605",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_606",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_607",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_608",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_609",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_610",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_611"
+  ],
+  "saved": [
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test"
+  ],
+  "before_sha256": "9ff9e2e39aff9a96131bb342ff60a389b1fc6d03f3eb1a34a22a4677e33851ac",
+  "target_manifest_indices": [
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315
+  ],
+  "targets": [
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_601",
+      "label": "Cave_static_305",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-335.000000,Y=-974.000000,Z=18.000000),Scale3D=(X=0.340000,Y=0.340000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_602",
+      "label": "Cave_static_306",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-335.000000,Y=-886.000000,Z=18.000000),Scale3D=(X=0.340000,Y=0.340000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_603",
+      "label": "Cave_static_307",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-225.000000,Y=-974.000000,Z=18.000000),Scale3D=(X=0.340000,Y=0.340000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_604",
+      "label": "Cave_static_308",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-225.000000,Y=-886.000000,Z=18.000000),Scale3D=(X=0.340000,Y=0.340000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_605",
+      "label": "Cave_static_309",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-930.000000,Z=38.000000),Scale3D=(X=1.700000,Y=1.040000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.MI_Cave_051_023_010"
+      ],
+      "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_606",
+      "label": "Cave_static_310",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-361.000000,Y=-930.000000,Z=75.500000),Scale3D=(X=0.080000,Y=1.100000,Z=0.750000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.MI_Cave_051_023_010"
+      ],
+      "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_607",
+      "label": "Cave_static_311",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-199.000000,Y=-930.000000,Z=75.500000),Scale3D=(X=0.080000,Y=1.100000,Z=0.750000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.MI_Cave_051_023_010"
+      ],
+      "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_608",
+      "label": "Cave_static_312",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-981.000000,Z=75.500000),Scale3D=(X=1.700000,Y=0.080000,Z=0.750000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.MI_Cave_051_023_010"
+      ],
+      "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_609",
+      "label": "Cave_static_313",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-985.000000,Z=109.000000),Scale3D=(X=1.760000,Y=0.040000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_610",
+      "label": "Cave_static_314",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-879.000000,Z=75.500000),Scale3D=(X=1.700000,Y=0.080000,Z=0.750000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_051_023_010.MI_Cave_051_023_010"
+      ],
+      "collision": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test.L_CaveEnvironment_Test:PersistentLevel.StaticMeshActor_611",
+      "label": "Cave_static_315",
+      "level": "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+      "transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-875.000000,Z=109.000000),Scale3D=(X=1.760000,Y=0.040000,Z=0.080000))",
+      "tags": [
+        "CavePrototypeIntegration"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Hazards/Art/CavePrototype/Materials/MI_Cave_011_011_013.MI_Cave_011_011_013"
+      ],
+      "collision": "<CollisionEnabled.NO_COLLISION: 0>"
+    }
+  ],
+  "other_actor_count_preserved": 1699,
+  "protected_other_hash_count": 54,
+  "map_before_sha256": "797b2d8148890e7738e4c4d605fe602105a7aaddfcd9cd13d35f2ecc216e3e20",
+  "map_after_sha256": "bb4a87b6b1eba9b9e67d36843e936aaa716f068f909850739e6ed1b437d84e85",
+  "scope": [
+    "Content/Puzzles/Test/SixRound/L_CaveEnvironment_Test.umap"
+  ]
+}

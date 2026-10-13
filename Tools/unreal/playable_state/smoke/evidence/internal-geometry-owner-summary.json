@@ -1,0 +1,11 @@
+{
+  "native_log_errors": [],
+  "count": 0,
+  "log_path": "/tmp/coop-runtime/internal-designer-log.txt",
+  "log_sha256": "f69d5b7b254e6888a40005d865664c551fd6945e61efc2d4f07c114020c47b16",
+  "cleanup_passed": true,
+  "raw_cleanup_receipt_sha256": "b3b3751bd91f8505fa4bd00549ccc19223b9fc47c6359e432645e690a1267067",
+  "pixel_observation": "Actual CUA Client1 Gear5/Speed99/Km/h visible; own round HUD absent",
+  "internal_rows_positive": 14,
+  "python_roundtrip_rows_positive": 0
+}

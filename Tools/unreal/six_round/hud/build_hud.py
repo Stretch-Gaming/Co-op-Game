@@ -18,8 +18,15 @@ for name,color in colors.items():
  brush.set_editor_property('brush',slate);assert ue.EditorAssetLibrary.save_loaded_asset(brush,False)
 
 def xy(x,y):return f'(Math|Vector2D|MakeVector2D :X {x} :Y {y})'
-def mul(v):return f'(* {v} scale)'
-def box(brush,x,y,w,h):return f'(Painting|DrawBox :Context Context :Position {xy(x,y)} :Size {xy(w,h)} :Brush "{UI}DA_{brush}Brush.DA_{brush}Brush")'
+def mul(v):
+ # Keep paint arithmetic floating point: integer font sizes can promote the
+ # shared scale pin and disconnect its earlier floating-point consumers.
+ if isinstance(v,(int,float)):v=float(v)
+ return f'(* {v} scale)'
+def box(brush,x,y,w,h):
+ # DrawBox passes its Tint directly to Slate; it does not apply the brush tint.
+ r,g,b,a=colors[brush]
+ return f'(Painting|DrawBox :Context Context :Position {xy(x,y)} :Size {xy(w,h)} :Brush "{UI}DA_{brush}Brush.DA_{brush}Brush" :Tint "(R={r},G={g},B={b},A={a})")'
 def panel(x,y,w,h):
  # Opaque plate plus darker inset and existing carved art border; four visible layers.
  return '\n'.join([box('Shadow',f'(+ {x} {mul(3.0)})',f'(+ {y} {mul(4.0)})',w,h),box('Frame',x,y,w,h),f'(Painting|DrawBox :Context Context :Position {xy(x,y)} :Size {xy(w,h)} :Brush "{ART}DA_HCA3_RoundBrush.DA_HCA3_RoundBrush")',box('Plate',f'(+ {x} {mul(5.0)})',f'(+ {y} {mul(7.0)})',f'(- {w} {mul(10.0)})',f'(- {h} {mul(12.0)})'),box('Inner',f'(+ {x} {mul(8.0)})',f'(+ {y} {mul(9.0)})',f'(- {w} {mul(16.0)})',mul(2.0))])
@@ -49,7 +56,7 @@ update=f'''
    {S('MomentStarted','now')} {S('ObservedIndex','index')} {S('ObservedAttempt','attempt')} {S('SeenCleared','cleared')} {S('SeenFailed','failed')})
   {S('BigSixBanner',f'(< (- now {V("MomentStarted")}) 3.0)')}
   {S('DisplayRoundName','(select (== index 0) "THE CAVE" (select (== index 1) "THE FIRST ROOM" (select (== index 2) "THE MAZE" (select (== index 3) "THE MEETING HALL" (select (== index 4) "THE DEEP MAZE" (select (== index 5) "THE RELIC" "THE ESCAPE"))))))')}
-  {S('DisplayObjective','(select failed "Restarting at the checkpoint in 3 seconds." (select cleared "The way is open. Enter the maze together." (select (== index 0) "Stand together on the start pad." (select (== index 1) "Press every plate together." (select (== index 2) "Reach the meeting hall on your own path." (select (== index 3) "Light every lock at the same time." (select (== index 4) "Reach the relic chamber on your own path." (select (== index 5) "Hold the cage and lift the relic." "Carry the relic to the first-room altar."))))))))')}
+  {S('DisplayObjective','(select failed "Restarting at the checkpoint in 3 seconds." (select cleared "The way is open. Enter the maze together." (select (== index 0) "Stand together on the start pad." (select (== index 1) "Mine rocks, push the loaded cart, hold the plates." (select (== index 2) "Reach the meeting hall on your own path." (select (== index 3) "Light every lock at the same time." (select (== index 4) "Reach the relic chamber on your own path." (select (== index 5) "Hold the cage and lift the relic." "Carry the relic to the first-room altar."))))))))')}
   (if (Utilities|Enum|Equal(Enum) phase (Utilities|Enum|LiteralenumE_RoundPhase :Enum "NewEnumerator4"))
    {S('DisplayObjective','"Relic delivered. Traveling to Map 2."')})
   (bind score (Utilities|String|BuildString(Integer) :Prefix "RELICS " :InInt (Class|BPCoopGameState|GetRelicsCollected :self gs) :Suffix " / "))
@@ -98,12 +105,12 @@ body=SCALE+f'''
   {text(V('DisplayRelics'),mul(38.0),'(- height (* 118.0 scale))',22,heading,tint='(R=0.91,G=0.702,B=0.227,A=1)')}
   {text(V('DisplayTools'),mul(38.0),'(- height (* 85.0 scale))',20)}
   (bind rowCount (Utilities|Array|Length :TargetArray {V('RosterLabels')}))
-  (bind teamY (- (- height (* 50.0 scale)) (* rowCount (* 30.0 scale))))
-  {panel('(- width (* 250.0 scale))','teamY',mul(226.0),'(+ (* 30.0 scale) (* rowCount (* 30.0 scale)))')}
+  (bind teamY (- (- height (* 50.0 scale)) (* (Math|Conversions|ToFloat(Integer) rowCount) (* 30.0 scale))))
+  {panel('(- width (* 250.0 scale))','teamY',mul(226.0),'(+ (* 30.0 scale) (* (Math|Conversions|ToFloat(Integer) rowCount) (* 30.0 scale)))')}
   (for row (range rowCount)
    (bind label (Utilities|Array|Get(acopy) {V('RosterLabels')} row))
    (bind slot (Utilities|Array|Get(acopy) {V('RosterSlots')} row))
-   {text('label','(- width (* 238.0 scale))','(+ teamY (* (+ 10.0 (* 30.0 row)) scale))',20,tint='(select (== slot 0) (Math|Color|MakeLinearColor :R 0.32 :G 0.55 :B 0.9 :A 1.0) (select (== slot 1) (Math|Color|MakeLinearColor :R 0.9 :G 0.55 :B 0.65 :A 1.0) (select (== slot 2) (Math|Color|MakeLinearColor :R 0.55 :G 0.75 :B 0.68 :A 1.0) (Math|Color|MakeLinearColor :R 0.75 :G 0.58 :B 0.92 :A 1.0))))')})
+   {text('label','(- width (* 238.0 scale))','(+ teamY (* (+ 10.0 (* 30.0 (Math|Conversions|ToFloat(Integer) row))) scale))',20,tint='(select (== slot 0) (Math|Color|MakeLinearColor :R 0.32 :G 0.55 :B 0.9 :A 1.0) (select (== slot 1) (Math|Color|MakeLinearColor :R 0.9 :G 0.55 :B 0.65 :A 1.0) (select (== slot 2) (Math|Color|MakeLinearColor :R 0.55 :G 0.75 :B 0.68 :A 1.0) (Math|Color|MakeLinearColor :R 0.75 :G 0.58 :B 0.92 :A 1.0))))')})
   (if {V('DisplayedDead')}
    {panel(mul(24.0),mul(137.0),'bannerWidth',mul(80.0))}
    {text(V('DisplaySpectator'),mul(38.0),mul(145.0),20)}

@@ -1,0 +1,52 @@
+{
+  "started_utc": "2026-10-13T05:43:56.032904+00:00",
+  "status": "startup_failed",
+  "stage": "preflight",
+  "args": {
+    "players": 2,
+    "profile": "joining",
+    "timeout": 180
+  },
+  "report": "/tmp/hc-a4-crystal-lock/runtime-evidence/crystal-lock-lit-joining-2.json",
+  "stage_history": [],
+  "native_test_executed": false,
+  "runtime_acceptance_pending": false,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": []
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        258
+      ]
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        259
+      ]
+    }
+  ],
+  "player_ids": [
+    258,
+    259
+  ],
+  "finished_utc": "2026-10-13T05:43:56.047412+00:00",
+  "error": "'NoneType' object has no attribute 'get_path_name'",
+  "exception_type": "AttributeError",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 238, in run\n    initial_rows = record_locks()\n                   ^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 236, in record_locks\n    return [lock_row(world, actor) for world in h.worlds for actor in locks]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 236, in <listcomp>\n    return [lock_row(world, actor) for world in h.worlds for actor in locks]\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 197, in lock_row\n    'visual_mesh': visual.get_editor_property('static_mesh').get_path_name(),\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get_path_name'\n",
+  "passed": false
+}

@@ -1,0 +1,1338 @@
+{
+  "passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "stage": "warmup",
+  "profile": "host_split",
+  "players": 4,
+  "pie_settings": {
+    "PlayNetMode": "PIE_ListenServer",
+    "PlayNumberOfClients": 3,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_ListenServer",
+      "local_player_ids": [
+        301,
+        304
+      ]
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        302
+      ]
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        303
+      ]
+    }
+  ],
+  "actions": {
+    "move": "/Game/Input/Actions/IA_Move",
+    "look": "/Game/Input/Actions/IA_Look",
+    "jump": "/Game/Input/Actions/IA_Jump",
+    "sprint": "/Game/Core/Input/IA_Sprint",
+    "flare": "/Game/Core/Input/IA_ThrowFlare",
+    "climb": "/Game/Core/Input/IA_Climb",
+    "lamp": "/Game/Core/Input/IA_Headlamp",
+    "view": "/Game/Core/Input/IA_ToggleView",
+    "interact": "/Game/Core/Input/IA_Interact",
+    "drop": "/Game/Core/Input/IA_Drop"
+  },
+  "checks": [
+    {
+      "name": "Secondary Q spends only its stock; both host HUDs display their own counters",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 301,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.44729804992676
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -999.8350543540588,
+                -113.125,
+                92.14999646086082
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 302,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.45
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 303,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.4
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.15
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Secondary F affects only its lamp and HUD; primary camera remains owned",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 301,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.44729804992676
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.8350543540588,
+                -113.125,
+                92.14999646086082
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 302,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.45
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 303,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.4
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.15
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dead secondary spectates living player while HUD retains its own lower stock",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 301,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.44729804992676
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": true,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.8350543540588,
+                -113.125,
+                92.14999646086082
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 302,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.45
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 303,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.4
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.15
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Actual secondary E cycles a living target; HUD owner and primary view remain unchanged",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 301,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.44729804992676
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": true,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.8350543540588,
+                -113.125,
+                92.14999646086082
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 302,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.45
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 303,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.4
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.15
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dead secondary movement/Q are blocked; four original HUD identities and own data persist",
+      "details": null,
+      "snapshot": [
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 301,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.14999628067017
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.44729804992676
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": true,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.8350543540588,
+                -113.125,
+                92.14999646086082
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 302,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.10000000000001
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 303,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.45
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        },
+        {
+          "world": "L_SixRound_Test",
+          "players": [
+            {
+              "id": 303,
+              "local_owner": true,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                -225.0,
+                97.4
+              ]
+            },
+            {
+              "id": 302,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                75.0,
+                92.15
+              ]
+            },
+            {
+              "id": 301,
+              "local_owner": false,
+              "dead": false,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 3,
+              "view": 0,
+              "lamp": false,
+              "position": [
+                -1000.0,
+                225.0,
+                92.15
+              ]
+            },
+            {
+              "id": 304,
+              "local_owner": false,
+              "dead": true,
+              "heavy": false,
+              "protected": false,
+              "sprint": false,
+              "climb": false,
+              "mantle": false,
+              "flares": 1,
+              "view": 0,
+              "lamp": true,
+              "position": [
+                -999.84,
+                -113.13,
+                92.15
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixture_actions": [
+    {
+      "kind": "secondary host aim down",
+      "owner_id": 304
+    },
+    {
+      "kind": "server lethal ApplyDamage only on secondary host",
+      "owner_id": 304
+    }
+  ],
+  "input_method": "Synthetic Enhanced Input through each actual owning local-player subsystem; real Blueprint input/RPC path.",
+  "physical_keyboard_gamepad_tested": false,
+  "platform": "Darwin",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "packet_emulation_tested": false,
+  "visual_audio_acceptance": false,
+  "secondary_id": 304,
+  "primary_id": 301,
+  "secondary_is_primary": false,
+  "script_sha256": "ff3f45d31425b4811ee1ab263cd0d19ff8b158a1fda9df86254caef2e854b390",
+  "state": {
+    "stage": "dead_inputs_settle",
+    "pressed_at": 776542.562707333,
+    "baseline_stocks": {
+      "301": 3,
+      "302": 3,
+      "303": 3,
+      "304": 2
+    },
+    "baseline_primary_view": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+    "baseline_huds": {
+      "301": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_0",
+      "302": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_56.WBP_HCA3RoundHUD_C_0",
+      "303": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_57.WBP_HCA3RoundHUD_C_0",
+      "304": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_1"
+    },
+    "samples": [
+      {
+        "phase": "owning_Q",
+        "owners": [
+          {
+            "owner_id": 301,
+            "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_0",
+            "flares": 3,
+            "dead": false,
+            "tools": "LAMP OFF  FLARES 3",
+            "spectator": "",
+            "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0"
+          },
+          {
+            "owner_id": 304,
+            "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+            "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_1",
+            "flares": 1,
+            "dead": false,
+            "tools": "LAMP OFF  FLARES 1",
+            "spectator": "",
+            "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_3"
+          }
+        ]
+      },
+      {
+        "phase": "dead_secondary_after_E_and_blocked_inputs",
+        "owners": [
+          {
+            "owner_id": 301,
+            "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_0",
+            "flares": 3,
+            "dead": false,
+            "tools": "LAMP OFF  FLARES 3",
+            "spectator": "",
+            "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0"
+          },
+          {
+            "owner_id": 304,
+            "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+            "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_55.WBP_HCA3RoundHUD_C_1",
+            "flares": 1,
+            "dead": true,
+            "tools": "LAMP ON   FLARES 1",
+            "spectator": "DEAD - watching P2. Interact switches view.",
+            "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_1"
+          }
+        ]
+      }
+    ],
+    "released_at": 776542.786650166,
+    "before_cycle": 301,
+    "after_cycle": 302,
+    "dead_location": [
+      -999.8350543540588,
+      -113.125,
+      92.14999646086082
+    ]
+  },
+  "hud_rendered_pixel_acceptance": false,
+  "limits": "Synthetic owning Enhanced Input, lethal damage and aim fixtures; no devices/fullroute/travel/physical E acceptance."
+}

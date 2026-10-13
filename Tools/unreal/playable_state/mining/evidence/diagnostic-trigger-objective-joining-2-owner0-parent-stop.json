@@ -1,0 +1,167 @@
+{
+  "phase": "drop",
+  "at": 10.965057414025068,
+  "deadline": 759081.241626208,
+  "checks": [
+    "All-owner start pad waits for final owner and starts R1 with correct scaling row via owning movement",
+    "Natural R1 start publishes mining/cart/plate instruction to all GameStates and every owning HUD",
+    "Selected owner picks up near pickaxe while looking away; swing context belongs only to that owner"
+  ],
+  "mode": "trigger_and_injected_pickup",
+  "players": 2,
+  "owner": 0,
+  "fixtures": [
+    "server places all living pawns before start pad; owning movement enters trigger",
+    "server places selected owner within near-pickup distance, looking away"
+  ],
+  "owner_network_evidence": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_DedicatedServer",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        256,
+        257
+      ],
+      "local_player_ids": [],
+      "controllers": []
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        256,
+        257
+      ],
+      "local_player_ids": [
+        256
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        256,
+        257
+      ],
+      "visible_player_ids": [
+        257,
+        256
+      ],
+      "local_player_ids": [
+        257
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "source_runtime_sha256": "88d507d771edf658d6021b3d2f0a076a61e59fc34caea10d78d527a543b5823c",
+  "objective_wall_at": 758847.232006375,
+  "objective_first": {
+    "game_states": [
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "Stand together on the start pad. Carry the relic home through six rounds."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "Stand together on the start pad. Carry the relic home through six rounds."
+      }
+    ],
+    "owning_huds": [
+      {
+        "player_id": 256,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_1.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Stand together on the start pad."
+      },
+      {
+        "player_id": 257,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_2.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Stand together on the start pad."
+      }
+    ]
+  },
+  "objective_latest": {
+    "game_states": [
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      }
+    ],
+    "owning_huds": [
+      {
+        "player_id": 256,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_1.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 257,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_2.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      }
+    ]
+  },
+  "replicas": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x435e15ff0) {x: -708.836701, y: 988.327847, z: 169.353334}>"
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x435e15ff0) {x: -708.884430, y: 988.315476, z: 180.466392}>"
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x435e15ff0) {x: -706.690311, y: 980.172249, z: 206.589349}>"
+    }
+  ],
+  "swing_context_ownership": [
+    true,
+    false
+  ],
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n",
+  "cleanup_errors": [
+    "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 63, in finish\n    try:rt.inject(i,name,0)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 80, in inject\n    local=self.local(i);controller=local.get_controller();sub=self.library.call_method('GetLocalPlayerSubSystemFromPlayerController',args=(controller,ue.EnhancedInputLocalPlayerSubsystem.static_class()));assert sub\n          ^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 67, in local\n    def local(self,i):return self.locals[self.players[i].player_state.player_id]\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Character: Internal Error - ObjectInstance is null!\n",
+    "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 63, in finish\n    try:rt.inject(i,name,0)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 80, in inject\n    local=self.local(i);controller=local.get_controller();sub=self.library.call_method('GetLocalPlayerSubSystemFromPlayerController',args=(controller,ue.EnhancedInputLocalPlayerSubsystem.static_class()));assert sub\n          ^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 67, in local\n    def local(self,i):return self.locals[self.players[i].player_state.player_id]\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Character: Internal Error - ObjectInstance is null!\n",
+    "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 63, in finish\n    try:rt.inject(i,name,0)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 80, in inject\n    local=self.local(i);controller=local.get_controller();sub=self.library.call_method('GetLocalPlayerSubSystemFromPlayerController',args=(controller,ue.EnhancedInputLocalPlayerSubsystem.static_class()));assert sub\n          ^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 67, in local\n    def local(self,i):return self.locals[self.players[i].player_state.player_id]\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Character: Internal Error - ObjectInstance is null!\n",
+    "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 63, in finish\n    try:rt.inject(i,name,0)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 80, in inject\n    local=self.local(i);controller=local.get_controller();sub=self.library.call_method('GetLocalPlayerSubSystemFromPlayerController',args=(controller,ue.EnhancedInputLocalPlayerSubsystem.static_class()));assert sub\n          ^^^^^^^^^^^^^\n  File \"/Volumes/CoopBuild/Repositories/Co-op-Game-primary/Tools/unreal/six_round/core/tests/runtime.py\", line 67, in local\n    def local(self,i):return self.locals[self.players[i].player_state.player_id]\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Character: Internal Error - ObjectInstance is null!\n",
+    "Traceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 102, in tick\n    assert rt.ready(),'Possessed complete roster changed during bounded gate'\nAssertionError: Possessed complete roster changed during bounded gate\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 65, in finish\n    try:inject_near(0)\n        ^^^^^^^^^^^^^^\n  File \"/tmp/coop-mining/acceptance_trigger_pickaxe.py\", line 49, in inject_near\n    sub=rt.subsystems[rt.players[owner].player_state.player_id]\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Character: Internal Error - ObjectInstance is null!\n"
+  ],
+  "method": "Owning Enhanced Input action injection",
+  "full_mission_acceptance_pending": true
+}

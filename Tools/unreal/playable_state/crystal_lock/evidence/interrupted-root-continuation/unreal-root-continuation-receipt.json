@@ -1,0 +1,74 @@
+{
+  "run_started_utc": "2026-10-13T05:25:08.748809+00:00",
+  "status": "running",
+  "stage": "save_owned_assets",
+  "mutation_started": true,
+  "first_mutation_stage": "add_local_mid_and_presentation_helper",
+  "stage_history": [
+    {
+      "stage": "preflight",
+      "utc": "2026-10-13T05:25:08.764876+00:00",
+      "mutation": false,
+      "detail": null
+    },
+    {
+      "stage": "validate_unsaved_import",
+      "utc": "2026-10-13T05:25:21.103925+00:00",
+      "mutation": false,
+      "detail": null
+    },
+    {
+      "stage": "add_local_mid_and_presentation_helper",
+      "utc": "2026-10-13T05:25:21.171802+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/BP_CrystalLock"
+    },
+    {
+      "stage": "splice_presentation_helper",
+      "utc": "2026-10-13T05:25:39.329295+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/BP_CrystalLock"
+    },
+    {
+      "stage": "set_owned_editor_visibility",
+      "utc": "2026-10-13T05:25:51.879035+00:00",
+      "mutation": true,
+      "detail": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    },
+    {
+      "stage": "save_owned_assets",
+      "utc": "2026-10-13T05:25:51.996049+00:00",
+      "mutation": true,
+      "detail": null
+    }
+  ],
+  "created_assets": [],
+  "saved_packages": [],
+  "manifest": {
+    "new_assets": [
+      "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock",
+      "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone",
+      "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal"
+    ],
+    "existing_blueprints": [
+      "/Game/Puzzles/BP_CrystalLock"
+    ],
+    "maps": [
+      "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    ],
+    "shared_material_reads": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "shared_material_writes": [],
+    "project_setting_writes": [],
+    "new_helpers": [
+      "RefreshCrystalLockPresentation"
+    ],
+    "new_variables": [
+      "CrystalLockMID"
+    ],
+    "new_components": [
+      "HC_CrystalLockVisual"
+    ]
+  }
+}

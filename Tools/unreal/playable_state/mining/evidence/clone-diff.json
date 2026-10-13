@@ -1,0 +1,804 @@
+{
+  "inspection_only": true,
+  "mapping": {
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MinePuzzle_C_0": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePuzzle_C_0",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MinePickaxe_C_0": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_3": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_0",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_2": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_1",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_1": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_0": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineCart_C_0": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_0": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_0",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_1": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_1",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_2": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_2",
+    "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_3": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_3"
+  },
+  "actors": [
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MinePuzzle_C_0",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePuzzle_C_0",
+      "class": "BP_MinePuzzle_C",
+      "source_properties": {
+        "ActiveCount": 0,
+        "AllPlates": false,
+        "Cart": {
+          "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineCart_C_0"
+        },
+        "CartRocksFor2": 6,
+        "CartRocksFor3": 7,
+        "CartRocksFor4": 9,
+        "Deposits": [
+          {
+            "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_0"
+          },
+          {
+            "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_1"
+          },
+          {
+            "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_2"
+          },
+          {
+            "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_3"
+          }
+        ],
+        "DepositsFor2": 3,
+        "DepositsFor3": 3,
+        "DepositsFor4": 4,
+        "RoundIndex": 1,
+        "Solved": false
+      },
+      "expected": {
+        "ActiveCount": 0,
+        "AllPlates": false,
+        "Cart": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+        },
+        "CartRocksFor2": 6,
+        "CartRocksFor3": 7,
+        "CartRocksFor4": 9,
+        "Deposits": [
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_1"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_0"
+          }
+        ],
+        "DepositsFor2": 3,
+        "DepositsFor3": 3,
+        "DepositsFor4": 4,
+        "RoundIndex": 1,
+        "Solved": false
+      },
+      "actual": {
+        "ActiveCount": 0,
+        "AllPlates": false,
+        "Cart": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0"
+        },
+        "CartRocksFor2": 6,
+        "CartRocksFor3": 7,
+        "CartRocksFor4": 9,
+        "Deposits": [
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+          },
+          {
+            "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+          }
+        ],
+        "DepositsFor2": 3,
+        "DepositsFor3": 3,
+        "DepositsFor4": 4,
+        "RoundIndex": 1,
+        "Solved": false
+      },
+      "differences": [
+        {
+          "field": "Deposits",
+          "expected": [
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_1"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_0"
+            }
+          ],
+          "actual": [
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2"
+            },
+            {
+              "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3"
+            }
+          ]
+        }
+      ],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=300.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=300.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MinePickaxe_C_0",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "class": "BP_MinePickaxe_C",
+      "source_properties": {
+        "ActiveUsers": 0,
+        "BeginCount": 0,
+        "BoundController": "None",
+        "Carrier": "None",
+        "CarrierComponent": "None",
+        "CarryState": 0,
+        "DropDirection": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "EndCount": 0,
+        "GripOffset": 30,
+        "Heavy": false,
+        "HoldPitch": 51.7,
+        "HoldRoll": -6.3,
+        "HoldSeconds": 2,
+        "HoldYaw": 80.9,
+        "InitialTransform": {
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "InstantCount": 0,
+        "InteractionEnabled": true,
+        "LastSwingTime": -100,
+        "LocalSwingTime": 0,
+        "Mode": "Instant",
+        "NearBest": "None",
+        "NearBestDist": 0,
+        "PickupController": "None",
+        "Prompt": "Use test object"
+      },
+      "expected": {
+        "ActiveUsers": 0,
+        "BeginCount": 0,
+        "BoundController": "None",
+        "Carrier": "None",
+        "CarrierComponent": "None",
+        "CarryState": 0,
+        "DropDirection": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "EndCount": 0,
+        "GripOffset": 30,
+        "Heavy": false,
+        "HoldPitch": 51.7,
+        "HoldRoll": -6.3,
+        "HoldSeconds": 2,
+        "HoldYaw": 80.9,
+        "InitialTransform": {
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "InstantCount": 0,
+        "InteractionEnabled": true,
+        "LastSwingTime": -100,
+        "LocalSwingTime": 0,
+        "Mode": "Instant",
+        "NearBest": "None",
+        "NearBestDist": 0,
+        "PickupController": "None",
+        "Prompt": "Use test object"
+      },
+      "actual": {
+        "ActiveUsers": 0,
+        "BeginCount": 0,
+        "BoundController": "None",
+        "Carrier": "None",
+        "CarrierComponent": "None",
+        "CarryState": 0,
+        "DropDirection": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "EndCount": 0,
+        "GripOffset": 30,
+        "Heavy": false,
+        "HoldPitch": 51.7,
+        "HoldRoll": -6.3,
+        "HoldSeconds": 2,
+        "HoldYaw": 80.9,
+        "InitialTransform": {
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotation": {
+            "pitch": 0,
+            "yaw": 0,
+            "roll": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "InstantCount": 0,
+        "InteractionEnabled": true,
+        "LastSwingTime": -100,
+        "LocalSwingTime": 0,
+        "Mode": "Instant",
+        "NearBest": "None",
+        "NearBestDist": 0,
+        "PickupController": "None",
+        "Prompt": "Use test object"
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-570.000000,Y=1005.000000,Z=105.000000),Scale3D=(X=0.060000,Y=0.060000,Z=0.950000))",
+      "clone_transform": "(Rotation=(X=-0.707107,Y=-0.000000,Z=0.000000,W=0.707107),Translation=(X=-570.000000,Y=1005.000000,Z=105.000000),Scale3D=(X=0.060000,Y=0.060000,Z=0.950000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_3",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_0",
+      "class": "BP_MineDeposit_C",
+      "source_properties": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_3"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 3
+      },
+      "expected": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_3"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 3
+      },
+      "actual": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_3"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 3
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=-0.000000,Y=0.000000,Z=-0.983255,W=0.182236),Translation=(X=550.000000,Y=750.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=-0.000000,Y=0.000000,Z=-0.983255,W=0.182236),Translation=(X=550.000000,Y=750.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_2",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_1",
+      "class": "BP_MineDeposit_C",
+      "source_properties": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_2"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 2
+      },
+      "expected": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_2"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 2
+      },
+      "actual": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_2"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 2
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=-0.000000,Z=0.920505,W=0.390731),Translation=(X=-400.000000,Y=-600.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=-0.000000,Z=0.920505,W=0.390731),Translation=(X=-400.000000,Y=-600.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_1",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_2",
+      "class": "BP_MineDeposit_C",
+      "source_properties": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_1"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 1
+      },
+      "expected": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_1"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 1
+      },
+      "actual": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_1"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 1
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=-0.000000,Z=0.551937,W=0.833886),Translation=(X=400.000000,Y=-550.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=-0.000000,Z=0.551937,W=0.833886),Translation=(X=400.000000,Y=-550.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineDeposit_C_0",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineDeposit_C_3",
+      "class": "BP_MineDeposit_C",
+      "source_properties": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_0"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 0
+      },
+      "expected": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_0"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 0
+      },
+      "actual": {
+        "Active": true,
+        "Broken": false,
+        "Covered": false,
+        "Hits": 0,
+        "HitsNeeded": 3,
+        "Plate": {
+          "refPath": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_0"
+        },
+        "Revealed": false,
+        "RockCount": 3,
+        "Rocks": [],
+        "Slot": 0
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-450.000000,Y=850.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-450.000000,Y=850.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_MineCart_C_0",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MineCart_C_0",
+      "class": "BP_MineCart_C",
+      "source_properties": {
+        "Arrived": false,
+        "Distance": 0,
+        "Loaded": [],
+        "LoadedCount": 0,
+        "PushSpeed": 70,
+        "Pushers": [],
+        "RocksNeeded": 6,
+        "StartLocation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TrackLength": 840
+      },
+      "expected": {
+        "Arrived": false,
+        "Distance": 0,
+        "Loaded": [],
+        "LoadedCount": 0,
+        "PushSpeed": 70,
+        "Pushers": [],
+        "RocksNeeded": 6,
+        "StartLocation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TrackLength": 840
+      },
+      "actual": {
+        "Arrived": false,
+        "Distance": 0,
+        "Loaded": [],
+        "LoadedCount": 0,
+        "PushSpeed": 70,
+        "Pushers": [],
+        "RocksNeeded": 6,
+        "StartLocation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TrackLength": 840
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-930.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-280.000000,Y=-930.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_0",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_0",
+      "class": "BP_PressurePlate_C",
+      "source_properties": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 0,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "expected": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 0,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "actual": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 0,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-450.000000,Y=850.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-450.000000,Y=850.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_1",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_1",
+      "class": "BP_PressurePlate_C",
+      "source_properties": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 1,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "expected": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 1,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "actual": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 1,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=400.000000,Y=-550.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=400.000000,Y=-550.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_2",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_2",
+      "class": "BP_PressurePlate_C",
+      "source_properties": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 2,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "expected": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 2,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "actual": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 2,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-400.000000,Y=-600.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=-400.000000,Y=-600.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    },
+    {
+      "source": "/Game/Hazards/L_Site01_HZ.L_Site01_HZ:PersistentLevel.BP_PressurePlate_C_3",
+      "clone": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_PressurePlate_C_3",
+      "class": "BP_PressurePlate_C",
+      "source_properties": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 3,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "expected": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 3,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "actual": {
+        "Enabled": false,
+        "OccupantCount": 0,
+        "PlateMesh": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/SM_PressurePlate_Top.SM_PressurePlate_Top"
+        },
+        "PlateSlot": 3,
+        "Pressed": false,
+        "PressedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_StoneCarving.MI_HCA2_StoneCarving"
+        },
+        "PuzzleTag": "HZ_MinePlates",
+        "ReleasedMaterial": {
+          "refPath": "/Game/Puzzles/Art/HCA2_Props/Materials/MI_HCA2_Stone.MI_HCA2_Stone"
+        },
+        "RoundIndex": 1
+      },
+      "differences": [],
+      "source_baseline_diff": [],
+      "source_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=550.000000,Y=750.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+      "clone_transform": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=550.000000,Y=750.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))"
+    }
+  ],
+  "protected_sha256": {
+    "Content/Hazards/L_Site01_HZ.umap": "1ae2bd30a25061fed13ce45ec379888579babaa9e6d33c307887d3b19fc691c6",
+    "Content/Hazards/FirstRoom/BP_MinePuzzle.uasset": "d0c79b175b1886085801166f463a9b928edc35ba9066d46769ec4c93679f34e2",
+    "Content/Hazards/FirstRoom/BP_MineCart.uasset": "5d46acaedecedafaeecd54847f554a5594275c7797531e4b65a846d0ca50b4f8",
+    "Content/Hazards/FirstRoom/BP_MineDeposit.uasset": "6e3aefbf664b17330a5e7f896bb49450904138872bc25125d166f674c82ab3c7",
+    "Content/Hazards/FirstRoom/BP_MinePickaxe.uasset": "e50be0734085a7f092939f4b0677973fe865c5fd84233a0f538245c15b4ddb97",
+    "Content/Hazards/FirstRoom/BP_MineRock.uasset": "9a5832a9d57fa81083fab803ae767119c6bf7918805de7db8f0db780b6deb377",
+    "Content/Hazards/FirstRoom/Input/IA_HZ_Pickup.uasset": "ccca69beed2df6313840187db7565e6e6ac8e9863268198fefe3cb3019f81595",
+    "Content/Hazards/FirstRoom/Input/IA_HZ_Swing.uasset": "7258bbe4ee1ad30e4344fbf5df8a13bc0717d012dc37e5958946d24a516048c5",
+    "Content/Hazards/FirstRoom/Input/IMC_HZ_Pickaxe.uasset": "3ece072400070512c613fa49fc6b553b31790ecd66e7a8bdeef3e8581b0e2db5",
+    "Content/Hazards/FirstRoom/Input/IMC_HZ_PickupNear.uasset": "5787c05159eb9cf5a151fe5b90a426de5b132f3dfafd8518b028a9b7302fc280"
+  },
+  "protected_bytes_unchanged": true
+}

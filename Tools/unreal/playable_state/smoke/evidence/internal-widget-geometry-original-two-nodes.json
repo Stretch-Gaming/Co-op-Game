@@ -1,0 +1,1 @@
+[{"class": "K2Node_FunctionEntry", "type": "|ReadWidgetCachedLocalSize", "inputs": [], "outputs": [["then", "Exec", 0], ["WidgetTarget", "Widget Object Reference", 0]]}, {"class": "K2Node_FunctionResult", "type": "|ReturnNode", "inputs": [["execute", "Exec", 0], ["LocalSize", "Vector 2D Structure", 0]], "outputs": []}]

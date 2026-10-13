@@ -1,0 +1,79 @@
+{
+  "started_utc": "2026-10-13T05:59:45.514531+00:00",
+  "status": "failed",
+  "stage": "await_round3_native_masks",
+  "args": {
+    "players": 2,
+    "profile": "joining",
+    "timeout": 180
+  },
+  "report": "/tmp/hc-a4-crystal-lock/runtime-evidence/crystal-lock-lit-joining-2.json",
+  "stage_history": [
+    {
+      "stage": "registered_native_tick_gate",
+      "utc": "2026-10-13T05:59:45.527732+00:00",
+      "detail": null
+    },
+    {
+      "stage": "authorized_round3_initializer",
+      "utc": "2026-10-13T05:59:46.523018+00:00",
+      "detail": null
+    },
+    {
+      "stage": "await_round3_native_masks",
+      "utc": "2026-10-13T05:59:46.524448+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 0
+      }
+    }
+  ],
+  "native_test_executed": false,
+  "runtime_acceptance_pending": false,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": [],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        266
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        267
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test"
+    }
+  ],
+  "player_ids": [
+    266,
+    267
+  ],
+  "authorized_initializer": "server GameMode.StartRound(Index=3), once, after fresh Lobby preflight",
+  "unchanged_native_braziers": [
+    "BP_CrystalLock_C_2",
+    "BP_CrystalLock_C_3"
+  ],
+  "case_roster": [],
+  "finished_utc": "2026-10-13T05:59:54.566013+00:00",
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-audit/ghost_runtime_support.py\", line 146, in guarded_tick\n    try:self.tick_inputs();callback(delta)\n                           ^^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 447, in tick\n    assert h.elapsed() < 8, ('Native Round 3 enabled masks did not settle', round_now)\n           ^^^^^^^^^^^^^^^\nAssertionError: ('Native Round 3 enabled masks did not settle', {'index': 0, 'attempt': 0, 'phase': 0})\n",
+  "cleanup_errors": [],
+  "passed": false
+}

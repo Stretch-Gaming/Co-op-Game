@@ -1,0 +1,4791 @@
+{
+  "schema": 1,
+  "status": "control_geometry_unqualified_awaiting_native_screenshot",
+  "collection_complete": true,
+  "pie_only": true,
+  "packages_saved": [],
+  "script_file": "/tmp/coop-audit/probe_designer_control.py",
+  "script_sha256": "f75dcef06b7877027233ffbb7af3c23021b9528f8ce8a34122fa8d8fb88151bb",
+  "editor_pid": 81093,
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "fixture_actions": [
+    {
+      "action": "Create explicit WorldContext=owning PC, OwningPlayer=same PC; AddToPlayerScreen(0)",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+      "runtime_texts_unchanged": true,
+      "saved_asset_edited": false
+    }
+  ],
+  "callback_limit": 8,
+  "wall_poll_limit_seconds": 5,
+  "samples": [
+    {
+      "callback": 1,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 2,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 3,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 4,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 5,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 6,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 7,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "callback": 8,
+      "snapshot": {
+        "owners": [
+          {
+            "id": 290,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              1720.0,
+              1072.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          },
+          {
+            "id": 291,
+            "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+            "pixels": [
+              640.0,
+              500.0
+            ],
+            "viewport": [
+              0.0,
+              0.0
+            ],
+            "player": [
+              0.0,
+              0.0
+            ],
+            "hud": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+              "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            },
+            "prompt": {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+              "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                0.0,
+                0.0
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+              "in_viewport": true,
+              "subsystem_widget_added": true,
+              "active_owner_class_count": 1
+            }
+          }
+        ],
+        "candidate": {
+          "control": {
+            "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+            "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+            "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+            "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+            "opacity": 1.0,
+            "desired": [
+              371.3140563964844,
+              181.6356201171875
+            ],
+            "cache": [
+              0.0,
+              0.0
+            ],
+            "paint": [
+              0.0,
+              0.0
+            ],
+            "tick": [
+              0.0,
+              0.0
+            ]
+          },
+          "tree": [
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                31.224332809448242,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "GearLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "5"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+              "class": "/Script/UMG.HorizontalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                307.3140563964844,
+                117.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "HorizontalBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+              "class": "/Script/UMG.Overlay",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                371.3140563964844,
+                181.6356201171875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "Overlay_67",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": null
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+              "class": "/Script/UMG.SizeBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                200.0,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SizeBox_0",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                62.463623046875
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "SpeedLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "99"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "TextBlock_1",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "text": "Gear"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+              "class": "/Script/UMG.TextBlock",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.VISIBLE: 0>",
+              "opacity": 1.0,
+              "desired": [
+                51.37388610839844,
+                23.17198944091797
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "UnitLabel",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "text": "Km/h"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                43.314064025878906,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+            },
+            {
+              "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+              "class": "/Script/UMG.VerticalBox",
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+              "opacity": 1.0,
+              "desired": [
+                61.448665618896484,
+                85.63561248779297
+              ],
+              "cache": [
+                0.0,
+                0.0
+              ],
+              "paint": [
+                0.0,
+                0.0
+              ],
+              "tick": [
+                0.0,
+                0.0
+              ],
+              "name": "VerticalBox_76",
+              "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+              "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+            }
+          ],
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "pixels": [
+            1720.0,
+            1072.0
+          ],
+          "viewport": [
+            0.0,
+            0.0
+          ],
+          "player": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ],
+  "callback_type": "actual Slate post-tick callback, not an inferred paint frame",
+  "limitations": [
+    "Control remains attached for parent screenshot until explicit cleanup or StopPIE.",
+    "Positive native geometry is layout/paint readback; pixel visibility needs native-window observation.",
+    "Wall deadline is checked on callbacks; a stalled editor requires parent cancellation."
+  ],
+  "candidate_proofs": {
+    "asset_sha256": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "designer_receipt_sha256": "5717fb1a64b6058f9405142ff58b4b880a0ca55d2a2361e9d5613c1ed6e015f4",
+    "graphs_receipt_sha256": "60d5c9d13cb7d80590cae587ebc518566fd89cf2ec0756926bdd983e4045cccf",
+    "creation_event_review": "PreConstruct sets existing UnitLabel only; custom UpdateSpeed/UpdateGear not invoked"
+  },
+  "world_inventory": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "server": true,
+      "dedicated": true,
+      "local_ids": []
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "server": false,
+      "dedicated": false,
+      "local_ids": [
+        290
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "server": false,
+      "dedicated": false,
+      "local_ids": [
+        291
+      ]
+    }
+  ],
+  "owner_id": 290,
+  "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+  "owner_world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+  "selection": "actual joining local pawn, sorted world path/PlayerState ID",
+  "before": {
+    "owners": [
+      {
+        "id": 290,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          1720.0,
+          1072.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      },
+      {
+        "id": 291,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          640.0,
+          500.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      }
+    ]
+  },
+  "control_path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+  "immediate_after": {
+    "owners": [
+      {
+        "id": 290,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          1720.0,
+          1072.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      },
+      {
+        "id": 291,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          640.0,
+          500.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      }
+    ],
+    "candidate": {
+      "control": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+        "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "desired": [
+          0.0,
+          0.0
+        ],
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "tree": [
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "GearLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "5"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+          "class": "/Script/UMG.HorizontalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "HorizontalBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+          "class": "/Script/UMG.Overlay",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "Overlay_67",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": null
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+          "class": "/Script/UMG.SizeBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SizeBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SpeedLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "99"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "TextBlock_1",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "Gear"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "UnitLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "Km/h"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox_76",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+        }
+      ],
+      "in_viewport": true,
+      "subsystem_widget_added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "last_after": {
+    "owners": [
+      {
+        "id": 290,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          1720.0,
+          1072.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      },
+      {
+        "id": 291,
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "pixels": [
+          640.0,
+          500.0
+        ],
+        "viewport": [
+          0.0,
+          0.0
+        ],
+        "player": [
+          0.0,
+          0.0
+        ],
+        "hud": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+          "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        },
+        "prompt": {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+          "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            0.0,
+            0.0
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+          "in_viewport": true,
+          "subsystem_widget_added": true,
+          "active_owner_class_count": 1
+        }
+      }
+    ],
+    "candidate": {
+      "control": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+        "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "desired": [
+          371.3140563964844,
+          181.6356201171875
+        ],
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "tree": [
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            31.224332809448242,
+            62.463623046875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "GearLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "5"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+          "class": "/Script/UMG.HorizontalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            307.3140563964844,
+            117.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "HorizontalBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+          "class": "/Script/UMG.Overlay",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            371.3140563964844,
+            181.6356201171875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "Overlay_67",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": null
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+          "class": "/Script/UMG.SizeBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            200.0,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SizeBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            61.448665618896484,
+            62.463623046875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SpeedLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "99"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            43.314064025878906,
+            23.17198944091797
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "TextBlock_1",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "Gear"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            51.37388610839844,
+            23.17198944091797
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "UnitLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "Km/h"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            43.314064025878906,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            61.448665618896484,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox_76",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+        }
+      ],
+      "in_viewport": true,
+      "subsystem_widget_added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "actual_callbacks": 8,
+  "stop_reason": "callback_limit",
+  "elapsed_seconds": 0.328832,
+  "control_left_attached": true,
+  "checks": {
+    "saved_candidate_bytes_unchanged": true,
+    "control_owning_attachment": true,
+    "nonzero_control_paint": false,
+    "nonzero_control_cache_and_tick": false,
+    "nonzero_candidate_player_and_viewport": false,
+    "all_native_text_blocks_have_nonzero_paint": false,
+    "existing_hud_prompt_identity_ownership_and_counts_preserved": true
+  },
+  "geometry_qualified": false,
+  "parent_readbacks": [
+    {
+      "control": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0",
+        "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "desired": [
+          371.3140563964844,
+          181.6356201171875
+        ],
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "tree": [
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            31.224332809448242,
+            62.463623046875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "GearLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "5"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+          "class": "/Script/UMG.HorizontalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            307.3140563964844,
+            117.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "HorizontalBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+          "class": "/Script/UMG.Overlay",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            371.3140563964844,
+            181.6356201171875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "Overlay_67",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": null
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+          "class": "/Script/UMG.SizeBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            200.0,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SizeBox_0",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            61.448665618896484,
+            62.463623046875
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "SpeedLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "99"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            43.314064025878906,
+            23.17198944091797
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "TextBlock_1",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "text": "Gear"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+          "class": "/Script/UMG.TextBlock",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.VISIBLE: 0>",
+          "opacity": 1.0,
+          "desired": [
+            51.37388610839844,
+            23.17198944091797
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "UnitLabel",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "text": "Km/h"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            43.314064025878906,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0"
+        },
+        {
+          "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+          "class": "/Script/UMG.VerticalBox",
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+          "opacity": 1.0,
+          "desired": [
+            61.448665618896484,
+            85.63561248779297
+          ],
+          "cache": [
+            0.0,
+            0.0
+          ],
+          "paint": [
+            0.0,
+            0.0
+          ],
+          "tick": [
+            0.0,
+            0.0
+          ],
+          "name": "VerticalBox_76",
+          "outer": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0",
+          "parent": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0"
+        }
+      ],
+      "in_viewport": true,
+      "subsystem_widget_added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

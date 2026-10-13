@@ -1,0 +1,336 @@
+{
+  "schema": 1,
+  "action": "measure",
+  "passed": true,
+  "collection_complete": true,
+  "packages_saved": [],
+  "editor_pid": 81093,
+  "script_file": "/tmp/coop-audit/probe_internal_widget_geometry_v3.py",
+  "script_sha256": "7e95d7957bc836c6994d6842da1d08c2bb02f6b64009d469b3253bc23bc44925",
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "scope": "one unsaved /Temp ActorComponent Blueprint; CDO only; no actors/component attachment/HUD/template/settings edits",
+  "protected_disk_hashes_before": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "blueprint_path": "/Temp/CoopAudit/BP_InternalGeometry_81093_1f13b18378.BP_InternalGeometry_81093_1f13b18378",
+  "build_receipt_sha256": "8d0460a23a7631f1b2e59f252951682403f98c15e233eb4abbe2770288ec6756",
+  "control_receipt": "/tmp/coop-audit/runtime-evidence/designer-control-internal.json",
+  "control_receipt_sha256": "1120850e95abb69342eafeef293ad59b3fbb2f994abaec79b6a75d94bfd709d0",
+  "control": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0",
+  "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+  "owner_world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+  "rows": [
+    {
+      "kind": "control",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0",
+      "class": "/Game/VehicleTemplate/UI/UI_Vehicle.UI_Vehicle_C",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        371.3140563964844,
+        181.6356201171875
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-Overlay_67",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.Overlay_67",
+      "class": "/Script/UMG.Overlay",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        371.3140563964844,
+        181.6356201171875
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-HorizontalBox_0",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.HorizontalBox_0",
+      "class": "/Script/UMG.HorizontalBox",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        307.3140563964844,
+        117.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        307.3140563964844,
+        117.63561248779297
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-VerticalBox",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.VerticalBox",
+      "class": "/Script/UMG.VerticalBox",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        43.314064025878906,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        43.314064025878906,
+        85.63561248779297
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-GearLabel",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.GearLabel",
+      "class": "/Script/UMG.TextBlock",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        43.314064025878906,
+        62.463623046875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        31.224332809448242,
+        62.463623046875
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-TextBlock_1",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.TextBlock_1",
+      "class": "/Script/UMG.TextBlock",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        43.314064025878906,
+        23.17198944091797
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        43.314064025878906,
+        23.17198944091797
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-SizeBox_0",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.SizeBox_0",
+      "class": "/Script/UMG.SizeBox",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        200.0,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        200.0,
+        85.63561248779297
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-VerticalBox_76",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.VerticalBox_76",
+      "class": "/Script/UMG.VerticalBox",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        200.0,
+        85.63561248779297
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        61.448665618896484,
+        85.63561248779297
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-SpeedLabel",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.SpeedLabel",
+      "class": "/Script/UMG.TextBlock",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        200.0,
+        62.463623046875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        61.448665618896484,
+        62.463623046875
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "control-designer-UnitLabel",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.UI_Vehicle_C_0.WidgetTree_0.UnitLabel",
+      "class": "/Script/UMG.TextBlock",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        200.0,
+        23.17198944091797
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        51.37388610839844,
+        23.17198944091797
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "HUD-292",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.WBP_HCA3RoundHUD_C_0",
+      "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        1732.8616943359375,
+        1080.01611328125
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "prompt-292",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_43.WBP_InteractPrompt_C_0",
+      "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        332.4676513671875,
+        171.27120971679688
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "HUD-293",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_44.WBP_HCA3RoundHUD_C_0",
+      "class": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.WBP_HCA3RoundHUD_C",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        1383.78369140625,
+        1081.0810546875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    },
+    {
+      "kind": "prompt-293",
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_44.WBP_InteractPrompt_C_0",
+      "class": "/Game/Puzzles/UI/WBP_InteractPrompt.WBP_InteractPrompt_C",
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "internal_vector2d": [
+        713.5134887695312,
+        367.56756591796875
+      ],
+      "python_geometry_roundtrip": [
+        0.0,
+        0.0
+      ],
+      "desired": [
+        0.0,
+        0.0
+      ],
+      "internal_positive": true,
+      "python_positive": false,
+      "equal": false
+    }
+  ],
+  "internal_control_positive": true,
+  "measured_boundary_divergence": true,
+  "saved_bytes_preserved": true,
+  "protected_disk_hashes_after": {
+    "VehicleTemplate/UI/UI_Vehicle": "8c43a8756d2f29837d9eec323226f3a9e3061debb9a3b577ab502d985d3f59cb",
+    "Puzzles/UI/HCA3/WBP_HCA3RoundHUD": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Puzzles/UI/WBP_InteractPrompt": "c62b783215a26f6b343c3ccfcfcaea43cd832ec943893f3f26dd089d56af3425",
+    "Puzzles/UI/Results/WBP_RunResults": "b3c3063d16c423ee6913e373dad8c0025b8b5c8290918611120840c131f9d858",
+    "Puzzles/UI/HCA3/AC_HCA3HUD": "6b01e014ad587f4722fb52e35057088abbb7b2670da301df51fd548d159492ae",
+    "Core/BP_CoopCharacter": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc"
+  },
+  "status": "paired_measurements_collected_no_hud_fix_claim"
+}
