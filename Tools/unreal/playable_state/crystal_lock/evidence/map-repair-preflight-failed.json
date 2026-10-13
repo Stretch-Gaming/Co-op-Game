@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "saved_packages": [],
+  "changed": [],
+  "error": "Traceback (most recent call last):\n  File \"/private/tmp/hc-a4-crystal-lock/repair_placed_visuals_root.py\", line 24, in <module>\n    assert c.get_editor_property('static_mesh') is None and c.get_collision_enabled()==ue.CollisionEnabled.NO_COLLISION\n                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

@@ -1,0 +1,436 @@
+{
+  "base": "56bbb931db5e4d3cc8eb4c5341dee42003e1c9de",
+  "files": [
+    {
+      "path": "Tools/unreal/playable_state/mining/README.md",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "db3ad7968e63cd0a2ca4195ffc1fe6945f66f1750c2a7849067c9e3b1eeef9f2"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-completion-host_split-4-owner3-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "e7c5dcdc25a90f245c0c75985aa34a931f74ee813eaa591155fcffcab7b21305"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-completion-joining-2-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "62ea7f0647d89895eb61d4927957ea99ca9b67d568bd9c64448d320f08c7f6d5"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-completion-joining-3-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "468c6f2b9ebb3689c71b733baf14d50ae6cb9afa7cbc25132eb1a0d356f3d925"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-completion-joining-4-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "099f423a6747bbf708872a72a715245ca350a11d12b0af4b4f22a1af475bce47"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-lost_rock-joining-2-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "9a19afca4fcd230bb1fcf00ab707f0f2fd497c4ab26a48c7d6f400bcbb5bb53a"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/acceptance-wipe-joining-2-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "1dfbfb351951545f9ec5b3cc76b43544f1dde61d8f4ff0d86f6bb0954e033200"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/cart-removal.json",
+      "origin": "root preserved native packet",
+      "sha256": "da17dbcf8e3a821c45064ed24e8b3763066416bf846ba4c6186ad20ce8979268"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/clone-diff.json",
+      "sha256": "d8090dd5e4b9ba25317495863ecc6110c8d9e3cb95ee1a802701087a36f41626",
+      "origin": "/tmp/coop-mining/clone-diff.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-completion-host_split-4-owner3.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "6f9c1342fef31a8b09ef3d601d2681f714390dacc182e17da54d31f6eb7f3f12"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-completion-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "72313f704991e3a106c1a9a790cf54b31ffe9938c6c2d3afad2324ec2a7e210a"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-completion-joining-3-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "b0e31897a52be881af34509754a4928922467e7be3025e85f0dee7e7fa26655c"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-completion-joining-4-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "de731f06c361b4fcfb79d1191feca46abd6711ae333f7bbcfb5657847ec2d92e"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-lost_rock-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "600cafa314952fb47123ce633d7665c1dc058544ba980a395f81b253c624bc30"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/completion-wipe-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "e3c35eaed1cad3cf9c50956135e50881b6144414fb52c772fe8154c164e12ed2"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/core-packet.json",
+      "sha256": "ad69cebd064aded0b641f57c14dabb4580662f00f4f588ba852e8ff11bf374e8",
+      "origin": "/tmp/coop-mining/core-packet.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/core-patched.json",
+      "sha256": "669926e9cb94a93b8768f417f23d9f2009d6d6bf910e835974f2b2dc6fa34455",
+      "origin": "/tmp/coop-mining/core-patched.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-cart-validation-source.py",
+      "origin": "root preserved native packet",
+      "sha256": "35d8a40ec2cd1ca9b76ac98fa764d0271a451fd5a939a071088c8871efb47851"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-cart-validation.json",
+      "origin": "root preserved native packet",
+      "sha256": "ea898c8384cf4c594a30eb9ea044b37c5551d9c794a81d4b81e59cbb8ff59384"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-clean-start-acceptance_transaction-v5.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "63b1aa46a77d4884efef18e3d70ef1c2a7834ec56da0ceba8e1a06b988716beb"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-clean-start-completion-completion-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "3118f19ca63b6840957e05b15817457c51878ffd771c8e5cd780b792ec8b2047"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-clean-start-receipt.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "1d870a9ec9162a61fe4be833a285ed8a352b7c19e8a801450a240022aa4ab0dd"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-first-completion-joining-2-owner0.json",
+      "sha256": "77162f829614163a2c9f84b067f0e04710559e34bf880761ebed6496f22162db",
+      "origin": "/tmp/coop-mining/completion-completion-joining-2-owner0.json",
+      "kind": "first_failed_native_diagnostic"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-first-completion-source.py",
+      "sha256": "c9520ae34ec47497ad5fd143f3a229403d949d077164a17e1d1a73b8d65108e0",
+      "origin": "Tools/unreal/playable_state/mining/executed/acceptance_completion.py",
+      "kind": "first_failed_native_source"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-first-owner-death-joining-2-owner0.json",
+      "sha256": "79a8ff3256b96fc9f86cea4da82e28c9302cb287fe50406e253c0456a6c2cce6",
+      "origin": "/tmp/coop-mining/completion-completion-joining-2-owner0.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-first-owner-death-source.py",
+      "sha256": "0fe912da103ff5442321bae4ba6471ecdb10215c89c295d0f111bc92247dc2f1",
+      "origin": "/tmp/coop-mining/acceptance_completion.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-four-player-acceptance-completion-joining-4-owner0-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "1e031657d76840631a1207a375d6be8c917ef4fcfaf668cfe84f0dbc4f00bec8"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-four-player-completion-completion-joining-4-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "f2d5475f59c4d51d04f58b0322d43d0f063472fed294e2ebf878fc17dd6409ca"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-held-los-patch-preflight-error.json",
+      "sha256": "c91b4a8a17b04516af85e910a6c6f2b15d4a3808ee27007ca427b736910db5e0",
+      "origin": "/tmp/coop-mining/use-allowed-patch-error.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-held-los-patch-preflight-source.py",
+      "sha256": "b7f76b36927c2be9231d6a645484ab0cd8aaedba64859a410ad3278a8a4af6f8",
+      "origin": "/tmp/coop-mining/patch_use_allowed-frozen.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-held-los-source.py",
+      "sha256": "34e310d5daf78ce8a5490aed694358c2435d3b52972d9a46647a85c713e0bdc9",
+      "origin": "/tmp/coop-mining/acceptance_completion-frozen.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-held-los-swing-probe-joining-2-owner0.json",
+      "sha256": "0b3617c53bb0144f15a91da084069beeda7273c5d0139bb8aee1fa8abd52fc05",
+      "origin": "/tmp/coop-mining/completion-swing_probe-joining-2-owner0.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-second-deposit-swing-joining-2-owner0.json",
+      "sha256": "8cfc480289720fb920f1c983b32a1ca2c0ec74a90dedea87664b5544f3833bbe",
+      "origin": "/tmp/coop-mining/completion-completion-joining-2-owner0.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-second-deposit-swing-source.py",
+      "sha256": "5cabb4cefd9a7a6d0f65903125ffcd4ae7c754e611819edaf8ee46c7cc6d6431",
+      "origin": "/tmp/coop-mining/acceptance_completion.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-swing-trace-joining-2-owner0.json",
+      "sha256": "56dc827c7b652b7f82b30368a16f37482dc7b0bd3346fc16509018dd9f3b059a",
+      "origin": "/tmp/coop-mining/completion-completion-joining-2-owner0.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-swing-trace-source.py",
+      "sha256": "b39e7b1a30fa448fc5a72bf38599a8c552cc5dc43c138b44243b2878a404f2dc",
+      "origin": "/tmp/coop-mining/acceptance_completion-swing-trace-executed.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-three-player-pad-timeout-log.txt",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "9165893f2c34f8694b0cee74eae1cf4cf92d11946d98f13ee7e46ca95b32e35b"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-three-player-pad-timeout.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "6da3b17714490b63ec64a4bdbc6fb7b2339e6a44b3269a8133962735c8830a20"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-trigger-objective-classification.json",
+      "sha256": "ce0dd2376132f22af55f468a8c42fcabd90ceecea78f2806b919afa2e23f920a",
+      "origin": "parent-confirmed runtime classification"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-trigger-objective-joining-2-owner0-parent-stop.json",
+      "sha256": "6c5ee4ca583afb4755fa286c1ca7d55601109c114854411e2ca1d1c9438a98be",
+      "origin": "/tmp/coop-mining/trigger-pickaxe-joining-2-owner0-trigger_and_injected_pickup.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/diagnostic-trigger-objective-source.py",
+      "sha256": "d1074e5b19c7559a1648794a2184303f1cfe997f1d04e02e283700104a871209",
+      "origin": "/tmp/coop-mining/acceptance_trigger_pickaxe.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/held-use-native-regression.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "88987d8fbeba403052fa9104bf81088aac0cc6b83fa0a4148f01487eb7ed46a7"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/held-use-summary.json",
+      "origin": "root preserved native packet",
+      "sha256": "440a4618c21c3a16004c46fda31c011da7cc9aac6cb39006e1fec9ab76999476"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/host-mining-owner.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "7416e6e1cefd4750da7386b7e49a2cbc6e2ed99fe520da203b9dba8d22b8ca68"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/inventory.json",
+      "sha256": "633addf730e17d4437b8b4c1f5f79059cc46426e51e7f001df8335dd718f7d49",
+      "origin": "/tmp/coop-mining/inventory.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/matrix-summary.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "9737e5b8973350fc938c57d52e04ee773997391b5c65273ac5ddba8fd5ef6ff0"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/placement.json",
+      "sha256": "f98e9c7984b912209f361e93d6fff8853acea600a1d1b3313be3882c41d14b51",
+      "origin": "/tmp/coop-mining/placement.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/retry-inventory.json",
+      "sha256": "273370da621101c8a7929f50af8c2b7a1589f2f9e28907efc1651e12af3103ab",
+      "origin": "/tmp/coop-mining/retry-inventory.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/rpc-inventory.json",
+      "sha256": "7cd53fc4dd2b3f09acfbe5d06d817853c55d3adcab1d2fc5221a625663120a13",
+      "origin": "/tmp/coop-mining/rpc-inventory.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-completion-host_split-4-owner3.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "b1a841704b96277573197a14a39498728c2ab0b48db54fd6d079d13cf5d28d95"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-completion-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "2102d00ab1d07e9ef48e712c6d4b6ecd403fcdd7f565f910cb49fc36de6b0697"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-completion-joining-3-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "c8bd2668c69a771c96800a04523d49df4986b480d441994229ce604c412db3e1"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-completion-joining-4-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "cefa1d1eb18c2c2fa362fccded384f08d32c2e9c0a5ee89ac82e3f0b228436ca"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-lost_rock-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "3031a43774062f3559f13feaf24d990392850f309b722382e3baffe346b7550d"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-pickaxe-joining-2-owner0-trigger_and_injected_pickup.json",
+      "sha256": "7b2959202767eface7f60ea1cbd7ce1efcd2ff4d276e39ffa930a5399451e7db",
+      "origin": "/tmp/coop-mining/trigger-pickaxe-joining-2-owner0-trigger_and_injected_pickup.json"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/trigger-wipe-joining-2-owner0.json",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "aa5ed61e41f4289e5fb1caa49ace21532a314cfbddd9f5e4dbac65f1e7659b42"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/use-allowed-current-snapshot.json",
+      "origin": "root preserved native packet",
+      "sha256": "933c0eba81bfff391f475aff53f91156129918dfd3e1893a3498d49f74b5b294"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/use-allowed-inventory.json",
+      "origin": "root preserved native packet",
+      "sha256": "6e815d84955d6ad549fc9992fd75fe7938c941a20991553d4bd9928f3283528c"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/use-allowed-operator.json",
+      "origin": "root preserved native packet",
+      "sha256": "6bc42a994f76c56cc2b128f29739bf625f27b5af0d8ec08f9b3f99840df957c4"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/use-allowed-patch-error.json",
+      "origin": "root preserved native packet",
+      "sha256": "cfe6022c7c9df1724319bafd52cc866b9ee2ebee0c2c9d00c9bdf1db54cfffb1"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/evidence/use-allowed-patched.json",
+      "origin": "root preserved native packet",
+      "sha256": "2ef7c08dbc1a3709c84d6f788bb746ded598dc738af3664ce8f41e3e4448a1e8"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/acceptance_completion.py",
+      "sha256": "34e310d5daf78ce8a5490aed694358c2435d3b52972d9a46647a85c713e0bdc9",
+      "origin": "/tmp/coop-mining/acceptance_completion-frozen.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/acceptance_transaction_v5.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "63b1aa46a77d4884efef18e3d70ef1c2a7834ec56da0ceba8e1a06b988716beb"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/acceptance_transaction_v6.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "66721707d3aca6d86ddb0f4c5624425843c15cfcfcd80b896c2857f8142e7d72"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/acceptance_trigger_pickaxe.py",
+      "sha256": "b958ae620a4963d12b5f35940698ce6abf3ce758c0dae0aff78fdcd01e52518a",
+      "origin": "/tmp/coop-mining/acceptance_trigger_pickaxe.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/acceptance_trigger_pickaxe_v2.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "b115435df328532e231e014fb83b23f9b048a9c30459f62a1228a8034c1355f6"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/build_core_packet.py",
+      "sha256": "c11afbcf54d988b8522d9e5e73134c81a16947a0689d0def902f09c8aef2d425",
+      "origin": "/tmp/coop-mining/build_core_packet.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/clone_diff.py",
+      "sha256": "9b7638eaf553b5c46e168f38ec34b932f2142748a965e16f4491f73955a3fcae",
+      "origin": "/tmp/coop-mining/clone_diff.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/finalize_use_allowed.py",
+      "origin": "root preserved native packet",
+      "sha256": "132b2064b3411db805aeeca67c4b9eba31f45894259a256a5df7c3f677d5018a"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/integrate_placement.py",
+      "sha256": "697e2cc4b908bfd450f205aef3564ffca6ff8e0ae6d1dfc26a6e18836526f9d9",
+      "origin": "/tmp/coop-mining/integrate_placement.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/inventory.py",
+      "sha256": "b82932d01351ce19079d767fbdf2df2e69e82d9520ce5053beb9df261f15257c",
+      "origin": "/tmp/coop-mining/inventory.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/inventory_retry.py",
+      "sha256": "80b1c12a1823109fbb3602c36fdc2f5d7045943cf39843735bb4241d5fdf061f",
+      "origin": "/tmp/coop-mining/inventory_retry.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/inventory_rpc.py",
+      "sha256": "1ec348961646ee32ea1c1a982a2ed7f267692e6b9b520792f28f55d7fbfdb69e",
+      "origin": "/tmp/coop-mining/inventory_rpc.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/inventory_use_allowed.py",
+      "origin": "root preserved native packet",
+      "sha256": "8f9c11f726a9d119f0f5e382976af7e65197be09e39dc51bd12118e34c245453"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/inventory_use_allowed_operator.py",
+      "origin": "root preserved native packet",
+      "sha256": "f21eb88eeb35a3c1e70d12b136cc1b7b35b192e61ac81f34433a519c76d7204b"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/native_dispatcher.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "ca32e74efe7bad30c619fd00fcc155fd57eeb0dc779d125e44ddeba48bfa0855"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/patch_core.py",
+      "sha256": "89d81d3be87770902d8be824e42c4e252c06b772e1ef12d82f9d39a329496b60",
+      "origin": "/tmp/coop-mining/patch_core.py"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/patch_use_allowed-v2.py",
+      "origin": "root preserved native packet",
+      "sha256": "48bf6f8002d99b2dda547ee55dc83d4da6eb26c63a25830d6ad998cec0833cf6"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/read_host_mining_owner.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "69e3edb6328eb196de98467f637c51daeeddebbd656e9552740bb47c01f449d9"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/remove_copied_cart.py",
+      "origin": "root preserved native packet",
+      "sha256": "80a6e5f1327633e95d869eff90108892d0eef9f5754bae2248e7372b2741fdc2"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/run_mining_four.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "19f92279aea880edbfe8f1ab23281a370d4f904750e8787f24207f13eb50fa75"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/run_mining_remaining.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "273888aba5030ac490bc1ad97e3546c2ae0e9050c1eae851c6666ec7bfee7cd0"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/executed/run_mining_transactions_v5.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "74bc31c573b5c542eca044fe6c482c2d3a9c56aa10f91d035f812256f2cb8eea"
+    },
+    {
+      "path": "Tools/unreal/playable_state/mining/replay.py",
+      "origin": "Root preserved native source/evidence or authored replay documentation",
+      "sha256": "bffb8eb12d93937e934a65297f63190b64661fead40c438c5bb5c353a0b2e57c"
+    }
+  ],
+  "native_acceptance_pending": true,
+  "native_authoring_compile_passed": true,
+  "held_use_authoring_native_passed": true,
+  "copied_cart_removal_native_passed": true,
+  "bounded_mining_transaction_matrix_passed": true,
+  "native_transaction_case_count": 6,
+  "native_transaction_check_entries": 119,
+  "native_trigger_check_entries": 24,
+  "full_mission_acceptance_pending": true
+}

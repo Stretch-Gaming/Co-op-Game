@@ -1,0 +1,42 @@
+{
+  "stage": "compile and prove preservation",
+  "created": [
+    "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_34",
+    "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_4",
+    "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_4",
+    "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_6"
+  ],
+  "saved": [],
+  "original_node_count": 51,
+  "graph_count": 70,
+  "variables": [
+    "FocusedTarget",
+    "LocalUseTarget",
+    "ActiveTarget",
+    "InputHeld",
+    "LocalUseActive",
+    "ActiveUse",
+    "InputReady",
+    "ActiveStartedAt",
+    "ActiveHoldSeconds",
+    "LocalStartedAt",
+    "LocalHoldSeconds",
+    "ActiveRoundIndex",
+    "ActiveRoundAttempt",
+    "ActiveRoundPhase",
+    "ActiveMode",
+    "PromptWidget",
+    "InputController",
+    "InteractionBlocked",
+    "bBraced",
+    "UnbracedSpeed",
+    "LastBoostTime",
+    "BraceInputHeld",
+    "ReviveTarget",
+    "bTakenProtected",
+    "SixInputReady",
+    "SixInputController"
+  ],
+  "lease_owner": "peterkimpk1",
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-mining/patch_use_allowed-v2.py\", line 133, in <module>\n    try:RESULT=run()\n               ^^^^^\n  File \"/tmp/coop-mining/patch_use_allowed-v2.py\", line 119, in run\n    assert normalized==before,'An original node/default/link/position changed beyond planned edge'\n           ^^^^^^^^^^^^^^^^^^\nAssertionError: An original node/default/link/position changed beyond planned edge\n"
+}

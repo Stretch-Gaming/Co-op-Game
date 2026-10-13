@@ -1,0 +1,842 @@
+{
+  "status": "succeeded",
+  "started_utc": "2026-10-13T05:54:16.522613+00:00",
+  "project": "/Volumes/CoopBuild/Repositories/Co-op-Game-primary",
+  "mutations": false,
+  "errors": [],
+  "blueprint_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "generated_class": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C",
+  "graphs": {
+    "UserConstructionScript": "(fn ConstructionScript ())\n",
+    "OnRep_Lit": "(fn OnRep_Lit ()\n  (CallFunction|ApplyLock))\n",
+    "OnRep_Enabled": "(fn OnRep_Enabled ()\n  (CallFunction|ApplyLock))\n",
+    "RefreshLock": "(fn RefreshLock ()\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (|SetwithNotifyEnabled (< (Variables|Default|GetLockSlot) (select (Variables|Default|GetBrazier) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"4\") 2 1) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"2\") 1 2))))\n    (Variables|Default|SetSourceCount 0)\n    (for _array_element (Variables|Default|GetLightSources)\n      (Utilities|IsValid _array_element\n        (:\"Is Valid\"\n          (if (Variables|Default|GetBrazier)\n            (bind _asbp_flare (Utilities|Casting|CastToBP_Flare _array_element))\n            (bind _active (Components|Activation|IsActive _asbp_flare))\n            (if _active\n              (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1)))\n            (else\n              (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _array_element \"/Game/Hazards/AC_Health.AC_Health_C\")))\n              (bind _dead (Class|ACHealth|IsDead _asac_health))\n              (if (not _dead)\n                (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1))))))))\n    (|SetwithNotifyLit (and (Variables|Default|GetEnabled) (> (Variables|Default|GetSourceCount) 0)))\n    (CallFunction|ApplyLock)))\n",
+    "BeginLock": "(fn BeginLock ()\n  (CallFunction|ApplyLock)\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"RefreshLock\" 0.1 true)))\n",
+    "ApplyLock": "(fn ApplyLock ()\n  (CallFunction|RefreshCrystalLockPresentation)\n  (Rendering|SetActorHiddenInGame (not (Variables|Default|GetEnabled)))\n  (Collision|SetActorEnableCollision (Variables|Default|GetEnabled))\n  (Rendering|SetRenderCustomDepth (Variables|StaticMeshActor|GetStaticMeshComponent) (Variables|Default|GetLit)))\n",
+    "BeginLight": "(fn BeginLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|IsValid Source\n      (:\"Is Valid\"\n        (if (Variables|Default|GetBrazier)\n          (bind _asbp_flare (Utilities|Casting|CastToBP_Flare Source))\n          (bind _active (Components|Activation|IsActive _asbp_flare))\n          (if _active\n            (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))\n          (else\n            (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Source))\n            (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _asbp_coop_character \"/Game/Hazards/AC_Health.AC_Health_C\")))\n            (bind _dead (Class|ACHealth|IsDead _asac_health))\n            (if (not _dead)\n              (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))))))))\n",
+    "EndLight": "(fn EndLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|RemoveItem (Variables|Default|GetLightSources) Source)))\n",
+    "ResetLock": "(fn ResetLock (Index Attempt)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|Clear (Variables|Default|GetLightSources))\n    (|SetwithNotifyLit false)\n    (CallFunction|ApplyLock)))\n",
+    "RefreshCrystalLockPresentation": "(fn RefreshCrystalLockPresentation ()\n  (if (not (Variables|Default|GetBrazier))\n    (Rendering|SetVisibility (Variables|StaticMeshActor|GetStaticMeshComponent))\n    (Rendering|SetVisibility (|GetHC_CrystalLockVisual) true)\n    (Utilities|IsValid (Variables|Default|GetCrystalLockMID)\n      (:\"Is Valid\"\n        (Rendering|Material|SetScalarParameterValue (Variables|Default|GetCrystalLockMID) \"Lit\" (select (Variables|Default|GetLit) 1.0 0.0)))\n      (:\"Is Not Valid\"\n        (bind _returnvalue (Rendering|Material|CreateDynamicMaterialInstance (|GetHC_CrystalLockVisual) 1))\n        (Variables|Default|SetCrystalLockMID _returnvalue)\n        (Utilities|IsValid (Variables|Default|GetCrystalLockMID)\n          (:\"Is Valid\"\n            (Rendering|Material|SetScalarParameterValue (Variables|Default|GetCrystalLockMID) \"Lit\" (select (Variables|Default|GetLit) 1.0 0.0))))))\n    (else\n      (Rendering|SetVisibility (|GetHC_CrystalLockVisual)))))\n",
+    "EventGraph": "(event EventBeginPlay\n  (CallFunction|BeginLock))\n\n(event EventLightBegin (Source)\n  (CallFunction|BeginLight Source))\n\n(event EventLightEnd (Source)\n  (CallFunction|EndLight Source))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ResetLock Index Attempt))\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+  },
+  "graph_sha256": {
+    "UserConstructionScript": "3b5f328a504e1c5d0a2d8541d09806eb1fc0c0b4760a6430884874f1fd3f8316",
+    "OnRep_Lit": "b88a1c54ec8831ffdf1e133c48a9dca854b93d22e16dfde9cbccf34dae534195",
+    "OnRep_Enabled": "f5f7302f5f5cfabcf1acf96bd374dbf89c8222eff23b614f0defcb6e7c4fe508",
+    "RefreshLock": "c47a84c867ad67c828be83c111b68af3657b593aa9df7e57ce19fbbf01f55d97",
+    "BeginLock": "c22f656f02f71e9448f9110b625449645f92803ebb3ce91232fd36a1a06405a2",
+    "ApplyLock": "83bf3b61e83cb7e2777d8e04627225f6adbd36df3d7308d46ec8ea6b0ee89443",
+    "BeginLight": "27fd006b16b780041687a65d1821302336fa59963ab03f00575410c579e265a1",
+    "EndLight": "bcb507a3be1e7a484c482db286f897d5ad87f3052bd1318e5dfbbe181a44d825",
+    "ResetLock": "cb04ca5abf17bc6ea7faa950dc61cc33c6b00f838a19dceb530de63e7c502b36",
+    "RefreshCrystalLockPresentation": "8e45d5da07fed1a893ab21f58d70eb0d6f52687dd13d0f56752ada2f50f1c012",
+    "EventGraph": "478f2dc75f63a3b9f13b3bdaa27100ee39e9ba57f0705661cb42cfd8bc0d8391"
+  },
+  "subobjects": [
+    {
+      "variable": "None",
+      "inherited": false,
+      "native": false,
+      "root_actor": true,
+      "associated_object": {
+        "path": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+        "class": "BP_CrystalLock_C",
+        "outer": "/Game/Puzzles/BP_CrystalLock",
+        "package": "/Game/Puzzles/BP_CrystalLock",
+        "owner": null
+      }
+    },
+    {
+      "variable": "StaticMeshComponent",
+      "inherited": true,
+      "native": true,
+      "root_actor": false,
+      "associated_object": {
+        "path": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C:StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+        "package": "/Game/Puzzles/BP_CrystalLock",
+        "owner": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+        "relative_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52f32998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": true,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAll",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      }
+    },
+    {
+      "variable": "HC_CrystalLockVisual",
+      "inherited": false,
+      "native": false,
+      "root_actor": false,
+      "associated_object": {
+        "path": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C:HC_CrystalLockVisual_GEN_VARIABLE",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C",
+        "package": "/Game/Puzzles/BP_CrystalLock",
+        "owner": null,
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f38768398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": false,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock.SM_CrystalLock",
+        "override_materials": [],
+        "materials": [
+          "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone.MI_CrystalLockStone",
+          "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal.M_CrystalLockCrystal"
+        ],
+        "collision_profile": "Custom",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "configured_collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>"
+      },
+      "object_for_blueprint": {
+        "path": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C:HC_CrystalLockVisual_GEN_VARIABLE",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C",
+        "package": "/Game/Puzzles/BP_CrystalLock",
+        "owner": null,
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f38768398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": false,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock.SM_CrystalLock",
+        "override_materials": [],
+        "materials": [
+          "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone.MI_CrystalLockStone",
+          "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal.M_CrystalLockCrystal"
+        ],
+        "collision_profile": "Custom",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "configured_collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>"
+      }
+    }
+  ],
+  "scs_reflection": {
+    "read_error": "Exception: Blueprint: Failed to find property 'simple_construction_script' for attribute 'simple_construction_script' on 'Blueprint'"
+  },
+  "cdo": {
+    "path": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+    "root": {
+      "path": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C:StaticMeshComponent0",
+      "class": "StaticMeshComponent",
+      "outer": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+      "package": "/Game/Puzzles/BP_CrystalLock",
+      "owner": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+      "relative_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relative_rotation": "<Struct 'Rotator' (0x42f52f32998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "absolute_scale": false,
+      "visible": true,
+      "attach_parent": null,
+      "mobility": "<ComponentMobility.STATIC: 0>",
+      "mesh": null,
+      "override_materials": [],
+      "materials": [],
+      "collision_profile": "BlockAll",
+      "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+    },
+    "visual_property": null,
+    "components": [
+      {
+        "path": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C:StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+        "package": "/Game/Puzzles/BP_CrystalLock",
+        "owner": "/Game/Puzzles/BP_CrystalLock.Default__BP_CrystalLock_C",
+        "relative_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52f32998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": true,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAll",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      }
+    ]
+  },
+  "editor_world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test",
+  "editor_actors": [
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+      "name": "BP_CrystalLock_C_2",
+      "kind": "editor",
+      "world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": true,
+      "Enabled": false,
+      "Lit": false,
+      "LockSlot": 0,
+      "tags": [
+        "SixRoundHC",
+        "FlareLock"
+      ],
+      "location": [
+        -725.0,
+        8750.0,
+        -300.0
+      ],
+      "rotation": "<Struct 'Rotator' (0x439086b80) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "bounds_origin": [
+        -725.0,
+        8750.0,
+        -300.0
+      ],
+      "bounds_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+        "relative_location": [
+          -725.0,
+          8750.0,
+          -300.0
+        ],
+        "relative_scale": [
+          0.8,
+          0.8,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52082998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": true,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+        "override_materials": [],
+        "materials": [
+          "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+        ],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "visual_property": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.HC_CrystalLockVisual",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f5208d398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": false,
+        "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.StaticMeshComponent0",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "mid": null,
+      "static_mesh_components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.StaticMeshComponent0",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+          "relative_location": [
+            -725.0,
+            8750.0,
+            -300.0
+          ],
+          "relative_scale": [
+            0.8,
+            0.8,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f52082998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": false,
+          "visible": true,
+          "attach_parent": null,
+          "mobility": "<ComponentMobility.STATIC: 0>",
+          "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+          "override_materials": [],
+          "materials": [
+            "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+          ],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.HC_CrystalLockVisual",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2",
+          "relative_location": [
+            0.0,
+            0.0,
+            -50.0
+          ],
+          "relative_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f5208d398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": true,
+          "visible": false,
+          "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.StaticMeshComponent0",
+          "mobility": "<ComponentMobility.MOVABLE: 2>",
+          "mesh": null,
+          "override_materials": [],
+          "materials": [],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+      "name": "BP_CrystalLock_C_3",
+      "kind": "editor",
+      "world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": true,
+      "Enabled": false,
+      "Lit": false,
+      "LockSlot": 1,
+      "tags": [
+        "SixRoundHC",
+        "FlareLock"
+      ],
+      "location": [
+        375.0,
+        8750.0,
+        -300.0
+      ],
+      "rotation": "<Struct 'Rotator' (0x439086ae0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "bounds_origin": [
+        375.0,
+        8750.0,
+        -300.0
+      ],
+      "bounds_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+        "relative_location": [
+          375.0,
+          8750.0,
+          -300.0
+        ],
+        "relative_scale": [
+          0.8,
+          0.8,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52080b98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": true,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+        "override_materials": [],
+        "materials": [
+          "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+        ],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "visual_property": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.HC_CrystalLockVisual",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f5208c998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": false,
+        "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.StaticMeshComponent0",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "mid": null,
+      "static_mesh_components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.StaticMeshComponent0",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+          "relative_location": [
+            375.0,
+            8750.0,
+            -300.0
+          ],
+          "relative_scale": [
+            0.8,
+            0.8,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f52080b98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": false,
+          "visible": true,
+          "attach_parent": null,
+          "mobility": "<ComponentMobility.STATIC: 0>",
+          "mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+          "override_materials": [],
+          "materials": [
+            "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+          ],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.HC_CrystalLockVisual",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3",
+          "relative_location": [
+            0.0,
+            0.0,
+            -50.0
+          ],
+          "relative_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f5208c998) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": true,
+          "visible": false,
+          "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.StaticMeshComponent0",
+          "mobility": "<ComponentMobility.MOVABLE: 2>",
+          "mesh": null,
+          "override_materials": [],
+          "materials": [],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+      "name": "BP_CrystalLock_C_0",
+      "kind": "editor",
+      "world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": false,
+      "Enabled": false,
+      "Lit": false,
+      "LockSlot": 0,
+      "tags": [
+        "SixRoundHC",
+        "HeadlampLock"
+      ],
+      "location": [
+        -1275.0,
+        9250.0,
+        50.0
+      ],
+      "rotation": "<Struct 'Rotator' (0x4480cfda0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "bounds_origin": [
+        -1275.0,
+        9250.000003051759,
+        50.0
+      ],
+      "bounds_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+        "relative_location": [
+          -1275.0,
+          9250.0,
+          50.0
+        ],
+        "relative_scale": [
+          0.8,
+          0.8,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52080198) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": false,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": "/Engine/BasicShapes/Sphere.Sphere",
+        "override_materials": [],
+        "materials": [
+          "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+        ],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "visual_property": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.HC_CrystalLockVisual",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f5208bf98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": true,
+        "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.StaticMeshComponent0",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "mid": null,
+      "static_mesh_components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.StaticMeshComponent0",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+          "relative_location": [
+            -1275.0,
+            9250.0,
+            50.0
+          ],
+          "relative_scale": [
+            0.8,
+            0.8,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f52080198) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": false,
+          "visible": false,
+          "attach_parent": null,
+          "mobility": "<ComponentMobility.STATIC: 0>",
+          "mesh": "/Engine/BasicShapes/Sphere.Sphere",
+          "override_materials": [],
+          "materials": [
+            "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+          ],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.HC_CrystalLockVisual",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0",
+          "relative_location": [
+            0.0,
+            0.0,
+            -50.0
+          ],
+          "relative_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f5208bf98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": true,
+          "visible": true,
+          "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.StaticMeshComponent0",
+          "mobility": "<ComponentMobility.MOVABLE: 2>",
+          "mesh": null,
+          "override_materials": [],
+          "materials": [],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+      "name": "BP_CrystalLock_C_1",
+      "kind": "editor",
+      "world": "/Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test",
+      "level": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+      "Brazier": false,
+      "Enabled": false,
+      "Lit": false,
+      "LockSlot": 1,
+      "tags": [
+        "SixRoundHC",
+        "HeadlampLock"
+      ],
+      "location": [
+        925.0,
+        9250.0,
+        50.0
+      ],
+      "rotation": "<Struct 'Rotator' (0x4480cfee0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "bounds_origin": [
+        925.0,
+        9250.000003051759,
+        50.0
+      ],
+      "bounds_dimensions": [
+        80.0,
+        80.0,
+        100.0
+      ],
+      "root": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+        "relative_location": [
+          925.0,
+          9250.0,
+          50.0
+        ],
+        "relative_scale": [
+          0.8,
+          0.8,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f52086f98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": false,
+        "visible": false,
+        "attach_parent": null,
+        "mobility": "<ComponentMobility.STATIC: 0>",
+        "mesh": "/Engine/BasicShapes/Sphere.Sphere",
+        "override_materials": [],
+        "materials": [
+          "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+        ],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "visual_property": {
+        "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.HC_CrystalLockVisual",
+        "class": "StaticMeshComponent",
+        "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+        "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+        "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+        "relative_location": [
+          0.0,
+          0.0,
+          -50.0
+        ],
+        "relative_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "relative_rotation": "<Struct 'Rotator' (0x42f5208b598) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "absolute_scale": true,
+        "visible": true,
+        "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.StaticMeshComponent0",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "mesh": null,
+        "override_materials": [],
+        "materials": [],
+        "collision_profile": "BlockAllDynamic",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+      },
+      "mid": null,
+      "static_mesh_components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.StaticMeshComponent0",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+          "relative_location": [
+            925.0,
+            9250.0,
+            50.0
+          ],
+          "relative_scale": [
+            0.8,
+            0.8,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f52086f98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": false,
+          "visible": false,
+          "attach_parent": null,
+          "mobility": "<ComponentMobility.STATIC: 0>",
+          "mesh": "/Engine/BasicShapes/Sphere.Sphere",
+          "override_materials": [],
+          "materials": [
+            "/Engine/EngineMaterials/DefaultMaterial.DefaultMaterial"
+          ],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.HC_CrystalLockVisual",
+          "class": "StaticMeshComponent",
+          "outer": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+          "package": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+          "owner": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1",
+          "relative_location": [
+            0.0,
+            0.0,
+            -50.0
+          ],
+          "relative_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "relative_rotation": "<Struct 'Rotator' (0x42f5208b598) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+          "absolute_scale": true,
+          "visible": true,
+          "attach_parent": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.StaticMeshComponent0",
+          "mobility": "<ComponentMobility.MOVABLE: 2>",
+          "mesh": null,
+          "override_materials": [],
+          "materials": [],
+          "collision_profile": "BlockAllDynamic",
+          "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "configured_collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>"
+        }
+      ]
+    }
+  ],
+  "pie_worlds": [],
+  "finished_utc": "2026-10-13T05:54:25.821138+00:00"
+}

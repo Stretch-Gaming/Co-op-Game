@@ -1,0 +1,12 @@
+{
+  "stage": "saved:/Game/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor",
+  "saved": [
+    "/Game/Core/BP_CoopGameMode",
+    "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+    "/Game/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor"
+  ],
+  "passed": true,
+  "protected_source_bytes_unchanged": true,
+  "method": "reviewed original source-builder expressions; no decompiler writeback",
+  "gameplay_acceptance_pending": true
+}

@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "native_cases": 6,
+  "trigger_check_entries": 24,
+  "transaction_check_entries": 119,
+  "native_log_errors": 0,
+  "cases": [
+    {
+      "players": 2,
+      "profile": "joining",
+      "owner": 0,
+      "case": "wipe",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 6,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v5.py",
+      "trigger_source": "acceptance_trigger_pickaxe.py",
+      "native_report": "completion-wipe-joining-2-owner0.json",
+      "report_sha256": "e3c35eaed1cad3cf9c50956135e50881b6144414fb52c772fe8154c164e12ed2",
+      "trigger_snapshot": "trigger-wipe-joining-2-owner0.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "aa5ed61e41f4289e5fb1caa49ace21532a314cfbddd9f5e4dbac65f1e7659b42",
+      "native_log": "acceptance-wipe-joining-2-owner0-log.txt",
+      "log_sha256": "1dfbfb351951545f9ec5b3cc76b43544f1dde61d8f4ff0d86f6bb0954e033200",
+      "ending_round": {
+        "index": 1,
+        "phase": 1,
+        "attempt": 2,
+        "ends": 0.0,
+        "row": "2"
+      }
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "owner": 0,
+      "case": "completion",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 20,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v5.py",
+      "trigger_source": "acceptance_trigger_pickaxe.py",
+      "native_report": "completion-completion-joining-2-owner0.json",
+      "report_sha256": "72313f704991e3a106c1a9a790cf54b31ffe9938c6c2d3afad2324ec2a7e210a",
+      "trigger_snapshot": "trigger-completion-joining-2-owner0.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "2102d00ab1d07e9ef48e712c6d4b6ecd403fcdd7f565f910cb49fc36de6b0697",
+      "native_log": "acceptance-completion-joining-2-owner0-log.txt",
+      "log_sha256": "62ea7f0647d89895eb61d4927957ea99ca9b67d568bd9c64448d320f08c7f6d5",
+      "ending_round": {
+        "index": 1,
+        "phase": 2,
+        "attempt": 1,
+        "ends": 0.0,
+        "row": "2"
+      }
+    },
+    {
+      "players": 2,
+      "profile": "joining",
+      "owner": 0,
+      "case": "lost_rock",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 20,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v5.py",
+      "trigger_source": "acceptance_trigger_pickaxe.py",
+      "native_report": "completion-lost_rock-joining-2-owner0.json",
+      "report_sha256": "600cafa314952fb47123ce633d7665c1dc058544ba980a395f81b253c624bc30",
+      "trigger_snapshot": "trigger-lost_rock-joining-2-owner0.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "3031a43774062f3559f13feaf24d990392850f309b722382e3baffe346b7550d",
+      "native_log": "acceptance-lost_rock-joining-2-owner0-log.txt",
+      "log_sha256": "9a19afca4fcd230bb1fcf00ab707f0f2fd497c4ab26a48c7d6f400bcbb5bb53a",
+      "ending_round": {
+        "index": 1,
+        "phase": 1,
+        "attempt": 2,
+        "ends": 0.0,
+        "row": "2"
+      }
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "owner": 0,
+      "case": "completion",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 21,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v5.py",
+      "trigger_source": "acceptance_trigger_pickaxe_v2.py",
+      "native_report": "completion-completion-joining-3-owner0.json",
+      "report_sha256": "b0e31897a52be881af34509754a4928922467e7be3025e85f0dee7e7fa26655c",
+      "trigger_snapshot": "trigger-completion-joining-3-owner0.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "c8bd2668c69a771c96800a04523d49df4986b480d441994229ce604c412db3e1",
+      "native_log": "acceptance-completion-joining-3-owner0-log.txt",
+      "log_sha256": "468c6f2b9ebb3689c71b733baf14d50ae6cb9afa7cbc25132eb1a0d356f3d925",
+      "ending_round": {
+        "index": 1,
+        "phase": 2,
+        "attempt": 1,
+        "ends": 0.0,
+        "row": "3"
+      }
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "owner": 0,
+      "case": "completion",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 26,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v6.py",
+      "trigger_source": "acceptance_trigger_pickaxe_v2.py",
+      "native_report": "completion-completion-joining-4-owner0.json",
+      "report_sha256": "de731f06c361b4fcfb79d1191feca46abd6711ae333f7bbcfb5657847ec2d92e",
+      "trigger_snapshot": "trigger-completion-joining-4-owner0.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "cefa1d1eb18c2c2fa362fccded384f08d32c2e9c0a5ee89ac82e3f0b228436ca",
+      "native_log": "acceptance-completion-joining-4-owner0-log.txt",
+      "log_sha256": "099f423a6747bbf708872a72a715245ca350a11d12b0af4b4f22a1af475bce47",
+      "ending_round": {
+        "index": 1,
+        "phase": 2,
+        "attempt": 1,
+        "ends": 0.0,
+        "row": "4"
+      }
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "owner": 3,
+      "case": "completion",
+      "passed": true,
+      "trigger_checks": 4,
+      "transaction_checks": 26,
+      "log_errors": 0,
+      "transaction_source": "acceptance_transaction_v6.py",
+      "trigger_source": "acceptance_trigger_pickaxe_v2.py",
+      "native_report": "completion-completion-host_split-4-owner3.json",
+      "report_sha256": "6f9c1342fef31a8b09ef3d601d2681f714390dacc182e17da54d31f6eb7f3f12",
+      "trigger_snapshot": "trigger-completion-host_split-4-owner3.json",
+      "trigger_snapshot_origin": "Native driver embedded snapshot; original report fields preserved",
+      "trigger_snapshot_sha256": "b1a841704b96277573197a14a39498728c2ab0b48db54fd6d079d13cf5d28d95",
+      "native_log": "acceptance-completion-host_split-4-owner3-log.txt",
+      "log_sha256": "e7c5dcdc25a90f245c0c75985aa34a931f74ee813eaa591155fcffcab7b21305",
+      "ending_round": {
+        "index": 1,
+        "phase": 2,
+        "attempt": 1,
+        "ends": 0.0,
+        "row": "4"
+      }
+    }
+  ],
+  "environment": {
+    "project": "/Volumes/CoopBuild/Repositories/Co-op-Game-primary",
+    "occlusion_original": 1,
+    "occlusion_current": 0,
+    "render_scale": 25,
+    "bridge": "serial external file queue; no gameplay changes"
+  },
+  "input": "Actual owning Enhanced Input action injection; not physical device input",
+  "fixtures": [
+    "Server approach poses and owning-controller aim",
+    "Free item settling after native Drop",
+    "One-time relocation of every spawned server ghost outside room, including retry ghosts",
+    "ApplyDamage for wipe/one survivor; targeted destruction of free rocks for feasibility boundary",
+    "Native CreatePlayer for second host-local owner"
+  ],
+  "limits": [
+    "No uninterrupted traversal or chase survival",
+    "Only two-player wipe/lost-rock recovery; broader roster/round recovery pending",
+    "No physical devices, Windows, packet emulation, rendered HUD/readability, audio or performance qualification"
+  ],
+  "source_sha256": {
+    "acceptance_transaction_v5.py": "63b1aa46a77d4884efef18e3d70ef1c2a7834ec56da0ceba8e1a06b988716beb",
+    "acceptance_transaction_v6.py": "66721707d3aca6d86ddb0f4c5624425843c15cfcfcd80b896c2857f8142e7d72",
+    "acceptance_trigger_pickaxe.py": "b958ae620a4963d12b5f35940698ce6abf3ce758c0dae0aff78fdcd01e52518a",
+    "acceptance_trigger_pickaxe_v2.py": "b115435df328532e231e014fb83b23f9b048a9c30459f62a1228a8034c1355f6"
+  },
+  "final_graph_proof": "../evidence/final-graph-proof.json",
+  "secondary_host_owner": "host-mining-owner.json"
+}

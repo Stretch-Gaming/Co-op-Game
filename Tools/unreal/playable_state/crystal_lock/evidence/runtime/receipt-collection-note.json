@@ -1,0 +1,7 @@
+{
+  "joining_runtime_data_source": "The completed joining/2 runtime dictionary from the parent crystal-matrix-summary.json, serialized with the helper original indent/newline convention",
+  "joining_runtime_sha256": "31d67b766c99a80639946424b4e54e3d1651377517536bd504755576c092fc31",
+  "joining_original_terminal_startup_receipt_preserved": false,
+  "reason": "Optional shot follow-up reused runtime filenames before collection; pending follow-up startup receipt moved out of completed matrix evidence",
+  "host_split_runtime_raw_file_preserved": true
+}

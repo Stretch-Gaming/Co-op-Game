@@ -1,0 +1,31 @@
+{
+  "per_profile_executed_source_snapshot_captured_by_driver": false,
+  "recorded_pre_optional_capture_source_sha256": "e904d472cc1cd6b8ccf8377ef3d654348ad5205765bd9709d74fefcf48f99e9e",
+  "reconstructed_source_hash_matches_recorded_pre_capture_bytes": true,
+  "reconstructed_source": "executed/test_crystal_lock_lit_state_only_reconstructed.py",
+  "current_portable_helper": "executed/test_crystal_lock_lit.py",
+  "current_portable_helper_validation": "Path-adapted replay AST/syntax only; a later separate raw joining/2 run used optional capture, passed state checks and received limited root qualitative image review",
+  "runs": [
+    {
+      "profile": "joining",
+      "players": 2,
+      "passed": true,
+      "checks": 4,
+      "native_log_errors": [],
+      "started_utc": "2026-10-13T06:07:02.092087+00:00",
+      "optional_capture_fields_present_in_native_report": false,
+      "source_association": "Native reports are consistent with recorded pre-capture legal-GM-chain variant; no per-run byte hash recorded"
+    },
+    {
+      "profile": "host_split",
+      "players": 4,
+      "passed": true,
+      "checks": 16,
+      "native_log_errors": [],
+      "started_utc": "2026-10-13T06:07:17.988786+00:00",
+      "optional_capture_fields_present_in_native_report": false,
+      "source_association": "Native reports are consistent with recorded pre-capture legal-GM-chain variant; no per-run byte hash recorded"
+    }
+  ],
+  "optional_capture_followup": "evidence/optional-shot-run/root-qualitative-preview.json; no pixel, 15m, split-pane or Windows acceptance"
+}

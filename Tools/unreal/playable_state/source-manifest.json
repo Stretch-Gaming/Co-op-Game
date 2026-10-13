@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "base": "56bbb931db5e4d3cc8eb4c5341dee42003e1c9de",
+  "scope": "HC playable-state slice; four exact Core/PG/HZ reservations",
+  "modified_binary_paths": [
+    "Content/Core/BP_CoopCharacter.uasset",
+    "Content/Core/BP_CoopGameMode.uasset",
+    "Content/Hazards/Test/SixRound/L_WorldRoute_Test.umap",
+    "Content/Player/Ghosts/BP_Ghost.uasset",
+    "Content/Puzzles/BP_CrystalLock.uasset",
+    "Content/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor.uasset",
+    "Content/Puzzles/Test/SixRound/L_CaveEnvironment_Test.umap",
+    "Content/Puzzles/Test/SixRound/L_SixRound_HC_Test.umap",
+    "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset"
+  ],
+  "new_binary_paths": [
+    "Content/Puzzles/Art/CrystalLock/MI_CrystalLockStone.uasset",
+    "Content/Puzzles/Art/CrystalLock/M_CrystalLockCrystal.uasset",
+    "Content/Puzzles/Art/CrystalLock/SM_CrystalLock.uasset"
+  ],
+  "asset_sha256": {
+    "Content/Core/BP_CoopCharacter.uasset": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "Content/Core/BP_CoopGameMode.uasset": "de2893af9673fa32033b27b4bd32859aeeccb97f15344f289e998e528f6cdc07",
+    "Content/Hazards/Test/SixRound/L_WorldRoute_Test.umap": "97a605dd12d830da3a50de0e1dabdc25a0a3c32f905c169609d5a020d25cedb1",
+    "Content/Player/Ghosts/BP_Ghost.uasset": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+    "Content/Puzzles/BP_CrystalLock.uasset": "372bc9dea1a5b580a1d569845fbbf5367abadf78781e4947dd63d8747e7ecf0a",
+    "Content/Puzzles/Test/SixRound/BP_PuzzleConnectionDoor.uasset": "7c98d5dea91275ca92ac005c83ca8063098861a69510229d6a39e1df4b742590",
+    "Content/Puzzles/Test/SixRound/L_CaveEnvironment_Test.umap": "bb4a87b6b1eba9b9e67d36843e936aaa716f068f909850739e6ed1b437d84e85",
+    "Content/Puzzles/Test/SixRound/L_SixRound_HC_Test.umap": "e8b4f3c3dfbf83d667b989a0ab1a1e9e044697417769cbb1fc6508575a097bc1",
+    "Content/Puzzles/UI/HCA3/WBP_HCA3RoundHUD.uasset": "0afb008836fe50e5337bf76d752c8afb11e9a09eb35e928023c583f8e3431000",
+    "Content/Puzzles/Art/CrystalLock/MI_CrystalLockStone.uasset": "0f9bed4ade5cfc32ffed502dbeed53608e8b25bdf024b0fe74ef348ccfbc6acc",
+    "Content/Puzzles/Art/CrystalLock/M_CrystalLockCrystal.uasset": "d62e995e02bacaddc413cceaa83a92e9daf404b7a1d8f3400f9169e274220d64",
+    "Content/Puzzles/Art/CrystalLock/SM_CrystalLock.uasset": "c0247186c0d11383bed5dcee5552bf3583e21a910965125fd3eba94a9c44c96c"
+  },
+  "root_files": {
+    "README.md": {
+      "sha256": "4cd5ccde2e652d1c71e5cf5195f7e17165b348f5a9de5162df5e661dd3dda7d3",
+      "bytes": 3420
+    },
+    "evidence/final-compile.json": {
+      "sha256": "8a2bc2927fc55dc40616ae1343483d770804fb3ba473ada2984cbbd1f6f2e2bd",
+      "bytes": 622
+    },
+    "evidence/final-graph-proof.json": {
+      "sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810",
+      "bytes": 1609
+    },
+    "evidence/restored-final.json": {
+      "sha256": "53fa1f4937392bcf534999de9337ba06f6d0b0d79bbd84f0fa6e0b6f1c7b504e",
+      "bytes": 633
+    },
+    "executed/read_final_graphs.py": {
+      "sha256": "25f60df62f7e84446aab94e27ba7404e0cbb5a67a1b34a1eef241fd9f3fc7d3d",
+      "bytes": 3503
+    },
+    "executed/restore_final.py": {
+      "sha256": "790c3205c21169f55fc57562d0cd42e85696be43bbe79ff704c541ebbf17fc80",
+      "bytes": 2476
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "started_utc": "2026-10-13T06:07:17.988786+00:00",
+  "status": "passed",
+  "stage": "restored_pose_settle",
+  "args": {
+    "players": 4,
+    "profile": "host_split",
+    "timeout": 180
+  },
+  "report": "/tmp/hc-a4-crystal-lock/runtime-evidence/crystal-lock-lit-host_split-4.json",
+  "stage_history": [
+    {
+      "stage": "registered_native_tick_gate",
+      "utc": "2026-10-13T06:07:18.005196+00:00",
+      "detail": null
+    },
+    {
+      "stage": "authorized_round3_initializer",
+      "utc": "2026-10-13T06:07:19.037179+00:00",
+      "detail": null
+    },
+    {
+      "stage": "await_round3_native_masks",
+      "utc": "2026-10-13T06:07:19.039046+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 0
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:20.094203+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:21.131387+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:22.082669+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:23.017067+00:00",
+      "detail": {
+        "case": 1,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:24.032423+00:00",
+      "detail": {
+        "case": 1,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:24.970990+00:00",
+      "detail": {
+        "case": 1,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:25.899585+00:00",
+      "detail": {
+        "case": 2,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:26.932128+00:00",
+      "detail": {
+        "case": 2,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:27.852443+00:00",
+      "detail": {
+        "case": 2,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:28.773612+00:00",
+      "detail": {
+        "case": 3,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:29.822365+00:00",
+      "detail": {
+        "case": 3,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:30.744163+00:00",
+      "detail": {
+        "case": 3,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:31.679137+00:00",
+      "detail": {
+        "case": 4,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:32.690241+00:00",
+      "detail": {
+        "case": 4,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:33.597847+00:00",
+      "detail": {
+        "case": 4,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:34.516444+00:00",
+      "detail": {
+        "case": 5,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:35.563945+00:00",
+      "detail": {
+        "case": 5,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:36.478427+00:00",
+      "detail": {
+        "case": 5,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:37.388231+00:00",
+      "detail": {
+        "case": 6,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:38.418946+00:00",
+      "detail": {
+        "case": 6,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:39.371501+00:00",
+      "detail": {
+        "case": 6,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:07:40.319127+00:00",
+      "detail": {
+        "case": 7,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:07:41.324769+00:00",
+      "detail": {
+        "case": 7,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "lamp_off",
+      "utc": "2026-10-13T06:07:42.258060+00:00",
+      "detail": {
+        "case": 7,
+        "cases": 8
+      }
+    },
+    {
+      "stage": "restored_pose_settle",
+      "utc": "2026-10-13T06:07:43.181925+00:00",
+      "detail": {
+        "case": 8,
+        "cases": 8
+      }
+    }
+  ],
+  "native_test_executed": true,
+  "runtime_acceptance_pending": false,
+  "pie_settings": {
+    "PlayNetMode": "PIE_ListenServer",
+    "PlayNumberOfClients": 3,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_ListenServer",
+      "local_player_ids": [
+        272,
+        275
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        273
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        274
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test"
+    }
+  ],
+  "player_ids": [
+    272,
+    273,
+    274,
+    275
+  ],
+  "authorized_initializer": "server GameMode StartRound1 -> ClearRound1 -> StartRound2 -> ClearRound2 (auto starts3), once in one callback after fresh Lobby preflight",
+  "unchanged_native_braziers": [
+    "BP_CrystalLock_C_2",
+    "BP_CrystalLock_C_3"
+  ],
+  "case_roster": [
+    {
+      "player_id": 272,
+      "target": "BP_CrystalLock_C_0"
+    },
+    {
+      "player_id": 272,
+      "target": "BP_CrystalLock_C_1"
+    },
+    {
+      "player_id": 273,
+      "target": "BP_CrystalLock_C_0"
+    },
+    {
+      "player_id": 273,
+      "target": "BP_CrystalLock_C_1"
+    },
+    {
+      "player_id": 274,
+      "target": "BP_CrystalLock_C_0"
+    },
+    {
+      "player_id": 274,
+      "target": "BP_CrystalLock_C_1"
+    },
+    {
+      "player_id": 275,
+      "target": "BP_CrystalLock_C_0"
+    },
+    {
+      "player_id": 275,
+      "target": "BP_CrystalLock_C_1"
+    }
+  ],
+  "enabled_native_headlamp_locks": [
+    "BP_CrystalLock_C_0",
+    "BP_CrystalLock_C_1"
+  ],
+  "round_state_observations": [
+    {
+      "stage": "fresh Lobby before authorized initializer",
+      "state": {
+        "index": 0,
+        "attempt": 0,
+        "phase": 0
+      }
+    },
+    {
+      "stage": "authorized fixture StartRound(1,)",
+      "state": {
+        "index": 1,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "authorized fixture ClearRound()",
+      "state": {
+        "index": 1,
+        "attempt": 1,
+        "phase": 2
+      }
+    },
+    {
+      "stage": "authorized fixture StartRound(2,)",
+      "state": {
+        "index": 2,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "authorized fixture ClearRound()",
+      "state": {
+        "index": 3,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "settled native Round 3 enabled masks",
+      "state": {
+        "index": 3,
+        "attempt": 1,
+        "phase": 1
+      },
+      "peers": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        }
+      ],
+      "scaling_row": "4"
+    }
+  ],
+  "finished_utc": "2026-10-13T06:07:44.250400+00:00",
+  "error": null,
+  "cleanup_errors": [],
+  "passed": true
+}

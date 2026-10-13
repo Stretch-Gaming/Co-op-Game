@@ -1,0 +1,9 @@
+{
+  "receipt": "Tools/unreal/playable_state/mining/evidence/diagnostic-trigger-objective-joining-2-owner0-parent-stop.json",
+  "native_script_sha256": "d1074e5b19c7559a1648794a2184303f1cfe997f1d04e02e283700104a871209",
+  "classification": "Parent driver intentionally stopped PIE after60s; overall gate invalidated during Drop",
+  "objective_readback_passed": true,
+  "overall_gate_passed": false,
+  "gameplay_drop_failure_established": false,
+  "source": "Parent BB message explicitly confirmed driver timeout/PIE stop"
+}

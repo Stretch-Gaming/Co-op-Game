@@ -1,0 +1,6 @@
+{
+  "stage": "preflight",
+  "created": [],
+  "saved": [],
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-mining/patch_use_allowed-frozen.py\", line 129, in <module>\n    try:RESULT=run()\n               ^^^^^\n  File \"/tmp/coop-mining/patch_use_allowed-frozen.py\", line 49, in run\n    assert list(allowed.list_connected_pins())==[old_value]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

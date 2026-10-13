@@ -1,0 +1,60 @@
+{
+  "passed": false,
+  "error": "'NoneType' object has no attribute 'get_path_name'",
+  "cleanup_errors": [],
+  "stage": "preflight",
+  "profile": "joining",
+  "players": 2,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": []
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        258
+      ]
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        259
+      ]
+    }
+  ],
+  "actions": {
+    "move": "/Game/Input/Actions/IA_Move",
+    "look": "/Game/Input/Actions/IA_Look",
+    "jump": "/Game/Input/Actions/IA_Jump",
+    "sprint": "/Game/Core/Input/IA_Sprint",
+    "flare": "/Game/Core/Input/IA_ThrowFlare",
+    "climb": "/Game/Core/Input/IA_Climb",
+    "lamp": "/Game/Core/Input/IA_Headlamp",
+    "view": "/Game/Core/Input/IA_ToggleView",
+    "interact": "/Game/Core/Input/IA_Interact",
+    "drop": "/Game/Core/Input/IA_Drop"
+  },
+  "checks": [],
+  "fixture_actions": [],
+  "input_method": "Synthetic Enhanced Input through each actual owning local-player subsystem; real Blueprint input/RPC path.",
+  "physical_keyboard_gamepad_tested": false,
+  "mac_or_packet_emulation_tested": false,
+  "visual_audio_acceptance": false,
+  "status": "startup_failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 238, in run\n    initial_rows = record_locks()\n                   ^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 236, in record_locks\n    return [lock_row(world, actor) for world in h.worlds for actor in locks]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 236, in <listcomp>\n    return [lock_row(world, actor) for world in h.worlds for actor in locks]\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/hc-a4-crystal-lock/test_crystal_lock_lit.py\", line 197, in lock_row\n    'visual_mesh': visual.get_editor_property('static_mesh').get_path_name(),\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get_path_name'\n",
+  "native_test_executed": false,
+  "runtime_acceptance_pending": false,
+  "startup_receipt": "/tmp/hc-a4-crystal-lock/runtime-evidence/startup-receipt-joining-2.json"
+}

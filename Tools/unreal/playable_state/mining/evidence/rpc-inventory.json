@@ -1,0 +1,298 @@
+{
+  "inspection_only": true,
+  "assets": {
+    "/Game/Core/BP_CoopCharacter": {
+      "graphs": {
+        "UseAllowed": "(fn UseAllowed (Target)\n  (Utilities|IsValid Target\n    (:\"Is Valid\"\n      (if (and (and (not (Variables|Default|GetInteractionBlocked)) (not (Actor|ActorHasTag \"Downed\"))) (<= (Transformation|GetDistanceTo Target) 400.0))\n        (bind _result (Class|BPEnvironmentDoor|CanInteract Target self))\n        (if _result\n          (bind (_outhit _returnvalue) (Collision|LineTraceByChannel (Actor|GetActorEyesViewPoint) (Transformation|GetActorLocation Target)))\n          (return (or (not _returnvalue) (Utilities|Equal(Object) (Collision|BreakHitResult _outhit) Target)))\n          (else\n            (return false)))\n        (else\n          (return false))))\n    (:\"Is Not Valid\"\n      (return false))))\n",
+        "BeginUse": "(fn BeginUse (Target)\n  (bind _self self)\n  (bind _roundstate (Class|BPCoopGameState|GetRoundState (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))))\n  (if (Networking|HasAuthority)\n    (CallFunction|CancelUse)\n    (bind _allowed (CallFunction|UseAllowed Target))\n    (if _allowed\n      (bind (_holdseconds _mode) (Class|BPEnvironmentDoor|GetInteractInfo Target _self))\n      (if (Utilities|Enum|Equal(Enum) _mode (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator0\"))\n        (Class|BPEnvironmentDoor|Interact Target _self)\n        (else\n          (Variables|Default|SetActiveTarget Target)\n          (Variables|Default|SetActiveMode _mode)\n          (Variables|Default|SetActiveHoldSeconds (select (< _holdseconds 0.01) 0.01 _holdseconds))\n          (bind _seconds (CallFunction|ServerNow))\n          (Variables|Default|SetActiveStartedAt _seconds)\n          (Variables|Default|SetActiveUse true)\n          (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n            (:then\n              (Variables|Default|SetActiveRoundIndex (Utilities|Struct|BreakSRoundState _roundstate))\n              (Variables|Default|SetActiveRoundAttempt (Utilities|Struct|BreakSRoundState _roundstate))\n              (Variables|Default|SetActiveRoundPhase (Utilities|Struct|BreakSRoundState _roundstate))\n              (|Client_UseStarted)\n              (if (Utilities|Enum|Equal(Enum) _mode (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator1\"))\n                (Utilities|Time|SetTimerbyFunctionName _self \"CompleteTimedUse\" (Variables|Default|GetActiveHoldSeconds))\n                (else\n                  (Class|BPEnvironmentDoor|InteractBegin Target _self))))\n            (:CastFailed\n              (CallFunction|CancelUse))))))))\n",
+        "CancelUse": "(fn CancelUse ()\n  (bind _self self)\n  (if (Networking|HasAuthority)\n    (Utilities|Time|ClearTimerbyFunctionName _self \"CompleteTimedUse\")\n    (if (Variables|Default|GetActiveUse)\n      (Variables|Default|SetActiveUse false)\n      (Utilities|IsValid (Variables|Default|GetActiveTarget)\n        (:\"Is Valid\"\n          (if (Utilities|Enum|Equal(Enum) (Variables|Default|GetActiveMode) (Utilities|Enum|LiteralenumE_InteractMode \"NewEnumerator2\"))\n            (Class|BPEnvironmentDoor|InteractEnd (Variables|Default|GetActiveTarget) _self))))\n      (else\n        (Variables|Default|SetActiveTarget 0)\n        (|Client_UseEnded)))))\n",
+        "ValidateUse": "(fn ValidateUse ()\n  (if (and (Networking|HasAuthority) (Variables|Default|GetActiveUse))\n    (bind _allowed (CallFunction|UseAllowed (Variables|Default|GetActiveTarget)))\n    (if _allowed\n      (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState))\n        (:then\n          (if (or (or (!= (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetActiveRoundIndex)) (!= (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetActiveRoundAttempt))) (Utilities|Enum|NotEqual(Enum) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) (Variables|Default|GetActiveRoundPhase)))\n            (CallFunction|CancelUse)))\n        (:CastFailed\n          (CallFunction|CancelUse)))\n      (else\n        (CallFunction|CancelUse)))))\n",
+        "CanAcceptSixInput": "(fn CanAcceptSixInput ()\n  (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass \"/Game/Hazards/AC_Health.AC_Health_C\"))\n    (:then\n      (bind _dead (Class|ACHealth|IsDead _asac_health))\n      (return (and (not _dead) (not (|GetbTakenProtected)))))\n    (:CastFailed\n      (return false))))\n"
+      },
+      "rpc_event_nodes": [
+        {
+          "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CustomEvent_0",
+          "type_id": "AddEvent|Custom|Server_InteractBegin",
+          "title": "Server_InteractBegin",
+          "input_pins": [],
+          "output_pins": [
+            {
+              "name": "OutputDelegate",
+              "type": "Delegate",
+              "value": "",
+              "links": []
+            },
+            {
+              "name": "then",
+              "type": "Exec",
+              "value": "",
+              "links": [
+                {
+                  "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CallFunction_9",
+                  "pin_index": 0,
+                  "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+                }
+              ]
+            },
+            {
+              "name": "Target",
+              "type": "Actor Object Reference",
+              "value": "",
+              "links": [
+                {
+                  "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CallFunction_9",
+                  "pin_index": 2,
+                  "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CallFunction_9",
+          "type_id": "|BeginUse",
+          "title": "BeginUse",
+          "input_pins": [
+            {
+              "name": "execute",
+              "type": "Exec",
+              "value": "",
+              "links": [
+                {
+                  "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CustomEvent_0",
+                  "pin_index": 1,
+                  "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+                }
+              ]
+            },
+            {
+              "name": "self",
+              "type": "Self Object Reference",
+              "value": "",
+              "links": []
+            },
+            {
+              "name": "Target",
+              "type": "Actor Object Reference",
+              "value": "",
+              "links": [
+                {
+                  "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:EventGraph.K2Node_CustomEvent_0",
+                  "pin_index": 2,
+                  "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+                }
+              ]
+            }
+          ],
+          "output_pins": [
+            {
+              "name": "then",
+              "type": "Exec",
+              "value": "",
+              "links": []
+            }
+          ]
+        }
+      ],
+      "graph_names": [
+        "UserConstructionScript",
+        "GetCarried",
+        "ReleaseCarried",
+        "UseAllowed",
+        "BeginUse",
+        "CancelUse",
+        "ValidateUse",
+        "CompleteTimedUse",
+        "RefreshFocus",
+        "PressInteract",
+        "ReleaseInteract",
+        "SetupLocalInput",
+        "RemoveLocalInput",
+        "ConfirmLocalUse",
+        "EndLocalUse",
+        "ServerNow",
+        "SetInteractionBlocked",
+        "HC1BeginPlay",
+        "HC1ControllerChanged",
+        "HC1EndPlay",
+        "ClearOwnedInputMaps",
+        "ClearOwnedPrompt",
+        "ApplyHCA3PromptLayout",
+        "EnsureCarrying",
+        "RequestDropCarried",
+        "DropFromServer",
+        "OnRep_bBraced",
+        "AdventurePlayerBegin",
+        "AdventurePlayerEnd",
+        "AdventureControllerChanged",
+        "RefreshAdventurePlayer",
+        "ApplyBrace",
+        "BraceOnServer",
+        "UnbraceOnServer",
+        "RequestBraceStart",
+        "RequestBraceStop",
+        "RequestViewToggle",
+        "RequestHeadlampToggle",
+        "ViewToggleOnServer",
+        "HeadlampToggleOnServer",
+        "RequestBoost",
+        "BoostOnServer",
+        "RequestJump",
+        "CreateReviveTarget",
+        "ReceiveHealthDamage",
+        "TryBoostFromPartner",
+        "GetBracedState",
+        "StopAdventureJump",
+        "RestoreWalkingSpeed",
+        "SetTakingProtected",
+        "GetCarryingRelic",
+        "OnRep_bTakenProtected",
+        "IsCarryingHeavy",
+        "ApplyTakingProtection",
+        "CanAcceptSixInput",
+        "SetupSixInput",
+        "RemoveSixInput",
+        "RequestFlare",
+        "RequestClimb",
+        "RequestStopClimb",
+        "FlareOnServer",
+        "ClimbOnServer",
+        "StopClimbOnServer",
+        "ClimbForwardOnServer",
+        "RequestClimbForward",
+        "RequestClimbAxis",
+        "RemoveSixMapping",
+        "RefreshSixInput",
+        "HandleSixMovement",
+        "EventGraph"
+      ]
+    },
+    "/Game/Core/BP_CoopGameMode": {
+      "graphs": {},
+      "rpc_event_nodes": [],
+      "graph_names": [
+        "UserConstructionScript",
+        "SetRoundPhase",
+        "ClearRound",
+        "FailRound",
+        "CompleteMap",
+        "AddRelics",
+        "StartRound",
+        "CancelAllUses",
+        "ScalingRowForRoster",
+        "AllocateColor",
+        "RefreshLobby",
+        "RefreshRelicTotals",
+        "HC2BeginPlay",
+        "BeginAdventure",
+        "AdvanceAdventure",
+        "RestartAdventure",
+        "MonitorAdventureHealth",
+        "StartAdventureHealthMonitor",
+        "SixRoundMonitor",
+        "BeginSixRounds",
+        "TravelToResults",
+        "RefreshSixObjective",
+        "RestoreRegroup",
+        "PollMeetingLocks",
+        "BeginMeetingPoll",
+        "MonitorEscapeRelic",
+        "BeginEscapeRelicMonitor",
+        "CacheRelicHome",
+        "RestoreMissingRelic",
+        "MonitorSixResources",
+        "StartSixResourceMonitor",
+        "CaptureCheckpointRetry",
+        "RestockAfterCheckpointRetry",
+        "ResetMiningForCheckpointRetry",
+        "EventGraph"
+      ]
+    },
+    "/Game/Hazards/FirstRoom/BP_MinePickaxe": {
+      "graphs": {
+        "CanInteract": "(fn CanInteract (Instigator)\n  (if (== (Variables|Default|GetCarryState) 0)\n    (return true)\n    (else\n      (return (Utilities|Equal(Object) (Actor|GetAttachParentActor) Instigator)))))\n",
+        "UpdateInputBinding": "(fn UpdateInputBinding (Holder)\n  (bind _aspawn (Utilities|Casting|CastToPawn Holder)\n    (:then\n      (if (Pawn|IsLocallyControlled _aspawn)\n        (bind _asplayer_controller (Utilities|Casting|CastToPlayerController (Pawn|GetController _aspawn))\n          (:then\n            (if (Utilities|NotEqual(Object) _asplayer_controller (Variables|Default|GetBoundController))\n              (CallFunction|Unbind)\n              (Input|EnableInput self _asplayer_controller)\n              (Input|AddMappingContext (PlayerController|LocalPlayerSubsystems|GetEnhancedInputLocalPlayerSubsystem _asplayer_controller) \"/Game/Hazards/FirstRoom/Input/IMC_HZ_Pickaxe.IMC_HZ_Pickaxe\" 1 \"(bIgnoreAllPressedKeysUntilRelease=True,bForceImmediately=False,bNotifyUserSettings=False)\")\n              (Variables|Default|SetBoundController _asplayer_controller)))\n          (:CastFailed\n            (CallFunction|Unbind)))\n        (else\n          (CallFunction|Unbind))))\n    (:CastFailed\n      (CallFunction|Unbind))))\n",
+        "LocalSwing": "(fn LocalSwing ()\n  (bind _returnvalue (Game|GetGameState))\n  (bind _returnvalue_1 (GameState|GetServerWorldTimeSeconds _returnvalue))\n  (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter (Actor|GetAttachParentActor)))\n  (if (Pawn|IsLocallyControlled _asbp_coop_character)\n    (if (> (- _returnvalue_1 (Variables|Default|GetLocalSwingTime)) 0.45)\n      (Variables|Default|SetLocalSwingTime _returnvalue_1)\n      (|Server_InteractBegin _asbp_coop_character self))))\n",
+        "ServerSwing": "(fn ServerSwing (Carrier)\n  (bind _returnvalue (Game|GetGameState))\n  (bind _returnvalue_1 (GameState|GetServerWorldTimeSeconds _returnvalue))\n  (if (Networking|HasAuthority)\n    (if (> (- _returnvalue_1 (Variables|Default|GetLastSwingTime)) 0.4)\n      (Variables|Default|SetLastSwingTime _returnvalue_1)\n      (Networking|ForceNetUpdate)\n      (bind (_outhit _returnvalue_2) (Collision|SphereTraceByChannel (Math|Vector|vector+vector (Actor|GetActorEyesViewPoint Carrier) (Math|Vector|vector*vector (Math|Rotator|GetRotationXVector (Actor|GetActorEyesViewPoint Carrier)) 45.0)) (Math|Vector|vector+vector (Actor|GetActorEyesViewPoint Carrier) (Math|Vector|vector*vector (Math|Rotator|GetRotationXVector (Actor|GetActorEyesViewPoint Carrier)) 330.0)) 25.0))\n      (if _returnvalue_2\n        (bind _asbp_mine_deposit (Utilities|Casting|CastToBP_MineDeposit (Collision|BreakHitResult _outhit)))\n        (Class|BPMineDeposit|TrySwing _asbp_mine_deposit Carrier)))))\n"
+      },
+      "rpc_event_nodes": [],
+      "graph_names": [
+        "UserConstructionScript",
+        "IsSet",
+        "CanInteract",
+        "GetInteractInfo",
+        "Unbind",
+        "UpdateInputBinding",
+        "UpdateHeld",
+        "LocalSwing",
+        "ServerSwing",
+        "AttachToHand",
+        "NearestLocalPawn",
+        "ShowPrompt",
+        "HidePrompt",
+        "UnbindPickup",
+        "UpdatePickupPrompt",
+        "OnPickupPressed",
+        "EventGraph"
+      ]
+    },
+    "/Game/Puzzles/BP_Carryable": {
+      "graphs": {
+        "Claim": "(fn Claim (NewCarrier NewComponent)\n  (bind _allowed (CallFunction|CanClaim NewCarrier))\n  (if _allowed\n    (bind _asac_carrying (Utilities|Casting|CastToAC_Carrying NewComponent)\n      (:then\n        (if (Utilities|Equal(Object) (Components|GetOwner _asac_carrying) NewCarrier)\n          (Variables|Default|SetCarrierComponent _asac_carrying)\n          (|SetwithNotifyCarrier NewCarrier)\n          (|SetwithNotifyCarryState 1)\n          (CallFunction|ApplyCarryState)\n          (Networking|ForceNetUpdate)\n          (return true)\n          (else\n            (return false))))\n      (:CastFailed\n        (return false)))\n    (else\n      (return false))))\n",
+        "ReleaseCarried": "(fn ReleaseCarried ()\n  (if (and (Networking|HasAuthority) (== (Variables|Default|GetCarryState) 1))\n    (Transformation|DetachFromActor \"KeepWorld\" \"KeepWorld\" \"KeepWorld\")\n    (CallFunction|ClearCarrier)\n    (|SetwithNotifyCarryState 2)\n    (CallFunction|ApplyCarryState)\n    (Networking|ForceNetUpdate)\n    (return self)\n    (else\n      (return 0))))\n",
+        "ClearCarrier": "(fn ClearCarrier ()\n  (if (Networking|HasAuthority)\n    (|SetwithNotifyCarrier 0)\n    (bind _asac_carrying (Utilities|Casting|CastToAC_Carrying (Variables|Default|GetCarrierComponent))\n      (:then\n        (Variables|Default|SetCarrierComponent 0)\n        (Class|ACCarrying|ClearCarried _asac_carrying))\n      (:CastFailed\n        (Variables|Default|SetCarrierComponent 0)))))\n",
+        "CanClaim": "(fn CanClaim (Instigator)\n  (if (and (Networking|HasAuthority) (== (Variables|Default|GetCarryState) 0))\n    (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Instigator))\n    (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _asbp_coop_character \"/Game/Hazards/AC_Health.AC_Health_C\")))\n    (bind _dead (Class|ACHealth|IsDead _asac_health))\n    (if (not _dead)\n      (bind _asbp_key_relic (Utilities|Casting|CastToBP_KeyRelic self)\n        (:then\n          (bind _allowed (Class|BPKeyRelic|CageAllowsPickup _asbp_key_relic))\n          (return _allowed))\n        (:CastFailed\n          (return true))))\n    (else\n      (return false))))\n",
+        "CanInteract": "(fn CanInteract (Instigator)\n  (if (== (Variables|Default|GetCarryState) 0)\n    (Utilities|IsValid Instigator\n      (:\"Is Valid\"\n        (bind _asac_carrying (Utilities|Casting|CastToAC_Carrying (Actor|GetComponentByClass Instigator \"/Game/Puzzles/Carrying/AC_Carrying.AC_Carrying_C\"))\n          (:then\n            (bind _item (Class|BPCoopCharacter|GetCarried _asac_carrying))\n            (Utilities|IsValid _item\n              (:\"Is Valid\"\n                (return false))\n              (:\"Is Not Valid\"\n                (return true))))\n          (:CastFailed\n            (return false))))\n      (:\"Is Not Valid\"\n        (return false)))\n    (else\n      (return false))))\n"
+      },
+      "rpc_event_nodes": [],
+      "graph_names": [
+        "UserConstructionScript",
+        "OnRep_Carrier",
+        "OnRep_CarryState",
+        "ApplyCarryState",
+        "BeginCarryable",
+        "Claim",
+        "Drop",
+        "ReleaseCarried",
+        "ClearCarrier",
+        "ResetItem",
+        "GetHeavy",
+        "CanClaim",
+        "GetCarryState",
+        "ApplyWeightTag",
+        "PickupBy",
+        "DetachFree",
+        "EventGraph",
+        "CanInteract",
+        "GetInteractInfo"
+      ]
+    },
+    "/Game/Puzzles/Carrying/AC_Carrying": {
+      "graphs": {
+        "TryPickup": "(fn TryPickup (Item)\n  (bind _allowed (CallFunction|CanPickup Item))\n  (if _allowed\n    (bind _asbp_carryable (Utilities|Casting|CastToBP_Carryable Item)\n      (:then\n        (bind _success (Class|BPCarryable|Claim _asbp_carryable (Components|GetOwner) self))\n        (if _success\n          (|SetwithNotifyCarriedItem _asbp_carryable)\n          (bind _ascharacter (Utilities|Casting|CastToCharacter (Components|GetOwner))\n            (:then\n              (bind _speed (CallFunction|PickupWalkSpeed))\n              (Variables|Default|SetSavedSpeed _speed)\n              (Variables|Default|SetSavedCrouchSpeed (Class|CharacterMovementComponent|GetMaxWalkSpeedCrouched (Class|Character|GetCharacterMovement _ascharacter)))\n              (Variables|Default|SetSpeedActive true)\n              (bind _isheavy (Class|BPCarryable|GetHeavy _asbp_carryable))\n              (|SetwithNotifyCarrySpeed (select _isheavy (* (Variables|Default|GetSavedSpeed) 0.5) (Variables|Default|GetSavedSpeed)))\n              (bind _isheavy_1 (Class|BPCarryable|GetHeavy _asbp_carryable))\n              (|SetwithNotifyCarryCrouchSpeed (select _isheavy_1 (* (Variables|Default|GetSavedCrouchSpeed) 0.5) (Variables|Default|GetSavedCrouchSpeed)))\n              (CallFunction|ApplyCarrySpeed)\n              (return true))\n            (:CastFailed\n              (return false)))\n          (else\n            (return false))))\n      (:CastFailed\n        (return false)))\n    (else\n      (return false))))\n",
+        "DropCarried": "(fn DropCarried ()\n  (if (Networking|HasAuthority (Components|GetOwner))\n    (bind _asbp_carryable (Utilities|Casting|CastToBP_Carryable (Variables|Default|GetCarriedItem))\n      (:then\n        (Class|BPCarryable|Drop _asbp_carryable))\n      (:CastFailed\n        (CallFunction|ClearCarried)))))\n",
+        "ReleaseCarried": "(fn ReleaseCarried ()\n  (if (Networking|HasAuthority (Components|GetOwner))\n    (bind _asbp_carryable (Utilities|Casting|CastToBP_Carryable (Variables|Default|GetCarriedItem))\n      (:then\n        (bind _item (Class|BPCarryable|ReleaseCarried _asbp_carryable))\n        (return _item))\n      (:CastFailed\n        (return 0)))\n    (else\n      (return 0))))\n",
+        "ClearCarried": "(fn ClearCarried ()\n  (if (Networking|HasAuthority (Components|GetOwner))\n    (|SetwithNotifyCarriedItem 0)\n    (if (Variables|Default|GetSpeedActive)\n      (|SetwithNotifyCarrySpeed (Variables|Default|GetSavedSpeed))\n      (|SetwithNotifyCarryCrouchSpeed (Variables|Default|GetSavedCrouchSpeed))\n      (CallFunction|ApplyCarrySpeed)\n      (Variables|Default|SetSpeedActive false))))\n"
+      },
+      "rpc_event_nodes": [],
+      "graph_names": [
+        "OnRep_CarriedItem",
+        "OnRep_CarrySpeed",
+        "TryPickup",
+        "DropCarried",
+        "GetCarried",
+        "ReleaseCarried",
+        "ApplyCarrySpeed",
+        "ClearCarried",
+        "BeginCarrying",
+        "EndCarrying",
+        "CanPickup",
+        "OnRep_CarryCrouchSpeed",
+        "PickupWalkSpeed",
+        "EventGraph"
+      ]
+    }
+  },
+  "errors": [],
+  "protected_packages_saved": false
+}

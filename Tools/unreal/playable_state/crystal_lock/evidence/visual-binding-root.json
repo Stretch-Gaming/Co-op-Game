@@ -1,0 +1,146 @@
+{
+  "templates": [
+    {
+      "variable": "HC_CrystalLockVisual",
+      "for_blueprint": {
+        "path": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C:HC_CrystalLockVisual_GEN_VARIABLE",
+        "archetype": null,
+        "static_mesh": "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock.SM_CrystalLock",
+        "relative_location": "<Struct 'Vector' (0x42f38768380) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+        "relative_scale3d": "<Struct 'Vector' (0x42f387683b0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+        "absolute_scale": "True",
+        "visible": "False",
+        "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+      },
+      "object": {
+        "path": "/Game/Puzzles/BP_CrystalLock.BP_CrystalLock_C:HC_CrystalLockVisual_GEN_VARIABLE",
+        "archetype": null,
+        "static_mesh": "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock.SM_CrystalLock",
+        "relative_location": "<Struct 'Vector' (0x42f38768380) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+        "relative_scale3d": "<Struct 'Vector' (0x42f387683b0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+        "absolute_scale": "True",
+        "visible": "False",
+        "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+      }
+    }
+  ],
+  "actors": [
+    {
+      "name": "BP_CrystalLock_C_3",
+      "brazier": true,
+      "components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.StaticMeshComponent0",
+          "archetype": null,
+          "static_mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+          "relative_location": "<Struct 'Vector' (0x42ef1082980) {x: 375.000000, y: 8750.000000, z: -300.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef10829b0) {x: 0.800000, y: 0.800000, z: 1.000000}>",
+          "absolute_scale": "False",
+          "visible": "True",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_3.HC_CrystalLockVisual",
+          "archetype": null,
+          "static_mesh": "None",
+          "relative_location": "<Struct 'Vector' (0x42ef108e780) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef108e7b0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+          "absolute_scale": "True",
+          "visible": "False",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        }
+      ]
+    },
+    {
+      "name": "BP_CrystalLock_C_0",
+      "brazier": false,
+      "components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.StaticMeshComponent0",
+          "archetype": null,
+          "static_mesh": "/Engine/BasicShapes/Sphere.Sphere",
+          "relative_location": "<Struct 'Vector' (0x42ef1085180) {x: -1275.000000, y: 9250.000000, z: 50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef10851b0) {x: 0.800000, y: 0.800000, z: 1.000000}>",
+          "absolute_scale": "False",
+          "visible": "False",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.HC_CrystalLockVisual",
+          "archetype": null,
+          "static_mesh": "None",
+          "relative_location": "<Struct 'Vector' (0x42ef1084780) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef10847b0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+          "absolute_scale": "True",
+          "visible": "True",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        }
+      ]
+    },
+    {
+      "name": "BP_CrystalLock_C_1",
+      "brazier": false,
+      "components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.StaticMeshComponent0",
+          "archetype": null,
+          "static_mesh": "/Engine/BasicShapes/Sphere.Sphere",
+          "relative_location": "<Struct 'Vector' (0x42ef1083380) {x: 925.000000, y: 9250.000000, z: 50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef10833b0) {x: 0.800000, y: 0.800000, z: 1.000000}>",
+          "absolute_scale": "False",
+          "visible": "False",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.HC_CrystalLockVisual",
+          "archetype": null,
+          "static_mesh": "None",
+          "relative_location": "<Struct 'Vector' (0x42ef1086580) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef10865b0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+          "absolute_scale": "True",
+          "visible": "True",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        }
+      ]
+    },
+    {
+      "name": "BP_CrystalLock_C_2",
+      "brazier": true,
+      "components": [
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.StaticMeshComponent0",
+          "archetype": null,
+          "static_mesh": "/Engine/BasicShapes/Cylinder.Cylinder",
+          "relative_location": "<Struct 'Vector' (0x42ef1085b80) {x: -725.000000, y: 8750.000000, z: -300.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef1085bb0) {x: 0.800000, y: 0.800000, z: 1.000000}>",
+          "absolute_scale": "False",
+          "visible": "True",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        },
+        {
+          "path": "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_2.HC_CrystalLockVisual",
+          "archetype": null,
+          "static_mesh": "None",
+          "relative_location": "<Struct 'Vector' (0x42ef1083d80) {x: 0.000000, y: 0.000000, z: -50.000000}>",
+          "relative_scale3d": "<Struct 'Vector' (0x42ef1083db0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+          "absolute_scale": "True",
+          "visible": "False",
+          "collision_enabled": "Exception(\"StaticMeshComponent: Failed to find property 'collision_enabled' for attribute 'collision_enabled' on 'StaticMeshComponent'\")"
+        }
+      ]
+    }
+  ],
+  "graphs": {
+    "UserConstructionScript": "(fn ConstructionScript ())\n",
+    "OnRep_Lit": "(fn OnRep_Lit ()\n  (CallFunction|ApplyLock))\n",
+    "OnRep_Enabled": "(fn OnRep_Enabled ()\n  (CallFunction|ApplyLock))\n",
+    "RefreshLock": "(fn RefreshLock ()\n  (if (Networking|HasAuthority)\n    (bind _asbp_coop_game_state (Utilities|Casting|CastToBP_CoopGameState (Game|GetGameState)))\n    (|SetwithNotifyEnabled (< (Variables|Default|GetLockSlot) (select (Variables|Default|GetBrazier) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"4\") 2 1) (select (Utilities|Name|Equal(Name) (Utilities|Struct|BreakSRoundState (Class|BPCoopGameState|GetRoundState _asbp_coop_game_state)) \"2\") 1 2))))\n    (Variables|Default|SetSourceCount 0)\n    (for _array_element (Variables|Default|GetLightSources)\n      (Utilities|IsValid _array_element\n        (:\"Is Valid\"\n          (if (Variables|Default|GetBrazier)\n            (bind _asbp_flare (Utilities|Casting|CastToBP_Flare _array_element))\n            (bind _active (Components|Activation|IsActive _asbp_flare))\n            (if _active\n              (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1)))\n            (else\n              (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _array_element \"/Game/Hazards/AC_Health.AC_Health_C\")))\n              (bind _dead (Class|ACHealth|IsDead _asac_health))\n              (if (not _dead)\n                (Variables|Default|SetSourceCount (+ (Variables|Default|GetSourceCount) 1))))))))\n    (|SetwithNotifyLit (and (Variables|Default|GetEnabled) (> (Variables|Default|GetSourceCount) 0)))\n    (CallFunction|ApplyLock)))\n",
+    "BeginLock": "(fn BeginLock ()\n  (CallFunction|ApplyLock)\n  (if (Networking|HasAuthority)\n    (Utilities|Time|SetTimerbyFunctionName self \"RefreshLock\" 0.1 true)))\n",
+    "ApplyLock": "(fn ApplyLock ()\n  (CallFunction|RefreshCrystalLockPresentation)\n  (Rendering|SetActorHiddenInGame (not (Variables|Default|GetEnabled)))\n  (Collision|SetActorEnableCollision (Variables|Default|GetEnabled))\n  (Rendering|SetRenderCustomDepth (Variables|StaticMeshActor|GetStaticMeshComponent) (Variables|Default|GetLit)))\n",
+    "BeginLight": "(fn BeginLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|IsValid Source\n      (:\"Is Valid\"\n        (if (Variables|Default|GetBrazier)\n          (bind _asbp_flare (Utilities|Casting|CastToBP_Flare Source))\n          (bind _active (Components|Activation|IsActive _asbp_flare))\n          (if _active\n            (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))\n          (else\n            (bind _asbp_coop_character (Utilities|Casting|CastToBP_CoopCharacter Source))\n            (bind _asac_health (Utilities|Casting|CastToAC_Health (Actor|GetComponentByClass _asbp_coop_character \"/Game/Hazards/AC_Health.AC_Health_C\")))\n            (bind _dead (Class|ACHealth|IsDead _asac_health))\n            (if (not _dead)\n              (Utilities|Array|AddUnique (Variables|Default|GetLightSources) Source))))))))\n",
+    "EndLight": "(fn EndLight (Source)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|RemoveItem (Variables|Default|GetLightSources) Source)))\n",
+    "ResetLock": "(fn ResetLock (Index Attempt)\n  (if (Networking|HasAuthority)\n    (Utilities|Array|Clear (Variables|Default|GetLightSources))\n    (|SetwithNotifyLit false)\n    (CallFunction|ApplyLock)))\n",
+    "RefreshCrystalLockPresentation": "(fn RefreshCrystalLockPresentation ()\n  (if (not (Variables|Default|GetBrazier))\n    (Rendering|SetVisibility (Variables|StaticMeshActor|GetStaticMeshComponent))\n    (Rendering|SetVisibility (|GetHC_CrystalLockVisual) true)\n    (Utilities|IsValid (Variables|Default|GetCrystalLockMID)\n      (:\"Is Valid\"\n        (Rendering|Material|SetScalarParameterValue (Variables|Default|GetCrystalLockMID) \"Lit\" (select (Variables|Default|GetLit) 1.0 0.0)))\n      (:\"Is Not Valid\"\n        (bind _returnvalue (Rendering|Material|CreateDynamicMaterialInstance (|GetHC_CrystalLockVisual) 1))\n        (Variables|Default|SetCrystalLockMID _returnvalue)\n        (Utilities|IsValid (Variables|Default|GetCrystalLockMID)\n          (:\"Is Valid\"\n            (Rendering|Material|SetScalarParameterValue (Variables|Default|GetCrystalLockMID) \"Lit\" (select (Variables|Default|GetLit) 1.0 0.0))))))\n    (else\n      (Rendering|SetVisibility (|GetHC_CrystalLockVisual)))))\n",
+    "EventGraph": "(event EventBeginPlay\n  (CallFunction|BeginLock))\n\n(event EventLightBegin (Source)\n  (CallFunction|BeginLight Source))\n\n(event EventLightEnd (Source)\n  (CallFunction|EndLight Source))\n\n(event EventResetForRound (Index Attempt)\n  (CallFunction|ResetLock Index Attempt))\n\n(event Collision|EventActorBeginOverlap (OtherActor))\n\n(event EventTick (DeltaSeconds))\n"
+  }
+}

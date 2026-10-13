@@ -1,0 +1,22 @@
+{
+  "inspection_only": true,
+  "equal_actor_context": [
+    "Utilities|Operators|NotEqual(!=)",
+    "Utilities|Operators|LessEqual(<=)",
+    "Utilities|Operators|GreaterEqual(>=)",
+    "Utilities|Operators|Equal(==)",
+    "Asserts|AssertEqual(Object)"
+  ],
+  "operator_actor_context": [
+    "Utilities|Operators|Subtract",
+    "Utilities|Operators|Multiply",
+    "Utilities|Operators|Divide",
+    "Utilities|Operators|Add",
+    "Utilities|Operators|NotEqual(!=)",
+    "Utilities|Operators|LessEqual(<=)",
+    "Utilities|Operators|Less(<)",
+    "Utilities|Operators|GreaterEqual(>=)",
+    "Utilities|Operators|Greater(>)",
+    "Utilities|Operators|Equal(==)"
+  ]
+}

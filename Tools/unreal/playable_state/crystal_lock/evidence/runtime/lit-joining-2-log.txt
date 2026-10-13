@@ -1,0 +1,277 @@
+[2026.10.13-06.06.57:629][917]LogModelContextProtocol: Display: Client requested protocol version '2024-11-05', negotiated '2024-11-05'
+[2026.10.13-06.06.57:630][917]LogModelContextProtocol: Initializing new session: e126db3f854997185c222a926f85e0b8
+[2026.10.13-06.06.57:651][918]LogModelContextProtocol: Session initialized: e126db3f854997185c222a926f85e0b8
+[2026.10.13-06.06.57:680][919]LogModelContextProtocol: Running tool: 'call_tool'
+[2026.10.13-06.06.57:680][919]LogModelContextProtocol: Dispatching toolset tool: 'SlateInspectorToolset.SlateInspectorToolset.Type'
+[2026.10.13-06.06.57:723][919]LogMetal: Display: Creating NativeLayer -2147483648 in Metal Viewport 0x42f3a218d00
+[2026.10.13-06.06.57:800][919]Cmd: py /private/tmp/coop-runtime/control.py
+[2026.10.13-06.06.58:178][932]LogModelContextProtocol: Running tool: 'call_tool'
+[2026.10.13-06.06.58:178][932]LogModelContextProtocol: Dispatching toolset tool: 'EditorToolset.EditorAppToolset.StartPIE'
+[2026.10.13-06.06.58:202][933]LogUMGEditor: Disabling Slate Post Buffers for multi-window PIE session, currently not supported.
+[2026.10.13-06.06.58:236][933]LogCameraSystemEditor: No camera objects needed building (inspected 0 objects)
+[2026.10.13-06.06.58:244][933]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.10.13-06.06.58:265][933]LogPlayLevel: Creating play world package: /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test
+[2026.10.13-06.06.58:289][933]LogPlayLevel: PIE: StaticDuplicateObject took: (0.022718s)
+[2026.10.13-06.06.58:289][933]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Puzzles/Test/SixRound/L_SixRound_Test.L_SixRound_Test to /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test (0.025418s)
+[2026.10.13-06.06.58:439][933]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2026.10.13-06.06.58:445][933]LogChaosDD: Creating Chaos Debug Draw Scene for world L_SixRound_Test
+[2026.10.13-06.06.58:498][933]LogPlayLevel: PIE: World Init took: (0.053550s)
+[2026.10.13-06.06.58:500][933]LogLoad: Game class is 'BP_SixRoundTestGameMode_C'
+[2026.10.13-06.06.58:985][933]LogWorld: Bringing World /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test up for play (max tick rate 0) at 2026.10.13-02.06.58
+[2026.10.13-06.06.58:994][933]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2026.10.13-06.06.58:996][933]LogWorld: Bringing up level for play took: 0.013628
+[2026.10.13-06.06.59:001][933]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2026.10.13-06.06.59:001][933]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2026.10.13-06.06.59:005][933]LogPushModel: PushModel HandleCreation is now enabled
+[2026.10.13-06.06.59:005][933]LogNet: InitBase GameNetDriver (NetDriverDefinition GameNetDriver) using replication model Generic
+[2026.10.13-06.06.59:006][933]LogInit: BSD IPv4/6: Socket queue. Rx: 262144 (config 262144) Tx: 131072 (config 131072)
+[2026.10.13-06.06.59:006][933]LogNet: Created socket for bind address: 0.0.0.0:17777
+[2026.10.13-06.06.59:007][933]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2026.10.13-06.06.59:007][933]LogNet: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21 IpNetDriver listening on port 17777
+[2026.10.13-06.06.59:007][933]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2026.10.13-06.06.59:012][933]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2026.10.13-06.06.59:012][933]PIE: Server logged in
+[2026.10.13-06.06.59:014][933]PIE: Play in editor total start time 0.814 seconds.
+[2026.10.13-06.06.59:015][933]LogChaosDD: Creating Chaos Debug Draw Scene for world Untitled
+[2026.10.13-06.06.59:018][933]LogPlayLevel: PIE: World Init took: (0.002218s)
+[2026.10.13-06.06.59:018][933]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2026.10.13-06.06.59:019][933]LogAudioMixer: Display: bUseRenderScheduler set to true.
+[2026.10.13-06.06.59:020][933]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.10.13-06.06.59:020][933]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.10.13-06.06.59:021][933]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.10.13-06.06.59:021][933]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.10.13-06.06.59:021][933]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.10.13-06.06.59:021][933]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.10.13-06.06.59:021][933]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.10.13-06.06.59:021][933]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.10.13-06.06.59:022][933]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.10.13-06.06.59:022][933]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.10.13-06.06.59:022][933]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.10.13-06.06.59:022][933]LogAudioMixerAudioUnit: Display: Bytes per submitted buffer: 8192
+[2026.10.13-06.06.59:022][933]LogAudioMixerAudioUnit: Warning: Error querying Sample Rate: 2003332927
+[2026.10.13-06.06.59:028][933]LogAudioMixer: Display: Initializing audio mixer using platform API: 'CoreAudio'
+[2026.10.13-06.06.59:032][933]LogAudioMixer: Display: Using Audio Hardware Device Unknown
+[2026.10.13-06.06.59:036][933]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.10.13-06.06.59:036][933]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.10.13-06.06.59:036][933]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.10.13-06.06.59:041][933]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=16
+[2026.10.13-06.06.59:041][933]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=16
+[2026.10.13-06.06.59:042][933]LogInit: FAudioDevice initialized with ID 16.
+[2026.10.13-06.06.59:042][933]LogAudio: Display: Audio Device (ID: 16) registered with world 'Untitled'.
+[2026.10.13-06.06.59:042][933]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 16
+[2026.10.13-06.06.59:076][933]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.06.59:087][933]LogGlobalStatus: Browse Started Browse: "127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test"
+[2026.10.13-06.06.59:087][933]LogNet: Browse: 127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test
+[2026.10.13-06.06.59:087][933]LogPushModel: PushModel HandleCreation is now enabled
+[2026.10.13-06.06.59:087][933]LogNet: InitBase PendingNetDriver (NetDriverDefinition GameNetDriver) using replication model Generic
+[2026.10.13-06.06.59:087][933]LogInit: BSD IPv4/6: Socket queue. Rx: 262144 (config 262144) Tx: 32768 (config 32768)
+[2026.10.13-06.06.59:087][933]LogNet: Created socket for bind address: 0.0.0.0:0
+[2026.10.13-06.06.59:088][933]LogNet: IpConnection_28 setting maximum channels to: 32767
+[2026.10.13-06.06.59:088][933]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2026.10.13-06.06.59:089][933]LogHandshake: Stateless Handshake: NetDriverDefinition 'GameNetDriver' CachedClientID: 0
+[2026.10.13-06.06.59:089][933]LogNet: AddressResolution: Begin [Host=127.0.0.1] [Port=17777] [Type=IPv4]
+[2026.10.13-06.06.59:089][933]LogNet: AddressResolution: Numeric IPv4 detected, resolving synchronously [Host=127.0.0.1]
+[2026.10.13-06.06.59:090][933]LogNet: Address resolution complete, connection socket assigned (resolved address: 127.0.0.1:17777) [Sync]
+[2026.10.13-06.06.59:090][933]LogNet: Game client on port 17777, rate 100000
+[2026.10.13-06.06.59:091][933]PIE: Client logged in
+[2026.10.13-06.06.59:092][933]PIE: Play in editor total start time 0.893 seconds.
+[2026.10.13-06.06.59:093][933]LogChaosDD: Creating Chaos Debug Draw Scene for world Untitled
+[2026.10.13-06.06.59:095][933]LogPlayLevel: PIE: World Init took: (0.002528s)
+[2026.10.13-06.06.59:095][933]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: bUseRenderScheduler set to true.
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.10.13-06.06.59:095][933]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.10.13-06.06.59:095][933]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.10.13-06.06.59:095][933]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.10.13-06.06.59:095][933]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.10.13-06.06.59:095][933]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.10.13-06.06.59:095][933]LogAudioMixerAudioUnit: Display: Bytes per submitted buffer: 8192
+[2026.10.13-06.06.59:095][933]LogAudioMixerAudioUnit: Warning: Error querying Sample Rate: 2003332927
+[2026.10.13-06.06.59:096][933]LogAudioMixer: Display: Initializing audio mixer using platform API: 'CoreAudio'
+[2026.10.13-06.06.59:096][933]LogAudioMixer: Display: Using Audio Hardware Device Unknown
+[2026.10.13-06.06.59:097][933]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.10.13-06.06.59:097][933]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.10.13-06.06.59:097][933]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.10.13-06.06.59:098][933]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2026.10.13-06.06.59:098][933]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2026.10.13-06.06.59:099][933]LogInit: FAudioDevice initialized with ID 17.
+[2026.10.13-06.06.59:099][933]LogAudio: Display: Audio Device (ID: 17) registered with world 'Untitled'.
+[2026.10.13-06.06.59:099][933]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2026.10.13-06.06.59:133][933]LogMetal: Display: Creating NativeLayer -2147483648 in Metal Viewport 0x42f4d1a0780
+[2026.10.13-06.06.59:143][933]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.06.59:144][933]LogGlobalStatus: Browse Started Browse: "127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test"
+[2026.10.13-06.06.59:144][933]LogNet: Browse: 127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test
+[2026.10.13-06.06.59:144][933]LogPushModel: PushModel HandleCreation is now enabled
+[2026.10.13-06.06.59:144][933]LogNet: InitBase PendingNetDriver (NetDriverDefinition GameNetDriver) using replication model Generic
+[2026.10.13-06.06.59:144][933]LogInit: BSD IPv4/6: Socket queue. Rx: 262144 (config 262144) Tx: 32768 (config 32768)
+[2026.10.13-06.06.59:144][933]LogNet: Created socket for bind address: 0.0.0.0:0
+[2026.10.13-06.06.59:144][933]LogNet: IpConnection_29 setting maximum channels to: 32767
+[2026.10.13-06.06.59:145][933]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2026.10.13-06.06.59:145][933]LogHandshake: Stateless Handshake: NetDriverDefinition 'GameNetDriver' CachedClientID: 1
+[2026.10.13-06.06.59:145][933]LogNet: AddressResolution: Begin [Host=127.0.0.1] [Port=17777] [Type=IPv4]
+[2026.10.13-06.06.59:145][933]LogNet: AddressResolution: Numeric IPv4 detected, resolving synchronously [Host=127.0.0.1]
+[2026.10.13-06.06.59:145][933]LogNet: Address resolution complete, connection socket assigned (resolved address: 127.0.0.1:17777) [Sync]
+[2026.10.13-06.06.59:145][933]LogNet: Game client on port 17777, rate 100000
+[2026.10.13-06.06.59:150][933]PIE: Client logged in
+[2026.10.13-06.06.59:151][933]PIE: Play in editor total start time 0.952 seconds.
+[2026.10.13-06.06.59:153][933]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49712
+[2026.10.13-06.06.59:153][933]LogHandshake: SendConnectChallenge. Timestamp: 0.048091, Cookie: 245235016144103134179159229023191008118204192096252080003104
+[2026.10.13-06.06.59:153][933]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:54099
+[2026.10.13-06.06.59:153][933]LogHandshake: SendConnectChallenge. Timestamp: 0.048091, Cookie: 253251033188152144019109244217013248115182066134158242255153
+[2026.10.13-06.06.59:161][933]LogHandshake: Cached server SessionID: 0
+[2026.10.13-06.06.59:161][933]LogHandshake: SendChallengeResponse. Timestamp: 0.048091, Cookie: 245235016144103134179159229023191008118204192096252080003104
+[2026.10.13-06.06.59:162][933]LogHandshake: Cached server SessionID: 0
+[2026.10.13-06.06.59:162][933]LogHandshake: SendChallengeResponse. Timestamp: 0.048091, Cookie: 253251033188152144019109244217013248115182066134158242255153
+[2026.10.13-06.06.59:271][934]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49712
+[2026.10.13-06.06.59:271][934]LogHandshake: SendChallengeAck. InCookie: 245235016144103134179159229023191008118204192096252080003104
+[2026.10.13-06.06.59:271][934]LogNet: Server accepting post-challenge connection from: 127.0.0.1:49712
+[2026.10.13-06.06.59:271][934]LogNet: IpConnection_30 setting maximum channels to: 32767
+[2026.10.13-06.06.59:271][934]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2026.10.13-06.06.59:271][934]LogNet: NotifyAcceptedConnection: Name: L_SixRound_Test, TimeStamp: 10/13/26 02:06:59, [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:271][934]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:271][934]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:54099
+[2026.10.13-06.06.59:271][934]LogHandshake: SendChallengeAck. InCookie: 253251033188152144019109244217013248115182066134158242255153
+[2026.10.13-06.06.59:271][934]LogNet: Server accepting post-challenge connection from: 127.0.0.1:54099
+[2026.10.13-06.06.59:271][934]LogNet: IpConnection_31 setting maximum channels to: 32767
+[2026.10.13-06.06.59:272][934]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2026.10.13-06.06.59:272][934]LogNet: NotifyAcceptedConnection: Name: L_SixRound_Test, TimeStamp: 10/13/26 02:06:59, [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:272][934]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:287][934]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_28, Driver: Name:PendingNetDriver Def:GameNetDriver IpNetDriver_22, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:288][934]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_29, Driver: Name:PendingNetDriver Def:GameNetDriver IpNetDriver_23, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2026.10.13-06.06.59:308][935]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test: Accepted
+[2026.10.13-06.06.59:308][935]LogNet: Remote platform little endian=1
+[2026.10.13-06.06.59:308][935]LogNet: This platform little endian=1
+[2026.10.13-06.06.59:308][935]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test: Accepted
+[2026.10.13-06.06.59:308][935]LogNet: Remote platform little endian=1
+[2026.10.13-06.06.59:308][935]LogNet: This platform little endian=1
+[2026.10.13-06.06.59:313][935]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2026.10.13-06.06.59:315][935]LogOnline: OSS: Created online subsystem instance for: :Context_26
+[2026.10.13-06.06.59:321][936]LogNet: Login request: ?Name=Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A userId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A platform: NULL
+[2026.10.13-06.06.59:321][936]LogNet: Login request: ?Name=Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D userId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D platform: NULL
+[2026.10.13-06.06.59:322][936]LogNet: Welcomed by server (Level: /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test, Game: /Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode_C)
+[2026.10.13-06.06.59:323][936]LogLoad: LoadMap: 127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test?game=/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode_C
+[2026.10.13-06.06.59:323][936]LogWorld: BeginTearingDown for /Temp/Untitled_15
+[2026.10.13-06.06.59:323][936]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.06.59:323][936]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.06.59:370][936]LogAudio: Display: Audio Device unregistered from world 'Untitled'.
+[2026.10.13-06.06.59:371][936]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2026.10.13-06.06.59:374][936]LogAudio: Display: Audio Device (ID: 16) registered with world 'L_SixRound_Test'.
+[2026.10.13-06.06.59:374][936]LogChaosDD: Creating Chaos Debug Draw Scene for world L_SixRound_Test
+[2026.10.13-06.06.59:375][936]LogPlayLevel: PIE: World Init took: (0.001208s)
+[2026.10.13-06.06.59:796][936]LogWorld: Bringing World /Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test up for play (max tick rate 0) at 2026.10.13-02.06.59
+[2026.10.13-06.06.59:797][936]LogWorld: Bringing up level for play took: 0.001346
+[2026.10.13-06.06.59:802][936]LogLoad: Took 0.478656 seconds to LoadMap(/Game/Puzzles/Test/SixRound/L_SixRound_Test)
+[2026.10.13-06.06.59:802][936]LogGlobalStatus: LoadMap Load map complete /Game/Puzzles/Test/SixRound/L_SixRound_Test
+[2026.10.13-06.06.59:802][936]LogGlobalStatus: TravelCompleted Pending net game travel completed
+[2026.10.13-06.06.59:802][936]LogNet: Welcomed by server (Level: /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test, Game: /Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode_C)
+[2026.10.13-06.06.59:803][936]LogStreaming: Display: FlushAsyncLoading(): 2 QueuedPackages, 0 AsyncPackages
+[2026.10.13-06.06.59:803][936]LogLoad: LoadMap: 127.0.0.1:17777/Game/Puzzles/Test/SixRound/L_SixRound_Test?game=/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode_C
+[2026.10.13-06.06.59:803][936]LogWorld: BeginTearingDown for /Temp/Untitled_16
+[2026.10.13-06.06.59:803][936]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.06.59:803][936]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.06.59:850][936]LogAudio: Display: Audio Device unregistered from world 'Untitled'.
+[2026.10.13-06.06.59:851][936]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2026.10.13-06.06.59:853][936]LogAudio: Display: Audio Device (ID: 17) registered with world 'L_SixRound_Test'.
+[2026.10.13-06.06.59:853][936]LogChaosDD: Creating Chaos Debug Draw Scene for world L_SixRound_Test
+[2026.10.13-06.06.59:854][936]LogPlayLevel: PIE: World Init took: (0.001270s)
+[2026.10.13-06.07.00:272][936]LogWorld: Bringing World /Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test up for play (max tick rate 0) at 2026.10.13-02.07.00
+[2026.10.13-06.07.00:273][936]LogWorld: Bringing up level for play took: 0.001235
+[2026.10.13-06.07.00:273][936]LogLoad: Took 0.469971 seconds to LoadMap(/Game/Puzzles/Test/SixRound/L_SixRound_Test)
+[2026.10.13-06.07.00:273][936]LogGlobalStatus: LoadMap Load map complete /Game/Puzzles/Test/SixRound/L_SixRound_Test
+[2026.10.13-06.07.00:273][936]LogGlobalStatus: TravelCompleted Pending net game travel completed
+[2026.10.13-06.07.00:422][937]LogNet: Client netspeed is 100000
+[2026.10.13-06.07.00:422][937]LogNet: Join request: /Game/Puzzles/Test/SixRound/L_SixRound_Test?Name=Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A?SplitscreenCount=1
+[2026.10.13-06.07.00:431][937]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2026.10.13-06.07.00:459][937]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2026.10.13-06.07.00:459][937]LogNet: Join succeeded: Peters-MacBook-Pro.l
+[2026.10.13-06.07.00:460][937]LogNet: Client netspeed is 100000
+[2026.10.13-06.07.00:460][937]LogNet: Join request: /Game/Puzzles/Test/SixRound/L_SixRound_Test?Name=Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D?SplitscreenCount=1
+[2026.10.13-06.07.00:463][937]LogNet: Join succeeded: Peters-MacBook-Pro.l
+[2026.10.13-06.07.00:483][937]LogEnhancedInput: Enhanced Input local player subsystem has initialized the user settings!
+[2026.10.13-06.07.00:502][937]LogEnhancedInput: Enhanced Input local player subsystem has initialized the user settings!
+[2026.10.13-06.07.01:238][950]LogModelContextProtocol: Running tool: 'call_tool'
+[2026.10.13-06.07.01:238][950]LogModelContextProtocol: Dispatching toolset tool: 'SlateInspectorToolset.SlateInspectorToolset.Type'
+[2026.10.13-06.07.01:299][950]LogMetal: Display: Creating NativeLayer -2147483648 in Metal Viewport 0x42f188b5d00
+[2026.10.13-06.07.01:375][950]Cmd: py /private/tmp/coop-runtime/ready.py
+[2026.10.13-06.07.01:944][964]LogModelContextProtocol: Running tool: 'call_tool'
+[2026.10.13-06.07.01:944][964]LogModelContextProtocol: Dispatching toolset tool: 'SlateInspectorToolset.SlateInspectorToolset.Type'
+[2026.10.13-06.07.02:001][964]LogMetal: Display: Creating NativeLayer -2147483648 in Metal Viewport 0x42f45c50c00
+[2026.10.13-06.07.02:082][964]Cmd: py /private/tmp/hc-a4-crystal-lock/execute_lit.py
+[2026.10.13-06.07.06:751][ 72]LogBlueprintUserMessages: [BP_Ghost_C_0] Server: Ghost touched BP_CoopCharacter_C_0
+[2026.10.13-06.07.10:978][173]LogModelContextProtocol: Running tool: 'call_tool'
+[2026.10.13-06.07.10:978][173]LogModelContextProtocol: Dispatching toolset tool: 'EditorToolset.EditorAppToolset.StopPIE'
+[2026.10.13-06.07.11:083][174]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.07.11:083][174]LogWorld: BeginTearingDown for /Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test
+[2026.10.13-06.07.11:084][174]LogSlate: Window 'CoopGame Preview [NetMode: Client 2]  (64-bit/Mac Metal SM6)' being destroyed
+[2026.10.13-06.07.11:113][174]LogWorld: UWorld::CleanupWorld for L_SixRound_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:120][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:120][174]LogWorld: UWorld::CleanupWorld for L_SixRound_PG_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:120][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:120][174]LogWorld: UWorld::CleanupWorld for L_WorldRoute_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:120][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:120][174]LogWorld: UWorld::CleanupWorld for L_SixRound_HC_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:120][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:120][174]LogWorld: UWorld::CleanupWorld for L_CaveEnvironment_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:120][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:121][174]LogNet: World NetDriver shutdown IpNetDriver_23 [GameNetDriver]
+[2026.10.13-06.07.11:121][174]LogNet: DestroyNamedNetDriver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_23 
+[2026.10.13-06.07.11:121][174]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_29, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_23, IsServer: NO, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D, Channels: 141, Time: 2026.10.13-06.07.11
+[2026.10.13-06.07.11:121][174]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_29, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_23, IsServer: NO, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D
+[2026.10.13-06.07.11:121][174]LogExit: Name:GameNetDriver Def:GameNetDriver IpNetDriver_23 shut down
+[2026.10.13-06.07.11:121][174]LogWorld: BeginTearingDown for /Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test
+[2026.10.13-06.07.11:121][174]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.07.11:124][174]LogWorld: UWorld::CleanupWorld for L_SixRound_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:130][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:130][174]LogWorld: UWorld::CleanupWorld for L_CaveEnvironment_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:130][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:130][174]LogWorld: UWorld::CleanupWorld for L_SixRound_PG_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:130][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:131][174]LogWorld: UWorld::CleanupWorld for L_SixRound_HC_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:131][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:131][174]LogWorld: UWorld::CleanupWorld for L_WorldRoute_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:131][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:132][174]LogNet: World NetDriver shutdown IpNetDriver_22 [GameNetDriver]
+[2026.10.13-06.07.11:132][174]LogNet: DestroyNamedNetDriver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_22 
+[2026.10.13-06.07.11:132][174]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_28, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_22, IsServer: NO, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A, Channels: 141, Time: 2026.10.13-06.07.11
+[2026.10.13-06.07.11:132][174]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_28, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_22, IsServer: NO, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A
+[2026.10.13-06.07.11:132][174]LogExit: Name:GameNetDriver Def:GameNetDriver IpNetDriver_22 shut down
+[2026.10.13-06.07.11:132][174]LogWorld: BeginTearingDown for /Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test
+[2026.10.13-06.07.11:141][174]LogWorld: UWorld::CleanupWorld for L_SixRound_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:143][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:143][174]LogWorld: UWorld::CleanupWorld for L_CaveEnvironment_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:143][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:143][174]LogWorld: UWorld::CleanupWorld for L_SixRound_PG_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:143][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:143][174]LogWorld: UWorld::CleanupWorld for L_SixRound_HC_Test, bSessionEnded=true, bCleanupResources=true
+[2026.10.13-06.07.11:143][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:144][174]LogNet: World NetDriver shutdown IpNetDriver_21 [GameNetDriver]
+[2026.10.13-06.07.11:144][174]LogNet: DestroyNamedNetDriver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21 
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::SendCloseReason:
+[2026.10.13-06.07.11:144][174]LogNet:  - Result=HostClosedConnection, ErrorContext="HostClosedConnection"
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::SendCloseReason:
+[2026.10.13-06.07.11:144][174]LogNet:  - Result=HostClosedConnection, ErrorContext="HostClosedConnection"
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_1, Owner: BP_CoopPlayerController_C_1, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_1, Owner: BP_CoopPlayerController_C_1, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D, Channels: 141, Time: 2026.10.13-06.07.11
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::SendCloseReason:
+[2026.10.13-06.07.11:144][174]LogNet:  - Result=Cleanup, ErrorContext="Cleanup"
+[2026.10.13-06.07.11:144][174]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_1, Owner: BP_CoopPlayerController_C_1, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D
+[2026.10.13-06.07.11:144][174]LogNet: UNetDriver::RemoveClientConnection - Removed address 127.0.0.1:54099 from MappedClientConnections for: [UNetConnection] RemoteAddr: 127.0.0.1:54099, Name: IpConnection_31, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_1, Owner: BP_CoopPlayerController_C_1, UniqueId: NULL:Peters-MacBook-Pro.local-7AA4178E5C4EBE2D5BE027B38ECCE40D
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A, Channels: 141, Time: 2026.10.13-06.07.11
+[2026.10.13-06.07.11:144][174]LogNet: UNetConnection::SendCloseReason:
+[2026.10.13-06.07.11:144][174]LogNet:  - Result=Cleanup, ErrorContext="Cleanup"
+[2026.10.13-06.07.11:144][174]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A
+[2026.10.13-06.07.11:144][174]LogNet: UNetDriver::RemoveClientConnection - Removed address 127.0.0.1:49712 from MappedClientConnections for: [UNetConnection] RemoteAddr: 127.0.0.1:49712, Name: IpConnection_30, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21, IsServer: YES, PC: BP_CoopPlayerController_C_0, Owner: BP_CoopPlayerController_C_0, UniqueId: NULL:Peters-MacBook-Pro.local-5E4D79BCF6418712EA6F9F963183CF7A
+[2026.10.13-06.07.11:145][174]LogExit: Name:GameNetDriver Def:GameNetDriver IpNetDriver_21 shut down
+[2026.10.13-06.07.11:145][174]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.10.13-06.07.11:184][174]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.10.13-06.07.11:410][174]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.07.11:410][174]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.10.13-06.07.11:410][174]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2026.10.13-06.07.11:419][174]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2026.10.13-06.07.11:472][174]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms

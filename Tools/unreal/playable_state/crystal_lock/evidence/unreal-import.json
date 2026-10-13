@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "new_assets": [
+      "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock",
+      "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone",
+      "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal"
+    ],
+    "existing_blueprints": [
+      "/Game/Puzzles/BP_CrystalLock"
+    ],
+    "maps": [
+      "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    ],
+    "shared_material_reads": [
+      "/Game/Shared/Style/M_Stylized"
+    ],
+    "shared_material_writes": [],
+    "project_setting_writes": [],
+    "new_helpers": [
+      "RefreshCrystalLockPresentation"
+    ],
+    "new_variables": [
+      "CrystalLockMID"
+    ],
+    "new_components": [
+      "HC_CrystalLockVisual"
+    ]
+  },
+  "source_fbx_sha256": "1d28b057fe310ff0d62d7e66cda472ef00cfb0470aa06cec8bef4b0310862a8d",
+  "mesh_dimensions_cm": [
+    80.00000762939453,
+    80.00000381469727,
+    100.0
+  ],
+  "imported_slots": [
+    "M_CrystalLockStone",
+    "M_CrystalLockCrystal"
+  ],
+  "simple_collision_hulls": 1,
+  "original_root_and_collision_preserved": true,
+  "original_graphs_preserved_except_entry_splice": [
+    "ApplyLock"
+  ],
+  "local_visual_only": true,
+  "visual_absolute_scale": [
+    1,
+    1,
+    1
+  ],
+  "visual_relative_offset_cm": [
+    0,
+    0,
+    -50
+  ],
+  "unreal_client_split_screen_platform_and_readability_acceptance": "pending"
+}

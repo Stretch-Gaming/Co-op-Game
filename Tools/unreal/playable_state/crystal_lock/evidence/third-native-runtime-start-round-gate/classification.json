@@ -1,0 +1,10 @@
+{
+  "classification": "Initializer rejected by existing production StartRound guard; no F input or Lit test ran",
+  "state_after_StartRound3_from_Lobby": {
+    "index": 0,
+    "attempt": 0,
+    "phase": 0
+  },
+  "source_guard": "Tools/unreal/six_round/core/20_rounds.py:38",
+  "fix": "Parent-authorized legal GameMode fixture StartRound1 -> ClearRound -> StartRound2 -> ClearRound, in one callback; ClearRound2 automatically starts3"
+}

@@ -1,0 +1,23 @@
+{
+  "input": "/tmp/hc-a4-crystal-lock/delivery/chosen-input.fbx",
+  "output": "/tmp/hc-a4-crystal-lock/delivery/SM_CrystalLock.fbx",
+  "source_unit": "auto",
+  "explicit_unit_correction_factor": 1.0,
+  "triangles_before": 1580,
+  "triangles_after": 1580,
+  "dimensions_cm": [
+    80.0,
+    80.0,
+    100.0
+  ],
+  "bounds_min_cm": [
+    -40.0,
+    -40.0,
+    0.0
+  ],
+  "pivot": "base center",
+  "fbx_unit": "centimeters",
+  "up_axis": "+Z",
+  "forward_axis": "-Y",
+  "UV_warning": null
+}

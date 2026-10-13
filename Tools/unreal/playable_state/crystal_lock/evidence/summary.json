@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "purpose": "HC-A4 headlamp crystal source, bounded native import and isolated Lit presentation",
+  "source_manifest_verified": true,
+  "source_metrics": {
+    "blender_version": "5.2.2 LTS",
+    "fbx_unit_centimeters": 1.0,
+    "fbx_reimport": "pass",
+    "isolated_blend_reload": "pass",
+    "mesh": {
+      "name": "SM_CrystalLock",
+      "triangles": 1580,
+      "vertices": 808,
+      "dimensions_cm": [
+        80.00001,
+        80.00001,
+        100.0
+      ],
+      "bounds_min_cm": [
+        -40.0,
+        -40.0,
+        0.0
+      ],
+      "bounds_max_cm": [
+        40.00001,
+        40.00001,
+        100.0
+      ],
+      "origin_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "slots": [
+        "M_CrystalLockStone",
+        "M_CrystalLockCrystal"
+      ],
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_cm3": 304559.1793549571,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "finite_uvs": true
+    },
+    "collision": {
+      "name": "UCX_SM_CrystalLock_00",
+      "triangles": 44,
+      "vertices": 24,
+      "dimensions_cm": [
+        80.00001,
+        80.00001,
+        100.0
+      ],
+      "bounds_min_cm": [
+        -40.00001,
+        -40.00001,
+        0.0
+      ],
+      "bounds_max_cm": [
+        40.00001,
+        40.00001,
+        100.0
+      ],
+      "origin_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "slots": [],
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_cm3": 483505.8445637428,
+      "uv_layers": [],
+      "finite_uvs": true,
+      "convex": true,
+      "contains_visual": true
+    },
+    "unreal_import": "pending",
+    "native_client_and_split_screen_15m_check": "pending",
+    "editable_blend_mainfile_saved": "pass",
+    "editable_blend_mainfile_reopen": "pass",
+    "unlit_default_emission": 0.0
+  },
+  "native_import": {
+    "receipt": {
+      "name": "unreal-fresh-import-receipt.json",
+      "bytes": 4858,
+      "sha256": "52e45af2bf729a905dba6e026df500f1ac7d2eeb9ca039a67307327c30731c50"
+    },
+    "status": "succeeded",
+    "stage": "complete",
+    "saved_packages": [
+      "/Game/Puzzles/Art/CrystalLock/MI_CrystalLockStone",
+      "/Game/Puzzles/Art/CrystalLock/M_CrystalLockCrystal",
+      "/Game/Puzzles/Art/CrystalLock/SM_CrystalLock",
+      "/Game/Puzzles/BP_CrystalLock",
+      "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    ],
+    "complete_and_source_verified": true
+  },
+  "placed_visual_binding": {
+    "receipt": {
+      "name": "placed-visual-repair-v2.json",
+      "bytes": 468,
+      "sha256": "fb382b0eb2f2a902436dc40cd852c5b206f06cc3c5cc263c296a59cb4cbba210"
+    },
+    "status": "passed",
+    "verified": true,
+    "saved_packages": [
+      "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+    ],
+    "error": null
+  },
+  "runtime_profiles": [
+    {
+      "receipt": {
+        "name": "crystal-lock-lit-joining-2.json",
+        "bytes": 437652,
+        "sha256": "31d67b766c99a80639946424b4e54e3d1651377517536bd504755576c092fc31"
+      },
+      "present": true,
+      "profile": "joining",
+      "players": 2,
+      "passed": true,
+      "topology_verified": true,
+      "all_owners_and_enabled_locks_covered": true,
+      "peer_lit_and_bound_mid_scalar_edges_verified": true,
+      "second_host_local_verified": true,
+      "isolated_fixture_and_owning_input_scope_verified": true,
+      "cleanup_errors": [],
+      "native_platform": "Mac",
+      "native_log": {
+        "receipt": {
+          "name": "lit-joining-2-log.txt",
+          "bytes": 34461,
+          "sha256": "879b060ea38d7df92585b18a7ed4b43b34b86e6221c12cbe01b4e2c7edd26634"
+        },
+        "scanned_error_count": 0,
+        "owner_reported_error_count": null,
+        "error_excerpt": [],
+        "clean": true
+      },
+      "error": null,
+      "qualified": true
+    },
+    {
+      "receipt": {
+        "name": "crystal-lock-lit-host_split-4.json",
+        "bytes": 1274011,
+        "sha256": "d44f444641975d66e441dd35e7c0a934825f5143599cb31c52a54787c4b38537"
+      },
+      "present": true,
+      "profile": "host_split",
+      "players": 4,
+      "passed": true,
+      "topology_verified": true,
+      "all_owners_and_enabled_locks_covered": true,
+      "peer_lit_and_bound_mid_scalar_edges_verified": true,
+      "second_host_local_verified": true,
+      "isolated_fixture_and_owning_input_scope_verified": true,
+      "cleanup_errors": [],
+      "native_platform": "Mac",
+      "native_log": {
+        "receipt": {
+          "name": "lit-host_split-4-log.txt",
+          "bytes": 40946,
+          "sha256": "0133c4e426cbad84878e7259f8ff094810b3e66f6b9491c0ca8b62f41dbde1a2"
+        },
+        "scanned_error_count": 0,
+        "owner_reported_error_count": null,
+        "error_excerpt": [],
+        "clean": true
+      },
+      "error": null,
+      "qualified": true
+    }
+  ],
+  "collection_complete": true,
+  "full_mission_acceptance": false,
+  "natural_round3_arrival_route_tested": false,
+  "windows_acceptance": false,
+  "physical_input_acceptance": false,
+  "native_rendered_15m_readability_acceptance": false,
+  "historical_interruption": "Host daemon restart during unsaved root continuation before SaveAll; original receipt retained as interrupted, not accepted.",
+  "limits": [
+    "Fresh Lobby -> authorized authoritative GameMode StartRound1/Clear1/StartRound2/Clear2 fixture chain in one callback; real placed locks and synthetic per-owner Enhanced Input F.",
+    "Server approach teleport and owning-controller aim fixtures; no direct Lit/ApplyLock/lightable/headlamp state writes.",
+    "Root geometry/collision, local MID slot binding and native braziers checked by runtime helper.",
+    "Source Blender previews do not establish native rendered or cross-platform readability."
+  ]
+}

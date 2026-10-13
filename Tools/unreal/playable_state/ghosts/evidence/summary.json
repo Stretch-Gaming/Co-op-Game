@@ -1,0 +1,1172 @@
+{
+  "schema": 1,
+  "purpose": "bounded ghost backoff repair and target qualification",
+  "collection_complete": true,
+  "full_mission_acceptance": false,
+  "inventory": {
+    "receipt": {
+      "file": "ghost-target-pin-report.json",
+      "bytes": 1280111,
+      "sha256": "8245b22e52a7a31550ace94629412cd4844cf58fb38d553b5178359f045bda82"
+    },
+    "completed": true,
+    "errors": [],
+    "engine": "5.8.3-58210709+++UE5+Release-5.8",
+    "ghost_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "ghost_errors": [],
+    "target_validity_guards": [
+      {
+        "node": "K2Node_MacroInstance_28",
+        "type_id": "Utilities|IsValid",
+        "input": "InputObject"
+      }
+    ],
+    "scope": "Loaded native inventory before repair; patch preservation audit retains EventGraph."
+  },
+  "patch": {
+    "receipt": {
+      "file": "ghost-backoff-patch-report.json",
+      "bytes": 361939,
+      "sha256": "1a293591270b3f7eec54eba6639af97f1eee5bee4d85634d566f5577aab17a62"
+    },
+    "passed": true,
+    "status": "patched",
+    "saved_only": "/Game/Player/Ghosts/BP_Ghost",
+    "compile": "passed; warnings as errors",
+    "errors": [],
+    "graph": "RefreshFlareRepulsion",
+    "graphs_audited": 12,
+    "original_graph_nodes": 24,
+    "added_nodes": [
+      "K2Node_CommutativeAssociativeBinaryOperator_1",
+      "K2Node_VariableGet_0"
+    ],
+    "deleted_original_nodes": [],
+    "unchanged_other_graph_count": 11,
+    "original_exec_links_preserved": true,
+    "original_nodes_defaults_and_wires_preserved_except_authorized_data_edge": true,
+    "preservation_verified": true,
+    "replacement": "Max(GetBackoffUntil, original now + 0.2) -> same setter",
+    "before_dsl": "(fn RefreshFlareRepulsion ()\n  (if (Networking|HasAuthority)\n    (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Player/Tools/BP_Flare.BP_Flare_C\"))\n    (for _array_element _outactors\n      (bind _active (Components|Activation|IsActive _array_element))\n      (if (and _active (< (Transformation|GetDistanceTo _array_element) 450.0))\n        (Variables|Default|SetBackoffUntil (+ (Utilities|Time|GetGameTimeInSeconds) 0.2))\n        (Transformation|SetActorLocation (Math|Vector|vector+vector (Transformation|GetActorLocation) (Math|Vector|vector*vector (Math|Vector|Normalize (Math|Vector|vector-vector (Transformation|GetActorLocation) (Transformation|GetActorLocation _array_element))) 25.0)))))))\n",
+    "after_dsl": "(fn RefreshFlareRepulsion ()\n  (if (Networking|HasAuthority)\n    (bind _outactors (Actor|GetAllActorsOfClass \"/Game/Player/Tools/BP_Flare.BP_Flare_C\"))\n    (for _array_element _outactors\n      (bind _active (Components|Activation|IsActive _array_element))\n      (if (and _active (< (Transformation|GetDistanceTo _array_element) 450.0))\n        (Variables|Default|SetBackoffUntil (Math|Float|Max(Float) (Variables|Default|GetBackoffUntil) (+ (Utilities|Time|GetGameTimeInSeconds) 0.2)))\n        (Transformation|SetActorLocation (Math|Vector|vector+vector (Transformation|GetActorLocation) (Math|Vector|vector*vector (Math|Vector|Normalize (Math|Vector|vector-vector (Transformation|GetActorLocation) (Transformation|GetActorLocation _array_element))) 25.0)))))))\n"
+  },
+  "baseline": {
+    "receipt": {
+      "file": "baseline-flare-backoff-joining-2.json",
+      "bytes": 21811,
+      "sha256": "86dfe7d3c56b440cad7a0fe107b602881df290022bd632c5057dedca5b43e6f4"
+    },
+    "case": "flare_backoff",
+    "profile": "joining",
+    "players": 2,
+    "passed": false,
+    "error": "AssertionError: Flare shortened an already-future headlamp/contact backoff deadline; see ghost_samples.shortened_from",
+    "cleanup_errors": [],
+    "checks": [
+      "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+      "Actual owning F establishes a longer headlamp backoff deadline"
+    ],
+    "topology": {
+      "verified": true,
+      "server_local_ids": [],
+      "joining_local_ids": [
+        256,
+        257
+      ],
+      "network_modes": [
+        "NM_DedicatedServer",
+        "NM_Client",
+        "NM_Client"
+      ]
+    },
+    "fixture_counts": {
+      "server approach teleport": 2,
+      "PIE-only server ghost spawn": 1,
+      "server ghost initial headlamp approach": 1,
+      "ghost/flare overlap initial approach": 1
+    },
+    "deadline_decreased": true,
+    "observed_deadline_decreases": [
+      {
+        "phase": "throw_overlap_flare",
+        "server_local_time": 18.011486887931824,
+        "shortened_from": 18.47832572311163,
+        "backoff_until": 18.211486887931823,
+        "flare_distance_cm": 353.2385880668034
+      }
+    ],
+    "native_log": {
+      "receipt": null,
+      "scanned_error_count": null,
+      "clean": null
+    },
+    "qualified": false
+  },
+  "two_joining_client_final": {
+    "receipt": {
+      "file": "ghost-flare_backoff-joining-2.json",
+      "bytes": 22795,
+      "sha256": "59aa15aed79eac65d321ab902d5a6f6209ded5671b8f58b7b2b7ac758b7c6115"
+    },
+    "case": "flare_backoff",
+    "profile": "joining",
+    "players": 2,
+    "passed": true,
+    "error": null,
+    "cleanup_errors": [],
+    "checks": [
+      "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+      "Actual owning F establishes a longer headlamp backoff deadline",
+      "Overlapping genuine Q flare and owning F never shorten an existing longer backoff deadline"
+    ],
+    "topology": {
+      "verified": true,
+      "server_local_ids": [],
+      "joining_local_ids": [
+        270,
+        271
+      ],
+      "network_modes": [
+        "NM_DedicatedServer",
+        "NM_Client",
+        "NM_Client"
+      ]
+    },
+    "fixture_counts": {
+      "server approach teleport": 2,
+      "PIE-only server ghost spawn": 1,
+      "server ghost initial headlamp approach": 1,
+      "ghost/flare overlap initial approach": 1
+    },
+    "deadline_decreased": false,
+    "observed_deadline_decreases": [],
+    "native_log": {
+      "receipt": {
+        "file": "ghost-flare_backoff-joining-2-log.txt",
+        "bytes": 32555,
+        "sha256": "38aca33958a01aa839573bf9e1c5bd0c09246c1136acc022dcae8cbf26247b7f"
+      },
+      "scanned_error_count": 0,
+      "error_excerpt": [],
+      "owner_reported_error_count": 0,
+      "clean": true
+    },
+    "qualified": true
+  },
+  "input_method": "Synthetic Enhanced Input through actual owning local-player subsystems and production Blueprint/RPC paths.",
+  "baseline_reproduced": true,
+  "matrix": {
+    "required_joining_players": [
+      2,
+      3,
+      4
+    ],
+    "cases": [
+      "retarget_death",
+      "all_dead",
+      "flare_all_safe",
+      "destroyed_target",
+      "flare_backoff"
+    ],
+    "requested_host_split_subset": [
+      "retarget_death",
+      "flare_all_safe",
+      "flare_backoff"
+    ],
+    "missing": [],
+    "runs": [
+      {
+        "receipt": {
+          "file": "ghost-all_dead-joining-2.json",
+          "bytes": 18667,
+          "sha256": "4d2fa5ecd9f7a4e2a2d1f6746393dac5fcc535170f5721ddaf3fbb5b4f94c4ab"
+        },
+        "case": "all_dead",
+        "profile": "joining",
+        "players": 2,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "All-dead roster naturally clears the ghost target",
+          "Targetless ghost remains stationary; parent must verify matching Output Log interval is clean"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            264,
+            265
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 2,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 2
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-all_dead-joining-2-log.txt",
+            "bytes": 32294,
+            "sha256": "284771d53da7e095ea6e4d905e66e8f0062a558194c5f6ef1a626eb8eb72bb14"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-all_dead-joining-3.json",
+          "bytes": 20029,
+          "sha256": "70d13bb30e522400a2f61c7c770fe8bc63304cb8d0750815e8fd10c962c2e7e9"
+        },
+        "case": "all_dead",
+        "profile": "joining",
+        "players": 3,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "All-dead roster naturally clears the ghost target",
+          "Targetless ghost remains stationary; parent must verify matching Output Log interval is clean"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            275,
+            276,
+            277
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 3,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 3
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-all_dead-joining-3-log.txt",
+            "bytes": 47085,
+            "sha256": "0106744a8663eb41f00812c6cd0d21e17f76bd7c3b59259c3184b826427c644e"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-all_dead-joining-4.json",
+          "bytes": 23643,
+          "sha256": "2f5555bf644d42907448d77652ba05275182761f5cbefdb2d9aaadc07258c71f"
+        },
+        "case": "all_dead",
+        "profile": "joining",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "All-dead roster naturally clears the ghost target",
+          "Targetless ghost remains stationary; parent must verify matching Output Log interval is clean"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            291,
+            292,
+            293,
+            294
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 4
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-all_dead-joining-4-log.txt",
+            "bytes": 62082,
+            "sha256": "515e7ea97107e30eccb4138a15fe3f62ff4f488f5d7981cc321a5dd0164de96f"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-destroyed_target-joining-2.json",
+          "bytes": 12653,
+          "sha256": "2345c272cc07e9280506bdd3f59114488e69f6a16a75d8e8d596b95b224cd10d"
+        },
+        "case": "destroyed_target",
+        "profile": "joining",
+        "players": 2,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after target pawn destruction"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            268,
+            269
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 2,
+          "PIE-only server ghost spawn": 1,
+          "destroy targeted server pawn fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-destroyed_target-joining-2-log.txt",
+            "bytes": 33319,
+            "sha256": "def49f6ab8feb3d27e51ecbb9692d20f43a059194f99af36f2678db731ee2c4a"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-destroyed_target-joining-3.json",
+          "bytes": 13868,
+          "sha256": "0a06a8c11bdce21ab55687b4bb510ae6468674a7ab194b02d4f59455734684d5"
+        },
+        "case": "destroyed_target",
+        "profile": "joining",
+        "players": 3,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after target pawn destruction"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            281,
+            282,
+            283
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 3,
+          "PIE-only server ghost spawn": 1,
+          "destroy targeted server pawn fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-destroyed_target-joining-3-log.txt",
+            "bytes": 47547,
+            "sha256": "688e7cce1bd63369fb131182c6b794c9de62ec15ce075bbe5e76586df7c89976"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-destroyed_target-joining-4.json",
+          "bytes": 15473,
+          "sha256": "83456918ea3beff1fa00cc9bd573377841faaea838275f0d4a597bd1148d7b87"
+        },
+        "case": "destroyed_target",
+        "profile": "joining",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after target pawn destruction"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            299,
+            300,
+            301,
+            302
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "destroy targeted server pawn fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-destroyed_target-joining-4-log.txt",
+            "bytes": 62077,
+            "sha256": "530d070acee32fdae6e54c7665f234bc3824e7eb71526d97e2318908e8c82f28"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_all_safe-host_split-4.json",
+          "bytes": 27986,
+          "sha256": "cbc9e3fe0b7417773945fb7f5ca4815598e4378ddbef7babccd6b638a2396850"
+        },
+        "case": "flare_all_safe",
+        "profile": "host_split",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Owning Q and actual flare safety clear every living target without ghost drift",
+          "Natural retargeting resumes on the first living owner outside flare glow"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [
+            311,
+            314
+          ],
+          "joining_local_ids": [
+            312,
+            313
+          ],
+          "network_modes": [
+            "NM_ListenServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 9,
+          "PIE-only server ghost spawn": 1,
+          "all living pawns inside genuine Q-flare safety; ghost outside glow": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_all_safe-host_split-4-log.txt",
+            "bytes": 39527,
+            "sha256": "d6159882db4540ce94a730930cae8ee951157afea48a8494a4af39fdce0e95b4"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_all_safe-joining-2.json",
+          "bytes": 30857,
+          "sha256": "ed8b02c50556e4920da53316d791d44506dabb7189b0679c1f513608d6a57d44"
+        },
+        "case": "flare_all_safe",
+        "profile": "joining",
+        "players": 2,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Owning Q and actual flare safety clear every living target without ghost drift",
+          "Natural retargeting resumes on the first living owner outside flare glow"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            266,
+            267
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 5,
+          "PIE-only server ghost spawn": 1,
+          "all living pawns inside genuine Q-flare safety; ghost outside glow": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_all_safe-joining-2-log.txt",
+            "bytes": 37223,
+            "sha256": "5eeea0c33630e8a31752f450004f6fa0fab2c6193883539a6bed779b0625d275"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_all_safe-joining-3.json",
+          "bytes": 29324,
+          "sha256": "5de2c80ed248f8229f78911a2cb02b14a05a45ba7236d676a1597517da5dc4ca"
+        },
+        "case": "flare_all_safe",
+        "profile": "joining",
+        "players": 3,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Owning Q and actual flare safety clear every living target without ghost drift",
+          "Natural retargeting resumes on the first living owner outside flare glow"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            278,
+            279,
+            280
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 7,
+          "PIE-only server ghost spawn": 1,
+          "all living pawns inside genuine Q-flare safety; ghost outside glow": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_all_safe-joining-3-log.txt",
+            "bytes": 47235,
+            "sha256": "38717a69c8d0a7ab455dbad36ddc1f16541415f76cb6f2822ab5f0b4ae4f5f61"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_all_safe-joining-4.json",
+          "bytes": 31576,
+          "sha256": "cc04ddc22d7022063ceee1fcea908ca16fe654cae772ccda12addde2105d4e0c"
+        },
+        "case": "flare_all_safe",
+        "profile": "joining",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Owning Q and actual flare safety clear every living target without ghost drift",
+          "Natural retargeting resumes on the first living owner outside flare glow"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            295,
+            296,
+            297,
+            298
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 9,
+          "PIE-only server ghost spawn": 1,
+          "all living pawns inside genuine Q-flare safety; ghost outside glow": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_all_safe-joining-4-log.txt",
+            "bytes": 62668,
+            "sha256": "409017c20442a1c484ac4759a3f552d774a5c0ccd1eef56e378be40498bb407b"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_backoff-host_split-4.json",
+          "bytes": 19712,
+          "sha256": "efd7bef965dc4c2eaec9272628bb34db86f7d25a93ad608a8bd1740c8edc4060"
+        },
+        "case": "flare_backoff",
+        "profile": "host_split",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Actual owning F establishes a longer headlamp backoff deadline",
+          "Overlapping genuine Q flare and owning F never shorten an existing longer backoff deadline"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [
+            315,
+            318
+          ],
+          "joining_local_ids": [
+            316,
+            317
+          ],
+          "network_modes": [
+            "NM_ListenServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "server ghost initial headlamp approach": 1,
+          "ghost/flare overlap initial approach": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_backoff-host_split-4-log.txt",
+            "bytes": 39889,
+            "sha256": "0f1daafb8267025a94385ae9fbf806caa2524d03e3d5ecd2586419f77a14de9f"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_backoff-joining-2.json",
+          "bytes": 22795,
+          "sha256": "59aa15aed79eac65d321ab902d5a6f6209ded5671b8f58b7b2b7ac758b7c6115"
+        },
+        "case": "flare_backoff",
+        "profile": "joining",
+        "players": 2,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Actual owning F establishes a longer headlamp backoff deadline",
+          "Overlapping genuine Q flare and owning F never shorten an existing longer backoff deadline"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            270,
+            271
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 2,
+          "PIE-only server ghost spawn": 1,
+          "server ghost initial headlamp approach": 1,
+          "ghost/flare overlap initial approach": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_backoff-joining-2-log.txt",
+            "bytes": 32555,
+            "sha256": "38aca33958a01aa839573bf9e1c5bd0c09246c1136acc022dcae8cbf26247b7f"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_backoff-joining-3.json",
+          "bytes": 18124,
+          "sha256": "e4c70952c3d3f1fba51dca26e6bcb681b23f591737ca47fc69e36748260afa4f"
+        },
+        "case": "flare_backoff",
+        "profile": "joining",
+        "players": 3,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Actual owning F establishes a longer headlamp backoff deadline",
+          "Overlapping genuine Q flare and owning F never shorten an existing longer backoff deadline"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            284,
+            285,
+            286
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 3,
+          "PIE-only server ghost spawn": 1,
+          "server ghost initial headlamp approach": 1,
+          "ghost/flare overlap initial approach": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_backoff-joining-3-log.txt",
+            "bytes": 48478,
+            "sha256": "2d52438ba1ee85eb35917ebe06bcd72d0d3cb6d8681199a75824d550ea6245d4"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-flare_backoff-joining-4.json",
+          "bytes": 26828,
+          "sha256": "0ef5d6d010417985740e17b17a89d6d9c5cbe5e009addb497b92356998982235"
+        },
+        "case": "flare_backoff",
+        "profile": "joining",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Actual owning F establishes a longer headlamp backoff deadline",
+          "Overlapping genuine Q flare and owning F never shorten an existing longer backoff deadline"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            303,
+            304,
+            305,
+            306
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "server ghost initial headlamp approach": 1,
+          "ghost/flare overlap initial approach": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-flare_backoff-joining-4-log.txt",
+            "bytes": 61792,
+            "sha256": "c3f3fb8ea2f16e0eb8033a1a1279779381bb45b833963cb5ab1b8565897765f1"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-retarget_death-host_split-4.json",
+          "bytes": 14480,
+          "sha256": "acd0b4eddaf5be0d41a03ff11f4730d8ebf1e87fe2b9289930fbd76b345da83e"
+        },
+        "case": "retarget_death",
+        "profile": "host_split",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after lethal death"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [
+            307,
+            310
+          ],
+          "joining_local_ids": [
+            308,
+            309
+          ],
+          "network_modes": [
+            "NM_ListenServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-retarget_death-host_split-4-log.txt",
+            "bytes": 39844,
+            "sha256": "9e9214435d33bf2c45e4e0934c61d57f64952c0bae64420e1433092dc6ce387d"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-retarget_death-joining-2.json",
+          "bytes": 12795,
+          "sha256": "fe7f97677b0e1ccf76d4c1fb76609c8492a08f1e71ce9ecbf20d68c8fedd6dc0"
+        },
+        "case": "retarget_death",
+        "profile": "joining",
+        "players": 2,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after lethal death"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            262,
+            263
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 2,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-retarget_death-joining-2-log.txt",
+            "bytes": 34027,
+            "sha256": "b4a702c56c1ceb9bdc1c81b56fc9a58d73fff9e309e0f3d2e6abecb70d530850"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-retarget_death-joining-3.json",
+          "bytes": 14214,
+          "sha256": "5b28ee6220afcf398b90e485cc7a6c5c30a3c04ab66e5143bf2aec0b6f70f1fb"
+        },
+        "case": "retarget_death",
+        "profile": "joining",
+        "players": 3,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after lethal death"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            272,
+            273,
+            274
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 3,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-retarget_death-joining-3-log.txt",
+            "bytes": 47768,
+            "sha256": "9c5cb5e0f27fb198769faf0d7182d31659a6307455d3b26845a1e16e903defb0"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      },
+      {
+        "receipt": {
+          "file": "ghost-retarget_death-joining-4.json",
+          "bytes": 17307,
+          "sha256": "9c209d25d0938de1f42b860eb73a39b439f459a06b67381a355647e103e1387c"
+        },
+        "case": "retarget_death",
+        "profile": "joining",
+        "players": 4,
+        "passed": true,
+        "error": null,
+        "cleanup_errors": [],
+        "checks": [
+          "Natural UpdateTarget chooses nearest living owner and ghost movement reaches every peer",
+          "Natural ghost timer retargets after lethal death"
+        ],
+        "topology": {
+          "verified": true,
+          "server_local_ids": [],
+          "joining_local_ids": [
+            287,
+            288,
+            289,
+            290
+          ],
+          "network_modes": [
+            "NM_DedicatedServer",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client",
+            "NM_Client"
+          ]
+        },
+        "fixture_counts": {
+          "server approach teleport": 4,
+          "PIE-only server ghost spawn": 1,
+          "server lethal ApplyDamage fixture": 1
+        },
+        "deadline_decreased": false,
+        "observed_deadline_decreases": [],
+        "native_log": {
+          "receipt": {
+            "file": "ghost-retarget_death-joining-4-log.txt",
+            "bytes": 62188,
+            "sha256": "3ab1bedc17e57fae7b4d4312b31c9f442112c610b5ece599499b9672ffa5d773"
+          },
+          "scanned_error_count": 0,
+          "error_excerpt": [],
+          "owner_reported_error_count": 0,
+          "clean": true
+        },
+        "qualified": true
+      }
+    ],
+    "all_collected_runs_qualified": true
+  },
+  "saved_ghost": {
+    "asset": "Content/Player/Ghosts/BP_Ghost.uasset",
+    "file": "BP_Ghost.uasset",
+    "bytes": 547495,
+    "sha256": "d7e23d948bea3787f85bad72c6a6d5c5f52f471d1d439c6f0deaf7d8b6ebdc7e"
+  },
+  "executed_script_receipts": [
+    {
+      "file": "test_ghost_targets.py",
+      "bytes": 14610,
+      "sha256": "94111ecc9f1c485e79cfff24b8af02e0a3862062add8609737745b9cbeb62978"
+    },
+    {
+      "file": "ghost_runtime_support.py",
+      "bytes": 11654,
+      "sha256": "e550eff516ab4da53ffe878a1b1f124e1ae94a19f764433df3ede60d58fb30a8"
+    }
+  ],
+  "durable_helper_receipts": [
+    {
+      "file": "collect_evidence.py",
+      "bytes": 11522,
+      "sha256": "ad7a28bd58df640414f4ce5ac95e61803dbb5359562f655fe5e111aa2d4ea341"
+    },
+    {
+      "file": "context.py",
+      "bytes": 663,
+      "sha256": "622b773534e37b8db9b67042f20048dfc9eb30f05effef6bfa3feded1207fbdc"
+    },
+    {
+      "file": "ghost_runtime_support.py",
+      "bytes": 11463,
+      "sha256": "773cade5408b184b0b59d0b5b2830e74f6c3ec0181676c50a697ddfec23cc00f"
+    },
+    {
+      "file": "inspect_ghost_targets.py",
+      "bytes": 5922,
+      "sha256": "2b92c75e76f61b0d86b3a870c10d1671be3cd8a30a030fb361252d4ea721117e"
+    },
+    {
+      "file": "patch_ghost_backoff.py",
+      "bytes": 16120,
+      "sha256": "1f14da5ce2c9967f25589f161357af22270ec1f1298b44dd2057aed81b36c7c8"
+    },
+    {
+      "file": "test_ghost_targets.py",
+      "bytes": 14566,
+      "sha256": "dc7b82445e9bf4366c6daebb388cf297ce1b5b602d98de2ec43e5ddb9dfa7f27"
+    }
+  ],
+  "limits": [
+    "Fresh Lobby isolation and disclosed poses/ghost spawn/lethal damage/pawn destruction fixtures.",
+    "Pawn destruction is not a real network Logout test.",
+    "No continuous escape, carrier-first/contact timing, physical-device, packet-emulation or rendered/audio acceptance."
+  ]
+}

@@ -1,0 +1,2696 @@
+[
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_0",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      350,
+      1954
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_1",
+    "class": "K2Node_CallFunction",
+    "type_id": "Actor|ActorHasTag",
+    "position": [
+      0,
+      500
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "Tag",
+        "type": "Name",
+        "value": "Downed",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_17",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      350,
+      1144
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_18",
+    "class": "K2Node_CallFunction",
+    "type_id": "Actor|ActorHasTag",
+    "position": [
+      0,
+      284
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "Tag",
+        "type": "Name",
+        "value": "Downed",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_19",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_19",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      350,
+      730
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_18",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_2",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      350,
+      1558
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_20",
+    "class": "K2Node_CallFunction",
+    "type_id": "Transformation|GetDistanceTo",
+    "position": [
+      350,
+      928
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "OtherActor",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_21",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Float|MakeLiteralFloat",
+    "position": [
+      350,
+      334
+    ],
+    "input_pins": [
+      {
+        "name": "Value",
+        "type": "Float (double-precision)",
+        "value": "400.0",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Float (double-precision)",
+        "value": "0.0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_22",
+    "class": "K2Node_CallFunction",
+    "type_id": "Actor|GetActorEyesViewPoint",
+    "position": [
+      2050,
+      311
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "OutLocation",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "OutRotation",
+        "type": "Rotator",
+        "value": "0, 0, 0",
+        "links": []
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_23",
+    "class": "K2Node_CallFunction",
+    "type_id": "Transformation|GetActorLocation",
+    "position": [
+      350,
+      532
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+    "class": "K2Node_CallFunction",
+    "type_id": "Collision|LineTraceByChannel",
+    "position": [
+      2400,
+      457
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_3",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Start",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_22",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "End",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_23",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "TraceChannel",
+        "type": "ETraceTypeQuery Enum",
+        "value": "TraceTypeQuery1",
+        "links": []
+      },
+      {
+        "name": "bTraceComplex",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "ActorsToIgnore",
+        "type": "Array of Actor Object References",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "DrawDebugType",
+        "type": "EDrawDebugTrace Enum",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "bIgnoreSelf",
+        "type": "Boolean",
+        "value": "true",
+        "links": []
+      },
+      {
+        "name": "TraceColor",
+        "type": "Linear Color Structure",
+        "value": "(R=1.000000,G=0.000000,B=0.000000,A=1.000000)",
+        "links": []
+      },
+      {
+        "name": "TraceHitColor",
+        "type": "Linear Color Structure",
+        "value": "(R=0.000000,G=1.000000,B=0.000000,A=1.000000)",
+        "links": []
+      },
+      {
+        "name": "DrawTime",
+        "type": "Float (single-precision)",
+        "value": "5.000000",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "OutHit",
+        "type": "Hit Result Structure",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_25",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_26",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_25",
+    "class": "K2Node_CallFunction",
+    "type_id": "Collision|BreakHitResult",
+    "position": [
+      2750,
+      655
+    ],
+    "input_pins": [
+      {
+        "name": "Hit",
+        "type": "Hit Result Structure (by ref)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "bBlockingHit",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "bInitialOverlap",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "Time",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": []
+      },
+      {
+        "name": "Distance",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": []
+      },
+      {
+        "name": "Location",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "ImpactPoint",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "Normal",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "ImpactNormal",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "PhysMat",
+        "type": "Physical Material Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "HitActor",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "HitComponent",
+        "type": "Primitive Component Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "HitBoneName",
+        "type": "Name",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "BoneName",
+        "type": "Name",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "HitItem",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "ElementIndex",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "FaceIndex",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "TraceStart",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "TraceEnd",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_26",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      2750,
+      457
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_5",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_3",
+    "class": "K2Node_CallFunction",
+    "type_id": "Transformation|GetDistanceTo",
+    "position": [
+      350,
+      1342
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "OtherActor",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_34",
+    "class": "K2Node_CallFunction",
+    "type_id": "Actor|GetComponentByClass",
+    "position": [
+      2400,
+      -650
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "ComponentClass",
+        "type": "Actor Component Class Reference",
+        "value": "/Game/Puzzles/Carrying/AC_Carrying.AC_Carrying_C",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "AC Carrying Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_4",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Float|MakeLiteralFloat",
+    "position": [
+      350,
+      136
+    ],
+    "input_pins": [
+      {
+        "name": "Value",
+        "type": "Float (double-precision)",
+        "value": "400.0",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Float (double-precision)",
+        "value": "0.0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_5",
+    "class": "K2Node_CallFunction",
+    "type_id": "Actor|GetActorEyesViewPoint",
+    "position": [
+      2050,
+      675
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "OutLocation",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "OutRotation",
+        "type": "Rotator",
+        "value": "0, 0, 0",
+        "links": []
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_6",
+    "class": "K2Node_CallFunction",
+    "type_id": "Transformation|GetActorLocation",
+    "position": [
+      350,
+      1756
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+    "class": "K2Node_CallFunction",
+    "type_id": "Collision|LineTraceByChannel",
+    "position": [
+      2400,
+      865
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Start",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_5",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "End",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_6",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "TraceChannel",
+        "type": "ETraceTypeQuery Enum",
+        "value": "TraceTypeQuery1",
+        "links": []
+      },
+      {
+        "name": "bTraceComplex",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "ActorsToIgnore",
+        "type": "Array of Actor Object References",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "DrawDebugType",
+        "type": "EDrawDebugTrace Enum",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "bIgnoreSelf",
+        "type": "Boolean",
+        "value": "true",
+        "links": []
+      },
+      {
+        "name": "TraceColor",
+        "type": "Linear Color Structure",
+        "value": "(R=1.000000,G=0.000000,B=0.000000,A=1.000000)",
+        "links": []
+      },
+      {
+        "name": "TraceHitColor",
+        "type": "Linear Color Structure",
+        "value": "(R=0.000000,G=1.000000,B=0.000000,A=1.000000)",
+        "links": []
+      },
+      {
+        "name": "DrawTime",
+        "type": "Float (single-precision)",
+        "value": "5.000000",
+        "links": []
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "OutHit",
+        "type": "Hit Result Structure",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_8",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_9",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_8",
+    "class": "K2Node_CallFunction",
+    "type_id": "Collision|BreakHitResult",
+    "position": [
+      2750,
+      1357
+    ],
+    "input_pins": [
+      {
+        "name": "Hit",
+        "type": "Hit Result Structure (by ref)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "bBlockingHit",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "bInitialOverlap",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      },
+      {
+        "name": "Time",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": []
+      },
+      {
+        "name": "Distance",
+        "type": "Float (single-precision)",
+        "value": "0.0",
+        "links": []
+      },
+      {
+        "name": "Location",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "ImpactPoint",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "Normal",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "ImpactNormal",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "PhysMat",
+        "type": "Physical Material Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "HitActor",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "HitComponent",
+        "type": "Primitive Component Object Reference",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "HitBoneName",
+        "type": "Name",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "BoneName",
+        "type": "Name",
+        "value": "None",
+        "links": []
+      },
+      {
+        "name": "HitItem",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "ElementIndex",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "FaceIndex",
+        "type": "Integer",
+        "value": "0",
+        "links": []
+      },
+      {
+        "name": "TraceStart",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      },
+      {
+        "name": "TraceEnd",
+        "type": "Vector",
+        "value": "0, 0, 0",
+        "links": []
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_9",
+    "class": "K2Node_CallFunction",
+    "type_id": "Math|Boolean|NOTBoolean",
+    "position": [
+      2750,
+      1159
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_0",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ANDBoolean",
+    "position": [
+      700,
+      1756
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_1",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ANDBoolean",
+    "position": [
+      1050,
+      1484
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_2",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ORBoolean",
+    "position": [
+      3450,
+      878
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_9",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_3",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ANDBoolean",
+    "position": [
+      700,
+      995
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_17",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_19",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_4",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ANDBoolean",
+    "position": [
+      1050,
+      813
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_5",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ORBoolean",
+    "position": [
+      3450,
+      352
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_26",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_6",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_6",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "type_id": "Math|Boolean|ORBoolean",
+    "position": [
+      3650,
+      352
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_5",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+    "class": "K2Node_FunctionEntry",
+    "type_id": "|UseAllowed",
+    "position": [
+      0,
+      -160
+    ],
+    "input_pins": [],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Target",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          },
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_0",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      3800,
+      404
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_6",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_1",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      3800,
+      872
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_2",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      2400,
+      1391
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_3",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      1700,
+      662
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_4",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      700,
+      -160
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_5",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      2400,
+      1243
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_3",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_6",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      1700,
+      810
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_7",
+    "class": "K2Node_FunctionResult",
+    "type_id": "|ReturnNode",
+    "position": [
+      700,
+      847
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Allowed",
+        "type": "Boolean",
+        "value": "false",
+        "links": []
+      }
+    ],
+    "output_pins": []
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_0",
+    "class": "K2Node_IfThenElse",
+    "type_id": "Utilities|FlowControl|Branch",
+    "position": [
+      1400,
+      662
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Condition",
+        "type": "Boolean",
+        "value": "true",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "else",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_1",
+    "class": "K2Node_IfThenElse",
+    "type_id": "Utilities|FlowControl|Branch",
+    "position": [
+      2050,
+      163
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Condition",
+        "type": "Boolean",
+        "value": "true",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_7",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "else",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_2",
+    "class": "K2Node_IfThenElse",
+    "type_id": "Utilities|FlowControl|Branch",
+    "position": [
+      1400,
+      400
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Condition",
+        "type": "Boolean",
+        "value": "true",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "else",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_6",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_3",
+    "class": "K2Node_IfThenElse",
+    "type_id": "Utilities|FlowControl|Branch",
+    "position": [
+      2050,
+      527
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Condition",
+        "type": "Boolean",
+        "value": "true",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_24",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "else",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_5",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_1",
+    "class": "K2Node_MacroInstance",
+    "type_id": "Utilities|IsValid",
+    "position": [
+      350,
+      -160
+    ],
+    "input_pins": [
+      {
+        "name": "exec",
+        "type": "Exec",
+        "value": "",
+        "links": []
+      },
+      {
+        "name": "InputObject",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "Is Valid",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Is Not Valid",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_MacroInstance_2",
+    "class": "K2Node_MacroInstance",
+    "type_id": "Utilities|IsValid",
+    "position": [
+      350,
+      -12
+    ],
+    "input_pins": [
+      {
+        "name": "exec",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "InputObject",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "Is Valid",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Is Not Valid",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionResult_7",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+    "class": "K2Node_Message",
+    "type_id": "|CanInteract",
+    "position": [
+      1700,
+      163
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "self",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Instigator",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Self_1",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Result",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+    "class": "K2Node_Message",
+    "type_id": "|CanInteract",
+    "position": [
+      1700,
+      397
+    ],
+    "input_pins": [
+      {
+        "name": "execute",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_2",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "self",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "Instigator",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Self_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "then",
+        "type": "Exec",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "Result",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_IfThenElse_3",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_0",
+    "class": "K2Node_PromotableOperator",
+    "type_id": "Math|Float|float<=float",
+    "position": [
+      700,
+      1211
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Float (double-precision)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_3",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Float (double-precision)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_4",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_1",
+    "class": "K2Node_PromotableOperator",
+    "type_id": "Utilities|Equal(Object)",
+    "position": [
+      3100,
+      598
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_8",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 9
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_2",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_2",
+    "class": "K2Node_PromotableOperator",
+    "type_id": "Math|Float|float<=float",
+    "position": [
+      700,
+      631
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Float (double-precision)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_20",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Float (double-precision)",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_21",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_3",
+    "class": "K2Node_PromotableOperator",
+    "type_id": "Utilities|Equal(Object)",
+    "position": [
+      3100,
+      248
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_25",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 9
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_5",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_4",
+    "class": "K2Node_PromotableOperator",
+    "type_id": "Utilities|Equal(Object)",
+    "position": [
+      3300,
+      -500
+    ],
+    "input_pins": [
+      {
+        "name": "A",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_FunctionEntry_0",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "type": "Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_4",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "ReturnValue",
+        "type": "Boolean",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CommutativeAssociativeBinaryOperator_6",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Self_0",
+    "class": "K2Node_Self",
+    "type_id": "Variables|Self-Reference",
+    "position": [
+      1400,
+      -160
+    ],
+    "input_pins": [],
+    "output_pins": [
+      {
+        "name": "self",
+        "type": "Self Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_1",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Self_1",
+    "class": "K2Node_Self",
+    "type_id": "Variables|Self-Reference",
+    "position": [
+      1400,
+      -12
+    ],
+    "input_pins": [],
+    "output_pins": [
+      {
+        "name": "self",
+        "type": "Self Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_Message_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_0",
+    "class": "K2Node_VariableGet",
+    "type_id": "|GetInteractionBlocked",
+    "position": [
+      0,
+      -12
+    ],
+    "input_pins": [],
+    "output_pins": [
+      {
+        "name": "InteractionBlocked",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_0",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_2",
+    "class": "K2Node_VariableGet",
+    "type_id": "|GetInteractionBlocked",
+    "position": [
+      0,
+      136
+    ],
+    "input_pins": [],
+    "output_pins": [
+      {
+        "name": "InteractionBlocked",
+        "type": "Boolean",
+        "value": "false",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_17",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_VariableGet_4",
+    "class": "K2Node_VariableGet",
+    "type_id": "|GetCarriedItem",
+    "position": [
+      2900,
+      -650
+    ],
+    "input_pins": [
+      {
+        "name": "self",
+        "type": "AC Carrying Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_CallFunction_34",
+            "direction": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "output_pins": [
+      {
+        "name": "CarriedItem",
+        "type": "Actor Object Reference",
+        "value": "",
+        "links": [
+          {
+            "node": "/Game/Core/BP_CoopCharacter.BP_CoopCharacter:UseAllowed.K2Node_PromotableOperator_4",
+            "direction": "<EdGraphPinDirection.EGPD_INPUT: 0>",
+            "index": 1
+          }
+        ]
+      }
+    ]
+  }
+]

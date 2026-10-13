@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "saved_packages": [
+    "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test"
+  ],
+  "changed": [
+    "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_0.HC_CrystalLockVisual",
+    "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test.L_SixRound_HC_Test:PersistentLevel.BP_CrystalLock_C_1.HC_CrystalLockVisual"
+  ],
+  "root_collision_bounds_and_braziers_preserved": true,
+  "blueprint_unchanged": true
+}

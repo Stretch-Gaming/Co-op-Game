@@ -1,0 +1,53 @@
+{
+  "source": "Original scripted Blender geometry and renders; CC0 1.0 Universal",
+  "files": {
+    "HC-A4_CrystalLock.blend": {
+      "sha256": "f1934af9fed68d9e086ab61361a6929e38a1960393c2f247bfc02cbc6d95ecad",
+      "bytes": 148410
+    },
+    "README.md": {
+      "sha256": "03fba4c185ce784475f6bead6e66e5236dcd8c6a71e7b9ccd301da41f0208de4",
+      "bytes": 11782
+    },
+    "SM_CrystalLock.fbx": {
+      "sha256": "1d28b057fe310ff0d62d7e66cda472ef00cfb0470aa06cec8bef4b0310862a8d",
+      "bytes": 79596
+    },
+    "SM_CrystalLock.validation.json": {
+      "sha256": "4af4635109b2b9ad264da45ef067f70c8250e6138a9fc30399f64c9c02416161",
+      "bytes": 488
+    },
+    "build_crystal_lock.py": {
+      "sha256": "559f121de3834f347ff71c8e8c26cc9fb270822428ed8b265cb18d67ee585603",
+      "bytes": 14233
+    },
+    "previews/15m_lit.png": {
+      "sha256": "523a8e8be9351c841f51a210ab1b1a173344a90c2255ec0fffedd51d102131a8",
+      "bytes": 753633
+    },
+    "previews/15m_unlit.png": {
+      "sha256": "c722a69ff8560662a0ea42065460b199e32a62cbfb5271cc32575900f482d276",
+      "bytes": 753146
+    },
+    "previews/cave_lit.png": {
+      "sha256": "972f7d553d7274e0f785dfd2fd8bca65e2cd417917b343ede22cb5a2de0f6f6a",
+      "bytes": 396552
+    },
+    "previews/cave_unlit.png": {
+      "sha256": "d4fd7481e8ed46fb6c8ef8f1e71759b86f6eacd96d70f01af66187ac6abb86ed",
+      "bytes": 394959
+    },
+    "previews/scale_and_angles.png": {
+      "sha256": "4121e910c2101095e9f14d073b0a1f7daedd24af9e0a422d311e8af6f37effab",
+      "bytes": 522584
+    },
+    "render_crystal_lock.py": {
+      "sha256": "68bf7653f5e589a8bf8c757e7be113f86463e5b9a045f812f118f0a7ee371b94",
+      "bytes": 3890
+    },
+    "validation.json": {
+      "sha256": "482d17660b78cd261954a282bb8636d722f995532e2457f8432c3c3c36c21ffa",
+      "bytes": 1637
+    }
+  }
+}

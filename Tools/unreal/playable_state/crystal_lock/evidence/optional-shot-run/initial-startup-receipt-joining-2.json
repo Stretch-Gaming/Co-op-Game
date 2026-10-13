@@ -1,0 +1,176 @@
+{
+  "started_utc": "2026-10-13T06:11:48.309290+00:00",
+  "status": "runtime_pending",
+  "stage": "lamp_on",
+  "args": {
+    "players": 2,
+    "profile": "joining",
+    "timeout": 180,
+    "capture_shots": true
+  },
+  "report": "/tmp/hc-a4-crystal-lock/runtime-evidence/crystal-lock-lit-joining-2.json",
+  "stage_history": [
+    {
+      "stage": "registered_native_tick_gate",
+      "utc": "2026-10-13T06:11:48.313715+00:00",
+      "detail": null
+    },
+    {
+      "stage": "authorized_round3_initializer",
+      "utc": "2026-10-13T06:11:49.328868+00:00",
+      "detail": null
+    },
+    {
+      "stage": "await_round3_native_masks",
+      "utc": "2026-10-13T06:11:49.330304+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 0
+      }
+    },
+    {
+      "stage": "approach_beam",
+      "utc": "2026-10-13T06:11:50.354139+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 2
+      }
+    },
+    {
+      "stage": "lamp_on",
+      "utc": "2026-10-13T06:11:51.396661+00:00",
+      "detail": {
+        "case": 0,
+        "cases": 2
+      }
+    }
+  ],
+  "native_test_executed": false,
+  "runtime_acceptance_pending": true,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": [],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        278
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test"
+    },
+    {
+      "world": "L_SixRound_Test",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        279
+      ],
+      "world_path": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test"
+    }
+  ],
+  "player_ids": [
+    278,
+    279
+  ],
+  "optional_native_shot_showui_requested": true,
+  "authorized_initializer": "server GameMode StartRound1 -> ClearRound1 -> StartRound2 -> ClearRound2 (auto starts3), once in one callback after fresh Lobby preflight",
+  "unchanged_native_braziers": [
+    "BP_CrystalLock_C_2",
+    "BP_CrystalLock_C_3"
+  ],
+  "case_roster": [
+    {
+      "player_id": 278,
+      "target": "BP_CrystalLock_C_0"
+    },
+    {
+      "player_id": 279,
+      "target": "BP_CrystalLock_C_0"
+    }
+  ],
+  "enabled_native_headlamp_locks": [
+    "BP_CrystalLock_C_0"
+  ],
+  "round_state_observations": [
+    {
+      "stage": "fresh Lobby before authorized initializer",
+      "state": {
+        "index": 0,
+        "attempt": 0,
+        "phase": 0
+      }
+    },
+    {
+      "stage": "authorized fixture StartRound(1,)",
+      "state": {
+        "index": 1,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "authorized fixture ClearRound()",
+      "state": {
+        "index": 1,
+        "attempt": 1,
+        "phase": 2
+      }
+    },
+    {
+      "stage": "authorized fixture StartRound(2,)",
+      "state": {
+        "index": 2,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "authorized fixture ClearRound()",
+      "state": {
+        "index": 3,
+        "attempt": 1,
+        "phase": 1
+      }
+    },
+    {
+      "stage": "settled native Round 3 enabled masks",
+      "state": {
+        "index": 3,
+        "attempt": 1,
+        "phase": 1
+      },
+      "peers": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "index": 3,
+          "attempt": 1,
+          "phase": 1
+        }
+      ],
+      "scaling_row": "2"
+    }
+  ]
+}

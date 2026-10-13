@@ -1,0 +1,315 @@
+{
+  "phase": "drop",
+  "at": 10.12821964174509,
+  "deadline": 770068.958387375,
+  "checks": [
+    "All-owner start pad waits for final owner and starts R1 with correct scaling row via owning movement",
+    "Natural R1 start publishes mining/cart/plate instruction to all GameStates and every owning HUD",
+    "Selected owner picks up near pickaxe while looking away; swing context belongs only to that owner",
+    "Owning Drop event releases pickaxe and removes only its swing mapping context"
+  ],
+  "mode": "trigger_and_injected_pickup",
+  "players": 4,
+  "owner": 3,
+  "phase_generation": 6,
+  "input_pulses": [
+    {
+      "phase": "pickup_ready",
+      "generation": 4,
+      "owner_index": 3,
+      "action": "/Game/Hazards/FirstRoom/Input/IA_HZ_Pickup.IA_HZ_Pickup",
+      "delay": 0.35,
+      "duration": 0.3,
+      "pressed_at": 9.0449388474226,
+      "released_at": 9.353796016424894,
+      "positive_callbacks": 5,
+      "pressed_wall_at": 769835.47620125,
+      "released_wall_at": 769835.785291791,
+      "phase_cleanup_zero_at": 9.412882599979639
+    },
+    {
+      "phase": "drop",
+      "generation": 6,
+      "owner_index": 3,
+      "action": "IA_Drop",
+      "delay": 0,
+      "duration": 0.25,
+      "pressed_at": 10.186613515019417,
+      "released_at": 10.480637140572071,
+      "positive_callbacks": 5,
+      "pressed_wall_at": 769836.618135166,
+      "released_wall_at": 769836.917390416
+    }
+  ],
+  "fixtures": [
+    "server places all living pawns before start pad; owning movement enters trigger",
+    "server places selected owner within near-pickup distance, looking away"
+  ],
+  "owner_network_evidence": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_ListenServer",
+      "authoritative_player_ids": [
+        276,
+        277,
+        278,
+        279
+      ],
+      "visible_player_ids": [
+        276,
+        277,
+        278,
+        279
+      ],
+      "local_player_ids": [
+        276,
+        279
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        276,
+        277,
+        278,
+        279
+      ],
+      "visible_player_ids": [
+        277,
+        278,
+        276,
+        279
+      ],
+      "local_player_ids": [
+        277
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        276,
+        277,
+        278,
+        279
+      ],
+      "visible_player_ids": [
+        278,
+        277,
+        276,
+        279
+      ],
+      "local_player_ids": [
+        278
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "source_runtime_sha256": "88d507d771edf658d6021b3d2f0a076a61e59fc34caea10d78d527a543b5823c",
+  "pad_first": {
+    "clock": 4.888011496514082,
+    "round": {
+      "index": 0,
+      "phase": 0,
+      "attempt": 0,
+      "ends": 0.0,
+      "row": "4"
+    },
+    "inside_player_ids": [
+      276,
+      277,
+      278
+    ],
+    "positions": [
+      [
+        590.0,
+        -106.09719234929135,
+        92.3009187188921
+      ],
+      [
+        730.0,
+        -106.09715647829194,
+        92.14999628067017
+      ],
+      [
+        787.7187360263949,
+        -312.4842982822064,
+        92.14999628067017
+      ],
+      [
+        1010.0,
+        -520.0,
+        92.14999628067017
+      ]
+    ]
+  },
+  "pad_latest": {
+    "clock": 8.589987635612488,
+    "round": {
+      "index": 1,
+      "phase": 1,
+      "attempt": 1,
+      "ends": 0.0,
+      "row": "4"
+    },
+    "inside_player_ids": [
+      276,
+      277,
+      278,
+      279
+    ],
+    "positions": [
+      [
+        590.0,
+        -106.09719234929135,
+        92.3009187188921
+      ],
+      [
+        730.0,
+        -106.09715647829194,
+        92.14999628067017
+      ],
+      [
+        787.7187360263949,
+        -312.4842982822064,
+        92.14999628067017
+      ],
+      [
+        1052.3850047305825,
+        -348.8149566155832,
+        92.14999474691945
+      ]
+    ]
+  },
+  "objective_wall_at": 769835.025912791,
+  "objective_first": {
+    "game_states": [
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      }
+    ],
+    "owning_huds": [
+      {
+        "player_id": 276,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 277,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_28.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 278,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_29.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 279,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_HCA3RoundHUD_C_1",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      }
+    ]
+  },
+  "objective_latest": {
+    "game_states": [
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      },
+      {
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "instruction": "The first room: mine rocks, fill and push the cart, hold the plates."
+      }
+    ],
+    "owning_huds": [
+      {
+        "player_id": 276,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 277,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_28.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 278,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_29.WBP_HCA3RoundHUD_C_0",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      },
+      {
+        "player_id": 279,
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_27.WBP_HCA3RoundHUD_C_1",
+        "owned_by_controller": true,
+        "display_objective": "Mine rocks, push the loaded cart, hold the plates."
+      }
+    ]
+  },
+  "replicas": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_0_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x42d7250f0) {x: -706.014192, y: 981.451939, z: 177.796525}>"
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_1_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x42d7250f0) {x: -703.791433, y: 974.078144, z: 204.945573}>"
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "pickaxe": "/Game/Hazards/Test/SixRound/UEDPIE_2_L_WorldRoute_Test.L_WorldRoute_Test:PersistentLevel.BP_MinePickaxe_C_0",
+      "location": "<Struct 'Vector' (0x42d7250f0) {x: -703.791433, y: 974.078144, z: 204.945573}>"
+    }
+  ],
+  "swing_context_ownership": [
+    false,
+    false,
+    false,
+    true
+  ],
+  "passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "method": "Owning Enhanced Input action injection",
+  "full_mission_acceptance_pending": true
+}
