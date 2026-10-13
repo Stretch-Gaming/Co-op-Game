@@ -1,0 +1,146 @@
+{
+  "kept_mining_and_normal_starts": true,
+  "original_meetup_halls": [
+    "A",
+    "B"
+  ],
+  "new_hall_b_locks": [
+    "Maze_HallB_headlamp_locks_0",
+    "Maze_HallB_headlamp_locks_1",
+    "Maze_HallB_braziers_0",
+    "Maze_HallB_braziers_1"
+  ],
+  "doors": [
+    "Maze_Hall0_Door_0",
+    "Maze_Hall0_Door_1",
+    "Maze_Hall0_Door_2",
+    "Maze_Hall0_Door_3",
+    "Maze_Hall1_Door_0",
+    "Maze_Hall1_Door_1",
+    "Maze_Hall1_Door_2",
+    "Maze_Hall1_Door_3"
+  ],
+  "checkpoint3_dynamic": true,
+  "checkpoint4_third_paths": true,
+  "removed": {
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test": [
+      "Cave_static_006",
+      "HCA2_CaveSupport",
+      "HCA2_Light_Plate_SW",
+      "HCA2_Light_Plate_NW",
+      "HCA2_Light_Plate_SE",
+      "HCA2_Light_Plate_NE",
+      "HCA2_Light_HallFill",
+      "HCA2_Light_Altar",
+      "HCA2_Light_AltarFill",
+      "HCA2_Light_G1_West",
+      "HCA2_Light_G2_West",
+      "HCA2_Light_G3_West",
+      "HCA2_Light_G1_East",
+      "HCA2_Light_G2_East",
+      "HCA2_Light_G3_East",
+      "HCA2_Light_HallShadow_W",
+      "HCA2_Light_HallShadow_E",
+      "HCA2_Light_AltarShadow",
+      "HCA2_Light_G1_Shadow",
+      "HCA2_Light_G2_Shadow",
+      "HCA2_Light_G3_Shadow",
+      "HCA2_Light_Trap_6300",
+      "HCA2_Light_Trap_7400",
+      "HCA2_Light_Trap_8200",
+      "HZA6_DripScatter_05",
+      "HZA6_DripScatter_06",
+      "Cave_static_006_North",
+      "Cave_static_006_Lintel",
+      "HZ1_RelicNook_Floor",
+      "HZ1_RelicNook_WallW",
+      "HZ1_RelicNook_WallE",
+      "HZ1_RelicNook_WallN",
+      "HZ1_RelicNook_Roof",
+      "HZ1_Gauntlet_Floor",
+      "HZ1_Gauntlet_WallWN",
+      "HZ1_Gauntlet_WallWS",
+      "HZ1_Gauntlet_WestLintel",
+      "HZ1_Gauntlet_WallN",
+      "HZ1_Gauntlet_WallS",
+      "HZ1_Gauntlet_Roof",
+      "HZ1_GauntletGate_WallN",
+      "HZ1_GauntletGate_WallS",
+      "HZ1_GauntletGate_Lintel",
+      "HZ1_Chasm_Floor",
+      "HZ1_Chasm_Cliff",
+      "HZ1_Chasm_WallS",
+      "HZ1_Chasm_WallE",
+      "HZ1_Chasm_Roof",
+      "HZ1_Walkway_Ramp",
+      "HZ1_Torch_Round3Start_Bracket",
+      "HZ1_Torch_Round3Start_Flame",
+      "HZ1_Torch_Round3Start_Light",
+      "Torch_Round3Start_Crackle",
+      "HZ1_Torch_ExitLedge_Bracket",
+      "HZ1_Torch_ExitLedge_Flame",
+      "HZ1_Torch_ExitLedge_Light",
+      "Torch_ExitLedge_Crackle",
+      "HZ1_Torch_MapExit_Bracket",
+      "HZ1_Torch_MapExit_Flame",
+      "HZ1_Torch_MapExit_Light",
+      "Torch_MapExit_Crackle",
+      "HZ1_Crystal_RelicNook_A",
+      "HZ1_Crystal_RelicNook_B",
+      "HZ1_Crystal_RelicNook_Light",
+      "HZ1_Crystal_Gauntlet_N_A",
+      "HZ1_Crystal_Gauntlet_N_B",
+      "HZ1_Crystal_Gauntlet_N_Light",
+      "HZ1_Crystal_Gauntlet_S_A",
+      "HZ1_Crystal_Gauntlet_S_B",
+      "HZ1_Crystal_Gauntlet_S_Light",
+      "HZ1_Crystal_Chasm_A",
+      "HZ1_Crystal_Chasm_B",
+      "HZ1_Crystal_Chasm_Light",
+      "HZ1_Crystal_MapExit_A",
+      "HZ1_Crystal_MapExit_B",
+      "HZ1_Crystal_MapExit_Light",
+      "Six_ChasmNorth_West",
+      "Six_ChasmNorth_East",
+      "Six_ChasmNorth_Lintel",
+      "Six_ChasmNorth_Base"
+    ],
+    "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test": [
+      "Six_Return_G1",
+      "Six_Return_G2",
+      "Six_Return_G3"
+    ],
+    "/Game/Player/Test/SixRound/L_SixRound_PG_Test": [
+      "Six_EscapeZipline"
+    ]
+  },
+  "independent_start_room_floor_samples": [
+    [
+      -1000,
+      -225,
+      0.0
+    ],
+    [
+      800,
+      0,
+      0.0
+    ],
+    [
+      1450,
+      -200,
+      0.0
+    ],
+    [
+      1450,
+      200,
+      0.0
+    ],
+    [
+      325,
+      1000,
+      0.0
+    ]
+  ],
+  "north_maze_door_preserved": true,
+  "runtime_pending": true
+}

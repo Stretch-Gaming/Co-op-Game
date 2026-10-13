@@ -1,0 +1,922 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "players": 2,
+      "profile": "joining",
+      "passed": true,
+      "error": null,
+      "phase": "light",
+      "checks": [
+        "Legal phase setup reaches HallA puzzle",
+        "Game-driven three-second R3 wipe retry restores roster at HallA with one attempt increment and full stock",
+        "HallA owning lamp/flare unlocks only middle paths; Round4 remains blocked",
+        "HallB partial living roster cannot trigger regroup or advance the round",
+        "All-living HallB arrival revives at HallB and restocks every owner",
+        "Game-driven three-second R3 wipe retry restores roster at HallB with one attempt increment and full stock",
+        "HallB owning lamp/flare unlocks final paths and enters Round4"
+      ],
+      "observations": [
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "2"
+          }
+        },
+        {
+          "retry_hall": "A",
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 2,
+            "ends": 0.0,
+            "row": "2"
+          },
+          "server_seconds_since_failed_observation": 3.000096198171377
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E4CAAB940) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E4CAA91E0) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E4CAA8240) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 2,
+            "ends": 0.0,
+            "row": "2"
+          }
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 2,
+            "ends": 0.0,
+            "row": "2"
+          }
+        },
+        {
+          "retry_hall": "B",
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 3,
+            "ends": 0.0,
+            "row": "2"
+          },
+          "server_seconds_since_failed_observation": 3.000093698501587
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E4CAA8240) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E4CAABC10) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E4CAAB940) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            }
+          ],
+          "round": {
+            "index": 4,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "2"
+          }
+        }
+      ],
+      "network": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_DedicatedServer",
+          "authoritative_player_ids": [
+            262,
+            263
+          ],
+          "visible_player_ids": [
+            262,
+            263
+          ],
+          "local_player_ids": [],
+          "controllers": []
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            262,
+            263
+          ],
+          "visible_player_ids": [
+            262,
+            263
+          ],
+          "local_player_ids": [
+            262
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            262,
+            263
+          ],
+          "visible_player_ids": [
+            263,
+            262
+          ],
+          "local_player_ids": [
+            263
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ]
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "passed": true,
+      "error": null,
+      "phase": "light",
+      "checks": [
+        "Legal phase setup reaches HallA puzzle",
+        "HallA owning lamp/flare unlocks only middle paths; Round4 remains blocked",
+        "HallB partial living roster cannot trigger regroup or advance the round",
+        "All-living HallB arrival revives at HallB and restocks every owner",
+        "HallB owning lamp/flare unlocks final paths and enters Round4"
+      ],
+      "observations": [
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "3"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E4CAA9500) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E4CAA9640) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E4CAA9690) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "3"
+          }
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "3"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E4CAA9640) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E4CAA9690) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E4CAA9500) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            }
+          ],
+          "round": {
+            "index": 4,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "3"
+          }
+        }
+      ],
+      "network": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_DedicatedServer",
+          "authoritative_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "visible_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "local_player_ids": [],
+          "controllers": []
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "visible_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "local_player_ids": [
+            264
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "visible_player_ids": [
+            265,
+            266,
+            264
+          ],
+          "local_player_ids": [
+            265
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            264,
+            265,
+            266
+          ],
+          "visible_player_ids": [
+            266,
+            265,
+            264
+          ],
+          "local_player_ids": [
+            266
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ]
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "passed": true,
+      "error": null,
+      "phase": "light",
+      "checks": [
+        "Legal phase setup reaches HallA puzzle",
+        "HallA owning lamp/flare unlocks only middle paths; Round4 remains blocked",
+        "HallB partial living roster cannot trigger regroup or advance the round",
+        "All-living HallB arrival revives at HallB and restocks every owner",
+        "HallB owning lamp/flare unlocks final paths and enters Round4"
+      ],
+      "observations": [
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E452B3E90) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E452B1A00) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B14B0) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            },
+            {
+              "owner": 1,
+              "server": "<Struct 'Vector' (0x0000020DDF0295F0) {x: 285.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E452B3E90) {x: 285.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B1A00) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E452B1A00) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E452B15F0) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B14B0) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            },
+            {
+              "owner": 1,
+              "server": "<Struct 'Vector' (0x0000020DDF029140) {x: 285.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E452B1A00) {x: 285.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B15F0) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            }
+          ],
+          "round": {
+            "index": 4,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        }
+      ],
+      "network": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_DedicatedServer",
+          "authoritative_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "visible_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "local_player_ids": [],
+          "controllers": []
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "visible_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "local_player_ids": [
+            267
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "visible_player_ids": [
+            268,
+            269,
+            270,
+            267
+          ],
+          "local_player_ids": [
+            268
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "visible_player_ids": [
+            269,
+            268,
+            270,
+            267
+          ],
+          "local_player_ids": [
+            269
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_3_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "visible_player_ids": [
+            270,
+            268,
+            267,
+            269
+          ],
+          "local_player_ids": [
+            270
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_4_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ]
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "passed": true,
+      "error": null,
+      "phase": "light",
+      "checks": [
+        "Legal phase setup reaches HallA puzzle",
+        "HallA owning lamp/flare unlocks only middle paths; Round4 remains blocked",
+        "HallB partial living roster cannot trigger regroup or advance the round",
+        "All-living HallB arrival revives at HallB and restocks every owner",
+        "HallB owning lamp/flare unlocks final paths and enters Round4"
+      ],
+      "observations": [
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall A: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E452B0790) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E452B0B00) {x: -815.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B1320) {pitch: -60.000000, yaw: 0.000000, roll: -0.000000}>"
+            },
+            {
+              "owner": 1,
+              "server": "<Struct 'Vector' (0x0000020E452B0E20) {x: 285.000000, y: 8750.000000, z: -207.849998}>",
+              "local": "<Struct 'Vector' (0x0000020E452B0790) {x: 285.000000, y: 8750.000000, z: -207.849998}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B0B00) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "The way is open: follow the maze to meeting hall B."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Meeting hall B: light its locks together."
+            }
+          ],
+          "round": {
+            "index": 3,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        },
+        {
+          "throw_approach_ready": [
+            {
+              "owner": 0,
+              "server": "<Struct 'Vector' (0x0000020E452B0D30) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E452B0E20) {x: -815.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B0790) {pitch: -60.000000, yaw: 0.000000, roll: -0.000000}>"
+            },
+            {
+              "owner": 1,
+              "server": "<Struct 'Vector' (0x0000020E452B0C40) {x: 285.000000, y: 15000.000000, z: 492.150002}>",
+              "local": "<Struct 'Vector' (0x0000020E452B0D30) {x: 285.000000, y: 15000.000000, z: 492.150002}>",
+              "base_aim": "<Struct 'Rotator' (0x0000020E452B0E20) {pitch: 299.998169, yaw: 0.000000, roll: 0.000000}>"
+            }
+          ]
+        },
+        {
+          "instruction_replicas": [
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            },
+            {
+              "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+              "instruction": "Follow the deep maze to the relic chamber."
+            }
+          ],
+          "round": {
+            "index": 4,
+            "phase": 1,
+            "attempt": 1,
+            "ends": 0.0,
+            "row": "4"
+          }
+        }
+      ],
+      "network": [
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_ListenServer",
+          "authoritative_player_ids": [
+            271,
+            272,
+            273,
+            274
+          ],
+          "visible_player_ids": [
+            271,
+            272,
+            273,
+            274
+          ],
+          "local_player_ids": [
+            271,
+            274
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+            "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            271,
+            272,
+            273,
+            274
+          ],
+          "visible_player_ids": [
+            272,
+            273,
+            271,
+            274
+          ],
+          "local_player_ids": [
+            272
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        },
+        {
+          "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+          "net_mode": "NM_Client",
+          "authoritative_player_ids": [
+            271,
+            272,
+            273,
+            274
+          ],
+          "visible_player_ids": [
+            273,
+            272,
+            271,
+            274
+          ],
+          "local_player_ids": [
+            273
+          ],
+          "controllers": [
+            "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+          ]
+        }
+      ]
+    }
+  ],
+  "method": "Legal GameMode round-chain setup fixture; actual owning F/Q and native overlap/regroup thereafter; ghosts isolated. ApplyDamage wipe fixtures check game-driven R3 retries before and after HallB. Not first-room or full traversal acceptance."
+}

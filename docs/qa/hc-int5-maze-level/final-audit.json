@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "compiled": [
+    {
+      "path": "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode",
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/BP_MazeCheckpoint",
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/BP_HallBArrival",
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/Test/SixRound/BP_TeamHallDoor",
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    {
+      "path": "/Game/Puzzles/UI/HCA3/WBP_HCA3RoundHUD",
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    }
+  ],
+  "protected_assets_unchanged": {
+    "Content/Core/BP_CoopGameMode.uasset": "de2893af9673fa32033b27b4bd32859aeeccb97f15344f289e998e528f6cdc07",
+    "Content/Core/BP_CoopCharacter.uasset": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "Content/Player/Tools/BP_Flare.uasset": "87e6081e185bbe8253d8b30aed8e1c96c6a6ee2bcb4c8ccfaa8a8bacd55159c8",
+    "Content/Hazards/L_Site01_HZ.umap": "1ae2bd30a25061fed13ce45ec379888579babaa9e6d33c307887d3b19fc691c6",
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": "f9783965e505168fcd94a742363014c314ca178683783220483236c937fc1aff",
+    "Content/Puzzles/Test/SixRound/L_SixRound_Test.umap": "f46e7a6a0f9362a4a9c39c3dc3e94618aa160c747627ef13da7bcd6c412ee72c",
+    "Content/Puzzles/BP_CrystalLock.uasset": "372bc9dea1a5b580a1d569845fbbf5367abadf78781e4947dd63d8747e7ecf0a",
+    "Content/Puzzles/BP_MazeDoor.uasset": "a6a5ac36c2cf897b1c5c1a9a821b52a31c538b8dffbf0c98b9f1c5d88b96750b",
+    "Content/Puzzles/BP_Checkpoint.uasset": "7c3bfcc751ab6f3ed44de6eb04db3b94b2b5ac8065e1687475856fd15dd89e73",
+    "Content/Puzzles/Rounds/BP_RoundDirector.uasset": "180ee0d8612a4af8b508865dbc3ce9de91162d1163dae37b4ee36eeede4e3bf3",
+    "Content/Hazards/Maze/BP_MouthSeal.uasset": "6935ad9fbbbcfa1a973bfb7064a214fb39448f533ffb3e838237efabf34fb2f5"
+  },
+  "unused_bridge_removed": true
+}

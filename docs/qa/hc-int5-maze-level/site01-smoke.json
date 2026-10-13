@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "map": "/Game/Maps/L_Site01",
+  "mode": "Play As Client, two joining clients",
+  "checks": [
+    "Two possessed joining clients in original Site01",
+    "Changed HUD remains owned by the correct local controller for both joining clients",
+    "Both owning Enhanced Input movement contexts respond in original Site01"
+  ],
+  "owners": [
+    {
+      "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "distance": 146.50469615468796
+    },
+    {
+      "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "distance": 146.50469615468796
+    }
+  ],
+  "error": null
+}

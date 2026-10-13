@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "floor_failures": [],
+  "capsule_failures": [],
+  "gap_failures": [],
+  "samples": 624,
+  "method": "Native floor/capsule clearance with puzzle closures excluded; does not establish actual movement, timing or human play.",
+  "walkable_low_step_samples": [
+    {
+      "sample": [
+        325.0,
+        150.0,
+        0.0
+      ],
+      "actor": "Cave_procedural_321",
+      "top_z": 30.57532501220703,
+      "max_step_height": 45.0,
+      "raised_sweep_clear": true
+    },
+    {
+      "sample": [
+        325.0,
+        75.0,
+        0.0
+      ],
+      "actor": "Cave_procedural_321",
+      "top_z": 30.57532501220703,
+      "max_step_height": 45.0,
+      "raised_sweep_clear": true
+    },
+    {
+      "sample": [
+        180.88235294117646,
+        24.11764705882353,
+        0.0
+      ],
+      "actor": "Cave_procedural_321",
+      "top_z": 30.57532501220703,
+      "max_step_height": 45.0,
+      "raised_sweep_clear": true
+    },
+    {
+      "sample": [
+        108.8235294117647,
+        36.1764705882353,
+        0.0
+      ],
+      "actor": "Cave_procedural_321",
+      "top_z": 30.57532501220703,
+      "max_step_height": 45.0,
+      "raised_sweep_clear": true
+    },
+    {
+      "sample": [
+        36.76470588235293,
+        48.23529411764706,
+        0.0
+      ],
+      "actor": "Cave_procedural_321",
+      "top_z": 30.57532501220703,
+      "max_step_height": 45.0,
+      "raised_sweep_clear": true
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "file": "bake-scene.json",
+    "sha256": "46b8d26ee716b0a413d919d670773de6f947b2a2f18da3b910bd2cfd939df8b8"
+  },
+  {
+    "file": "carrier-walk-final.json",
+    "sha256": "28d84f75b00e1f44e2397c5e79ea666c5cd0f071d732756f156771d40586a7f1"
+  },
+  {
+    "file": "climb-partial-1.json",
+    "sha256": "83fa8f1d736d1fc306c54436a67b5a0073b7ab754001773b78dd85cb24e6d1b9"
+  },
+  {
+    "file": "climb-runtime.json",
+    "sha256": "f21142f1fcfb35bfffadf2a9a3a4edaba4a9eaadfbe621698103c1837ebae1d3"
+  },
+  {
+    "file": "delivery-final.json",
+    "sha256": "c3231d70d7bcda9345ff53f21e7dea55aac5ec9e5b1d24e98689a00d68f1cb89"
+  },
+  {
+    "file": "final-audit.json",
+    "sha256": "2636e2882e81e5aea3a5838419867619aab385586d39bbf26170413130bc61c7"
+  },
+  {
+    "file": "gap_recovery.png",
+    "sha256": "6ab93ddd46ec042732ef47f74f4c491a89ae920fdefec9f15c405645ef434a6b"
+  },
+  {
+    "file": "geometry.json",
+    "sha256": "f317abea04264cb872c5dc4d0a8b84afc993795061825047363177ec1d091801"
+  },
+  {
+    "file": "hall-runtime-secondary.json",
+    "sha256": "f30e2ef208b54a3ff1a9c9e5489a4f4593c9e92f3553c7bf2a90ad1f66c674fa"
+  },
+  {
+    "file": "hall-runtime.json",
+    "sha256": "83f9d627d4248e8fd0a7d04e3a955155bcc418d7ed9837e5fa4dce0ad1eeb791"
+  },
+  {
+    "file": "maze_entry.png",
+    "sha256": "c0e585f7548fbed2f52ae6309836df777c8859e74c238cdefb5dbd65fb7018c7"
+  },
+  {
+    "file": "meeting_hall_A.png",
+    "sha256": "8f959d4a78e0a608a0c994dc259d4e966df344dfe12fe32a2b57f3d3f2872031"
+  },
+  {
+    "file": "meeting_hall_B.png",
+    "sha256": "07de726b9b39ed15c71dd1f87f202450df7b2c739c042a13ede9a026749c858b"
+  },
+  {
+    "file": "mining-runtime.json",
+    "sha256": "9129de34de8bedca11b926f143da64e313266b8835edabcb4b7ad2f5610f49d9"
+  },
+  {
+    "file": "placement.json",
+    "sha256": "6a89dfd299d635370d73543d684bb30931abaec4d70f62e74c5e5077269fc817"
+  },
+  {
+    "file": "progression.json",
+    "sha256": "a7708c629638839efe27ff0392a6793f2b53bff209be52174853ac720c45fdeb"
+  },
+  {
+    "file": "qa-summary.json",
+    "sha256": "103d851a9a5d4e4a43610b7cc8f10ea2048b9088acc1f6e2a8356e61bfa9372b"
+  },
+  {
+    "file": "rock_ledge.png",
+    "sha256": "3e92d4a3b9c76af8fafd3b64bd81b80ae585fbab0999b4cf1b25dbaa2c83b784"
+  },
+  {
+    "file": "runtime-log-scan.json",
+    "sha256": "5794229514525b0c27929eb899128dd27244c60f23c31a74f88e871ec4e81e2b"
+  },
+  {
+    "file": "site01-smoke.json",
+    "sha256": "d6d7208556c5be6bc742f307be8af2ab1d88a7e4eb6a507ba7260598c4bdb1e1"
+  },
+  {
+    "file": "traversal-components.json",
+    "sha256": "9ad61f059b6762bd0fa45ffe2be404c8d9a454b2b08efc409ed669264f38bebb"
+  },
+  {
+    "file": "traversal-runtime-obstacles-final.json",
+    "sha256": "2e805b8d173ad53fa80aa591d34ee953894e3dc0c75eb3450940578a7df3cb9e"
+  },
+  {
+    "file": "traversal-runtime-partial-3.json",
+    "sha256": "3eb2bd74d9a76db91cb46270b0300c4013d33c20b7fd7bff9a3e610a4aca8220"
+  }
+]

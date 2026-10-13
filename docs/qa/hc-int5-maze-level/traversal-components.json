@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "scope": "Eight bounded gap/recovery checks and ten ledge landings only; not entire harness/full run acceptance",
+  "obstacles": [
+    {
+      "id": "ML_teal_1_16",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": 4.2200245955345785,
+      "max_z": 115.7649063927248
+    },
+    {
+      "id": "ML_teal_1_16",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020DD8D3B300) {x: 5603.043340, y: 6350.000702, z: -3.853876}>"
+    },
+    {
+      "id": "ML_teal_3_22",
+      "test": "owning sprint/jump",
+      "passed": true,
+      "min_z": 1015.1350084657784,
+      "max_z": 1151.6318862668443
+    },
+    {
+      "id": "ML_teal_3_22",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E5419C0B0) {x: 5699.914505, y: 19800.234796, z: 981.212496}>"
+    },
+    {
+      "id": "ML_purple_1_26",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": 496.3706593372657,
+      "max_z": 608.1086900154876
+    },
+    {
+      "id": "ML_purple_1_26",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E541D9280) {x: -6454.482446, y: 6624.999261, z: 548.702686}>"
+    },
+    {
+      "id": "ML_purple_2_28",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": -191.91106160794638,
+      "max_z": -83.84802127312689
+    },
+    {
+      "id": "ML_purple_2_28",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E541D9280) {x: -5396.176223, y: 9875.000727, z: -180.151304}>"
+    }
+  ],
+  "ledges": [
+    {
+      "id": "ML_orange_1_01",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E4C331B40) {x: 4825.000000, y: 7535.000000, z: 598.150003}>"
+    },
+    {
+      "id": "ML_orange_2_04",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: -1212.851927, y: 13000.000000, z: 299.149999}>"
+    },
+    {
+      "id": "ML_yellow_1_08",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: -4138.535507, y: 9135.000000, z: 38.150001}>"
+    },
+    {
+      "id": "ML_yellow_2_11",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E4C3337B0) {x: 3190.554199, y: 13037.852251, z: 626.817000}>"
+    },
+    {
+      "id": "ML_yellow_3_14",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: 1325.000000, y: 21036.464401, z: 995.750001}>"
+    },
+    {
+      "id": "ML_teal_1_17",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 2787.110715, y: 6500.000000, z: 54.150004}>"
+    },
+    {
+      "id": "ML_teal_2_19",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 6825.000000, y: 12037.889099, z: 670.150001}>"
+    },
+    {
+      "id": "ML_teal_3_23",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 5825.000000, y: 22036.446089, z: 1055.073003}>"
+    },
+    {
+      "id": "ML_purple_2_30",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: -5637.147981, y: 14000.000000, z: 23.899999}>"
+    },
+    {
+      "id": "ML_purple_3_33",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: -6175.000000, y: 19036.464309, z: 348.332003}>"
+    }
+  ],
+  "fixtures": [
+    "One approach per obstacle/ledge; owning Enhanced Input movement after approach",
+    "Existing ghosts isolated; no physical keyboard/controller acceptance",
+    "Teal3 recovery follows inner stair line (25cm inward) to avoid existing angled wall; human fairness/readability remains open"
+  ],
+  "source_receipts": [
+    {
+      "path": "traversal-runtime-partial-3.json",
+      "sha256": "3eb2bd74d9a76db91cb46270b0300c4013d33c20b7fd7bff9a3e610a4aca8220",
+      "whole_receipt_passed": false,
+      "later_error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 87, in tick\n    assert age<18,('Recovery stuck',state['case'],str(rt.players[0].get_actor_location()))\n           ^^^^^^\nAssertionError: ('Recovery stuck', 3, \"<Struct 'Vector' (0x0000020E541D8D80) {x: 5675.198234, y: 19275.423666, z: 786.081021}>\")\n"
+    },
+    {
+      "path": "traversal-runtime-obstacles-final.json",
+      "sha256": "2e805b8d173ad53fa80aa591d34ee953894e3dc0c75eb3450940578a7df3cb9e",
+      "whole_receipt_passed": false,
+      "later_error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 112, in tick\n    rt.inject(0,'IA_Move',0);prepare_key()\n                             ^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 40, in prepare_key\n    gm.set_editor_property('MazeHallBCleared',True);gm.call_method('ClearRound')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: GameMode: Property 'MazeHallBCleared' for attribute 'MazeHallBCleared' on 'BP_SixRoundTestGameMode_C' cannot be edited on instances\n"
+    },
+    {
+      "path": "climb-partial-1.json",
+      "sha256": "83fa8f1d736d1fc306c54436a67b5a0073b7ab754001773b78dd85cb24e6d1b9",
+      "whole_receipt_passed": false,
+      "later_error": "Carrier guide fixture ended PIE during independent mantle check"
+    },
+    {
+      "path": "climb-runtime.json",
+      "sha256": "f21142f1fcfb35bfffadf2a9a3a4edaba4a9eaadfbe621698103c1837ebae1d3",
+      "whole_receipt_passed": true,
+      "later_error": null
+    }
+  ],
+  "explanation": "Earlier component successes retained without rerunning green checks. Whole receipts with later setup/guide/disconnect errors are not claimed successful full runs. Continuous carrier evidence is separate."
+}
