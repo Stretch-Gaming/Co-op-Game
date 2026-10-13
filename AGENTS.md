@@ -6,7 +6,7 @@ Read this before changing anything in the Unreal project, through MCP or by hand
 
 A 2–4 player online co-op puzzle game in Unreal Engine 5.8.3, Blueprint-only. Players work through rounds of puzzles across a series of maps, collecting relics and getting past traps and ghosts. The first map is an underground cave, where the team solves the first room, gets split up in a maze, regroups twice, and carries a relic home while ghosts chase them. Players see the game in first person and can switch to third person, and two players can share the host's screen in split-screen.
 
-- Design: [docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md), the maze run, which updates [docs/design/direction-2026-10-09.md](docs/design/direction-2026-10-09.md) and [docs/design/two-to-four-players.md](docs/design/two-to-four-players.md)
+- Design: [docs/design/direction-2026-10-13.md](docs/design/direction-2026-10-13.md), Stretch's maze-level clarification, which supersedes the route in [docs/design/direction-2026-10-10.md](docs/design/direction-2026-10-10.md). Keep the mining starting room, both original meetup halls and maze-contained progression/return; add varied traversal within the maze.
 - Sprint plan, playable checkpoints and shared contracts: [docs/sprints.md](docs/sprints.md)
 - Epics, one per lane: [docs/epics/](docs/epics/)
 - Map layout: [docs/map/site01-layout.md](docs/map/site01-layout.md)

@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "fixtures": [
+    "One approach per authored 150cm ledge; ghosts isolated by carrier harness"
+  ],
+  "cases": [
+    {
+      "id": "ML_orange_2_04",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: -1212.851927, y: 13000.000000, z: 299.149999}>"
+    },
+    {
+      "id": "ML_yellow_1_08",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: -4138.535507, y: 9135.000000, z: 38.150001}>"
+    },
+    {
+      "id": "ML_yellow_2_11",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E4C3337B0) {x: 3190.554199, y: 13037.852251, z: 626.817000}>"
+    },
+    {
+      "id": "ML_yellow_3_14",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E456537B0) {x: 1325.000000, y: 21036.464401, z: 995.750001}>"
+    },
+    {
+      "id": "ML_teal_1_17",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 2787.110715, y: 6500.000000, z: 54.150004}>"
+    },
+    {
+      "id": "ML_teal_2_19",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 6825.000000, y: 12037.889099, z: 670.150001}>"
+    },
+    {
+      "id": "ML_teal_3_23",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: 5825.000000, y: 22036.446089, z: 1055.073003}>"
+    },
+    {
+      "id": "ML_purple_2_30",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: -5637.147981, y: 14000.000000, z: 23.899999}>"
+    },
+    {
+      "id": "ML_purple_3_33",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020DAC8A5690) {x: -6175.000000, y: 19036.464309, z: 348.332003}>"
+    }
+  ],
+  "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+  "error": null,
+  "phase": "mantle"
+}

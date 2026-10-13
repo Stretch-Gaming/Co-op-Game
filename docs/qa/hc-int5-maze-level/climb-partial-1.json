@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "fixtures": [
+    "One approach per authored 150cm ledge; ghosts isolated by carrier harness"
+  ],
+  "cases": [
+    {
+      "id": "ML_orange_1_01",
+      "passed": true,
+      "method": "Owning Jump requests existing server mantle; lands on authored ledge",
+      "position": "<Struct 'Vector' (0x0000020E4C331B40) {x: 4825.000000, y: 7535.000000, z: 598.150003}>"
+    }
+  ],
+  "owner_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+  "error": "Carrier guide fixture ended PIE during independent mantle check",
+  "phase": "mantle"
+}

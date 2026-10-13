@@ -1,5 +1,25 @@
 # Site 1 layout: the cave
 
+## Current playable layout — October 13
+
+Stretch's [maze-level clarification](../design/direction-2026-10-13.md) supersedes the old cave-loop layout below. Keep the starting room and mining puzzle; its north door opens into the original Ak47/PK maze. The maze retains three path segments and both meetup halls. Puzzles in hall A and hall B unlock the next segments. The relic returns through existing maze corridors to the starting-room altar. No additional cave-return rooms or outside carrier walkway belong to this candidate.
+
+| Area | Position in cm | Purpose |
+| --- | --- | --- |
+| Starting room | Existing room at (0,0,0) | Normal player starts, start pad, mining/cart/plates and drop-off altar |
+| Maze door/mouth | Door (325,1400); tunnel north to fork | Mining unlock, team entry and taking |
+| Fork | (-175,3500,0) | Four original first paths |
+| Meetup hall A | (-175,9250,-300), original 45 × 20 m floor | First shared light puzzle; opens middle paths |
+| Meetup hall B | (-175,15500,400), original 45 × 15 m floor | Regroup/checkpoint and second shared light puzzle; opens final paths |
+| Relic chamber | Existing cage/key near (-175,23250,600), original room | Lever-held cage and relic pickup |
+| Return | Orange third leg, yellow middle leg, yellow first leg, in reverse | Maze-contained slow-carrier line back to the original starting-room altar |
+
+The implementation manifest is `Tools/unreal/maze_level/layout.py`; actual saved actor changes and native checks are recorded in that packet. Source capture locations already include X−175. Preserve the original maze footprint, over/under crossings, hall mouths, room art and source assets. Varied rocks, rubble, ledges, climbs and recoverable gaps belong inside the existing corridors. The new return lane is an untouched 160 cm floor strip, without mandatory sprint/jump/climb. Confirm its live collision and owning-input traversal.
+
+### Retired cave-loop reference
+
+The following historical coordinates describe the earlier assembly. They must not be used to reconstruct the extra rooms, external return route or removed hall-B connectors over the current candidate. The movement categories and Map 2 results description remain useful.
+
 Every lane builds against these positions, so the puzzles, traps, ghosts and zipline line up without anyone opening someone else's sublevel. Ask your agent to build from this table.
 
 Positions are in meters; 1 m is 100 Unreal units. X points east along the route, Y points north, and the floor is at Z = 0 unless a row says otherwise. Sizes are width (along X) by depth (along Y).

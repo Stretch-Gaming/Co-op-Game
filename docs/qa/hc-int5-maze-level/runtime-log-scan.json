@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "log_sha256": "7a53b2c368aa76c8ad9256a0c8941e3bd84bc6a3ce800d3a6e855ab0ab5d53e4",
+  "patterns": [
+    "BlueprintRuntimeError",
+    "Accessed None",
+    "LogBlueprint: Error",
+    "LogScript: Error"
+  ],
+  "matches": [],
+  "qualification": "Python QA approach/reporting failures retained separately. One relative-base CharacterMovement correction warning during a fixture; no Blueprint runtime errors."
+}

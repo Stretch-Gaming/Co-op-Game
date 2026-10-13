@@ -1,0 +1,82 @@
+{
+  "passed": false,
+  "checks": [],
+  "obstacles": [
+    {
+      "id": "ML_teal_1_16",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": 4.2200245955345785,
+      "max_z": 115.7649063927248
+    },
+    {
+      "id": "ML_teal_1_16",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020DD8D3B300) {x: 5603.043340, y: 6350.000702, z: -3.853876}>"
+    },
+    {
+      "id": "ML_teal_3_22",
+      "test": "owning sprint/jump",
+      "passed": true,
+      "min_z": 1015.1350084657784,
+      "max_z": 1151.6318862668443
+    }
+  ],
+  "fixtures": [
+    "Single server approach before each obstacle; ghosts isolated",
+    "Legal GameMode phase-chain setup to R5; single lever/key approach then continuous owning movement through R6"
+  ],
+  "physical_keyboard_tested": false,
+  "network": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_ListenServer",
+      "authoritative_player_ids": [
+        285,
+        286
+      ],
+      "visible_player_ids": [
+        285,
+        286
+      ],
+      "local_player_ids": [
+        285
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        285,
+        286
+      ],
+      "visible_player_ids": [
+        286,
+        285
+      ],
+      "local_player_ids": [
+        286
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 87, in tick\n    assert age<18,('Recovery stuck',state['case'],str(rt.players[0].get_actor_location()))\n           ^^^^^^\nAssertionError: ('Recovery stuck', 3, \"<Struct 'Vector' (0x0000020E541D8D80) {x: 5675.198234, y: 19275.423666, z: 786.081021}>\")\n",
+  "phase": "recover",
+  "last_sample": {
+    "case": 3,
+    "position": [
+      5675.198233837274,
+      19275.423666362807,
+      786.0810208752578
+    ],
+    "min_z": 845.8701100374299,
+    "max_z": 1062.9853200378418,
+    "airborne": true
+  }
+}

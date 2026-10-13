@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "scope": "Focused native two-hall and first-room mining transactions; no continuous route/traversal acceptance",
+  "hall_matrix": [
+    {
+      "players": 2,
+      "profile": "joining",
+      "checks": 7
+    },
+    {
+      "players": 3,
+      "profile": "joining",
+      "checks": 5
+    },
+    {
+      "players": 4,
+      "profile": "joining",
+      "checks": 5
+    },
+    {
+      "players": 4,
+      "profile": "host_split",
+      "checks": 5
+    }
+  ],
+  "hall_matrix_executed_harness_sha256": "2e2622f4e1bd2d49de60ca64f63cc2037bd2e9b6c51de372163e3e373e73eb29",
+  "strengthened_split_executed_harness_sha256": "ab6288698dd06a2c31071d9bf8e156a0a552468b8387d5095ca44cbc22cc88ea",
+  "second_host_controller_uses_Q_and_F": true,
+  "mining_native_checks": 21,
+  "mining_original_source_sha256": "150ce3f050085b54e0303f09d3d2bc8303087de67bb764f8eb37c766145e6b44",
+  "mining_original_source_unchanged": true,
+  "protected_files_unchanged": {
+    "Content/Core/BP_CoopGameMode.uasset": true,
+    "Content/Core/BP_CoopCharacter.uasset": true,
+    "Content/Player/Tools/BP_Flare.uasset": true,
+    "Content/Hazards/L_Site01_HZ.umap": true,
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": true,
+    "Content/Puzzles/Test/SixRound/L_SixRound_Test.umap": true
+  },
+  "artifacts_sha256": {
+    "Tools/unreal/maze_level/hall_runtime.py": "ab6288698dd06a2c31071d9bf8e156a0a552468b8387d5095ca44cbc22cc88ea",
+    "Tools/unreal/maze_level/mining_runtime.py": "f61a5d237ce85485e461885d6b0cb134729948bd4cd217a98e24e39479d72770",
+    "Tools/unreal/maze_level/qa_status.py": "6d2e4db0b6b127928a27e53015215718f5b493b61582415a1ad99451c0a4dee7",
+    "Saved/MazeLevel/hall-runtime.json": "83f9d627d4248e8fd0a7d04e3a955155bcc418d7ed9837e5fa4dce0ad1eeb791",
+    "Saved/MazeLevel/hall-runtime-secondary.json": "f30e2ef208b54a3ff1a9c9e5489a4f4593c9e92f3553c7bf2a90ad1f66c674fa",
+    "Saved/MazeLevel/mining-runtime.json": "9129de34de8bedca11b926f143da64e313266b8835edabcb4b7ad2f5610f49d9",
+    "Saved/MazeLevel/mining-runtime/completion-completion-joining-2-owner0.json": "b41cc0ebb070083775792bb7c8b637aefcc63f1863a978f3ab8ba24c36e92683"
+  },
+  "failed_reports_retained": [
+    "hall-runtime-diagnostic-1.json",
+    "hall-runtime-diagnostic-2.json",
+    "hall-runtime-diagnostic-3.json"
+  ],
+  "pie_stopped": true,
+  "log_scan": {
+    "Blueprint Runtime Error": 0,
+    "Accessed None": 0,
+    "relative_movement_base_warning_retained": true
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "passed": false,
+  "checks": [],
+  "obstacles": [
+    {
+      "id": "ML_teal_3_22",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E5419C0B0) {x: 5699.914505, y: 19800.234796, z: 981.212496}>"
+    },
+    {
+      "id": "ML_purple_1_26",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": 496.3706593372657,
+      "max_z": 608.1086900154876
+    },
+    {
+      "id": "ML_purple_1_26",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E541D9280) {x: -6454.482446, y: 6624.999261, z: 548.702686}>"
+    },
+    {
+      "id": "ML_purple_2_28",
+      "test": "owning walking jump",
+      "passed": true,
+      "min_z": -191.91106160794638,
+      "max_z": -83.84802127312689
+    },
+    {
+      "id": "ML_purple_2_28",
+      "test": "deliberate missed jump; owning walk up same-path stairs",
+      "passed": true,
+      "exit": "<Struct 'Vector' (0x0000020E541D9280) {x: -5396.176223, y: 9875.000727, z: -180.151304}>"
+    }
+  ],
+  "fixtures": [
+    "Single server approach before each obstacle; ghosts isolated",
+    "Legal GameMode phase-chain setup to R5; single lever/key approach then continuous owning movement through R6"
+  ],
+  "physical_keyboard_tested": false,
+  "network": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_ListenServer",
+      "authoritative_player_ids": [
+        293,
+        294
+      ],
+      "visible_player_ids": [
+        293,
+        294
+      ],
+      "local_player_ids": [
+        293
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        293,
+        294
+      ],
+      "visible_player_ids": [
+        294,
+        293
+      ],
+      "local_player_ids": [
+        294
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 112, in tick\n    rt.inject(0,'IA_Move',0);prepare_key()\n                             ^^^^^^^^^^^^^\n  File \"C:\\Users\\Stretch\\Development\\Co op Game\\Tools\\unreal\\maze_level\\traversal_runtime.py\", line 40, in prepare_key\n    gm.set_editor_property('MazeHallBCleared',True);gm.call_method('ClearRound')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: GameMode: Property 'MazeHallBCleared' for attribute 'MazeHallBCleared' on 'BP_SixRoundTestGameMode_C' cannot be edited on instances\n",
+  "phase": "recover",
+  "last_sample": {
+    "case": 8,
+    "position": [
+      -5396.176222752016,
+      9875.00072730035,
+      -180.1513035756799
+    ],
+    "min_z": -373.107920404156,
+    "max_z": -190.28783627700807,
+    "airborne": true,
+    "recovery_index": 11,
+    "target": null,
+    "round": {
+      "index": 3,
+      "phase": 1,
+      "attempt": 1,
+      "ends": 0.0,
+      "row": "2"
+    },
+    "can_input": true,
+    "max_step": 45.0
+  }
+}

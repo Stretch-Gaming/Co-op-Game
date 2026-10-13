@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "checks": [
+    "Carrier lethal damage drops the key; living joining teammate re-picks using owning E",
+    "Owning E at original starting-room altar counts delivery once",
+    "Both owners travel to results after delivery",
+    "Owning host R restarts both owners in normal starting-room lobby"
+  ],
+  "obstacles": [],
+  "fixtures": [
+    "Single server approach before each obstacle; ghosts isolated",
+    "Legal GameMode phase-chain setup to R5; single lever/key approach then continuous owning movement through R6",
+    "R5 preparation bypasses separately tested HallB puzzle using MazeHallBCleared fixture before GameMode clear; not full-run proof",
+    "Separate drop/re-pick/delivery gate uses one native approach to dropped key and starting-room altar; continuous walk is retained in separate carrier receipt"
+  ],
+  "physical_keyboard_tested": false,
+  "network": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_ListenServer",
+      "authoritative_player_ids": [
+        315,
+        316
+      ],
+      "visible_player_ids": [
+        315,
+        316
+      ],
+      "local_player_ids": [
+        315
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        315,
+        316
+      ],
+      "visible_player_ids": [
+        316,
+        315
+      ],
+      "local_player_ids": [
+        316
+      ],
+      "controllers": [
+        "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "error": null,
+  "phase": "restart",
+  "last_sample": {
+    "case": 8,
+    "position": [
+      -1000.0,
+      75.0,
+      92.15000200271606
+    ],
+    "min_z": null,
+    "max_z": null,
+    "airborne": null,
+    "recovery_index": 0,
+    "target": null,
+    "round": {
+      "index": 0,
+      "phase": 0,
+      "attempt": 0,
+      "ends": 0.0,
+      "row": "2"
+    },
+    "can_input": true,
+    "max_step": 45.0
+  },
+  "owners": [
+    {
+      "position": "<Struct 'Vector' (0x0000020E45D064F0) {x: -1000.000000, y: 75.000000, z: 92.150002}>",
+      "focused": "None"
+    },
+    {
+      "position": "<Struct 'Vector' (0x0000020E45D064F0) {x: -1000.000000, y: -225.000000, z: 97.447298}>",
+      "focused": "None"
+    }
+  ]
+}

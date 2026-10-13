@@ -1,0 +1,88 @@
+{
+  "saved": [
+    "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode",
+    "/Game/Puzzles/Test/SixRound/BP_MazeCheckpoint",
+    "/Game/Puzzles/Test/SixRound/BP_HallBArrival",
+    "/Game/Puzzles/Test/SixRound/BP_TeamHallDoor",
+    "/Game/Puzzles/Test/SixRound/BP_MazeReturnBridge"
+  ],
+  "parent_routes": {
+    "StartRound": "preserved_native_parent_node",
+    "ClearRound": "preserved_native_parent_node",
+    "MonitorSixResources": "preserved_native_parent_node"
+  },
+  "native_parent_nodes": {
+    "StartRound": {
+      "node": "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode:StartRound.K2Node_CallParentFunction_0",
+      "type_id": "|Parent:StartRound",
+      "data_inputs_before": [
+        {
+          "name": "Index",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            [
+              "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode:StartRound.K2Node_FunctionEntry_0",
+              1,
+              "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+            ]
+          ]
+        }
+      ],
+      "data_inputs_after": [
+        {
+          "name": "Index",
+          "type": "Integer",
+          "value": "0",
+          "links": [
+            [
+              "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode:StartRound.K2Node_FunctionEntry_0",
+              1,
+              "<EdGraphPinDirection.EGPD_OUTPUT: 1>"
+            ]
+          ]
+        }
+      ]
+    },
+    "ClearRound": {
+      "node": "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode:ClearRound.K2Node_CallParentFunction_0",
+      "type_id": "|Parent:ClearRound",
+      "data_inputs_before": [],
+      "data_inputs_after": []
+    },
+    "MonitorSixResources": {
+      "node": "/Game/Puzzles/Test/SixRound/BP_SixRoundTestGameMode.BP_SixRoundTestGameMode:MonitorSixResources.K2Node_CallParentFunction_0",
+      "type_id": "|Parent:MonitorSixResources",
+      "data_inputs_before": [],
+      "data_inputs_after": []
+    }
+  },
+  "parent_graph_sha256": {
+    "StartRound": "dc8fd84c2ab18434cf3abcf3227afeba39160b46d3a3956c52237c66949b8535",
+    "ClearRound": "d933b59d88d8b2f9980ce498e3eac0397c251aada1f69e5306c93eadde5222a5",
+    "MonitorSixResources": "7b63e11cc755fb6e9c5d71e96ee6ca19be570c7c3923cfcec7ffe96e8c777bbc"
+  },
+  "stage_values": {
+    "0": "HallA puzzle",
+    "1": "travel to HallB",
+    "2": "HallB puzzle",
+    "3": "complete"
+  },
+  "hall_tags": [
+    "Maze.HallA",
+    "Maze.HallB"
+  ],
+  "checkpoint_actor_origin": [
+    -175,
+    9250,
+    -300
+  ],
+  "hall_b_center": [
+    -175,
+    15500,
+    400
+  ],
+  "native_runtime_pending": true,
+  "saved_map_packages": [],
+  "protected_bytes_and_graphs_unchanged": true
+}
