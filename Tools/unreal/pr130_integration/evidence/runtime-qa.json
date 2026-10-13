@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "map": "L_Site01",
+      "players": 2,
+      "profile": "joining",
+      "checks": [
+        "Every input owner moves its own pawn"
+      ],
+      "flares": [],
+      "passed": true
+    },
+    {
+      "map": "L_SixRound_Test",
+      "players": 2,
+      "profile": "joining",
+      "checks": [
+        "Every input owner moves its own pawn",
+        "Flares remain active near 20 seconds",
+        "New model, emissive and looping spatial hiss follow owner stock and burn lifecycle; expired actors removed on peers",
+        "Owning movement crosses the continuous mouth-to-maze fork passage"
+      ],
+      "flares": [
+        {
+          "name": "BP_Flare_C_0",
+          "owner": 260,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 2.794428899884224,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_1",
+          "owner": 261,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 3.8077143989503384,
+          "burn_seconds": 20.0
+        }
+      ],
+      "maze_approach_fixture": [
+        325,
+        2250,
+        100
+      ],
+      "passed": true
+    },
+    {
+      "map": "L_SixRound_Test",
+      "players": 3,
+      "profile": "joining",
+      "checks": [
+        "Every input owner moves its own pawn",
+        "Flares remain active near 20 seconds",
+        "New model, emissive and looping spatial hiss follow owner stock and burn lifecycle; expired actors removed on peers",
+        "Owning movement crosses the continuous mouth-to-maze fork passage"
+      ],
+      "flares": [
+        {
+          "name": "BP_Flare_C_0",
+          "owner": 262,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 2.9181409142911434,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_1",
+          "owner": 263,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 3.9475125148892403,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_2",
+          "owner": 264,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 4.9565419144928455,
+          "burn_seconds": 20.0
+        }
+      ],
+      "maze_approach_fixture": [
+        325,
+        2250,
+        100
+      ],
+      "passed": true
+    },
+    {
+      "map": "L_SixRound_Test",
+      "players": 4,
+      "profile": "joining",
+      "checks": [
+        "Every input owner moves its own pawn",
+        "Flares remain active near 20 seconds",
+        "New model, emissive and looping spatial hiss follow owner stock and burn lifecycle; expired actors removed on peers",
+        "Owning movement crosses the continuous mouth-to-maze fork passage"
+      ],
+      "flares": [
+        {
+          "name": "BP_Flare_C_0",
+          "owner": 265,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 3.017907317727804,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_1",
+          "owner": 266,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 4.024763219058514,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_2",
+          "owner": 267,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 5.037536319345236,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_3",
+          "owner": 268,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 6.061736013740301,
+          "burn_seconds": 20.0
+        }
+      ],
+      "maze_approach_fixture": [
+        325,
+        2250,
+        100
+      ],
+      "passed": true
+    },
+    {
+      "map": "L_SixRound_Test",
+      "players": 3,
+      "profile": "host_split",
+      "checks": [
+        "Every input owner moves its own pawn",
+        "Flares remain active near 20 seconds",
+        "New model, emissive and looping spatial hiss follow owner stock and burn lifecycle; expired actors removed on peers",
+        "Owning movement crosses the continuous mouth-to-maze fork passage"
+      ],
+      "flares": [
+        {
+          "name": "BP_Flare_C_0",
+          "owner": 269,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 5.634431313723326,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_1",
+          "owner": 270,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 6.654636316001415,
+          "burn_seconds": 20.0
+        },
+        {
+          "name": "BP_Flare_C_2",
+          "owner": 271,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hiss_playing": true,
+          "burn_started": 7.6699410155415535,
+          "burn_seconds": 20.0
+        }
+      ],
+      "maze_approach_fixture": [
+        325,
+        2250,
+        100
+      ],
+      "passed": true
+    }
+  ],
+  "method": "Owning Enhanced Input/RPC; normal spawns for controls/flares; disclosed maze approach placement fixture; no asset saves",
+  "physical_devices": false,
+  "error": null
+}

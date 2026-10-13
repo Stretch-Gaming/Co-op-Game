@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "levels": [
+    "/Game/Hazards/Test/SixRound/L_WorldRoute_Test",
+    "/Game/Player/Test/SixRound/L_SixRound_PG_Test",
+    "/Game/Puzzles/Test/SixRound/L_CaveEnvironment_Test",
+    "/Game/Puzzles/Test/SixRound/L_SixRound_HC_Test",
+    "/Game/Puzzles/Test/SixRound/L_SixRound_Test"
+  ],
+  "puzzle_doors": 1,
+  "team_maze_actors": 516,
+  "imported_flare_convex_hulls": 1,
+  "protected_sha256": {
+    "Content/Puzzles/Test/SixRound/L_SixRound_Test.umap": "f46e7a6a0f9362a4a9c39c3dc3e94618aa160c747627ef13da7bcd6c412ee72c",
+    "Content/Puzzles/Test/SixRound/L_CaveEnvironment_Test.umap": "797b2d8148890e7738e4c4d605fe602105a7aaddfcd9cd13d35f2ecc216e3e20",
+    "Content/Hazards/L_Site01_HZ.umap": "630adb8963480408229dc2f36ba635f2b2a30590dacea3b2326ee33cf84ab65a",
+    "Content/Puzzles/EnvironmentConnection/L_ConnectedMaze.umap": "f9783965e505168fcd94a742363014c314ca178683783220483236c937fc1aff",
+    "Content/Shared/Style/M_Stylized.uasset": "ad6ad079a5d2ef794bf80a68818ba10b768ee8d845038add2581c3d4a43f2855"
+  },
+  "touched_blueprint_graph_policy_flags": [],
+  "no_runtime_cpp_or_config_changes": true
+}

@@ -1,0 +1,390 @@
+{
+  "action_injections": [
+    {
+      "phase": "early_altar",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 13,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.014999999999417923,
+      "actual_hold_seconds": 0.20399999999790452,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_pickup",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 13,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.031000000002677552,
+      "actual_hold_seconds": 0.20299999999406282,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_drop",
+      "owner_index": 1,
+      "action": "IA_Drop",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 14,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_pickup",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 14,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_drop",
+      "owner_index": 1,
+      "action": "IA_Drop",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 11,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 0.20299999999406282,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "flare_throw",
+      "owner_index": 1,
+      "action": "IA_ThrowFlare",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 11,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01599999999598367,
+      "actual_hold_seconds": 0.2190000000045984,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "cage_hold",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 20,
+      "value1_injections": 65,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 1.0469999999986612,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "key_pickup",
+      "owner_index": 0,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 2,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.0319999999992433,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "re_pick",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 22,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "altar_use",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 3,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 0.014999999999417923,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "completion_hold",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 2,
+      "value1_injections": 123,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 2.0,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "restart",
+      "owner_index": 0,
+      "action": "IA_RunRestart",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 3,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01599999999598367,
+      "actual_hold_seconds": 6.219000000004598,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "early_altar",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 15,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_pickup",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 20,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.20299999999406282,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_drop",
+      "owner_index": 1,
+      "action": "IA_Drop",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 14,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_pickup",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 13,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01599999999598367,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "statue_drop",
+      "owner_index": 1,
+      "action": "IA_Drop",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 16,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.014999999999417923,
+      "actual_hold_seconds": 0.20399999999790452,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "flare_throw",
+      "owner_index": 1,
+      "action": "IA_ThrowFlare",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 16,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01599999999598367,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "cage_hold",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 20,
+      "value1_injections": 95,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01599999999598367,
+      "actual_hold_seconds": 1.0310000000026776,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "key_pickup",
+      "owner_index": 0,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 2,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.01600000000325963,
+      "actual_hold_seconds": 0.014999999999417923,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "re_pick",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 23,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.0,
+      "actual_hold_seconds": 0.20300000000133878,
+      "release_reason": "duration_elapsed"
+    },
+    {
+      "phase": "altar_use",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 0.2,
+      "value1_injections": 3,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.014999999999417923,
+      "actual_hold_seconds": 0.01600000000325963,
+      "release_reason": "phase_change"
+    },
+    {
+      "phase": "completion_hold",
+      "owner_index": 1,
+      "action": "IA_Interact",
+      "requested_duration_seconds": 2,
+      "value1_injections": 193,
+      "value0_injections": 1,
+      "first_injection_phase_elapsed": 0.014999999999417923,
+      "actual_hold_seconds": 2.0,
+      "release_reason": "duration_elapsed"
+    }
+  ],
+  "passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "players": 2,
+  "phase": "results",
+  "checks": [
+    {
+      "check": "Round1 native plate solution revives the dead at first-room regroup",
+      "run": 1
+    },
+    {
+      "check": "Round2 every-living regroup immediately restores the dead in meeting hall",
+      "run": 1
+    },
+    {
+      "check": "Round3 native headlamp/flare simultaneous locks revive dead at hall regroup",
+      "run": 1
+    },
+    {
+      "check": "Round4 every-living relic-chamber regroup restores dead",
+      "run": 1
+    },
+    {
+      "check": "Native held levers and key lift enter escape; feasible R5 deaths regroup",
+      "run": 1
+    },
+    {
+      "check": "Carrier lethal damage drops relic; native living teammate re-picks during escape",
+      "run": 1
+    },
+    {
+      "check": "Altar transaction remains counted exactly once before results travel",
+      "run": 1
+    },
+    {
+      "check": "All owners arrive after the five-second hold with persistent counts and test GameMode",
+      "run": 1,
+      "observed_travel_delay_seconds": 9.64100000000326,
+      "minimum_delay_seconds": 4.9,
+      "clock": "monotonic across world replacement"
+    },
+    {
+      "check": "Native host R restarts all clients/split owners into a fresh second run",
+      "run": 2
+    },
+    {
+      "check": "Round1 native plate solution revives the dead at first-room regroup",
+      "run": 2
+    },
+    {
+      "check": "Round2 every-living regroup immediately restores the dead in meeting hall",
+      "run": 2
+    },
+    {
+      "check": "Round3 native headlamp/flare simultaneous locks revive dead at hall regroup",
+      "run": 2
+    },
+    {
+      "check": "Round4 every-living relic-chamber regroup restores dead",
+      "run": 2
+    },
+    {
+      "check": "Native held levers and key lift enter escape; feasible R5 deaths regroup",
+      "run": 2
+    },
+    {
+      "check": "Carrier lethal damage drops relic; native living teammate re-picks during escape",
+      "run": 2
+    },
+    {
+      "check": "Altar transaction remains counted exactly once before results travel",
+      "run": 2
+    },
+    {
+      "check": "All owners arrive after the five-second hold with persistent counts and test GameMode",
+      "run": 2,
+      "observed_travel_delay_seconds": 9.468999999997322,
+      "minimum_delay_seconds": 4.9,
+      "clock": "monotonic across world replacement"
+    }
+  ],
+  "owner_network_evidence": [
+    {
+      "world": "/Game/Maps/UEDPIE_0_L_Site02.L_Site02",
+      "net_mode": "NM_ListenServer",
+      "authoritative_player_ids": [
+        284,
+        285
+      ],
+      "visible_player_ids": [
+        284,
+        285
+      ],
+      "local_player_ids": [
+        284
+      ],
+      "controllers": [
+        "/Game/Maps/UEDPIE_0_L_Site02.L_Site02:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    },
+    {
+      "world": "/Game/Maps/UEDPIE_1_L_Site02.L_Site02",
+      "net_mode": "NM_Client",
+      "authoritative_player_ids": [
+        284,
+        285
+      ],
+      "visible_player_ids": [
+        285,
+        284
+      ],
+      "local_player_ids": [
+        285
+      ],
+      "controllers": [
+        "/Game/Maps/UEDPIE_1_L_Site02.L_Site02:PersistentLevel.BP_CoopPlayerController_C_0"
+      ]
+    }
+  ],
+  "method": "Real owning Enhanced Input for gameplay actions; setup fixtures explicitly described by each case. No direct interaction/round RPC.",
+  "wall_clock_deadline_seconds": 240,
+  "test_gate_complete": true,
+  "full_mission_acceptance_pending": true,
+  "prerequisites": "Fresh L_SixRound_Test Lobby; 2/3/4 possessed input owners; local listen-host required when runs=2; all reset/interface/RPC/input assets compiled.",
+  "fixtures": "Server approach positions, ApplyDamage victims, released statue placement, restoring nearby small relics, moving chase ghosts away for focused transactions. No gameplay RPC shortcuts. Headlamp approaches use the authored south perch landing instead of the obsolete west rim. Live ghost approach is separated for this focused puzzle transaction test; threat timing and full-route play are separate.",
+  "test_source_layout_sha256": "6deede85e25c3a811a796830f4741204d733d69485d5c863590499b2af3aebf3",
+  "ending_round": {
+    "index": 0,
+    "phase": 4,
+    "attempt": 0,
+    "ends": 0.0,
+    "row": "2"
+  }
+}

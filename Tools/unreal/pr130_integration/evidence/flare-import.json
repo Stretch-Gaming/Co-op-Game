@@ -1,0 +1,39 @@
+{
+  "assets": [
+    "/Game/Player/Art/Flares/SM_HandFlare",
+    "/Game/Player/Art/Flares/SFX_Flare_Hiss_Loop",
+    "/Game/Player/Art/Flares/MI_FlareMetal",
+    "/Game/Player/Art/Flares/MI_FlareGrip",
+    "/Game/Player/Art/Flares/MI_FlareBody",
+    "/Game/Player/Art/Flares/M_FlareEmber"
+  ],
+  "mesh_dimensions_cm": [
+    6.0,
+    6.0,
+    22.0
+  ],
+  "material_slots": [
+    "M_FlareMetal",
+    "M_FlareGrip",
+    "M_FlareBody",
+    "M_FlareAmber"
+  ],
+  "changed_original_graphs": [
+    "RefreshFlare",
+    "EndFlare"
+  ],
+  "new_helpers": [
+    "RefreshFlarePresentation",
+    "StopFlarePresentation"
+  ],
+  "collision_root_preserved": true,
+  "light_tip_offset_cm": 8,
+  "visual_base_offset_cm": -11,
+  "source_license": "CC0 1.0; SourceArt/PG/PG-A8/README.md",
+  "source_hashes": {
+    "SM_HandFlare.fbx": "317ae53357ded1cd908ce44bcd3c3ecdcec420e9bdca3fd6b1849c9c11568859",
+    "SFX_Flare_Hiss_Loop.wav": "0a8064ac42000e9dbc7a3e01c8fad741f1381f53d4191ee57065ad54a77fb805"
+  },
+  "imported_convex_hulls": 1,
+  "fbx_importer": "Legacy FBX factory; transient Interchange flag restored. UE5.8 converter maps GenerateCollision off to all collision off, dropping UCX in automated Interchange imports."
+}

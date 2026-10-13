@@ -1,0 +1,1120 @@
+{
+  "source_capture": "SourceArt/HC/EnvironmentConnection/Refresh_fd40cdeb/connection.json.gz",
+  "source_sha256": "2008b7a684ba0f82d34b97fe259c20ec7abc46e09d00ead5f9c1dd8c6fcbf0ed",
+  "map": "/Game/Hazards/Test/SixRound/L_WorldRoute_Test",
+  "old_scenery_actors": 519,
+  "new_scenery_actors": 516,
+  "unchanged_gameplay_actors": 703,
+  "meshes": [
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0318",
+      "source_index": 318,
+      "record_sha256": "748e56157d77a9c43d0154c2a6d7e9306e7849ec6c60f8565fbbbdcade94d536"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0319",
+      "source_index": 319,
+      "record_sha256": "1a4ba1199c717694b1d5f425667dcd0b2764541843d1a42d7ccec2afd8c082fb"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0320",
+      "source_index": 320,
+      "record_sha256": "895ca024fd62c01c570477050bbcb6a3b250a2fa883afab3137bad694eddc0be"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0321",
+      "source_index": 321,
+      "record_sha256": "14c721129c74fa708eac03f4d619f3528a7ef942563e25fdc68902ac164e2b1c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0322",
+      "source_index": 322,
+      "record_sha256": "fb57c9f524aeb0cd6a84bc3597fa9bada50f52b1a990215a156e1383c4ff6489"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0324",
+      "source_index": 324,
+      "record_sha256": "01b61fb1c50fbee2e09ba37d8ef4d5968033984ce14b09e74c064594fbafed92"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0337",
+      "source_index": 337,
+      "record_sha256": "1b71c8102659817dff15fdeb5c034c9b36bd0d60655681279f8bb3d894ed093c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0344",
+      "source_index": 344,
+      "record_sha256": "f49d68534a2e28182d66d5ade4ded0d571e23d8c5245355a98a0665a83c8844d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0351",
+      "source_index": 351,
+      "record_sha256": "5ae6ed1198afd3075701cd0c3e0ec124edfb81aef28d6e5e899a6771e32f34ee"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0358",
+      "source_index": 358,
+      "record_sha256": "7710f92cc9b11e8ce3674fe914adf2e5ec88180830bc292fd4a15952505a1b66"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0365",
+      "source_index": 365,
+      "record_sha256": "a7084190873a53995fa3ce47aabd7322a07e9ebc05dc4b20c387c82ba451f628"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0372",
+      "source_index": 372,
+      "record_sha256": "59d3b48f32ce27507477c5f10ed54b753afa9628940d67bc1c7f85dbb0107e2d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0379",
+      "source_index": 379,
+      "record_sha256": "8091c2a18279a2921bc8e2384bc677ad09d91942b5534a4b21cce84343f635e6"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0386",
+      "source_index": 386,
+      "record_sha256": "31ac178599a1f55d33cfce090dd52d720944545307e823e5b1b10c7c660aae47"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0393",
+      "source_index": 393,
+      "record_sha256": "d5be4d96a368e56b4b10685aa4ca42b594692918190d9149f943a3d608cedad2"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0400",
+      "source_index": 400,
+      "record_sha256": "38389dd2fa360b0f64f489a3d43c9d59deccd45940da38604a9cf1f4d8aee788"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0407",
+      "source_index": 407,
+      "record_sha256": "f6e5959fbd2d7289338eb69a81d1fdf8398b970be7fb275a1e87ce7f7c5e1b71"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0414",
+      "source_index": 414,
+      "record_sha256": "f9266aa6109cdf8c96f4087d1307f850ddafddab6d4629add18bb2d9f5f99888"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0421",
+      "source_index": 421,
+      "record_sha256": "8db4998ed5beb7a758dfcc9cd615e7b8bb0e75d925950e9f8dc3053a1700cdb1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0428",
+      "source_index": 428,
+      "record_sha256": "02de890d8157867318540198e3181fbe5e619c5a87e8e167e8269ca5c6a80caa"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0442",
+      "source_index": 442,
+      "record_sha256": "a82f296748381e74c8022b3dfff9d133b9b0baf669e7bb95570dc59cc1102bef"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0449",
+      "source_index": 449,
+      "record_sha256": "f4415721de2fd322c4a373eee0720547afd50491578ed7adddd448321e3fa9a7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0456",
+      "source_index": 456,
+      "record_sha256": "d67207194794c4742184968aba8bc244159788a655ad5e0a28b88e041831cfcd"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0478",
+      "source_index": 478,
+      "record_sha256": "87b7850d554cc72ff11020a212c4dde8ddc9211eb08000d5b92602888c91d394"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0485",
+      "source_index": 485,
+      "record_sha256": "578b68bd0ccce003295c67fce42083f77bdabfe0cebe62485dbed8a31e54f1cf"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0492",
+      "source_index": 492,
+      "record_sha256": "e88edfb6fe42f5d07a6b5b134dd5e56869ec874cd1fe7851ac1c0efb79960292"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0499",
+      "source_index": 499,
+      "record_sha256": "634a411d8df150310fe6c7af840038d4d7200fd85fbb956c017a9e90e822aa25"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0506",
+      "source_index": 506,
+      "record_sha256": "8c44774cfe1235ce4dc4646d2736b8cc221fc3174059ae5b903aa9be984b8f1a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0513",
+      "source_index": 513,
+      "record_sha256": "a216f4a159734fd88c29d0d70065cd3f28d87058fa7abc82890ccd19bce8ede8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0520",
+      "source_index": 520,
+      "record_sha256": "f6facff2a792b88ce162ade4bfd8188feb797f90f843039f5c98de2fd4240c46"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0527",
+      "source_index": 527,
+      "record_sha256": "84428f8d085b6cd4e53561c6a9b86c27c6598e8fd042d5feb87600bd82250170"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0534",
+      "source_index": 534,
+      "record_sha256": "fbbf37e339cb4b03b63f04f8221105e2e471db78e09fe4b8d102b4f3e6853f31"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0541",
+      "source_index": 541,
+      "record_sha256": "dd152fe6012b5387555a17b58c4157b3bd4f48f33bc15f10f20646f756ce0886"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0548",
+      "source_index": 548,
+      "record_sha256": "d3a879804ba876b35781d5c5135b27632880fbc93e3dec4dba9df74cfcfe4fc5"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0555",
+      "source_index": 555,
+      "record_sha256": "a0a9a69ab5ce2c441ed0b882e0ecc87b2d97b4025b9f9d9c85f4ce47bebeddb1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0562",
+      "source_index": 562,
+      "record_sha256": "9867251507c2a59a44e8d04b6769404b031d963a08ea263f7910a47e5664c796"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0569",
+      "source_index": 569,
+      "record_sha256": "d2ab979e99c53856e852fe3e343df24f879f034b632fa22fb7a6e14ea5fd5f17"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0576",
+      "source_index": 576,
+      "record_sha256": "9e6c75b926dd9ed6a4b0412fe83db26c217ed37ba5191e291b97390a5526b24b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0583",
+      "source_index": 583,
+      "record_sha256": "7909832afe0cc22b835d5bde6e030f3bafd21fa922283856805b10377ccaf8ae"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0590",
+      "source_index": 590,
+      "record_sha256": "a9a4cce3fc75d731a75ff9f4049c375863ce9e50939c1019887da50d5395b8aa"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0597",
+      "source_index": 597,
+      "record_sha256": "b3cb761c7384ba138e63b0fb016990696ba8be5fdb7063a2e29b3a428590187a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0618",
+      "source_index": 618,
+      "record_sha256": "9e8a76fbe17ee983b8f5477efded160a588e8e27c5ba57a685ae003976331714"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0625",
+      "source_index": 625,
+      "record_sha256": "141b302484447552d08595714b876b5bdc35d3d118947ef6c7e4d2a848b4b3ab"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0632",
+      "source_index": 632,
+      "record_sha256": "0dbbd86a4d229d2d2429d20f480c42c823c4712c03754b7651db738229d6ba55"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0667",
+      "source_index": 667,
+      "record_sha256": "4f18c116ae659dc87bed7ed0f5422a39c16c4c9aecb085477bf041c59ced5d3c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0674",
+      "source_index": 674,
+      "record_sha256": "a11c13a1028525f8f7f732944137b5bd4eff2e15680c7d6d233cd697d3ef192e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0681",
+      "source_index": 681,
+      "record_sha256": "e0d8d2794cc5ab1ffd6aac67a4fe9a7e68c9d55fee56527f12b86700c9459b92"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0688",
+      "source_index": 688,
+      "record_sha256": "747f3663c6dee1a4af372f04dc0aa370b62dbc187f4aeb621ab3d1fa24ac4652"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0695",
+      "source_index": 695,
+      "record_sha256": "51525cd95e1162bb348ebed7e9c404095f6c7e510fce65928d8f92cbb674b436"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0720",
+      "source_index": 720,
+      "record_sha256": "a2559806087d7c411015ae57d20820938725e3bf198bf56650a311a6d4979bcc"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0721",
+      "source_index": 721,
+      "record_sha256": "56f2fad9b90787f57ccb00ceeeee38073370ce585013785f2fe38d3214190f8e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0722",
+      "source_index": 722,
+      "record_sha256": "34f38c6277aa3c83277715cd615c3854282ea9688212d68335746baac2716b8d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0723",
+      "source_index": 723,
+      "record_sha256": "bc6f8baef47d5fce6c8e77d7525c08569974647aab4055c7b523e486e3b61980"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0724",
+      "source_index": 724,
+      "record_sha256": "6ca6ee4c69b06d4b73fc4aa3171215dc511cf22d871e1fa3ca1cfbaef654bd60"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0725",
+      "source_index": 725,
+      "record_sha256": "4b0f6bbf79e1f015966cba7a6f55919b06f113783b12837ff3cb42aea33180e5"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0726",
+      "source_index": 726,
+      "record_sha256": "999f7e2c0089505d90695ac2229459cb0d02b4167809dc5a520290fae7afc8ca"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0727",
+      "source_index": 727,
+      "record_sha256": "3b204d9a1f24c0e5c5b5cfe20eb237874d1fe94213ec4058fd184b0a29e95918"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0728",
+      "source_index": 728,
+      "record_sha256": "ef08571af4f05be597986a7a4206db9dbe985306f8327ca97aacae2ceb23b42b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0729",
+      "source_index": 729,
+      "record_sha256": "e42e909fa4c676a7e7f64ab5719df4a24f65617fd602897d62d9244dcbd3a8a3"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0730",
+      "source_index": 730,
+      "record_sha256": "16d9d10e5d644216fa7a0c3b5c304b7a475c5fb70f71397ccd7d967f399c8ee6"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0731",
+      "source_index": 731,
+      "record_sha256": "7d8670d5d0eae28667fc91bb7b0ab985f647c561455d23fa889377997ef2ffee"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0732",
+      "source_index": 732,
+      "record_sha256": "baf45e94b0ae89c9aeaf9f62e14ea54c89710b565de0016900eff9ffbfda4630"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0733",
+      "source_index": 733,
+      "record_sha256": "cd958c5306fe8a31454c66c716771d03302038642bd7f5837e227fec9f63cb50"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0734",
+      "source_index": 734,
+      "record_sha256": "f18f1f012e770684f4c5b3428f2ac3e18d2a9aff2e6728acc1829644c186662a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0735",
+      "source_index": 735,
+      "record_sha256": "91abb30cbff52ee497a3aaa338a149ccdfbf48c36043f145a8859596e947ef1f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0736",
+      "source_index": 736,
+      "record_sha256": "7953cee653e145a5168eac5dcafd1759ca6c491ac5b70d379860e1b6d019348e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0737",
+      "source_index": 737,
+      "record_sha256": "aab1d656f3f2e23f12e637e296a527f827b5df5db93fb25a21fad84f35c270ef"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0738",
+      "source_index": 738,
+      "record_sha256": "107efb32424c32fd9b4d80c1af294521f741ddc311748c3ff19ee9487b3c9667"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0739",
+      "source_index": 739,
+      "record_sha256": "8db21e7d2e43a42bff827f97b674f88534fc69436adda883c77113d45f95f24d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0740",
+      "source_index": 740,
+      "record_sha256": "e38de15a7f998889013b57ad03b2c0e79062c5e87cb5d8d2937dab2f764416fa"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0741",
+      "source_index": 741,
+      "record_sha256": "8f1450138fceba97769f5c83a9ce1611fefb1068b2a91726eb2c29ec899ee642"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0742",
+      "source_index": 742,
+      "record_sha256": "f53e958d1aa28ff7a492def9cf08ce0f67e07e6ee4187452b028a48613b3dc7c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0743",
+      "source_index": 743,
+      "record_sha256": "01cf965adde28f18f0912e2b93719538e38965074eab175c86e8580bd4574dee"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0744",
+      "source_index": 744,
+      "record_sha256": "1efbed5553b1ef5d55c1bde1ab0f3f93fbce7f7c11c1e4078ac3b3ca19d9a4ca"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0745",
+      "source_index": 745,
+      "record_sha256": "d18da48e41f31501d4f29dc95a256b3e92249e09a0dee7368155eea87aa2bf0a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0746",
+      "source_index": 746,
+      "record_sha256": "e49b7f7d5ecf323b1ab851969c0399b77247e505ad99b6e637080d7aa3fd8785"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0747",
+      "source_index": 747,
+      "record_sha256": "50d54adf64ed776a89ca6f5732eeab8a8d01a4d829b7819dc7e0965d3fb08671"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0748",
+      "source_index": 748,
+      "record_sha256": "64d99328e7d66d81d47b798b29a2325eb2d51dbc102e7cc113c61b0fa5e95eb9"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0749",
+      "source_index": 749,
+      "record_sha256": "34847541a348dd14e09465f3b58a12a354bf7a527df4135d3ced97f2d2f8372b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0750",
+      "source_index": 750,
+      "record_sha256": "711f3f1697d9ebfbf4912982f8bfac2891978be954da083a319e57ee0b8ae057"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0751",
+      "source_index": 751,
+      "record_sha256": "65b90eb5d7465644199e374bfcdb8577db5ad24f145297d39927ee3922ac7ea8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0752",
+      "source_index": 752,
+      "record_sha256": "b81eaa651cf0845ca27e37027fda0ff2878bf6eada0c61a78aa45fd2d09b6c14"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0753",
+      "source_index": 753,
+      "record_sha256": "f5ab8442d1a6fdf0609e9d0cd1eff145b8f7e378e343555574bab60db26e0593"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0754",
+      "source_index": 754,
+      "record_sha256": "5cd00449481aafc3da20cad619b20cf215658b60242ed7b55a101968dd8f3ecd"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0755",
+      "source_index": 755,
+      "record_sha256": "340999679f0a3b4cca90b4aa477576ee9306df4b7db8f5e649cd764dd30fc2f9"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0756",
+      "source_index": 756,
+      "record_sha256": "2e9e475357489b13f2add7ffa85b10c8b6536ad3e00f15756edcd23a2dc63ec4"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0757",
+      "source_index": 757,
+      "record_sha256": "b28eeeeb16886f3884b962c1b65414eb0f260e0448ad1790a0d2164da645bed2"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0758",
+      "source_index": 758,
+      "record_sha256": "63a6f517e854ab1032101903325969f2b2e3f2d7ae3b2f18385443fbeda58b1b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0759",
+      "source_index": 759,
+      "record_sha256": "e1c52a500fc2909146a04436b59dbcc3ad2166bcc1322cb9ffa6f5d931ecda10"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0760",
+      "source_index": 760,
+      "record_sha256": "eef09054986effd0a0eacbbdf522f1185febae68f67ebeb410032e242d1bbdc7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0761",
+      "source_index": 761,
+      "record_sha256": "0ed3875cae34b459b85bc801504093d2b005e58c25560dfab2e803efd536b45f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0762",
+      "source_index": 762,
+      "record_sha256": "ef53a20bd1eedc2de7310c938992987cab3e0df701b9fb9cce4dd849bff4966d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0763",
+      "source_index": 763,
+      "record_sha256": "e8a49de82a17addff65063b0243479fe117bb8e532e7b0494f52ea63113c6b7a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0764",
+      "source_index": 764,
+      "record_sha256": "6d4c06f208ef1643f05f7d677adf7e66f3e67ff4c76ab7d33851c6dfaed35d24"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0765",
+      "source_index": 765,
+      "record_sha256": "8b82af2b981a2a93f770c5ef035595f153888b3b4a94cb1172ceaa8c80cf95e5"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0766",
+      "source_index": 766,
+      "record_sha256": "a7e04b4520720eb71488194deb910951500a5d1effa51262b38caccc8542aa9b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0767",
+      "source_index": 767,
+      "record_sha256": "93552c1943b593ad7b222a22a6965563acb4bad0ba0a221e1a7db1f9341d4d17"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0768",
+      "source_index": 768,
+      "record_sha256": "a4baa48e9dbaca5db8c5a5f38279cf364587b76cf86adba1f831f3f946739fb7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0769",
+      "source_index": 769,
+      "record_sha256": "955a5cd0e7d1fd8bdb724d64f1f6634aeb905c25386e44528cf3e5eeb9b2c82e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0770",
+      "source_index": 770,
+      "record_sha256": "61ba8302aa7bfbbbb82a26cc5afc415b56a16d07564d74ffa65c657ceddee7c0"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0771",
+      "source_index": 771,
+      "record_sha256": "f79802ef5f16a164ef36544849770328b55d3c951d9d67f31423522f99a1eb34"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0772",
+      "source_index": 772,
+      "record_sha256": "c74b966a63766238220da10e5328348a203d52818d136dda2fd46c6bfe83608c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0773",
+      "source_index": 773,
+      "record_sha256": "6d4b863601d58fe5be26524b376a3a313228a4cd77ee2e7843bd65d0347ae4c4"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0774",
+      "source_index": 774,
+      "record_sha256": "250cfdbd1fbeecef81bb0af3eaaf649f032697bbf44181657f273a50058faaed"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0775",
+      "source_index": 775,
+      "record_sha256": "a9992f6dcc9c533c17da0daaaafd38c95cfff76f0cc19e329ff925b76e728cb8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0778",
+      "source_index": 778,
+      "record_sha256": "5aa3892b7e6c500b66408694587a0771755018f489938bbe338adf1d3c07fdcd"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0779",
+      "source_index": 779,
+      "record_sha256": "30975e7656fc63b3871532ae2cd7cef90477174d2a8fd1102266300e333d6c03"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0780",
+      "source_index": 780,
+      "record_sha256": "0eb84f8db084342317eb0d2819058ad517611fef1e282c2f074f79c803d70c6f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0781",
+      "source_index": 781,
+      "record_sha256": "b70128dc72d3934dca2918eb49ab970fcc96fa33de936b47d6ca1740097a3aa6"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0782",
+      "source_index": 782,
+      "record_sha256": "6ffe17760ee2bf3df6b639c137260800fbf175f7099a098d6d48ae561f32b695"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0783",
+      "source_index": 783,
+      "record_sha256": "140dfb0e2091e325e42a625c171082b493e0e7a44dd20475744c72e9cbab7a2e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0784",
+      "source_index": 784,
+      "record_sha256": "1f5ff4d0220c884e91ef19f7a70ff9a1c103abbc63d48fe0457fbad14f99f3e9"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0785",
+      "source_index": 785,
+      "record_sha256": "b402cb487b45c6fef4efe11d1007ad5c6c769f045bc74e94280790a7be116ff1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0786",
+      "source_index": 786,
+      "record_sha256": "cb5d91c4f06a963ce2535193ff8a873b58424ac891ad5112ed68446b68673df7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0787",
+      "source_index": 787,
+      "record_sha256": "aedc774f00b6eb5bf9bb2fd0b49176dcf9d8479fa70b69ec1a96d4b6c5ffc423"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0788",
+      "source_index": 788,
+      "record_sha256": "42a7f42efb121c8ec4d537f14aa9fb11dccb4ba3bcecf8320c263ea380596ce7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0789",
+      "source_index": 789,
+      "record_sha256": "f932ac388bf9844a608eebd9f7c73e9eee1a33d0e8af954312d82c7e91b3341a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0790",
+      "source_index": 790,
+      "record_sha256": "9fb8ae4b5d2d568d4ecf1ea4a7599c07ff733dc2983a0c1df2648325195adb13"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0791",
+      "source_index": 791,
+      "record_sha256": "c4447e6254a17b706e89b7bf7d4a69d90c8a455f5b2e421248e64b4c65edea2e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0792",
+      "source_index": 792,
+      "record_sha256": "32aa42dc48314afa3611ce5c728045632d523f349ca1102a14bcb9d06ea2770d"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0793",
+      "source_index": 793,
+      "record_sha256": "8df2583b20f00a4a7a9ef4a0da756c498e9adab59c9f412ac51c040a4185ff16"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0794",
+      "source_index": 794,
+      "record_sha256": "6c5b289dce79ac54b483990205172d9f6670260c3cf1322611eb081f9c065c22"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0795",
+      "source_index": 795,
+      "record_sha256": "8b318085d75ed72515dcd0fc3dce2f61a87b9322438fc781cbb5cbc55926d2af"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0796",
+      "source_index": 796,
+      "record_sha256": "31d586fa151fae51890f5390cee3c96d7ab9460deb0edc20745e47bcdccbb774"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0797",
+      "source_index": 797,
+      "record_sha256": "4fc1fe5689e34af7f7dbaa21a2f6b2a9d69877aa50e3a0dc71d2677b7b7c2910"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0798",
+      "source_index": 798,
+      "record_sha256": "1bcd4dc717e97dd6554a91d6d42103035f330d1571dab35bfbcb1395d35dccd9"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0799",
+      "source_index": 799,
+      "record_sha256": "9959c201850cba0013cec091e082c9bf6b60a3a20eac4912a603ef22bcccf717"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0800",
+      "source_index": 800,
+      "record_sha256": "7e6da0c2a6c8481738f8e7228fbe8c2877b64add504c2eee7616a20eeab3aade"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0801",
+      "source_index": 801,
+      "record_sha256": "6dfe753caf87badc36942b145ca98c078827ed83c91aeff4c79b4f0dab65f26e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0802",
+      "source_index": 802,
+      "record_sha256": "61faeb47bbf1e552a1fe4e4460edac83c6038be5b123651b28b2c2fe0484d518"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0803",
+      "source_index": 803,
+      "record_sha256": "8a4dbc2c60eb8b8e29834110a2626b07b7393575d5820e911dc223e338767484"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0804",
+      "source_index": 804,
+      "record_sha256": "49a9802782047e847a35e607acc36ad2c8de4c49332c4e30e915e7a134a65167"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0805",
+      "source_index": 805,
+      "record_sha256": "e35aa208bb58e3bddbb268a65435e6c4389a1f1ec41a08a927847ce169012051"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0806",
+      "source_index": 806,
+      "record_sha256": "1bf8de11cc08e2ec7f58e1ef7cab818e8928e2f83b2370d586f65b0bfedf9984"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0807",
+      "source_index": 807,
+      "record_sha256": "03c5eff4609679a40351a9bb1a6624c9d825de5734cfc1b4c834ca4c0101009a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0808",
+      "source_index": 808,
+      "record_sha256": "58131b565ad73bf684a501ff690a8839c727b42c29db93cc4db319bf4eca8626"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0809",
+      "source_index": 809,
+      "record_sha256": "f56c95e70b2defdb6c35a11b8ff1c715e3f95714a8e49c868ff456d009266597"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0810",
+      "source_index": 810,
+      "record_sha256": "78c5679fd81a9e316949d883b3f10f02a71479225df25e4663bc73fee3aa9112"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0811",
+      "source_index": 811,
+      "record_sha256": "089a8f35756d59c2dcfd20908debf012eb07a0b04da0e2fdac8f0a2db7332af4"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0812",
+      "source_index": 812,
+      "record_sha256": "8cf781a92a9df13b3cfb778b51c49ee3456d2a3911620bb71d23f5e7cef55364"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0813",
+      "source_index": 813,
+      "record_sha256": "d5522b35338a679a26b038264e398e08fbcf8dc7f3977b741f51ea5dd162a5cb"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0814",
+      "source_index": 814,
+      "record_sha256": "9004916e4083a2feef6bfad5094abf122574cd88298193817d1230c4b1a22873"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0815",
+      "source_index": 815,
+      "record_sha256": "41fc8cda9b510e5c14c5b57d333ffe12606a813ba58ecd7838feca9bf8dcaaaa"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0816",
+      "source_index": 816,
+      "record_sha256": "6dd66b8bc9f383b398f11b5743876dab5a7c57f0b1f4001df9ad42859ac14ce8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0817",
+      "source_index": 817,
+      "record_sha256": "6a5e1a94b89a0829e2c2fee506ec484609543ca2c5ab2db03e9a1c5aeac70697"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0818",
+      "source_index": 818,
+      "record_sha256": "f722996404b359721649b478007253b2cbbf9af6b2bd75dae8fea0eb4660f1a8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0819",
+      "source_index": 819,
+      "record_sha256": "4666f01d84e91854f800e2d9875c3d04362dd133eb344d510f505f12dd812fc5"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0820",
+      "source_index": 820,
+      "record_sha256": "bc99c3a3218e336cb7432e13ee746e0a672bbb94357aa53cf1c9a657315c5ed0"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0821",
+      "source_index": 821,
+      "record_sha256": "cd6be41c531086e7f813b19bb2169be3fe8ad84d6eec82fe15602a513b2fcba3"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0822",
+      "source_index": 822,
+      "record_sha256": "d72629d217eeb389ebba24c4239d883875a8ad2530c86dc67cc7f2220c8e1504"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0823",
+      "source_index": 823,
+      "record_sha256": "181d7259e4b0f3c6a1dd73d262925e452d926fe0177a8d06c783858e5924922f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0824",
+      "source_index": 824,
+      "record_sha256": "07e6a8e33df7a22b5654d67756bc4e6b4d49083c22169af06f050b85a1a55bb1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0825",
+      "source_index": 825,
+      "record_sha256": "b6de107b44909c0a80400b666815c9061327a38116603c048c560114855814be"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0826",
+      "source_index": 826,
+      "record_sha256": "49841ea6c99a3dd3fdffc5bd47b746b608998d1a566846642582ccd257ebd3ae"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0827",
+      "source_index": 827,
+      "record_sha256": "4de05df1bcbd60e6b1e918724a9920c0786385aa4506675493537bf805505b63"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0828",
+      "source_index": 828,
+      "record_sha256": "51d3be419db6c2e3c8cfecf1bcaaf058d63b0cd367796c30ebd2e25f4b3fcb3b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0829",
+      "source_index": 829,
+      "record_sha256": "1c28e82c04250e383d0238fb6ca6d6ca3b3e0fd259e661c3cd9944c8608a5f65"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0830",
+      "source_index": 830,
+      "record_sha256": "310d06d4ec7523368f059ddc8179283124f45e5246672bc8b0cfec0076f2ff85"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0831",
+      "source_index": 831,
+      "record_sha256": "9f1dfcda1e7877ed9e6fabd865544cb2883baccbe450dcb2272d3b2133b28f54"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0832",
+      "source_index": 832,
+      "record_sha256": "c6274b7f8d29e0171dd7b3f0dc22197103cce3649fb30566f817172bd109c342"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0833",
+      "source_index": 833,
+      "record_sha256": "1679aa3fd2d8ae5c735c5f5876b66b84ab331fcb388b15d7e83c8ef69d7a271a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0834",
+      "source_index": 834,
+      "record_sha256": "eabd4f5a205a88d5efe5e5d9b1be8506ca593256c0526f38423c6e5091672dbd"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0835",
+      "source_index": 835,
+      "record_sha256": "62b6a8b1d906cf8f2b4616ad542cdf03cce4a58f0a31cad6ef22c4c1bc7de4ea"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0836",
+      "source_index": 836,
+      "record_sha256": "72bc3241763a8d190b203ad18cdcb4560b81de6d8541254c003f923bb3e1bb90"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0837",
+      "source_index": 837,
+      "record_sha256": "b37d6e2f0b1765187cf10dfade466f14663952e9acb98c71ab5da007cef1960e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0838",
+      "source_index": 838,
+      "record_sha256": "1ccd41fb30649198fab2be1073cf649123315c6c973f43135dde894a96d80d06"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0839",
+      "source_index": 839,
+      "record_sha256": "a3a036d597205060f9671633f560dd8d61a1613009e96f7752ecb57a3ebe9614"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0840",
+      "source_index": 840,
+      "record_sha256": "aa689feee052e08600e898d6916cf8da8fc260592e7ba6630d2458ce4f691c87"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0841",
+      "source_index": 841,
+      "record_sha256": "e4b0c49eaf4498b68afcef3aafd8c7cff237aca54d27a5c87b0b377e46331ce8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0842",
+      "source_index": 842,
+      "record_sha256": "54ea72c3ea0764038335caa3e5ac2705d91d3b3892f95c202f1aa57ced55fe05"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0843",
+      "source_index": 843,
+      "record_sha256": "9cdfd676695db24c1c62d44a018d2fc0501b0b297fac2ef737c00ce37a5f473e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0844",
+      "source_index": 844,
+      "record_sha256": "026a75d959a50d31f5929b9877e8867b4d6e6a51a411ac4dca157e07dc5ed36c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0845",
+      "source_index": 845,
+      "record_sha256": "daf0c2d1a409e2da62d012aff272855b83531994ad24ba8d57fa3b79963caf26"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0846",
+      "source_index": 846,
+      "record_sha256": "9ab1ddab1d90d7ee4dadd2475b332de2b3c8c44856e84234455ecc8755d8c7d1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0847",
+      "source_index": 847,
+      "record_sha256": "bb8008d51fdd4bfda44c0f97bdb31406cc1555ef2485f037b01c080ee08f286b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0848",
+      "source_index": 848,
+      "record_sha256": "c35d216098a739d4ff6acbba72d4836f4b6da5a8269e1306e0ca6cfc48b452cc"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0849",
+      "source_index": 849,
+      "record_sha256": "e33a5861a3c81786894e0d10823d5401151f28401504a5c22f4a5db816a12233"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0850",
+      "source_index": 850,
+      "record_sha256": "bc961a102718526425add3bd4417e325074e70d853fd1d9e18b9199657a88f7f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0851",
+      "source_index": 851,
+      "record_sha256": "1a33edd0e5d8ee27467752d93aa5e0e6f22c9f006bc50162f98848dec70dd440"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0852",
+      "source_index": 852,
+      "record_sha256": "faca3fce340f97402c5283089b7be269d02753e85484f5e7b669e6f3e38b73c5"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0853",
+      "source_index": 853,
+      "record_sha256": "82d75a441d71e55d7cd2aa1341adfaf05f23ae122e88b2d70fe58e7ecbb302fd"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0854",
+      "source_index": 854,
+      "record_sha256": "16e5e6c9b0c8835e9ee7880b76d5193e5397e68ac42c4d5d9b533d498233a003"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0855",
+      "source_index": 855,
+      "record_sha256": "68b25e2b1bdb42c9883069be8c72e6d2af49b557d6355ef41480551ca9907ed2"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0856",
+      "source_index": 856,
+      "record_sha256": "09a04dff8da7dddc01f888794a3174ac9abed86b0ab8944802a16ac0c605c8a7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0857",
+      "source_index": 857,
+      "record_sha256": "f1cd8d3b9c4cd0a5da09f905afe0de07495b4d18a59c3cfc917cdea5c6e3150a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0858",
+      "source_index": 858,
+      "record_sha256": "3966733febd98197e53ff2f989c428bb3630c26305471969c26deee4baee481f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0859",
+      "source_index": 859,
+      "record_sha256": "9fd459cd9fe9c92f3bbcaacb097a5c20963dbb2101fb3a40241e0a60b98bc24b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0860",
+      "source_index": 860,
+      "record_sha256": "fe493ca56ca5dcf418919dbbc35c8d0bfb7f6d4f30b674469820d8afa252315a"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0861",
+      "source_index": 861,
+      "record_sha256": "d2991aeaa9d3f0c941e82ad07fbe4d3e2d51e0950c35fd6e3e7aeddce77474b1"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0862",
+      "source_index": 862,
+      "record_sha256": "a4485e8cb855be7c81c70f86deb9e23ee4455ca9ab2902abe27035767e35d289"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0863",
+      "source_index": 863,
+      "record_sha256": "a9bbd6feacc17dd4f1de36a1e66d090eeef41573bf0a95049edd10cf429e0e92"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0864",
+      "source_index": 864,
+      "record_sha256": "88a727369aeb2b2e0463c20b5a4d9cc7fbc2aa51d6caa6c9f6eb0e53c15f2a3e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0865",
+      "source_index": 865,
+      "record_sha256": "623f15b418c69792c72af2e434965fd0e733f3fa030b817a7fb1a6b3cd107488"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0866",
+      "source_index": 866,
+      "record_sha256": "de5e055eb91772047bd7ce650ccf22bb50fd51a109eef753deeeac55bfe89c12"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0867",
+      "source_index": 867,
+      "record_sha256": "62ec196316c550c5c656e8bffe829467721ca1e61bc2a90e57ec185233a1540c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0868",
+      "source_index": 868,
+      "record_sha256": "ee38bfac322ab2bac452d9afbd9f35d3da2c7a6bea7546423ba65e7b2e0b1152"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0869",
+      "source_index": 869,
+      "record_sha256": "23b9c934d7d64fd452313a6194b04a3155c438a944fde123156b30c94f2b7836"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0870",
+      "source_index": 870,
+      "record_sha256": "47d05ef6408629a6e0658becae840eefb7f7d370dd5ae61a64296735867f8ac9"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0871",
+      "source_index": 871,
+      "record_sha256": "a60c85030b7cff800a406ce1eaeb8d116616e30470ba521447df91e4c9cc6f22"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0872",
+      "source_index": 872,
+      "record_sha256": "43b9c801c54b0c2036ae3818a27e4854431aa889497b48a7c8cbad8b4d5933bc"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0873",
+      "source_index": 873,
+      "record_sha256": "ea0c9591a5da4c7e0758550957c483ba4bcb95de0251819e77c8b5f19c2b6ebb"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0874",
+      "source_index": 874,
+      "record_sha256": "94af3e7e0ec31ab697f8f342d6dbf3b3a1359dc1b840615e567f922f495355b7"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0875",
+      "source_index": 875,
+      "record_sha256": "ecc2e38b55b020a49075a5e978e8feb1fb4e34e5dc9c18f0c13df5d54a6e2049"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0876",
+      "source_index": 876,
+      "record_sha256": "3854c09dec0a020fc74e7676da8ed79816d4f836636fe3577c2f78832e7ba707"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0877",
+      "source_index": 877,
+      "record_sha256": "fd2df23de67d4269b98be08273d4f7252c7729d812945afebd9cdfda4753e46f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0878",
+      "source_index": 878,
+      "record_sha256": "c5c58bd38233d624d3020dfddcfc128dd02f859b03bf4932957d795021ac4510"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0879",
+      "source_index": 879,
+      "record_sha256": "d9867376fa7b08a51b4b81cda41d7a9e8efd482522accac97b02ac99b23e5cbf"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0880",
+      "source_index": 880,
+      "record_sha256": "09d1584bc643d8a450e727c77605401e568996b850cab4e9b1e3c4eca3957da8"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0881",
+      "source_index": 881,
+      "record_sha256": "7deba034306336a08a80d985a4c5e5f8a2885b7d781c5cb6e5067de1f178be7e"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0882",
+      "source_index": 882,
+      "record_sha256": "a68e90f6439873829bfd23dca0b0326801f0281d1607705dd2b42f6c220f9849"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0883",
+      "source_index": 883,
+      "record_sha256": "d1e83779b276ace6693e2639bed968d9ade14d2b07e8d5c56e575c4c85a2c32c"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0884",
+      "source_index": 884,
+      "record_sha256": "f03129fa5b255ec67f9aea29dbd0b545f3a44a87890bef576195f287ec762477"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0885",
+      "source_index": 885,
+      "record_sha256": "5fee8f3903d9b766a9467f3fd07724bd82c5c06e34f945b3b55bb1f1c3f3a69f"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0886",
+      "source_index": 886,
+      "record_sha256": "da15c55c9f5d3b47a42985717f386b594a22f89c10ce54a703db3934d4e0bb2b"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0887",
+      "source_index": 887,
+      "record_sha256": "0fe30bc96fbde24f86fd36b442907ee0f98632329bf559850656326c5f4cbf34"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0888",
+      "source_index": 888,
+      "record_sha256": "5b09eb9905dd82344660bce758d8583c864a82332c37324d8f283b884a7d9b13"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0889",
+      "source_index": 889,
+      "record_sha256": "91be36d36f484b2a74078816d0f104436b547a3b97cdb204589b75c83fc1ea97"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0890",
+      "source_index": 890,
+      "record_sha256": "7e33a70e4ed7300b51602e8df731b8f65ad178e0804244b4c15c66fdca78b6d2"
+    },
+    {
+      "path": "/Game/Puzzles/Art/PR130Maze/SM_PR130Maze_0893",
+      "source_index": 893,
+      "record_sha256": "668a6908046cfbd4618b587605635d6b66cfd6c896d88f04a631f79646a1385e"
+    }
+  ],
+  "cuts": "Existing six-round gap/solo-hall/doorway cuts retained; no new layout design",
+  "original_sources_saved": false,
+  "collision_clearance": {
+    "source_index": 890,
+    "lo": [
+      -350,
+      9600,
+      -350
+    ],
+    "hi": [
+      100,
+      9950,
+      0
+    ]
+  }
+}

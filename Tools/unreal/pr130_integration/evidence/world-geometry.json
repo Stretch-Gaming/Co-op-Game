@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "capsule_radius": 35.0,
+  "capsule_half_height": 90.0,
+  "sample_spacing": 75,
+  "floor_failures": [],
+  "capsule_failures": [],
+  "partition_failures": [],
+  "climb_segments": [
+    {
+      "route": "second0",
+      "segment": 4,
+      "height": 250,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second0",
+      "height": 250,
+      "method": "native wall presence, swept mantle envelope and landing floor; real owning climb input still required",
+      "verified_by_trace": true
+    },
+    {
+      "route": "second1",
+      "segment": 8,
+      "height": 700.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second1",
+      "segment": 10,
+      "height": 700.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second1",
+      "segment": 12,
+      "height": 250,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second1",
+      "height": 250,
+      "method": "native wall presence, swept mantle envelope and landing floor; real owning climb input still required",
+      "verified_by_trace": true
+    },
+    {
+      "route": "second2",
+      "segment": 9,
+      "height": 1400.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second2",
+      "segment": 11,
+      "height": 1400.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second3",
+      "segment": 9,
+      "height": 2100.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second3",
+      "segment": 11,
+      "height": 2100.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second3",
+      "segment": 16,
+      "height": 250.0,
+      "verified_by_trace": false
+    },
+    {
+      "route": "second3",
+      "height": 250.0,
+      "method": "native wall presence, swept mantle envelope and landing floor; real owning climb input still required",
+      "verified_by_trace": true
+    }
+  ],
+  "samples": 3723,
+  "source_floor_adjustments": 1575,
+  "method": "Native capsule dimensions; captured floor-following heights and slope support, independent native floor/clearance/partition traces. Does not simulate jump, climb, latency, timing or human play.",
+  "meeting_perches": [
+    {
+      "slot": 0,
+      "ground_occluded": true,
+      "deck_beam_clear": true,
+      "climb_input_pending": true
+    },
+    {
+      "slot": 1,
+      "ground_occluded": true,
+      "deck_beam_clear": true,
+      "climb_input_pending": true
+    }
+  ],
+  "human_gate_pending": true
+}
