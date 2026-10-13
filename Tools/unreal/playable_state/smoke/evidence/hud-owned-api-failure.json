@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "helper_api_failure_before_geometry",
+  "script_variant": "scratch",
+  "passed": false,
+  "owner_rows_recorded": 0,
+  "geometry_qualified": false,
+  "rendered_pixel_acceptance": false,
+  "native_log_scan_pending": true,
+  "source_sha256": "b4591e762af54dc63ff46342c9b47d36a610171ad75eb9776459dac511d6a44b",
+  "raw_report_sha256": "28490bee58b36c1e405ad1a53a03a26b626200ad725ecfe91cf2ef1667df9a8d",
+  "error": "Traceback (most recent call last):\n  File \"/private/tmp/coop-audit/inspect_owned_hud.py\", line 52, in <module>\n    screen=ue.SlateBlueprintLibrary.get_local_size(player_geo);cached=ue.SlateBlueprintLibrary.get_local_size(widget.get_cached_geometry())\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'unreal' has no attribute 'SlateBlueprintLibrary'\n",
+  "correction": "Use unreal.SlateLibrary.get_local_size, declared by UCLASS(meta=(ScriptName=\"SlateLibrary\")) in installed UE5.8 SlateBlueprintLibrary.h:13.",
+  "corrected_source_sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832",
+  "corrected_native_status": "pending_parent_rerun",
+  "engine_source": "Engine/Source/Runtime/UMG/Public/Blueprint/SlateBlueprintLibrary.h:13,54"
+}

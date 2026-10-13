@@ -1,0 +1,1141 @@
+{
+  "schema": 1,
+  "status": "reattachment_still_unqualified",
+  "passed": false,
+  "pie_only": true,
+  "race_claim": false,
+  "geometry_qualified": false,
+  "nonzero_widget_paint_proof": false,
+  "rendered_pixel_acceptance": false,
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "checks": {
+    "owner_and_widget_identity_preserved": true,
+    "owner_data_preserved": false,
+    "original_slots_and_style_preserved": true,
+    "nonzero_widget_paint_proof": false,
+    "nonzero_viewport_and_player_bounds": false,
+    "nonzero_cache_and_tick_bounds": false,
+    "geometry_qualified": false
+  },
+  "actual_callbacks": 8,
+  "callback_type": "unreal.register_slate_post_tick_callback; not an inferred paint frame",
+  "elapsed_seconds": 0.525938,
+  "stop_reason": "callback_limit",
+  "world_inventory": [
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+      "host": true,
+      "local_ids": [
+        286,
+        289
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+      "host": false,
+      "local_ids": [
+        287
+      ]
+    },
+    {
+      "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+      "host": false,
+      "local_ids": [
+        288
+      ]
+    }
+  ],
+  "fixture_actions": [
+    {
+      "id": 286,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_0",
+      "kind": "hud",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "id": 286,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_0",
+      "kind": "prompt",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "id": 289,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_1",
+      "kind": "hud",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3"
+    },
+    {
+      "id": 289,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_1",
+      "kind": "prompt",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3"
+    },
+    {
+      "id": 287,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_HCA3RoundHUD_C_0",
+      "kind": "hud",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "id": 287,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_InteractPrompt_C_0",
+      "kind": "prompt",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "id": 288,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_HCA3RoundHUD_C_0",
+      "kind": "hud",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    },
+    {
+      "id": 288,
+      "widget": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_InteractPrompt_C_0",
+      "kind": "prompt",
+      "action": "existing RemoveFromParent -> existing AddToPlayerScreen(0) -> restore exact saved viewport slot",
+      "same_widget": true,
+      "added": true,
+      "owning_controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0"
+    }
+  ],
+  "before": [
+    {
+      "id": 286,
+      "host": true,
+      "primary": true,
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 332.4676513671875,
+            "bottom": 171.27120971679688
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 289,
+      "host": true,
+      "primary": false,
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_1",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_1",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 332.4676513671875,
+            "bottom": 171.27120971679688
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 287,
+      "host": false,
+      "primary": true,
+      "pixels": [
+        640.0,
+        500.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 713.5134887695312,
+            "bottom": 367.56756591796875
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 288,
+      "host": false,
+      "primary": true,
+      "pixels": [
+        640.0,
+        500.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 713.5134887695312,
+            "bottom": 367.56756591796875
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "last_after": [
+    {
+      "id": 286,
+      "host": true,
+      "primary": true,
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 332.4676513671875,
+            "bottom": 171.27120971679688
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 289,
+      "host": true,
+      "primary": false,
+      "pixels": [
+        1720.0,
+        1072.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_HCA3RoundHUD_C_1",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_36.WBP_InteractPrompt_C_1",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 332.4676513671875,
+            "bottom": 171.27120971679688
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 287,
+      "host": false,
+      "primary": true,
+      "pixels": [
+        640.0,
+        500.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_37.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 713.5134887695312,
+            "bottom": 367.56756591796875
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": 288,
+      "host": false,
+      "primary": true,
+      "pixels": [
+        640.0,
+        500.0
+      ],
+      "viewport": [
+        0.0,
+        0.0
+      ],
+      "player": [
+        0.0,
+        0.0
+      ],
+      "hud": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_HCA3RoundHUD_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.0,
+              0.0
+            ],
+            "maximum": [
+              1.0,
+              1.0
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 0.0,
+            "bottom": 0.0
+          },
+          "alignment": [
+            0.0,
+            0.0
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      },
+      "prompt": {
+        "path": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_38.WBP_InteractPrompt_C_0",
+        "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+        "world": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test",
+        "is_in_viewport": true,
+        "subsystem_widget_added": true,
+        "slot": {
+          "anchors": {
+            "minimum": [
+              0.5,
+              0.82
+            ],
+            "maximum": [
+              0.5,
+              0.82
+            ]
+          },
+          "offsets": {
+            "left": 0.0,
+            "top": 0.0,
+            "right": 713.5134887695312,
+            "bottom": 367.56756591796875
+          },
+          "alignment": [
+            0.5,
+            0.5
+          ],
+          "z_order": 0,
+          "auto_remove_on_world_removed": true
+        },
+        "visibility": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+        "opacity": 1.0,
+        "cache": [
+          0.0,
+          0.0
+        ],
+        "paint": [
+          0.0,
+          0.0
+        ],
+        "tick": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "data_differences": [
+    {
+      "id": 287,
+      "host": false,
+      "widget": "hud",
+      "field": "DisplayTeam",
+      "before": "P1  ALIVE;P3  ALIVE;P2  ALIVE;P0  ALIVE;",
+      "after": "P1  ALIVE;P3  ALIVE;P2  ALIVE;P4  ALIVE;"
+    },
+    {
+      "id": 288,
+      "host": false,
+      "widget": "hud",
+      "field": "DisplayTeam",
+      "before": "P1  ALIVE;P2  ALIVE;P3  ALIVE;P0  ALIVE;",
+      "after": "P1  ALIVE;P2  ALIVE;P3  ALIVE;P4  ALIVE;"
+    }
+  ],
+  "samples": [
+    {
+      "callback": 1,
+      "wall_seconds": 0.026041,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 2,
+      "wall_seconds": 0.073814,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 3,
+      "wall_seconds": 0.144408,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 4,
+      "wall_seconds": 0.20743,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 5,
+      "wall_seconds": 0.272196,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 6,
+      "wall_seconds": 0.339159,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 7,
+      "wall_seconds": 0.40295,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    },
+    {
+      "callback": 8,
+      "wall_seconds": 0.4667,
+      "checks": {
+        "owner_and_widget_identity_preserved": true,
+        "owner_data_preserved": false,
+        "original_slots_and_style_preserved": true,
+        "nonzero_widget_paint_proof": false,
+        "nonzero_viewport_and_player_bounds": false,
+        "nonzero_cache_and_tick_bounds": false,
+        "geometry_qualified": false
+      }
+    }
+  ],
+  "source": {
+    "file": "executed/probe_hud_reattach.py",
+    "sha256": "589ed43cb0ff3faffaefb2a5ce392b5c9515b4a2d9292227fee0cf344527725d",
+    "frozen": true
+  },
+  "native_receipt": {
+    "file": "hud-reattach-final-native.json",
+    "bytes": 184590,
+    "sha256": "adcadff96d70acaa7750c2c56a4b274a2d23002cec122b3d2cd5f3bc695d45ba"
+  },
+  "native_log": {
+    "owner_scan_completed": true,
+    "owner_reported_error_count": 0,
+    "independent_excerpt_error_count": 0,
+    "scan_pattern": "Log[^\\s:]+:\\s*(?:Error|Fatal):|Accessed None",
+    "receipt": {
+      "file": "hud-reattach-final-log.txt",
+      "bytes": 36666,
+      "sha256": "7eeace0545c1e59701dfffc1f93925eb754769f8f30449cae063777444026373"
+    },
+    "raw_callback_pending_flag": true,
+    "durable_path": "evidence/hud-reattach-final-log.txt"
+  },
+  "parent_log_scan_receipt": {
+    "file": "hud-reattach-summary.json",
+    "bytes": 184617,
+    "sha256": "4ec5ece0e78342438ab2292387f346aa74c7c2c7cb4677ff6ea6e911391d124c"
+  },
+  "restoration_receipt": "restored-final.json",
+  "interpretation": [
+    "Same eight widget identities, owning controllers and saved slots/style survived the PIE-only reattachment.",
+    "Owner data preservation is FALSE: two joining DisplayTeam labels changed P0 to P4 during the normal timer/roster update; the false check is retained.",
+    "All viewport/player/widget cache/paint/tick sizes stayed zero across all eight actual callbacks; this reattachment attempt does not repair geometry or establish a startup race.",
+    "No OnPaint or game asset patch is justified by these observations. Native visibility CVars restored to1; root stopped PIE and removed the bridge callback."
+  ]
+}

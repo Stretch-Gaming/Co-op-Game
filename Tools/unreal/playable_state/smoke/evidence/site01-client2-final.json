@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "gate": "Required current-snapshot L_Site01 Play As Client2 input/data smoke",
+  "passed": true,
+  "before_push_site01_client2_gate_passed": true,
+  "full_mission_acceptance": false,
+  "rendered_pixel_acceptance": false,
+  "platform": "Darwin",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map": "/Game/Maps/L_Site01",
+  "profile": "joining",
+  "players": 2,
+  "pie_settings": {
+    "PlayNetMode": "PIE_Client",
+    "PlayNumberOfClients": 2,
+    "RunUnderOneProcess": true
+  },
+  "world_inventory": [
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": true,
+      "net_mode_from_public_network_queries": "NM_DedicatedServer",
+      "local_player_ids": []
+    },
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        280
+      ]
+    },
+    {
+      "world": "L_Site01",
+      "authoritative_game_mode": false,
+      "net_mode_from_public_network_queries": "NM_Client",
+      "local_player_ids": [
+        281
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Two joining owners have distinct single active HUD/prompt instances and normal-spawn floor support",
+      "details": null
+    },
+    {
+      "name": "Owning client movement reaches server/peers and leaves other pawn stationary",
+      "details": {
+        "id": 280,
+        "distance_cm": 107.78532287669168
+      }
+    },
+    {
+      "name": "Owning client movement reaches server/peers and leaves other pawn stationary",
+      "details": {
+        "id": 281,
+        "distance_cm": 108.81442531579
+      }
+    },
+    {
+      "name": "Owning V/F reaches every peer and updates only the selected owner camera/tool HUD",
+      "details": {
+        "id": 280
+      }
+    },
+    {
+      "name": "Owning V/F reaches every peer and updates only the selected owner camera/tool HUD",
+      "details": {
+        "id": 281
+      }
+    }
+  ],
+  "movements": [
+    {
+      "id": 280,
+      "distance_cm": 107.78532287669168,
+      "on_ground": true
+    },
+    {
+      "id": 281,
+      "distance_cm": 108.81442531579,
+      "on_ground": true
+    }
+  ],
+  "owner_widgets": [
+    {
+      "id": 280,
+      "controller": "/Game/Maps/UEDPIE_1_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_31.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_31.WBP_InteractPrompt_C_0",
+      "active_hud_count": 1,
+      "active_prompt_count": 1,
+      "objective": "Stand together on the start pad.",
+      "dead": false,
+      "flares": 3,
+      "tools": "LAMP OFF  FLARES 3"
+    },
+    {
+      "id": 281,
+      "controller": "/Game/Maps/UEDPIE_2_L_Site01.L_Site01:PersistentLevel.BP_CoopPlayerController_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_32.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_32.WBP_InteractPrompt_C_0",
+      "active_hud_count": 1,
+      "active_prompt_count": 1,
+      "objective": "Stand together on the start pad.",
+      "dead": false,
+      "flares": 3,
+      "tools": "LAMP OFF  FLARES 3"
+    }
+  ],
+  "ui_state_sequence": [
+    [
+      {
+        "id": 280,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3",
+        "objective": "Stand together on the start pad."
+      },
+      {
+        "id": 281,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3",
+        "objective": "Stand together on the start pad."
+      }
+    ],
+    [
+      {
+        "id": 280,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3",
+        "objective": "Stand together on the start pad."
+      },
+      {
+        "id": 281,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP OFF  FLARES 3",
+        "objective": "Stand together on the start pad."
+      }
+    ],
+    [
+      {
+        "id": 280,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3",
+        "objective": "Stand together on the start pad."
+      },
+      {
+        "id": 281,
+        "active_hud_count": 1,
+        "active_prompt_count": 1,
+        "dead": false,
+        "flares": 3,
+        "tools": "LAMP ON   FLARES 3",
+        "objective": "Stand together on the start pad."
+      }
+    ]
+  ],
+  "input_method": "Synthetic Enhanced Input through each actual owning local-player subsystem; real Blueprint input/RPC path.",
+  "fixture_actions": [],
+  "cleanup_errors": [],
+  "native_log": {
+    "owner_scan_completed": true,
+    "owner_reported_error_count": 0,
+    "independent_excerpt_error_count": 0,
+    "scan_pattern": "Log[^\\s:]+:\\s*(?:Error|Fatal):|Accessed None",
+    "receipt": {
+      "file": "site01-client2-smoke-log.txt",
+      "bytes": 37384,
+      "sha256": "70ed08f74cf370a6781d356c9937acebbc798aa4de93ed9052db91f0edb8981d"
+    },
+    "raw_callback_pending_flag": true,
+    "durable_path": "evidence/site01-client2-final-log.txt",
+    "resolution": "Parent completed the separate native log scan; raw native pending flag retained unchanged."
+  },
+  "native_receipt": {
+    "file": "site01-client2-final-native.json",
+    "bytes": 22195,
+    "sha256": "80843927ad3dcdbeab0e833b1f27d065787c5d0a8d71c7fe949d3176e67b51df"
+  },
+  "parent_log_scan_receipt": {
+    "file": "site-smoke-summary.json",
+    "bytes": 22222,
+    "sha256": "dc6282de14df06f64f2a32b1592a82937770379cc983509ffa6bcfd083f86942"
+  },
+  "source": {
+    "script_variant": "scratch",
+    "file": "executed/test_site01_smoke.py",
+    "sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+    "portable_copy_executed": false
+  },
+  "current_character": {
+    "file": "Content/Core/BP_CoopCharacter.uasset",
+    "sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "on_disk_hash_verified": true
+  },
+  "final_compile": {
+    "receipt": "final-compile.json",
+    "passed": true,
+    "compiled_count": 6,
+    "saved_count": 6,
+    "protected_package_hash_count": 55,
+    "unowned_packages_saved": false
+  },
+  "read_only_graph_proof": {
+    "receipt": "final-graph-proof.json",
+    "passed": true,
+    "packages_saved": [],
+    "all_ghost_graphs_match": 12,
+    "other_character_graphs_preserved": 69,
+    "use_allowed_matches_native_patch": true
+  },
+  "limits": [
+    "Current native input/data/floor smoke only; host-split paint/layout remains failed.",
+    "Physical devices, pixels/audio, packet emulation and continuous default route remain unqualified."
+  ]
+}

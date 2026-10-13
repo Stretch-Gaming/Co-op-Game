@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "status": "ownership_data_passed_strict_geometry_failed",
+  "read_only": true,
+  "passed": false,
+  "ownership_data_passed": true,
+  "ownership_data_proof": "All four rows recorded; unique HUD/prompt final assertion passed. Native callback failed only at the subsequent strict geometry assertion.",
+  "geometry_gate_passed": false,
+  "rendered_pixel_acceptance": false,
+  "native_log_scan": {
+    "native_error_count": 0,
+    "scan_pattern": "Log[^\\s:]+:\\s*(?:Error|Fatal):|Accessed None",
+    "parent_reported_native_error_count": 0,
+    "file": "hud-owned-log.txt",
+    "sha256": "45634d629241f00496838a382ae1c158a04d42112227b9b6d447353cf6839e7b",
+    "bytes": 40313,
+    "included_in_packet": true
+  },
+  "source": {
+    "script_variant": "scratch",
+    "file": "inspect_owned_hud.py",
+    "sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832",
+    "portable_variant_executed": false
+  },
+  "raw_report_sha256": "675b8a981f5a770ae4ffbf2aa2d7e1152615d87352b87682896e53ace81f580e",
+  "owners": [
+    {
+      "id": 286,
+      "host_local": true,
+      "primary": true,
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_39.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_39.WBP_InteractPrompt_C_0",
+      "dead": false,
+      "flares": 3,
+      "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "spectated_slot": -1,
+      "round_name": "THE CAVE",
+      "objective": "Stand together on the start pad.",
+      "team": "P1  ALIVE;P2  ALIVE;P3  ALIVE;P4  ALIVE;",
+      "tools": "LAMP OFF  FLARES 3",
+      "spectator": "",
+      "show_hud": true,
+      "screen_size": [
+        0.0,
+        0.0
+      ],
+      "cached_hud_size": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": 289,
+      "host_local": true,
+      "primary": false,
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_3",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_39.WBP_HCA3RoundHUD_C_1",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_39.WBP_InteractPrompt_C_1",
+      "dead": false,
+      "flares": 2,
+      "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_0_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_3",
+      "spectated_slot": -1,
+      "round_name": "THE CAVE",
+      "objective": "Stand together on the start pad.",
+      "team": "P1  ALIVE;P2  ALIVE;P3  ALIVE;P4  ALIVE;",
+      "tools": "LAMP OFF  FLARES 2",
+      "spectator": "",
+      "show_hud": true,
+      "screen_size": [
+        0.0,
+        0.0
+      ],
+      "cached_hud_size": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": 287,
+      "host_local": false,
+      "primary": true,
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_40.WBP_InteractPrompt_C_0",
+      "dead": false,
+      "flares": 3,
+      "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_1_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "spectated_slot": -1,
+      "round_name": "THE CAVE",
+      "objective": "Stand together on the start pad.",
+      "team": "P1  ALIVE;P4  ALIVE;P2  ALIVE;P3  ALIVE;",
+      "tools": "LAMP OFF  FLARES 3",
+      "spectator": "",
+      "show_hud": true,
+      "screen_size": [
+        0.0,
+        0.0
+      ],
+      "cached_hud_size": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": 288,
+      "host_local": false,
+      "primary": true,
+      "controller": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopPlayerController_C_0",
+      "hud": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_HCA3RoundHUD_C_0",
+      "prompt": "/Engine/Transient.UnrealEdEngine_0:BP_CoopGameInstance_C_41.WBP_InteractPrompt_C_0",
+      "dead": false,
+      "flares": 3,
+      "view_target": "/Game/Puzzles/Test/SixRound/UEDPIE_2_L_SixRound_Test.L_SixRound_Test:PersistentLevel.BP_CoopCharacter_C_0",
+      "spectated_slot": -1,
+      "round_name": "THE CAVE",
+      "objective": "Stand together on the start pad.",
+      "team": "P1  ALIVE;P2  ALIVE;P4  ALIVE;P3  ALIVE;",
+      "tools": "LAMP OFF  FLARES 3",
+      "spectator": "",
+      "show_hud": true,
+      "screen_size": [
+        0.0,
+        0.0
+      ],
+      "cached_hud_size": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "geometry_not_painted": [
+    286,
+    289,
+    287,
+    288
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/tmp/coop-audit/inspect_owned_hud.py\", line 67, in <module>\n    if args.get('require_geometry'):assert not RESULT['geometry_not_painted'],'Geometry gate needs painted player widgets'\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Geometry gate needs painted player widgets\n",
+  "observed_stock_limit": "Lobby stock was 3 for primary/joining owners and 2 for the late CreatePlayer owner; these are native distinct owner values before Round 1 scaling configuration.",
+  "diagnosis_pending": "All player-screen geometry also zero; investigate viewport attachment and visible paint before any HUD/gameplay patch."
+}

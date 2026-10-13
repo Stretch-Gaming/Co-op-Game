@@ -120,3 +120,14 @@ it preserves failed and unknown-log states. Missing receipts never become passes
 
 
 The later warning-free final compile/save rewrote serialized package bytes. The historical matrix/patch hashes remain unchanged in this packet. The [final read-only graph proof](../evidence/final-graph-proof.json) reloaded the final saved Ghost and matched all 12 graphs exactly to the native-tested patch snapshot. No package was saved by that proof; its final fingerprint identifies the published binary.
+
+## Final saved package binding
+
+The [final artifact binding](evidence/final-artifact-binding.json) retains the
+historical saved Ghost hash and records final SHA-256
+`29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0`.
+Final compile/save rewrote package bytes; the parent's
+[read-only graph proof](../smoke/evidence/final-graph-proof.json) confirms all
+12 final Ghost graphs match the tested native patch. The completed 18-case
+matrix was not repeated because the final graph topology is unchanged.
+Historical matrix, patch and source receipts remain unchanged.

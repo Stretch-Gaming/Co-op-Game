@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "historical_native_matrix_receipt": "summary.json",
+  "historical_saved_ghost_sha256": "d7e23d948bea3787f85bad72c6a6d5c5f52f471d1d439c6f0deaf7d8b6ebdc7e",
+  "final_saved_ghost_sha256": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+  "all_12_graphs_match_tested_native_patch": true,
+  "native_read_only_proof": "../../smoke/evidence/final-graph-proof.json",
+  "native_read_only_proof_sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810",
+  "final_compile_receipt": "../../smoke/evidence/final-compile.json",
+  "final_compile_receipt_sha256": "8a2bc2927fc55dc40616ae1343483d770804fb3ba473ada2984cbbd1f6f2e2bd",
+  "historical_matrix_not_rerun": true,
+  "explanation": "Final warning-free compile/save rewrote package bytes; root read-only graph comparison binds all12 final Ghost graphs to the previously tested native patch. Historical receipts retained unchanged."
+}

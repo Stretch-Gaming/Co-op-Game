@@ -1,0 +1,264 @@
+{
+  "schema": 1,
+  "status": "final_site01_native_passed_host_ui_geometry_failed_portable_helpers_ast_only",
+  "native_execution_by_child": false,
+  "path_adaptation": "New portable copies derive their root from __file__; existing Windows helpers/guards remain untouched.",
+  "files": {
+    "context.py": {
+      "file": "context.py",
+      "sha256": "3cff8de84330ebd24284ef639da76e1db609a593cc1293688dbf1c2d41b80325",
+      "ast_validated": true
+    },
+    "test_site01_smoke.py": {
+      "file": "test_site01_smoke.py",
+      "sha256": "4a6eacd32860e2ceb05b665eea9cc2c407a4e6a67578592a52dc91ccaaf15777",
+      "ast_validated": true,
+      "scratch_source": {
+        "file": "test_site01_smoke.py",
+        "sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+        "native_status": "passed_5_checks"
+      },
+      "native_status": "not_executed_portable_copy"
+    },
+    "inspect_owned_hud.py": {
+      "file": "inspect_owned_hud.py",
+      "sha256": "09c61d319e473be5c13f26301d582432c4f6e0883b863c92d6dcece569ad7dc0",
+      "ast_validated": true,
+      "scratch_source": {
+        "file": "inspect_owned_hud.py",
+        "sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832",
+        "native_status": "ownership_data_passed_strict_geometry_failed"
+      },
+      "native_status": "not_executed_portable_copy",
+      "prior_api_failure": {
+        "scratch_sha256": "b4591e762af54dc63ff46342c9b47d36a610171ad75eb9776459dac511d6a44b",
+        "portable_sha256": "befccb8600004bad1c9736629b3730418fbb6b2acd281ef5272eb33dfade8aa9",
+        "evidence": "evidence/hud-owned-api-failure.json"
+      }
+    },
+    "executed/inspect_hud_viewport.py": {
+      "file": "executed/inspect_hud_viewport.py",
+      "sha256": "771d9763b3dd085b3f901787776bd9f3c6466c2447f5b5baeaca382c75bf921a",
+      "ast_validated": true,
+      "native_status": "partial_native_collection_failed_helper_api",
+      "portability": "Exact historical scratch source with fixed primary guard; not a portable reproducer."
+    },
+    "executed/inspect_hud_viewport_v2.py": {
+      "file": "executed/inspect_hud_viewport_v2.py",
+      "sha256": "aef84ba24330b0477729498745b3dcde513e59fbd789b384e9f14389475dcec4",
+      "ast_validated": true,
+      "native_status": "native_collection_complete_geometry_zero",
+      "portability": "Exact historical scratch source with fixed primary guard; not a portable reproducer."
+    },
+    "executed/test_site01_smoke.py": {
+      "file": "executed/test_site01_smoke.py",
+      "sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "ast_validated": true,
+      "native_status": "passed_final_current_character_smoke_5_checks",
+      "portability": "Exact executed scratch source with fixed primary guard; archived evidence, not a portable successor."
+    },
+    "executed/probe_hud_reattach.py": {
+      "file": "executed/probe_hud_reattach.py",
+      "sha256": "589ed43cb0ff3faffaefb2a5ce392b5c9515b4a2d9292227fee0cf344527725d",
+      "ast_validated": true,
+      "native_status": "native_reattachment_still_unqualified",
+      "portability": "Exact executed scratch source with fixed primary guard; archived evidence, not a portable successor."
+    }
+  },
+  "dependencies": {
+    "Tools/unreal/playable_state/ghosts/context.py": "622b773534e37b8db9b67042f20048dfc9eb30f05effef6bfa3feded1207fbdc",
+    "Tools/unreal/playable_state/ghosts/ghost_runtime_support.py": "773cade5408b184b0b59d0b5b2830e74f6c3ec0181676c50a697ddfec23cc00f"
+  },
+  "runtime_results": {
+    "site01_client2": {
+      "status": "historical_pass_pre_character_fix",
+      "script_variant": "scratch",
+      "check_count": 5,
+      "native_log_error_count": 0,
+      "evidence": "evidence/site01-client2.json",
+      "executed_script_sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "historical_snapshot_only": true,
+      "before_push_required_map_gate_passed_for_recorded_snapshot": true,
+      "current_before_push_required_map_gate_passed": false,
+      "scope_limit": "Predates current Character fixes; final saved snapshot requires separate native two-client smoke receipt.",
+      "superseded_by": "site01_client2_final"
+    },
+    "host_owned_hud": {
+      "status": "ownership_data_passed_strict_geometry_failed",
+      "evidence": "evidence/hud-owned-geometry-failure.json",
+      "ownership_data_passed": true,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "executed_script_sha256": "6e9ab77c45eb1650f11120e9be285dd60f5fcc62e7125054740b10605563a832"
+    },
+    "hud_viewport_diagnostic": {
+      "status": "partial_native_collection_failed_helper_api",
+      "evidence": "evidence/hud-viewport-summary.json",
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "771d9763b3dd085b3f901787776bd9f3c6466c2447f5b5baeaca382c75bf921a"
+    },
+    "hud_viewport_v2": {
+      "status": "native_collection_complete_geometry_zero",
+      "evidence": "evidence/hud-viewport-v2-summary.json",
+      "owner_count": 4,
+      "native_log_error_count": 0,
+      "optional_read_error_count": 3,
+      "geometry_gate_passed": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "aef84ba24330b0477729498745b3dcde513e59fbd789b384e9f14389475dcec4"
+    },
+    "site01_client2_final": {
+      "status": "passed",
+      "before_push_required_map_gate_passed": true,
+      "evidence": "evidence/site01-client2-final.json",
+      "script_variant": "scratch",
+      "check_count": 5,
+      "native_log_error_count": 0,
+      "current_character_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+      "executed_script_sha256": "f986d4b729e9e1b0d034eddad75f10f0cda7f05fb671b28f4e95ab9767a179bd",
+      "full_mission_acceptance": false,
+      "rendered_pixel_acceptance": false
+    },
+    "hud_reattach_final": {
+      "status": "reattachment_still_unqualified",
+      "evidence": "evidence/hud-reattach-final.json",
+      "passed": false,
+      "owner_and_widget_identity_preserved": true,
+      "original_slots_and_style_preserved": true,
+      "owner_data_preserved": false,
+      "geometry_qualified": false,
+      "nonzero_widget_paint_proof": false,
+      "actual_callbacks": 8,
+      "native_log_error_count": 0,
+      "race_claim": false,
+      "rendered_pixel_acceptance": false,
+      "executed_script_sha256": "589ed43cb0ff3faffaefb2a5ce392b5c9515b4a2d9292227fee0cf344527725d"
+    },
+    "final_compile_and_graph_proof": {
+      "compiled_saved_count": 6,
+      "graph_proof_passed": true,
+      "ghost_graph_count": 12,
+      "other_character_graph_count": 69,
+      "compile_receipt": "evidence/final-compile.json",
+      "graph_receipt": "evidence/final-graph-proof.json",
+      "restored_receipt": "evidence/restored-final.json"
+    }
+  },
+  "evidence_receipts": [
+    {
+      "file": "site01-client2.json",
+      "bytes": 6983,
+      "sha256": "ed9d5b508dd332bce41781ba7f780c5936affe7aff261bbd676aae483dcec12d"
+    },
+    {
+      "file": "site01-client2-log.txt",
+      "bytes": 35701,
+      "sha256": "d72dce9dd6a2ab2c6ce1c822fd5d226265e4edddfb06efdb57ea7bbd48886b0d"
+    },
+    {
+      "file": "hud-owned-api-failure.json",
+      "bytes": 1216,
+      "sha256": "eb4c798a6af0bfe23e2fc725afb93412726b733869e2e1ebd6facc3d25c1c2af"
+    },
+    {
+      "file": "hud-owned-geometry-failure.json",
+      "bytes": 5714,
+      "sha256": "a9e56e865b41e9bdee30d9ab2cf9d4837d5b28a2d53841836feabe41fb5aec5c"
+    },
+    {
+      "file": "hud-owned-log.txt",
+      "bytes": 40313,
+      "sha256": "45634d629241f00496838a382ae1c158a04d42112227b9b6d447353cf6839e7b"
+    },
+    {
+      "file": "hud-viewport-diagnostic.json",
+      "bytes": 31937,
+      "sha256": "db82ec18ffa7b2dcc7867af333003b0755bf461e272c6415d6cb869ca924d91b"
+    },
+    {
+      "file": "hud-viewport-log.txt",
+      "bytes": 43158,
+      "sha256": "5fdec33346b47607365c0f0a83fbbbbd3c56fe730c022d76a6a27c2d6e470384"
+    },
+    {
+      "file": "hud-viewport-summary.json",
+      "bytes": 4864,
+      "sha256": "701b6ed98fa40327dfaf867c44864a67bdd1588dc64ec3674291d93c0a834e18"
+    },
+    {
+      "file": "hud-viewport-v2.json",
+      "bytes": 34892,
+      "sha256": "a10ff404a9a0bebbebfc4b1ea6b3b5922a902f63582d65206fe0e252b3f8fed8"
+    },
+    {
+      "file": "hud-viewport-v2-log.txt",
+      "bytes": 45729,
+      "sha256": "604fdae11425aecfff1057a2a445854b2acf1ef20f2f1abd43dec96de58aaf78"
+    },
+    {
+      "file": "hud-viewport-v2-summary.json",
+      "bytes": 10072,
+      "sha256": "2319d901a1eca96334d53d0bf65ecc58be587016ee0b8d1d0588ceabdc0cdf2d"
+    },
+    {
+      "file": "final-compile.json",
+      "bytes": 622,
+      "sha256": "8a2bc2927fc55dc40616ae1343483d770804fb3ba473ada2984cbbd1f6f2e2bd"
+    },
+    {
+      "file": "final-graph-proof.json",
+      "bytes": 1609,
+      "sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810"
+    },
+    {
+      "file": "restored-final.json",
+      "bytes": 633,
+      "sha256": "53fa1f4937392bcf534999de9337ba06f6d0b0d79bbd84f0fa6e0b6f1c7b504e"
+    },
+    {
+      "file": "site01-client2-final-native.json",
+      "bytes": 22195,
+      "sha256": "80843927ad3dcdbeab0e833b1f27d065787c5d0a8d71c7fe949d3176e67b51df"
+    },
+    {
+      "file": "site01-client2-final-log.txt",
+      "bytes": 37384,
+      "sha256": "70ed08f74cf370a6781d356c9937acebbc798aa4de93ed9052db91f0edb8981d"
+    },
+    {
+      "file": "site01-client2-final.json",
+      "bytes": 6939,
+      "sha256": "884d52dbc4a113ad1187957cadb28fc13fcfb9541631c76a4dc18bc8442e1b13"
+    },
+    {
+      "file": "hud-reattach-final-native.json",
+      "bytes": 184590,
+      "sha256": "adcadff96d70acaa7750c2c56a4b274a2d23002cec122b3d2cd5f3bc695d45ba"
+    },
+    {
+      "file": "hud-reattach-final-log.txt",
+      "bytes": 36666,
+      "sha256": "7eeace0545c1e59701dfffc1f93925eb754769f8f30449cae063777444026373"
+    },
+    {
+      "file": "hud-reattach-final.json",
+      "bytes": 31758,
+      "sha256": "562008ab9dc14b2b01c91e767b0aa2c7e4158dd183e53bbb26189908f2235bfa"
+    }
+  ],
+  "documentation": {
+    "README.md": {
+      "sha256": "67ffd670d9e49e836460bf35a8bb288b6ef01574a893a954b8e38c0573e95450"
+    }
+  },
+  "final_asset_binding": {
+    "character_sha256": "ae350d7291dc5cc6686b5369017ddb5cd00603f8a276d3ea40d1a8eb84ff78cc",
+    "ghost_sha256": "29beb805de4027fca33c4e06b6a7c2a18af135e478c96a22f344aa945b1d03c0",
+    "graph_proof_sha256": "d334ce2c78d4840e438401d50c8ea78f811780dff9867f7fe5a5054033d79810"
+  }
+}
