@@ -94,7 +94,7 @@ Before the sprint, run `Tools/check-mac.command` until it passes.
   - The escape tunnel from the relic chamber out to a ledge, where the zipline starts, and the walkway down to the exit ledge at (180, 0).
 - Make the paths solo: remove anywhere two paths meet or let you switch, apart from the meeting hall and the relic chamber. Keep the rock bridges where one path crosses another. Take the prototype's brace-and-boost co-op moments off the paths.
 - `BP_MouthSeal` at the fork, in `Content/Hazards/Maze/`: server-only `SealAllBut(PathIndex)` drops a rockfall over every path mouth but one, on a replicated schedule like a trap, with a rumble and dust first. It implements `BPI_RoundReset`.
-- Mark where the other lanes' pieces go, and fill in the layout doc's table in the same commit: the first room's plate and statue spots and the drop-off altar, the four path starts for each split, the meeting hall's lock perches and doors, the relic chamber's pedestal and lever spots, and ghost spawn points.
+- Mark where the other lanes' pieces go, and fill in the layout doc's table in the same commit: the drop-off altar, the four path starts for each split, the meeting hall's lock perches and doors, the relic chamber's pedestal and lever spots, and ghost spawn points.
 - Greybox is fine: each path just has to be walkable from end to end.
 - Join Playable 3.
 
